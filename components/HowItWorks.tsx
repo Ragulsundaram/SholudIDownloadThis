@@ -1,0 +1,57 @@
+import { FileText, Sparkles, ThumbsUp } from "lucide-react";
+
+const STEPS = [
+  {
+    icon: FileText,
+    title: "We read the policy",
+    body:
+      "We pull each app's full privacy policy and terms — often thousands of words at a postgrad reading level — and parse every claim.",
+  },
+  {
+    icon: Sparkles,
+    title: "We rate by category",
+    body:
+      "Every permission gets a Safe / Caution / Risky / Dangerous rating with a plain-English explanation and a quote from the actual policy.",
+  },
+  {
+    icon: ThumbsUp,
+    title: "You decide before installing",
+    body:
+      "One number, one verdict, and the specific red flags — so you know what you're agreeing to in 30 seconds, not 30 minutes.",
+  },
+];
+
+export function HowItWorks() {
+  return (
+    <section className="mt-20">
+      <div className="mb-6">
+        <h2 className="text-2xl font-semibold tracking-tight text-ink">How it works</h2>
+        <p className="mt-1 text-sm text-ink-muted">
+          The average privacy policy is 4,000 words long. We turn it into a sentence.
+        </p>
+      </div>
+      <div className="grid gap-4 md:grid-cols-3">
+        {STEPS.map((step, i) => {
+          const Icon = step.icon;
+          return (
+            <div
+              key={step.title}
+              className="rounded-2xl border border-line bg-surface p-6"
+            >
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand/10 text-brand">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-subtle">
+                  Step {i + 1}
+                </span>
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-ink">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}

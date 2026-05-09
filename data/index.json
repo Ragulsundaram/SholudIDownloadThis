@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "whatsapp",
+    "name": "WhatsApp Messenger",
+    "developer": "WhatsApp LLC (a Meta company)",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7e/a9/02/7ea902c3-1c26-a0cf-5127-2b6df2b5feba/Placeholder.mill/400x400bb-75.webp",
+    "category": "Social Networking",
+    "description": "A free, end-to-end encrypted messaging and calling app used by over 2 billion people worldwide, owned by Meta.",
+    "platforms": [
+      { "platform": "ios", "score": 53, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-09" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "World-class encryption on your messages, but WhatsApp feeds your contacts, behavior, and device data into Meta's advertising machine."
+  }
+]

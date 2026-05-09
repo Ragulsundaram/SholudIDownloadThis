@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --fg: #111827;
+  --fg-muted: #6b7280;
+  --fg-subtle: #9ca3af;
+  --border: #e5e7eb;
+  --divider: #f3f4f6;
+  --brand: #2563eb;
+  --brand-hover: #1d4ed8;
+
+  --safe-solid: #16a34a;
+  --safe-bg: #dcfce7;
+  --safe-border: #86efac;
+  --safe-text: #15803d;
+
+  --caution-solid: #d97706;
+  --caution-bg: #fef9c3;
+  --caution-border: #fde68a;
+  --caution-text: #a16207;
+
+  --risky-solid: #ea580c;
+  --risky-bg: #ffedd5;
+  --risky-border: #fdba74;
+  --risky-text: #c2410c;
+
+  --danger-solid: #dc2626;
+  --danger-bg: #fee2e2;
+  --danger-border: #fca5a5;
+  --danger-text: #b91c1c;
+
+  --unknown-solid: #6b7280;
+  --unknown-bg: #f3f4f6;
+  --unknown-border: #e5e7eb;
+  --unknown-text: #4b5563;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --card: #18181b;
+    --fg: #f9fafb;
+    --fg-muted: #a1a1aa;
+    --fg-subtle: #71717a;
+    --border: #27272a;
+    --divider: #1f1f23;
+
+    --safe-solid: #22c55e;
+    --safe-bg: #052e16;
+    --safe-border: #166534;
+    --safe-text: #4ade80;
+
+    --caution-solid: #eab308;
+    --caution-bg: #422006;
+    --caution-border: #854d0e;
+    --caution-text: #fbbf24;
+
+    --risky-solid: #f97316;
+    --risky-bg: #3a1a08;
+    --risky-border: #9a3412;
+    --risky-text: #fb923c;
+
+    --danger-solid: #ef4444;
+    --danger-bg: #450a0a;
+    --danger-border: #991b1b;
+    --danger-text: #fca5a5;
+
+    --unknown-solid: #71717a;
+    --unknown-bg: #1f1f23;
+    --unknown-border: #3f3f46;
+    --unknown-text: #a1a1aa;
+  }
+}
+
+@theme inline {
+  --color-page: var(--bg);
+  --color-surface: var(--card);
+  --color-ink: var(--fg);
+  --color-ink-muted: var(--fg-muted);
+  --color-ink-subtle: var(--fg-subtle);
+  --color-line: var(--border);
+  --color-divider: var(--divider);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+
+  --color-safe: var(--safe-solid);
+  --color-safe-soft: var(--safe-bg);
+  --color-safe-line: var(--safe-border);
+  --color-safe-ink: var(--safe-text);
+
+  --color-caution: var(--caution-solid);
+  --color-caution-soft: var(--caution-bg);
+  --color-caution-line: var(--caution-border);
+  --color-caution-ink: var(--caution-text);
+
+  --color-risky: var(--risky-solid);
+  --color-risky-soft: var(--risky-bg);
+  --color-risky-line: var(--risky-border);
+  --color-risky-ink: var(--risky-text);
+
+  --color-danger: var(--danger-solid);
+  --color-danger-soft: var(--danger-bg);
+  --color-danger-line: var(--danger-border);
+  --color-danger-ink: var(--danger-text);
+
+  --color-unknown: var(--unknown-solid);
+  --color-unknown-soft: var(--unknown-bg);
+  --color-unknown-line: var(--unknown-border);
+  --color-unknown-ink: var(--unknown-text);
+
+  --font-sans: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
