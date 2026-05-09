@@ -6,8 +6,9 @@
   "category": "Social Networking",
   "sub_category": "Messaging",
   "description": "A free, end-to-end encrypted messaging and calling app used by over 2 billion people worldwide, owned by Meta.",
-  "platforms": ["ios"],
+  "platforms": ["ios", "android"],
   "scores": {
-    "ios": { "score": 53, "grade": "D", "risk": "risky" }
+    "ios": { "score": 53, "grade": "D", "risk": "risky" },
+    "android": { "score": 53, "grade": "D", "risk": "risky" }
   }
 }

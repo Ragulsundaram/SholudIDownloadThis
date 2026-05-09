@@ -7,7 +7,8 @@
     "category": "Social Networking",
     "description": "A free, end-to-end encrypted messaging and calling app used by over 2 billion people worldwide, owned by Meta.",
     "platforms": [
-      { "platform": "ios", "score": 53, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-09" }
+      { "platform": "ios", "score": 53, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-09" },
+      { "platform": "android", "score": 53, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-10" }
     ],
     "worst_risk": "risky",
     "one_liner": "World-class encryption on your messages, but WhatsApp feeds your contacts, behavior, and device data into Meta's advertising machine."
