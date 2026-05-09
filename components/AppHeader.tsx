@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { ExternalLink, Smartphone, ShieldCheck } from "lucide-react";
+import type { RiskLevel } from "@/lib/types";
 import type { TrustIndicator } from "@/lib/trustIndicators";
+import { ThreatMeter } from "./ThreatMeter";
 
 type Props = {
   name: string;
@@ -12,6 +14,7 @@ type Props = {
   storeLabel?: string;
   analyzedAt?: string;
   trustIndicators?: TrustIndicator[];
+  risk?: RiskLevel;
 };
 
 export function AppHeader({
@@ -24,6 +27,7 @@ export function AppHeader({
   storeLabel = "App Store",
   analyzedAt,
   trustIndicators = [],
+  risk,
 }: Props) {
   return (
     <header className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-6">
@@ -35,7 +39,8 @@ export function AppHeader({
         </h1>
         <p className="mt-1 text-base text-ink-muted">{developer}</p>
 
-        <div className="mt-4 flex flex-wrap items-center gap-1.5">
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {risk && <ThreatMeter risk={risk} />}
           <Tag>{category}</Tag>
           {subCategory && <Tag>{subCategory}</Tag>}
           <Tag>Free</Tag>

@@ -1,12 +1,7 @@
-import { AlertTriangle, CheckCircle2, ChevronDown } from "lucide-react";
+import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import type { Flag, Severity } from "@/lib/types";
 
 type Variant = "red" | "green";
-
-type Props = {
-  variant: Variant;
-  flags: Flag[];
-};
 
 const SEVERITY_RANK: Record<Severity, number> = {
   high: 3,
@@ -15,7 +10,13 @@ const SEVERITY_RANK: Record<Severity, number> = {
   positive: 0,
 };
 
-export function FlagsList({ variant, flags }: Props) {
+export function FlagsList({
+  variant,
+  flags,
+}: {
+  variant: Variant;
+  flags: Flag[];
+}) {
   if (flags.length === 0) return null;
 
   const isRed = variant === "red";
@@ -28,29 +29,28 @@ export function FlagsList({ variant, flags }: Props) {
   const headingClass = isRed ? "text-danger-ink" : "text-safe-ink";
   const accentBorder = isRed ? "border-l-danger" : "border-l-safe";
   const iconClass = isRed ? "text-danger" : "text-safe";
-  const detailsName = isRed ? "redflag" : "greenflag";
 
   return (
     <div>
       <h3 className={`text-base font-semibold ${headingClass}`}>{heading}</h3>
-      <ul className="mt-3 space-y-2">
+      <ul className="mt-3 space-y-3">
         {sorted.map((flag) => (
-          <li key={flag.id}>
-            <details
-              name={detailsName}
-              className={`group rounded-xl border border-l-4 border-line bg-surface ${accentBorder}`}
-            >
-              <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
-                <Icon className={`h-4 w-4 flex-shrink-0 ${iconClass}`} />
-                <span className="flex-1 text-sm font-medium leading-snug text-ink">
-                  {flag.title}
-                </span>
-                <ChevronDown className="h-4 w-4 flex-shrink-0 text-ink-subtle transition-transform group-open:rotate-180" />
-              </summary>
-              <p className="border-t border-divider px-4 py-4 text-sm leading-relaxed text-ink-muted">
+          <li
+            key={flag.id}
+            className={`flex gap-3 rounded-xl border border-l-4 border-line bg-surface p-4 ${accentBorder}`}
+          >
+            <Icon
+              className={`mt-0.5 h-4 w-4 flex-shrink-0 ${iconClass}`}
+              aria-hidden
+            />
+            <div className="min-w-0">
+              <p className="text-sm font-semibold leading-snug text-ink">
+                {flag.title}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-ink-muted">
                 {flag.plain_english}
               </p>
-            </details>
+            </div>
           </li>
         ))}
       </ul>

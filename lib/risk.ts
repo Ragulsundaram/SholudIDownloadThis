@@ -1,4 +1,4 @@
-import type { Grade, RiskLevel } from "./types";
+import type { Grade, RecommendationLevel, RiskLevel } from "./types";
 
 const RISK_RANK: Record<RiskLevel, number> = {
   unknown: 0,
@@ -38,6 +38,13 @@ export const RISK_LABEL: Record<RiskLevel, string> = {
   risky: "Risky",
   dangerous: "Dangerous",
   unknown: "Unknown",
+};
+
+export const RECOMMENDATION_TITLE: Record<RecommendationLevel, string> = {
+  highly_recommended: "Recommended",
+  recommended: "Probably fine",
+  think_twice: "Think twice before downloading",
+  avoid: "Avoid if you can",
 };
 
 export const PLATFORM_LABEL: Record<string, string> = {
