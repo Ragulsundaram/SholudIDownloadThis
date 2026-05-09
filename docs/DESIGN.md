@@ -13,6 +13,7 @@
 3. **Mobile-first.** Most users will be on their phones deciding whether to install an app. The phone experience is primary.
 4. **No dark patterns.** No misleading UI, no buried important info, no confusing layouts.
 5. **Accessible by default.** AA contrast minimum. Icon labels always present. Never rely on color alone.
+6. **One pointer always.** Never display paragraphs of explanation on the page; one concise line per item. Expansion is opt-in via accordion only where structurally unavoidable (categories). Applies to flags (title only) and to the Overview tab (no summary paragraph; just score/grade metadata + recommendation_reason).
 
 ---
 
@@ -153,30 +154,33 @@ For the "Risky" (orange) level, define custom CSS variables since the design tok
 Platform  [● iOS]  [Android]  [Mac]  [Windows soon]  [Linux soon]
 ```
 
-- Label "Platform" in 11px text-tertiary
-- One pill button per platform with Lucide platform icon
-- Selected pill: background-secondary, border-primary, text-primary, font-weight 500
-- Unselected pill: border-tertiary, text-secondary
-- Unavailable platforms ("soon"): 35% opacity, not clickable, tiny "soon" suffix
-- Switching platform updates: score block, verdict, recommendation, flags, and all category cards without a page reload
+- Label "Platform" in 11px text-ink-subtle, uppercase, semibold, tracking-wider
+- One rounded-xl pill per platform with Lucide icon:
+  - iOS → `Apple`, Android → `Bot`, Mac → `Laptop`, Windows → `AppWindow`, Linux → `Terminal`
+- **Active**: filled `bg-ink` / `text-page` pill with `border-ink/80` shadow
+- **Available (not active)**: outlined `bg-surface` / `border-line` pill, hover `border-ink bg-divider`
+- **Not yet analyzed**: dashed `border-line` + `bg-surface/40` + faded text + tiny "soon" suffix, `aria-disabled`
+- Switching platform is a client-side `<Link>` — no page reload
 
 ### 3. Feature Tags (used in App header)
 
-Small pill tags that communicate quick facts about the app:
+The tag row leads with the ThreatMeter chip, then category, sub-category, "Free", then trust-indicator pills:
 
 ```
-[iOS]  [Social]  [Messaging]  [Free]  [E2E Encrypted]
+[THREAT ■■■░ Risky]  [Social]  [Messaging]  [Free]  [E2E Encrypted]
 ```
 
-- Standard tags: 11px, border-tertiary, text-secondary
-- Trust indicator tags (E2E Encrypted, Open Source, No Ads): green border + green text using success CSS vars
-- Never use these for risk information — risk always uses the Risk Badge component
+- ThreatMeter chip: rounded-full, border-line, bg-surface (see ThreatMeter spec below)
+- Standard tags: 11px, border-line, text-ink-muted, rounded-md
+- Trust indicator tags (`E2E Encrypted`, `No Ads`, `Open Source`): auto-derived in `lib/trustIndicators.ts` via regex on green-flag titles. Rendered as green `border-safe-line` + `bg-safe-soft` + `text-safe-ink` pills with a small `ShieldCheck` icon
+- **The active platform tag (e.g. "iOS") is gone from this row** — the active platform tab in the Platform Switcher carries that signal
+- Never use tags for risk information — risk always uses the Risk Badge or ThreatMeter component
 
 ### 4. Category Card (used in App Detail Grid)
 
 ```
-┌─────────────────────────────────────────┐  ← border color = risk level
-│  [icon]  Location & GPS   [● RISKY]     │
+┌─────────────────────────────────────────┐  ← neutral border-line
+│  [icon]  Location & GPS   [● RISKY]  ▼  │
 │          On-demand only                 │
 ├─────────────────────────────────────────┤  ← visible only when expanded
 │  Tracks your location only when you     │
@@ -187,19 +191,23 @@ Small pill tags that communicate quick facts about the app:
 │   you choose to share it."              │
 │                                         │
 │  ⚠ IP address used to infer location   │
-├─────────────────────────────────────────┤
-│  ▾ See details                          │
 └─────────────────────────────────────────┘
 ```
 
-- Card border color matches risk level: success border = Safe, warning border = Caution, risky border = Risky, danger border = Dangerous
-- Icon: 30x30px rounded-8px box with background-secondary
-- Category name: 12px, font-weight 500
-- Access type: 10px, text-tertiary, below the name
-- Risk badge: right-aligned, 10px pill
-- Expanded body: max-height transition (0 → auto), smooth animation
-- Body contains: description (11px), policy quote (10px italic, background-secondary), concerns (10px with warning icon)
-- Toggle button: 11px, full-width, border-top only, chevron rotates on open
+- **Border is neutral `border-line`** — no colored card border. Risk signal lives only in the right-aligned `RiskBadge` chip
+- Cards are mutually-exclusive accordions via native `<details name="category">` (zero-JS expansion, only one open at a time)
+- Within the grid, cards are sorted by risk severity: `dangerous → risky → caution → safe → unknown`
+- Icon: 36x36px rounded-lg box with `bg-divider` + `text-ink-muted`
+- Category name: 14px, font-weight 600, `text-ink`
+- Access type subtitle: 12px, `text-ink-subtle`, below the name (e.g. "On-demand · background access")
+- Risk badge: right-aligned, small pill (`size="sm"`)
+- ChevronDown icon rotates 180° when open via `group-open:rotate-180`
+- Expanded body: `border-t border-divider` with `px-4 pb-4 pt-4` spacing
+- Body contains:
+  - `plain_english` paragraph (14px, `text-ink`)
+  - `detail` paragraph if different from plain_english (14px, `text-ink-muted`)
+  - Policy quote blockquote: `border-l-2 border-line bg-divider/50` + italic (12px, `text-ink-muted`)
+  - Concerns list: `AlertTriangle` icon (text-caution) + 12px `text-ink-muted`
 
 ### 5. Risk Badge
 
@@ -219,43 +227,30 @@ Small pill tags that communicate quick facts about the app:
 
 ### 6. Red Flag / Green Flag Items
 
-Each flag has two levels of content:
+Two cards side by side — one red card for all red flags, one green card for all green flags. Inside each card, flags are simple bullet-point titles only.
 
 ```
-🚩  Your address book is uploaded to Meta servers
-    WhatsApp regularly uploads all the phone numbers
-    in your contacts — including people who don't use
-    WhatsApp — to its servers.
+┌─────────────────────────────────────────┐  ┌─────────────────────────────────────────┐
+│ ⚠ Red flags                             │  │ ✅ Green flags                          │
+│                                         │  │                                         │
+│ ● Your address book is uploaded         │  │ ● End-to-end encryption                 │
+│ ● Your behavior powers ads              │  │ ● Messages not stored on servers        │
+│ ● No real opt-out from Meta sharing     │  │ ● No third-party banner ads             │
+│ ● Deep device fingerprinting            │  │ ● You can fully delete your account     │
+│ ● Passive location from IP              │  │                                         │
+└─────────────────────────────────────────┘  └─────────────────────────────────────────┘
 ```
 
-- Container: background-danger (red) or background-success (green), rounded-md
-- Icon: ti-alert-triangle (red) or ti-circle-check (green) at 12–13px
-- **Title** (bold, 12px): short, max 10 words — shown on the card face
-- **Plain English** (11–12px, text-secondary): 1–3 sentence expansion — shown always or on hover depending on implementation
-- Max 5–6 flags per column
+- Red card: `rounded-xl border-danger-line bg-danger-soft p-5`
+- Green card: `rounded-xl border-safe-line bg-safe-soft p-5`
+- Card header: section icon (`AlertTriangle` / `CheckCircle2`) + heading text in matching risk ink
+- Each flag is a bullet point: small colored dot (`bg-danger` / `bg-safe`) + title text (14px, `text-ink`, `leading-snug`)
+- **No plain_english paragraph rendered** — one pointer always
+- Sorted by severity inside each card: red flags `high → medium → low`, green flags `positive` first
+- Two cards side-by-side on desktop (`md:grid-cols-2`), stacked on mobile
+- Spacing between bullet items: `space-y-3`
 
-### 7. Privacy Score Block (top of App Detail page)
-
-```
-┌──────────────┬──────────────────────────────────────────┐
-│   Score      │  Verdict                                  │
-│              │                                           │
-│    53        │  WhatsApp collects extensive metadata...  │
-│   /100       │                                           │
-│  ████░░░     │  ┌─────────────────────────────────────┐  │
-│              │  │ ⚠ Think twice before downloading    │  │
-│  Grade: D    │  │   Signal offers the same features   │  │
-│  ● Risky     │  │   with a 91/100 privacy score.      │  │
-│              │  └─────────────────────────────────────┘  │
-└──────────────┴──────────────────────────────────────────┘
-```
-
-- Left column: score number (48px, risk color), "/100" label, progress bar (4px, risk color), grade text, risk badge
-- Right column: verdict label (10px uppercase), verdict text (13px, line-height 1.7), recommendation callout box
-- Recommendation callout: border + background from risk-level CSS vars (warning for Caution, danger for Risky/Dangerous, success for Safe/Recommended)
-- Recommendation icon: ti-alert-circle (warning/danger) or ti-circle-check (success)
-
-### 8. Safer Alternative Block
+### 7. Safer Alternative Block
 
 ```
 ┌──────────────────────────────────────────────────────┐  ← success border + bg
@@ -269,7 +264,7 @@ Each flag has two levels of content:
 - App icon, name, one-line reason, score number + safe badge
 - Entire block is clickable — goes to the alternative app's page
 
-### 9. Meta Strip (bottom of App Detail page)
+### 8. Meta Strip (bottom of App Detail page)
 
 ```
 Policy source   Policy updated   Our analysis   Platform   Schema
@@ -281,6 +276,52 @@ whatsapp.com↗   October 2024     May 2025        iOS        v1.0
 - All text at 10–12px, text-secondary
 - Policy source is a clickable external link
 - "Flag this rating" right-aligned — opens a simple form or mailto
+
+### 9. ThreatMeter (used in App header)
+
+```
+[THREAT ■■■░ Risky]
+```
+
+- Pill chip: `rounded-full border-line bg-surface px-3 py-1.5`
+- Left label: "THREAT" in 10px uppercase, semibold, tracking-wider, `text-ink-subtle`
+- Middle segments: 4 horizontal bars (`h-2 w-4 rounded-[2px]`), filled count determined by risk:
+  - `safe` = 1 filled, `caution` = 2 filled, `risky` = 3 filled, `dangerous` = 4 filled, `unknown` = 0 filled
+  - Filled segments use risk solid color (`bg-safe`, `bg-caution`, `bg-risky`, `bg-danger`)
+  - Empty segments use `bg-line`
+- Right label: uppercase risk name (11px, semibold, tracking-wider) in matching risk ink color (`text-safe-ink`, `text-caution-ink`, etc.)
+- `role="img"` with `aria-label` for accessibility
+
+### 10. VerdictHero (used below Platform Switcher on detail page)
+
+Thin component, no card box:
+
+```
+┃ WhatsApp collects extensive metadata...
+┃
+┃ Think twice before downloading
+```
+
+- 2px risk-colored left bar (`border-l-2 border-l-{risk}`)
+- `verdict.one_liner` in larger text: `text-xl sm:text-2xl font-medium leading-snug text-ink`
+- Recommendation lead text below (`RECOMMENDATION_TITLE[recommendation]`): 14px, semibold, matching risk ink color
+- Examples: "Recommended", "Probably fine", "Think twice before downloading", "Avoid if you can"
+
+### 11. TabbedSections (used on App Detail page)
+
+Chip-style rounded-full pill tabs in a row:
+
+```
+[Overview]  [Flags]  [Categories]  [Source]
+```
+
+- Active tab: `bg-ink text-page` contrast pill
+- Inactive tab: `bg-divider text-ink-muted hover:text-ink`
+- All tabs: `rounded-full px-4 py-2 text-sm font-medium`
+- Tab labels are plain text — no counts
+- **SSR-friendly**: all panels rendered in HTML; `hidden` attribute toggles visibility client-side
+- Each panel is a `<section role="tabpanel">` with `aria-labelledby` pointing to its tab button
+- SEO-friendly: crawlers see all panels since they are in the DOM
 
 ---
 
@@ -311,15 +352,15 @@ whatsapp.com↗   October 2024     May 2025        iOS        v1.0
 
 ```
 [Navbar]
-[Breadcrumb — Home > Browse > Category > App Name]
-[App header — icon, name, developer, feature tags, store button, analysis date]
+[Breadcrumb — Home > Browse > {category} > {app name}]
+[App header — icon, name, developer, feature-tag row (ThreatMeter · category · sub-category · Free · trust indicators), App Store button, "Analyzed {Month YYYY}"]
 [Platform switcher — iOS / Android / Mac / Windows (soon) / Linux (soon)]
-[Privacy score block — score left, verdict + recommendation right]
-[Red Flags / Green Flags — 2-col on desktop, stacked on mobile]
-[Section title: "Category breakdown — Platform · tap to expand"]
-[Category breakdown grid — 2 col always]
-[Safer alternative block — only if risk is Caution or worse]
-[Meta strip — policy source, dates, platform, schema, flag link]
+[VerdictHero — one_liner + recommendation lead text]
+[TabbedSections — Overview · Flags · Categories · Source]
+  ├─ Overview tab — Score · Grade metadata + recommendation_reason (no summary paragraph)
+  ├─ Flags tab — Red card / Green card side-by-side with bullet-point titles
+  ├─ Categories tab — Sorted by risk · tap to expand · 2-col masonry
+  └─ Source tab — MetaStrip (policy URL, dates, platform, schema, flag link)
 [Footer]
 ```
 

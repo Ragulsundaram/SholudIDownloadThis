@@ -39,16 +39,23 @@ Install only what you need: Badge, Card, Accordion, Button, Input, Sheet (for mo
 
 ### Data Layer v1 — JSON Flat Files
 
-For v1, each app's data lives in `/data/apps/{slug}.json`. Next.js reads these at build time and generates static pages. Zero infrastructure, zero cost, zero complexity.
+For v1, each app's data lives in `/data/apps/{slug}/{platform}.json`. Next.js reads these at build time and generates static pages. Zero infrastructure, zero cost, zero complexity.
 
 ```
 /data
   /apps
-    whatsapp-ios.json
-    instagram-ios.json
-    signal-ios.json
+    /whatsapp
+      _app.json          ← shared parent: name, icon, platforms, scores
+      ios.json           ← iOS-specific policy analysis
+      android.json       ← Android-specific policy analysis
+    /instagram
+      _app.json
+      ios.json
     ...
-  /index.json        ← list of all apps (for browse + search)
+  /reviews               ← human-readable .md audit files (not read by site)
+    whatsapp-ios.md
+    ...
+  /index.json            ← lightweight list of all apps (for browse + search)
 ```
 
 ### Data Layer v2 — Supabase (Postgres)
@@ -101,16 +108,20 @@ shouldidownloadthis/
 │           └── route.ts          # API route to store app requests
 ├── components/
 │   ├── AppCard.tsx               # App card for browse/homepage
+│   ├── AppHeader.tsx             # App icon, name, developer, tags, store link
 │   ├── PlatformSwitcher.tsx      # iOS/Android/Mac pill switcher
+│   ├── ThreatMeter.tsx           # Threat-level pill chip with segments
+│   ├── VerdictHero.tsx           # Thin verdict headline + recommendation
+│   ├── TabbedSections.tsx        # Rounded pill tabs (Overview · Flags · Categories · Source)
 │   ├── CategoryCard.tsx          # Expandable category rating card
+│   ├── CategoryIcon.tsx          # Lucide icon name → component map
 │   ├── RiskBadge.tsx             # Reusable risk pill badge
-│   ├── FeatureTag.tsx            # App header tags (Free, E2E Encrypted…)
-│   ├── ScoreBlock.tsx            # Score number + bar + grade + verdict
-│   ├── RedGreenFlags.tsx         # Flag lists with title + plain_english
+│   ├── FlagsList.tsx             # Red card / Green card with bullet-point flags
 │   ├── SaferAlternative.tsx      # Green recommendation block
 │   ├── MetaStrip.tsx             # Policy source, dates, flag link
 │   ├── SearchBar.tsx             # Fuzzy search input
-│   ├── FilterBar.tsx             # Browse filters
+│   ├── BrowseByConcern.tsx       # Category icon grid for homepage
+│   ├── HowItWorks.tsx            # 3-step explainer section
 │   ├── Navbar.tsx
 │   └── Footer.tsx
 ├── lib/

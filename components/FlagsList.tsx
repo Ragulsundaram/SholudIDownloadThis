@@ -26,31 +26,30 @@ export function FlagsList({
 
   const Icon = isRed ? AlertTriangle : CheckCircle2;
   const heading = isRed ? "Red flags" : "Green flags";
+  const cardBorder = isRed ? "border-danger-line" : "border-safe-line";
+  const cardBg = isRed ? "bg-danger-soft" : "bg-safe-soft";
   const headingClass = isRed ? "text-danger-ink" : "text-safe-ink";
-  const accentBorder = isRed ? "border-l-danger" : "border-l-safe";
-  const iconClass = isRed ? "text-danger" : "text-safe";
+  const dotClass = isRed ? "bg-danger" : "bg-safe";
 
   return (
-    <div>
-      <h3 className={`text-base font-semibold ${headingClass}`}>{heading}</h3>
-      <ul className="mt-3 space-y-3">
+    <div
+      className={`rounded-xl border ${cardBorder} ${cardBg} p-5`}
+    >
+      <div className="mb-4 flex items-center gap-2">
+        <Icon className={`h-5 w-5 ${headingClass}`} aria-hidden />
+        <h3 className={`text-base font-semibold ${headingClass}`}>{heading}</h3>
+      </div>
+
+      <ul className="space-y-3">
         {sorted.map((flag) => (
-          <li
-            key={flag.id}
-            className={`flex gap-3 rounded-xl border border-l-4 border-line bg-surface p-4 ${accentBorder}`}
-          >
-            <Icon
-              className={`mt-0.5 h-4 w-4 flex-shrink-0 ${iconClass}`}
+          <li key={flag.id} className="flex items-start gap-2.5">
+            <span
+              className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full ${dotClass}`}
               aria-hidden
             />
-            <div className="min-w-0">
-              <p className="text-sm font-semibold leading-snug text-ink">
-                {flag.title}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-ink-muted">
-                {flag.plain_english}
-              </p>
-            </div>
+            <span className="text-sm leading-snug text-ink">
+              {flag.title}
+            </span>
           </li>
         ))}
       </ul>

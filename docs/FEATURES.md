@@ -29,7 +29,7 @@ The detail page contains these sections in order:
 
 **App header**
 - App icon, name, developer name
-- Feature tags: platform (iOS), app category, price (Free), and trust indicators (e.g. "E2E Encrypted") where applicable
+- Feature tags: ThreatMeter chip, app category, sub-category, price (Free), and trust indicators (e.g. "E2E Encrypted") where applicable. The active platform is **not** shown here — it lives in the Platform Switcher below
 - Direct link to the App Store / Play Store / platform store
 
 **Platform switcher**
@@ -38,18 +38,22 @@ The detail page contains these sections in order:
 - Switching platform reloads the score, verdict, flags, and category cards for that platform — same URL slug, different platform segment
 - Some category ratings and scores legitimately differ per platform (e.g. Mac has stricter OS sandbox, Android has additional Play Store permissions)
 
-**Privacy score block**
-- Large score number (0–100), progress bar, letter grade (A–F), risk level badge
-- Plain-English verdict paragraph (2–3 sentences)
-- Recommendation callout box — color changes per risk level (warning/amber for Caution, danger/red for Risky or Dangerous)
+**VerdictHero**
+- Thin component with a 2px risk-colored left bar
+- `verdict.one_liner` in large text (the plain-English headline)
+- Recommendation lead text below (e.g. "Think twice before downloading")
+- No card box, no score number, no progress bar — the score lives in the Overview tab
 
 **Red flags / Green flags** — side by side
-- Each flag has a short title and an expanded plain-English explanation
-- Max 5–6 per column to avoid overwhelm
+- Two cards: one red (`bg-danger-soft`) for all red flags, one green (`bg-safe-soft`) for all green flags
+- Inside each card: bullet-point list of flag titles only — no expanded paragraphs
+- Sorted by severity within each card
 
 **Category breakdown grid** — 2 columns
 - 14 category cards, each with: icon, category name, access type subtitle, risk badge
-- Card border is color-coded by risk level (green border = Safe, amber = Caution, orange = Risky, red = Dangerous)
+- **Card border is neutral** (`border-line`) — risk signal lives only in the right-aligned RiskBadge chip, not the card border
+- Cards are mutually-exclusive accordions via native `<details name="category">` (only one open at a time, zero JS)
+- Cards are sorted by risk severity: `dangerous → risky → caution → safe → unknown`
 - Each card is expandable — tap to reveal plain-English description, policy excerpt quote, and specific concerns
 - Platform-specific categories (e.g. "App Sandbox" for Mac, "Play Store Permissions" for Android) only appear on the relevant platform
 
@@ -66,8 +70,10 @@ The core UI element. A 2-column grid of expandable cards — one per permission 
 - An **icon** representing the category (Lucide icon, see DESIGN.md)
 - **Category name** and **access type** subtitle (e.g. "On-demand only", "Continuous · no opt-out")
 - **Risk level badge** (Safe / Caution / Risky / Dangerous / Unknown) — right-aligned
-- **Color-coded card border** matching the risk level — scannable at a glance without reading badges
+- **Neutral card border** (`border-line`) — risk signal lives only in the RiskBadge chip, not the border
+- Cards sorted by risk severity: `dangerous → risky → caution → safe → unknown`
 - **Expandable body** — tap to reveal plain-English description, the relevant policy quote, and a list of specific concerns
+- Cards are mutually-exclusive accordions via native `details name="category"` (only one open at a time, zero JS)
 
 Platform-exclusive categories (e.g. Mac App Sandbox, Android Play Store Permissions) are only shown on the relevant platform page.
 
@@ -133,7 +139,6 @@ The score is **per platform** — the same app can score differently on iOS vs A
 
 ## V2 Feature Set — Planned
 
-- **Android app support** (Google Play Store)
 - **URL/text paste analyzer** — paste any policy URL or raw text for instant analysis
 - **App version tracking** — alert when a policy changes and a re-analysis is needed
 - **Browser extension** — shows a warning badge when visiting an app's App Store page

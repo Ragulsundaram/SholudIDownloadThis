@@ -415,7 +415,7 @@ This file is auto-generated/updated whenever a platform file is saved. Never edi
 | `slug` | string | Platform-specific slug: `{app-name}-{platform}` (used inside file; folder uses app name only) |
 | `name` | string | Display name |
 | `developer` | string | Developer or company name |
-| `platform` | enum | `ios`, `android`, `macos`, `windows`, `linux` |
+| `platform` | enum | `ios`, `android`, `mac`, `windows`, `linux` |
 | `app_store_url` | string | Direct link to download |
 | `app_store_id` | string | Platform-specific app ID |
 | `icon_url` | string | URL to app icon image |
@@ -430,18 +430,18 @@ This file is auto-generated/updated whenever a platform file is saved. Never edi
 | `overall_risk` | enum | `safe`, `caution`, `risky`, `dangerous` — derived from score |
 | `score` | number | **Must equal `scoring.final_score`** — always copy from there, never estimate separately |
 | `grade` | string | **Must equal `scoring.grade`** — always copy from there |
-| `one_liner` | string | Max 15 words, shown on app cards |
-| `summary` | string | 2–3 sentences for the detail page |
+| `one_liner` | string | Max 15 words, shown on app cards and VerdictHero |
+| `summary` | string | 2–3 sentences — stored for completeness, **not displayed on the page** (Overview tab uses `recommendation_reason`) |
 | `recommendation` | enum | `highly_recommended`, `recommended`, `think_twice`, `avoid` |
-| `recommendation_reason` | string | 1–2 sentences explaining the recommendation |
+| `recommendation_reason` | string | 1–2 sentences explaining the recommendation — shown in Overview tab |
 
 ### `flags.red[n]` and `flags.green[n]`
 
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | string | Unique snake_case identifier (e.g. `red_contacts_upload`) |
-| `title` | string | Short title, max 10 words — shown on the card face always |
-| `plain_english` | string | 1–3 sentence explanation — shown in expanded view |
+| `title` | string | Short title, max 10 words — shown in the flag card |
+| `plain_english` | string | 1–3 sentence explanation — stored for trust-indicator derivation and audit trail, **not displayed on the page** |
 | `severity` | enum | Red: `high`, `medium`, `low` · Green: `positive` |
 
 ### `categories[n]`
@@ -460,7 +460,7 @@ This file is auto-generated/updated whenever a platform file is saved. Never edi
 | `detail` | string | 2–3 sentence expanded explanation — shown when card is opened |
 | `policy_excerpt` | string | Direct quote from the policy (keep under 20 words) |
 | `concerns` | array of strings | Specific bullet concerns — shown when card is opened |
-| `score_impact` | number | Raw point deduction for this category (used in scoring block) |
+| `score_impact` | number | Raw point deduction for this category — stored for reference/debugging, **not displayed on the page** |
 
 ### `scoring`
 

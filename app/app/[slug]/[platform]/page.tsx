@@ -80,12 +80,12 @@ export default async function AppPlatformPage({
     },
     {
       id: "flags",
-      label: `Flags · ${data.flags.red.length + data.flags.green.length}`,
+      label: "Flags",
       content: <FlagsTab flags={data.flags} />,
     },
     {
       id: "categories",
-      label: `Categories · ${data.categories.length}`,
+      label: "Categories",
       content: (
         <CategoriesTab
           categories={categoriesByRisk}
@@ -153,14 +153,13 @@ export default async function AppPlatformPage({
 
 function OverviewTab({ verdict }: { verdict: Verdict }) {
   return (
-    <div className="max-w-3xl space-y-5">
+    <div className="space-y-4">
       <p className="text-xs uppercase tracking-wider text-ink-subtle">
         Score{" "}
         <span className="font-semibold text-ink">{verdict.score}/100</span>
         <span className="mx-2">·</span>
         Grade <span className="font-semibold text-ink">{verdict.grade}</span>
       </p>
-      <p className="text-base leading-relaxed text-ink">{verdict.summary}</p>
       <p className="text-sm leading-relaxed text-ink-muted">
         {verdict.recommendation_reason}
       </p>

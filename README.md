@@ -18,11 +18,11 @@ We believe privacy should be understandable by everyone, not just lawyers.
 
 ## What It Does
 
-- Shows **per-category privacy ratings** for iOS apps (Android, Mac, Windows, Linux coming soon)
+- Shows **per-category privacy ratings** for iOS and Android apps (Mac, Windows, Linux coming soon)
 - Breaks down what each app accesses: camera, microphone, location, contacts, storage, identity, ad tracking, and more
 - Gives each category a **risk level**: Safe / Caution / Risky / Dangerous
-- Highlights **red flags** (e.g. sells your data) and **green flags** (e.g. supports data deletion)
-- Shows a one-paragraph **plain-English verdict** for every app
+- Highlights **red flags** (e.g. sells your data) and **green flags** (e.g. supports data deletion) in plain-English card lists
+- Shows a one-line **plain-English verdict** plus a recommendation ("Think twice before downloading")
 - Works beautifully on **mobile and desktop**
 
 ---
@@ -67,12 +67,11 @@ Step 11 → The website reads from /data/apps/ and renders the page automaticall
 
 | Phase | Scope | Status |
 |-------|-------|--------|
-| 1 | iOS apps — manual DB via Claude | 🔄 Active |
-| 2 | Android apps | 🔜 Planned |
-| 3 | Mac / Windows / Linux | 🔜 Planned |
-| 4 | Browser Extensions | 🔜 Planned |
-| 5 | Paste-a-URL live analysis | 🔜 Planned |
-| 6 | User watchlists & change alerts | 🔜 Planned |
+| 1 | iOS + Android apps — manual DB via Claude | 🔄 Active |
+| 2 | Mac / Windows / Linux apps | 🔜 Planned |
+| 3 | Browser Extensions | 🔜 Planned |
+| 4 | Paste-a-URL live analysis | 🔜 Planned |
+| 5 | User watchlists & change alerts | 🔜 Planned |
 
 ---
 
