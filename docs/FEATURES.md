@@ -1,7 +1,7 @@
 # Features Specification
 
 **Project:** ShouldIDownloadThis  
-**Last Updated:** 2025-05-08  
+**Last Updated:** 2026-05-10  
 **Scope:** v1 (iOS apps, web only, no auth)
 
 ---
@@ -11,9 +11,9 @@
 ### 1. App Search & Discovery
 
 - **Search bar** on homepage — user types an app name and sees matching results
-- One result per app (not per platform) — each result shows all available platform badges with their individual scores (e.g. iOS · 53 / Android · 31 / Mac · 61)
-- Tapping a platform badge goes directly to `/app/{slug}/{platform}`
-- Tapping the app card row goes to `/app/{slug}` (the platform overview/picker page)
+- One result per app (not per platform) — each result shows: app icon, app name, ThreatMeter chip, and platform pills with Lucide icons + scores (e.g. `[🍎 53]` `[🤖 53]`)
+- Tapping a platform pill goes directly to `/app/{slug}/{platform}`
+- Tapping the card body goes to `/app/{slug}` (the platform overview/picker page)
 - If an app is not in the database yet, show a "Request this app" option (stores in a queue)
 - Search is fuzzy (e.g. "whatsap" still finds "WhatsApp")
 

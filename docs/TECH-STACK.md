@@ -107,7 +107,7 @@ shouldidownloadthis/
 │       └── request/
 │           └── route.ts          # API route to store app requests
 ├── components/
-│   ├── AppCard.tsx               # App card for browse/homepage
+│   ├── AppCard.tsx               # App card: icon + name + ThreatMeter + platform pills
 │   ├── AppHeader.tsx             # App icon, name, developer, tags, store link
 │   ├── PlatformSwitcher.tsx      # iOS/Android/Mac pill switcher
 │   ├── ThreatMeter.tsx           # Threat-level pill chip with segments

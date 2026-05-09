@@ -131,22 +131,21 @@ For the "Risky" (orange) level, define custom CSS variables since the design tok
 
 ```
 ┌─────────────────────────────────────────┐
-│  [App Icon 48x48]  App Name             │
-│                    Developer Name       │
-│                    iOS · Social         │
+│  [App Icon 48x48]  WhatsApp Messenger   │
+│                    [THREAT ■■■░ Risky]   │
 │                                         │
-│  [iOS ●RISKY 38]  [Android ●DANGER 31] │
-│  "Shares data with Meta's ad network"   │
+│  [🍎 53]  [🤖 53]                       │
 └─────────────────────────────────────────┘
 ```
 
-- App icon: 48x48px, rounded-lg, 0.5px border
-- App name: 13px, font-weight 500
-- Developer + category: 11px, text-secondary
-- Platform score badges: one per available platform, each shows platform name + risk dot + score number
-- One-liner: 11px, text-secondary, italic
-- Entire card is clickable — goes to `/app/{slug}`
-- Individual platform badge is clickable — goes to `/app/{slug}/{platform}`
+- App icon: 48x48px, rounded-xl, `border-line`
+- App name: 16px, font-weight 600, `text-ink`, `leading-snug` — wraps instead of truncating
+- ThreatMeter chip directly below the name; text column uses `items-start` so the `inline-flex` pill does not stretch horizontally
+- Platform pills below: one per platform with Lucide icon (iOS uses custom Apple SVG at `public/ios-icon.svg`; Android → `Bot`; Mac → `Laptop`; Windows → `AppWindow`; Linux → `Terminal`) + score number
+- **Removed from card:** developer name, category, one-liner description
+- Entire card is clickable (`cursor-pointer` on `<article>` with click handler) — goes to `/app/{slug}`
+- Hover: `hover:border-brand/40 hover:bg-divider/30 hover:shadow-md`
+- Platform pills inside the card are independently clickable via `stopPropagation` — go to `/app/{slug}/{platform}`
 
 ### 2. Platform Switcher (used at top of App Detail page)
 
@@ -331,12 +330,17 @@ Chip-style rounded-full pill tabs in a row:
 
 ```
 [Navbar]
-[Hero — Search bar + tagline + stats (apps analyzed, categories tracked)]
-[Recently Analyzed — 4-col grid desktop, 2-col mobile]
+[Hero — Search bar first, then smaller headline + one-line tagline + stats]
+[Recently Analyzed — 3-col grid desktop, 2-col tablet, 1-col mobile]
 [Browse by Concern — category icon grid]
 [How It Works — 3-step row]
 [Footer]
 ```
+
+- Search bar is the first element in the hero, above the headline
+- Headline: `text-2xl sm:text-3xl font-bold tracking-tight` — compact, no cutoff
+- Subtext: one line only — "We read the privacy policy so you don't have to."
+- Stats line: apps analyzed count + categories tracked count (no "0 ads served")
 
 ### App Overview Page (`/app/{slug}`)
 
@@ -399,6 +403,16 @@ Use **Lucide React** for all UI icons (consistent, open source, tree-shakeable).
 | Financial & Payment Data | `CreditCard` |
 | Data Deletion & User Rights | `ShieldCheck` |
 | Policy Change Notification | `Bell` |
+
+### Platform Icons (used in AppCard pills)
+
+| Platform | Icon | Source |
+|----------|------|--------|
+| iOS | Apple logo | Custom SVG at `public/ios-icon.svg` |
+| Android | `Bot` | Lucide React |
+| Mac | `Laptop` | Lucide React |
+| Windows | `AppWindow` | Lucide React |
+| Linux | `Terminal` | Lucide React |
 
 ---
 
