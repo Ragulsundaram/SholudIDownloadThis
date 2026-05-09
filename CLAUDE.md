@@ -89,18 +89,14 @@ Test UI changes in a real browser before declaring them done — type checks are
 - Repo scaffolded; deps installed; `docs/`, `data/` skeleton.
 - Design tokens in `app/globals.css` (CSS vars + Tailwind v4 `@theme` — `bg-page`, `bg-surface`, `text-ink-muted`, risk classes like `bg-safe-soft text-safe-ink border-safe-line`, etc.). Use these instead of raw hex or vanilla Tailwind colors.
 - `lib/types.ts`, `lib/risk.ts` (`riskFromScore`, `gradeFromScore`, `worstRisk`, label maps), `lib/getAllApps.ts`.
-- Components: `RiskBadge`, `AppCard`, `Navbar`, `Footer`, `SearchBar` (client; Fuse.js fuzzy search), `BrowseByConcern`, `HowItWorks`.
-- `app/page.tsx` — Hero + Recently Analyzed + Browse by Concern + How It Works.
+- Components: `RiskBadge`, `AppCard`, `Navbar`, `Footer`, `SearchBar` (client; Fuse.js fuzzy search), `BrowseByConcern`, `HowItWorks`, `AppHeader`, `PlatformSwitcher`, `ScoreBlock`, `FlagsList`, `CategoryCard` (uses native `<details>` for zero-JS expansion), `MetaStrip`, `CategoryIcon` (Lucide icon-name → component map).
+- Pages: `/` (homepage), `/app/[slug]` (platform picker), `/app/[slug]/[platform]` (full detail — header, switcher, score block, red/green flags, 14-category grid, meta strip). Both detail routes use `generateStaticParams` driven by `getAllSlugs()` so SEO/SSG works.
+- `lib/getApp.ts` reads `_app.json` + `{platform}.json`; `lib/trustIndicators.ts` derives feature tags ("E2E Encrypted", "No Ads", "Open Source") from green-flag titles via regex.
 - WhatsApp iOS seeded as the first real app: `data/apps/whatsapp/{ios.json,_app.json}` + entry in `data/index.json`.
 - `next.config.ts` allows `*-ssl.mzstatic.com` for App Store icon URLs in `next/image`.
 
 **Not yet done — likely next steps:**
-- `/app/[slug]` (overview / platform picker page)
-- `/app/[slug]/[platform]` (the full detail page — score block, flags, category grid, etc.)
-- `/browse`, `/compare`, `/request`
-- `lib/scoring.ts` (validation + recompute helper that confirms `verdict.score === scoring.final_score`)
-- `lib/getApp.ts` (read `_app.json` + `{platform}.json` for a slug)
-- More components from `docs/DESIGN.md`: `CategoryCard`, `ScoreBlock`, `PlatformSwitcher`, `RedGreenFlags`, `SaferAlternative`, `MetaStrip`
+- `/browse`, `/compare`, `/request` pages
+- `SaferAlternative` block (needs at least one safer alternative app analyzed for a given category before it can render — skipped for now since only WhatsApp is in the DB)
+- `lib/scoring.ts` (validation + recompute helper that confirms `verdict.score === scoring.final_score` and `total_deductions / 205 → final_score`)
 - A small ingest script (`scripts/ingest.ts`) that takes a parser-output `.md`, splits the JSON to `data/apps/{slug}/{platform}.json`, regenerates `_app.json`, and refreshes the index entry — currently this is manual.
-
-Click-through from the homepage AppCard / platform pills will 404 until `/app/[slug]` and `/app/[slug]/[platform]` exist.
