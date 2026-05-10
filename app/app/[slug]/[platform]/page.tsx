@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
 
 import { getAppParent, getAppPlatform, getAllSlugs } from "@/lib/getApp";
-import { PLATFORM_LABEL, compareRisk } from "@/lib/risk";
+import { PLATFORM_LABEL, STORE_LABEL, compareRisk } from "@/lib/risk";
 import { deriveTrustIndicators } from "@/lib/trustIndicators";
 import type { Category, Flags, Platform, Verdict, AppMeta } from "@/lib/types";
 import { Navbar } from "@/components/Navbar";
@@ -122,6 +122,7 @@ export default async function AppPlatformPage({
               category={data.app.category}
               subCategory={data.app.sub_category}
               storeUrl={data.app.app_store_url}
+              storeLabel={STORE_LABEL[platform] ?? "App Store"}
               analyzedAt={data.meta.analyzed_at}
               trustIndicators={trust}
               risk={data.verdict.overall_risk}

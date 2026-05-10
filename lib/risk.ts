@@ -54,3 +54,11 @@ export const PLATFORM_LABEL: Record<string, string> = {
   windows: "Windows",
   linux: "Linux",
 };
+
+export const STORE_LABEL: Record<string, string> = {
+  ios: "App Store",
+  android: "Play Store",
+  mac: "Mac App Store",
+  windows: "Microsoft Store",
+  linux: "Download",
+};
