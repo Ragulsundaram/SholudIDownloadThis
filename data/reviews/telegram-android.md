@@ -35,9 +35,9 @@
     "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats."
   },
   "verdict": {
-    "overall_risk": "caution",
+    "overall_risk": "safe",
     "score": 80,
-    "grade": "B",
+    "grade": "A",
     "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private.",
     "summary": "Telegram is a privacy-focused messaging app with a strong commitment to no ads and no data selling. It offers genuinely end-to-end encrypted secret chats and calls, but standard cloud chats are stored on Telegram's servers with server-side encryption only. A phone number is required to sign up, and IP addresses may be retained for up to 12 months for anti-abuse purposes. The app provides excellent deletion controls including self-destruct timers and message deletion for all participants.",
     "recommendation": "recommended",
@@ -360,7 +360,7 @@
     ],
     "total_deductions": 40.0,
     "final_score": 80,
-    "grade": "B",
+    "grade": "A",
     "max_possible_deductions": 205
   }
 }
@@ -371,7 +371,7 @@
 ## Summary Card
 
 **App:** Telegram Messenger — Android  
-**Overall Risk:** Caution — **Score: 80/100 · Grade B**  
+**Overall Risk:** Safe — **Score: 80/100 · Grade A**  
 **Recommendation:** Recommended
 
 ### Red Flags

@@ -490,8 +490,8 @@ final_score = max(0, min(100, final_score))
 
 | Score | Grade | Risk Level |
 |-------|-------|------------|
-| 85–100 | A | Safe |
-| 70–84 | B | Caution |
+| 80–100 | A | Safe |
+| 70–79 | B | Caution |
 | 55–69 | C | Caution |
 | 40–54 | D | Risky |
 | 0–39 | F | Dangerous |

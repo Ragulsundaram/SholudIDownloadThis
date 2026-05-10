@@ -8,7 +8,7 @@
   "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats.",
   "platforms": ["ios", "android"],
   "scores": {
-    "ios": { "score": 80, "grade": "B", "risk": "caution" },
-    "android": { "score": 80, "grade": "B", "risk": "caution" }
+    "ios": { "score": 80, "grade": "A", "risk": "safe" },
+    "android": { "score": 80, "grade": "A", "risk": "safe" }
   }
 }

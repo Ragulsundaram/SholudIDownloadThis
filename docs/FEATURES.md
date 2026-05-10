@@ -98,8 +98,8 @@ Categories tracked (see CATEGORIES.md for full definitions):
 Computed from category ratings using a **normalized weighted formula** (see DATA-SCHEMA.md). The score is always 0–100 where 100 = perfect privacy and 0 = worst possible.
 
 Displayed as four elements together: large number, progress bar, letter grade, and risk badge:
-- 🟢 **Safe** (85–100, A) — minimal privacy concerns
-- 🟡 **Caution** (55–84, B/C) — moderate data collection, review before downloading
+- 🟢 **Safe** (80–100, A) — minimal privacy concerns
+- 🟡 **Caution** (55–79, B/C) — moderate data collection, review before downloading
 - 🟠 **Risky** (40–54, D) — significant data collection or sharing, think carefully
 - 🔴 **Dangerous** (0–39, F) — severe privacy violations, data selling, or irreversible risks
 

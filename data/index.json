@@ -35,10 +35,10 @@
     "category": "Social Networking",
     "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats.",
     "platforms": [
-      { "platform": "ios", "score": 80, "grade": "B", "risk": "caution", "analyzed_at": "2026-05-10" },
-      { "platform": "android", "score": 80, "grade": "B", "risk": "caution", "analyzed_at": "2026-05-10" }
+      { "platform": "ios", "score": 80, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-10" },
+      { "platform": "android", "score": 80, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-10" }
     ],
-    "worst_risk": "caution",
+    "worst_risk": "safe",
     "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private."
   }
 ]

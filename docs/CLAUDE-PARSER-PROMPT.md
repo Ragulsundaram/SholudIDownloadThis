@@ -405,8 +405,8 @@ Apply a fraction of the max deduction based on the category's risk level:
 
 | Score | Grade | Overall Risk |
 |-------|-------|--------------|
-| 85–100 | A | safe |
-| 70–84 | B | caution |
+| 80–100 | A | safe |
+| 70–79 | B | caution |
 | 55–69 | C | caution |
 | 40–54 | D | risky |
 | 0–39 | F | dangerous |
