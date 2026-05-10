@@ -272,7 +272,7 @@ whatsapp.com↗   October 2024     May 2025        iOS        v1.0
 ### 9. ThreatMeter (used in App header and cards)
 
 ```
-[THREAT ■■■░░ Risky] [i]
+[THREAT ■■■░░ Risky]
 ```
 
 - Pill chip: `rounded-full border-line bg-surface px-3 py-1.5`
@@ -284,17 +284,25 @@ whatsapp.com↗   October 2024     May 2025        iOS        v1.0
   - Filled portion uses risk solid color (`bg-safe`, `bg-caution`, `bg-risky`, `bg-danger`)
   - Empty portion uses `bg-line`
 - Right label: uppercase risk name (11px, semibold, tracking-wider) in matching risk ink color (`text-safe-ink`, `text-caution-ink`, etc.)
-- **Info icon button:** small `Info` icon from Lucide next to the pill, hover `hover:bg-divider hover:text-ink`, rounded-full padding
-- **Info tooltip card:** on hover of the info icon, a card appears to the right of the icon (`left-full`, centered vertically, `ml-2`, `z-10`):
+- `role="img"` with `aria-label` for accessibility
+
+### 9b. SafetyRatingTooltip (next to app name)
+
+```
+Telegram Messenger [i]
+```
+
+- Small `Info` icon from Lucide, placed next to the app name (same row as the H1 or H3)
+- Button: `rounded-full p-1 text-ink-subtle transition-colors hover:bg-divider hover:text-ink`
+- **Tooltip card:** on hover, a card appears to the right of the icon (`left-full`, centered vertically, `ml-2`, `z-10`):
   - Card: `w-40 rounded-xl border border-line bg-surface p-4 shadow-lg`
   - Left-pointing arrow using CSS border triangles (`border-r-line` + inner `border-r-surface`)
   - Contains:
     - "Safety Rating" label (11px, uppercase, semibold, `text-ink-subtle`)
     - Circle progress: SVG circle with `stroke-dasharray`/`stroke-dashoffset`, colored by risk level (`text-safe`, `text-caution`, etc.)
-    - Score number inside circle (11px, bold)
-    - Score readout below: `{score}/100` (14px, semibold)
+    - Score number inside circle (11px, bold, centered with `dominantBaseline="central"`)
   - CSS-only hover (`group-hover/tooltip:opacity-100`)
-- `role="img"` with `aria-label` for accessibility
+- This is a separate component (`SafetyRatingTooltip`) used independently of ThreatMeter
 
 ### 10. VerdictHero (used below Platform Switcher on detail page)
 

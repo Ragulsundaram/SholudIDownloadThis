@@ -3,6 +3,7 @@ import { ExternalLink, Smartphone, ShieldCheck } from "lucide-react";
 import type { RiskLevel } from "@/lib/types";
 import type { TrustIndicator } from "@/lib/trustIndicators";
 import { ThreatMeter } from "./ThreatMeter";
+import { SafetyRatingTooltip } from "./SafetyRatingTooltip";
 
 type Props = {
   name: string;
@@ -36,9 +37,14 @@ export function AppHeader({
       <AppIconLarge iconUrl={iconUrl} name={name} />
 
       <div className="min-w-0 flex-1">
-        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-          {name}
-        </h1>
+        <div className="flex items-center gap-2">
+          <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            {name}
+          </h1>
+          {score !== undefined && (
+            <SafetyRatingTooltip score={score} risk={risk} />
+          )}
+        </div>
         <p className="mt-1 text-base text-ink-muted">{developer}</p>
 
         <div className="mt-4 flex flex-wrap items-center gap-2">

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Smartphone } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { ThreatMeter } from "./ThreatMeter";
+import { SafetyRatingTooltip } from "./SafetyRatingTooltip";
 
 export function AppCard({ app }: { app: IndexEntry }) {
   const router = useRouter();
@@ -17,9 +18,12 @@ export function AppCard({ app }: { app: IndexEntry }) {
       <div className="flex items-start gap-4">
         <AppIcon iconUrl={app.icon_url} name={app.name} />
         <div className="flex min-w-0 flex-1 flex-col items-start gap-2">
-          <h3 className="text-base font-semibold leading-snug text-ink">
-            {app.name}
-          </h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-base font-semibold leading-snug text-ink">
+              {app.name}
+            </h3>
+            <SafetyRatingTooltip score={worstScore(app.platforms)} risk={app.worst_risk} />
+          </div>
           <ThreatMeter score={worstScore(app.platforms)} />
         </div>
       </div>
