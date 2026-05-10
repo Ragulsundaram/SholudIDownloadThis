@@ -125,6 +125,7 @@ export default async function AppPlatformPage({
               analyzedAt={data.meta.analyzed_at}
               trustIndicators={trust}
               risk={data.verdict.overall_risk}
+              score={data.verdict.score}
             />
           </div>
 

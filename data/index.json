@@ -12,5 +12,33 @@
     ],
     "worst_risk": "risky",
     "one_liner": "World-class encryption on your messages, but WhatsApp feeds your contacts, behavior, and device data into Meta's advertising machine."
+  },
+  {
+    "slug": "instagram",
+    "name": "Instagram",
+    "developer": "Meta Platforms, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/62/e7/c062e78e-bbfb-c539-11cc-469d727d5bb8/Prod-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/400x400bb.webp",
+    "category": "Social Networking",
+    "description": "A free photo and video sharing app from Meta with feeds, Stories, Reels, and direct messaging, used by over 2 billion people worldwide.",
+    "platforms": [
+      { "platform": "ios", "score": 42, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-10" },
+      { "platform": "android", "score": 42, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-10" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "Instagram shows you ads using everything it knows about you, including where you go, what you search, and how you behave, and it can read your direct messages."
+  },
+  {
+    "slug": "telegram",
+    "name": "Telegram Messenger",
+    "developer": "Telegram FZ-LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/c0/1b/57c01b2f-70b3-cfee-4cfa-03aac0ea2b8d/Telegram-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats.",
+    "platforms": [
+      { "platform": "ios", "score": 80, "grade": "B", "risk": "caution", "analyzed_at": "2026-05-10" },
+      { "platform": "android", "score": 80, "grade": "B", "risk": "caution", "analyzed_at": "2026-05-10" }
+    ],
+    "worst_risk": "caution",
+    "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private."
   }
 ]

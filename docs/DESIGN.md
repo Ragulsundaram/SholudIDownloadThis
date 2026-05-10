@@ -133,19 +133,15 @@ For the "Risky" (orange) level, define custom CSS variables since the design tok
 ┌─────────────────────────────────────────┐
 │  [App Icon 48x48]  WhatsApp Messenger   │
 │                    [THREAT ■■■░ Risky]   │
-│                                         │
-│  [🍎 53]  [🤖 53]                       │
 └─────────────────────────────────────────┘
 ```
 
 - App icon: 48x48px, rounded-xl, `border-line`
 - App name: 16px, font-weight 600, `text-ink`, `leading-snug` — wraps instead of truncating
 - ThreatMeter chip directly below the name; text column uses `items-start` so the `inline-flex` pill does not stretch horizontally
-- Platform pills below: one per platform with Lucide icon (iOS uses custom Apple SVG at `public/ios-icon.svg`; Android → `Bot`; Mac → `Laptop`; Windows → `AppWindow`; Linux → `Terminal`) + score number
-- **Removed from card:** developer name, category, one-liner description
+- **Removed from card:** developer name, category, one-liner description, platform pills
 - Entire card is clickable (`cursor-pointer` on `<article>` with click handler) — goes to `/app/{slug}`
 - Hover: `hover:border-brand/40 hover:bg-divider/30 hover:shadow-md`
-- Platform pills inside the card are independently clickable via `stopPropagation` — go to `/app/{slug}/{platform}`
 
 ### 2. Platform Switcher (used at top of App Detail page)
 
@@ -276,15 +272,17 @@ whatsapp.com↗   October 2024     May 2025        iOS        v1.0
 ### 9. ThreatMeter (used in App header)
 
 ```
-[THREAT ■■■░ Risky]
+[THREAT ■■■░░ Risky]
 ```
 
 - Pill chip: `rounded-full border-line bg-surface px-3 py-1.5`
 - Left label: "THREAT" in 10px uppercase, semibold, tracking-wider, `text-ink-subtle`
-- Middle segments: 4 horizontal bars (`h-2 w-4 rounded-[2px]`), filled count determined by risk:
-  - `safe` = 1 filled, `caution` = 2 filled, `risky` = 3 filled, `dangerous` = 4 filled, `unknown` = 0 filled
-  - Filled segments use risk solid color (`bg-safe`, `bg-caution`, `bg-risky`, `bg-danger`)
-  - Empty segments use `bg-line`
+- Middle segments: **5 horizontal bars** (`h-2 w-4 rounded-[2px]`), each worth 20 points. Fill is calculated from the actual score:
+  - Each segment is a `relative overflow-hidden rounded-[2px] bg-line` container
+  - An inner `absolute inset-y-0 left-0` span fills it proportionally based on how many of the segment's 20 points the score covers
+  - Example: score 53 → segments 1 and 2 full, segment 3 ~65% filled, segments 4 and 5 empty
+  - Filled portion uses risk solid color (`bg-safe`, `bg-caution`, `bg-risky`, `bg-danger`)
+  - Empty portion uses `bg-line`
 - Right label: uppercase risk name (11px, semibold, tracking-wider) in matching risk ink color (`text-safe-ink`, `text-caution-ink`, etc.)
 - `role="img"` with `aria-label` for accessibility
 

@@ -2,24 +2,9 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import {
-  Smartphone,
-  Bot,
-  Laptop,
-  AppWindow,
-  Terminal,
-  type LucideIcon,
-} from "lucide-react";
-import type { IndexEntry, Platform } from "@/lib/types";
+import { Smartphone } from "lucide-react";
+import type { IndexEntry } from "@/lib/types";
 import { ThreatMeter } from "./ThreatMeter";
-
-const PLATFORM_ICON: Record<Platform, LucideIcon | null> = {
-  ios: null,
-  android: Bot,
-  mac: Laptop,
-  windows: AppWindow,
-  linux: Terminal,
-};
 
 export function AppCard({ app }: { app: IndexEntry }) {
   const router = useRouter();
@@ -35,40 +20,15 @@ export function AppCard({ app }: { app: IndexEntry }) {
           <h3 className="text-base font-semibold leading-snug text-ink">
             {app.name}
           </h3>
-          <ThreatMeter risk={app.worst_risk} />
+          <ThreatMeter score={worstScore(app.platforms)} />
         </div>
-      </div>
-
-      <div className="mt-3 flex gap-2">
-        {app.platforms.map((p) => {
-          const Icon = PLATFORM_ICON[p.platform];
-          return (
-            <button
-              key={p.platform}
-              type="button"
-              className="inline-flex items-center gap-1.5 rounded-md border border-line bg-surface px-2 py-1 text-xs font-medium text-ink-muted transition-colors hover:border-ink hover:text-ink"
-              onClick={(e) => {
-                e.stopPropagation();
-                router.push(`/app/${app.slug}/${p.platform}`);
-              }}
-            >
-              {p.platform === "ios" ? (
-                <img
-                  src="/ios-icon.svg"
-                  alt="iOS"
-                  className="h-3.5 w-3.5"
-                  aria-hidden
-                />
-              ) : (
-                Icon && <Icon className="h-3.5 w-3.5" aria-hidden />
-              )}
-              <span className="tabular-nums">{p.score}</span>
-            </button>
-          );
-        })}
       </div>
     </article>
   );
+}
+
+function worstScore(platforms: IndexEntry["platforms"]): number {
+  return Math.min(...platforms.map((p) => p.score));
 }
 
 function AppIcon({ iconUrl, name }: { iconUrl: string; name: string }) {

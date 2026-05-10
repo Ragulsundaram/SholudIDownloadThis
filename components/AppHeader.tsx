@@ -15,6 +15,7 @@ type Props = {
   analyzedAt?: string;
   trustIndicators?: TrustIndicator[];
   risk?: RiskLevel;
+  score?: number;
 };
 
 export function AppHeader({
@@ -28,6 +29,7 @@ export function AppHeader({
   analyzedAt,
   trustIndicators = [],
   risk,
+  score,
 }: Props) {
   return (
     <header className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-6">
@@ -40,7 +42,7 @@ export function AppHeader({
         <p className="mt-1 text-base text-ink-muted">{developer}</p>
 
         <div className="mt-4 flex flex-wrap items-center gap-2">
-          {risk && <ThreatMeter risk={risk} />}
+          {score !== undefined && <ThreatMeter score={score} risk={risk} />}
           <Tag>{category}</Tag>
           {subCategory && <Tag>{subCategory}</Tag>}
           <Tag>Free</Tag>
