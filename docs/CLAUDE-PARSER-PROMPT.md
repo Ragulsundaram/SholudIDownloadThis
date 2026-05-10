@@ -524,6 +524,7 @@ Apply a fraction of the max deduction based on the category's risk level:
 4. **Plain English is mandatory.** Every `plain_english` field must be readable by someone with no legal or technical background.
 5. **Score honestly.** Do not assign a better rating than the evidence supports just because an app is popular.
 6. **Flag uncertainty.** If the policy is unusually vague, evasive, or contradictory, set `needs_review: true` and explain in `review_notes`.
+7. **Only `plain_english` is displayed on the site.** The `detail`, `policy_excerpt`, and `concerns` fields are stored for the audit trail (the `.md` review file) but are **never rendered on the webpage**. Make `plain_english` the one concise sentence users will actually read — it must stand alone.
 
 --- SYSTEM PROMPT END ---
 ```

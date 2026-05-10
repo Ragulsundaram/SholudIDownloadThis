@@ -456,11 +456,11 @@ This file is auto-generated/updated whenever a platform file is saved. Never edi
 | `required_for_core_function` | boolean | Is this needed for the app to work? |
 | `optional_access` | boolean | Can the user opt out of this? |
 | `background_access` | boolean | Does this happen when app is not open? |
-| `plain_english` | string | One sentence, no jargon — shown on collapsed card |
-| `detail` | string | 2–3 sentence expanded explanation — shown when card is opened |
-| `policy_excerpt` | string | Direct quote from the policy (keep under 20 words) |
-| `concerns` | array of strings | Specific bullet concerns — shown when card is opened |
-| `score_impact` | number | Raw point deduction for this category — stored for reference/debugging, **not displayed on the page** |
+| `plain_english` | string | One concise sentence, no jargon — **the only text displayed in the expanded card** |
+| `detail` | string | 2–3 sentence expanded explanation — **stored for audit trail, not displayed** |
+| `policy_excerpt` | string | Direct quote from the policy (keep under 20 words) — **stored for audit trail, not displayed** |
+| `concerns` | array of strings | Specific bullet concerns — **stored for audit trail, not displayed** |
+| `score_impact` | number | Raw point deduction — stored for reference/debugging, **not displayed** |
 
 ### `scoring`
 

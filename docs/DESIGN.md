@@ -202,11 +202,8 @@ The tag row leads with the ThreatMeter chip, then category, sub-category, "Free"
 - Risk badge: right-aligned, small pill (`size="sm"`)
 - ChevronDown icon rotates 180° when open via `group-open:rotate-180`
 - Expanded body: `border-t border-divider` with `px-4 pb-4 pt-4` spacing
-- Body contains:
-  - `plain_english` paragraph (14px, `text-ink`)
-  - `detail` paragraph if different from plain_english (14px, `text-ink-muted`)
-  - Policy quote blockquote: `border-l-2 border-line bg-divider/50` + italic (12px, `text-ink-muted`)
-  - Concerns list: `AlertTriangle` icon (text-caution) + 12px `text-ink-muted`
+- Body contains only the `plain_english` paragraph (14px, `text-ink`, `leading-relaxed`)
+- **No `detail`, no `policy_excerpt`, no `concerns` list** — one pointer always. The collapsed card shows the access type subtitle; the expanded card shows one plain-English sentence. That's it.
 
 ### 5. Risk Badge
 
