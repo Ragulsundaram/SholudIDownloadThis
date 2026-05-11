@@ -165,32 +165,29 @@ function CategoryCard({ category }: { category: CategoryDef }) {
   return (
     <Link
       href="/"
-      className="group relative flex items-center justify-between overflow-hidden rounded-2xl p-5 transition-transform hover:scale-[1.02]"
+      className="group relative block aspect-[16/9] overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
       style={{ backgroundColor: category.bgColor }}
     >
-      <div className="relative z-10 flex flex-col">
+      {category.imageUrl && (
+        <Image
+          src={category.imageUrl}
+          alt={category.name}
+          fill
+          sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover"
+          unoptimized
+        />
+      )}
+      <div className="absolute inset-0 flex flex-col justify-end p-5">
         {category.featuredLabel && (
-          <span className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80">
+          <span className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/85">
             Featured
           </span>
         )}
-        <span className="text-lg font-bold text-white">
+        <span className="text-xl font-bold text-white drop-shadow-sm">
           {category.featuredLabel ?? category.name}
         </span>
       </div>
-
-      {category.imageUrl && (
-        <div className="relative h-20 w-32 flex-shrink-0">
-          <Image
-            src={category.imageUrl}
-            alt={category.name}
-            fill
-            sizes="128px"
-            className="object-contain object-right"
-            unoptimized
-          />
-        </div>
-      )}
     </Link>
   );
 }

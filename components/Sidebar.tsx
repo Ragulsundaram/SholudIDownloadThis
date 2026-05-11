@@ -8,7 +8,7 @@ type Props = {
 };
 
 export function Sidebar({ apps, categoryList }: Props) {
-  const categories = categoryList ?? getUniqueCategories(apps);
+  const categories = (categoryList ?? getUniqueCategories(apps)).slice(0, 5);
 
   return (
     <aside className="hidden w-36 flex-shrink-0 lg:block">
