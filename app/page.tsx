@@ -5,9 +5,11 @@ import { PaginatedAppGrid } from "@/components/PaginatedAppGrid";
 import { BrowseByConcern } from "@/components/BrowseByConcern";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Sidebar } from "@/components/Sidebar";
+import { ALL_CATEGORIES } from "./categories/page";
 
 export default async function HomePage() {
   const [allApps, recent] = await Promise.all([getAllApps(), getRecentlyAnalyzed()]);
+  const sidebarCategories = ALL_CATEGORIES.map((c) => c.name);
 
   return (
     <>
@@ -15,7 +17,7 @@ export default async function HomePage() {
 
       <main className="flex-1">
         <div className="flex gap-5 px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
-          <Sidebar apps={allApps} />
+          <Sidebar apps={allApps} categoryList={sidebarCategories} />
 
           <div className="min-w-0 flex-1">
             {recent.length > 0 && (

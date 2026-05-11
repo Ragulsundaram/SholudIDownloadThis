@@ -30,7 +30,7 @@
     "app_store_url": "https://apps.apple.com/us/app/instagram/id389801252",
     "app_store_id": "389801252",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/62/e7/c062e78e-bbfb-c539-11cc-469d727d5bb8/Prod-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/400x400bb.webp",
-    "category": "Social Networking",
+    "category": "Social",
     "sub_category": "Photo & Video Sharing",
     "description": "A free photo and video sharing app from Meta with feeds, Stories, Reels, and direct messaging, used by over 2 billion people worldwide."
   },

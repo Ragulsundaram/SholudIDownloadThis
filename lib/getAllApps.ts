@@ -30,6 +30,11 @@ export async function getMostDangerous(limit = 4): Promise<IndexEntry[]> {
     .slice(0, limit);
 }
 
+export async function getAppsByCategory(category: string): Promise<IndexEntry[]> {
+  const apps = await getAllApps();
+  return apps.filter((a) => a.category === category);
+}
+
 function latestAnalyzedAt(entry: IndexEntry): string {
   return entry.platforms
     .map((p) => p.analyzed_at)

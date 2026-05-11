@@ -30,7 +30,7 @@
     "app_store_url": "https://apps.apple.com/us/app/telegram-messenger/id686449807",
     "app_store_id": "686449807",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/c0/1b/57c01b2f-70b3-cfee-4cfa-03aac0ea2b8d/Telegram-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-    "category": "Social Networking",
+    "category": "Social",
     "sub_category": "Messaging",
     "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats."
   },

@@ -6,6 +6,7 @@ import { ChevronRight } from "lucide-react";
 import { getAppParent, getAppPlatform, getAllSlugs } from "@/lib/getApp";
 import { PLATFORM_LABEL, STORE_LABEL, compareRisk } from "@/lib/risk";
 import { deriveTrustIndicators } from "@/lib/trustIndicators";
+import { categoryNameToSlug } from "@/app/categories/page";
 import type { Category, Flags, Platform, Verdict, AppMeta } from "@/lib/types";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -205,6 +206,7 @@ function CategoriesTab({
 }
 
 function Breadcrumb({ name, category }: { name: string; category: string }) {
+  const catSlug = categoryNameToSlug(category);
   return (
     <nav aria-label="Breadcrumb" className="text-sm text-ink-subtle">
       <ol className="flex flex-wrap items-center gap-1.5">
@@ -215,18 +217,19 @@ function Breadcrumb({ name, category }: { name: string; category: string }) {
         </li>
         <ChevronRight className="h-3.5 w-3.5" />
         <li>
-          <Link href="/browse" className="hover:text-ink">
+          <Link href="/categories" className="hover:text-ink">
             Browse
           </Link>
         </li>
         <ChevronRight className="h-3.5 w-3.5" />
         <li>
-          <Link
-            href={`/browse?category=${encodeURIComponent(category)}`}
-            className="hover:text-ink"
-          >
-            {category}
-          </Link>
+          {catSlug ? (
+            <Link href={`/categories/${catSlug}`} className="hover:text-ink">
+              {category}
+            </Link>
+          ) : (
+            <span>{category}</span>
+          )}
         </li>
         <ChevronRight className="h-3.5 w-3.5" />
         <li className="font-medium text-ink">{name}</li>

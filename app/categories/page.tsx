@@ -14,7 +14,7 @@ type CategoryDef = {
 };
 
 // Apple App Store categories with scraped images (where available) + solid colors
-const ALL_CATEGORIES: CategoryDef[] = [
+export const ALL_CATEGORIES: CategoryDef[] = [
   {
     name: "Entertainment",
     slug: "entertainment",
@@ -23,7 +23,7 @@ const ALL_CATEGORIES: CategoryDef[] = [
     bgColor: "#f2a2a2",
   },
   {
-    name: "Social Networking",
+    name: "Social",
     slug: "social-networking",
     imageUrl:
       "https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/02/d6/f6/02d6f6d0-3c68-6b0d-ed22-9c612324e78e/237dff3d-be47-410b-b7ac-8847815c5b89.png/600x338SCB.ApSCBL01-60.jpg",
@@ -164,7 +164,7 @@ export default async function CategoriesPage() {
 function CategoryCard({ category }: { category: CategoryDef }) {
   return (
     <Link
-      href="/"
+      href={`/categories/${category.slug}`}
       className="group relative block aspect-[16/9] overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
       style={{ backgroundColor: category.bgColor }}
     >
@@ -190,4 +190,12 @@ function CategoryCard({ category }: { category: CategoryDef }) {
       </div>
     </Link>
   );
+}
+
+export function categorySlugToName(slug: string): string | undefined {
+  return ALL_CATEGORIES.find((c) => c.slug === slug)?.name;
+}
+
+export function categoryNameToSlug(name: string): string | undefined {
+  return ALL_CATEGORIES.find((c) => c.name === name)?.slug;
 }
