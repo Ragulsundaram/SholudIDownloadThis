@@ -1,0 +1,13 @@
+{
+  "slug": "tiktok",
+  "name": "TikTok",
+  "developer": "TikTok Ltd.",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e2/4f/22/e24f22d8-3570-89bd-8acb-4ff7be733411/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "category": "Entertainment",
+  "sub_category": "Video",
+  "description": "Users view and explore clips, broadcast in real time, and browse products from merchants. The service delivers a customized viewing stream, simple production utilities, audio and visual enhancements, and numerous preset security settings.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": { "score": 49, "grade": "D", "risk": "risky" }
+  }
+}

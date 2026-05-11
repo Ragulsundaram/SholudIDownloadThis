@@ -40,5 +40,96 @@
     ],
     "worst_risk": "safe",
     "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private."
+  },
+  {
+    "slug": "tiktok",
+    "name": "TikTok",
+    "developer": "TikTok Ltd.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e2/4f/22/e24f22d8-3570-89bd-8acb-4ff7be733411/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Entertainment",
+    "description": "Users view and explore clips, broadcast in real time, and browse products from merchants. The service delivers a customized viewing stream, simple production utilities, audio and visual enhancements, and numerous preset security settings.",
+    "platforms": [
+      { "platform": "ios", "score": 49, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "TikTok collects a wide range of personal data including your behavior, location, contacts, and device fingerprint, and shares it with advertisers and business partners for targeted ads."
+  },
+  {
+    "slug": "dropbox",
+    "name": "Dropbox",
+    "developer": "Dropbox, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4c/68/b9/4c68b958-96c0-a9b7-a016-475285c4fd8e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "description": "A cloud storage and file synchronization service that lets you store, share, and access your files from anywhere.",
+    "platforms": [
+      { "platform": "ios", "score": 82, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "safe",
+    "one_liner": "Dropbox does not sell your data to advertisers and gives you solid controls to access, download, and delete your files and account."
+  },
+  {
+    "slug": "linkedin",
+    "name": "LinkedIn",
+    "developer": "LinkedIn Corporation (Microsoft affiliate)",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/57/07/065707da-578f-c955-c23e-2e89081e5100/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Business",
+    "description": "A professional networking platform for connecting with colleagues, finding jobs, sharing industry news, and building your career.",
+    "platforms": [
+      { "platform": "ios", "score": 55, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "caution",
+    "one_liner": "LinkedIn shares your professional data with Microsoft, advertisers, and employers, and tracks your behavior across the platform for ad targeting."
+  },
+  {
+    "slug": "canva",
+    "name": "Canva",
+    "developer": "Canva Pty Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/37/bd/b5/37bdb5a5-1d36-fed0-7e55-80c2f67fe901/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+    "category": "Graphics & Design",
+    "description": "An all-in-one design platform for creating social media graphics, presentations, posters, videos, and more with AI-powered tools.",
+    "platforms": [
+      { "platform": "ios", "score": 47, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "Canva collects extensive personal data including your designs, location, and device info, uses it for AI training, and shares it with advertisers and vendors."
+  },
+  {
+    "slug": "snapchat",
+    "name": "Snapchat",
+    "developer": "Snap, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/71/d8/6e/71d86ed5-8e4c-8486-03b2-8b4412b42a94/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "A multimedia messaging app known for ephemeral photos and videos, creative filters, and location-based features like Snap Map.",
+    "platforms": [
+      { "platform": "ios", "score": 63, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "caution",
+    "one_liner": "Snapchat's disappearing messages are a privacy win, but the app still tracks your location, collects device data, and shares information with partners and advertisers."
+  },
+  {
+    "slug": "hinge",
+    "name": "Hinge",
+    "developer": "Hinge, Inc. (Match Group)",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fd/a6/4d/fda64dab-763c-a247-a072-904c779a6321/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "A dating app designed to be deleted, focused on fostering serious relationships through detailed profiles and conversation prompts.",
+    "platforms": [
+      { "platform": "ios", "score": 41, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "Hinge collects extremely sensitive personal data including your sexual orientation, health info, racial background, and even your face geometry, then shares it with advertisers and vendors."
+  },
+  {
+    "slug": "bumble",
+    "name": "Bumble",
+    "developer": "Bumble Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/3c/57/dd3c576f-c1a8-7bec-41e2-c62e916b28fe/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "A dating and social networking app where women make the first move, offering modes for dating, friendship, and professional networking.",
+    "platforms": [
+      { "platform": "ios", "score": 41, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "Bumble collects sensitive personal data including your biometrics, tracks your behavior and conversations, and shares it with numerous vendors and advertisers."
   }
 ]

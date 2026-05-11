@@ -31,20 +31,20 @@ export function ThreatMeter({
 
   return (
     <div
-      className="inline-flex items-center gap-3 rounded-full border border-line bg-surface px-3 py-1.5"
+      className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-2 py-1.5"
       role="img"
       aria-label={`Privacy score: ${score} out of 100, ${RISK_LABEL[effectiveRisk]}`}
     >
       <span className="text-[10px] font-semibold uppercase tracking-wider text-ink-subtle">
         Threat
       </span>
-      <div className="flex gap-1" aria-hidden>
+      <div className="flex gap-0.5" aria-hidden>
         {Array.from({ length: TOTAL_SEGMENTS }).map((_, i) => {
           const fill = segmentFill(score, i);
           return (
             <span
               key={i}
-              className="relative h-2 w-4 overflow-hidden rounded-[2px] bg-line"
+              className="relative h-2 w-3.5 overflow-hidden rounded-[2px] bg-line"
             >
               {fill > 0 && (
                 <span

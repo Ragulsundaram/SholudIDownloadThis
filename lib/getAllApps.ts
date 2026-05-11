@@ -15,7 +15,7 @@ export async function getAllApps(): Promise<IndexEntry[]> {
   }
 }
 
-export async function getRecentlyAnalyzed(limit = 8): Promise<IndexEntry[]> {
+export async function getRecentlyAnalyzed(limit = 100): Promise<IndexEntry[]> {
   const apps = await getAllApps();
   return [...apps]
     .sort((a, b) => latestAnalyzedAt(b).localeCompare(latestAnalyzedAt(a)))
