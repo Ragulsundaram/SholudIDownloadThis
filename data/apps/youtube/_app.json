@@ -1,0 +1,13 @@
+{
+  "slug": "youtube",
+  "name": "YouTube",
+  "developer": "Google LLC",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/36/c2/24/36c2241b-c16d-3999-b1f5-a815c24820ef/Placeholder.mill/400x400bb-75.webp",
+  "category": "Photo & Video",
+  "sub_category": "Video Streaming",
+  "description": "The world's largest video-sharing platform, allowing users to watch, upload, and share videos across every genre.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": { "score": 60, "grade": "C", "risk": "caution" }
+  }
+}

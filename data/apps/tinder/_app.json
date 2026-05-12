@@ -1,0 +1,13 @@
+{
+  "slug": "tinder",
+  "name": "Tinder Dating App: Date & Chat",
+  "developer": "Tinder LLC",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/77/0e/a6770e13-7aaa-3bb9-1dfa-056ab81a3a9b/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-0-85-220.png/400x400bb.jpg",
+  "category": "Lifestyle",
+  "sub_category": "Dating",
+  "description": "The world's most popular dating app for meeting new people, with millions of users nearby and around the globe.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": { "score": 42, "grade": "D", "risk": "risky" }
+  }
+}

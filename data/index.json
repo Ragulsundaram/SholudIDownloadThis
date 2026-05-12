@@ -131,5 +131,31 @@
     ],
     "worst_risk": "risky",
     "one_liner": "Bumble collects sensitive personal data including your biometrics, tracks your behavior and conversations, and shares it with numerous vendors and advertisers."
+  },
+  {
+    "slug": "youtube",
+    "name": "YouTube",
+    "developer": "Google LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/36/c2/24/36c2241b-c16d-3999-b1f5-a815c24820ef/Placeholder.mill/400x400bb-75.webp",
+    "category": "Photo & Video",
+    "description": "The world's largest video-sharing platform, allowing users to watch, upload, and share videos across every genre.",
+    "platforms": [
+      { "platform": "ios", "score": 60, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
+    ],
+    "worst_risk": "caution",
+    "one_liner": "YouTube tracks every video you watch and search you make to sell ads, but gives you real tools to turn off personalized ads and delete your history."
+  },
+  {
+    "slug": "tinder",
+    "name": "Tinder Dating App: Date & Chat",
+    "developer": "Tinder LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/77/0e/a6770e13-7aaa-3bb9-1dfa-056ab81a3a9b/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-0-85-220.png/400x400bb.jpg",
+    "category": "Lifestyle",
+    "description": "The world's most popular dating app for meeting new people, with millions of users nearby and around the globe.",
+    "platforms": [
+      { "platform": "ios", "score": 42, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-12" }
+    ],
+    "worst_risk": "risky",
+    "one_liner": "Tinder collects deeply personal data including your sexual preferences, face geometry, and government ID, then shares it across every Match Group dating app."
   }
 ]
