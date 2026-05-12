@@ -1,0 +1,17 @@
+{
+  "slug": "crunchyroll",
+  "name": "Crunchyroll",
+  "developer": "Crunchyroll, LLC",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/39/62/36396267-07ee-940f-8c7f-bfefc440c39d/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/400x400bb.jpg",
+  "category": "Entertainment",
+  "sub_category": "Streaming",
+  "description": "The world's largest anime streaming platform, offering a vast library of anime, manga, and Asian dramas.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": {
+      "score": 65,
+      "grade": "C",
+      "risk": "caution"
+    }
+  }
+}

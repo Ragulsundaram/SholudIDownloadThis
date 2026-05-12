@@ -1,0 +1,17 @@
+{
+  "slug": "chatgpt",
+  "name": "ChatGPT",
+  "developer": "OpenAI",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/cd/85/bbcd8519-7d86-ec84-fad0-5b12880e3efc/AppIcon-0-0-1x_U007epad-0-0-0-1-0-P3-85-220.png/400x400bb.jpg",
+  "category": "Productivity",
+  "sub_category": "AI Assistant",
+  "description": "An AI-powered assistant for writing, analysis, coding, creative projects, and learning, built by OpenAI.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": {
+      "score": 55,
+      "grade": "C",
+      "risk": "caution"
+    }
+  }
+}

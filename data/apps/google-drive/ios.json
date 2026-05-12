@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://policies.google.com/privacy",
+    "terms_url": "https://www.google.com/drive/terms-of-service",
+    "policy_last_updated": "2025-10-24",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "google-drive-ios",
+    "name": "Google Drive — online backup",
+    "developer": "Google LLC",
+    "platform": "ios",
+    "app_store_url": "https://apps.apple.com/in/app/google-drive-online-backup/id507874739",
+    "app_store_id": "507874739",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/60/79/f6/6079f644-d6e4-081a-48fa-ff250e7cf01a/drive_2020q4-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Cloud Storage",
+    "description": "Google Drive lets you securely store, organise and collaborate on files and folders from anywhere, on any device. Part of Google Workspace with 15GB of free storage."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 66,
+    "grade": "C",
+    "one_liner": "Google Drive gives you 15GB of free cloud storage with strong sharing controls, but Google scans your files, uses your data to train AI models, and tracks your activity across all Google services for ads.",
+    "summary": "Google Drive is a cloud storage and file sync service that stores your files on Google's servers. While Google doesn't claim ownership of your content and promises not to use it for marketing campaigns, the company collects extensive data about your device, activity, and usage patterns. Your files may be reviewed for policy violations, and your data contributes to Google's advertising profile and AI training efforts.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Google Drive requires a Google Account and uploads all your files to Google's cloud, where they may be scanned for policy violations and used to improve Google's AI services. Your usage also feeds into Google's extensive ad-tracking system across all Google products."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_content_scanning",
+        "title": "Google may review your files",
+        "plain_english": "Google Drive's terms state that Google may review your uploaded content to determine whether it is illegal or violates their Program Policies. While they say they don't necessarily review all content, they reserve the right to do so and may remove or refuse to display files they believe violate policies.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_training",
+        "title": "Your data helps train Google's AI",
+        "plain_english": "Google uses information collected across its services, including publicly available information and data from users, to train AI models and build products like Gemini Apps and Cloud AI capabilities. This means your files and usage patterns may contribute to improving Google's AI systems.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Extensive ad tracking across Google services",
+        "plain_english": "Google tracks your searches, browsing history, video views, purchase activity, and interactions with content and ads across all Google services. This data is used to show you personalized ads and is shared with advertising partners.",
+        "severity": "high"
+      },
+      {
+        "id": "red_domain_access",
+        "title": "Work or school admin can access your account",
+        "plain_english": "If you use a Google Workspace account through your employer or school, your domain administrator may have access to your account information and files. They can view, manage, and control your Google Drive data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_law_enforcement",
+        "title": "Data shared with law enforcement",
+        "plain_english": "Google discloses user information in response to legal process or enforceable government requests, including to law enforcement. They publish a Transparency Report showing the volume and type of requests they receive.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_ownership",
+        "title": "Your content stays yours",
+        "plain_english": "Google explicitly states that they do not claim ownership of any content you upload to Google Drive. Your files remain your property.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_marketing",
+        "title": "Content not used for marketing",
+        "plain_english": "Google Drive's Additional Terms of Service explicitly promise that Google will not use your uploaded content for marketing or promotional campaigns.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Encryption in transit and at rest",
+        "plain_english": "Google uses encryption to protect your files while they are being uploaded and downloaded, as well as when they are stored on Google's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_sharing_controls",
+        "title": "Granular sharing controls",
+        "plain_english": "Google Drive lets you control exactly who can view, comment on, or edit each file and folder. Files in your individual drive are private until you decide to share them.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_controls",
+        "title": "Comprehensive privacy controls",
+        "plain_english": "Google provides tools to manage your data, including My Activity to review and delete activity data, Ad Settings to control personalized ads, and the ability to download or delete your Google Account data.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Drive can use your camera to scan paper documents, but this is completely optional. The microphone is not used.",
+      "detail": "Camera access is optional and only used for the document scanning feature. Not required for core cloud storage functionality.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Drive does not actively collect your GPS location. Google may infer your approximate location from your IP address as part of general Google services usage.",
+      "detail": "No GPS or precise location access specific to Google Drive. General IP-based location inference may occur across Google services.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Drive does not access your phone's contacts list directly. However, if you choose to share files, you can pick contacts from your Google Account.",
+      "detail": "No direct contacts or phonebook access. Sharing uses Google Account contacts if you have them.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Drive's entire purpose is to upload and store your files on Google's cloud servers. Your photos, documents, videos, and other files are stored remotely so you can access them from any device.",
+      "detail": "All files uploaded to Google cloud servers for storage and sync. Files may be scanned for policy violations. Content remains user's property.",
+      "policy_excerpt": "Google Drive allows you to upload, submit, store, send and receive content. As described in the Google Terms of Service, your content remains yours.",
+      "concerns": ["Files stored on third-party servers", "Content may be scanned for policy violations"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google shares your information with advertising partners, service providers, analytics companies, and other Google affiliates. While Google says it does not sell your personal information, it extensively shares data for advertising and service provision purposes.",
+      "detail": "Shared with Google affiliates, advertising partners, service providers, domain administrators, law enforcement when required, and third parties with user consent.",
+      "policy_excerpt": "The types of third parties your information may be disclosed to include: our resellers and other sales and advertising partners, retailers, advertisers, ad agencies, advertising networks and platforms, information service providers.",
+      "concerns": ["Data shared with advertisers", "Affiliate company sharing", "Law enforcement disclosures"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need a Google Account to use Google Drive. Google collects your name, email address, phone number, and may collect payment information if you upgrade storage. Your account links all Google services together.",
+      "detail": "Google Account required. Collects name, email, phone, password, payment info. Account links activity across all Google services.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "concerns": ["Cross-service account linking", "Extensive profile data collection"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google tracks your activity across all Google services, including Drive, to build an advertising profile. This includes your searches, browsing history, video views, purchases, and interactions with content and ads.",
+      "detail": "Extensive tracking across all Google services for personalized advertising. Uses cookies, device identifiers, and activity data. Shared with advertising partners.",
+      "policy_excerpt": "Google processes information to provide advertising, including online identifiers, browsing and search activity, and information about your location and interactions with advertisements.",
+      "concerns": ["Cross-service activity tracking", "Ad profile building", "Data shared with advertisers"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must be 13 or older to create a Google Account. Google Drive is not intended for children under 13. Family Link allows parents to manage children's Google Accounts.",
+      "detail": "13+ to register. Family Link available for supervised accounts. COPPA compliant for under-13 use through parental controls.",
+      "policy_excerpt": "You must be 13 or older to register for a Google Account.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects your IP address, tracks which websites you visit before using Google services, monitors your searches, and records how you interact with Google apps and websites.",
+      "detail": "IP address, browser info, search terms, referring URL, crash reports, system activity, usage navigation collected continuously.",
+      "policy_excerpt": "IP address; Browser; Mobile Device ID; Webpage that led you to an Adobe website; Search terms entered into a search engine which lead you to an Adobe website; Use and navigation of Services and Software.",
+      "concerns": ["IP address collection", "Search term tracking", "Referrer tracking"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects detailed information about your device including its unique identifiers, browser type, operating system, mobile carrier, and application version. This is used to track your activity and show you targeted ads.",
+      "detail": "Unique identifiers, browser type, device type, OS, carrier, application version, crash reports collected. Used for tracking, security, and advertising.",
+      "policy_excerpt": "We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates... The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+      "concerns": ["Unique device identifiers", "Cross-service tracking"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Drive does not collect health or biometric data. Other Google services like Fitbit may collect health data, but this is separate from Google Drive.",
+      "detail": "No health or biometric data collection specific to Google Drive.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google collects payment and billing information if you upgrade to Google One or Google Workspace for additional storage.",
+      "detail": "Payment/billing information collected for paid storage subscriptions.",
+      "policy_excerpt": "For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services, like apps in the Play Store.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete individual files from Google Drive or delete your entire Google Account. Google provides tools to download your data through Google Takeout. However, Google may retain some data for legal and security purposes even after deletion.",
+      "detail": "File-level deletion available. Account deletion available. Google Takeout for data export. Some data retained for legal/security purposes.",
+      "policy_excerpt": "You can also delete your account at any time through your Google Account settings.",
+      "concerns": ["Some data retained after deletion"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google can change its privacy policy at any time and will post the updated version with a new 'last updated' date. For major changes, they may notify you by email or through the service.",
+      "detail": "Updated policy posted with 'last updated' date. Notice for material changes via email or posting.",
+      "policy_excerpt": "If we do, we will change the 'last updated' date at the top of this policy... Under certain circumstances (for example with certain material changes or where it is required by applicable privacy laws) we will provide notice to you of these changes and, where required by applicable law, we will obtain your consent.",
+      "concerns": [],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 65.25,
+    "final_score": 66,
+    "grade": "C"
+  }
+}

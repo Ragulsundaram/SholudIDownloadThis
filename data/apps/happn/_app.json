@@ -1,0 +1,17 @@
+{
+  "slug": "happn",
+  "name": "happn: dating app",
+  "developer": "HAPPN SAS",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c3/a1/da/c3a1dadf-1b87-a4ff-fbe6-840d57c66660/AppIcon-Black-0-0-1x_U007ephone-0-1-0-85-220.png/400x400bb.jpg",
+  "category": "Lifestyle",
+  "sub_category": "Dating",
+  "description": "A location-based dating app that helps you find people you've crossed paths with in real life.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": {
+      "score": 57,
+      "grade": "C",
+      "risk": "caution"
+    }
+  }
+}

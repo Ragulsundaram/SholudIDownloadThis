@@ -1,0 +1,17 @@
+{
+  "slug": "lightroom",
+  "name": "Lightroom Photo & Video Editor",
+  "developer": "ADOBE SYSTEMS SOFTWARE IRELAND LIMITED",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/b4/d2/98b4d22c-147d-d017-9863-c7be31a6aac7/AppIcon-0-1x_U007ephone-0-1-0-0-85-220-0.png/400x400bb.jpg",
+  "category": "Photo & Video",
+  "sub_category": "Photo Editor",
+  "description": "A professional photo and video editing app with cloud sync, AI-powered features, and advanced editing tools from Adobe.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": {
+      "score": 62,
+      "grade": "C",
+      "risk": "caution"
+    }
+  }
+}

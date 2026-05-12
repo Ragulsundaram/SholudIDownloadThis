@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-12",
+    "analyzed_by": "claude-sonnet-4-6",
+    "policy_url": "https://www.shaadi.com/info/privacy",
+    "terms_url": "https://www.shaadi.com/info/terms",
+    "policy_last_updated": "2026-04-01",
+    "needs_review": true,
+    "review_notes": "Shaadi.com explicitly defines itself as an 'advertising platform providing targeted advertising services for the purpose of matchmaking.' It collects extensive personal and sensitive data including government-issued identity proofs, financial details, and employment information. The platform conducts criminal background checks through third parties and may require mandatory selfie verification and government ID for core features. User-generated content (including testimonials and success stories) is licensed to Shaadi.com on a worldwide, irrevocable, perpetual basis. Data is stored in India and the USA."
+  },
+  "app": {
+    "slug": "shaadi-ios",
+    "name": "Shaadi.com Matrimony App",
+    "developer": "People Interactive (India) Private Limited",
+    "platform": "ios",
+    "app_store_url": "https://apps.apple.com/in/app/shaadi-com-matrimony-app/id480093204",
+    "app_store_id": "480093204",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/1a/1a/991a1a4c-f88b-7f4d-1a7c-3dcf3dba7fef/AppIcon-0-0-1x_U007ephone-0-11-0-sRGB-85-220.png/400x400bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "Matrimony",
+    "description": "The world's largest matrimonial service and one of India's best known brands, helping people find life partners since 1996."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "Shaadi.com is an advertising platform that collects your identity proofs, financial data, and employment details, then shares your profile publicly for matchmaking.",
+    "summary": "Shaadi.com collects extensive personal and sensitive data including government-issued identity proofs, financial information, and employment details. It operates as an advertising and matchmaking facilitation platform where user profiles are publicly displayed. The platform uses third-party verification agencies, conducts criminal background checks, and may require mandatory government ID and selfie verification for core features. While users can access and delete their data, withdrawing consent effectively means profile deletion. Data is stored in India and the USA.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Shaadi.com requires extremely sensitive personal data including government ID and financial details by design. If you use it, be cautious about what you share, as your profile is public and your testimonials may be used in marketing forever."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_identity_proofs_required",
+        "title": "You must submit government-issued identity proofs",
+        "plain_english": "Shaadi.com may require you to upload a valid government ID (Driving License, Passport, Aadhaar, or PAN) and complete a selfie verification to unlock core features like messaging and viewing contact details.",
+        "severity": "high"
+      },
+      {
+        "id": "red_criminal_background_checks",
+        "title": "Third parties may check your criminal records",
+        "plain_english": "Shaadi.com uses third-party verification agencies and subcontractors to validate your information, which may include conducting checks for past criminal records or other adverse information.",
+        "severity": "high"
+      },
+      {
+        "id": "red_public_profile_by_design",
+        "title": "Your matrimonial profile is displayed publicly to all users",
+        "plain_english": "By design, Shaadi.com publishes the personal information you submit — including photos, education, employment, and marital status — to other users to provide the matchmaking service. You have limited control over who sees it.",
+        "severity": "high"
+      },
+      {
+        "id": "red_testimonials_used_forever",
+        "title": "Your success stories and photos can be used in marketing forever",
+        "plain_english": "If you submit a testimonial or success story, you give Shaadi.com an irrevocable, perpetual license to use it in their marketing materials online and offline without paying you or asking again.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_financial_data_collected",
+        "title": "Collects bank account, credit card, and UPI details for paid services",
+        "plain_english": "When you subscribe to premium memberships, Shaadi.com collects sensitive financial data including your bank account, debit or credit card number, or UPI ID.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_advertising_platform_model",
+        "title": "The platform explicitly operates as an advertising service",
+        "plain_english": "Shaadi.com describes itself as an advertising platform providing targeted advertising services. Your activity data is used to display curated advertisements, promotional offers, and recommendations.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_data_access_controls",
+        "title": "You can access, update, and delete your information",
+        "plain_english": "Shaadi.com provides tools to access, rectify, and update your information. You can request account deletion by emailing rtbf@shaadi.com.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption_for_payments",
+        "title": "Payment data is encrypted during transmission",
+        "plain_english": "When you enter sensitive information like a credit card number, it is encrypted and protected by industry-standard guidelines during transmission.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_chat_auto_delete",
+        "title": "Chat messages are automatically deleted after 90 days",
+        "plain_english": "All chat communications are automatically deleted after 90 days from the date of transmission. Shaadi.com does not retain them beyond this period.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_age_verification_strong",
+        "title": "Strict age requirements for matrimonial eligibility",
+        "plain_english": "Users must be at least 21 (male) or 18 (female) and legally competent to marry. This is stricter than casual dating apps.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Shaadi.com uses your camera for selfie verification and optional video features like Shaadi Meet and Shaadi Live. It does not access your camera in the background.",
+      "detail": "Camera access is required for mandatory selfie verification and optional video calling features (Shaadi Meet, Shaadi Live). Microphone is used during video calls. These are user-initiated and not background-accessed. However, selfie verification may be mandatory for unlocking core features.",
+      "policy_excerpt": "Members are strongly encouraged to submit valid government-issued identification and/or complete Selfie Verification, as may be required by Shaadi.com from time to time.",
+      "concerns": [
+        "Selfie verification may be mandatory for core features",
+        "Video call features require camera and microphone access"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com does not collect your GPS location. Your general location may be inferred from your IP address.",
+      "detail": "No precise GPS location collection is mentioned in the privacy policy. Location is not a core feature of the matchmaking service. IP address is logged, which may infer rough geographic location.",
+      "policy_excerpt": "No GPS or precise location collection described.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com does not access your phone contacts. You can share interesting profiles with your contacts via WhatsApp, but this is entirely optional.",
+      "detail": "No contact or address book access is required or described in the privacy policy. Users can manually share profiles via WhatsApp, but this is user-initiated sharing of public profile links.",
+      "policy_excerpt": "You have the option to send interesting profiles to your contacts via WhatsApp.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Shaadi.com only accesses your photos when you choose to upload them to your profile or for identity verification. It does not scan your device storage in the background.",
+      "detail": "File and media access is user-initiated for uploading profile photos, identity proof documents, and other profile-related images. There is no indication of broad library scanning or background file access.",
+      "policy_excerpt": "While registering for our service, you share with us your personal data, such as name, your gender, date of birth, contact details, educational qualification, employment details, photos, marital status and your interests.",
+      "concerns": [
+        "Identity proof documents uploaded and stored on servers"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com shares your data with other users, service providers, verification agencies, advertising and analytics partners, and law enforcement. Third-party misuse is not the company's responsibility.",
+      "detail": "Shaadi.com shares personal information with: other users (profiles are public by design), third-party service providers (development, hosting, maintenance, backup, storage, payment processing, analysis), verification agencies (for identity and criminal background checks), advertising and analytics partners (cookies, web beacons), and law enforcement agencies when required by law. The company explicitly states it is not responsible for unauthorized access or misuse by third parties except to the extent arising from its own failure to comply with legal obligations.",
+      "policy_excerpt": "We may use third party service providers to provide website and application development, hosting, maintenance, backup, storage, payment processing, analysis and other services for us, which may require them to access or use information about you.",
+      "concerns": [
+        "Profiles are publicly visible to all registered users by design",
+        "Third-party verification agencies conduct criminal background checks",
+        "Advertising and analytics partners use cookies and web beacons for tracking",
+        "Company disclaims liability for third-party misuse",
+        "Law enforcement disclosures for legal requests"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com requires extensive personal and sensitive data to create a profile: name, gender, date of birth, contact details, education, employment, photos, marital status, interests, and government-issued identity proofs.",
+      "detail": "Account creation requires extensive personal data by design: name, gender, date of birth, contact details, educational qualification, employment details, photos, marital status, interests. Sensitive personal data includes identity proofs (Driving License, Passport, Aadhaar, PAN). Social login via Google/Apple imports additional data. Mandatory verification may require government ID and selfie verification for accessing core features. The platform is strictly for individuals seeking lawful matrimonial alliances.",
+      "policy_excerpt": "While registering for our service, you share with us your personal data, such as name, your gender, date of birth, contact details, educational qualification, employment details, photos, marital status and your interests and sensitive personal data such as your Identity proofs.",
+      "concerns": [
+        "Government ID required for core features",
+        "Extensive sensitive personal data collected by design",
+        "Third-party criminal background checks conducted",
+        "Social login imports additional data from Google/Apple"
+      ],
+      "score_impact": -10.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com explicitly operates as an advertising platform. It tracks everything you do — searches, clicks, pages visited, messages — and uses it to show you targeted ads and recommendations.",
+      "detail": "Shaadi.com explicitly defines itself as an advertising platform providing targeted advertising services. It collects extensive activity data: date and time of login, features used, searches, clicks, pages visited, and interactions with other users including messages exchanged. Third-party advertising and analytics partners use cookies and web beacons to track usage. This data is used for displaying curated advertisements, promotional offers, and matchmaking recommendations.",
+      "policy_excerpt": "Shaadi.com is an advertising platform providing targeted advertising services for the purpose of matchmaking. We collect information about your activity on our services, such as date and time you logged in, features you've been using, searches, clicks and pages visited by you, your interaction with other users including messages exchanged.",
+      "concerns": [
+        "Explicit advertising platform model",
+        "Every search, click, and message is tracked and logged",
+        "Third-party advertising partners use cookies and web beacons",
+        "Activity data used for targeted ads and recommendations"
+      ],
+      "score_impact": -20.0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com is a matrimonial platform strictly for adults eligible to marry. It does not allow users under 18 and is not designed for children.",
+      "detail": "The platform requires users to be at least 21 years (male) or 18 years (female) and legally competent to enter into matrimony. It is strictly for personal, non-commercial use and lawful matrimonial alliances. There is no children's service or under-18 access. This is appropriate for a matrimonial context.",
+      "policy_excerpt": "To register as a Member, on the Platform and access or use the Services, the person must have attained the minimum legal marriageable age as prescribed under Indian law—21 years or above for males and 18 years or above for females.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com requires internet access to browse profiles and communicate. It logs your IP address, device ID, and extensive activity data including every search and message.",
+      "detail": "Continuous internet access is required for the core matchmaking service. Shaadi.com collects extensive log data including IP address, device ID, browser type and version, operating system, and cookie identifiers. Activity tracking includes login times, features used, searches, clicks, pages visited, and message exchanges. This data is retained for as long as necessary to provide services and comply with legal obligations.",
+      "policy_excerpt": "We collect information from and about the device(s) such as IP address, device ID and type, device-specification and apps settings, app error reports, browser type and version, operating system, identifiers associated with cookies or other technologies that may uniquely identify your device or browser.",
+      "concerns": [
+        "IP address and device ID logged continuously",
+        "Every interaction tracked including messages",
+        "Data retained for undefined legal periods"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com collects your device ID, device type, operating system, browser version, app settings, and cookie identifiers to uniquely identify your device and track your activity.",
+      "detail": "Shaadi.com collects: IP address, device ID, device type, device specifications, app settings, app error reports, browser type and version, operating system, and identifiers associated with cookies or other technologies that may uniquely identify the device or browser. Third-party advertising and analytics partners also use cookies and web beacons. This enables persistent device tracking across sessions.",
+      "policy_excerpt": "We collect information from and about the device(s) such as IP address, device ID and type, device-specification and apps settings, app error reports, browser type and version, operating system, identifiers associated with cookies or other technologies that may uniquely identify your device or browser.",
+      "concerns": [
+        "Device ID enables persistent tracking",
+        "Cookie identifiers track browser activity across sessions",
+        "Third-party tracking via cookies and web beacons"
+      ],
+      "score_impact": -10.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com does not collect health data. Selfie verification involves photos but is not used for biometric identification beyond basic identity confirmation.",
+      "detail": "No health data collection is mentioned in the privacy policy. Selfie verification is used for identity confirmation but is not described as biometric processing beyond photo comparison. The verification status is explicitly disclaimed as not guaranteeing genuineness, character, or intent.",
+      "policy_excerpt": "The verification status of a Member's mobile number or the verification of a Member's name against government-issued identification documents is conducted solely for basic identity confirmation and shall not be construed as authentication or assurance of the Member's genuineness, character, intent, or compatibility.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Shaadi.com collects your bank account, debit/credit card, or UPI details when you subscribe to premium memberships. Free browsing requires no payment information.",
+      "detail": "Payment data is collected for optional premium memberships that provide enhanced visibility and communication features. Financial data includes bank account, debit/credit card number, or UPI ID. Payment data is encrypted during transmission and processed through third-party payment gateways. Transaction-related information is retained for accounting and regulatory compliance.",
+      "policy_excerpt": "When you avail for a paid service, you provide us or our payment service provider with the sensitive personal data such as your Bank account, debit or credit card number or UPI.",
+      "concerns": [
+        "Sensitive financial data collected and stored",
+        "Payment processed through third-party gateways",
+        "Transaction data retained for regulatory compliance"
+      ],
+      "score_impact": -10.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can access, update, and delete your information. However, withdrawing your consent means your profile will be deleted because the service cannot function without your personal data.",
+      "detail": "Users can access, rectify, and update information through their account. Account deletion can be requested by emailing rtbf@shaadi.com. However, the privacy policy states that withdrawing consent or opting out of sharing with third-party service providers means profile deletion, as the service cannot be provided without personally identifiable information. Some data may be retained for record-keeping, transaction completion, or legal obligations even after deletion.",
+      "policy_excerpt": "Please note that by withdrawing your consent or opting out means, its deletion of your profile as we won't be able to provide service to you without the personally identifiable information.",
+      "concerns": [
+        "Withdrawing consent = automatic profile deletion",
+        "Some data retained for legal and record-keeping purposes",
+        "Cannot use service without providing extensive personal data"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Shaadi.com will notify you of material policy changes, but by continuing to use the platform after changes, you automatically accept the new terms. You cannot reject changes and keep using the service.",
+      "detail": "The privacy policy states that material changes will be notified in a clear and accessible manner as required by law. The Terms state that continued use of the Platform following any amendment constitutes acceptance of the revised terms. Users who do not agree must stop using the Platform.",
+      "policy_excerpt": "Continued use of the Site following any such amendment or modification shall be deemed to constitute your acceptance of the revised terms of the Agreement.",
+      "concerns": [
+        "Passive acceptance by continued use",
+        "No mechanism to selectively reject specific changes"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.7,
+        "deduction": 10.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.8,
+        "deduction": 20.0
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.7,
+        "deduction": 10.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.7,
+        "deduction": 10.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 86.25,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

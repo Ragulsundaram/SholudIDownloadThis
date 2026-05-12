@@ -1,0 +1,17 @@
+{
+  "slug": "shaadi",
+  "name": "Shaadi.com Matrimony App",
+  "developer": "People Interactive (India) Private Limited",
+  "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/1a/1a/991a1a4c-f88b-7f4d-1a7c-3dcf3dba7fef/AppIcon-0-0-1x_U007ephone-0-11-0-sRGB-85-220.png/400x400bb.jpg",
+  "category": "Lifestyle",
+  "sub_category": "Matrimony",
+  "description": "The world's largest matrimonial service and one of India's best known brands, helping people find life partners since 1996.",
+  "platforms": ["ios"],
+  "scores": {
+    "ios": {
+      "score": 58,
+      "grade": "C",
+      "risk": "caution"
+    }
+  }
+}
