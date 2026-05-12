@@ -11,32 +11,22 @@
 ### 1. App Search & Discovery
 
 - **Search bar** on homepage — user types an app name and sees matching results
-- One result per app (not per platform) — each result shows: app icon, app name, ThreatMeter chip, and platform pills with Lucide icons + scores (e.g. `[🍎 53]` `[🤖 53]`)
-- Tapping a platform pill goes directly to `/app/{slug}/{platform}`
-- Tapping the card body goes to `/app/{slug}` (the platform overview/picker page)
+- One result per app — each result shows: app icon, app name, ThreatMeter chip, and the iOS score
+- Tapping the card goes to `/app/{slug}`
 - If an app is not in the database yet, show a "Request this app" option (stores in a queue)
 - Search is fuzzy (e.g. "whatsap" still finds "WhatsApp")
 
 ### 2. App Detail Page
 
-Each app has two URL levels:
-- `/app/{slug}` — overview page, shows all available platforms and lets the user pick
-- `/app/{slug}/{platform}` — the full detail page for a specific platform (e.g. `/app/whatsapp/ios`)
-
-Tapping a platform badge in search results goes directly to the platform-specific URL.
+One URL per app: `/app/{slug}` (e.g. `/app/whatsapp`). v1 is iOS-only — no platform segment.
 
 The detail page contains these sections in order:
 
 **App header**
 - App icon, name, developer name
-- Feature tags: ThreatMeter chip, app category, sub-category, price (Free), and trust indicators (e.g. "E2E Encrypted") where applicable. The active platform is **not** shown here — it lives in the Platform Switcher below
-- Direct link to the App Store / Play Store / platform store
-
-**Platform switcher**
-- Pill buttons for each available platform: iOS · Android · Mac · Windows · Linux
-- Currently unavailable platforms shown as greyed-out "soon" pills
-- Switching platform reloads the score, verdict, flags, and category cards for that platform — same URL slug, different platform segment
-- Some category ratings and scores legitimately differ per platform (e.g. Mac has stricter OS sandbox, Android has additional Play Store permissions)
+- Feature tags: ThreatMeter chip, app category, sub-category, price (Free), and trust indicators (e.g. "E2E Encrypted") where applicable
+- Direct link to the App Store
+- Compare button — adds the app to the compare basket (top-right of the navbar)
 
 **VerdictHero**
 - Thin component with a 2px risk-colored left bar
@@ -55,13 +45,11 @@ The detail page contains these sections in order:
 - Cards are mutually-exclusive accordions via native `<details name="category">` (only one open at a time, zero JS)
 - Cards are sorted by risk severity: `dangerous → risky → caution → safe → unknown`
 - Each card is expandable — tap to reveal plain-English description, policy excerpt quote, and specific concerns
-- Platform-specific categories (e.g. "App Sandbox" for Mac, "Play Store Permissions" for Android) only appear on the relevant platform
-
 **Safer alternative** — shown when overall risk is Caution or worse
 - One recommended alternative app with its score and a one-line reason
 
 **Meta strip** — bottom of page
-- Policy source URL, policy last-updated date, our analysis date, platform, schema version
+- Policy source URL, policy last-updated date, our analysis date, schema version
 - "Flag this rating" link for user corrections
 
 ### 3. Category Breakdown Grid
@@ -74,8 +62,6 @@ The core UI element. A 2-column grid of expandable cards — one per permission 
 - Cards sorted by risk severity: `dangerous → risky → caution → safe → unknown`
 - **Expandable body** — tap to reveal plain-English description, the relevant policy quote, and a list of specific concerns
 - Cards are mutually-exclusive accordions via native `details name="category"` (only one open at a time, zero JS)
-
-Platform-exclusive categories (e.g. Mac App Sandbox, Android Play Store Permissions) are only shown on the relevant platform page.
 
 Categories tracked (see CATEGORIES.md for full definitions):
 1. Camera & Microphone
@@ -103,12 +89,9 @@ Displayed as four elements together: large number, progress bar, letter grade, a
 - 🟠 **Risky** (40–54, D) — significant data collection or sharing, think carefully
 - 🔴 **Dangerous** (0–39, F) — severe privacy violations, data selling, or irreversible risks
 
-The score is **per platform** — the same app can score differently on iOS vs Android vs Mac because each platform has its own policy analysis.
-
-### 5. Platform & Category Browsing
+### 5. Category Browsing
 
 - Browse page at `/browse` — shows all apps in the DB, filterable by:
-  - Platform (iOS — more added later)
   - Overall risk level
   - App category (Social, Productivity, Health, Finance, Games, etc.)
 - Sorted by: Most recently added / Highest risk / Alphabetical
@@ -128,12 +111,12 @@ The score is **per platform** — the same app can score differently on iOS vs A
 - Stored in a queue for manual processing
 - Confirmation message: "We'll analyze this and add it within 48 hours"
 
-### 8. Compare Page (Stretch Goal for v1)
+### 8. Compare Page (Shipped in v1)
 
-- Side-by-side comparison at `/compare?a={slug}/{platform}&b={slug}/{platform}`
-- Example: `/compare?a=whatsapp/ios&b=signal/ios`
-- Same category grid shown for both apps in columns with per-category diff indicators
-- Useful for "WhatsApp vs Signal" and "WhatsApp iOS vs WhatsApp Android" type decisions
+- Side-by-side comparison at `/compare?apps={slug1},{slug2},...` (max 4)
+- Example: `/compare?apps=whatsapp,telegram`
+- Compare button on every AppCard + AppHeader adds the app to a localStorage-backed basket; navbar surfaces the basket as a dropdown
+- Table sections: app columns (with "Safest" trophy), verdict banner, at-a-glance grid, red/green flag titles, 14-category permissions grid (icon + label per row)
 
 ---
 

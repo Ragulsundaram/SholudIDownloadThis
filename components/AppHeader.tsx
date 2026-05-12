@@ -14,7 +14,6 @@ type Props = {
   category: string;
   subCategory?: string;
   storeUrl?: string;
-  storeLabel?: string;
   analyzedAt?: string;
   trustIndicators?: TrustIndicator[];
   risk?: RiskLevel;
@@ -29,7 +28,6 @@ export function AppHeader({
   category,
   subCategory,
   storeUrl,
-  storeLabel = "App Store",
   analyzedAt,
   trustIndicators = [],
   risk,
@@ -72,7 +70,7 @@ export function AppHeader({
               className="inline-flex flex-shrink-0 items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
             >
               <ExternalLink className="h-4 w-4" />
-              {storeLabel}
+              App Store
             </a>
           )}
         </div>

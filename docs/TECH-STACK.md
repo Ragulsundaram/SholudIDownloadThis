@@ -39,21 +39,18 @@ Install only what you need: Badge, Card, Accordion, Button, Input, Sheet (for mo
 
 ### Data Layer v1 — JSON Flat Files
 
-For v1, each app's data lives in `/data/apps/{slug}/{platform}.json`. Next.js reads these at build time and generates static pages. Zero infrastructure, zero cost, zero complexity.
+For v1, each app's data lives in `/data/apps/{slug}/app.json`. Next.js reads these at build time and generates static pages. Zero infrastructure, zero cost, zero complexity.
 
 ```
 /data
   /apps
     /whatsapp
-      _app.json          ← shared parent: name, icon, platforms, scores
-      ios.json           ← iOS-specific policy analysis
-      android.json       ← Android-specific policy analysis
+      app.json           ← iOS policy analysis (full schema)
     /instagram
-      _app.json
-      ios.json
+      app.json
     ...
   /reviews               ← human-readable .md audit files (not read by site)
-    whatsapp-ios.md
+    whatsapp.md
     ...
   /index.json            ← lightweight list of all apps (for browse + search)
 ```
@@ -96,20 +93,21 @@ shouldidownloadthis/
 │   │   └── page.tsx              # Browse all apps
 │   ├── app/
 │   │   └── [slug]/
-│   │       ├── page.tsx          # App overview — platform picker
-│   │       └── [platform]/
-│   │           └── page.tsx      # App detail page (ios/android/mac/etc)
+│   │       └── page.tsx          # App detail page
 │   ├── compare/
-│   │   └── page.tsx              # Compare two apps
+│   │   └── page.tsx              # Compare apps (client; reads ?apps= or basket)
 │   ├── request/
 │   │   └── page.tsx              # Request an app form
 │   └── api/
-│       └── request/
-│           └── route.ts          # API route to store app requests
+│       ├── compare/route.ts      # Merged comparison data for a list of slugs
+│       └── all-apps/route.ts     # Index for client components
 ├── components/
-│   ├── AppCard.tsx               # App card: icon + name + ThreatMeter + platform pills
-│   ├── AppHeader.tsx             # App icon, name, developer, tags, store link
-│   ├── PlatformSwitcher.tsx      # iOS/Android/Mac pill switcher
+│   ├── AppCard.tsx               # App card: icon + name + ThreatMeter + compare button
+│   ├── AppHeader.tsx             # App icon, name, developer, tags, store link, compare pill
+│   ├── CompareProvider.tsx       # localStorage-backed compare basket context
+│   ├── CompareButton.tsx         # Icon/pill button — toggles slug in/out of basket
+│   ├── CompareBasket.tsx         # Navbar dropdown (count + list + Compare Now)
+│   ├── CompareView.tsx           # Side-by-side comparison table
 │   ├── ThreatMeter.tsx           # Threat-level pill chip with segments
 │   ├── VerdictHero.tsx           # Thin verdict headline + recommendation
 │   ├── TabbedSections.tsx        # Rounded pill tabs (Overview · Flags · Categories · Source)
@@ -125,23 +123,19 @@ shouldidownloadthis/
 │   ├── Navbar.tsx
 │   └── Footer.tsx
 ├── lib/
-│   ├── getApp.ts                 # Read _app.json + platform JSON for a slug
-│   ├── getAllApps.ts              # Read index.json for browse/search
+│   ├── getApp.ts                 # Read app.json for a slug
+│   ├── getAllApps.ts             # Read index.json for browse/search
 │   ├── scoring.ts                # Normalized score calculation (÷205)
 │   └── types.ts                  # TypeScript types (mirrors DATA-SCHEMA.md)
 ├── data/
 │   ├── apps/                     # One folder per app
 │   │   ├── whatsapp/
-│   │   │   ├── _app.json         # Shared: name, icon, developer, platform list
-│   │   │   ├── ios.json          # iOS-specific policy analysis
-│   │   │   ├── android.json      # Android-specific policy analysis
-│   │   │   └── mac.json          # Mac-specific policy analysis
+│   │   │   └── app.json          # iOS policy analysis (full schema)
 │   │   └── signal/
-│   │       ├── _app.json
-│   │       └── ios.json
+│   │       └── app.json
 │   ├── reviews/                  # Human-readable .md audit files (not read by site)
-│   │   ├── whatsapp-ios.md
-│   │   └── signal-ios.md
+│   │   ├── whatsapp.md
+│   │   └── signal.md
 │   └── index.json                # Lightweight list of all apps for search + browse
 ├── public/
 │   └── icons/                    # App icons (fallback if icon_url is empty)

@@ -6,12 +6,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7e/a9/02/7ea902c3-1c26-a0cf-5127-2b6df2b5feba/Placeholder.mill/400x400bb-75.webp",
     "category": "Social",
     "description": "A free, end-to-end encrypted messaging and calling app used by over 2 billion people worldwide, owned by Meta.",
-    "platforms": [
-      { "platform": "ios", "score": 53, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-09" },
-      { "platform": "android", "score": 53, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-10" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "World-class encryption on your messages, but WhatsApp feeds your contacts, behavior, and device data into Meta's advertising machine."
+    "one_liner": "World-class encryption on your messages, but WhatsApp feeds your contacts, behavior, and device data into Meta's advertising machine.",
+    "score": 53,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-09"
   },
   {
     "slug": "instagram",
@@ -20,12 +19,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/62/e7/c062e78e-bbfb-c539-11cc-469d727d5bb8/Prod-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/400x400bb.webp",
     "category": "Social",
     "description": "A free photo and video sharing app from Meta with feeds, Stories, Reels, and direct messaging, used by over 2 billion people worldwide.",
-    "platforms": [
-      { "platform": "ios", "score": 42, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-10" },
-      { "platform": "android", "score": 42, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-10" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "Instagram shows you ads using everything it knows about you, including where you go, what you search, and how you behave, and it can read your direct messages."
+    "one_liner": "Instagram shows you ads using everything it knows about you, including where you go, what you search, and how you behave, and it can read your direct messages.",
+    "score": 42,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-10"
   },
   {
     "slug": "telegram",
@@ -34,12 +32,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/c0/1b/57c01b2f-70b3-cfee-4cfa-03aac0ea2b8d/Telegram-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
     "category": "Social",
     "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats.",
-    "platforms": [
-      { "platform": "ios", "score": 80, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-10" },
-      { "platform": "android", "score": 80, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-10" }
-    ],
-    "worst_risk": "safe",
-    "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private."
+    "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private.",
+    "score": 80,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-10"
   },
   {
     "slug": "tiktok",
@@ -48,11 +45,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e2/4f/22/e24f22d8-3570-89bd-8acb-4ff7be733411/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Entertainment",
     "description": "Users view and explore clips, broadcast in real time, and browse products from merchants. The service delivers a customized viewing stream, simple production utilities, audio and visual enhancements, and numerous preset security settings.",
-    "platforms": [
-      { "platform": "ios", "score": 49, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "TikTok collects a wide range of personal data including your behavior, location, contacts, and device fingerprint, and shares it with advertisers and business partners for targeted ads."
+    "one_liner": "TikTok collects a wide range of personal data including your behavior, location, contacts, and device fingerprint, and shares it with advertisers and business partners for targeted ads.",
+    "score": 49,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "dropbox",
@@ -61,11 +58,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4c/68/b9/4c68b958-96c0-a9b7-a016-475285c4fd8e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Productivity",
     "description": "A cloud storage and file synchronization service that lets you store, share, and access your files from anywhere.",
-    "platforms": [
-      { "platform": "ios", "score": 82, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "safe",
-    "one_liner": "Dropbox does not sell your data to advertisers and gives you solid controls to access, download, and delete your files and account."
+    "one_liner": "Dropbox does not sell your data to advertisers and gives you solid controls to access, download, and delete your files and account.",
+    "score": 82,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "linkedin",
@@ -74,11 +71,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/57/07/065707da-578f-c955-c23e-2e89081e5100/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Business",
     "description": "A professional networking platform for connecting with colleagues, finding jobs, sharing industry news, and building your career.",
-    "platforms": [
-      { "platform": "ios", "score": 55, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "LinkedIn shares your professional data with Microsoft, advertisers, and employers, and tracks your behavior across the platform for ad targeting."
+    "one_liner": "LinkedIn shares your professional data with Microsoft, advertisers, and employers, and tracks your behavior across the platform for ad targeting.",
+    "score": 55,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "canva",
@@ -87,11 +84,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/37/bd/b5/37bdb5a5-1d36-fed0-7e55-80c2f67fe901/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
     "category": "Graphics & Design",
     "description": "An all-in-one design platform for creating social media graphics, presentations, posters, videos, and more with AI-powered tools.",
-    "platforms": [
-      { "platform": "ios", "score": 47, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "Canva collects extensive personal data including your designs, location, and device info, uses it for AI training, and shares it with advertisers and vendors."
+    "one_liner": "Canva collects extensive personal data including your designs, location, and device info, uses it for AI training, and shares it with advertisers and vendors.",
+    "score": 47,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "snapchat",
@@ -100,11 +97,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/71/d8/6e/71d86ed5-8e4c-8486-03b2-8b4412b42a94/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Social",
     "description": "A multimedia messaging app known for ephemeral photos and videos, creative filters, and location-based features like Snap Map.",
-    "platforms": [
-      { "platform": "ios", "score": 63, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Snapchat's disappearing messages are a privacy win, but the app still tracks your location, collects device data, and shares information with partners and advertisers."
+    "one_liner": "Snapchat's disappearing messages are a privacy win, but the app still tracks your location, collects device data, and shares information with partners and advertisers.",
+    "score": 63,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "hinge",
@@ -113,11 +110,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fd/a6/4d/fda64dab-763c-a247-a072-904c779a6321/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
     "category": "Lifestyle",
     "description": "A dating app designed to be deleted, focused on fostering serious relationships through detailed profiles and conversation prompts.",
-    "platforms": [
-      { "platform": "ios", "score": 41, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "Hinge collects extremely sensitive personal data including your sexual orientation, health info, racial background, and even your face geometry, then shares it with advertisers and vendors."
+    "one_liner": "Hinge collects extremely sensitive personal data including your sexual orientation, health info, racial background, and even your face geometry, then shares it with advertisers and vendors.",
+    "score": 41,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "bumble",
@@ -126,11 +123,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/3c/57/dd3c576f-c1a8-7bec-41e2-c62e916b28fe/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Lifestyle",
     "description": "A dating and social networking app where women make the first move, offering modes for dating, friendship, and professional networking.",
-    "platforms": [
-      { "platform": "ios", "score": 41, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-11" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "Bumble collects sensitive personal data including your biometrics, tracks your behavior and conversations, and shares it with numerous vendors and advertisers."
+    "one_liner": "Bumble collects sensitive personal data including your biometrics, tracks your behavior and conversations, and shares it with numerous vendors and advertisers.",
+    "score": 41,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-11"
   },
   {
     "slug": "youtube",
@@ -139,11 +136,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/36/c2/24/36c2241b-c16d-3999-b1f5-a815c24820ef/Placeholder.mill/400x400bb-75.webp",
     "category": "Photo & Video",
     "description": "The world's largest video-sharing platform, allowing users to watch, upload, and share videos across every genre.",
-    "platforms": [
-      { "platform": "ios", "score": 60, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "YouTube tracks every video you watch and search you make to sell ads, but gives you real tools to turn off personalized ads and delete your history."
+    "one_liner": "YouTube tracks every video you watch and search you make to sell ads, but gives you real tools to turn off personalized ads and delete your history.",
+    "score": 60,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "tinder",
@@ -152,11 +149,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/77/0e/a6770e13-7aaa-3bb9-1dfa-056ab81a3a9b/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-0-85-220.png/400x400bb.jpg",
     "category": "Lifestyle",
     "description": "The world's most popular dating app for meeting new people, with millions of users nearby and around the globe.",
-    "platforms": [
-      { "platform": "ios", "score": 42, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "Tinder collects deeply personal data including your sexual preferences, face geometry, and government ID, then shares it across every Match Group dating app."
+    "one_liner": "Tinder collects deeply personal data including your sexual preferences, face geometry, and government ID, then shares it across every Match Group dating app.",
+    "score": 42,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "duolingo",
@@ -165,11 +162,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0f/46/c8/0f46c863-b4e3-5717-4ac2-d9ebf5bddf03/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400bb.jpg",
     "category": "Education",
     "description": "The world's most-downloaded education app for learning 40+ languages through quick, bite-sized lessons.",
-    "platforms": [
-      { "platform": "ios", "score": 66, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Duolingo tracks your learning activity and shows you personalized ads, but gives you real privacy controls and protects children far better than most apps."
+    "one_liner": "Duolingo tracks your learning activity and shows you personalized ads, but gives you real privacy controls and protects children far better than most apps.",
+    "score": 66,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "chatgpt",
@@ -178,11 +175,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/cd/85/bbcd8519-7d86-ec84-fad0-5b12880e3efc/AppIcon-0-0-1x_U007epad-0-0-0-1-0-P3-85-220.png/400x400bb.jpg",
     "category": "Productivity",
     "description": "An AI-powered assistant for writing, analysis, coding, creative projects, and learning, built by OpenAI.",
-    "platforms": [
-      { "platform": "ios", "score": 55, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Everything you type into ChatGPT is logged and may be used to train AI models, but you can opt out, delete chats, and use Temporary Chat for privacy."
+    "one_liner": "Everything you type into ChatGPT is logged and may be used to train AI models, but you can opt out, delete chats, and use Temporary Chat for privacy.",
+    "score": 55,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "shaadi",
@@ -191,11 +188,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/1a/1a/991a1a4c-f88b-7f4d-1a7c-3dcf3dba7fef/AppIcon-0-0-1x_U007ephone-0-11-0-sRGB-85-220.png/400x400bb.jpg",
     "category": "Lifestyle",
     "description": "The world's largest matrimonial service and one of India's best known brands, helping people find life partners since 1996.",
-    "platforms": [
-      { "platform": "ios", "score": 58, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Shaadi.com requires government ID and selfie verification for core features, performs third-party criminal background checks, and licenses your testimonials for perpetual marketing use."
+    "one_liner": "Shaadi.com requires government ID and selfie verification for core features, performs third-party criminal background checks, and licenses your testimonials for perpetual marketing use.",
+    "score": 58,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "aisle",
@@ -204,11 +201,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/d1/50/23d15005-608f-66d6-c952-974f24fb9106/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/400x400bb.jpg",
     "category": "Lifestyle",
     "description": "An Indian dating app designed for meaningful relationships, connecting like-minded people looking for love.",
-    "platforms": [
-      { "platform": "ios", "score": 72, "grade": "B", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Aisle doesn't sell your data to advertisers and keeps chat messages confidential, but it sends your photos to external face recognition tools and shares your profile broadly with other users."
+    "one_liner": "Aisle doesn't sell your data to advertisers and keeps chat messages confidential, but it sends your photos to external face recognition tools and shares your profile broadly with other users.",
+    "score": 72,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "terabox",
@@ -217,11 +214,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b8/93/42/b89342da-054a-c410-3365-e86e0ed4347c/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-85-220.png/400x400bb.jpg",
     "category": "Productivity",
     "description": "A cloud storage app offering up to 1TB of free space for files, photos, and videos, with AI-powered features for photo categorization and audio transcription.",
-    "platforms": [
-      { "platform": "ios", "score": 49, "grade": "D", "risk": "risky", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "risky",
-    "one_liner": "TeraBox gives you 1TB of free storage but scans your files with AI, sends your audio to Google, and builds a behavioral profile of you for automated marketing decisions."
+    "one_liner": "TeraBox gives you 1TB of free storage but scans your files with AI, sends your audio to Google, and builds a behavioral profile of you for automated marketing decisions.",
+    "score": 49,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "happn",
@@ -230,11 +227,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c3/a1/da/c3a1dadf-1b87-a4ff-fbe6-840d57c66660/AppIcon-Black-0-0-1x_U007ephone-0-1-0-85-220.png/400x400bb.jpg",
     "category": "Lifestyle",
     "description": "A location-based dating app that helps you find people you've crossed paths with in real life.",
-    "platforms": [
-      { "platform": "ios", "score": 57, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "happn tracks your real-world location to show you people you've crossed paths with, but it shares your data with social networks for advertising and uses facial recognition to verify profiles."
+    "one_liner": "happn tracks your real-world location to show you people you've crossed paths with, but it shares your data with social networks for advertising and uses facial recognition to verify profiles.",
+    "score": 57,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "crunchyroll",
@@ -243,11 +240,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/39/62/36396267-07ee-940f-8c7f-bfefc440c39d/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/400x400bb.jpg",
     "category": "Entertainment",
     "description": "The world's largest anime streaming platform, offering a vast library of anime, manga, and Asian dramas.",
-    "platforms": [
-      { "platform": "ios", "score": 65, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Crunchyroll tracks your viewing habits, browsing history, and device activity to show you targeted ads, but it offers decent privacy controls and doesn't sell your data directly."
+    "one_liner": "Crunchyroll tracks your viewing habits, browsing history, and device activity to show you targeted ads, but it offers decent privacy controls and doesn't sell your data directly.",
+    "score": 65,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "inshot",
@@ -256,11 +253,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ed/1f/50/ed1f508c-9127-0e1a-08d1-46fe16edcfd2/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/400x400bb.jpg",
     "category": "Photo & Video",
     "description": "A popular video and photo editing app with AI-powered features, filters, effects, and tools for creating social media content.",
-    "platforms": [
-      { "platform": "ios", "score": 81, "grade": "A", "risk": "safe", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "safe",
-    "one_liner": "InShot is a privacy-friendly video editor that keeps your photos and videos on your device, anonymizes data for ads, and doesn't require an account to use."
+    "one_liner": "InShot is a privacy-friendly video editor that keeps your photos and videos on your device, anonymizes data for ads, and doesn't require an account to use.",
+    "score": 81,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "lightroom",
@@ -269,11 +266,11 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/b4/d2/98b4d22c-147d-d017-9863-c7be31a6aac7/AppIcon-0-1x_U007ephone-0-1-0-0-85-220-0.png/400x400bb.jpg",
     "category": "Photo & Video",
     "description": "A professional photo and video editing app with cloud sync, AI-powered features, and advanced editing tools from Adobe.",
-    "platforms": [
-      { "platform": "ios", "score": 62, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Lightroom offers powerful photo editing but uploads your photos to Adobe's cloud, where they may be analyzed by AI, and shares your usage data with advertising partners."
+    "one_liner": "Lightroom offers powerful photo editing but uploads your photos to Adobe's cloud, where they may be analyzed by AI, and shares your usage data with advertising partners.",
+    "score": 62,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-12"
   },
   {
     "slug": "google-drive",
@@ -282,10 +279,10 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/60/79/f6/6079f644-d6e4-081a-48fa-ff250e7cf01a/drive_2020q4-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-85-220.png/512x512bb.jpg",
     "category": "Productivity",
     "description": "Google Drive lets you securely store, organise and collaborate on files and folders from anywhere, on any device. Part of Google Workspace with 15GB of free storage.",
-    "platforms": [
-      { "platform": "ios", "score": 66, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-13" }
-    ],
-    "worst_risk": "caution",
-    "one_liner": "Google Drive gives you 15GB of free cloud storage with strong sharing controls, but Google scans your files, uses your data to train AI models, and tracks your activity across all Google services for ads."
+    "one_liner": "Google Drive gives you 15GB of free cloud storage with strong sharing controls, but Google scans your files, uses your data to train AI models, and tracks your activity across all Google services for ads.",
+    "score": 66,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-13"
   }
 ]

@@ -18,26 +18,19 @@ export async function getAllApps(): Promise<IndexEntry[]> {
 export async function getRecentlyAnalyzed(limit = 100): Promise<IndexEntry[]> {
   const apps = await getAllApps();
   return [...apps]
-    .sort((a, b) => latestAnalyzedAt(b).localeCompare(latestAnalyzedAt(a)))
+    .sort((a, b) => (b.analyzed_at ?? "").localeCompare(a.analyzed_at ?? ""))
     .slice(0, limit);
 }
 
 export async function getMostDangerous(limit = 4): Promise<IndexEntry[]> {
   const apps = await getAllApps();
   return [...apps]
-    .sort((a, b) => compareRisk(a.worst_risk, b.worst_risk))
-    .filter((a) => a.worst_risk === "dangerous" || a.worst_risk === "risky")
+    .sort((a, b) => compareRisk(a.risk, b.risk))
+    .filter((a) => a.risk === "dangerous" || a.risk === "risky")
     .slice(0, limit);
 }
 
 export async function getAppsByCategory(category: string): Promise<IndexEntry[]> {
   const apps = await getAllApps();
   return apps.filter((a) => a.category === category);
-}
-
-function latestAnalyzedAt(entry: IndexEntry): string {
-  return entry.platforms
-    .map((p) => p.analyzed_at)
-    .sort()
-    .at(-1) ?? "";
 }

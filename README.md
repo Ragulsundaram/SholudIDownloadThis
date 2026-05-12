@@ -49,10 +49,10 @@ Step 2  → Find both URLs: Privacy Policy + Terms & Conditions
 Step 3  → Copy the full raw text of both documents
 Step 4  → Open a Claude instance
 Step 5  → Use the system prompt from docs/CLAUDE-PARSER-PROMPT.md
-Step 6  → Paste raw policy text + app name, developer, platform, store URL
+Step 6  → Paste raw policy text + app name, developer, App Store URL
 Step 7  → Claude returns a .md file: JSON block at top + human-readable summary below
-Step 8  → Save the full .md to /data/reviews/{slug}-{platform}.md  ← audit trail
-Step 9  → Extract only the JSON block → save to /data/apps/{slug}/{platform}.json
+Step 8  → Save the full .md to /data/reviews/{slug}.md  ← audit trail
+Step 9  → Extract only the JSON block → save to /data/apps/{slug}/app.json
 Step 10 → Add a lightweight entry to /data/index.json for search and browse
 Step 11 → The website reads from /data/apps/ and renders the page automatically
 ```

@@ -72,7 +72,7 @@ export function CompareView({ entries: rawEntries }: Props) {
       <Section title="At a glance">
         <ComparisonGrid
           cols={entries.length}
-          headers={entries.map((e) => e.parent.name)}
+          headers={entries.map((e) => e.data.app.name)}
           rows={[
             {
               label: "Score",
@@ -121,7 +121,7 @@ export function CompareView({ entries: rawEntries }: Props) {
       <Section title="Flags">
         <ComparisonGrid
           cols={entries.length}
-          headers={entries.map((e) => e.parent.name)}
+          headers={entries.map((e) => e.data.app.name)}
           rows={[
             {
               label: "Red flags",
@@ -162,7 +162,7 @@ export function CompareView({ entries: rawEntries }: Props) {
       <Section title="Permissions & data handling">
         <ComparisonGrid
           cols={entries.length}
-          headers={entries.map((e) => e.parent.name)}
+          headers={entries.map((e) => e.data.app.name)}
           rows={categoryIds.map((id) => ({
             label: categoryLabels.get(id) ?? id,
             labelNode: (
@@ -183,10 +183,10 @@ export function CompareView({ entries: rawEntries }: Props) {
 }
 
 function AppColumnCard({ entry, isWinner }: { entry: CompareEntry; isWinner: boolean }) {
-  const { parent, slug, platform, data } = entry;
+  const { slug, data } = entry;
   return (
     <Link
-      href={`/app/${slug}/${platform}`}
+      href={`/app/${slug}`}
       className={`group relative flex flex-col items-center gap-3 rounded-2xl border p-5 text-center transition-all hover:border-brand/40 hover:bg-divider/30 ${
         isWinner ? "border-safe-line bg-safe-soft/30" : "border-line bg-surface"
       }`}
@@ -198,8 +198,8 @@ function AppColumnCard({ entry, isWinner }: { entry: CompareEntry; isWinner: boo
         </span>
       )}
       <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-line">
-        {parent.icon_url ? (
-          <Image src={parent.icon_url} alt="" fill sizes="64px" className="object-cover" unoptimized />
+        {data.app.icon_url ? (
+          <Image src={data.app.icon_url} alt="" fill sizes="64px" className="object-cover" unoptimized />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-divider">
             <Smartphone className="h-7 w-7 text-ink-subtle" />
@@ -208,9 +208,8 @@ function AppColumnCard({ entry, isWinner }: { entry: CompareEntry; isWinner: boo
       </div>
       <div className="min-w-0">
         <p className="truncate text-base font-semibold text-ink group-hover:text-brand">
-          {parent.name}
+          {data.app.name}
         </p>
-        <p className="text-xs text-ink-subtle">{platform.toUpperCase()}</p>
       </div>
       <div className="flex items-center gap-2">
         <span className="text-3xl font-bold text-ink">{data.verdict.score}</span>
@@ -227,11 +226,11 @@ function VerdictBanner({ winner, worst }: { winner: CompareEntry; worst: Compare
       <Trophy className="h-6 w-6 flex-shrink-0 text-safe-ink" />
       <div className="flex-1 text-sm text-ink">
         <p>
-          <span className="font-semibold text-ink">{winner.parent.name}</span> has the
+          <span className="font-semibold text-ink">{winner.data.app.name}</span> has the
           safest privacy posture with a score of{" "}
           <span className="font-semibold">{winner.data.verdict.score}</span>.{" "}
           <span className="text-ink-muted">
-            {worst.parent.name} is the riskiest of the group ({worst.data.verdict.score}).
+            {worst.data.app.name} is the riskiest of the group ({worst.data.verdict.score}).
           </span>
         </p>
       </div>

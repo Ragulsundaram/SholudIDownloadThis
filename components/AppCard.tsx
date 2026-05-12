@@ -26,17 +26,13 @@ export function AppCard({ app }: { app: IndexEntry }) {
             <h3 className="text-base font-semibold leading-snug text-ink">
               {app.name}
             </h3>
-            <SafetyRatingTooltip score={worstScore(app.platforms)} risk={app.worst_risk} />
+            <SafetyRatingTooltip score={app.score} risk={app.risk} />
           </div>
-          <ThreatMeter score={worstScore(app.platforms)} />
+          <ThreatMeter score={app.score} />
         </div>
       </div>
     </article>
   );
-}
-
-function worstScore(platforms: IndexEntry["platforms"]): number {
-  return Math.min(...platforms.map((p) => p.score));
 }
 
 function AppIcon({ iconUrl, name }: { iconUrl: string; name: string }) {

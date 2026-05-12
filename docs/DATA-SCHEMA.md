@@ -2,53 +2,28 @@
 
 **Project:** ShouldIDownloadThis  
 **Format:** JSON (folder-per-app in v1, Supabase rows in v2)  
-**File location:** `/data/apps/{slug}/{platform}.json`
+**File location:** `/data/apps/{slug}/app.json`
 
 ---
 
 ## File Structure Per App
 
-Each app gets a folder. The folder contains a shared parent file and one JSON per platform:
+Each app gets a folder containing one JSON file:
 
 ```
 /data/apps/whatsapp/
-  _app.json       ← shared info: name, icon, developer, available platforms, scores index
-  ios.json        ← full iOS policy analysis
-  android.json    ← full Android policy analysis (when added)
-  mac.json        ← full Mac policy analysis (when added)
+  app.json        ← full iOS policy analysis
 ```
 
-The site reads `_app.json` for the overview page (`/app/whatsapp`) and the platform file for the detail page (`/app/whatsapp/ios`).
-
-## `_app.json` — Shared Parent
-
-```json
-{
-  "slug": "whatsapp",
-  "name": "WhatsApp",
-  "developer": "Meta Platforms, Inc.",
-  "icon_url": "",
-  "category": "Social",
-  "sub_category": "Messaging",
-  "description": "End-to-end encrypted messaging app owned by Meta.",
-  "platforms": ["ios", "android", "mac"],
-  "scores": {
-    "ios":     { "score": 53, "grade": "D", "risk": "risky" },
-    "android": { "score": 31, "grade": "F", "risk": "dangerous" },
-    "mac":     { "score": 61, "grade": "C", "risk": "caution" }
-  }
-}
-```
-
-This file is auto-generated/updated whenever a platform file is saved. Never edit it directly.
+v1 is iOS-only — no multi-platform fan-out. The site reads `app.json` for the detail page (`/app/whatsapp`).
 
 ---
 
 ## Naming Convention
 
 - Folder slug: `{app-name-lowercase-hyphenated}` (e.g. `whatsapp`, `google-maps`, `cash-app`)
-- Platform filenames: `ios.json`, `android.json`, `mac.json`, `windows.json`, `linux.json`
-- Review files (in `/data/reviews/`): `{slug}-{platform}.md` (e.g. `whatsapp-ios.md`)
+- App data file: `app.json` (always)
+- Review files (in `/data/reviews/`): `{slug}.md` (e.g. `whatsapp.md`)
 
 ---
 
@@ -68,10 +43,9 @@ This file is auto-generated/updated whenever a platform file is saved. Never edi
   },
 
   "app": {
-    "slug": "whatsapp-ios",
+    "slug": "whatsapp",
     "name": "WhatsApp",
     "developer": "Meta Platforms, Inc.",
-    "platform": "ios",
     "app_store_url": "https://apps.apple.com/app/whatsapp-messenger/id310633997",
     "app_store_id": "310633997",
     "icon_url": "",
@@ -412,12 +386,11 @@ This file is auto-generated/updated whenever a platform file is saved. Never edi
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `slug` | string | Platform-specific slug: `{app-name}-{platform}` (used inside file; folder uses app name only) |
+| `slug` | string | Folder slug (e.g. `whatsapp`) |
 | `name` | string | Display name |
 | `developer` | string | Developer or company name |
-| `platform` | enum | `ios`, `android`, `mac`, `windows`, `linux` |
-| `app_store_url` | string | Direct link to download |
-| `app_store_id` | string | Platform-specific app ID |
+| `app_store_url` | string | Direct link to download (App Store) |
+| `app_store_id` | string | App Store ID |
 | `icon_url` | string | URL to app icon image |
 | `category` | string | App Store category |
 | `sub_category` | string | More specific category |
@@ -500,7 +473,7 @@ final_score = max(0, min(100, final_score))
 
 ## Lightweight Index Entry
 
-Each app has a folder-level entry in `/data/index.json` for fast search and browse. Shows all platform scores together.
+Each app has an entry in `/data/index.json` for fast search and browse. Flat shape — one score per app (iOS).
 
 ```json
 {
@@ -510,12 +483,10 @@ Each app has a folder-level entry in `/data/index.json` for fast search and brow
   "icon_url": "",
   "category": "Social",
   "description": "End-to-end encrypted messaging app owned by Meta.",
-  "platforms": [
-    { "platform": "ios",     "score": 53, "grade": "D", "risk": "risky",     "analyzed_at": "2025-05-08" },
-    { "platform": "android", "score": 31, "grade": "F", "risk": "dangerous", "analyzed_at": "2025-05-08" },
-    { "platform": "mac",     "score": 61, "grade": "C", "risk": "caution",   "analyzed_at": "2025-05-08" }
-  ],
-  "worst_risk": "dangerous",
+  "score": 53,
+  "grade": "D",
+  "risk": "risky",
+  "analyzed_at": "2025-05-08",
   "one_liner": "Extensive data collection linked to Meta's ad network, though messages are end-to-end encrypted."
 }
 ```

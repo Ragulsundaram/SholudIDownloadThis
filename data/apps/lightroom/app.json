@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-12",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.adobe.com/privacy/policy-linkfree.html",
+    "terms_url": "https://www.adobe.com/legal/terms.html",
+    "policy_last_updated": "2025-10-24",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "lightroom-ios",
+    "name": "Lightroom Photo & Video Editor",
+    "developer": "ADOBE SYSTEMS SOFTWARE IRELAND LIMITED",
+    "app_store_url": "https://apps.apple.com/in/app/lightroom-photo-video-editor/id878783582",
+    "app_store_id": "878783582",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/b4/d2/98b4d22c-147d-d017-9863-c7be31a6aac7/AppIcon-0-1x_U007ephone-0-1-0-0-85-220-0.png/400x400bb.jpg",
+    "category": "Photo & Video",
+    "sub_category": "Photo Editor",
+    "description": "A professional photo and video editing app with cloud sync, AI-powered features, and advanced editing tools from Adobe."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 62,
+    "grade": "C",
+    "one_liner": "Lightroom offers powerful photo editing but uploads your photos to Adobe's cloud, where they may be analyzed by AI, and shares your usage data with advertising partners.",
+    "summary": "Adobe Lightroom is a professional photo editing app that stores your photos on Adobe's cloud servers for syncing across devices. While it provides strong editing capabilities, Adobe collects extensive data including your photos, usage patterns, and device information. Your cloud photos may be analyzed using machine learning for recommendations and improvements, and your data is shared with Adobe's advertising partners and other third parties.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Lightroom requires uploading your photos to Adobe's cloud for core syncing features, and Adobe actively analyzes your content and shares your data with advertising partners. Consider whether cloud-based editing is worth the privacy trade-offs for your photos."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_cloud_content_analysis",
+        "title": "Adobe analyzes your photos with AI",
+        "plain_english": "When you upload your photos to Adobe's cloud, Adobe may analyze them using artificial intelligence and machine learning to understand how you use the app, provide recommendations, and improve their services. This includes analyzing the content and characteristics of your photos.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_sharing",
+        "title": "Shares your data with advertising partners",
+        "plain_english": "Adobe shares your personal information with advertising networks, social media platforms, and other partners to show you targeted ads. They may share information about which pages you visit and which ads you see.",
+        "severity": "high"
+      },
+      {
+        "id": "red_biometric_features",
+        "title": "Biometric features for photo grouping",
+        "plain_english": "Lightroom offers optional features that use your face and voice data to group similar faces and organize your photos. While these are off by default, they involve collecting biometric information like faceprints and voiceprints.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_long_retention",
+        "title": "Keeps some data for 10 years",
+        "plain_english": "Even after you close your Adobe account, they may keep some of your personal information related to contracts and business transactions for up to 10 years after your last interaction with them.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_business_access",
+        "title": "Employer may access your account",
+        "plain_english": "If you use a work email address for your Adobe account, your employer may be able to access, control, and even take over your account and all the photos stored in it.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Does not sell your data",
+        "plain_english": "Adobe explicitly states that it does not sell your personal information to third parties for money. It only shares data for advertising, analytics, and service provision purposes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_rights",
+        "title": "Strong privacy rights and controls",
+        "plain_english": "Adobe provides comprehensive privacy controls including the ability to opt out of marketing, delete your account, access and correct your data, and exercise GDPR and CCPA rights.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security",
+        "title": "Encryption and two-step verification",
+        "plain_english": "Adobe uses encryption and offers two-step verification to help protect your account and the photos you store in their cloud.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Lightroom uses your camera to take photos and your microphone for voice notes. These are optional features you can use when editing.",
+      "detail": "Camera used for photo capture. Microphone for voice notes. Both are optional on-demand features.",
+      "policy_excerpt": "Information which you allow us to receive through device-based settings (e.g., photos, location and camera) in order to provide certain functionality within our Services and Software.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Lightroom can collect your precise location when you add location data to your photos using your device's GPS. This is optional.",
+      "detail": "Precise geolocation collected when user adds location data to photos using camera or phone's GPS. IP address also used for location.",
+      "policy_excerpt": "Precise geolocation (e.g., when you add location data about where a picture was taken using your camera or phone's GPS feature).",
+      "concerns": [
+        "Precise location collected"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Lightroom does not ask for or access your phone's contacts list.",
+      "detail": "No contacts or phonebook access mentioned in privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Lightroom needs access to your photos to edit them. Your photos are synced to Adobe's cloud servers so you can access them across devices.",
+      "detail": "Photos and videos uploaded to Adobe cloud for syncing and editing. Local content accessed for normal operation.",
+      "policy_excerpt": "our Services and Software will access your content stored locally on your device ('Local Content') and content that you have uploaded to our servers or create using our cloud-based Services ('Cloud Content').",
+      "concerns": [
+        "Photos uploaded to cloud"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adobe shares your data with advertising partners, social media platforms, analytics providers, and other Adobe companies. They say they don't sell your data for money, but they do share it for targeted advertising and other purposes.",
+      "detail": "Shared with Adobe family companies, advertising networks, social media platforms, information service providers, fraud monitoring, resellers. No sale for money but extensive sharing for ads and analytics.",
+      "policy_excerpt": "We will also disclose your personal information with other third-party data controllers with your consent... The types of third parties your information may be disclosed to include: our resellers and other sales and advertising partners, retailers, advertisers, ad agencies, advertising networks and platforms, information service providers.",
+      "concerns": [
+        "Data shared with advertisers",
+        "Shared with social media platforms",
+        "Adobe affiliate sharing"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need an Adobe ID to use Lightroom. Adobe collects your name, email, phone number, address, and may also collect your date of birth, company name, and job title. You can sign in using social media accounts.",
+      "detail": "Adobe ID required. Collects name, email, phone, address, country, date of birth, company/school info, title, occupation. Social login available.",
+      "policy_excerpt": "Name; Email address; Telephone number; Postal or Physical Address; Country. Date of birth; Company or school name; Title; Occupation; Job function; Expertise.",
+      "concerns": [
+        "Social login links external data",
+        "Extensive profile data collected"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adobe tracks how you use Lightroom and other Adobe apps, including your clicks, navigation, interactions with content, and browsing history. They use this data to show you targeted ads and share it with advertising partners.",
+      "detail": "Extensive tracking via cookies, analytics, usage navigation, content interactions. Shared with advertising partners and social media platforms. Content analytics using machine learning.",
+      "policy_excerpt": "Use and navigation of Services and Software, including how you interact with Adobe websites... Analysis of your use and navigation of the Services and Software... Tailor and customize the Services and Software through marketing communications.",
+      "concerns": [
+        "Extensive activity tracking",
+        "Content analytics with AI",
+        "Ad targeting across platforms"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must be 13 or older to create an Adobe account. Lightroom is not intended for children, though some Adobe services are available to students under school supervision.",
+      "detail": "13+ to register. Not intended for children. School-supervised use available for some Adobe services.",
+      "policy_excerpt": "You must be 13 or older to register for an Adobe ID... All other Adobe Services and Software are not intended for use by children and certain products specifically prohibit users who are under a certain age.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adobe collects your IP address, tracks which websites you visited before coming to Adobe, what you search for, and how you interact with their apps and websites.",
+      "detail": "IP address, browser info, search terms, referring webpage, usage and navigation collected continuously.",
+      "policy_excerpt": "IP address; Browser; Mobile Device ID; Webpage that led you to an Adobe website; Search terms entered into a search engine which lead you to an Adobe website; Use and navigation of Services and Software.",
+      "concerns": [
+        "Search terms tracked",
+        "Referrer tracking",
+        "IP collection"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adobe collects detailed information about your device including its unique identifiers, settings, browser type, and configuration. They use this to track your activity across their services and show you targeted ads.",
+      "detail": "Device ID, browser type, settings, unique identifiers, version, language, configuration collected. Used for tracking and advertising.",
+      "policy_excerpt": "Browser and device information, including browser and device type, settings, unique identifiers, version, language settings, and configuration.",
+      "concerns": [
+        "Unique device identifiers",
+        "Cross-service tracking"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Lightroom offers optional features that use your face and voice data to organize your photos. These features are turned off by default, and you can turn them off at any time. When you do, Adobe says they delete the biometric data.",
+      "detail": "Biometric identifiers (faceprints, voiceprints) collected when using face/voice grouping features. Off by default. Can be disabled anytime. Data deleted when feature turned off.",
+      "policy_excerpt": "Biometric identifiers or information defined under United States laws or other applicable laws (e.g., faceprints and voiceprints, etc.)... These features are off by default and, should you choose to enable them, you can always disable these features. Where we process biometric identifiers or biometric information to deliver a feature requested by you, we delete this information once you turn off the feature.",
+      "concerns": [
+        "Optional biometric processing"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Adobe collects your payment and billing information when you subscribe to a paid Lightroom plan.",
+      "detail": "Payment/billing information collected for subscriptions.",
+      "policy_excerpt": "Payment/billing information (where an app or website is 'paid for'); Licenses purchased.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your photos and files from Adobe's cloud, and you can deactivate your Adobe account. However, Adobe may keep some of your information for up to 10 years for legal and business reasons.",
+      "detail": "Can delete files via service and deactivate Adobe ID. Retain some data for 10 years after last interaction. GDPR/CCPA rights available.",
+      "policy_excerpt": "We delete certain personal information we collect about you when we no longer have a business reason to retain it. Additionally, there is some personal information we need to retain even after you close your account to comply with business and legal requirements, such as personal information related to our contract and business transactions with you, which we retain for ten years after your last interaction with us.",
+      "concerns": [
+        "10-year retention for some data"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adobe can change its privacy policy at any time and will post the updated version on its website. For major changes, they may notify you by email or through the app.",
+      "detail": "Updated policy posted with 'last updated' date. Notice for material changes via email or posting. Consent obtained where required by law.",
+      "policy_excerpt": "If we do, we will change the 'last updated' date at the top of this policy... Under certain circumstances (for example with certain material changes or where it is required by applicable privacy laws) we will provide notice to you of these changes and, where required by applicable law, we will obtain your consent.",
+      "concerns": [],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0.00,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.30,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.00,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.30,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.30,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 78.25,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

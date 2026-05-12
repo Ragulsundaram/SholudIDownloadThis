@@ -1,0 +1,435 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-12",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.aisle.co/privacypolicy.html",
+    "terms_url": "https://www.aisle.co/termsofuse.html",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "aisle-ios",
+    "name": "Aisle - Indian Dating App",
+    "developer": "Aisle Network Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/aisle-indian-dating-app/id1001481078",
+    "app_store_id": "1001481078",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/d1/50/23d15005-608f-66d6-c952-974f24fb9106/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/400x400bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "Dating",
+    "description": "An Indian dating app designed for meaningful relationships, connecting like-minded people looking for love."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 72,
+    "grade": "B",
+    "one_liner": "Aisle doesn't sell your data to advertisers and keeps chat messages confidential, but it sends your photos to external face recognition tools and shares your profile broadly with other users.",
+    "summary": "Aisle is an Indian dating app with notably stronger privacy practices than most competitors. It explicitly states it does not sell personal data to third parties, keeps chat messages confidential, and allows easy account deletion. However, it sends user photos to external face recognition tools for photo selection, shares your approximate location with nearby users, and monitors chat messages with content filters.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Aisle has stronger privacy practices than most dating apps, with no ad tracking and a clear no-sale policy, but be aware that your photos are processed by external facial recognition and your profile is visible to all users."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_external_face_recognition",
+        "title": "Photos sent to external face recognition",
+        "plain_english": "Aisle uses an external face recognition tool to analyze your uploaded photos and pick the best ones for your profile. This means your facial data is being processed by a third-party company.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_public_profile",
+        "title": "Profile visible to all users",
+        "plain_english": "Your name, age, photos, and personal description are visible to every other Aisle user. This is how dating apps work, but it means strangers can see your information.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_chat_monitoring",
+        "title": "Chat messages are monitored",
+        "plain_english": "Aisle uses filter software to scan your chat messages and other written content for inappropriate language, advertisements, or links. They can erase content they find offensive.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_location_shared",
+        "title": "Location shared with nearby users",
+        "plain_english": "If you enable location sharing, Aisle shows your approximate location to other users who are nearby, accurate to about half a kilometer.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_sale",
+        "title": "Explicit no-sale policy",
+        "plain_english": "Aisle clearly states that it does not sell your personal data to third parties. It only shares your data with other users for matchmaking and with authorities when legally required.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_confidential_chats",
+        "title": "Chat messages kept confidential",
+        "plain_english": "Aisle says your chat messages are strictly confidential and are only stored so you can access your chat history. They are not shared with advertisers or other third parties.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_easy_deletion",
+        "title": "Easy account deletion",
+        "plain_english": "You can delete your Aisle account at any time without notice. Your profile will be removed and you can create a new account later if you want.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ad_tracking",
+        "title": "No advertising or ad tracking",
+        "plain_english": "Aisle does not show ads from external advertisers and does not track you across other apps or websites for advertising purposes.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must upload photos to create an account. Aisle uses an external face recognition tool to analyze and select the best photos for your profile.",
+      "detail": "Photo upload is mandatory for account creation. New pictures are reviewed before appearing on the profile. Aisle uses an external face recognition tool and other techniques to select the best pictures.",
+      "policy_excerpt": "When creating Your Account, it is necessary to upload pictures of yourself... We may use an external face recognition tool and other techniques to select the best pictures for Your Account.",
+      "concerns": [
+        "External face recognition processing",
+        "Mandatory photo upload"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can choose to share your approximate location so you can see other users nearby. Your exact location is never shared, only an approximate area within half a kilometer.",
+      "detail": "Geolocation is optional. If enabled, it is shared with other users who have also enabled it, with accuracy limited to 0.5 kilometers at most.",
+      "policy_excerpt": "You can choose to share your geolocation... Your geolocation will be shared with other users who have shared their geolocation. Please note that we never share accurate geolocations with Aisle users – the accuracy is limited to 0.5 kilometers at the most.",
+      "concerns": [
+        "Location shared with other users"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Aisle does not ask for access to your contacts list. You can optionally invite friends by selecting them from your contacts, but this is entirely up to you.",
+      "detail": "No mention of uploading contacts list. Users can manually select contacts to invite.",
+      "policy_excerpt": "If you choose to invite someone to join our Website or App, you may select a person directly from your contacts list on your device and send a text, email or message from your personal account.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to upload photos from your device to create your profile. Aisle may modify your uploaded images to make them more presentable on the platform.",
+      "detail": "Photo upload is required for account creation. Images may be modified for platform presentation.",
+      "policy_excerpt": "Images uploaded by you may be modified by us to make them more presentable on the platform. New pictures uploaded by you will be reviewed before they appear on Your Account.",
+      "concerns": [
+        "Images modified by platform"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Aisle does not sell your data to outside companies, but your profile information is visible to all other users on the app. They only share data with external parties if legally required.",
+      "detail": "Explicit no-sale policy. Data is shared with other users for matchmaking. Only disclosed to third parties if legally obligated.",
+      "policy_excerpt": "We will only disclose your Personal Data to third parties if there is a legal obligation to do so by a statutory authority... We do not sell your Personal Data to third parties.",
+      "concerns": [
+        "Profile data visible to strangers",
+        "Facebook/LinkedIn login links external data"
+      ],
+      "score_impact": -9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your profile including your name, age, height, religion, and photos is visible to other users. You can log in with Facebook or LinkedIn, which links that data to your Aisle account.",
+      "detail": "Account requires mobile number. Optional Facebook/LinkedIn login links external data. Profile is public to other users.",
+      "policy_excerpt": "Members of Aisle can perform targeted searches on the basis of age, religion and other information that users share on their accounts. Once you have created Your Account, the data you have shared with Facebook or Linkedin will also be linked to Your Account.",
+      "concerns": [
+        "Social login links external data",
+        "Profile publicly searchable"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Aisle tracks your activity to suggest people you might like and sends you promotional notifications, but it does not show ads from external advertisers or sell your behavior data to ad companies.",
+      "detail": "Push notifications include suggestions and promotional material. No mention of ad SDKs or selling behavioral data to advertisers.",
+      "policy_excerpt": "We may also send you push notifications with suggestions of people you might like and other promotional material.",
+      "concerns": [
+        "Behavioral suggestions",
+        "Promotional push notifications"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Aisle is strictly for adults 18 and older. They say they will delete all data on any minor found on the platform.",
+      "detail": "Terms require users to be at least 18. Explicit policy to delete minor data if discovered.",
+      "policy_excerpt": "Aisle shall not collect data from minors. Should a Member lie about his/her date of birth... Aisle commits to deleting all data on the minor in question as soon as possible and removing them from our platform.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Aisle collects basic technical information about your device and internet connection, like your browser type, operating system, and internet provider.",
+      "detail": "Standard collection of browser type, device type, OS, and ISP information.",
+      "policy_excerpt": "This data may include your browser type and version, the type of your computer or mobile device and technical information about your means to connect to our Websites.",
+      "concerns": [
+        "Standard device and network logging"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Aisle collects non-personal data about your device type, browser, and operating system when you use the app.",
+      "detail": "Non-personal data includes browser type, device type, OS, and ISP.",
+      "policy_excerpt": "Non-personal data: We may also process non-personal data whenever you use our website or app. This data may include your browser type and version, the type of your computer or mobile device and technical information about your means to connect to our Websites.",
+      "concerns": [
+        "Device type and OS collected"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your photos are sent to an external face recognition tool so Aisle can pick the best pictures for your profile. This means a third-party company is analyzing your facial features.",
+      "detail": "External face recognition tool is used to analyze uploaded photos for quality, composition, and authenticity.",
+      "policy_excerpt": "We may use an external face recognition tool and other techniques to select the best pictures for Your Account. This selection may be based on features like image quality, composition and authenticity.",
+      "concerns": [
+        "External biometric processing",
+        "Facial analysis by third party"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payments go through Apple or Google when you buy subscriptions in the app. Aisle does not store your credit card details.",
+      "detail": "In-app purchases processed through Apple/Google. Website payments through unspecified payment gateway.",
+      "policy_excerpt": "When you make an in-app purchase, you will be prompted to enter details for your account with your Software Store.",
+      "concerns": [
+        "Payment processing through third parties"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account at any time, and your profile will be removed from the app. However, you cannot reactivate a deleted account and there is no mention of downloading your data.",
+      "detail": "Account deletion is available at any time without notice. Profile is removed but account cannot be reactivated. No mention of data export.",
+      "policy_excerpt": "A user of Aisle may decide at any time and without notice to delete their account. If this user wishes to use Aisle again, they will be required to register once again.",
+      "concerns": [
+        "No data export mentioned",
+        "Cannot reactivate deleted account"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Aisle can change its privacy policy at any time. They say they will notify you through the app, but if you keep using the app after changes, that means you accept them.",
+      "detail": "Changes effective upon publication. Users notified via app. Continued use constitutes acceptance.",
+      "policy_excerpt": "We reserve the right, at our discretion, to make changes to the terms of use and privacy policy at any time... Continued use of the Aisle app and website after revision indicates the user's acceptance of the terms of use.",
+      "concerns": [
+        "Continued use = acceptance"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0.00,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.30,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.30,
+        "deduction": 9.0
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "caution",
+        "max": 25,
+        "rate": 0.30,
+        "deduction": 7.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.00,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.30,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.30,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.30,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.30,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 57.25,
+    "final_score": 72,
+    "grade": "B"
+  }
+}

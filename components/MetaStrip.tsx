@@ -1,21 +1,17 @@
 import { ExternalLink, Flag } from "lucide-react";
-import type { AppMeta, Platform } from "@/lib/types";
-import { PLATFORM_LABEL } from "@/lib/risk";
+import type { AppMeta } from "@/lib/types";
 
 type Props = {
   meta: AppMeta;
-  platform: Platform;
   appName: string;
 };
 
-export function MetaStrip({ meta, platform, appName }: Props) {
-  const flagSubject = encodeURIComponent(
-    `Flag rating: ${appName} (${PLATFORM_LABEL[platform] ?? platform})`,
-  );
+export function MetaStrip({ meta, appName }: Props) {
+  const flagSubject = encodeURIComponent(`Flag rating: ${appName}`);
 
   return (
     <section className="mt-12 rounded-xl border border-line bg-surface p-5 text-xs">
-      <dl className="grid gap-4 sm:grid-cols-2 md:grid-cols-5">
+      <dl className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         <Field label="Policy source">
           {meta.policy_url ? (
             <a
@@ -36,9 +32,6 @@ export function MetaStrip({ meta, platform, appName }: Props) {
         </Field>
         <Field label="Our analysis">
           <span className="text-ink">{formatDate(meta.analyzed_at)}</span>
-        </Field>
-        <Field label="Platform">
-          <span className="text-ink">{PLATFORM_LABEL[platform] ?? platform}</span>
         </Field>
         <Field label="Schema">
           <span className="text-ink">v{meta.schema_version}</span>

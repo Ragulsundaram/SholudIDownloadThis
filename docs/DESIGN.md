@@ -139,23 +139,10 @@ For the "Risky" (orange) level, define custom CSS variables since the design tok
 - App icon: 48x48px, rounded-xl, `border-line`
 - App name: 16px, font-weight 600, `text-ink`, `leading-snug` — wraps instead of truncating
 - ThreatMeter chip directly below the name; text column uses `items-start` so the `inline-flex` pill does not stretch horizontally
-- **Removed from card:** developer name, category, one-liner description, platform pills
+- **Removed from card:** developer name, category, one-liner description
 - Entire card is clickable (`cursor-pointer` on `<article>` with click handler) — goes to `/app/{slug}`
+- Top-right corner of the card: compare-button icon (`GitCompareArrows`) that toggles the app in/out of the compare basket
 - Hover: `hover:border-brand/40 hover:bg-divider/30 hover:shadow-md`
-
-### 2. Platform Switcher (used at top of App Detail page)
-
-```
-Platform  [● iOS]  [Android]  [Mac]  [Windows soon]  [Linux soon]
-```
-
-- Label "Platform" in 11px text-ink-subtle, uppercase, semibold, tracking-wider
-- One rounded-xl pill per platform with Lucide icon:
-  - iOS → `Apple`, Android → `Bot`, Mac → `Laptop`, Windows → `AppWindow`, Linux → `Terminal`
-- **Active**: filled `bg-ink` / `text-page` pill with `border-ink/80` shadow
-- **Available (not active)**: outlined `bg-surface` / `border-line` pill, hover `border-ink bg-divider`
-- **Not yet analyzed**: dashed `border-line` + `bg-surface/40` + faded text + tiny "soon" suffix, `aria-disabled`
-- Switching platform is a client-side `<Link>` — no page reload
 
 ### 3. Feature Tags (used in App header)
 
@@ -168,7 +155,6 @@ The tag row leads with the ThreatMeter chip, then category, sub-category, "Free"
 - ThreatMeter chip: rounded-full, border-line, bg-surface (see ThreatMeter spec below)
 - Standard tags: 11px, border-line, text-ink-muted, rounded-md
 - Trust indicator tags (`E2E Encrypted`, `No Ads`, `Open Source`): auto-derived in `lib/trustIndicators.ts` via regex on green-flag titles. Rendered as green `border-safe-line` + `bg-safe-soft` + `text-safe-ink` pills with a small `ShieldCheck` icon
-- **The active platform tag (e.g. "iOS") is gone from this row** — the active platform tab in the Platform Switcher carries that signal
 - Never use tags for risk information — risk always uses the Risk Badge or ThreatMeter component
 
 ### 4. Category Card (used in App Detail Grid)
@@ -355,29 +341,18 @@ Chip-style rounded-full pill tabs in a row:
 - Subtext: one line only — "We read the privacy policy so you don't have to."
 - Stats line: apps analyzed count + categories tracked count (no "0 ads served")
 
-### App Overview Page (`/app/{slug}`)
-
-```
-[Navbar]
-[Breadcrumb]
-[App header — icon, name, developer]
-[Platform grid — one card per available platform, each showing score + risk]
-[Footer]
-```
-
-### App Detail Page (`/app/{slug}/{platform}`)
+### App Detail Page (`/app/{slug}`)
 
 ```
 [Navbar]
 [Breadcrumb — Home > Browse > {category} > {app name}]
-[App header — icon, name, developer, feature-tag row (ThreatMeter · category · sub-category · Free · trust indicators), App Store button, "Analyzed {Month YYYY}"]
-[Platform switcher — iOS / Android / Mac / Windows (soon) / Linux (soon)]
+[App header — icon, name, developer, feature-tag row (ThreatMeter · category · sub-category · Free · trust indicators), Compare button, App Store button, "Analyzed {Month YYYY}"]
 [VerdictHero — one_liner + recommendation lead text]
 [TabbedSections — Overview · Flags · Categories · Source]
   ├─ Overview tab — Score · Grade metadata + recommendation_reason (no summary paragraph)
   ├─ Flags tab — Red card / Green card side-by-side with bullet-point titles
   ├─ Categories tab — Sorted by risk · tap to expand · 2-col masonry
-  └─ Source tab — MetaStrip (policy URL, dates, platform, schema, flag link)
+  └─ Source tab — MetaStrip (policy URL, dates, schema, flag link)
 [Footer]
 ```
 

@@ -10,9 +10,9 @@
 1. Open a new Claude conversation
 2. Copy everything inside the `--- SYSTEM PROMPT START ---` block below as your first message, or set it as the system prompt if the interface allows
 3. In your next message, paste the raw privacy policy text (and terms & conditions if available)
-4. Also include: the app name, developer name, platform (iOS/Android/etc), App Store URL, and the URL where you found the policy
+4. Also include: the app name, developer name, App Store URL, and the URL where you found the policy
 5. Claude will return a JSON block and a summary card
-6. Copy the JSON into `/data/apps/{app-slug}.json`
+6. Copy the JSON into `/data/apps/{app-slug}/app.json`
 7. Add the lightweight index entry to `/data/index.json`
 
 ---
@@ -52,7 +52,7 @@ Output a single JSON code block (```json) containing the full structured data ob
 ### Part 2: Summary Card
 
 After the JSON, output a Markdown section titled "## Summary Card" with:
-- App name and platform
+- App name
 - Overall risk level and score
 - 3–5 red flags (plain English bullets)
 - 2–4 green flags (plain English bullets)
@@ -76,10 +76,9 @@ After the JSON, output a Markdown section titled "## Summary Card" with:
   },
 
   "app": {
-    "slug": "{app-name-lowercase-hyphenated}-{platform}",
+    "slug": "{app-name-lowercase-hyphenated}",
     "name": "",
     "developer": "",
-    "platform": "ios",
     "app_store_url": "",
     "app_store_id": "",
     "icon_url": "",

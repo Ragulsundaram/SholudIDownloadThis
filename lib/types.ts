@@ -1,5 +1,3 @@
-export type Platform = "ios" | "android" | "mac" | "windows" | "linux";
-
 export type RiskLevel = "safe" | "caution" | "risky" | "dangerous" | "unknown";
 
 export type Grade = "A" | "B" | "C" | "D" | "F";
@@ -14,14 +12,6 @@ export type RecommendationLevel =
 
 export type Severity = "high" | "medium" | "low" | "positive";
 
-export type IndexPlatformEntry = {
-  platform: Platform;
-  score: number;
-  grade: Grade;
-  risk: RiskLevel;
-  analyzed_at: string;
-};
-
 export type IndexEntry = {
   slug: string;
   name: string;
@@ -29,23 +19,11 @@ export type IndexEntry = {
   icon_url: string;
   category: string;
   description: string;
-  platforms: IndexPlatformEntry[];
-  worst_risk: RiskLevel;
+  score: number;
+  grade: Grade;
+  risk: RiskLevel;
+  analyzed_at: string;
   one_liner: string;
-};
-
-export type AppParent = {
-  slug: string;
-  name: string;
-  developer: string;
-  icon_url: string;
-  category: string;
-  sub_category: string;
-  description: string;
-  platforms: Platform[];
-  scores: Partial<
-    Record<Platform, { score: number; grade: Grade; risk: RiskLevel }>
-  >;
 };
 
 export type AppMeta = {
@@ -63,7 +41,6 @@ export type AppInfo = {
   slug: string;
   name: string;
   developer: string;
-  platform: Platform;
   app_store_url: string;
   app_store_id: string;
   icon_url: string;

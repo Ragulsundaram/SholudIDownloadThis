@@ -122,7 +122,7 @@ export function NavbarSearch({ apps }: Props) {
                             </p>
                           </div>
                           <div className="flex-shrink-0">
-                            <SmallCircleScore score={worstScore(app.platforms)} />
+                            <SmallCircleScore score={app.score} />
                           </div>
                         </Link>
                       </li>
@@ -200,6 +200,3 @@ function SmallCircleScore({ score }: { score: number }) {
   );
 }
 
-function worstScore(platforms: IndexEntry["platforms"]): number {
-  return Math.min(...platforms.map((p) => p.score));
-}

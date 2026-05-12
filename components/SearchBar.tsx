@@ -5,7 +5,6 @@ import Link from "next/link";
 import Fuse from "fuse.js";
 import { Search, ArrowRight } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
-import { PLATFORM_LABEL } from "@/lib/risk";
 
 type Props = {
   apps: IndexEntry[];
@@ -96,16 +95,10 @@ export function SearchBar({ apps, placeholder = "Search any app — e.g. WhatsAp
                       </p>
                     </div>
                     <div className="flex flex-shrink-0 items-center gap-1.5">
-                      {app.platforms.map((p) => (
-                        <span
-                          key={p.platform}
-                          className="inline-flex items-center gap-1 rounded-full border border-line px-2 py-0.5 text-[10px] font-medium text-ink-muted"
-                        >
-                          <span className={`h-1.5 w-1.5 rounded-full ${RISK_DOT[p.risk] ?? RISK_DOT.unknown}`} />
-                          {PLATFORM_LABEL[p.platform] ?? p.platform}
-                          <span className="tabular-nums">{p.score}</span>
-                        </span>
-                      ))}
+                      <span className="inline-flex items-center gap-1 rounded-full border border-line px-2 py-0.5 text-[10px] font-medium text-ink-muted">
+                        <span className={`h-1.5 w-1.5 rounded-full ${RISK_DOT[app.risk] ?? RISK_DOT.unknown}`} />
+                        <span className="tabular-nums">{app.score}</span>
+                      </span>
                     </div>
                   </Link>
                 </li>

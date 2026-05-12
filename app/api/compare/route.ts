@@ -1,13 +1,9 @@
 import { NextResponse } from "next/server";
-import { getAppParent, getAppPlatform } from "@/lib/getApp";
-import type { AppData, AppParent, Platform } from "@/lib/types";
-
-const PLATFORM_PREFERENCE: Platform[] = ["ios", "android", "mac", "windows", "linux"];
+import { getApp } from "@/lib/getApp";
+import type { AppData } from "@/lib/types";
 
 export type CompareEntry = {
   slug: string;
-  platform: Platform;
-  parent: AppParent;
   data: AppData;
 };
 
@@ -22,15 +18,9 @@ export async function GET(request: Request) {
 
   const entries: CompareEntry[] = [];
   for (const slug of slugs) {
-    const parent = await getAppParent(slug);
-    if (!parent) continue;
-    const platform =
-      PLATFORM_PREFERENCE.find((p) => parent.platforms.includes(p)) ??
-      parent.platforms[0];
-    if (!platform) continue;
-    const data = await getAppPlatform(slug, platform);
+    const data = await getApp(slug);
     if (!data) continue;
-    entries.push({ slug, platform, parent, data });
+    entries.push({ slug, data });
   }
 
   return NextResponse.json({ entries });

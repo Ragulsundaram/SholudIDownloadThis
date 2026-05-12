@@ -47,18 +47,4 @@ export const RECOMMENDATION_TITLE: Record<RecommendationLevel, string> = {
   avoid: "Avoid if you can",
 };
 
-export const PLATFORM_LABEL: Record<string, string> = {
-  ios: "iOS",
-  android: "Android",
-  mac: "Mac",
-  windows: "Windows",
-  linux: "Linux",
-};
-
-export const STORE_LABEL: Record<string, string> = {
-  ios: "App Store",
-  android: "Play Store",
-  mac: "Mac App Store",
-  windows: "Microsoft Store",
-  linux: "Download",
-};
+export const STORE_LABEL = "App Store";
