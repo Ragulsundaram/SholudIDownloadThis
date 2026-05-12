@@ -1,0 +1,466 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://makeheadway.com/privacy-policy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-12-16",
+    "needs_review": false,
+    "review_notes": "Terms and Conditions URL not explicitly provided in the privacy policy. The privacy policy is unusually transparent about the extensive list of third-party service providers (20+ companies) used for analytics and advertising. Key concerns: very broad data sharing with ad/analytics partners including Facebook, Google, TikTok, Snapchat, Pinterest; comprehensive device fingerprinting; profiling for ads under legitimate interest. Key positives: explicit no-sale statement under CCPA; payment data never stored by app; detailed opt-out instructions for personalized ads; specific privacy rights for EEA, California, Virginia, and Nevada residents."
+  },
+  "app": {
+    "slug": "headway-daily-micro-learning",
+    "name": "Headway: Fun & Easy Growth",
+    "developer": "LibroTech, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/headway-daily-micro-learning/id1457185832",
+    "app_store_id": "1457185832",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a7/f9/84/a7f9842b-48bf-791c-10aa-dff5f26772a5/Placeholder.mill/400x400bb-75.webp",
+    "category": "Education",
+    "sub_category": "Books & Reference",
+    "description": "A daily micro-learning app offering 15-minute book summaries, audio learning, and personalized reading goals to help users grow through bite-sized content."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 66,
+    "grade": "C",
+    "one_liner": "Headway makes learning easy with book summaries, but it extensively tracks your reading habits and shares your data with over 20 advertising and analytics companies.",
+    "summary": "Headway is a micro-learning app offering book summaries and audio content. To use the app, you must provide your name, email, and reading preferences. The app automatically collects extensive device information including your IP address, hardware ID, device identifiers (IDFA/AAID), and activity logs. This data is shared with over 20 third-party companies including Facebook, Google, TikTok, Snapchat, and Pinterest for advertising and analytics purposes. Your reading behavior is profiled to serve personalized ads and improve the service. The app does not sell your data under CCPA definitions, does not store payment card details, and provides account deletion. Users have opt-out options for personalized ads and specific privacy rights depending on their location.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While Headway offers useful book summaries, it collects and shares an unusually large amount of your personal data with many third-party advertising and analytics companies. If you value privacy, consider whether the learning benefit is worth the extensive tracking."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_third_party_sharing",
+        "title": "Data shared with over 20 advertising and analytics companies",
+        "plain_english": "Headway shares your data with Facebook, Google, TikTok, Snapchat, Pinterest, Appsflyer, Amplitude, Firebase, and many other companies. Some of your data is stored and processed on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_reading_behavior_tracked_for_ads",
+        "title": "Your reading habits are tracked and used to target ads",
+        "plain_english": "Headway analyzes what you read, how long you read, and your reading goals. This information is used to show you personalized ads through partners like Facebook and Google.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "App builds a detailed fingerprint of your device",
+        "plain_english": "Headway collects your device model, operating system, language, IP address, hardware ID, mobile carrier, and advertising identifiers (IDFA/AAID) to identify and track your device.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ip_activity_logs_shared",
+        "title": "Your IP address and activity logs are shared with ad partners",
+        "plain_english": "Your IP address and detailed activity logs are collected automatically and shared with advertising partners and analytics providers to measure and target ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_profiling_legitimate_interest",
+        "title": "App profiles you for marketing under 'legitimate interest'",
+        "plain_english": "Headway claims it doesn't need your consent to analyze your behavior and send you marketing messages. It says this is in its 'legitimate interest' to promote the app.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_explicit_terms_url",
+        "title": "Terms and Conditions URL not clearly provided",
+        "plain_english": "The privacy policy references Terms and Conditions of Use but does not provide a direct link to them.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale_ccpa",
+        "title": "Headway explicitly says it does not sell your personal information",
+        "plain_english": "Under California privacy law, Headway states it does not sell your personal information and has no knowledge of selling data from minors under 16.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_payment_storage",
+        "title": "Payment card details are never stored by the app",
+        "plain_english": "All payments are processed by third parties like Apple, Stripe, and PayPal. Headway says it will not store or collect your payment card details itself.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "You can delete your account directly in the app",
+        "plain_english": "You can delete your account using the Settings menu in the app or by contacting support. The process takes up to 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_opt_out_instructions",
+        "title": "Detailed opt-out instructions provided for personalized ads",
+        "plain_english": "Headway provides step-by-step instructions for iOS, Android, macOS, Windows, and web browsers on how to opt out of personalized advertising.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_regional_privacy_rights",
+        "title": "Specific privacy rights available for EEA, CA, VA, and NV residents",
+        "plain_english": "Depending on where you live, you may have additional rights including data portability, the right to complain to a regulator, or the right to opt out of targeted advertising.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway is a reading app and does not use your camera or microphone.",
+      "detail": "The privacy policy makes no mention of camera or microphone access. As a book summary and reading app, Headway does not require or request camera or microphone permissions.",
+      "policy_excerpt": "No camera or microphone access described in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway does not collect your GPS location. Your general area may be inferred from your IP address.",
+      "detail": "No explicit GPS or location access is mentioned in the privacy policy. IP address is collected as part of network activity, which can reveal general geographic area. Geolocation data is listed under California CCPA categories but not as actively collected for core service delivery.",
+      "policy_excerpt": "No GPS or precise location data collection described for core service delivery.",
+      "concerns": [
+        "IP address may be used for general location inference"
+      ],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway does not access your contacts or phonebook.",
+      "detail": "The privacy policy makes no mention of contacts, address book, or phonebook access. There is no indication that the app requests contact permissions.",
+      "policy_excerpt": "No contacts or phonebook access described in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway does not access your device files or photo library.",
+      "detail": "The privacy policy does not mention storage or file access permissions. As a reading app, Headway may cache content locally for offline use, but there is no indication of broad file system or photo library access.",
+      "policy_excerpt": "No storage or file access described in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway shares your data with over 20 companies including Facebook, Google, TikTok, Snapchat, Pinterest, and analytics providers. Some of your data is stored on their servers.",
+      "detail": "Data is shared with a very extensive list of third parties: mobile app marketplaces (Apple, Google), cloud storage (Google, Digital Ocean, Vercel), data analytics (Facebook, Google, Appsflyer, Firebase, Amplitude, Tableau), measurement partners (RevealBot, Firebase, Clarity, Sentry, CookieYes), marketing partners (Facebook, Google, Twitter, TikTok, Snapchat, Pinterest, Microsoft, LinkedIn), payment processors (Stripe, Solidgate, PayPal), and communication services (Customer.io, Zendesk, Firebase). Data is stored and processed on third-party servers. The policy explicitly states they do not sell personal information under CCPA.",
+      "policy_excerpt": "For improving our service and serving ads, we use third party solutions. As a result, we may process data using solutions developed by Facebook, Google, Twitter, Appsflyer, Amplitude, Firebase, Snapchat, Pinterest, Apple, Digital Ocean, Vercel, Customer.io, Zendesk, PayPal, Stripe, Microsoft, Tableau, TikTok.",
+      "concerns": [
+        "Very extensive list of third-party data recipients (20+ companies)",
+        "Data stored and processed on third-party servers",
+        "Marketing and advertising partners receive personal data",
+        "Broad sharing with social media networks for ad targeting"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway requires your name, email, and reading preferences. It also collects device identifiers, advertising IDs (IDFA/AAID), hardware ID, and IP address, which are shared with ad partners.",
+      "detail": "Account creation requires name, email, and reading preferences. Data collected automatically includes: device language, IP address, time zone, device type and model, device settings, operating system, Internet service provider, mobile carrier, hardware ID, IDFA (iOS), and AAID (Android). This data is used for service delivery, analytics, and advertising. Social login via Google is mentioned as a data source.",
+      "policy_excerpt": "We will ask you to enter information about your reading preferences, name, email. We also automatically collect from your device language settings, IP address, time zone, type and model of a device, device settings, operating system, Internet service provider, mobile carrier, hardware ID, and other unique identifiers (such as IDFA and AAID).",
+      "concerns": [
+        "Advertising identifiers (IDFA/AAID) collected and shared with ad partners",
+        "Hardware ID collected for device tracking",
+        "IP address linked to user identity",
+        "Social login imports additional Google profile data"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway heavily tracks your behavior to show you personalized ads through Facebook, Google, and many other partners. They also profile your reading habits to measure ad effectiveness.",
+      "detail": "The app uses extensive behavioral tracking for advertising. They analyze interactions including subscription frequency, reading goals, and time spent reading. Personalized ads are served through Facebook, Google, Twitter, TikTok, Snapchat, Pinterest, and Microsoft. They use device identifiers and activity data for ad targeting. Opt-out instructions are provided for iOS, Android, macOS, Windows, and browsers. The app claims 'legitimate interest' for profiling users and personalizing ads. Measurement partners (RevealBot, Firebase, Clarity, Sentry, CookieYes) also receive data.",
+      "policy_excerpt": "We and our partners, including Facebook and Google, use your personal data to tailor ads and possibly even show them to you at the relevant time. For example, if you have installed our App, you might see ads of our products, for example, in your Facebook's feed.",
+      "concerns": [
+        "Extensive ad tracking with 10+ advertising partners",
+        "Behavioral profiling for ad measurement under 'legitimate interest'",
+        "Reading habits used for ad targeting",
+        "Cross-platform ad tracking via device identifiers",
+        "Marketing communications based on legitimate interest (not consent)"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway is not meant for users under 16. The app does not knowingly collect data from children.",
+      "detail": "The app states it is not directed to persons under 16 and does not knowingly process personal data from children under 16. Users under 16 are instructed not to use the Services. If a child user is discovered, they request contact at support@get-headway.com. There is no explicit age verification mechanism at sign-up.",
+      "policy_excerpt": "We do not knowingly process personal data from persons under 16 years of age. If you learn that anyone younger than 16 has provided us with personal data, please contact us at support@get-headway.com.",
+      "concerns": [
+        "No age verification mechanism at sign-up",
+        "Relies on self-attestation and post-hoc discovery"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway logs your IP address and activity continuously. This data is shared with analytics and advertising partners to track and target you.",
+      "detail": "IP address and activity logs are collected automatically and continuously. Internet activity data is shared with service providers and advertising partners. The app uses reCAPTCHA (Google) for website security. Data is used for service delivery, analytics, and advertising. IP address is also used for general location inference.",
+      "policy_excerpt": "We also collect data automatically (for example, your IP address, activity logs) and use third-party service providers for such collection.",
+      "concerns": [
+        "IP address collected and shared with ad partners",
+        "Activity logs used for profiling and ad targeting",
+        "reCAPTCHA (Google) used on website",
+        "Extensive interaction tracking"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway collects detailed device information including model, OS, language, carrier, hardware ID, and advertising identifiers to track your device across sessions.",
+      "detail": "Device information collected includes: device language settings, time zone, device type and model, device settings, operating system, Internet service provider, mobile carrier, hardware ID, IDFA, and AAID. This creates a comprehensive device fingerprint used for service delivery, analytics, profiling, and advertising. The data is shared with multiple analytics and ad partners.",
+      "policy_excerpt": "We also automatically collect from your device language settings, IP address, time zone, type and model of a device, device settings, operating system, Internet service provider, mobile carrier, hardware ID, and other unique identifiers (such as IDFA and AAID).",
+      "concerns": [
+        "Comprehensive device fingerprint including hardware ID and carrier",
+        "Advertising identifiers enable cross-app tracking",
+        "Device data shared with 20+ third parties",
+        "Fingerprint persists across app reinstalls via hardware ID"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway does not collect health or biometric data.",
+      "detail": "The privacy policy makes no mention of health, biometric, or medical data collection. As a reading and learning app, there is no indication that Headway requests or processes health-related data.",
+      "policy_excerpt": "No health or biometric data collection described in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Headway offers subscriptions through Apple, Google, Stripe, Solidgate, and PayPal. The app itself never stores your payment card details.",
+      "detail": "The app offers paid subscriptions. Payment processing is handled entirely by third parties: Apple App Store, Google Play, Stripe, Solidgate, and PayPal. Headway explicitly states it will not store or collect payment card details. Refund requests may require sharing usage data with app stores for verification.",
+      "policy_excerpt": "We will not store or collect your payment card details ourselves. This information will be provided directly to our third-party payment processors.",
+      "concerns": [
+        "Refund requests may share usage data with app stores",
+        "Multiple payment processors involved"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account in the app or by contacting support, but it takes up to 30 days. Some data may be kept longer for legal reasons.",
+      "detail": "Account deletion is available via Settings in the app or by contacting support@get-headway.com. The deletion process takes up to 30 days. Once initiated, the account cannot be used and subscription features are lost. Users must cancel subscriptions before deletion. EEA users have additional rights: complaint to supervisory authority and data portability. California, Virginia, and Nevada residents have specific state-level rights including opt-out of targeted advertising.",
+      "policy_excerpt": "You can delete your account at any time using the functionality found in 'Settings' in the App or the Website, or by contacting us at support@get-headway.com. Upon your request, we will delete your account and all associated data, except for limited information, which will be stored for specific purposes and limited period.",
+      "concerns": [
+        "Deletion takes up to 30 days",
+        "Some data retained for legal obligations",
+        "Must cancel subscription before deletion to avoid charges",
+        "No immediate one-click full deletion"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headway will notify you of material policy changes through the app or other means, but continued use means you accept any changes.",
+      "detail": "Material changes to the privacy policy will be notified through the Services or by other available means. Users will have an opportunity to review the revised policy. However, continued use after changes become effective constitutes acceptance. No specific advance notice period is stated.",
+      "policy_excerpt": "If we decide to make material changes to this Privacy Policy, you will be notified through our Services or by other available means and will have an opportunity to review the revised Privacy Policy. By continuing to access or use the Services after those changes become effective, you agree to be bound by the revised Privacy Policy.",
+      "concerns": [
+        "Continued use constitutes acceptance",
+        "No specific advance notice period for material changes",
+        "'Other available means' is vague"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "location_gps",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 70.5,
+    "final_score": 66,
+    "grade": "C"
+  }
+}

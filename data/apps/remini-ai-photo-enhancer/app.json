@@ -1,0 +1,474 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://support.bendingspoons.com/privacy.html?app=1470373330",
+    "terms_url": "",
+    "policy_last_updated": "2026-02-12",
+    "needs_review": false,
+    "review_notes": "Terms and Conditions URL not found online. Bending Spoons privacy policy is unusually detailed with GDPR legal basis annotations for every processing activity. Key concerns: face data (biometric) is uploaded to servers and shared with third-party AI providers; behavioral profiling for ad campaign measurement happens under legitimate interest without requiring ad consent; data retention up to 2 years for AI generation and 10 years for legal defense; no explicit policy change notification mechanism. Key positives: images not used for AI training without explicit opt-in; enhanced images deleted after 1 day; does not sell data or images; strong GDPR rights exercisable within app."
+  },
+  "app": {
+    "slug": "remini-ai-photo-enhancer",
+    "name": "Remini - AI Photo Enhancer",
+    "developer": "Bending Spoons Apps ApS",
+    "app_store_url": "https://apps.apple.com/in/app/remini-ai-photo-enhancer/id1470373330",
+    "app_store_id": "1470373330",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d4/c7/ca/d4c7ca16-b61b-a5a7-32b4-14f1e91d4e06/Placeholder.mill/400x400bb-75.webp",
+    "category": "Photo & Video",
+    "sub_category": "AI Photo Enhancer",
+    "description": "An AI-powered photo and video enhancement app that improves resolution, colors, and quality, and generates new AI portraits from your photos."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "Remini enhances your photos with AI, but uploads your images and face data to servers, tracks your activity for ads, and shares data with third-party AI providers.",
+    "summary": "Remini uses AI to enhance photos and videos by improving resolution and colors. It uploads your images and videos to its servers for processing, and may retain them for up to 2 years for AI generation features. The app collects device identifiers, interaction data, and uses third-party tracking for personalized ads with consent. Face data is processed to enhance photos and generate AI images, and may be shared with third-party AI service providers under contract. The app does not sell your images or data, and offers automatic deletion after retention periods. Users have GDPR rights including access, deletion, and objection, exercisable within the app.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While Remini's AI photo enhancement is impressive, the app uploads your personal photos and face data to external servers, retains them for extended periods, and tracks your activity for advertising. Consider the privacy trade-off before uploading sensitive photos."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_images_face_data_uploaded",
+        "title": "Your photos and face data are uploaded to external servers",
+        "plain_english": "To enhance your photos and generate AI images, Remini uploads your images and videos to its servers. It also extracts face data from your photos, which may be considered biometric data in some places.",
+        "severity": "high"
+      },
+      {
+        "id": "red_face_data_shared_ai_providers",
+        "title": "Face data is shared with third-party AI providers",
+        "plain_english": "Remini shares your images and related face data with third-party AI service providers who process it to deliver AI-powered features. These providers work under contract but still handle your biometric data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_profiling_ad_campaigns_legitimate_interest",
+        "title": "App profiles you to measure ad effectiveness without ad consent",
+        "plain_english": "Even if you don't consent to targeted ads, Remini still analyzes your behavior to measure how well their advertising campaigns work. This profiling is done under 'legitimate interest,' not your consent.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_targeted_ads_third_party_trackers",
+        "title": "Targeted ads use third-party trackers with your consent",
+        "plain_english": "If you consent, Remini uses third-party tracking technologies including your device ID (IDFA) to show you personalized ads. These trackers collect data about your app usage and interests.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_long_retention_periods",
+        "title": "Your data is kept for up to 2 years, and some for up to 10 years",
+        "plain_english": "AI generation images and face data may be kept for up to 2 years. Other personal data is kept for 3 years. In extraordinary cases, data may be retained up to 10 years for legal defense.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_explicit_policy_change_notification",
+        "title": "Privacy policy does not explain how you are notified of changes",
+        "plain_english": "The policy shows a last updated date but does not explain if or how you will be warned before important privacy policy changes take effect.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale_of_data",
+        "title": "Remini explicitly promises not to sell your images or data",
+        "plain_english": "The privacy policy clearly states that Remini does not sell your data, including your images, to third parties under any circumstances.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_automatic_deletion",
+        "title": "Enhanced images are deleted automatically after 1 day",
+        "plain_english": "Photos you upload for basic enhancement are deleted from Remini's servers after just one day. Face data used for enhancement is deleted immediately after processing.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_user_ownership",
+        "title": "You keep ownership of your images and videos",
+        "plain_english": "Remini does not claim ownership of any images or videos you upload, enhance, or generate using the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights_in_app",
+        "title": "You can exercise privacy rights directly inside the app",
+        "plain_english": "You can request access, deletion, and other GDPR rights from within the app itself without needing to email or contact support separately.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_training_without_consent",
+        "title": "Your images are not used to train AI unless you explicitly agree",
+        "plain_english": "Remini does not use your uploaded images to train its AI algorithms unless you specifically opt in. US-based users' face data is never used for training.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini needs access to your camera and photo library to enhance photos and generate AI images. You must explicitly allow this access through a system pop-up.",
+      "detail": "Camera and photo library access is required for core functionality: uploading photos for enhancement, taking photos within the app, and generating AI images. The app may automatically find other photos in your gallery featuring the same person after you upload the first image, but these photos don't leave your device until you decide to upload them. No background camera access is mentioned.",
+      "policy_excerpt": "To edit photos and videos or generate AI images, the app needs access to your library and your camera. You have to expressly allow this access through the request pop-up that appears on your device.",
+      "concerns": [
+        "Auto-scans gallery for matching faces after first upload",
+        "Camera access required for core photo enhancement"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini does not collect your GPS location. Your IP address is collected as part of network activity, which can reveal your general area.",
+      "detail": "No explicit GPS or location access is mentioned in the privacy policy. The app does not request location permissions. IP address is collected as part of network activity information, which can infer general geographic area.",
+      "policy_excerpt": "No GPS or precise location data collection described in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini does not access your contacts or phonebook.",
+      "detail": "The privacy policy makes no mention of contacts, address book, or phonebook access. There is no indication that the app requests contact permissions.",
+      "policy_excerpt": "No contacts or phonebook access described in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini accesses your photo library when you choose to upload photos for enhancement or AI generation. It does not continuously scan your device storage.",
+      "detail": "File and photo access is user-initiated for uploading images to the app for enhancement or AI generation. The app may automatically find matching photos in your gallery after the first upload, but these are not uploaded without your explicit action. No background storage scanning is mentioned.",
+      "policy_excerpt": "To edit photos and videos or generate AI images, the app needs access to your library and your camera. You have to expressly allow this access through the request pop-up that appears on your device.",
+      "concerns": [
+        "App auto-finds matching photos in gallery after first upload",
+        "Broad photo library access required for core functionality"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini shares your data with IT providers, third-party AI service providers, and advertising partners (with your consent). They explicitly state they do not sell your images or data.",
+      "detail": "Data is shared with: IT and storage service providers; third-party AI service providers who process images and face data under contract to deliver AI features; advertising partners (only with consent for tracking); professional advisors; potential new owners in corporate transactions; and public authorities when legally required. The policy explicitly states: 'We don't sell your data, including your images, to third parties under any circumstances.'",
+      "policy_excerpt": "We don't sell your data, including your images, to third parties under any circumstances.",
+      "concerns": [
+        "Third-party AI providers process images and face data",
+        "Advertising partners receive data with consent",
+        "Corporate transactions may transfer data to new owners",
+        "Broad 'other parties as necessary' sharing clause"
+      ],
+      "score_impact": -9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini uses your Apple ID and custom identifiers to manage your account and subscription. It also collects device info and may link this to advertising profiles if you consent to targeted ads.",
+      "detail": "Account and identity data collected includes: Apple ID, custom user identifiers generated by Bending Spoons, device identifiers, IP address, device model, OS version, language, name, and region. This data is used for service delivery, profiling, and advertising (with consent). Custom identifiers and IDFA may be used for ad targeting if you consent.",
+      "policy_excerpt": "User identifiers (such as Apple ID) and mobile identifiers (such as IP address, device identifiers, and custom identifiers that we generate to identify our users)",
+      "concerns": [
+        "Custom identifiers generated to track users across sessions",
+        "IDFA used for advertising with consent",
+        "Device info linked to user profile for profiling"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini shows personalized ads using third-party tracking technologies if you consent. Even without ad consent, the app profiles your behavior to measure ad campaign effectiveness.",
+      "detail": "Targeted advertising uses third-party tracking technologies (IDFA, IP, device identifiers, interaction data, ad conversion data) to serve personalized ads. This is consent-based under Article 122 of the Italian Privacy Code. However, the app also conducts profiling under 'legitimate interest' to 'measure the effectiveness of our advertising campaigns and make them more relevant' — this happens even without explicit ad consent. Users can object to legitimate-interest profiling and can disable IDFA tracking in iOS settings.",
+      "policy_excerpt": "We use third-party tracking technologies to serve you personalized ads. We analyze information about you and the way you use the app to create your user profile... To measure the effectiveness of our advertising campaigns and make them more relevant.",
+      "concerns": [
+        "Profiling for ad effectiveness under legitimate interest (not consent)",
+        "Third-party ad trackers collect personal data with consent",
+        "IDFA used for cross-app tracking",
+        "Limited opt-out: must object to profiling and disable system tracking"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini is not meant for users under 16. The app does not knowingly collect data from children and will delete data if a child user is discovered.",
+      "detail": "The app states it is not meant for users under 16. They do not knowingly collect personal data from children. If they learn a user is under 16, they will take reasonable steps to delete processed data and close the account. There is no explicit enforcement mechanism or age verification at sign-up beyond the App Store age rating (4+).",
+      "policy_excerpt": "The app isn't meant to be used by people under the age of 16. We don't knowingly collect personal data from children. If we learn that a user is under the age of 16, we'll take reasonable steps to delete any processed data and close the associated account.",
+      "concerns": [
+        "No age verification mechanism at sign-up",
+        "App Store age rating is 4+ which contradicts 16+ policy",
+        "Relies on self-attestation and post-hoc discovery"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini logs your IP address, network usage, crashes, and errors. This data is used for troubleshooting and to build your user profile for service improvement and ad measurement.",
+      "detail": "Network activity data collected includes: IP address, network usage, Internet connectivity, latency, failures, crashes, and error logs. This is used for troubleshooting (1-year retention), service improvement (3-year retention), and profiling including ad campaign measurement. IP address is also used as a mobile identifier and may be used for general location inference.",
+      "policy_excerpt": "Internet and network activity information (such as IP address, and information about network usage, Internet connectivity, latency, failures, crashes, and error logs)",
+      "concerns": [
+        "IP address used as identifier and potentially for location inference",
+        "Network logs used for profiling and ad measurement",
+        "3-year retention for service improvement"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini collects detailed device information including model, OS version, language, and device identifiers. This is used to identify you, improve the app, and target ads.",
+      "detail": "Device information collected includes: device model, device type, OS version, device language, device name, and region. Combined with custom identifiers and IDFA, this creates a device fingerprint used for service delivery, profiling, and advertising. The data is retained for up to 3 years.",
+      "policy_excerpt": "Device information (such as device model, device type, OS version, device language, device name, and region)",
+      "concerns": [
+        "Comprehensive device info creates a persistent fingerprint",
+        "Custom identifiers and IDFA enable cross-session tracking",
+        "Device data used for ad targeting and profiling",
+        "3-year retention period"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Remini processes face data from your photos to enhance images and generate AI portraits. This data is uploaded to servers and shared with third-party AI providers under contract. In some jurisdictions, this is considered biometric data.",
+      "detail": "The app extracts 'face data' — information estimating the location and shape of facial features — from uploaded images. Depending on jurisdiction, this may be considered biometric data. Face data is used to enhance photos and generate AI images. It is deleted immediately after enhancement, or retained up to 20 days for AI generation. Third-party AI service providers process face data under contract. With consent, face data may be retained for up to 1 year for AI training (not for US users). The policy explicitly states face data is never used to identify or authenticate people.",
+      "policy_excerpt": "Information about faces in the images and videos you upload, including, for example, information that estimates the location and shape of facial features ('face data'). Depending on the applicable law of your jurisdiction, face data may be considered biometric data.",
+      "concerns": [
+        "Face data uploaded to external servers",
+        "Third-party AI providers process biometric data",
+        "Up to 2-year retention for AI generation face data",
+        "Potential 1-year retention with consent for training",
+        "Biometric data classification varies by jurisdiction creating legal uncertainty"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Remini offers subscriptions through Apple. Apple processes all payments, so the app itself never sees your credit card details. The app does collect subscription status information.",
+      "detail": "The app offers weekly, monthly, and yearly subscriptions. All payments are processed through Apple's in-app purchase system, so Bending Spoons never directly handles payment card data. The app does collect information about your subscription status for service delivery and customer support.",
+      "policy_excerpt": "Information about your subscription",
+      "concerns": [
+        "Subscription data retained for 3 years after expiration",
+        "Payment disputes handled through Apple with limited visibility"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion of your data through the app, and most data is automatically deleted after set periods. However, some data may be kept for up to 10 years for legal defense.",
+      "detail": "Users have GDPR rights (access, rectification, erasure, restriction, portability, objection, consent withdrawal) exercisable within the app via a 4-finger long press menu. Data is automatically deleted after retention periods: enhanced images after 1 day, AI generation images after 7-20 days (max 2 years), face data after immediate-20 days, other data after 3 years. However: legal compliance data kept up to 5 years; defense data kept up to 10 years; the process to exercise rights is cumbersome (must download app and use hidden gesture).",
+      "policy_excerpt": "Right to request that your personal data be deleted (erasure).",
+      "concerns": [
+        "Up to 10-year retention for legal defense",
+        "Cumbersome rights exercise process (hidden in-app gesture)",
+        "No immediate one-click deletion for all data types",
+        "Corporate transactions may transfer data to new owners"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explicitly explain how you will be notified of changes.",
+      "detail": "The privacy policy includes a 'Last updated' date (February 12, 2026) but does not contain a dedicated section explaining how users will be notified of material policy changes, what advance notice will be given, or whether continued use constitutes acceptance of changes.",
+      "policy_excerpt": "Last updated: February 12, 2026",
+      "concerns": [
+        "No explicit policy change notification mechanism described",
+        "Unknown whether users are notified of material changes",
+        "Last updated date suggests changes happen without clear notice protocol"
+      ],
+      "score_impact": -2.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9.0
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "unknown",
+        "max": 5,
+        "rate": 0.5,
+        "deduction": 2.5
+      }
+    ],
+    "total_deductions": 73.0,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

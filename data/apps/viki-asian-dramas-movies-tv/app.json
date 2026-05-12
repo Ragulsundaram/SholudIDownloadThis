@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.viki.com/legal/privacy",
+    "terms_url": "http://viki.com/legal/terms_of_use",
+    "policy_last_updated": "2026-04-08",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "viki-asian-dramas-movies-tv",
+    "name": "Viki: Asian Dramas, Movies, TV",
+    "developer": "Rakuten Viki, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/viki-asian-dramas-movies-tv/id445553058",
+    "app_store_id": "445553058",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bf/a6/d6/bfa6d602-7eb9-9c92-dc0d-445eeca570dd/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Entertainment",
+    "sub_category": "Streaming",
+    "description": "A streaming service for Asian dramas, movies, and TV shows with community subtitles and personalized recommendations."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 59,
+    "grade": "C",
+    "one_liner": "Viki tracks everything you watch and shares your data with Rakuten and ad networks, but gives you real opt-out tools for targeted ads.",
+    "summary": "Viki collects detailed viewing behavior, device information, and inferred location to personalize content and serve targeted ads. Your data is shared with the Rakuten corporate family, third-party advertisers, and business partners. While the app provides opt-out mechanisms for targeted advertising and allows account deletion, the extensive tracking and data sharing warrant caution for privacy-conscious users.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are comfortable with streaming services that track your viewing habits for ads, Viki is a solid choice for Asian content. If you prefer stronger privacy, consider using the opt-out tools or a paid ad-free tier if available."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_session_replay_advertisers",
+        "title": "Your browsing is recorded and shared with advertisers",
+        "plain_english": "Viki uses session replay technology to record your interactions and shares your viewing history, device data, and inferred interests with third-party advertisers and ad networks to show you targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_rakuten_data_sharing",
+        "title": "Your data flows across the entire Rakuten corporate family",
+        "plain_english": "Viki shares your account and usage data with Rakuten Group affiliates, including for the Rakuten ID single sign-on program, meaning your activity on Viki can be linked to your activity on other Rakuten services.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_behavioral_profiling",
+        "title": "AI builds a profile of your personality and preferences",
+        "plain_english": "Viki uses machine learning and artificial intelligence to analyze your watch history, searches, and browsing behavior to infer your potential preferences and characteristics for personalization and advertising.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ip_location_shared",
+        "title": "Your location is inferred from your IP and shared with ad partners",
+        "plain_english": "Viki determines your approximate city and country from your IP address to enforce regional content licensing and shares this inferred location data with third-party advertisers.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_opt_out_tools",
+        "title": "You can opt out of targeted ads and data sale",
+        "plain_english": "Viki provides a Do Not Sell or Share My Personal Information link and respects the Global Privacy Control browser signal, letting you opt out of targeted advertising and data sharing in supported jurisdictions.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "You can delete your account and export your data",
+        "plain_english": "Viki lets you delete your account through your settings and offers data portability, access, and correction rights through privacy@viki.com.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_health_biometric",
+        "title": "No health, biometric, or contact data is collected",
+        "plain_english": "Viki explicitly states it does not collect health, biometric, or contacts data, and it does not access your camera or microphone for core features.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki is a streaming app and does not need access to your camera or microphone to function.",
+      "detail": "The privacy policy does not mention camera or microphone access for any purpose. Users can upload profile pictures and subtitles but these are typically selected from existing photos.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki guesses your location from your internet address to decide what shows you can watch, and shares that location with advertisers.",
+      "detail": "The app infers approximate location (city, country, zip code) from your IP address to personalize content and enforce regional licensing. This inferred location is also shared with third-party advertisers for targeted advertising.",
+      "policy_excerpt": "Location inferred from IP address, such as the city, country and zip code from which the Rakuten Viki Service was accessed.",
+      "concerns": [
+        "IP-based location is shared with third-party advertisers",
+        "No way to use the app without revealing approximate location"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki does not access your contacts or phonebook.",
+      "detail": "There is no mention of contact or address book access in the privacy policy. Social features exist but do not require phone contacts.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Viki can temporarily download shows to your device for offline viewing when you choose to.",
+      "detail": "Users with certain subscription plans can temporarily download content for offline viewing. This is user-initiated and optional.",
+      "policy_excerpt": "Depending on the Service Options you register for, you may have the option to temporarily download certain Content on certain Compatible Devices for offline viewing.",
+      "concerns": [],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Viki shares your personal information with advertisers, business partners, Rakuten affiliates, and service providers.",
+      "detail": "Data is shared with third-party advertisers (including identifiers and inferred interests), business partners, Rakuten Group affiliates, service providers, and law enforcement when required. The policy explicitly acknowledges this may constitute a sale under California law.",
+      "policy_excerpt": "We permit advertisements to be delivered to you on the Rakuten Viki Service by third-party advertisers... advertisements may be tailored to your interests by the third-party advertisers based on preferences inferred from information they collect.",
+      "concerns": [
+        "Data shared with ad networks for behavioral targeting",
+        "Shared with Rakuten Group affiliates across multiple services",
+        "May be disclosed to asset purchasers in a sale or merger"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki collects your name, email, and profile info, then links it to your broader Rakuten identity and advertising profile.",
+      "detail": "Your account information is collected directly and may be linked to other Rakuten services through the Rakuten ID program. Social login options (Facebook, Google) also share profile data. This identity data is shared with advertisers and business partners.",
+      "policy_excerpt": "If you choose to connect to the Rakuten Viki Service and another Rakuten ID participating service using the same username or email address, Viki will securely share your account credentials with the Rakuten ID program.",
+      "concerns": [
+        "Identity linked across Rakuten services",
+        "Profile data shared with advertisers and partners"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Viki tracks everything you watch and browse to show you personalized ads, and shares that behavior with ad networks.",
+      "detail": "The app uses cookies, pixels, session replay, and AI to track viewing history, searches, content preferences, and browsing behavior. This data is used for targeted advertising and shared with third-party ad networks. Users in some jurisdictions can opt out via a Consent Management Platform.",
+      "policy_excerpt": "We and our third-party advertisers, use your Personal Information to serve you with advertisements that may interest you... advertisements may be tailored to your interests by the third-party advertisers based on preferences inferred from information they collect.",
+      "concerns": [
+        "Session replay records all on-screen interactions",
+        "AI infers characteristics and preferences from behavior",
+        "Third-party advertisers track across other sites and services"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki says it is not for children under 18, but there is no strong system to verify ages.",
+      "detail": "The service is not intended for anyone under 18 and the company states it does not knowingly collect data from children. However, there is no robust age verification mechanism beyond self-reporting, and some content may appeal to teenagers.",
+      "policy_excerpt": "The Rakuten Viki Service is not intended for children, and anyone under 18 years of age... may not register for an account or use the Rakuten Viki Service.",
+      "concerns": [
+        "No real age verification beyond self-reporting",
+        "Some content may appeal to under-18 users"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Viki logs every page you visit, video you watch, and search you make, and uses this to build an advertising profile.",
+      "detail": "Extensive internet activity logging includes pages viewed, content consumption, search queries, browsing behavior, timestamps, and IP addresses. Session replay technology records detailed interactions. This data is used for personalization, security, and advertising profiling.",
+      "policy_excerpt": "Internet and other electronic network activity information, such as how and when you use or access the Rakuten Viki Service (for example, date and time of visits, pages you view, types and frequency of content or genres you view, expressed content preferences or favorites you identify...).",
+      "concerns": [
+        "Detailed browsing and viewing history logged continuously",
+        "Session replay captures granular interaction data",
+        "Activity data fed into advertising profiling systems"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Viki collects your device model, advertising ID, and browser details to track you across sessions and share with advertisers.",
+      "detail": "The app systematically collects device identifiers, advertising IDs, IP addresses, user agents, browser type, operating system, device model, language, local storage, and app version. This information is shared with third-party advertisers and used to build a persistent device profile.",
+      "policy_excerpt": "Identifiers, such as unique identifiers for devices you use to access the Rakuten Viki Service (for example, the IP address, an app/device identifier, user agent, and advertising industry standard unique identifier).",
+      "concerns": [
+        "Advertising ID collected and shared with ad networks",
+        "Device information combined with other data for persistent tracking",
+        "User agent and browser fingerprinting used for identification"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki does not collect health or biometric data.",
+      "detail": "The privacy policy explicitly states that Viki does not intentionally collect, store, or use health or biometric data except for standard account credentials.",
+      "policy_excerpt": "Rakuten Viki does not intentionally collect, store, or use for any of the purposes described below any Sensitive Personal Information except your account credentials.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Viki collects partial payment details but sends full card information directly to Stripe for processing.",
+      "detail": "The app collects the last four digits of your credit card, expiry date, and issuing bank country. Full payment card data is collected and handled directly by Stripe. No raw financial data is stored or processed by Viki itself.",
+      "policy_excerpt": "Note that full financial information needed for payment is directly collected and handled by our payment processor.",
+      "concerns": [
+        "Partial card data (last 4 digits, expiry) stored by Viki"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account and request your data, but some information may be kept for legal reasons.",
+      "detail": "Users can delete their account through settings and exercise rights to access, correct, delete, port, and restrict their data. However, some data may be retained for legal obligations, claims, or regulatory requirements even after deletion.",
+      "policy_excerpt": "You can delete your Rakuten Viki Service account within your account settings... we will retain your Personal Information outside the normal retention times to the extent there is a need to retain the data to pursue, defend, or exercise a legal right or claim.",
+      "concerns": [
+        "Some data retained after deletion for undefined legal purposes",
+        "Retention period for legal obligations is not specified"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Viki will notify you of policy changes, but simply continuing to use the app counts as agreeing to the new terms.",
+      "detail": "Material policy changes are communicated via email, in-app notice, or posting to the site. Continued use constitutes acceptance. For changes that materially impact rights, the policy states they may ask for consent, but the default is acceptance upon continued use.",
+      "policy_excerpt": "Changes to this Privacy Policy are effective upon your receipt of such notice, or your continued use of the Rakuten Viki Service, whichever is sooner.",
+      "concerns": [
+        "Continued use = automatic acceptance of changes",
+        "No requirement to actively re-agree to updated terms"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky",   "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking",    "risk": "risky",   "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook",         "risk": "safe",    "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "account_identity",           "risk": "risky",   "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting",      "risk": "risky",   "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps",               "risk": "risky",   "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone",          "risk": "safe",    "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric",           "risk": "safe",    "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment",          "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "childrens_data",             "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "storage_file_access",        "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights",  "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity",  "risk": "risky",   "max": 5,  "rate": 0.65, "deduction": 3.25 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5,  "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 83.25,
+    "final_score": 59,
+    "grade": "C"
+  }
+}
