@@ -157,5 +157,18 @@
     ],
     "worst_risk": "risky",
     "one_liner": "Tinder collects deeply personal data including your sexual preferences, face geometry, and government ID, then shares it across every Match Group dating app."
+  },
+  {
+    "slug": "duolingo",
+    "name": "Duolingo: Language Lessons",
+    "developer": "Duolingo",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0f/46/c8/0f46c863-b4e3-5717-4ac2-d9ebf5bddf03/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400bb.jpg",
+    "category": "Education",
+    "description": "The world's most-downloaded education app for learning 40+ languages through quick, bite-sized lessons.",
+    "platforms": [
+      { "platform": "ios", "score": 66, "grade": "C", "risk": "caution", "analyzed_at": "2026-05-12" }
+    ],
+    "worst_risk": "caution",
+    "one_liner": "Duolingo tracks your learning activity and shows you personalized ads, but gives you real privacy controls and protects children far better than most apps."
   }
 ]

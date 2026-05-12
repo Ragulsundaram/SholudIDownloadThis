@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-12",
+    "analyzed_by": "claude-sonnet-4-6",
+    "policy_url": "https://www.duolingo.com/privacy",
+    "terms_url": "https://www.duolingo.com/terms",
+    "policy_last_updated": "2026-04-20",
+    "needs_review": false,
+    "review_notes": "Duolingo's privacy policy is transparent and well-written. Key positives: strong COPPA compliance with child users getting non-personalized ads and no behavioral tracking; contact sync hashes phone numbers rather than storing actual numbers; IP addresses retained max 30 days; users can opt out of personalized ads and session replay tracking. Key concerns: public profiles by default, AI features share audio/text with OpenAI/Google, session replay (FullStory) tracks clicks and typing, and multiple ad networks for personalized advertising."
+  },
+  "app": {
+    "slug": "duolingo-ios",
+    "name": "Duolingo: Language Lessons",
+    "developer": "Duolingo",
+    "platform": "ios",
+    "app_store_url": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+    "app_store_id": "570060128",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0f/46/c8/0f46c863-b4e3-5717-4ac2-d9ebf5bddf03/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400bb.jpg",
+    "category": "Education",
+    "sub_category": "Language Learning",
+    "description": "The world's most-downloaded education app for learning 40+ languages through quick, bite-sized lessons."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 66,
+    "grade": "C",
+    "one_liner": "Duolingo tracks your learning activity and shows you personalized ads, but gives you real privacy controls and protects children far better than most apps.",
+    "summary": "Duolingo collects learning activity data, device info, and IP addresses to personalize lessons and show ads. The app has strong child protections (COPPA compliant, no personalized ads for under-16s) and gives users meaningful controls to opt out of ads and session replay tracking. However, public profiles are default-on, AI features send audio to third parties, and FullStory session replay tracks clicks and keystrokes.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Duolingo is better than most free apps on privacy, with real opt-outs for ads and tracking, plus excellent child protections. Set your profile to private and turn off session replay in Settings if you use it."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_public_profile_default",
+        "title": "Your profile is public by default",
+        "plain_english": "When you create a Duolingo account, your profile — including your learning progress, languages, and achievements — is visible to anyone on the internet. You have to manually change it to private in Settings.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_session_replay",
+        "title": "FullStory records your clicks, typing, and scrolling",
+        "plain_english": "Duolingo uses FullStory and Session Replay to capture a video replay of everything you do in the app — your clicks, mouse movements, scrolling, and typing. This is used for product improvement. You can turn it off in Settings.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ai_audio_sharing",
+        "title": "AI features send your voice and messages to OpenAI and Google",
+        "plain_english": "When you use Video Call or other AI features, the text and audio you submit are shared with AI vendors like OpenAI and Google for processing. Duolingo says these vendors can't use your data for their own purposes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_speech_third_party",
+        "title": "Your speaking exercises are sent to Google, Apple, or Amazon for recognition",
+        "plain_english": "When you do speaking exercises in Duolingo, your audio is sent to third-party providers like Google, Apple, or Amazon Web Services for speech recognition. Duolingo also collects your speech to improve lessons.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_child_protections",
+        "title": "Excellent protections for children under 13",
+        "plain_english": "Duolingo goes above and beyond for child users: no real name or photos, cartoon avatars only, no personalized ads, no behavioral tracking, no analytics, and speech data is not used for product improvement.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_opt_out",
+        "title": "You can opt out of personalized advertising",
+        "plain_english": "Duolingo lets you turn off personalized ads in the app Settings. Users in the EU and UK are opted out by default.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_session_replay_opt_out",
+        "title": "You can turn off FullStory and Session Replay tracking",
+        "plain_english": "Duolingo lets you disable FullStory and Session Replay activity recording using the Tracking toggle in app Settings. This is disabled for child users by default.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_contact_hashing",
+        "title": "Contact Sync stores only hashed phone numbers, not actual contacts",
+        "plain_english": "If you use Contact Sync, Duolingo creates an encrypted hash of your contacts' phone numbers rather than storing the actual numbers. They cannot use the hashes to identify or contact your friends.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ip_retention",
+        "title": "IP addresses are deleted after 30 days",
+        "plain_english": "Duolingo retains your IP address for no more than 30 days, unless required for payment processing or fraud prevention. This is better than most apps that retain IPs indefinitely.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Duolingo only uses your microphone when you choose to do speaking exercises or use the AI Video Call feature. You can skip speaking activities entirely.",
+      "detail": "Microphone access is user-initiated for speaking exercises and optional AI Video Call. Camera is not mentioned as a core requirement. Users can skip speaking activities. For iOS users, audio sharing for product improvement can be disabled in Settings. Speech data is not collected for product improvement from Android or web users.",
+      "policy_excerpt": "Some activities involve you speaking into the Duolingo app. To recognize speech, your audio may be sent to a third-party provider such as Google, Apple, or Amazon Web Services.",
+      "concerns": [
+        "Audio sent to third-party speech recognition providers",
+        "Speech data collected for product improvement on iOS unless opted out"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo does not collect your GPS location. However, it logs your IP address, which can be used to estimate your rough location, and deletes that IP after 30 days.",
+      "detail": "No precise GPS location collection is mentioned in the privacy policy. IP addresses are collected and used for location inference (recommending other users on the same WiFi network), with a retention limit of 30 days. This is better than most apps that retain IPs indefinitely.",
+      "policy_excerpt": "We will retain your IP address for no more than thirty (30) days, unless exceptional circumstances require longer retention.",
+      "concerns": [
+        "IP-based location inference used for friend recommendations",
+        "Longer retention for payment/fraud purposes"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Duolingo's Contact Sync feature is completely optional. If you use it, your contacts' phone numbers are hashed (scrambled) so Duolingo cannot see the actual numbers or contact your friends.",
+      "detail": "Contact Sync is an optional feature that requires user permission to access contacts. Duolingo hashes contacts' phone numbers using an encrypted hash rather than storing actual numbers. The hash can only be used to match with other users' hashed numbers. Contact Sync can be disabled at any time in Settings, and previously shared contact data is automatically deleted.",
+      "policy_excerpt": "Duolingo will not store your contacts' phone numbers, but only an encrypted 'hash' of them. This hash is an alternative code to the actual phone number and can be used only to match the hash of other users' numbers.",
+      "concerns": [
+        "Social login (Google/Facebook) may import contacts"
+      ],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Duolingo only accesses your photos when you choose to upload a profile picture. There is no background scanning of your device storage.",
+      "detail": "File and media access is user-initiated for uploading profile pictures. Storage access for learning content is minimal. There is no indication of broad library scanning or background file access.",
+      "policy_excerpt": "Your Profile will be populated by information you submit, such as your name, bio, and profile picture.",
+      "concerns": [],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo shares your data with service providers (AWS, Google, Stripe, ZenDesk), AI vendors (OpenAI, Google), speech recognition providers, content moderators, and advertising networks (Unity, Meta, Google, and others).",
+      "detail": "Duolingo shares personal information with third parties for: service provision (AWS hosting, Google search, Crashlytics analytics, ZenDesk support, Stripe payments), AI features (OpenAI, Google for Video Call and AI companions), speech recognition (Google, Apple, AWS), content moderation, and personalized advertising (Unity, Meta, LiftOff, Pangle, Moloco, Google). Promotional code partners receive usage data. Users can opt out of personalized ads in Settings. EU/UK users are opted out by default.",
+      "policy_excerpt": "Duolingo may share personal information with third parties that help us provide or improve the Service, including hosting providers such as Amazon Web Services, search engine providers such as Google, analytics providers such as Crashlytics, support providers such as ZenDesk, and payment processors such as Stripe.",
+      "concerns": [
+        "Multiple advertising networks receive data for personalized ads",
+        "AI vendors process audio and text from Video Call features",
+        "Social login providers receive data when accounts are linked",
+        "Promotional code partners receive usage data"
+      ],
+      "score_impact": -15.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo requires a username and email to sign up. You can also use Google or Facebook login, which imports additional profile data. Your learning profile is public by default.",
+      "detail": "Account creation requires username, age, and email address (phone number in some countries). Social login via Google or Facebook imports email and contacts. Public profile includes name, bio, profile picture, learning progress, languages, stats, and achievements. Profile is public by default but can be set to private in Settings. Other users can search by name, username, email, or phone number.",
+      "policy_excerpt": "To register for a Duolingo account, you may provide us with a username, your age and email address... Your Profile will be populated by information you submit, such as your name, bio, and profile picture.",
+      "concerns": [
+        "Public profile exposes learning progress and activity by default",
+        "Social login imports additional data from linked accounts",
+        "Profile searchable by email and phone number"
+      ],
+      "score_impact": -6.0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo tracks your learning activity, app usage, and device info to show you personalized ads through networks like Unity, Meta, Google, and others. You can turn this off in Settings.",
+      "detail": "Duolingo collects activity data including learning progress, engagement, device data, log data, and IP address. Personalized advertising uses multiple third-party networks (Unity, Meta, LiftOff, Pangle, Moloco, Google) to serve targeted ads based on user behavior across Duolingo and other websites. FullStory and Session Replay track clicks, mouse movements, scrolling, typing, and learning activity. However, users can opt out of personalized ads and disable session replay tracking in Settings. EU/UK users are opted out by default.",
+      "policy_excerpt": "Duolingo may process and share your personal information for the purpose of providing you with personalized advertising. To provide personalized advertising, we may work with a variety of marketing analytics service providers, website analysis firms, and third-party advertising networks.",
+      "concerns": [
+        "Multiple advertising networks track behavior for targeting",
+        "Session replay records detailed interaction patterns",
+        "Google Analytics tracks website engagement",
+        "Cookies include targeting cookies from multiple companies"
+      ],
+      "score_impact": -12.0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo has excellent child protections. Users under 13 get cartoon avatars instead of photos, non-personalized ads, no behavioral tracking, no analytics, and limited social features.",
+      "detail": "Duolingo provides comprehensive COPPA-compliant protections for child users (under 13): username-based registration (no real name, email, or phone), cartoon avatars only, non-personalized family-safe ads, disabled third-party behavioral tracking and analytics, disabled Contact Sync, limited social features (canned comments only, no user-written messages), anonymized leaderboard names, and no speech data sharing for product improvement. Users under 16 also receive non-personalized ads and disabled tracking. Duolingo ABC collects no personal information from children.",
+      "policy_excerpt": "Duolingo treats Child Users (meaning users under the age of 13 in the United States or another age of digital consent in their country) differently to ensure their parents are in control and we only collect the bare minimum information we need to make Duolingo work.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo needs internet access to load lessons and sync your progress. It logs your IP address and deletes it after 30 days, which is better than most apps.",
+      "detail": "Continuous internet access is required for the core learning functionality. IP addresses are logged and used for friend recommendations (same WiFi network) and security. IP retention is limited to 30 days except for payment/fraud purposes. Browser and device data, log data, and engagement data are also collected.",
+      "policy_excerpt": "When you use the Service, we may generate data about your use of the Service, which may include your browser and device data, log data, and IP address. We will retain your IP address for no more than thirty (30) days.",
+      "concerns": [
+        "IP address used to recommend other users on same network"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo collects device type, browser, operating system, and uses advertising IDs and cookies to track you across websites for personalized ads.",
+      "detail": "Duolingo collects browser and device data, device type, operating system, viewfinder size, script errors, and IP address. Advertising IDs (Apple iOS Advertising ID, Google Android Advertising ID) are used for personalized advertising. Cookies include targeting cookies from Google, Meta, Amazon, and other companies used to track activities across multiple websites. FullStory records tech specs including device type and OS.",
+      "policy_excerpt": "FullStory and Session Replay capture and analyze your activity and provide us with data... They record usage patterns, tech specs (e.g., browser, device type, operating system, viewfinder size, script errors, and IP address).",
+      "concerns": [
+        "Advertising IDs enable cross-app tracking for ad targeting",
+        "Targeting cookies from multiple companies track across websites",
+        "Device fingerprinting persists across sessions"
+      ],
+      "score_impact": -9.0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo does not collect any health or biometric data. Speech recognition is processed by third parties and not stored for biometric purposes.",
+      "detail": "No health or biometric data collection is mentioned in the privacy policy. Speech audio is sent to third-party providers for recognition but is not stored or used for biometric identification. Duolingo explicitly states they will not use audio recordings to develop voice cloning technology.",
+      "policy_excerpt": "We will not use your audio recordings to develop any voice cloning technology.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Duolingo only collects payment information if you subscribe to premium features like Super Duolingo. The free version requires no payment data.",
+      "detail": "Payment data is only collected for optional premium subscriptions (Super Duolingo, Family Plans). Payment processed through Stripe or platform billing (Apple/Google). Transaction details retained for records and refund processing. Some subscriptions offer ad-free experience.",
+      "policy_excerpt": "Duolingo may share personal information with third parties that help us provide or improve the Service, including... payment processors such as Stripe.",
+      "concerns": [
+        "Purchase data used for personalized pricing and offers",
+        "IP retained longer for payment processing and fraud prevention"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo gives you strong rights: you can see, download, correct, and delete your data. You can delete your account, opt out of personalized ads, and disable session replay tracking.",
+      "detail": "Duolingo provides comprehensive data subject rights: know what data is collected, access a copy, know what was shared with third parties, opt out of sharing, object to processing, limit sensitive data processing, non-discrimination, deletion, correction, and data export. Users can exercise rights via Settings, the Duolingo Data Vault, or by emailing privacy@duolingo.com. Account deletion is available. Promotional emails can be opted out of in Settings.",
+      "policy_excerpt": "You also have the following rights in relation to the personal information we hold about you: Know what personal information we have collected about you. Access a copy of the personal information that we hold about you. Request that we delete any personal information we have collected from you.",
+      "concerns": [
+        "Rights can be refused if identity cannot be authenticated or if request interferes with service delivery"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Duolingo will email you about material privacy policy changes and shows the last revised date at the bottom of the policy. But by continuing to use the app, you accept any updates.",
+      "detail": "Duolingo notifies users of material privacy policy changes by email and updates the revision date at the bottom of the policy. The Terms state changes are posted for 7 days and become effective after that period or upon first use after changes. Continued use constitutes acceptance.",
+      "policy_excerpt": "If we do this and the changes are material, we will notify you by email to describe the changes, and we will indicate the date these terms were last revised at the bottom of the Privacy Policy.",
+      "concerns": [
+        "Continued use constitutes acceptance of updated terms"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.5,
+        "deduction": 15.0
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.4,
+        "deduction": 6.0
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.48,
+        "deduction": 12.0
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.6,
+        "deduction": 9.0
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.15,
+        "deduction": 1.5
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 69.0,
+    "final_score": 66,
+    "grade": "C"
+  }
+}
