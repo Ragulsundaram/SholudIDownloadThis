@@ -22,12 +22,10 @@ export function AppCard({ app }: { app: IndexEntry }) {
       <div className="flex items-start gap-4 pr-10">
         <AppIcon iconUrl={app.icon_url} name={app.name} />
         <div className="flex min-w-0 flex-1 flex-col items-start gap-2">
-          <div className="flex items-center gap-2">
-            <h3 className="text-base font-semibold leading-snug text-ink">
-              {app.name}
-            </h3>
+          <h3 className="text-base font-semibold leading-snug text-ink">
+            {app.name}
             <SafetyRatingTooltip score={app.score} risk={app.risk} />
-          </div>
+          </h3>
           <ThreatMeter score={app.score} />
         </div>
       </div>

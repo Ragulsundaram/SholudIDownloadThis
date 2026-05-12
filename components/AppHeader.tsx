@@ -38,14 +38,12 @@ export function AppHeader({
       <AppIconLarge iconUrl={iconUrl} name={name} />
 
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2">
-          <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-            {name}
-          </h1>
+        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          {name}
           {score !== undefined && (
             <SafetyRatingTooltip score={score} risk={risk} />
           )}
-        </div>
+        </h1>
         <p className="mt-1 text-base text-ink-muted">{developer}</p>
 
         <div className="mt-4 flex flex-wrap items-center gap-2">

@@ -45,11 +45,11 @@ export function SafetyRatingTooltip({
   const isRight = placement === "right";
 
   return (
-    <div className="group/tooltip relative flex flex-shrink-0 items-center">
+    <span className="group/tooltip relative ml-1 inline-flex align-middle">
       <button
         ref={buttonRef}
         type="button"
-        className="rounded-full p-1 text-ink-subtle transition-colors hover:bg-divider hover:text-ink"
+        className="rounded-full p-0.5 text-ink-subtle transition-colors hover:bg-divider hover:text-ink"
         aria-label="Show safety rating details"
         onMouseEnter={checkPlacement}
       >
@@ -81,7 +81,7 @@ export function SafetyRatingTooltip({
           </span>
         )}
       </div>
-    </div>
+    </span>
   );
 }
 
