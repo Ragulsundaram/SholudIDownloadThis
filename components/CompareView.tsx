@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, GitCompareArrows, Smartphone, Trophy, ShieldAlert, ShieldCheck } from "lucide-react";
+import { ArrowLeft, GitCompareArrows, Smartphone, Trophy, AlertTriangle, CheckCircle2 } from "lucide-react";
 import type { CompareEntry } from "@/app/api/compare/route";
-import type { Category, Flag, RiskLevel } from "@/lib/types";
+import type { Category, RiskLevel } from "@/lib/types";
 import { ThreatMeter } from "./ThreatMeter";
 import { RISK_LABEL } from "@/lib/risk";
 import { CategoryIcon } from "./CategoryIcon";
@@ -86,28 +86,6 @@ export function CompareView({ entries }: Props) {
               )),
             },
             {
-              label: "Red flags",
-              cells: entries.map((e) => (
-                <FlagHoverChip
-                  key={e.slug}
-                  flags={e.data.flags.red}
-                  tone="risky"
-                  icon={<ShieldAlert className="h-3.5 w-3.5" />}
-                />
-              )),
-            },
-            {
-              label: "Green flags",
-              cells: entries.map((e) => (
-                <FlagHoverChip
-                  key={e.slug}
-                  flags={e.data.flags.green}
-                  tone="safe"
-                  icon={<ShieldCheck className="h-3.5 w-3.5" />}
-                />
-              )),
-            },
-            {
               label: "Verdict",
               cells: entries.map((e) => (
                 <p key={e.slug} className="text-sm text-ink">
@@ -129,6 +107,47 @@ export function CompareView({ entries }: Props) {
                 <p key={e.slug} className="text-sm text-ink-muted">
                   {e.data.app.category}
                 </p>
+              )),
+            },
+          ]}
+        />
+      </Section>
+
+      <Section title="Flags">
+        <ComparisonGrid
+          cols={entries.length}
+          headers={entries.map((e) => e.parent.name)}
+          rows={[
+            {
+              label: "Red flags",
+              labelNode: (
+                <span className="inline-flex items-center gap-2 normal-case tracking-normal">
+                  <AlertTriangle className="h-4 w-4 text-risky-ink" />
+                  <span className="text-xs font-medium text-ink">Red flags</span>
+                </span>
+              ),
+              cells: entries.map((e) => (
+                <FlagTitleList
+                  key={e.slug}
+                  titles={e.data.flags.red.map((f) => f.title)}
+                  tone="risky"
+                />
+              )),
+            },
+            {
+              label: "Green flags",
+              labelNode: (
+                <span className="inline-flex items-center gap-2 normal-case tracking-normal">
+                  <CheckCircle2 className="h-4 w-4 text-safe-ink" />
+                  <span className="text-xs font-medium text-ink">Green flags</span>
+                </span>
+              ),
+              cells: entries.map((e) => (
+                <FlagTitleList
+                  key={e.slug}
+                  titles={e.data.flags.green.map((f) => f.title)}
+                  tone="safe"
+                />
               )),
             },
           ]}
@@ -255,7 +274,7 @@ function ComparisonGrid({
             <tr key={row.label} className={idx === 0 ? "" : "border-t border-line"}>
               <th
                 scope="row"
-                className="w-20 bg-divider/30 px-4 py-3 text-left align-middle text-xs font-medium uppercase tracking-wider text-ink-subtle"
+                className="w-48 bg-divider/30 px-4 py-3 text-left align-middle text-xs font-medium uppercase tracking-wider text-ink-subtle"
               >
                 {row.labelNode ?? row.label}
               </th>
@@ -263,7 +282,7 @@ function ComparisonGrid({
                 <td
                   key={i}
                   className="px-5 py-3 align-top"
-                  style={{ width: `calc((100% - 5rem) / ${cols})` }}
+                  style={{ width: `calc((100% - 12rem) / ${cols})` }}
                 >
                   {c}
                 </td>
@@ -278,14 +297,9 @@ function ComparisonGrid({
 
 function PermLabel({ icon, label }: { icon: string; label: string }) {
   return (
-    <span
-      className="group relative inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-surface text-ink-muted"
-      title={label}
-    >
-      <CategoryIcon name={icon} className="h-4 w-4" />
-      <span className="pointer-events-none absolute left-full top-1/2 z-20 ml-2 hidden -translate-y-1/2 whitespace-nowrap rounded-md border border-line bg-page px-2 py-1 text-[11px] font-medium normal-case tracking-normal text-ink shadow-md group-hover:block">
-        {label}
-      </span>
+    <span className="inline-flex items-center gap-2 normal-case tracking-normal">
+      <CategoryIcon name={icon} className="h-4 w-4 text-ink-muted" />
+      <span className="text-xs font-medium text-ink">{label}</span>
     </span>
   );
 }
@@ -309,49 +323,24 @@ function RiskPill({ risk }: { risk: RiskLevel }) {
   );
 }
 
-function FlagHoverChip({
-  flags,
-  tone,
-  icon,
-}: {
-  flags: Flag[];
-  tone: "safe" | "risky";
-  icon: React.ReactNode;
-}) {
-  const cls =
-    tone === "safe"
-      ? "bg-safe-soft text-safe-ink border-safe-line"
-      : "bg-risky-soft text-risky-ink border-risky-line";
-  const itemCls =
-    tone === "safe"
-      ? "border-safe-line bg-safe-soft text-safe-ink"
-      : "border-risky-line bg-risky-soft text-risky-ink";
-
-  return (
-    <span className="group relative inline-block">
-      <span
-        className={`inline-flex w-fit cursor-default items-center gap-1 rounded-md border px-2 py-1 text-xs font-semibold ${cls}`}
-      >
-        {icon}
-        {flags.length}
-      </span>
-      {flags.length > 0 && (
-        <div className="pointer-events-none absolute left-0 top-full z-20 mt-2 hidden w-72 rounded-lg border border-line bg-page p-3 shadow-lg group-hover:block">
-          <ul className="flex flex-col gap-1.5">
-            {flags.map((f) => (
-              <li key={f.id} className={`rounded-md border px-2 py-1.5 text-xs ${itemCls}`}>
-                <p className="font-medium">{f.title}</p>
-                <p className="mt-0.5 leading-snug opacity-80">{f.plain_english}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </span>
-  );
-}
-
 function Dash() {
   return <span className="text-xs text-ink-subtle">—</span>;
+}
+
+function FlagTitleList({ titles, tone }: { titles: string[]; tone: "safe" | "risky" }) {
+  if (titles.length === 0) {
+    return <span className="text-xs text-ink-subtle">None</span>;
+  }
+  const dot = tone === "safe" ? "bg-safe" : "bg-risky";
+  return (
+    <ul className="flex flex-col gap-1.5">
+      {titles.map((t) => (
+        <li key={t} className="flex items-start gap-2">
+          <span className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full ${dot}`} />
+          <span className="text-xs leading-snug text-ink">{t}</span>
+        </li>
+      ))}
+    </ul>
+  );
 }
 

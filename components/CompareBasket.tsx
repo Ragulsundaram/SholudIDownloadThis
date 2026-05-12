@@ -7,12 +7,27 @@ import { GitCompareArrows, X, Trash2, ExternalLink } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { useCompare, COMPARE_MAX } from "./CompareProvider";
 
-type Props = { apps: IndexEntry[] };
+type Props = { apps?: IndexEntry[] };
 
-export function CompareBasket({ apps }: Props) {
+export function CompareBasket({ apps: initialApps = [] }: Props) {
   const { slugs, remove, clear, hydrated } = useCompare();
   const [open, setOpen] = useState(false);
+  const [apps, setApps] = useState<IndexEntry[]>(initialApps);
   const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (apps.length > 0) return;
+    let cancelled = false;
+    fetch("/api/all-apps")
+      .then((r) => r.json())
+      .then((d) => {
+        if (!cancelled) setApps(d.apps ?? []);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [apps.length]);
 
   useEffect(() => {
     if (!open) return;
@@ -30,11 +45,12 @@ export function CompareBasket({ apps }: Props) {
     };
   }, [open]);
 
-  const selected = slugs
-    .map((slug) => apps.find((a) => a.slug === slug))
-    .filter((a): a is IndexEntry => Boolean(a));
+  const selected = slugs.map((slug) => ({
+    slug,
+    app: apps.find((a) => a.slug === slug),
+  }));
 
-  const count = hydrated ? selected.length : 0;
+  const count = hydrated ? slugs.length : 0;
   const compareHref = `/compare?apps=${slugs.join(",")}`;
 
   return (
@@ -78,10 +94,12 @@ export function CompareBasket({ apps }: Props) {
             </div>
           ) : (
             <ul className="max-h-72 overflow-auto border-t border-line">
-              {selected.map((app) => (
-                <li key={app.slug} className="flex items-center gap-3 px-4 py-2.5">
-                  <div className="relative h-9 w-9 flex-shrink-0 overflow-hidden rounded-lg border border-line">
-                    {app.icon_url && (
+              {selected.map(({ slug, app }) => {
+                const name = app?.name ?? slug;
+                return (
+                <li key={slug} className="flex items-center gap-3 px-4 py-2.5">
+                  <div className="relative h-9 w-9 flex-shrink-0 overflow-hidden rounded-lg border border-line bg-divider">
+                    {app?.icon_url && (
                       <Image
                         src={app.icon_url}
                         alt=""
@@ -93,27 +111,28 @@ export function CompareBasket({ apps }: Props) {
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium text-ink">{app.name}</p>
-                    <p className="truncate text-xs text-ink-subtle">{app.category}</p>
+                    <p className="truncate text-sm font-medium text-ink">{name}</p>
+                    <p className="truncate text-xs text-ink-subtle">{app?.category ?? "Loading…"}</p>
                   </div>
                   <Link
-                    href={`/app/${app.slug}`}
+                    href={`/app/${slug}`}
                     onClick={() => setOpen(false)}
                     className="rounded-md p-1.5 text-ink-subtle hover:bg-divider hover:text-ink"
-                    aria-label={`Open ${app.name}`}
+                    aria-label={`Open ${name}`}
                   >
                     <ExternalLink className="h-4 w-4" />
                   </Link>
                   <button
                     type="button"
-                    onClick={() => remove(app.slug)}
+                    onClick={() => remove(slug)}
                     className="rounded-md p-1.5 text-ink-subtle hover:bg-divider hover:text-ink"
-                    aria-label={`Remove ${app.name}`}
+                    aria-label={`Remove ${name}`}
                   >
                     <X className="h-4 w-4" />
                   </button>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           )}
 
