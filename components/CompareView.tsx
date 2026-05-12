@@ -11,6 +11,10 @@ import { CategoryIcon } from "./CategoryIcon";
 
 type Props = { entries: CompareEntry[] };
 
+function sortBySafest(entries: CompareEntry[]): CompareEntry[] {
+  return [...entries].sort((a, b) => b.data.verdict.score - a.data.verdict.score);
+}
+
 const RISK_CLASS: Record<RiskLevel, string> = {
   safe: "bg-safe-soft text-safe-ink border-safe-line",
   caution: "bg-caution-soft text-caution-ink border-caution-line",
@@ -19,9 +23,10 @@ const RISK_CLASS: Record<RiskLevel, string> = {
   unknown: "bg-divider text-ink-muted border-line",
 };
 
-export function CompareView({ entries }: Props) {
-  const winner = [...entries].sort((a, b) => b.data.verdict.score - a.data.verdict.score)[0];
-  const worst = [...entries].sort((a, b) => a.data.verdict.score - b.data.verdict.score)[0];
+export function CompareView({ entries: rawEntries }: Props) {
+  const entries = sortBySafest(rawEntries);
+  const winner = entries[0];
+  const worst = entries[entries.length - 1];
 
   const categoryIds: string[] = [];
   const categoryLabels = new Map<string, string>();
