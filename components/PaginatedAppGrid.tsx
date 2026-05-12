@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { AppCard } from "./AppCard";
 
-const ITEMS_PER_PAGE = 30;
+const ITEMS_PER_PAGE = 15;
 
 export function PaginatedAppGrid({ apps }: { apps: IndexEntry[] }) {
   const [currentPage, setCurrentPage] = useState(1);

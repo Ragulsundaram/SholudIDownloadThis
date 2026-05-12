@@ -6,16 +6,20 @@ import { Smartphone } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { ThreatMeter } from "./ThreatMeter";
 import { SafetyRatingTooltip } from "./SafetyRatingTooltip";
+import { CompareButton } from "./CompareButton";
 
 export function AppCard({ app }: { app: IndexEntry }) {
   const router = useRouter();
 
   return (
     <article
-      className="group flex cursor-pointer flex-col rounded-2xl border border-line bg-surface p-5 transition-all hover:border-brand/40 hover:bg-divider/30 hover:shadow-md"
+      className="group relative flex cursor-pointer flex-col rounded-2xl border border-line bg-surface p-5 transition-all hover:border-brand/40 hover:bg-divider/30 hover:shadow-md"
       onClick={() => router.push(`/app/${app.slug}`)}
     >
-      <div className="flex items-start gap-4">
+      <div className="absolute right-3 top-3">
+        <CompareButton slug={app.slug} />
+      </div>
+      <div className="flex items-start gap-4 pr-10">
         <AppIcon iconUrl={app.icon_url} name={app.name} />
         <div className="flex min-w-0 flex-1 flex-col items-start gap-2">
           <div className="flex items-center gap-2">

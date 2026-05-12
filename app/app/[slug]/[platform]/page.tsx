@@ -117,6 +117,7 @@ export default async function AppPlatformPage({
 
           <div className="mt-6">
             <AppHeader
+              slug={slug}
               name={data.app.name}
               developer={data.app.developer}
               iconUrl={data.app.icon_url || parent.icon_url}

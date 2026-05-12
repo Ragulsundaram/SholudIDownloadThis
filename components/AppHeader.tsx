@@ -4,8 +4,10 @@ import type { RiskLevel } from "@/lib/types";
 import type { TrustIndicator } from "@/lib/trustIndicators";
 import { ThreatMeter } from "./ThreatMeter";
 import { SafetyRatingTooltip } from "./SafetyRatingTooltip";
+import { CompareButton } from "./CompareButton";
 
 type Props = {
+  slug?: string;
   name: string;
   developer: string;
   iconUrl: string;
@@ -20,6 +22,7 @@ type Props = {
 };
 
 export function AppHeader({
+  slug,
   name,
   developer,
   iconUrl,
@@ -58,24 +61,27 @@ export function AppHeader({
         </div>
       </div>
 
-      {storeUrl && (
-        <div className="flex flex-col items-stretch gap-2 sm:items-end">
-          <a
-            href={storeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex flex-shrink-0 items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
-          >
-            <ExternalLink className="h-4 w-4" />
-            {storeLabel}
-          </a>
-          {analyzedAt && (
-            <span className="text-xs text-ink-subtle">
-              Analyzed {formatDate(analyzedAt)}
-            </span>
+      <div className="flex flex-col items-stretch gap-2 sm:items-end">
+        <div className="flex items-center gap-2">
+          {slug && <CompareButton slug={slug} variant="pill" />}
+          {storeUrl && (
+            <a
+              href={storeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex flex-shrink-0 items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+            >
+              <ExternalLink className="h-4 w-4" />
+              {storeLabel}
+            </a>
           )}
         </div>
-      )}
+        {analyzedAt && (
+          <span className="text-xs text-ink-subtle">
+            Analyzed {formatDate(analyzedAt)}
+          </span>
+        )}
+      </div>
     </header>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ShieldQuestion } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { NavbarSearch } from "./NavbarSearch";
+import { CompareBasket } from "./CompareBasket";
 
 type Props = {
   apps?: IndexEntry[];
@@ -19,6 +20,7 @@ export function Navbar({ apps = [] }: Props) {
         </Link>
         <nav className="flex items-center gap-1 text-sm">
           <NavbarSearch apps={apps} />
+          <CompareBasket apps={apps} />
           <Link
             href="/browse"
             className="rounded-md px-3 py-2 text-ink-muted hover:bg-divider hover:text-ink"
