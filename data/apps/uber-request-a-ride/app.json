@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.uber.com/legal/en/document/?name=privacy-notice",
+    "terms_url": "",
+    "policy_last_updated": "2026-03-26",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "uber-request-a-ride",
+    "name": "Uber - Request a Ride",
+    "developer": "Uber Technologies, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/uber/id368677368",
+    "app_store_id": "368677368",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/41/82/68/418268c6-383a-f76c-210c-170bf61d54f7/Placeholder.mill/400x400bb-75.webp",
+    "category": "Travel",
+    "sub_category": "",
+    "description": "Request a ride, order food delivery, and get where you need to go."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 52,
+    "grade": "D",
+    "one_liner": "A ride and delivery app that collects vast amounts of personal data and shares it widely with advertisers and partners.",
+    "summary": "Uber provides convenient transportation and delivery, but its privacy practices are extensive. It tracks your precise location, collects government ID and facial verification data, and shares information with a broad network of advertising partners and data resellers. While you have some privacy controls, the sheer volume of data collection and sharing is significant.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Uber collects and shares an unusually large amount of sensitive data, including your location, identity documents, and trip details, with advertisers and data brokers. Use the privacy settings to limit ad personalization and location sharing if you choose to use the app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_precise_location",
+        "title": "Precise location tracked and shared",
+        "plain_english": "Uber collects your exact location during every trip and when the app is open, and shares it with drivers and advertisers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_gov_id_biometric",
+        "title": "Government ID and facial scans collected",
+        "plain_english": "For verification and age-restricted items, Uber may require photos of your government ID and real-time selfies, which are stored on its servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_data_resellers",
+        "title": "Data shared with ad networks and resellers",
+        "plain_english": "Uber buys demographic and interest data from data resellers and shares your information with many advertising companies to target ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_retention",
+        "title": "Data kept for years after deletion",
+        "plain_english": "Even if you delete your account, Uber can keep your data for up to seven years for legal and tax reasons, and longer for fraud or safety issues.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ai_training",
+        "title": "Customer support data used with GenAI",
+        "plain_english": "Uber may use generative AI tools to process your customer support communications for training and quality purposes.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_deletion_available",
+        "title": "Account deletion offered",
+        "plain_english": "You can request to delete your account and most associated data through the Privacy Center in the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_opt_out",
+        "title": "Personalized ads can be turned off",
+        "plain_english": "Uber allows you to opt out of personalized ads and marketing communications in the Privacy Center.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_location_control",
+        "title": "Location sharing controls",
+        "plain_english": "You can disable precise location collection and live location sharing with drivers through device and app settings.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Uber may collect photos, videos, or audio recordings if you contact customer support or ride in an autonomous vehicle with in-cabin cameras.",
+      "detail": "User content includes uploaded photos/audio for support. In-vehicle recordings for autonomous vehicles. Not required for standard rides.",
+      "policy_excerpt": "Uploaded photos and audio or video recordings, including in-app audio recordings... If you take a ride in an autonomous vehicle, we will collect videos of you taken by in-cabin cameras.",
+      "concerns": [
+        "In-cabin video recording for autonomous rides.",
+        "Audio recordings of support calls."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber tracks your precise location during trips and when the app is open. Your location is shared with drivers and used to personalize ads.",
+      "detail": "Precise location tracked from request until trip/delivery ends and when app is open. Shared with driver and used for ads.",
+      "policy_excerpt": "If you request a ride, we track your driver's location during your trip and link that data to your account... We also determine your approximate location and can determine your precise location if you allow us to do so through the settings on your phone.",
+      "concerns": [
+        "Precise location tracked continuously during active sessions.",
+        "Location data shared with ad intermediaries for targeting."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber does not access your phone's contact list for its core ride or delivery services.",
+      "detail": "No mention of contact book access for riders in the privacy notice.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You may upload photos or files when submitting customer support requests or reviews.",
+      "detail": "User-initiated uploads for support, reviews, or ratings. Not continuous.",
+      "policy_excerpt": "Upload photos and recordings (including those submitted for purposes of customer support).",
+      "concerns": [
+        "User content uploaded for support may include sensitive images."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber shares your data with a large network of advertising partners, data resellers, social media companies, and service providers.",
+      "detail": "Shares with ad/marketing partners, ad intermediaries (Criteo, Google, Rokt, The Trade Desk), data resellers, social media (Meta, TikTok), and many other service providers.",
+      "policy_excerpt": "Ad and marketing partners and providers, including ad and marketing publishers... third-party data providers, ad technology vendors... Ad intermediaries, such as Criteo, Google, Rokt, The Trade Desk, TripleLift and others.",
+      "concerns": [
+        "Data shared with data resellers and ad intermediaries.",
+        "Broad list of advertising and analytics partners."
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber requires government ID and facial verification for some features, and links your profile to advertising data from third-party data brokers.",
+      "detail": "Collects government ID, selfies, facial verification. Receives enrichment data (demographics, interests, lifestyle) from data resellers for ads.",
+      "policy_excerpt": "Government-issued identification documents... User-submitted selfies Facial verification information... Enrichment data such as demographics (age range, household income range, gender), general interests and lifestyle, general purchasing behavior, viewing preferences and streaming habits.",
+      "concerns": [
+        "Government ID and biometric data collected.",
+        "Identity linked to third-party marketing data."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber builds advertising audiences based on your trips, orders, and interests. It shares data with ad networks to show you personalized ads inside and outside the app.",
+      "detail": "Personalized marketing and ads based on trip/order data, demographics, device data. Shares audience lists with ad publishers. Ad intermediaries used for cross-platform targeting. Opt-out available for personalized ads.",
+      "policy_excerpt": "Uber uses these vendors to reach or better understand current and potential users of Uber services or of our advertising partners... We share audience lists with ad and marketing publishers in which users are identified by limited data points (e.g., mobile advertising ID, hashed email, name) and grouped based on inferred interests and characteristics.",
+      "concerns": [
+        "Audience building based on inferred interests and characteristics.",
+        "Cross-app tracking via ad intermediaries."
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber is not designed for children, and some features like Uber for teens require parental setup. There is no detailed child-specific privacy program.",
+      "detail": "Not directed at children. Uber for teens exists but requires adult account. No specific children's privacy safeguards detailed.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Teen accounts linked to adult accounts; limited child-specific protections described."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber logs your IP address, app usage, searches, and interactions with ads. This data is used for security, analytics, and advertising.",
+      "detail": "Usage data includes IP, app features viewed, search history, ad interactions. Used for analytics, ads, fraud, and security.",
+      "policy_excerpt": "Usage data. This refers to data about how you interact with Uber's apps and websites. App crashes and other system activity Access dates and times App features or pages viewed Uber search history Data regarding your interactions with marketing and advertising campaigns",
+      "concerns": [
+        "IP and activity data used for profiling and ad targeting."
+      ],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber collects your device identifiers, advertising IDs, hardware model, and IP address. This information is shared with advertisers and fraud prevention services.",
+      "detail": "Device data includes advertising identifiers, IP, hardware models, OS, mobile network. Used for ads, fraud, and service improvement. Shared with ad partners.",
+      "policy_excerpt": "Device data. This refers to data about the device(s) you use to access Uber. Advertising identifiers Browser type Device motion data Device IP address or other unique device identifiers Hardware models Mobile network data Operating systems and versions",
+      "concerns": [
+        "Advertising identifiers collected and shared with ad networks.",
+        "Unique device identifiers used for tracking."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Uber may collect your government ID photos and real-time selfies for identity verification and age checks. This biometric data is stored and compared.",
+      "detail": "Biometric data includes facial verification info, user selfies, and government ID photos. Used for fraud prevention, age verification, and safety.",
+      "policy_excerpt": "Identity verification information... This may include biometric data that allows you to be identified based on your physical or biological characteristics... User-submitted selfies Facial verification information",
+      "concerns": [
+        "Government ID and facial data stored on servers.",
+        "Real-time selfies compared against ID photos."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber collects your payment method details, which are processed by third-party payment processors like PayPal and Hyperwallet.",
+      "detail": "Payment method collected and processed by third-party processors. Card data not stored directly by Uber in raw form but processed through partners.",
+      "policy_excerpt": "Payment method (including related payment verification information)... Payment processors and facilitators, including PayPal and Hyperwallet.",
+      "concerns": [
+        "Payment data shared with third-party processors."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request account deletion, but Uber may keep some data for up to 7 years for legal, tax, or safety reasons, and for fraud prevention.",
+      "detail": "Account deletion via Privacy Center. Data retained for 7 years for tax/legal, and longer for safety/fraud. Generally deletes within 90 days except where necessary.",
+      "policy_excerpt": "Uber retains your data for as long as necessary for the purposes described above... for 7 years from collection (unless you first delete your Uber account) if necessary for purposes of Uber's tax, insurance, legal or regulatory requirements",
+      "concerns": [
+        "Data retained for up to 7 years for legal reasons.",
+        "Fraud and safety data kept after deletion request."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Uber will notify you of significant privacy policy changes through the app or by email, but your continued use counts as agreement.",
+      "detail": "Significant changes notified via app or email. Continued use constitutes consent.",
+      "policy_excerpt": "If we make significant changes, we will notify you in advance of the changes through the Uber apps or through other means, such as email.",
+      "concerns": [
+        "Continued use after notification constitutes acceptance."
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 97.5,
+    "final_score": 52,
+    "grade": "D"
+  }
+}

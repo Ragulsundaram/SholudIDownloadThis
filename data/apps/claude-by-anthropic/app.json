@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.anthropic.com/legal/privacy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "claude-by-anthropic",
+    "name": "Claude by Anthropic",
+    "developer": "Anthropic PBC",
+    "app_store_url": "https://apps.apple.com/in/app/claude-by-anthropic/id6473753684",
+    "app_store_id": "6473753684",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/a1/81/0ca1818a-d326-d27a-d259-a73a26f09f37/Placeholder.mill/400x400bb-75.webp",
+    "category": "Productivity",
+    "sub_category": "AI Assistant",
+    "description": "An AI assistant app for conversation, analysis, coding, and creative tasks, built by Anthropic with a focus on AI safety and reliability."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 77,
+    "grade": "B",
+    "one_liner": "Claude is one of the more privacy-respecting AI assistants: it does not sell your data, shows no third-party ads, and gives you strong deletion rights, but your conversations may be used for model training unless you opt out.",
+    "summary": "Anthropic's Claude collects your account details, device information, and everything you type into the app. By default, your inputs and outputs may be used to train and improve Anthropic's AI models, though you can opt out through account settings. On the positive side, Anthropic explicitly states it does not sell your personal data, does not engage in third-party ad tracking, and provides strong user rights including deletion of individual conversations and full account data. The policy is transparent and well-structured, with clear legal bases for processing.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Claude offers stronger privacy protections than many AI apps. If you opt out of model training in settings and avoid sharing sensitive personal information, it is a reasonably safe choice for everyday AI assistance."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_training_opt_out",
+        "title": "Conversations may train AI models by default",
+        "plain_english": "Unless you turn it off in your account settings, the things you type into Claude can be used to train and improve Anthropic's AI models.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ip_location_inference",
+        "title": "Your general location is inferred from your IP address",
+        "plain_english": "Anthropic automatically figures out your general area from your IP address every time you use the app.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_integrations",
+        "title": "Third-party integrations can collect your data independently",
+        "plain_english": "If you connect third-party apps or services to Claude, those third parties can collect data about you on their own terms.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_content_review",
+        "title": "Conversations may be reviewed for safety",
+        "plain_english": "Anthropic may review your conversations to detect fraud, abuse, illegal activity, and policy violations. This means your chats are subject to automated and potentially human review.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_sale",
+        "title": "No sale of personal data",
+        "plain_english": "Anthropic explicitly states that it does not sell your personal data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_third_party_ads",
+        "title": "No third-party ad tracking",
+        "plain_english": "Claude does not show you ads from third-party advertisers or share your data with advertising networks for targeting.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_deletion_rights",
+        "title": "Strong deletion and export rights",
+        "plain_english": "You can delete individual conversations or your entire account, and you can request a copy of your data. Anthropic also provides rights to correct, restrict, and object to processing.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_training_opt_out_available",
+        "title": "You can opt out of model training",
+        "plain_english": "Anthropic gives you a setting to stop your conversations from being used to train its AI models.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Claude only uses your camera or microphone when you actively choose to upload an image, audio, or video as part of your conversation.",
+      "detail": "The policy mentions that inputs can include files, images, audio, and video. There is no indication of background camera or microphone access. Access is user-initiated for optional features.",
+      "policy_excerpt": "You are able to interact with our Services in a variety of formats, including but not limited to chat, coding, and agentic sessions... If you include personal data or reference external content in your Inputs, we will collect that information.",
+      "concerns": [
+        "Uploaded media may be stored and used for training unless opted out"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Anthropic estimates your general location from your IP address automatically for security and service improvement.",
+      "detail": "No precise GPS location is mentioned. The policy states that IP address information includes location derived from the IP address. This is a standard practice for security and diagnostics.",
+      "policy_excerpt": "IP address (including information about the location of the device derived from your IP address)",
+      "concerns": [
+        "IP-based location inference is automatic"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Claude does not access your contacts or phonebook.",
+      "detail": "The privacy policy does not mention any collection of contacts or phonebook data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Claude only accesses your files when you actively choose to upload them into a conversation.",
+      "detail": "File and media access is user-initiated for uploading content as inputs to Claude. There is no indication of background file scanning.",
+      "policy_excerpt": "You are able to interact with our Services in a variety of formats... If you include personal data or reference external content in your Inputs, we will collect that information.",
+      "concerns": [
+        "Uploaded files may be used for training unless opted out"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Anthropic shares your data only with its affiliates, service providers, and when required by law. It does not sell your data or share it with advertisers.",
+      "detail": "The policy describes limited sharing with affiliates, service providers for hosting and support, and disclosures for legal compliance or corporate transactions. There is no mention of sharing with advertising networks or data brokers.",
+      "policy_excerpt": "Anthropic discloses the categories of personal data described above between and among its affiliates... with service providers and business partners for a variety of business purposes, including website and data hosting... research, auditing, data processing",
+      "concerns": [
+        "Data disclosed as part of corporate transactions"
+      ],
+      "score_impact": -9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to give Claude your name, email, and phone number to create an account. Anthropic may also generate an indirect identifier for you.",
+      "detail": "Account creation requires name, email, phone number, and payment information for paid products. Indirect identifiers may be generated for internal use.",
+      "policy_excerpt": "Anthropic collects identifiers, including your name, email address, and phone number when you sign up for an Anthropic account, or to receive information on our Services. We may also collect or generate indirect identifiers.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Claude does not show you third-party ads or sell your behavior data to advertisers. Anthropic may use cookies to market its own products to you, but you can opt out.",
+      "detail": "The policy explicitly states Anthropic does not sell personal data and does not engage in automated decision-making that produces legal effects. Cookies are used to operate services and market additional Anthropic products. Users can opt out of targeted advertising for Anthropic's own products.",
+      "policy_excerpt": "Anthropic does not 'sell' your personal data... You can opt-out of sharing your personal data for targeted advertising to promote our products and services",
+      "concerns": [
+        "Cookies used for marketing Anthropic's own products"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Claude is not meant for children under 18, and Anthropic says it does not knowingly collect data from anyone under 18.",
+      "detail": "The policy states services are not directed towards children under 18 and Anthropic does not knowingly collect data from them. If discovered, the data will be deleted.",
+      "policy_excerpt": "Our Services are not directed towards, and we do not knowingly collect, use, disclose, sell, or share any information from children under the age of 18.",
+      "concerns": [
+        "No robust age verification mechanism described"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Claude logs your IP address, browser type, and how you interact with the app to keep the service running and secure.",
+      "detail": "The policy collects extensive log and usage data including IP address, browser type, dates and times of access, browsing history, search, links clicked, and pages viewed. This is used for service operation, security, and improvement.",
+      "policy_excerpt": "We collect information about your use of the Services, such as the dates and times of access, browsing history, search, information about the links you click, pages you view",
+      "concerns": [
+        "Extensive interaction logging including browsing history and clicks"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Anthropic collects your device type, operating system, browser information, and device identifiers to run and improve the service.",
+      "detail": "Device and connection information collected includes device type, OS, browser, network, ISP, time zone, IP address, and identifiers including device or advertising identifiers. These are used for service operation and security.",
+      "policy_excerpt": "your device type, operating system information, browser information and web page referers, mobile network, connection information... identifiers (including device or advertising identifiers, probabilistic identifiers, and other unique personal or online identifiers)",
+      "concerns": [
+        "Advertising identifiers collected"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Claude does not collect health or biometric data.",
+      "detail": "No health or biometric data is collected or referenced in the privacy policy, except for optional third-party health app integrations which require explicit user consent.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Anthropic collects payment information only if you subscribe to paid Claude products.",
+      "detail": "Payment information is collected only for optional paid subscriptions. The policy does not describe in-app purchase processing details but states payment information is collected for purchases.",
+      "policy_excerpt": "We shall collect your payment information if you choose to purchase access to Anthropic's products and services.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete individual conversations or your entire account, and Anthropic gives you rights to access, correct, and export your data.",
+      "detail": "The policy provides strong user rights including deleting individual conversations (removed immediately, deleted from back-end within 30 days), requesting full account deletion, data portability, correction, and restriction. De-identified data is not re-identified.",
+      "policy_excerpt": "You also are able to delete individual conversations, which will be removed immediately from your conversation history and automatically deleted from our back-end within 30 days.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Anthropic will notify you of material changes to the privacy policy, but by continuing to use the service you accept updates.",
+      "detail": "The policy states that material changes will be notified as appropriate and the effective date will be updated. Continued use after changes implies acceptance.",
+      "policy_excerpt": "We will notify you of any material changes to this Privacy Policy, as appropriate, and update the Effective Date at the top of https://www.anthropic.com/legal/privacy.",
+      "concerns": [
+        "Continued use implies acceptance of updates"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
+      {"category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9.0},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5},
+      {"category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
+      {"category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5},
+      {"category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
+      {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0},
+      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5}
+    ],
+    "total_deductions": 48.0,
+    "final_score": 77,
+    "grade": "B"
+  }
+}

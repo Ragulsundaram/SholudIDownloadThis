@@ -1,0 +1,423 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.google.com/policies/privacy/",
+    "terms_url": "https://policies.google.com/terms",
+    "policy_last_updated": "2026-04-02",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "google-maps",
+    "name": "Google Maps",
+    "developer": "Google LLC",
+    "app_store_url": "https://apps.apple.com/in/app/google-maps/id585027354",
+    "app_store_id": "585027354",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4a/68/54/4a685448-e673-d15f-2710-2796af01dee5/Placeholder.mill/400x400bb-75.webp",
+    "category": "Navigation",
+    "sub_category": "Maps",
+    "description": "Real-time GPS navigation, traffic, transit, and local exploration with Street View and reviews."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 62,
+    "grade": "C",
+    "one_liner": "Google Maps is essential for navigation, but it continuously tracks your precise location, shares it with advertisers, and builds a detailed movement history.",
+    "summary": "Google Maps is the world's most popular navigation app. It requires access to your precise GPS location to provide directions, but it also collects Wi-Fi networks, Bluetooth devices, and sensor data to track you. Your location history feeds into Google's advertising system, and your data is shared with third-party partners and law enforcement.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Google Maps is hard to avoid for navigation, but it is one of the most privacy-invasive apps due to continuous location tracking. Turn off Location History and use incognito mode when possible to reduce data collection."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_location_tracking",
+        "title": "Precise location tracked continuously",
+        "plain_english": "Google Maps collects your exact GPS location, Wi-Fi networks, Bluetooth devices, and sensor data continuously to provide directions and build a map of where you go. This data is stored if you have Location History turned on.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_ads",
+        "title": "Location used for targeted advertising",
+        "plain_english": "Google uses your location data to show you ads based on where you are and where you have been. This includes ads for nearby businesses and services.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_service_sharing",
+        "title": "Location shared across Google services",
+        "plain_english": "Your location data from Google Maps is combined with your activity from Search, YouTube, and other Google services to build a comprehensive profile of your interests and movements.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_retention",
+        "title": "Location history stored for years",
+        "plain_english": "If you enable Location History, Google stores a detailed record of everywhere you go for years. Even if you disable it, some location data is still retained for service operation and security.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_location_controls",
+        "title": "You can control location settings",
+        "plain_english": "You can turn off Location History, delete past locations, and manage precise location permissions in your device settings. Google Maps also has an incognito mode.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_incognito",
+        "title": "Incognito mode available",
+        "plain_english": "Google Maps offers an incognito mode that prevents your searches and navigation from being saved to your Google Account.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_export_delete",
+        "title": "You can export and delete location data",
+        "plain_english": "Google allows you to view, manage, and delete your location history through Google Account settings. You can also export your data using Google Takeout.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Maps can use your camera for Live View and Street View contributions, but only when you choose to use these features.",
+      "detail": "Camera access is optional and only used for Live View AR navigation and user-contributed Street View photos. Not required for navigation.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Google Maps tracks your precise location continuously using GPS, Wi-Fi, Bluetooth, and sensors. This data is used for directions, ads, and building your location history.",
+      "detail": "Collects GPS, sensor data, IP address, Wi-Fi access points, cell towers, and Bluetooth devices. Used for navigation, ads, and location history. Shared with other Google services.",
+      "policy_excerpt": "We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location.",
+      "concerns": [
+        "Precise GPS tracked continuously",
+        "Location used for advertising",
+        "Wi-Fi and Bluetooth scanning"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Maps can access your contacts if you want to share locations or find saved places. This is optional.",
+      "detail": "Contacts access is optional and used for sharing locations and finding saved places. Not required for navigation.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Maps may cache map data on your device but does not access your personal files or photos.",
+      "detail": "Map tiles and navigation data are cached locally. No access to personal photos, documents, or other files.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google shares your location and activity data with advertisers, service providers, analytics partners, and other Google affiliates. Law enforcement may also request your data.",
+      "detail": "Shared with Google affiliates, advertising partners, service providers, domain administrators, and law enforcement when required. Aggregated data shared publicly.",
+      "policy_excerpt": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons.",
+      "concerns": [
+        "Data shared with advertisers",
+        "Affiliate company sharing",
+        "Law enforcement disclosures"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can use Google Maps without signing in, but many features require a Google Account. When signed in, your location is linked to your identity.",
+      "detail": "Google Account optional for basic navigation. Required for saved places, location history, and personalisation. Identity linked to location data when signed in.",
+      "policy_excerpt": "You can use many Google services when you're signed out or without creating an account at all.",
+      "concerns": [
+        "Location linked to identity when signed in",
+        "Cross-service profile building"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google tracks your searches, places you visit, and routes you take to show you targeted ads on Google services and partner websites.",
+      "detail": "Extensive tracking of location history, search queries, and app usage for personalised advertising. Data shared with advertising partners across Google's ad network.",
+      "policy_excerpt": "Depending on your settings, we may also show you personalized ads based on your interests and activity across Google services.",
+      "concerns": [
+        "Location-based ad targeting",
+        "Cross-service activity tracking",
+        "Data shared with advertisers"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google requires users to be 13 or older for a Google Account. Family Link allows parents to manage children's access.",
+      "detail": "Standard Google age requirement of 13+. Family Link available for supervised accounts. Location sharing features can be managed by parents.",
+      "policy_excerpt": "Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country).",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Maps logs your IP address, device interactions, and search queries continuously. This data is used for security, analytics, and advertising.",
+      "detail": "IP address, search terms, device info, and interaction data collected continuously. Used for service operation, security, and ad personalisation.",
+      "policy_excerpt": "We collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity.",
+      "concerns": [
+        "IP address logged continuously",
+        "Search queries tracked"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects detailed device information including unique identifiers, sensors, and movement data to improve Maps and show targeted ads.",
+      "detail": "Collects unique identifiers, device sensors (accelerometer, gyroscope), OS, carrier, and application version. Used for navigation accuracy, tracking, and advertising.",
+      "policy_excerpt": "Your device may have sensors that can be used to better understand your location and movement. For example, an accelerometer can be used to determine your speed and a gyroscope to figure out your direction of travel.",
+      "concerns": [
+        "Sensor data used for movement tracking",
+        "Device fingerprint linked to location history"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Maps does not collect health or biometric data.",
+      "detail": "No health or biometric data collection mentioned for Google Maps specifically.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Maps may collect payment information if you use features like booking rides or ordering food through the app.",
+      "detail": "Payment information collected for integrated services like ride booking or food ordering. Processed through Google Pay or third-party providers.",
+      "policy_excerpt": "For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your location history, specific places, or your entire Google Account. However, some data may be retained for legal and security purposes.",
+      "detail": "Location History can be deleted in segments or entirely. Account deletion available. Some data retained after deletion for legal/security purposes.",
+      "policy_excerpt": "Some data you can delete whenever you like... And some data we retain for longer periods of time when necessary for legitimate business or legal purposes.",
+      "concerns": [
+        "Some location data retained after deletion",
+        "Deletion may have delays across backup systems"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google can change its privacy policy at any time. They will not reduce your rights without explicit consent and will provide notice for significant changes.",
+      "detail": "Google posts updated policies with a 'last updated' date. Significant changes may be notified via email or prominent notice.",
+      "policy_excerpt": "We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. If changes are significant, we'll provide a more prominent notice.",
+      "concerns": [],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 78.0,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

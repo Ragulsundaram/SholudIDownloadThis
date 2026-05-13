@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://privacy.truecaller.com/privacy-policies",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "The scraped policy text appears to be only the landing page summary. The full detailed privacy policy requires country selection and was not captured. Many categories are marked unknown due to insufficient policy text."
+  },
+  "app": {
+    "slug": "truecaller",
+    "name": "Truecaller: Caller ID & Block",
+    "developer": "True Software Scandinavia AB",
+    "app_store_url": "https://apps.apple.com/in/app/truecaller-caller-id-block/id448142450",
+    "app_store_id": "448142450",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/d1/46/14d14658-3341-c516-3325-650d7a4960e3/Placeholder.mill/400x400bb-75.webp",
+    "category": "Utilities",
+    "sub_category": "Caller ID",
+    "description": "Caller ID and spam blocking app with global phone number lookup."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 52,
+    "grade": "D",
+    "one_liner": "The full privacy policy was not available for analysis, so the rating is based on a high-uncertainty assessment.",
+    "summary": "Only a summary landing page was provided. Truecaller claims to be privacy-focused and offers data download and unlisting, but the full scope of data collection could not be determined from the available text.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Because the full privacy policy could not be analyzed, we cannot confidently verify Truecaller's privacy claims. Consider using your phone's built-in spam blocking instead."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_incomplete_policy",
+        "title": "Full privacy policy was not captured",
+        "plain_english": "The scraper only retrieved a landing page summary, not the detailed privacy policy, so we cannot fully assess this app's privacy practices.",
+        "severity": "high"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_data_portability",
+        "title": "You can download a copy of your data",
+        "plain_english": "Truecaller says you can download an entire copy of the data they hold about you.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_unlist_option",
+        "title": "You can permanently unlist yourself",
+        "plain_english": "Truecaller says you can permanently unlist your number from their service.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_optional_permissions",
+        "title": "Optional permissions can be disabled",
+        "plain_english": "Truecaller says users can disable optional permissions.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention camera or microphone access.",
+      "detail": "The summary landing page does not detail camera or microphone usage.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention location data collection.",
+      "detail": "The summary landing page does not detail GPS or location usage.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention contacts or phonebook access.",
+      "detail": "As a caller ID app, contacts access is likely, but the provided text does not confirm it.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete",
+        "App category suggests contacts may be accessed"
+      ],
+      "score_impact": -10.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention file or storage access.",
+      "detail": "The summary landing page does not detail storage or file access.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not detail what data is shared with third parties.",
+      "detail": "The summary mentions compliance with local laws but does not enumerate third-party sharing practices.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -15.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text mentions phone number is used to create an account but does not detail identity data practices.",
+      "detail": "The summary references phone number based account creation but lacks detail on what identity data is collected and how it is used.",
+      "policy_excerpt": "third party service, used to create your Truecaller account",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention behavioral tracking or advertising practices.",
+      "detail": "The summary does not discuss ad tracking or behavioral profiling.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -12.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention children's data protections.",
+      "detail": "The summary does not address children's data or age requirements.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -5.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not detail network logging or internet activity monitoring.",
+      "detail": "The summary does not discuss IP logging or network monitoring.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -2.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention device information or fingerprinting.",
+      "detail": "The summary does not discuss device identifiers or fingerprinting.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention health or biometric data.",
+      "detail": "The summary does not address health or biometric data collection.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not mention payment or financial data.",
+      "detail": "The summary does not discuss financial data collection.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Truecaller lets you download a copy of your data, restrict processing, and permanently unlist yourself.",
+      "detail": "The summary explicitly mentions users can restrict processing, download their data, and permanently unlist themselves.",
+      "policy_excerpt": "Each user is able to restrict processing of their data, to disable any of the optional permissions, to download an entire copy of their data or to permanently unlist themselves.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The available policy text does not explain how users are notified of policy changes.",
+      "detail": "The summary does not mention policy change notifications.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy text incomplete"
+      ],
+      "score_impact": -2.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "unknown",
+        "max": 20,
+        "rate": 0.5,
+        "deduction": 10.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "unknown",
+        "max": 30,
+        "rate": 0.5,
+        "deduction": 15.0
+      },
+      {
+        "category": "account_identity",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "unknown",
+        "max": 25,
+        "rate": 0.5,
+        "deduction": 12.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "unknown",
+        "max": 5,
+        "rate": 0.5,
+        "deduction": 2.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "financial_payment",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "unknown",
+        "max": 5,
+        "rate": 0.5,
+        "deduction": 2.5
+      }
+    ],
+    "total_deductions": 97.5,
+    "final_score": 52,
+    "grade": "D"
+  }
+}

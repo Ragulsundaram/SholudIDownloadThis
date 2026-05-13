@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://discord.com/privacy/",
+    "terms_url": "https://discord.com/terms",
+    "policy_last_updated": "2025-08-29",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "discord",
+    "name": "Discord – Talk, Play, Hang Out",
+    "developer": "Discord Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/discord-talk-play-hang-out/id985746746",
+    "app_store_id": "985746746",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/82/58/56/82585665-1a16-1afe-0422-795b9b24001a/Placeholder.mill/400x400bb-75.webp",
+    "category": "Social Networking",
+    "sub_category": "Messaging",
+    "description": "A voice, video, and text chat app designed for communities, gamers, and friends."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 62,
+    "grade": "C",
+    "one_liner": "Discord does not sell your data and offers strong privacy controls, but it still tracks your behavior for sponsored content and shares data with advertising platforms.",
+    "summary": "Discord collects your messages, usage patterns, device information, and can receive data about you from third-party advertisers and data providers. While the company explicitly states it does not sell personal information and offers end-to-end encryption for calls, it still uses your data to personalize content, deliver sponsored experiences like Quests, and share limited information with advertising platforms to grow its user base.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Discord is better than many social apps because it does not sell your data and lets you opt out of personalization. However, it still tracks behavior for sponsored content and receives data from outside sources. If you need a private space, use end-to-end encrypted direct messages and turn off personalization in settings."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_contact_sync_upload",
+        "title": "Your contacts are uploaded to Discord servers",
+        "plain_english": "If you enable contact syncing, Discord uploads the phone numbers in your address book to its servers to find friends who also use Discord.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sponsored_content_tracking",
+        "title": "Your behavior fuels sponsored content and ads",
+        "plain_english": "Discord tracks how you use the app to show you sponsored experiences like Quests and to advertise Discord on other platforms. It also receives demographic and behavioral data about you from third-party advertisers and data providers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_data_received",
+        "title": "Discord buys data about you from outside sources",
+        "plain_english": "Discord receives information about you from advertisers, third-party data providers, and social media platforms. This includes demographic information and how you engage with other products outside of Discord.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_content_moderation_scanning",
+        "title": "Your messages may be scanned for policy violations",
+        "plain_english": "Discord uses automated systems and may scan your attachments and messages to detect harmful content, enforce its rules, and train moderation models. Content in larger public spaces may also be used to improve Discord features.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_sale",
+        "title": "Discord does not sell your personal data",
+        "plain_english": "Discord explicitly states that it does not make money by selling your personal information to third parties. Its business is funded through subscriptions and paid products.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_e2e_encryption",
+        "title": "Voice and video calls are end-to-end encrypted",
+        "plain_english": "Your voice and video calls on Discord are designed to be end-to-end encrypted, meaning Discord cannot listen in on your conversations.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_controls",
+        "title": "You can turn off personalization and delete your account",
+        "plain_english": "Discord gives you settings to limit how your data is used for personalization and service improvement. You can also permanently delete your account and request a copy of your data.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Discord only uses your camera and microphone when you start a voice or video call, and calls are end-to-end encrypted.",
+      "detail": "Camera and microphone access is user-initiated for voice and video calls. Discord states it does not store the contents of video or voice calls or channels. Voice and video communications are designed to be end-to-end encrypted.",
+      "policy_excerpt": "Voice and video communications on Discord are designed to be end-to-end encrypted.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord does not access your GPS location.",
+      "detail": "The privacy policy does not mention GPS or precise location access. Discord may infer a general region from your IP address, which is covered under network activity.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you turn on contact syncing, Discord uploads your entire address book to its servers to find people you know.",
+      "detail": "Contact syncing is an optional feature. When enabled, Discord collects and processes the contacts stored on your device. This data is uploaded to Discord servers to match with other users.",
+      "policy_excerpt": "Certain features, like contact syncing, may require that you provide additional information (or grant us access to such information) to make them work.",
+      "concerns": [
+        "Contacts uploaded to servers without contacts' consent",
+        "No clear mention of how long contact data is retained"
+      ],
+      "score_impact": -13.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Discord can access your files only when you choose to upload and share them in a chat or server.",
+      "detail": "File and media access is user-initiated for sharing content in messages or servers. There is no indication of background file scanning.",
+      "policy_excerpt": "You may also upload and share files through the services.",
+      "concerns": [],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord shares your data with service providers, advertising platforms, related companies, and may share it if the company is sold or merged.",
+      "detail": "Discord discloses data to vendors (payment processors, cloud providers), advertising platforms (for Discord's own ads), related companies, and in corporate transactions. It does not sell personal data but shares limited information with advertising platforms to reach potential users.",
+      "policy_excerpt": "We may provide limited information to advertising platforms to help us reach people that we think will like our products and to measure the performance of our ads shown on those platforms.",
+      "concerns": [
+        "Data shared with advertising platforms",
+        "Data shared with related companies",
+        "Data may be transferred in a merger or acquisition"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must give Discord your email, phone number, and birthday to create an account. You can also add a display name.",
+      "detail": "Account creation requires a username, password, email or phone number, and birthday. Additional information like a verified phone number or display name may be required or optional.",
+      "policy_excerpt": "When you create a Discord account, you can come up with a username and password, and provide a way of contacting you (such as an email address and/or phone number). You'll also need to provide your birthday.",
+      "concerns": [
+        "Phone number may be required for verification"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord tracks what you do in the app to show you sponsored content and receives data about your activity from outside companies.",
+      "detail": "Discord collects detailed usage information including pages visited, features used, ads clicked, and content interactions. It uses this to personalize the product, deliver sponsored content like Quests, and advertise Discord on other platforms. It also receives behavioral and demographic data from third-party advertisers and data providers.",
+      "policy_excerpt": "We may also receive information about you from advertisers and third-party data providers, such as demographic information and how you engage with other products and services outside of Discord.",
+      "concerns": [
+        "Receives behavioral data from outside sources",
+        "Targeted sponsored content within the app",
+        "Limited opt-out through privacy settings"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord is not meant for children under 13, and the company says it does not knowingly collect data from them.",
+      "detail": "Discord's policy does not contain detailed children's data handling beyond standard age requirements. The app is rated 17+ on the App Store.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No robust age verification described"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord logs your IP address, what you click, and which servers you visit to keep the service running and secure.",
+      "detail": "Discord collects IP address, browser information, pages and servers visited, features used, ads clicked, and interaction logs. This is used for security, service operation, and personalization.",
+      "policy_excerpt": "We collect information about the pages, servers, and channels you visit, the activities you engage in, the features you use, and the surfaces or embedded content you interact with.",
+      "concerns": [
+        "IP address logged and used for security and personalization"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord collects your device type, operating system, browser, and IP address to run the app and keep it secure.",
+      "detail": "Device information collected includes IP address, operating system, browser information, and device settings. This is used for security, service operation, and to personalize the experience.",
+      "policy_excerpt": "We collect information about the device you are using to access the services. For example, this includes information like your IP address, operating system information, browser information, and information about your device settings.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord does not collect health or biometric data.",
+      "detail": "The privacy policy does not mention collection of health or biometric data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy something through Discord, your payment details are handled by companies like Stripe and PayPal. Discord may keep the last four digits of your card.",
+      "detail": "Payment information is processed by third-party payment processors (Stripe, PayPal). Discord may receive and store certain billing information including the last four digits of the credit card number.",
+      "policy_excerpt": "Our payment processors, like Stripe and PayPal, receive and process your payment information. Depending on the processor, we may also receive and store certain billing information, including the last four digits of the credit card number.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your Discord account or request a copy of your data, but some information may be kept for legal or security reasons.",
+      "detail": "Users can disable or delete their account. Deleting permanently deletes identifying information and anonymizes other data. Users can request a copy of their data within 30 days. Some data may be retained for legal obligations.",
+      "policy_excerpt": "Deleting your account permanently deletes identifying information and anonymizes other data as described in our data retention policy.",
+      "concerns": [
+        "Some data retained after deletion for legal reasons"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Discord will notify you of big privacy policy changes, but if you keep using the app, that means you accept the new terms.",
+      "detail": "Discord will update its privacy policy from time to time and provide notice for significant changes. Continued use of the services after changes constitutes acceptance.",
+      "policy_excerpt": "We will update this Privacy Policy from time to time. We always indicate the date the last changes were published, and if changes are significant, we'll provide a more prominent notice as required by law.",
+      "concerns": [
+        "Continued use implies acceptance of updates"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "location_gps", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
+      {"category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13.0},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
+      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
+      {"category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
+      {"category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5},
+      {"category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
+      {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
+      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5}
+    ],
+    "total_deductions": 78.75,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

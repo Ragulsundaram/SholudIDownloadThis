@@ -1,0 +1,426 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.google.com/policies/privacy/",
+    "terms_url": "https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=terms&ldl=en-GB",
+    "policy_last_updated": "2026-04-02",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "google-pay",
+    "name": "Google Pay: Save, Pay, Manage",
+    "developer": "Google LLC",
+    "app_store_url": "https://apps.apple.com/in/app/google-pay-save-pay-manage/id1193357041",
+    "app_store_id": "1193357041",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/21/f2/0c/21f20caf-e454-9601-fbbd-799676202d90/Placeholder.mill/400x400bb-75.webp",
+    "category": "Finance",
+    "sub_category": "Payments",
+    "description": "A simple and secure way to pay in stores, apps, and online, send money to friends, and manage your finances."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 62,
+    "grade": "C",
+    "one_liner": "Google Pay makes payments easy, but Google stores your financial data, tracks your purchases, and shares transaction information with merchants and partners.",
+    "summary": "Google Pay is a digital wallet and payment system. It stores your payment methods and transaction history on Google's servers. While Google uses encryption and fraud detection, your purchase data contributes to your broader Google advertising profile, and your information is shared with merchants, payment processors, and financial institutions.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Google Pay is convenient, but Google stores your payment methods and tracks every transaction. Your purchase history feeds into Google's advertising system. For maximum financial privacy, consider using your bank's direct payment app or Apple Pay instead."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_financial_data_stored",
+        "title": "Payment methods stored on Google servers",
+        "plain_english": "Google Pay stores your credit cards, debit cards, bank accounts, and transaction history on Google's servers. Even though card numbers are tokenized, Google still has access to your payment methods and purchase data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_purchase_tracking",
+        "title": "Every purchase is tracked and profiled",
+        "plain_english": "Google records every transaction you make through Google Pay, including what you bought, where, and when. This purchase activity is used to improve Google's services and can be used for advertising across Google platforms.",
+        "severity": "high"
+      },
+      {
+        "id": "red_merchant_sharing",
+        "title": "Transaction data shared with merchants",
+        "plain_english": "When you pay using Google Pay, your transaction information is shared with the merchant, payment processors, and your bank. Google may also share aggregated data with partners.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_service_tracking",
+        "title": "Financial data linked to Google profile",
+        "plain_english": "Your Google Pay activity is linked to your Google Account, which means your purchases are combined with your search history, location, and other data to build a comprehensive profile of you.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_tokenization",
+        "title": "Card numbers are tokenized",
+        "plain_english": "Google Pay uses tokenization, which means merchants do not receive your actual card number. Instead, they get a unique virtual account number for the transaction.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Encryption and fraud protection",
+        "plain_english": "Google Pay encrypts your payment information and uses multiple layers of security to protect against fraud and unauthorized transactions.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_controls",
+        "title": "You can manage and delete payment data",
+        "plain_english": "You can remove payment methods, view transaction history, and delete your Google Pay data through your Google Account settings.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Pay does not access your camera or microphone.",
+      "detail": "No camera or microphone access is required for digital wallet functionality.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Pay may use your location to find nearby merchants, ATMs, or offers. This is optional.",
+      "detail": "Location data may be used for finding nearby stores and offers. Precise location is optional and can be managed through device settings.",
+      "policy_excerpt": "We collect location information when you use our services, which helps us offer features like... search results for things near you.",
+      "concerns": [
+        "Location may be used for merchant recommendations"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google Pay can access your contacts to help you send money to people you know. This is optional.",
+      "detail": "Contacts access is optional and used for peer-to-peer payments. Not required for in-store or online payments.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Contact access for P2P payments"
+      ],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Pay does not access your personal files or photos.",
+      "detail": "No file system access required. Payment data is stored within the app's secure container.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Pay shares your transaction and payment data with merchants, payment processors, financial institutions, and Google affiliates.",
+      "detail": "Transaction data shared with merchants, banks, payment networks, and service providers. Aggregated data shared with partners. Law enforcement disclosures possible.",
+      "policy_excerpt": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons.",
+      "concerns": [
+        "Transaction data shared with merchants",
+        "Payment processors receive financial data",
+        "Aggregated data shared with partners"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need a Google Account to use Google Pay. Google links your payment activity to your identity and other Google services.",
+      "detail": "Google Account required. Name, email, phone, and payment info linked to account. Activity combined with other Google services.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "concerns": [
+        "Payment activity linked to identity",
+        "Cross-service profile building"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google tracks your purchases and payment activity to personalise ads and recommendations across Google services.",
+      "detail": "Purchase activity is collected and used for personalisation, analytics, and advertising. Combined with activity from other Google services for profiling.",
+      "policy_excerpt": "We collect information about your activity in our services, which we use to do things like recommend a YouTube video you might like. The activity information we collect may include: Purchase activity.",
+      "concerns": [
+        "Purchase history used for ads",
+        "Cross-service activity tracking"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google requires users to be 13 or older for a Google Account. Google Pay is not intended for children.",
+      "detail": "Standard Google age requirement of 13+. Payment services typically require adult consent.",
+      "policy_excerpt": "Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country).",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Pay logs your IP address, device info, and transaction activity continuously for security, fraud prevention, and service improvement.",
+      "detail": "IP address, device identifiers, and transaction metadata collected continuously. Used for fraud detection, security, and analytics.",
+      "policy_excerpt": "We collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity.",
+      "concerns": [
+        "IP address logged continuously",
+        "Transaction metadata tracked"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects detailed device information including unique identifiers, OS, and application version to secure payments and prevent fraud.",
+      "detail": "Device identifiers, OS, browser, carrier, and app version collected for security, fraud prevention, and service operation.",
+      "policy_excerpt": "The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+      "concerns": [
+        "Unique device identifiers collected",
+        "Device fingerprint linked to payment activity"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Pay does not collect health or biometric data, though you may use biometric authentication (Face ID or fingerprint) on your device to unlock the app.",
+      "detail": "Biometric authentication (Face ID, fingerprint) is handled locally on the device by the operating system. Google does not receive or store biometric data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Pay stores your payment cards, bank accounts, and transaction history on Google's servers. This data is used for payments, fraud prevention, and profiling.",
+      "detail": "Payment methods, transaction history, and purchase details stored by Google. Used for processing payments, fraud detection, and service improvement. Tokenization used for card numbers but transaction data retained.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "concerns": [
+        "Payment methods stored by Google",
+        "Transaction history retained",
+        "Purchase data used for profiling"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can remove payment methods and delete your Google Pay activity, but Google may retain some transaction data for legal and financial record-keeping purposes.",
+      "detail": "Payment methods can be removed. Transaction history can be deleted. Account deletion available. Some data retained for legal, security, and financial compliance.",
+      "policy_excerpt": "And some data we retain for longer periods of time when necessary for legitimate business or legal purposes, such as security, fraud and abuse prevention, or financial record-keeping.",
+      "concerns": [
+        "Transaction data retained for financial record-keeping",
+        "Some data kept after deletion for legal purposes"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google can change its privacy policy at any time. They will not reduce your rights without explicit consent and will provide notice for significant changes.",
+      "detail": "Google posts updated policies with a 'last updated' date. Significant changes may be notified via email or prominent notice.",
+      "policy_excerpt": "We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. If changes are significant, we'll provide a more prominent notice.",
+      "concerns": [],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 78.0,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

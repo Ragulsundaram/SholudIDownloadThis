@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://policies.google.com/privacy",
+    "terms_url": "https://policies.google.com/terms",
+    "policy_last_updated": "2026-04-02",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "youtube-music",
+    "name": "YouTube Music",
+    "developer": "Google LLC",
+    "app_store_url": "https://apps.apple.com/in/app/youtube-music/id1017492454",
+    "app_store_id": "1017492454",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/77/fd/e3/77fde3da-2ebc-8ab7-861a-41f9360f26bb/Placeholder.mill/400x400bb-75.webp",
+    "category": "Music",
+    "sub_category": "",
+    "description": "Stream music, watch videos, and discover new artists."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 60,
+    "grade": "C",
+    "one_liner": "A music streaming app that tracks your listening habits across Google services to serve personalized ads.",
+    "summary": "YouTube Music offers a vast catalog and personalized recommendations, but it comes with extensive tracking. Google links your listening history with your broader account activity to target ads across its network. The app provides strong deletion tools and child safety features, but the ad tracking and data sharing are significant.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While YouTube Music is a great streaming service, Google's extensive cross-service tracking and personalized ad targeting mean your listening habits are used to build an advertising profile. Consider using privacy settings to pause YouTube History and Web & App Activity if you want to limit tracking."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_cross_service_tracking",
+        "title": "Listening history used for ads across Google",
+        "plain_english": "What you watch and listen to on YouTube Music is combined with your Google Search and other activity to show you ads across Google sites and partner apps.",
+        "severity": "high"
+      },
+      {
+        "id": "red_partner_cookies",
+        "title": "Partners collect data via cookies",
+        "plain_english": "Google allows advertising and analytics partners to collect information from your device using their own tracking technologies.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_tracking",
+        "title": "Device identifiers used for ad targeting",
+        "plain_english": "Your device's advertising ID and unique identifiers are collected and used to track you across apps for personalized ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_voice_storage",
+        "title": "Voice interactions may be saved",
+        "plain_english": "If you use voice search or features, audio recordings may be saved to your Google Account unless you turn that off.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_deletion_tools",
+        "title": "Strong data deletion tools",
+        "plain_english": "Google offers detailed controls to delete your activity by product, timeframe, or your entire account.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_child_safety",
+        "title": "Family Link protections available",
+        "plain_english": "Parents can use Google Family Link to create supervised accounts for children with built-in privacy safeguards.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_controls",
+        "title": "Ad personalization can be turned off",
+        "plain_english": "You can manage your ad settings and turn off personalized ads through your Google Account.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sensitive_ads",
+        "title": "No ads based on sensitive topics",
+        "plain_english": "Google does not show personalized ads based on sensitive categories like race, religion, sexual orientation, or health.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "YouTube Music may use your microphone if you use voice search or hum-to-search features.",
+      "detail": "Voice and audio information may be collected when using voice features. Audio recordings may be saved to your Google Account depending on settings.",
+      "policy_excerpt": "Voice and audio information... you can choose whether you want Google to save an audio recording to your Google Account when you interact with Google Search, Assistant, and Maps.",
+      "concerns": [
+        "Voice data may be saved to your account depending on settings."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "YouTube Music can collect your location to recommend nearby events or local music trends. You can turn this off in your device settings.",
+      "detail": "Location collected via GPS, IP, Wi-Fi, and Bluetooth. Used for recommendations and ads. Can be disabled.",
+      "policy_excerpt": "We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location.",
+      "concerns": [
+        "Location used for ad targeting."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you share music or collaborate on playlists, Google may access your contacts to suggest recipients.",
+      "detail": "Contacts may be accessed for sharing features. Optional and user-initiated.",
+      "policy_excerpt": "We use your information to deliver our services, like processing the terms you search for in order to return results or helping you share content by suggesting recipients from your contacts.",
+      "concerns": [
+        "Contacts used for sharing suggestions."
+      ],
+      "score_impact": 6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload your own music library to YouTube Music. This is completely optional and user-initiated.",
+      "detail": "File upload feature for personal music library. Not required for streaming.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Uploaded music files are stored on Google servers."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google shares data with advertisers, analytics providers, and external partners. It also allows partners to collect data from your device using their own cookies.",
+      "detail": "Shares with consent, domain admins, external processors, and for legal reasons. Allows specific partners to collect data via cookies for advertising and measurement.",
+      "policy_excerpt": "We also allow specific partners to collect information from your browser or device for advertising and measurement purposes using their own cookies or similar technologies.",
+      "concerns": [
+        "Partners collect data independently via cookies."
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need a Google Account, and Google links your activity across all its services to personalize ads and recommendations.",
+      "detail": "Google Account required. Activity across services (Search, YouTube, Maps) linked for personalization and ads.",
+      "policy_excerpt": "When you're signed in, we also collect information that we store with your Google Account, which we treat as personal information.",
+      "concerns": [
+        "Cross-service data linking for profiling."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google tracks what you watch, search for, and click on across YouTube and other sites to show you personalized ads.",
+      "detail": "Activity data used for personalized ads across Google services and partner sites. Cross-service tracking. Users can manage ad settings.",
+      "policy_excerpt": "Depending on your settings, we may also show you personalized ads based on your interests and activity across Google services.",
+      "concerns": [
+        "Cross-service tracking for ad personalization."
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YouTube Music is not designed for children under 13. Google offers Family Link and special accounts with stronger protections for kids.",
+      "detail": "Family Link and YouTube Kids provide child-specific safeguards. Not directed at children under 13.",
+      "policy_excerpt": "Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country)",
+      "concerns": [],
+      "score_impact": 0.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google logs your IP address, browsing activity, and interactions with ads. This data is used for security, analytics, and ad targeting.",
+      "detail": "IP address, system activity, crash reports, referrer URL, and interaction data collected continuously. Used for ads and analytics.",
+      "policy_excerpt": "We also collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.",
+      "concerns": [
+        "IP and activity data used for profiling and ads."
+      ],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects your device identifiers, advertising ID, and hardware details to track you across apps and personalize ads.",
+      "detail": "Unique identifiers, advertising ID, device type, OS, carrier, and app version collected. Used for ads, security, and syncing.",
+      "policy_excerpt": "The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+      "concerns": [
+        "Advertising ID used for cross-app ad targeting."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YouTube Music does not collect health or biometric data.",
+      "detail": "No health or biometric data collection mentioned for YouTube Music.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0.0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment for premium subscriptions is processed through Google Play billing or Google Pay. Google does not store your raw card details in the app.",
+      "detail": "Payment processed via Google's payment infrastructure. Third-party processor.",
+      "policy_excerpt": "When you purchase services or physical goods from us, you may provide us information like your shipping address or delivery instructions.",
+      "concerns": [
+        "Payment handled by Google payment services."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google provides strong tools to view, manage, and delete your data, including by product or across your entire account.",
+      "detail": "My Activity, Google Dashboard, and deletion tools available. Data can be deleted by product or account-wide. Some retention for legal/security.",
+      "policy_excerpt": "You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google... Delete your entire Google Account",
+      "concerns": [],
+      "score_impact": 0.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google promises not to reduce your privacy rights without your explicit consent, and gives prominent notice for significant changes.",
+      "detail": "Explicit consent required for rights reductions. Significant changes get prominent notice. Archived versions available.",
+      "policy_excerpt": "We will not reduce your rights under this Privacy Policy without your explicit consent. We always indicate the date the last changes were published and we offer access to archived versions for your review.",
+      "concerns": [],
+      "score_impact": 0.0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "safe",
+        "max": 5,
+        "rate": 0.0,
+        "deduction": 0.0
+      }
+    ],
+    "total_deductions": 81.0,
+    "final_score": 60,
+    "grade": "C"
+  }
+}

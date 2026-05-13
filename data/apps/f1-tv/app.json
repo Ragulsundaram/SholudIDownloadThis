@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://account.formula1.com/#/en/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2025-04-01",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "f1-tv",
+    "name": "F1 TV",
+    "developer": "Formula One Digital Media Limited",
+    "app_store_url": "https://apps.apple.com/in/app/f1-tv/id1315007279",
+    "app_store_id": "1315007279",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/74/59/c6/7459c610-7cb0-2e16-2eae-4a5def0afb9f/Placeholder.mill/400x400bb-75.webp",
+    "category": "Sports",
+    "sub_category": "Streaming",
+    "description": "Official Formula 1 streaming app for live races, highlights, and exclusive F1 content."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 69,
+    "grade": "C",
+    "one_liner": "F1 TV collects extensive viewing and payment data, shares it across the F1 group and with advertisers, but offers solid GDPR rights and opt-outs.",
+    "summary": "F1 TV is Formula 1's official streaming platform. It requires an account and collects identity, contact, financial, technical, and usage data. Your information is shared across the F1 group, with third-party sponsors, promoters, and advertising partners. You can opt out of email marketing and targeted ads, and GDPR deletion rights are available.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "F1 TV's privacy policy is fairly standard for a streaming service, but it does share your data with advertisers and profiling partners. If you only want to watch races casually, be aware your viewing habits feed into marketing profiles."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_targeted_ads",
+        "title": "Targeted ads on third-party sites using your data",
+        "plain_english": "F1 TV uses your personal data to show you targeted and personalised adverts on third-party websites and applications, including social media sites. You can opt out through cookie preferences, but your data is still used to build an advertising profile.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_sharing",
+        "title": "Data shared with sponsors and promoters",
+        "plain_english": "F1 TV shares your personal data with third-party sponsors, promoters who organise race events, and other Formula 1 group companies. This means your details can end up with multiple organisations beyond just F1.",
+        "severity": "high"
+      },
+      {
+        "id": "red_profiling",
+        "title": "Your activity is profiled for marketing",
+        "plain_english": "F1 TV analyses your purchase history and usage data to build a marketing profile, which is used to personalise the direct marketing emails they send you.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_us_monitoring",
+        "title": "Usage may be monitored in the US",
+        "plain_english": "For US residents, F1 TV and its partners may monitor your activity on the app using tracking technologies, and this information may be shared with advertising and analytics partners in ways that could be considered a 'sale' under some US privacy laws.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_rights",
+        "title": "Full GDPR data rights available",
+        "plain_english": "F1 TV provides access, correction, erasure, restriction, and data portability rights under GDPR. You can submit erasure requests through a dedicated form.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out",
+        "title": "Marketing and ad opt-outs available",
+        "plain_english": "You can opt out of email marketing via your account preferences or by clicking unsubscribe. You can also opt out of targeted advertising through cookie settings and a 'Do Not Sell or Share' option.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sensitive_data",
+        "title": "No sensitive personal data collected",
+        "plain_english": "F1 TV explicitly states it does not knowingly collect special category data such as health, biometric, racial, religious, or political information.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV is a streaming app and does not access your camera or microphone.",
+      "detail": "No camera or microphone access is required or mentioned in the privacy policy. The app only streams video content to your device.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV may infer your general location from your IP address or device settings, mainly for service delivery and security.",
+      "detail": "Technical Data includes time zone setting and location. This is likely inferred from IP rather than precise GPS, used for content delivery and fraud prevention.",
+      "policy_excerpt": "Technical Data – which includes technical information such as internet protocol (IP) address used to connect your computer to the internet... time zone setting and location.",
+      "concerns": ["Location inferred from IP address"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV does not access your contacts or phonebook.",
+      "detail": "The privacy policy does not mention any collection or access to device contacts.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "F1 TV may store downloaded videos on your device if you use the offline download feature.",
+      "detail": "As a streaming app, F1 TV primarily delivers content over the internet. Offline downloads, if available, would require temporary storage access initiated by the user.",
+      "policy_excerpt": "",
+      "concerns": ["Downloaded content stored locally"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV shares your data with Formula 1 group companies, third-party sponsors, race promoters, service providers, and advertising partners.",
+      "detail": "Data is shared across the F1 group, with sponsors, promoters, service providers, and for corporate transactions. Advertising identifiers may also be shared with social media and analytics partners.",
+      "policy_excerpt": "We may share your personal data with the following third parties... Our Formula 1 group companies. Our third party service providers... Our third party partners...",
+      "concerns": [
+        "Shared with multiple F1 group companies",
+        "Sponsors and promoters receive fan data",
+        "Advertising and analytics partners may receive identifiers"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need an F1 TV account to subscribe. F1 TV collects your name, email, date of birth, and billing address.",
+      "detail": "Identity Data and Contact Data are collected during registration and purchase. This is standard for a subscription streaming service.",
+      "policy_excerpt": "Identity Data – which includes first name, last name... date of birth, age and gender. Contact Data – which includes billing address, email address and telephone numbers.",
+      "concerns": ["Date of birth and gender collected"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV tracks how you use the app and shares this information with advertisers to show you targeted ads on other websites and social media.",
+      "detail": "Usage Data and Technical Data are collected automatically. This data is used to personalise experiences, analyse usage, and present targeted adverts on third-party sites and applications.",
+      "policy_excerpt": "To present you with targeted and personalised adverts on third-party websites and applications, including social media sites.",
+      "concerns": [
+        "Usage tracked across sessions",
+        "Data used for third-party targeted advertising",
+        "Profiling for direct marketing"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV is not aimed at children under 16 and does not knowingly collect their data.",
+      "detail": "The policy states they do not knowingly collect personal data from children under 16. If discovered, they will delete it.",
+      "policy_excerpt": "We do not knowingly collect personal data from children under the age of 16 and our Digital Products are not directed at children under the age of 16.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV logs your IP address, browsing activity within the app, and device connection details to keep the service running and secure.",
+      "detail": "Technical Data includes IP address, browser type, device info, and Usage Data includes URL clickstreams, pages viewed, and interaction data.",
+      "policy_excerpt": "Technical Data – which includes technical information such as internet protocol (IP) address... Usage Data – which includes information about how you use our Digital Products.",
+      "concerns": ["Full clickstream tracking within the app"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV collects your device type, operating system, screen resolution, and browser information to ensure the app works properly.",
+      "detail": "Standard device diagnostics are collected as part of Technical Data. This is used for compatibility and troubleshooting.",
+      "policy_excerpt": "Technical Data – which includes... browser type and version, time zone setting and location, mobile and network information, browser plug-in types and versions, operating system and platform.",
+      "concerns": ["Device details linked to your account"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV does not collect any health or biometric data.",
+      "detail": "The policy explicitly excludes special category data including health and biometric information.",
+      "policy_excerpt": "We do not knowingly collect any special categories of personal data... such as... information about your health, and genetic and biometric data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV collects your payment card details and billing information when you subscribe.",
+      "detail": "Financial Data and Transaction Data are collected during subscription. This is necessary for the service.",
+      "policy_excerpt": "Financial Data – which includes bank account and payment card details. Transaction Data – which includes details about payments to and from you.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion of your data, correct inaccurate information, and exercise GDPR rights through an online form or email.",
+      "detail": "F1 TV offers access, rectification, erasure, restriction, portability, and objection rights. Erasure requests go through a dedicated form. Some data may be retained for legal reasons.",
+      "policy_excerpt": "Request deletion of personal data we hold about you, where we no longer have a valid reason to retain it (Right to erasure or right to be forgotten).",
+      "concerns": ["Some data may be retained after deletion for legal purposes"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "F1 TV may update its privacy policy at any time and will post changes on this page. You are expected to check it periodically.",
+      "detail": "Changes are posted on the policy page. Significant changes are notified. No explicit requirement for re-consent.",
+      "policy_excerpt": "We may, from time to time, update this Privacy Policy. Any such changes will be posted on this page, and we will notify you of any significant changes.",
+      "concerns": ["Continued use implies acceptance of changes"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
+      {"category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
+      {"category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0},
+      {"category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5},
+      {"category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
+      {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5}
+    ],
+    "total_deductions": 62.75,
+    "final_score": 69,
+    "grade": "C"
+  }
+}

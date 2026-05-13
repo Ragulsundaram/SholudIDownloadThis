@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.google.co.uk/policies/privacy",
+    "terms_url": "",
+    "policy_last_updated": "2026-04-02",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "google-photos",
+    "name": "Google Photos: Backup & Edit",
+    "developer": "Google LLC",
+    "app_store_url": "https://apps.apple.com/in/app/google-photos-backup-edit/id962194608",
+    "app_store_id": "962194608",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/1c/64/a91c6466-0742-37ca-5d25-056c6206b6b4/Placeholder.mill/400x400bb-75.webp",
+    "category": "Photo & Video",
+    "sub_category": "Photo Storage",
+    "description": "Google Photos backs up your photos and videos to the cloud, uses AI to organize and search them, and offers editing tools. Part of Google services."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 55,
+    "grade": "C",
+    "one_liner": "Google Photos offers free backup and powerful AI search, but Google scans your photos, uses your data for ads, and stores face groups on its servers.",
+    "summary": "Google Photos automatically backs up all your photos and videos to Google's cloud, where AI organizes them into albums, groups faces, and enables search. While convenient, this means Google has access to your entire photo library, uses your activity for advertising across Google services, and stores facial grouping data on its servers. Google provides good privacy controls and deletion options, but continued use feeds Google's extensive tracking ecosystem.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Google Photos is convenient for backup, but Google scans your photos with AI, uses your activity for ads, and stores face grouping data on its servers. If privacy matters, consider Apple Photos with iCloud instead."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_ai_scanning",
+        "title": "Google scans all your photos with AI",
+        "plain_english": "Google uses artificial intelligence to analyze every photo and video you upload. This includes face grouping, object recognition, and creating albums automatically. While this powers useful features like search, it means Google has deep insight into your visual life.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Activity used for ads across Google services",
+        "plain_english": "Google tracks which photos you view, albums you create, and how you use the app. This activity feeds into your Google advertising profile and is used to show you personalized ads across Google Search, YouTube, and other Google apps.",
+        "severity": "high"
+      },
+      {
+        "id": "red_face_grouping",
+        "title": "Face grouping data stored on Google servers",
+        "plain_english": "Google Photos groups photos of the same person together using face recognition technology. The face geometry data used for this grouping is stored on Google's servers, not just on your device.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_service_data",
+        "title": "Photos data linked to your Google Account profile",
+        "plain_english": "Everything you do in Google Photos is tied to your Google Account. This means your photo activity is linked with your searches, emails, location history, and purchases across all Google services.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_geotag_collection",
+        "title": "Location data extracted from your photos",
+        "plain_english": "Google reads the location metadata embedded in your photos and combines it with your IP address and device location to build a detailed location history. This is used for features like location-based albums and advertising.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_encryption",
+        "title": "Encryption in transit and at rest",
+        "plain_english": "Google encrypts your photos while they are being uploaded and downloaded, and also while they are stored on Google's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_tools",
+        "title": "You can delete photos and your entire account",
+        "plain_english": "Google provides tools to delete individual photos, bulk delete, or delete your entire Google Account. You can also download all your data using Google Takeout before leaving.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ownership_claim",
+        "title": "Your photos remain yours",
+        "plain_english": "Google does not claim ownership of your photos or videos. The content you upload remains your property.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_controls",
+        "title": "Granular sharing and privacy controls",
+        "plain_english": "You can choose which photos to share, with whom, and whether to allow link sharing. Albums are private by default.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera access is used when you take photos directly within the app. Microphone access is optional and used for video recording.",
+      "detail": "Google Photos can access your camera to take new photos and videos. This is optional since you can also upload existing photos from your library.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google reads location data embedded in your photos and may use your IP address to estimate your location for organizing albums and ads.",
+      "detail": "Location data is extracted from photo metadata and combined with IP-based location for features like location-based albums and maps. Google also uses location for advertising purposes across its services.",
+      "policy_excerpt": "We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location.",
+      "concerns": [
+        "Location metadata from photos is read and stored",
+        "IP address used for location inference and ads"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can optionally give access to your contacts to share photos and albums with people you know.",
+      "detail": "Contacts access is optional and only used for sharing features. Google does not continuously upload your contacts list for Photos-specific purposes.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Photos needs access to your photo library to back up and store your photos and videos on Google's cloud servers.",
+      "detail": "Full photo library access is required for the app's core backup function. Photos and videos are uploaded to Google's servers where they may be scanned by AI for organization and search.",
+      "policy_excerpt": "We also collect the content you create, upload, or receive from others when using our services. This includes things like email you write and receive, photos and videos you save, docs and spreadsheets you create.",
+      "concerns": [
+        "All uploaded photos are scanned by AI for face grouping and object recognition",
+        "Photos stored on third-party servers"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Google shares your information with advertising partners, analytics providers, and other Google companies. Your photo activity contributes to your advertising profile.",
+      "detail": "Google shares data with affiliates, advertising partners, service providers, and domain administrators. While Google says it does not sell your personal information, it extensively shares aggregated and demographic data for advertising.",
+      "policy_excerpt": "We provide personal information to our affiliates and other trusted businesses or persons to process it for us, based on our instructions and in compliance with our Privacy Policy.",
+      "concerns": [
+        "Data shared with Google's advertising partners",
+        "Cross-service data linking",
+        "Domain administrator access for work accounts"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need a Google Account to use Google Photos. Google collects your name, email, and phone number, and links your Photos activity to your broader Google identity.",
+      "detail": "A Google Account is required. Your Photos activity is linked to your Google Account and combined with data from Search, YouTube, Maps, and other Google services.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "concerns": [
+        "Cross-service account linking",
+        "Activity combined across all Google services"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Google tracks how you use Photos \u2014 which photos you view, albums you create, and searches you make \u2014 to build an advertising profile and show you personalized ads across Google services.",
+      "detail": "Google collects detailed usage data including content interactions, search terms, album creation, and sharing activity. This is combined with data from all Google services to build a behavioral advertising profile.",
+      "policy_excerpt": "Google processes information to provide advertising, including online identifiers, browsing and search activity, and information about your location and interactions with advertisements.",
+      "concerns": [
+        "Cross-service activity tracking",
+        "Ad profile building from photo activity",
+        "Data shared with advertisers"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must be 13 or older to create a Google Account. Parents can use Family Link to manage Google Accounts for children under 13.",
+      "detail": "Google requires users to be 13+. Family Link allows supervised accounts for younger children with parental controls.",
+      "policy_excerpt": "Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country)",
+      "concerns": [
+        "No robust age verification"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Google logs your IP address, upload and download activity, and how you interact with the Photos service. This data is used for security, analytics, and advertising.",
+      "detail": "IP address, browser type, device info, and usage patterns are logged continuously. Network data is used for security, troubleshooting, and ad targeting.",
+      "policy_excerpt": "We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates.",
+      "concerns": [
+        "IP address used for location inference and ads",
+        "Extensive usage logging"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Google collects detailed information about your device including unique identifiers, operating system, and carrier. This helps Google track your activity across apps and services.",
+      "detail": "Collects unique identifiers, browser type, device type, OS, carrier, application version, and other device info. Used for tracking, security, and advertising across Google services.",
+      "policy_excerpt": "The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+      "concerns": [
+        "Unique device identifiers used for cross-service tracking",
+        "Device fingerprint persists across reinstalls"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google Photos uses face recognition technology to group photos of the same person together. The face geometry data is stored on Google's servers to power this feature.",
+      "detail": "Face grouping technology analyzes face geometry in your photos and stores this data on Google's servers. Google says this is not used to identify individuals outside of your account, but the biometric-like data is still stored externally.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Face geometry data stored on external servers",
+        "Biometric-like data used for photo grouping"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you upgrade to Google One for extra storage, Google collects payment information through its payment processors.",
+      "detail": "Payment and billing information is collected when subscribing to Google One or other paid Google services. Processed by third-party payment processors.",
+      "policy_excerpt": "For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete individual photos, albums, or your entire Google Account. Google Takeout lets you download your data first. Some data may be retained for legal or security reasons.",
+      "detail": "Provides tools to delete photos, albums, and entire account. Google Takeout available for data export. Some data retained for legal, security, and abuse prevention purposes.",
+      "policy_excerpt": "You can also delete your account at any time through your Google Account settings.",
+      "concerns": [
+        "Some data retained after deletion for legal/security reasons"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google can change its privacy policy at any time. For major changes, they may notify you, but continued use of the service counts as acceptance.",
+      "detail": "Updated policy posted with a new effective date. Notice for material changes via email or posting. Continued use constitutes acceptance.",
+      "policy_excerpt": "If we do, we will change the 'last updated' date at the top of this policy... Under certain circumstances we will provide notice to you of these changes.",
+      "concerns": [
+        "Continued use = automatic acceptance"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 93.0,
+    "final_score": 55,
+    "grade": "C"
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://policies.google.com/privacy",
+    "terms_url": "https://policies.google.com/terms",
+    "policy_last_updated": "2026-04-02",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "gmail-email-by-google",
+    "name": "Gmail - Email by Google",
+    "developer": "Google LLC",
+    "app_store_url": "https://apps.apple.com/in/app/gmail-email-by-google/id422689480",
+    "app_store_id": "422689480",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/37/80/d7/3780d7ec-2ee8-6057-9c48-28c217755543/Placeholder.mill/400x400bb-75.webp",
+    "category": "Productivity",
+    "sub_category": "Email",
+    "description": "Google's official email app with smart inbox organisation, spam filtering, and integration with Google Workspace."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "Gmail is a powerful email service, but Google scans your emails for security and uses your activity across all Google services to build an advertising profile.",
+    "summary": "Gmail is Google's free email service that collects the content of all your emails, contacts, and attachments. While Google states it does not show personalised ads based on Gmail content, it does track your broader activity across Google services for advertising. Your emails may be scanned for spam, malware, and policy violations.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you need a free, reliable email service, Gmail is convenient. However, Google collects and analyses your email content and links it to your broader Google advertising profile. For sensitive communications, consider a privacy-focused email provider."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_content_scanning",
+        "title": "Google scans your emails",
+        "plain_english": "Google uses automated systems to analyse the content of your emails to detect spam, malware, and illegal content. This means Google reads your emails, even though it claims not to use the content for ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_service_tracking",
+        "title": "Activity tracked across all Google services",
+        "plain_english": "Your Gmail usage is linked to your Google Account, and Google combines this data with your searches, YouTube views, and browsing history to build a comprehensive profile for personalised ads and recommendations.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_sharing",
+        "title": "Data shared with advertisers and partners",
+        "plain_english": "Google shares aggregated and non-personally identifiable information with advertisers, publishers, and analytics partners. It also shares personal data with affiliates, service providers, and domain administrators.",
+        "severity": "high"
+      },
+      {
+        "id": "red_law_enforcement",
+        "title": "Emails disclosed to governments when requested",
+        "plain_english": "Google will share your personal information, including emails, with law enforcement and government agencies if required by law or legal process. Google publishes a Transparency Report showing the volume of these requests.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_gmail_ads",
+        "title": "No ads based on Gmail content",
+        "plain_english": "Google explicitly promises that it does not show you personalised ads based on the content of your emails in Gmail, Drive, or Photos.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Encryption in transit and at rest",
+        "plain_english": "Google uses encryption to protect your emails while they travel between your device and Google's servers, and while they are stored on Google's systems.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_controls",
+        "title": "Comprehensive privacy controls",
+        "plain_english": "You can manage your data through Google Account settings, including My Activity for reviewing and deleting data, Ad Settings for controlling personalised ads, and Google Takeout for exporting your emails.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "You can delete your account and export data",
+        "plain_english": "Google allows you to delete individual emails, specific Google services, or your entire Google Account. You can also download a copy of all your data using Google Takeout.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Gmail does not access your camera or microphone.",
+      "detail": "No camera or microphone access is required or mentioned for core email functionality.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Gmail does not actively collect your GPS location. Google may infer your approximate location from your IP address as part of general Google services usage.",
+      "detail": "No GPS or precise location access specific to Gmail. General IP-based location inference may occur across Google services for security and fraud detection.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Gmail suggests email addresses from your Google Contacts when you compose a message. It does not upload your phone's contact list without permission.",
+      "detail": "When composing emails, Gmail autocompletes addresses from your Google Contacts. This is on-demand and user-initiated. It does not continuously sync your phone's local contacts unless you explicitly enable contact sync.",
+      "policy_excerpt": "When you type an address in the To, Cc, or Bcc field of an email you're composing, Gmail will suggest addresses based on the people you contact most frequently.",
+      "concerns": ["Contact suggestions based on past email activity"],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Gmail stores all your emails and attachments on Google's cloud servers. You can attach files from your device when you choose to.",
+      "detail": "All email content and attachments are stored on Google's servers. File attachments are user-initiated. Gmail does not scan your local phone files.",
+      "policy_excerpt": "We also collect the content you create, upload, or receive from others when using our services. This includes things like email you write and receive, photos and videos you save.",
+      "concerns": ["All email content stored on third-party servers"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google shares your information with advertising partners, service providers, analytics companies, and other Google affiliates. While Google says it does not sell your personal information, it extensively shares data for advertising and service provision purposes.",
+      "detail": "Shared with Google affiliates, advertising partners, service providers, domain administrators, law enforcement when required, and third parties with user consent.",
+      "policy_excerpt": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons.",
+      "concerns": [
+        "Data shared with advertisers",
+        "Affiliate company sharing",
+        "Law enforcement disclosures"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need a Google Account to use Gmail. Google collects your name, email address, phone number, and links all your Google services together.",
+      "detail": "Google Account required. Collects name, email, phone, password. Account links activity across all Google services.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "concerns": [
+        "Cross-service account linking",
+        "Extensive profile data collection"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google tracks your activity across all Google services, including Gmail, to build an advertising profile. While Gmail content is not used for ads, your broader activity is.",
+      "detail": "Google collects detailed activity data across services: searches, video views, ad interactions, purchases, and communications. Used for personalised ads and shared with advertising partners.",
+      "policy_excerpt": "Depending on your settings, we may also show you personalized ads based on your interests and activity across Google services.",
+      "concerns": [
+        "Cross-service activity tracking",
+        "Ad profile building",
+        "Data shared with advertisers"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must be 13 or older to create a Google Account. Google offers Family Link for supervised accounts for children under 13.",
+      "detail": "Google requires users to be 13+. Family Link allows parents to manage children's Google Accounts. COPPA compliant for under-13 use through parental controls.",
+      "policy_excerpt": "Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country).",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google logs your IP address, device interactions, and email activity. This data is used for security, analytics, and advertising across all Google services.",
+      "detail": "IP address, browser info, system activity, crash reports, referrer URL, and interaction data collected continuously. Used for security, service improvement, and profiling.",
+      "policy_excerpt": "We collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.",
+      "concerns": [
+        "IP address used for location inference",
+        "Activity logged across all Google services"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects detailed information about your device including unique identifiers, browser type, operating system, and mobile carrier. This helps Google track your activity and show targeted ads.",
+      "detail": "Collects unique identifiers, browser type, device type, OS, carrier, application version, crash reports. Used for tracking, security, and advertising.",
+      "policy_excerpt": "The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+      "concerns": [
+        "Unique device identifiers",
+        "Cross-service tracking"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Gmail does not collect health or biometric data.",
+      "detail": "No health or biometric data is collected or referenced in the privacy policy for Gmail.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Google collects payment information if you upgrade to Google One or Google Workspace for additional storage or features.",
+      "detail": "Payment/billing information collected for paid subscriptions. Not required for free Gmail usage.",
+      "policy_excerpt": "For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete emails, export your data via Google Takeout, or delete your entire Google Account. However, Google may retain some data for legal and security purposes.",
+      "detail": "Users can delete individual emails, specific Google products, or their entire account. Google Takeout for data export. Some data retained after deletion for legal/security purposes.",
+      "policy_excerpt": "You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google. To delete your information, you can: Delete your content from specific Google services; Delete specific Google products; Delete your entire Google Account.",
+      "concerns": [
+        "Some data retained after deletion for legal purposes",
+        "Deletion process may have delays across backup systems"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google can change its privacy policy at any time. They will not reduce your rights without explicit consent and will provide notice for significant changes.",
+      "detail": "Google posts updated policies with a 'last updated' date. For significant changes, they may provide more prominent notice including email notification.",
+      "policy_excerpt": "We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. If changes are significant, we'll provide a more prominent notice (including, for certain services, email notification of Privacy Policy changes).",
+      "concerns": [],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
+      {"category": "location_gps", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
+      {"category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
+      {"category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0},
+      {"category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25},
+      {"category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
+      {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
+      {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5}
+    ],
+    "total_deductions": 71.25,
+    "final_score": 65,
+    "grade": "C"
+  }
+}

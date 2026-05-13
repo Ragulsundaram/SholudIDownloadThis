@@ -1,0 +1,433 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://picsart.com/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2024-09-12",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "picsart-ai-photo-editor-video",
+    "name": "Picsart AI Photo Editor, Video",
+    "developer": "PicsArt, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/picsart-ai-photo-editor-video/id587366035",
+    "app_store_id": "587366035",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/35/74/77/35747722-e7aa-aedd-e5b2-9271fef67eb5/Placeholder.mill/400x400bb-75.webp",
+    "category": "Photo & Video",
+    "sub_category": "",
+    "description": "All-in-one photo and video editor with AI-powered tools, filters, and a creative community."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 50,
+    "grade": "D",
+    "one_liner": "A popular photo editor that tracks your activity, shares data with ad networks, and stores facial geometry for effects.",
+    "summary": "Picsart is a feature-rich photo editor, but its privacy practices are concerning. It uploads your contact list, stores facial geometry data for up to three years, and engages in extensive behavioral ad tracking with third-party networks. While it offers some user controls, the breadth of data sharing and tracking earns it a low privacy score.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Picsart collects and shares a lot of data with advertisers, stores your contacts and facial geometry on its servers, and ignores Do Not Track signals. If privacy matters to you, consider a more privacy-focused photo editor."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_contact_upload",
+        "title": "Contact list uploaded to servers",
+        "plain_english": "If you grant permission, Picsart uploads your entire phonebook to help you find friends. This data is stored on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_biometric_storage",
+        "title": "Facial geometry stored for years",
+        "plain_english": "When you use face effects, Picsart saves your facial geometry data on its servers and keeps it for up to three years after you stop using the app.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Extensive ad tracking across apps",
+        "plain_english": "Picsart uses cookies and works with ad networks to track your activity across other websites and apps to show you personalized ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sharing",
+        "title": "Broad third-party data sharing",
+        "plain_english": "Your information is shared with Google, Facebook, and many other ad and analytics companies to run the app and target ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_dnt",
+        "title": "Ignores Do Not Track signals",
+        "plain_english": "The app does not honor browser or device signals that ask websites not to track you.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_truedepth_local",
+        "title": "TrueDepth face data stays on device",
+        "plain_english": "When using certain face effects, the raw spatial data from Apple's TrueDepth camera never leaves your device and is not stored.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_form",
+        "title": "Privacy request form available",
+        "plain_english": "You can submit a request to access, correct, or delete your personal data through a dedicated online form.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app needs your camera to take photos and videos for editing, and may use your microphone for certain features. Your captured content is stored on Picsart servers.",
+      "detail": "Camera is required for core editing features. TrueDepth API data stays on device, but edited content is uploaded.",
+      "policy_excerpt": "With your permission (on download or within one of our apps), we may access and store your device's contact list... If you have an Apple iOS device and use the camera function with our services, we may automatically collect data about the spatial positioning of a person's head or face within an image frame using Apple's TrueDepth API.",
+      "concerns": [
+        "Camera access is core to the app.",
+        "User-uploaded photos and videos are stored on servers."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Picsart collects your approximate location from your IP address or device settings. Geotags on photos may also reveal your location if you share them publicly.",
+      "detail": "Approximate location from IP/device settings. Geotags may be stored with photos and searchable if public.",
+      "policy_excerpt": "We also require data about your location, which we approximate from your IP address or device settings... If you geotag your photo or tag your photo using others' APIs, then the latitude and longitude coordinates may be stored with the photo and may be searchable",
+      "concerns": [
+        "Geotags can expose precise location if photos are public."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you allow it, Picsart uploads your entire contact list to its servers to help you find friends on the platform.",
+      "detail": "Contact list is accessed and stored on servers for friend-finding and sharing. Also collected from linked social accounts.",
+      "policy_excerpt": "With your permission (on download or within one of our apps), we may access and store your device's contact list to help you find your friends on Picsart",
+      "concerns": [
+        "Contacts are uploaded to servers.",
+        "Social account linking also pulls contact/friend data."
+      ],
+      "score_impact": 13.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to give the app access to your photos and videos so you can edit them. This is user-initiated and core to the app.",
+      "detail": "User-initiated file selection for editing. The app does not continuously scan your library without permission.",
+      "policy_excerpt": "We also collect visual information through the images that you post to our services, including your profile photos.",
+      "concerns": [
+        "Edited and posted content is stored on Picsart servers."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Picsart shares your information with advertising networks, analytics providers like Google and Facebook, and other service providers to run the app and show you ads.",
+      "detail": "Shares with ad networks, analytics (Google Analytics, Crashlytics, Firebase, Facebook), service providers, subsidiaries, and affiliates. Also shared in business transactions.",
+      "policy_excerpt": "Ad networks and other ad serving providers (collectively, our 'Ad Network') that serve ads on behalf of others on our platform.",
+      "concerns": [
+        "Ad networks receive data for interest-based advertising.",
+        "Analytics data shared with Google and Facebook."
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must create an account with personal details, and Picsart may use this information to build advertising profiles and personalize marketing.",
+      "detail": "Account info required. Used for marketing and ad targeting. Linked to social accounts which pull public profile data.",
+      "policy_excerpt": "When you create an account we collect the information you provide us through text fields, including contact and other identifying information... Market Picsart services and deliver targeted advertising to you",
+      "concerns": [
+        "Identity data is used for targeted advertising.",
+        "Linked to social media accounts for friend-finding."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Picsart shows you interest-based ads based on your activity on the app and other websites. It uses cookies and works with ad networks to track you.",
+      "detail": "Interest-based advertising supported. Ad networks track across platforms. Do Not Track not recognized. DAA opt-out available.",
+      "policy_excerpt": "Your use of Picsart is supported, in part, by interest-based advertising... Our Ad Network may serve ads on behalf of Picsart and others on our platform and non-affiliated platforms.",
+      "concerns": [
+        "Cross-app and cross-site behavioral tracking.",
+        "Do Not Track signals are ignored."
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Children under 13 are not allowed to use Picsart. If the company finds out a child under 13 signed up, they will delete the account.",
+      "detail": "13+ requirement. Account deletion if underage user detected. No specific COPPA compliance details.",
+      "policy_excerpt": "You are not allowed to use our services if you are under the age of 13, and our services are not directed at children under the age of 13. If we become aware that we have received personal Information from a person under the age of 13, we will delete this information and terminate the person's account",
+      "concerns": [
+        "Age gate relies on self-reporting."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Picsart logs your IP address, searches, clicks, and interactions to improve the app and target ads.",
+      "detail": "Log data includes IP, browser, device, search terms, clicks, cookie data. Used for analytics and ads.",
+      "policy_excerpt": "Log data... includes your IP address, browser type and settings, the date and time of your visit, search terms, which elements of our site and services you use the most, device data, and cookie data.",
+      "concerns": [
+        "IP and activity logged continuously."
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Picsart collects detailed device data and advertising identifiers to track you across apps and personalize ads.",
+      "detail": "Device data and advertising identifiers collected. Used for analytics and interest-based advertising.",
+      "policy_excerpt": "Device data. We collect and combine data about the devices you use to access Picsart, and data about your device usage and activity.",
+      "concerns": [
+        "Advertising identifiers collected and shared with ad networks."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you use face effects, Picsart collects and stores your facial geometry data on its servers for up to three years.",
+      "detail": "Biometric data (facial geometry) collected for effects. Stored for up to 3 years after account inactivity. Not sold. Destroyed upon earliest of purpose satisfaction, account termination, or 3 years inactivity.",
+      "policy_excerpt": "Picsart may use facial geometry or other facial data to produce the image or effect you request... We will destroy your biometric data upon the earliest of: (a) the date when our purpose for collecting or obtaining your biometric data has been satisfied, (b) termination of your Picsart account, or (c) within 3 years of the date your account becomes inactive.",
+      "concerns": [
+        "Biometric data stored on servers for up to 3 years.",
+        "Not used for identification, but still sensitive."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payments for subscriptions are processed through app store billing or third-party processors. Picsart does not store your raw credit card numbers directly.",
+      "detail": "Payment processing likely handled by Apple/Google in-app purchase or third-party processors. Not explicitly detailed in policy.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy does not explicitly detail payment handling."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request to delete your personal information through a privacy request form, but some data may be kept for legal or business reasons.",
+      "detail": "Deletion available via Privacy Request Form or email. Some data retained for legal obligations. Account settings allow limited management.",
+      "policy_excerpt": "Picsart provides you the option to delete the personal information we have collected about you... To exercise any of these rights, including to delete your data, please make a request using Picsart's Privacy Request Form",
+      "concerns": [
+        "Some data may be retained after deletion request for legal reasons."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Picsart may update its privacy policy at any time. If there are big changes, it may notify you on its website or app, or by email.",
+      "detail": "Changes posted to website. Material changes may be notified via website, app, email, or push. Continued use constitutes agreement.",
+      "policy_excerpt": "If we make material changes, we may notify you through other methods as required by law, such as at picsart.com, in our mobile applications, by sending email... If you continue to use Picsart after those changes are in effect, you agree to the new policy.",
+      "concerns": [
+        "Continued use after changes constitutes acceptance."
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "risky",
+        "max": 20,
+        "rate": 0.65,
+        "deduction": 13.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 103.5,
+    "final_score": 50,
+    "grade": "D"
+  }
+}

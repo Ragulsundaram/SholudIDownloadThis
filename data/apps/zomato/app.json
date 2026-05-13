@@ -1,0 +1,435 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.zomato.com/privacy",
+    "terms_url": "",
+    "policy_last_updated": "2025-07-25",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "zomato",
+    "name": "Zomato: Food Delivery & Dining",
+    "developer": "Zomato Media Pvt. Ltd.",
+    "app_store_url": "https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896",
+    "app_store_id": "434613896",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/74/28/67/7428677e-dc22-e562-dc19-316ea7dceec1/Placeholder.mill/400x400bb-75.webp",
+    "category": "Food & Drink",
+    "sub_category": "",
+    "description": "Discover restaurants, read reviews, and order food for delivery or dining out."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 48,
+    "grade": "D",
+    "one_liner": "A food delivery and dining app that collects extensive personal data and shares it with a wide network of partners.",
+    "summary": "Zomato is a popular food delivery and restaurant discovery platform, but its privacy practices raise serious concerns. It uploads your contact list, accesses files on your device, stores your payment card details, and shares data with data brokers and advertising networks. The policy also states that continued use automatically accepts any future changes, with no advance notice required.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Zomato collects and shares a large amount of sensitive information, including contacts, device files, and payment details, with advertisers and data brokers. Its policy automatically binds you to future changes without explicit notice. Consider carefully whether the convenience is worth the privacy trade-off."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_file_access",
+        "title": "App can access files and metadata on your phone",
+        "plain_english": "Zomato's apps can access photos, audio clips, video files, and your address book stored on your device.",
+        "severity": "high"
+      },
+      {
+        "id": "red_contact_upload",
+        "title": "Contact list uploaded to servers",
+        "plain_english": "If you grant access, Zomato collects and stores your entire contact book to help you find friends on the platform.",
+        "severity": "high"
+      },
+      {
+        "id": "red_payment_storage",
+        "title": "Payment cards stored and shared",
+        "plain_english": "Zomato collects your credit or debit card information and shares it with payment processors. Your card details may be stored for future transactions.",
+        "severity": "high"
+      },
+      {
+        "id": "red_auto_accept_policy",
+        "title": "Policy changes accepted automatically",
+        "plain_english": "Zomato can update its privacy policy anytime, and simply continuing to use the app means you agree to the new terms without actively confirming.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_brokers",
+        "title": "Data shared with brokers and affiliates",
+        "plain_english": "Your information is shared with data brokers, analytics providers, and Eternal group companies like Blinkit and Hyperpure.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_undeletable_ids",
+        "title": "Mobile ad IDs cannot be deleted",
+        "plain_english": "Zomato notes that unlike cookies, the mobile device advertising identifiers it collects cannot be deleted by users.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_pci_compliant",
+        "title": "Payment processors are PCI compliant",
+        "plain_english": "The third-party companies that handle your payment card information meet industry security standards.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Account deletion is possible",
+        "plain_english": "You can request permanent deletion of your account, though some backups and legal records may remain.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos and videos, such as restaurant reviews or food pictures. The app also uses CCTV at events and offices for security.",
+      "detail": "User-initiated photo/video uploads for reviews and content. CCTV used at facilities for security.",
+      "policy_excerpt": "Image / video data: We may collect and process images and video recordings of individuals attending events or visiting our office premises for security and safety purposes.",
+      "concerns": [
+        "CCTV footage captured at offices and events."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato collects your GPS location to show nearby restaurants and offers. This is needed for the app to work well.",
+      "detail": "Precise GPS location collected via mobile device. Associated with device ID and other info. Core to service delivery.",
+      "policy_excerpt": "Precise and real-time location information: When you use one of our location-enabled services... we may collect and process information about your mobile device's GPS location",
+      "concerns": [
+        "Precise location continuously collected and linked to device ID."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you allow it, Zomato uploads your contact list to find friends and enable social features. The contacts are stored and processed.",
+      "detail": "Contact list uploaded for friend-finding and social features. Stored and processed. User warrants they have consent from contacts.",
+      "policy_excerpt": "If you choose to utilise any of our services which require uploading of your contact book, then we will collect and process such information as well, which could include the name and phone number of contacts stored on your device(s).",
+      "concerns": [
+        "Contacts uploaded and stored on servers."
+      ],
+      "score_impact": 13.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Zomato's app can access metadata and files stored on your device, including photos, audio clips, and your address book.",
+      "detail": "Applications may access metadata and files stored on mobile device, including photos, audio, video clips, personal contacts.",
+      "policy_excerpt": "Stored information and files: Our applications may also access metadata and other information associated with files stored on your mobile device. This may include, for example, photographs, audio and video clips, personal contacts and address book information.",
+      "concerns": [
+        "Broad file and metadata access on device."
+      ],
+      "score_impact": 6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato shares your data with its affiliates like Blinkit and Hyperpure, advertisers, data brokers, analytics providers, and social media platforms.",
+      "detail": "Shares with subsidiaries/affiliates, contractors, advertisers, service providers, data brokers, analytics, social networks, and merchants.",
+      "policy_excerpt": "To our subsidiaries and affiliates, which are entities under common ownership or control of our ultimate parent company, Eternal Limited. This may include Blinkit, District, Hyperpure... To contractors, suppliers, advertisers/service providers... data brokers, analytics providers",
+      "concerns": [
+        "Data shared with data brokers and many advertising partners.",
+        "Cross-group sharing with Blinkit and Hyperpure."
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato requires personal details to create an account and may combine your data with third-party sources to target ads and personalize your experience.",
+      "detail": "Account info required. Combined with third-party data (social login, business partners, data enrichment) for tailored advertising and service improvement.",
+      "policy_excerpt": "We expressly reserve the right to combine information obtained from any third-party sources with the information we collect directly from you... provide tailored advertising and experiences",
+      "concerns": [
+        "Identity data combined with third-party marketing data."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato uses cookies, device IDs, and ad networks to show you targeted ads based on your activity. Third-party advertisers also track you independently.",
+      "detail": "Cookies, pixel tags, web beacons, mobile device IDs used. Ad networks (Google Analytics, DoubleClick) serve tailored ads. Third-party advertisers use own tracking.",
+      "policy_excerpt": "We, and third parties with whom we partner, may use cookies, pixel tags, web beacons, mobile device IDs... to collect and store information in respect to your use of the Services and third party websites... Eternal uses pixel tags to measure the popularity of our various pages, features and services.",
+      "concerns": [
+        "Third-party ad networks track independently.",
+        "Mobile device IDs used for tracking."
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato is not meant for children under 18. Limited services may involve minors with parental consent, but there are no strong child-specific safeguards.",
+      "detail": "Not directed at under 18. Limited info about minors collected only with parental consent for specific services. No detailed child privacy program.",
+      "policy_excerpt": "Our Services are generally not directed to or intended for use by individuals under the age of 18... we recognize that certain services offered through our platform may be open to use by Minors.",
+      "concerns": [
+        "No detailed COPPA or child-specific safeguards described."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato logs your IP address, searches, pages viewed, and clicks. This data is used for ads, analytics, and personalization.",
+      "detail": "Service usage data includes search queries, pages viewed, clicks, time spent, referral URLs, IP. Used for analytics and advertising.",
+      "policy_excerpt": "Service Usage & Activity Data: Details about your interactions with our Services, such as search queries, pages viewed, features used, content interactions (clicks, scrolls, time spent)... referral URLs",
+      "concerns": [
+        "IP and activity logged for profiling and ads."
+      ],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato collects your device ID, advertising identifiers, operating system, and mobile network details to track and identify your device.",
+      "detail": "Collects Apple IDFA, Android Ad ID, unique device identifiers, device type, OS, mobile network. Used for tracking, ads, and preferences.",
+      "policy_excerpt": "unique device identifiers (such as Apple IDFA, Android Advertising ID, or other manufacturer-assigned IDs), mobile network information, device settings... Unlike cookies, mobile device IDs cannot be deleted.",
+      "concerns": [
+        "Mobile device IDs cannot be deleted by users."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato does not collect health or biometric data from regular users.",
+      "detail": "No health or biometric data collection for general users. Biometric data mentioned only for Service Partners (delivery partners).",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0.0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato collects and stores your payment card details, and shares them with third-party payment processors. Your card may be stored for future transactions.",
+      "detail": "Credit/debit card info collected and stored. Shared with PCI compliant payment gateways. Third parties may store card for future use.",
+      "policy_excerpt": "If you make reservations or purchases through our Services, we may collect and store information about you to process your requests and automatically complete forms for future transactions, including (but not limited to) your phone number, address, email, billing information and credit or payment card information.",
+      "concerns": [
+        "Payment card information stored by Zomato and shared with third parties.",
+        "Cards may be retained for future transactions."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request account deletion, but backups may remain and there are several legal limitations.",
+      "detail": "Deletion via Contact Us. Copies/backups may remain for recovery and legal rights. Limitations apply for legal proceedings, abuse, etc.",
+      "policy_excerpt": "Once you have requested for deletion of the data associated with your account, we will not be able to restore your account or any of its associated data to you. Copies and backups of your personal information may continue to remain in our backup storage used for recovery in case of contingencies, as well as for enforcing our legal rights and fraud / risk mitigation purposes.",
+      "concerns": [
+        "Backups retained after deletion.",
+        "Limitations on rights based on legal proceedings."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Zomato can change its privacy policy at any time. Your continued use of the app after changes means you automatically accept them.",
+      "detail": "Policy may change from time to time. Continued use deemed acceptance. No advance notice or active re-consent required.",
+      "policy_excerpt": "This policy may change from time to time, your continued use of Eternal's Services after it makes any change is deemed to be acceptance of those changes, so please check the policy periodically for any updates.",
+      "concerns": [
+        "No advance notice or active consent for policy changes."
+      ],
+      "score_impact": 3.25
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "risky",
+        "max": 20,
+        "rate": 0.65,
+        "deduction": 13.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      }
+    ],
+    "total_deductions": 106.0,
+    "final_score": 48,
+    "grade": "D"
+  }
+}

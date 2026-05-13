@@ -1,0 +1,436 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://rapido.bike/privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "rapido",
+    "name": "Rapido: Bike-Taxi, Auto & Cabs",
+    "developer": "Roppen Transportation Services Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/rapido-bike-taxi-auto-cabs/id1198464606",
+    "app_store_id": "1198464606",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a8/8f/17/a88f17f1-dcf7-9283-36ae-d0c60bda99ef/Placeholder.mill/400x400bb-75.webp",
+    "category": "Travel",
+    "sub_category": "Ride Hailing",
+    "description": "Bike-taxi, auto and cab ride-hailing service in India."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "Collects extensive location, identity, and device data, but explicitly avoids targeted advertising.",
+    "summary": "Rapido gathers significant personal data including background location for Captains, government IDs, health declarations, and broad device information. On the positive side, it states it does not use data for targeted advertising and limits retention to 180 days after account closure.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are a Customer, location sharing is limited to active trips. If you are a Captain, be aware that extensive personal data including government IDs and background location are required."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_background_location",
+        "title": "Captains are tracked even when the app is closed",
+        "plain_english": "Rapido collects location data in the background whenever Captains enable On-Duty, even when the app is not in use.",
+        "severity": "high"
+      },
+      {
+        "id": "red_government_id_collection",
+        "title": "Government IDs and selfies are required for Captains",
+        "plain_english": "Rapido collects Aadhaar, PAN, driving license, and real-time selfies for identity verification.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_collection",
+        "title": "Health information is collected from Captains",
+        "plain_english": "Rapido may collect body temperature, symptoms, and vaccination status from Captains.",
+        "severity": "high"
+      },
+      {
+        "id": "red_broad_data_sharing",
+        "title": "Your data may be shared for market research and other purposes",
+        "plain_english": "Rapido may share your information with third parties for market studies, data analysis, and to make other benefits or services available to you.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_call_recording",
+        "title": "Calls with Rapido may be recorded for Captains",
+        "plain_english": "If you are a Captain or Vendor Partner, Rapido records your calls with them and stores related call details.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_targeted_ads",
+        "title": "No targeted advertising",
+        "plain_english": "Rapido explicitly states it does not use your information for targeted advertising.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_retention_limit",
+        "title": "Data deleted after 180 days",
+        "plain_english": "After account termination, Rapido retains data for only 180 days before deletion or anonymization.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_local_law_compliance",
+        "title": "Complies with Indian IT Act",
+        "plain_english": "Rapido states compliance with the Information Technology Act, 2000 and applicable laws.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera is used for Captains and Vendor Partners to upload profile pictures, vehicle documents, and real-time selfies for identity verification.",
+      "detail": "Camera access is required for identity verification and document uploads for Captains. Customers may not need it.",
+      "policy_excerpt": "If you are a Captain we may also require you to capture your real time self-clicked images (selfies) and upload such selfies on the Rapido Platform.",
+      "concerns": [
+        "Real-time selfies uploaded to servers"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Rapido collects precise location during active trips and tracks Captains in the background when On-Duty is enabled.",
+      "detail": "Customers: location collected from request until trip finish when app is in foreground. Captains: background location collected when On-Duty icon is active.",
+      "policy_excerpt": "Rapido collects location data when the Rapido App is running in the foreground (app is open and on-screen) or background (app is not in use) in your mobile device.",
+      "concerns": [
+        "Background location for Captains",
+        "Customer location linked to account even if customer does not enable location"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Rapido may collect emergency contact details and, if you refer a friend, their name and contact information.",
+      "detail": "Contact data is not broadly collected for all users, but referral features and emergency contacts involve collecting others' data.",
+      "policy_excerpt": "In case you refer a friend, we may also collect, store, and use the name and contact information of your friend to promote our Services.",
+      "concerns": [
+        "Referral data collected without consent of the friend"
+      ],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido may access other apps on your device if you are a Captain or Vendor Partner to help prevent fraud.",
+      "detail": "The policy mentions accessing other applications on the Device for fraud prevention purposes for Captains/Vendor Partners.",
+      "policy_excerpt": "In case you sign up as a Captain or a Vendor Partner, enable features that require Rapido's access to other applications on your Device aiming to prevent and detect fraud towards the Customers.",
+      "concerns": [
+        "Access to other apps on device for Captains"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido shares data with service providers, co-branded partners, government agencies, and for market research purposes.",
+      "detail": "Data is shared with TPSPs, business partners, analytics providers, payment processors, government, and for corporate transfers.",
+      "policy_excerpt": "We may share the Information you provide with our TPSPs, business partners, and agents.",
+      "concerns": [
+        "Broad sharing for market research and business purposes",
+        "Government and law enforcement sharing"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido collects extensive identity data including government IDs, photos, KYC documents, and banking information.",
+      "detail": "Account information includes email, name, address, mobile, gender, DOB, photo, password, banking info, plus government IDs and vehicle documents for Captains.",
+      "policy_excerpt": "Account Information: Create or update your Rapido account which may include your email address, name, address, mobile number, gender, date of birth, photograph... banking or payment related information... copies of government issued identification documents such as Aadhaar, Permanent Account Number, etc.",
+      "concerns": [
+        "Government IDs collected for Captains",
+        "Banking information collected"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido tracks usage patterns and device behavior for fraud prevention and personalization, but says it does not use data for targeted ads.",
+      "detail": "Usage info, searches, touch gestures, scrolling, and other behavior are collected. The policy explicitly states no targeted advertising.",
+      "policy_excerpt": "Please note, we do not use the information collected from you for targeted advertising.",
+      "concerns": [
+        "Extensive behavior tracking despite no targeted ads"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not for children under 18 and requires legally binding contract capacity.",
+      "detail": "Rapido explicitly states it does not knowingly collect information from children under 18 and requires users to be able to enter into legally binding contracts.",
+      "policy_excerpt": "We do not knowingly solicit or collect Information from children under the age of 18 years. Use of the Rapido App is only available for persons who can enter into a legally binding contract under Applicable Laws.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido logs your IP address, browser type, and usage patterns for security and fraud detection.",
+      "detail": "Usage Information includes browser, URL referrer, areas visited, time, searches, and behavior on the app.",
+      "policy_excerpt": "This Usage Information may include the browser that you are using, the URL that referred you to our Services, all of the areas within our Services that you visit, and the time of day, searches and search results, or usage behavior on the Rapido App.",
+      "concerns": [
+        "IP address logged",
+        "Usage behavior tracked"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido collects extensive device details including device ID, model, OS, installed apps, touch gestures, and scrolling activity.",
+      "detail": "Device information includes technical info, aggregated usage, device identifier, manufacturer, model, OS, geolocation, mobile network, screens visited, touch gestures, scrolling, and actions performed.",
+      "policy_excerpt": "Device Identifier of your Device, your preferred language and country site, manufacturer, software, and model of your Device, Device type, operating systems and versions, your geolocation, mobile network data, screens you have visited, your touch gestures performed in your Rapido App, your scrolling activity, and any other actions you have performed during your use of Rapido App.",
+      "concerns": [
+        "Extensive device behavior tracking",
+        "Device identifiers collected"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido collects health-related information like body temperature, symptoms, and vaccination status from Captains.",
+      "detail": "Health data is collected from Captains including body temperature, symptoms, vaccination status, and other health conditions.",
+      "policy_excerpt": "If you are a Captain, we may collect certain health related Information and declarations such as body temperature, symptoms, vaccination status and other health conditions.",
+      "concerns": [
+        "Health data collected from Captains"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido collects banking and payment-related information to process transactions.",
+      "detail": "Payment and banking information is collected as permitted by applicable laws.",
+      "policy_excerpt": "Account Information: Create or update your Rapido account which may include... banking or payment related information (as permitted by Applicable Laws).",
+      "concerns": [
+        "Banking data collected"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can cancel your account and request data deletion, but data is retained for 180 days after termination.",
+      "detail": "Users can delete their account and request changes, but Rapido retains data for 180 days post-termination before deletion or anonymization.",
+      "policy_excerpt": "We will retain your Information including Personal Information and Usage Information (including geo-location, trip history, and transaction history) for a period of 180 days, to resolve disputes... After completion of such period, your data may either be deleted from our database or be anonymized and aggregated.",
+      "concerns": [
+        "180-day retention after account closure"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Rapido may update its policy at any time, and continued use after changes means you accept them. Material changes may be notified by email or app notice.",
+      "detail": "Changes are effective immediately upon posting. Material changes get email or app notice, but continued use equals acceptance.",
+      "policy_excerpt": "Any changes will be effective immediately upon the posting of the revised Policy on the Rapido Platform. If we make any material changes, we will notify you by email (sent to the e-mail address specified in your account) or by means of a notice on the Rapido App prior to the change becoming effective.",
+      "concerns": [
+        "Continued use = automatic acceptance"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "caution",
+        "max": 25,
+        "rate": 0.3,
+        "deduction": 7.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 90.0,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

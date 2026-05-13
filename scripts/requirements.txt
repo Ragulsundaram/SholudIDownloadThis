@@ -1,0 +1,5 @@
+playwright>=1.44.0
+httpx>=0.27.0
+beautifulsoup4>=4.12.0
+# Optional: swap in for Playwright where bot detection is an issue
+# scrapling>=0.2.0

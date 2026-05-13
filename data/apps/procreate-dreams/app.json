@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://procreate.com/app/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "procreate-dreams",
+    "name": "Procreate Dreams",
+    "developer": "Savage Interactive Pty Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/procreate-dreams/id1595520602",
+    "app_store_id": "1595520602",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/29/54/3a/29543af2-1480-97ae-0d13-43de43877374/Placeholder.mill/400x400bb-75.webp",
+    "category": "Photo & Video",
+    "sub_category": "Animation",
+    "description": "Animation and creative storytelling app with zero data collection."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 100,
+    "grade": "A",
+    "one_liner": "A rare privacy-perfect app that collects no data and requires no account.",
+    "summary": "Procreate Dreams keeps everything on your device. No data collection, no sharing, no ads, and no cloud connection make it one of the safest apps available.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "You can use Procreate Dreams without any privacy concerns. All your creative work stays entirely on your device."
+  },
+  "flags": {
+    "red": [],
+    "green": [
+      {
+        "id": "green_no_data_collection",
+        "title": "The app collects zero data about you",
+        "plain_english": "Procreate Dreams does not collect, store, or share any personal data while you use the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_local_storage_only",
+        "title": "All your work stays on your device",
+        "plain_english": "Your artwork, movies, brushes, and palettes are saved directly to your iPad and never uploaded.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_login_required",
+        "title": "No account needed",
+        "plain_english": "You can use the app fully without creating an account or logging in.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_network_connection",
+        "title": "The app never connects to the internet",
+        "plain_english": "Procreate Dreams does not connect to any web services, so your data never leaves your device.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera is only used for optional features like FacePaint and Palette Capture, and no camera data is collected or stored.",
+      "detail": "The app requests camera access for FacePaint (TrueDepth) and Palette Capture, but Savage explicitly states it does not collect or store camera data.",
+      "policy_excerpt": "Savage does not collect or store your TrueDepth data at any time.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access or collect location data.",
+      "detail": "No mention of GPS or location services in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No contact access is mentioned or required.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your artwork and files are saved locally on your iPad. The app only accesses storage to save your work.",
+      "detail": "All user content is stored directly on the device. No cloud backup or external storage is used.",
+      "policy_excerpt": "Your artwork, movies, Time-lapse videos, brushes and color palettes are all saved directly into your iPad.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "No data is collected, so there is nothing to share with third parties.",
+      "detail": "Savage explicitly states it does not collect or share any data when using the Applications.",
+      "policy_excerpt": "Savage does not collect or share any data when using the Applications.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "No login or account is required, so no identity data is collected.",
+      "detail": "Users are not required to log in to access data, artworks, or movies.",
+      "policy_excerpt": "You are not required to login to access your data, artworks, or movies.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There is no tracking or advertising of any kind.",
+      "detail": "The app does not connect to any web services and collects no usage data.",
+      "policy_excerpt": "The Applications do not connect to any Savage web services at any time.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "No children's data is collected because the app collects no data at all.",
+      "detail": "With zero data collection, there is no risk to children's data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not connect to the internet.",
+      "detail": "Procreate Dreams does not connect to any Savage web services at any time.",
+      "policy_excerpt": "The Applications do not connect to any Savage web services at any time.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "No device information is collected or shared.",
+      "detail": "With no data collection, no device fingerprinting occurs.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrueDepth camera data is used locally but never collected or stored.",
+      "detail": "FacePaint uses the TrueDepth API locally on device; Savage does not collect or store this biometric data.",
+      "policy_excerpt": "Savage does not collect or store your TrueDepth data at any time.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not handle payments or collect financial data.",
+      "detail": "No payment features are mentioned or available in the app.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "All your data is stored locally on your device, so you control it completely.",
+      "detail": "Since everything stays on the iPad, deleting the app or its data is entirely under user control.",
+      "policy_excerpt": "Your artwork, movies, Time-lapse videos, brushes and color palettes are all saved directly into your iPad.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Policy changes are unlikely to affect your privacy because no data is collected.",
+      "detail": "The privacy policy exists but the app's no-data-collection stance means changes have minimal practical impact.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "location_gps",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "safe",
+        "max": 30,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "account_identity",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "safe",
+        "max": 25,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "safe",
+        "max": 5,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "safe",
+        "max": 5,
+        "rate": 0.0,
+        "deduction": 0
+      }
+    ],
+    "total_deductions": 0,
+    "final_score": 100,
+    "grade": "A"
+  }
+}

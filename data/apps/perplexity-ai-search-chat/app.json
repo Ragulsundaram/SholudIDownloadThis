@@ -1,0 +1,433 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.perplexity.ai/privacy",
+    "terms_url": "",
+    "policy_last_updated": "2026-02-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "perplexity-ai-search-chat",
+    "name": "Perplexity - AI Search & Chat",
+    "developer": "Perplexity AI Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/perplexity-ai-search-chat/id1668000334",
+    "app_store_id": "1668000334",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fe/23/6f/fe236fd3-235a-cd82-de80-c3e178cc4aed/Placeholder.mill/400x400bb-75.webp",
+    "category": "Productivity",
+    "sub_category": "",
+    "description": "AI-powered search and chat that delivers direct answers with cited sources."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 55,
+    "grade": "C",
+    "one_liner": "A smart AI search app that collects broad usage data and shares it with advertisers and partners.",
+    "summary": "Perplexity offers powerful AI search, but its privacy practices involve extensive data sharing with advertising partners, data enrichment firms, and third-party platforms. While it provides decent deletion options, the broad collection of device data, approximate location, and optional email content raises notable privacy concerns.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app shares data with a wide network of advertisers and data brokers, and automatically collects location and device identifiers. If you value privacy, consider using it without syncing personal email accounts or creating an account."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_data_brokers",
+        "title": "Data shared with advertisers and brokers",
+        "plain_english": "Perplexity shares your information with advertising partners, data enrichment companies, and consumer marketing databases that build profiles about your interests and habits.",
+        "severity": "high"
+      },
+      {
+        "id": "red_email_content",
+        "title": "Optional email sync reads message content",
+        "plain_english": "If you connect your Gmail or Google Calendar, Perplexity can access the content of your emails and contacts. They promise not to use this to train AI, but they still store and process it.",
+        "severity": "high"
+      },
+      {
+        "id": "red_tracking",
+        "title": "Heavy ad tracking and profiling",
+        "plain_english": "The app uses cookies, device identifiers, and third-party analytics to track your activity across sessions and personalize ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Device fingerprinting for ads",
+        "plain_english": "Perplexity collects your device type, unique identifiers, and IP address, which are combined with data from partners to target ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_cross_border",
+        "title": "Data transferred to the United States",
+        "plain_english": "Your personal information is stored and processed on servers in the US, which may have weaker privacy protections than your home country.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_ai_training",
+        "title": "Email content not used for AI training",
+        "plain_english": "Perplexity explicitly states that if you sync your email, the content is not used to create, train, or improve their AI models.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Account deletion available",
+        "plain_english": "You can delete your account through settings, and Perplexity aims to remove your personal information within 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_ai",
+        "title": "Opt-out of AI improvement data",
+        "plain_english": "You can opt out of having your searches used to improve Perplexity's AI models through your account settings.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your camera or microphone.",
+      "detail": "Policy is silent on camera and microphone access for the mobile application.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy does not address camera or microphone usage."
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Perplexity automatically collects your approximate location from your IP address or device settings to tailor features and content.",
+      "detail": "Approximate location is collected automatically via IP or device settings as part of Usage Data.",
+      "policy_excerpt": "Location information, such as approximate location.",
+      "concerns": [
+        "Location is collected automatically without requiring explicit consent for each use."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you sync your Google account or email, Perplexity may access your contacts to facilitate features. This is optional.",
+      "detail": "Email Service Information includes contacts from synced accounts. Optional and user-initiated.",
+      "policy_excerpt": "we will have access to your contacts and information from the email messages and calendar appointments in your email account",
+      "concerns": [
+        "Contacts are accessed if email sync is enabled."
+      ],
+      "score_impact": 6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses files or storage on your device.",
+      "detail": "Policy is silent on local file or photo library access for the mobile app.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy does not address storage or file access."
+      ],
+      "score_impact": 5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Perplexity shares your data with advertising partners, data enrichment firms, analytics providers, and business partners.",
+      "detail": "Discloses to Company Group, Service Providers, Business Partners, Advertising Partners, and Other Third Parties. Receives data from consumer marketing databases and data enrichment companies.",
+      "policy_excerpt": "We may disclose your information to third parties subject to this Privacy Policy, including the following categories of third parties: Advertising Partners",
+      "concerns": [
+        "Broad sharing with advertising and data enrichment partners.",
+        "Receives data from third-party marketing databases."
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide personal details to create an account, and Perplexity may link this data to advertising profiles through third-party partners.",
+      "detail": "Account information is required. Third-party platform info and public info may be combined. Advertising Information from data enrichment companies used to customize ads.",
+      "policy_excerpt": "Information we receive from consumer marketing databases or other data enrichment companies, which we use in our legitimate interests to better customize advertising and marketing to you",
+      "concerns": [
+        "Identity data is linked to advertising and marketing profiles."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Perplexity tracks your activity across the app and web using cookies and device identifiers to deliver personalized ads and measure campaigns.",
+      "detail": "Uses Tracking Technologies for analytics, ad impressions, and tailoring content. Shares data with advertising partners.",
+      "policy_excerpt": "We and certain third parties also automatically collect certain information about your interaction with the Services through the use of cookies, pixels, tags and other tracking technologies",
+      "concerns": [
+        "Cross-site tracking via cookies and pixels.",
+        "Data shared with ad partners for targeting."
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Children under 13 are not allowed to use the service, but there is no strong enforcement mechanism described.",
+      "detail": "States 13+ requirement. No detailed COPPA compliance mechanism.",
+      "policy_excerpt": "Children under the age of 13 are not permitted to use the Services, and we do not seek or knowingly collect any personal information about children",
+      "concerns": [
+        "Age requirement stated but enforcement not described."
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Perplexity logs your IP address, browser type, clicks, and interactions to analyze trends and personalize content.",
+      "detail": "Usage Data includes IP address, browser type, log data, clickstream data, and ad impressions.",
+      "policy_excerpt": "Other information regarding your interaction with the Services, such as browser type, log data, date and time stamps, clickstream data, interactions with marketing emails, and ad impressions.",
+      "concerns": [
+        "IP and clickstream data collected automatically."
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Perplexity collects your device type, operating system, unique device identifier, and IP address to tailor ads and analyze usage.",
+      "detail": "Device information collected as Usage Data and shared with analytics and advertising partners.",
+      "policy_excerpt": "Device information, such as device type, operating system, unique device identifier, and internet protocol (IP) address.",
+      "concerns": [
+        "Unique device identifiers collected and used for analytics and ads."
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you choose to use Perplexity Health, you may voluntarily provide health-related information. This is completely optional.",
+      "detail": "Health information is collected only with voluntary consent for Perplexity Health.",
+      "policy_excerpt": "Where available in your location, any health information you choose to provide. We use this information when you voluntarily consent to opt in to Perplexity Health.",
+      "concerns": [
+        "Health data is collected only on opt-in basis."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment details are handled by a third-party processor. The app itself does not store your raw card numbers.",
+      "detail": "Payment information collected using a third-party payment processor.",
+      "policy_excerpt": "Payment information, such as credit or debit card information and billing address, which we collect using a third party payment processor",
+      "concerns": [
+        "Payment data is processed by a third party, reducing direct exposure."
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request to delete your account and data. Perplexity aims to delete personal information within 30 days and offers access and correction rights.",
+      "detail": "Users can delete account via settings. Deletion target is 30 days. Various GDPR/CCPA rights supported.",
+      "policy_excerpt": "If you delete your account, we aim to delete your personal information from our servers within 30 days.",
+      "concerns": [],
+      "score_impact": 0.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Perplexity may update its privacy policy and will try to notify you of material changes by email or posting a notice.",
+      "detail": "Material changes notified via email or posting. Continued use after update constitutes agreement.",
+      "policy_excerpt": "If we make material changes to the way in which we use or disclose information we collect, we will use reasonable efforts to notify you",
+      "concerns": [
+        "Continued use after changes constitutes acceptance."
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5.0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 93.25,
+    "final_score": 55,
+    "grade": "C"
+  }
+}

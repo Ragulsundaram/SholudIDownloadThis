@@ -7,7 +7,53 @@
 
 ## How to Use This
 
-### Option A — Just paste an App Store link (recommended)
+### Option A — Automated batch pipeline (recommended for multiple apps)
+
+The pipeline is split into two steps: **scrape** (pure Python, no API key) and **parse** (Claude Code does it natively, no extra cost).
+
+#### Step 1 — Scrape (one-time setup, then run as needed)
+
+**One-time setup:**
+```bash
+pip install -r scripts/requirements.txt
+playwright install chromium
+```
+
+**Run the scraper:**
+```bash
+# All apps in a room/collection page
+python scripts/scrape.py https://apps.apple.com/in/iphone/room/6748333199
+
+# Single app
+python scripts/scrape.py https://apps.apple.com/in/app/pinterest/id429047995
+
+# Mix of both
+python scripts/scrape.py <room-url> <single-app-url>
+```
+
+The script will:
+1. Render the JS-heavy room page with a headless browser
+2. Skip apps already in `data/apps/` or `data/staging/`
+3. For each new app: scrape the App Store page → find the privacy policy link → fetch the full policy text
+4. Save raw data to `data/staging/{slug}.json` (no parsing yet)
+
+#### Step 2 — Parse (Claude Code, no API key needed)
+
+After scraping, tell Claude Code:
+
+> "Process the staged apps"
+
+Claude Code will read each `data/staging/{slug}.json`, apply the system prompt below, and write:
+- `data/apps/{slug}/app.json`
+- `data/reviews/{slug}-ios.md`
+- Update `data/index.json`
+
+Then delete the processed staging files.
+
+---
+
+### Option B — Single app via Claude conversation
+
 1. Open a new Claude conversation
 2. Copy everything inside the `--- SYSTEM PROMPT START ---` block below as your first message
 3. In your next message, paste only the App Store URL, e.g. `https://apps.apple.com/us/app/signal-private-messenger/id874139669`
@@ -15,13 +61,14 @@
 5. Copy the JSON into `/data/apps/{app-slug}/app.json`
 6. Add the lightweight index entry to `/data/index.json`
 
-### Option B — Paste raw text manually
-Follow the same steps, but instead of just a URL, paste the app metadata and raw privacy policy text yourself (see example at the bottom).
+### Option C — Paste raw text manually
+Follow the same steps as Option B, but instead of just a URL, paste the app metadata and raw privacy policy text yourself (see example at the bottom).
 
 ---
 
 ## Tips for Best Results
 
+- The automated pipeline (Option A) skips apps already in `data/apps/` — safe to re-run
 - Include both the Privacy Policy AND Terms & Conditions if available — they often contain complementary information
 - If the policy is very long, include all of it. Claude can handle long documents
 - If you cannot find the policy URL, note "Policy URL not found" and include the raw text anyway

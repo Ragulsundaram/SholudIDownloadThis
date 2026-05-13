@@ -1,0 +1,322 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-13",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://support.google.com/gemini/answer/13594961",
+    "terms_url": "https://policies.google.com/terms",
+    "policy_last_updated": "2026-05-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "google-gemini",
+    "name": "Google Gemini",
+    "developer": "Google LLC",
+    "app_store_url": "https://apps.apple.com/in/app/google-gemini/id6477489729",
+    "app_store_id": "6477489729",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/86/ef/fe/86effe18-5a1a-db25-9f35-2e47097c7dc6/Placeholder.mill/400x400bb-75.webp",
+    "category": "Productivity",
+    "sub_category": "AI Assistant",
+    "description": "Google's AI assistant that helps with writing, planning, learning, and more using generative AI."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "Gemini is a capable AI assistant, but Google saves your chats, shares them with human reviewers, and uses them to improve its AI models.",
+    "summary": "Google Gemini collects everything you type, upload, or share with it, including conversations, files, photos, and screen recordings. Your data is stored in your Google Account, may be reviewed by humans, and is used to train and improve Google's AI models. Location and device data are also collected.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Be careful what you share with Gemini. Google saves your chats by default, and some are reviewed by humans. Turn off 'Keep Activity' if you want more privacy, but even then some data is retained for up to 72 hours."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_human_review",
+        "title": "Your chats may be reviewed by humans",
+        "plain_english": "A subset of your Gemini chats are reviewed by human reviewers, including Google's service providers, to improve AI models and ensure safety. These reviewed chats are kept for up to three years, even if you delete your activity.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_retention",
+        "title": "Chats kept for 72 hours even with activity off",
+        "plain_english": "Even if you turn off 'Keep Activity', Google still saves your chats for 72 hours so it can respond to you and process feedback. Some data is retained for years for security and legal reasons.",
+        "severity": "high"
+      },
+      {
+        "id": "red_connected_apps",
+        "title": "Connected apps share your data with Gemini",
+        "plain_english": "Gemini can connect to your Google apps like Gmail, Google Photos, YouTube, and Maps, and pull data from them to answer your questions. This means Gemini has access to your emails, photos, and browsing history.",
+        "severity": "high"
+      },
+      {
+        "id": "red_accidental_activation",
+        "title": "Gemini can record audio accidentally",
+        "plain_english": "Gemini may activate accidentally if it hears a noise that sounds like 'Hey Google'. When this happens, it records audio and may use it to improve Google's services.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_activity_controls",
+        "title": "You can turn off activity saving",
+        "plain_english": "You can turn off 'Keep Activity' in Gemini's settings so future chats are not saved or used to train AI models. You can also delete past chats at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads",
+        "title": "Chats are not used to show you ads",
+        "plain_english": "Google explicitly states that your Gemini chats are not being used to show you ads. If this changes, they say they will clearly communicate it.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_export_delete",
+        "title": "You can export and delete your data",
+        "plain_english": "Google allows you to review and delete your Gemini activity, manage your data through Google Account settings, and export your information.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Gemini can use your camera and microphone for Gemini Live and video features, but only when you choose to use them. Audio recordings may start a few seconds before you activate it.",
+      "detail": "Camera and microphone are optional and used for Gemini Live, video sharing, and screen actions. The policy notes accidental activation may occur, and recordings may begin a few seconds before activation.",
+      "policy_excerpt": "Gemini Apps may activate when you didn't intend them to, for example, if there's a noise that sounds like 'Hey Google'. Audio recordings may begin a few seconds before activation.",
+      "concerns": ["Accidental activation may record audio"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Gemini always collects your general location from your IP address to give relevant answers. With your permission, it can also use your precise GPS location.",
+      "detail": "Location data is always collected at a general area level from IP or Google Account addresses. Precise location requires permission and may be shared with other Google services like Maps.",
+      "policy_excerpt": "Location data is always collected if you use Gemini Apps so that they can provide you with a response that is relevant to your query.",
+      "concerns": ["General location always inferred from IP"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Gemini can access your contacts to help you send messages or make calls through Connected Apps, but only if you allow it.",
+      "detail": "Contacts are accessed through Connected Apps like Phone and Messages. Up to 90 days of Google Assistant communications history may be imported for contact suggestions.",
+      "policy_excerpt": "System permissions and device data when you use Gemini mobile apps, such as call and message logs, contacts (to help you keep in touch).",
+      "concerns": ["Contact access through Connected Apps"],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload files, photos, and videos to Gemini for analysis. These uploads are stored in your Gemini Apps Activity if Keep Activity is on.",
+      "detail": "User-initiated uploads of images, videos, and documents. Stored in Gemini Apps Activity depending on settings. Not used to train models if Keep Activity is off (except feedback).",
+      "policy_excerpt": "What you share with Gemini Apps (like files, videos, screens you ask about, photos, imported chats, and page content you share from your browser).",
+      "concerns": ["Uploaded content may be reviewed by humans"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Gemini shares your data with other Google services, Connected Apps, and human reviewers. When using user-generated Canvas apps, your data is shared with the app creator.",
+      "detail": "Data shared with Google services, Connected Apps (Gmail, Photos, etc.), human reviewers for up to 3 years, and Canvas app creators. Third-party Connected Apps process data per their own policies.",
+      "policy_excerpt": "Gemini Apps work with Connected Apps, including Google apps and third-party services... If you use Gemini Apps to interact with third-party services, they process your data according to their own privacy policies.",
+      "concerns": [
+        "Human reviewers see some chats",
+        "Canvas app creators can see shared data",
+        "Third-party Connected Apps have their own policies"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need a Google Account to use Gemini. Google links all your activity across services to this account.",
+      "detail": "Google Account required. Name, email, device info, and activity are linked to your account. Data is used across Google services per the Google Privacy Policy.",
+      "policy_excerpt": "When you're signed in, we also collect information that we store with your Google Account, which we treat as personal information.",
+      "concerns": ["Cross-service account linking"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google says your Gemini chats are not used to show you ads. However, Gemini does use your data to personalise responses and improve AI models.",
+      "detail": "Gemini explicitly states chats are not used for ads. Data is used for service improvement, personalisation, and AI model training. Activity across other Google services is still used for ads.",
+      "policy_excerpt": "Your Gemini Apps chats are not being used to show you ads. If this changes, we will clearly communicate it to you.",
+      "concerns": ["Data used to personalise AI responses", "Activity across other Google services tracked for ads"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google requires users to be 13 or older for a Google Account. Family Link is available for supervised accounts.",
+      "detail": "Standard Google age requirement of 13+. Family Link allows parental management. Gemini-specific children's data handling follows the general Google policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Gemini logs your IP address, device interactions, and app usage continuously. This data is used for security, service improvement, and to personalise your experience.",
+      "detail": "IP address, browser type, device info, interaction logs, performance metrics, and crash data collected continuously. Used to provide, maintain, and improve services.",
+      "policy_excerpt": "Information about the apps, browsers, and devices you use to access Gemini Apps (such as identifiers, browser type and settings, device type and settings, operating system).",
+      "concerns": ["IP and device data continuously logged"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google collects detailed device information including identifiers, OS, and installed apps to run Gemini and personalise your experience.",
+      "detail": "Collects device identifiers, OS, browser, installed apps, language preferences, and screen content. Used for service provision, security, and personalisation.",
+      "policy_excerpt": "Information about the apps on your device (for example, to help you get things done using your apps); Information about the apps, browsers, and devices you use to access Gemini Apps.",
+      "concerns": ["Installed apps list collected", "Screen content may be captured"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Gemini does not collect health or biometric data.",
+      "detail": "No health or biometric data collection mentioned in the Gemini privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you subscribe to Gemini Advanced, Google collects payment information through your Google Account.",
+      "detail": "Subscription payment data collected via Google Account. Processed per Google Payments Privacy Notice.",
+      "policy_excerpt": "Subscription information: if you have a paid subscription to Gemini, subscription related information.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your Gemini chats and activity, but chats reviewed by human reviewers are kept for up to three years even after deletion.",
+      "detail": "Users can delete activity in Gemini Apps Activity. Even with Keep Activity off, chats retained for 72 hours. Human-reviewed chats kept for up to 3 years, disconnected from account.",
+      "policy_excerpt": "Chats reviewed by human reviewers (and related data like your language, device type, location info, or feedback) are not deleted when you delete your activity. Instead, they are retained for up to three years.",
+      "concerns": [
+        "Human-reviewed chats retained for 3 years",
+        "72-hour retention even with activity off"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Google can change the Gemini privacy policy at any time. Updates are posted with a new date and significant changes may be communicated to you.",
+      "detail": "Follows Google's general policy change process. Updated policies posted. Significant changes may be notified. No explicit re-consent required.",
+      "policy_excerpt": "This notice supplements the Google Privacy Policy... We change this Privacy Policy from time to time.",
+      "concerns": [],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5},
+      {"category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0},
+      {"category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25},
+      {"category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
+      {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
+      {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5}
+    ],
+    "total_deductions": 71.5,
+    "final_score": 65,
+    "grade": "C"
+  }
+}
