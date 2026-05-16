@@ -21,7 +21,7 @@
     "description": "Real-time GPS navigation, traffic, transit, and local exploration with Street View and reviews."
   },
   "verdict": {
-    "overall_risk": "risky",
+    "overall_risk": "caution",
     "score": 66,
     "grade": "C",
     "one_liner": "Google Maps tracks your precise location when you use it and uses it for targeted ads.",
@@ -84,7 +84,10 @@
       "plain_english": "Google may save audio recordings when you interact with Maps. The policy does not clearly explain camera use.",
       "detail": "The general Google Privacy Policy explicitly states audio recordings may be saved when you interact with Google Search, Assistant, and Maps. It is silent on whether Maps uses your camera.",
       "policy_excerpt": "For example, you can choose whether you want Google to save an audio recording to your Google Account when you interact with Google Search, Assistant, and Maps.",
-      "concerns": ["Audio recording explicitly mentioned for Maps", "Camera use not explicitly explained"],
+      "concerns": [
+        "Audio recording explicitly mentioned for Maps",
+        "Camera use not explicitly explained"
+      ],
       "score_impact": -4.5
     },
     {
@@ -99,7 +102,11 @@
       "plain_english": "Google Maps collects your precise location using GPS, sensors, Wi-Fi, and Bluetooth when you use the app to get directions and nearby search results.",
       "detail": "The general Google Privacy Policy describes location collection including GPS, sensor data, IP address, Wi-Fi access points, cell towers, and Bluetooth devices when you use its services. This is used for driving directions, nearby search results, and ads based on location.",
       "policy_excerpt": "We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location. Depending on the products you're using and settings you choose, Google may use different types of location information to help make some services and products you use more helpful. These include: GPS and other sensor data from your device; IP address; Activity on Google services, such as from your searches or places you label like home or work; Information about things near your device, such as Wi-Fi access points, cell towers, and Bluetooth-enabled devices.",
-      "concerns": ["Precise GPS tracked continuously", "Location used for advertising", "Wi-Fi and Bluetooth scanning"],
+      "concerns": [
+        "Precise GPS tracked continuously",
+        "Location used for advertising",
+        "Wi-Fi and Bluetooth scanning"
+      ],
       "score_impact": -9.75
     },
     {
@@ -114,7 +121,9 @@
       "plain_english": "The policy does not mention whether Google Maps accesses your phone contacts.",
       "detail": "The general Google Privacy Policy mentions suggesting recipients from contacts when sharing content, but does not explicitly state whether Maps accesses contacts.",
       "policy_excerpt": "",
-      "concerns": ["Policy silent on contact access for Maps"],
+      "concerns": [
+        "Policy silent on contact access for Maps"
+      ],
       "score_impact": 0
     },
     {
@@ -129,7 +138,9 @@
       "plain_english": "The policy does not mention whether Google Maps accesses files or photos stored on your device.",
       "detail": "The general Google Privacy Policy discusses content you create, upload, or receive, but does not specify whether Maps accesses local device files or photos.",
       "policy_excerpt": "",
-      "concerns": ["Policy silent on Maps file access"],
+      "concerns": [
+        "Policy silent on Maps file access"
+      ],
       "score_impact": 0
     },
     {
@@ -144,7 +155,10 @@
       "plain_english": "Google may share your information with affiliates, partners, and for legal reasons.",
       "detail": "The general policy lists consent, domain administrators, external processing with affiliates/service providers, and legal reasons as cases for sharing personal information. Non-personally identifiable information may be shared with partners.",
       "policy_excerpt": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons.",
-      "concerns": ["Data shared with affiliates and partners", "Law enforcement disclosures"],
+      "concerns": [
+        "Data shared with affiliates and partners",
+        "Law enforcement disclosures"
+      ],
       "score_impact": -19.5
     },
     {
@@ -159,7 +173,9 @@
       "plain_english": "You can use some Maps features without signing in, but a Google Account is required for saved places and location history.",
       "detail": "The general policy states many Google services can be used without an account. For Maps, core navigation may work without signing in, but features like saved places and location history require a Google Account.",
       "policy_excerpt": "You can use many Google services when you're signed out or without creating an account at all.",
-      "concerns": ["Location linked to identity when signed in"],
+      "concerns": [
+        "Location linked to identity when signed in"
+      ],
       "score_impact": -4.5
     },
     {
@@ -174,7 +190,10 @@
       "plain_english": "Google uses your location and activity across services to show you personalized ads.",
       "detail": "The general policy explicitly states location is used for ads and that personalized ads may be shown based on interests and activity across Google services.",
       "policy_excerpt": "ads based on your location. Depending on your settings, we may also show you personalized ads based on your interests and activity across Google services.",
-      "concerns": ["Location-based ad targeting", "Cross-service activity tracking"],
+      "concerns": [
+        "Location-based ad targeting",
+        "Cross-service activity tracking"
+      ],
       "score_impact": -16.25
     },
     {
@@ -204,7 +223,10 @@
       "plain_english": "Google collects your IP address, crash reports, and activity data when you use Maps, and may use your IP to estimate your location for ads.",
       "detail": "The general policy lists IP address, crash reports, system activity, and referrer URL as collected interaction data. IP address may be used for location estimation and ads.",
       "policy_excerpt": "We also collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.",
-      "concerns": ["IP address logged continuously", "IP used for location inference and ads"],
+      "concerns": [
+        "IP address logged continuously",
+        "IP used for location inference and ads"
+      ],
       "score_impact": -3.25
     },
     {
@@ -219,7 +241,10 @@
       "plain_english": "Google collects sensor data like accelerometer and gyroscope from your device to understand your movement, along with unique identifiers.",
       "detail": "The general policy explicitly mentions sensors including accelerometer and gyroscope to determine speed and direction of travel. It also collects unique identifiers, device type, OS, carrier, and application version.",
       "policy_excerpt": "Your device may have sensors that can be used to better understand your location and movement. For example, an accelerometer can be used to determine your speed and a gyroscope to figure out your direction of travel. The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
-      "concerns": ["Sensor data used for movement tracking", "Unique device identifiers collected"],
+      "concerns": [
+        "Sensor data used for movement tracking",
+        "Unique device identifiers collected"
+      ],
       "score_impact": -9.75
     },
     {
@@ -234,7 +259,9 @@
       "plain_english": "The policy does not mention whether Google Maps collects health or biometric data.",
       "detail": "Neither the general Google Privacy Policy nor the provided text mentions health or biometric data collection in the context of Maps.",
       "policy_excerpt": "",
-      "concerns": ["Policy silent on health/biometric data for Maps"],
+      "concerns": [
+        "Policy silent on health/biometric data for Maps"
+      ],
       "score_impact": 0
     },
     {
@@ -249,7 +276,9 @@
       "plain_english": "The policy does not mention whether Google Maps collects payment or financial information.",
       "detail": "The general Google Privacy Policy mentions shipping address and delivery instructions when purchasing services or physical goods, but does not specifically state whether Maps collects payment information.",
       "policy_excerpt": "",
-      "concerns": ["Policy silent on Maps payment collection"],
+      "concerns": [
+        "Policy silent on Maps payment collection"
+      ],
       "score_impact": 0
     },
     {
@@ -264,8 +293,10 @@
       "plain_english": "You can delete some Maps data, but Google may retain it for legal or security reasons.",
       "detail": "The general policy states some data can be deleted, while other data is retained for longer periods for legitimate business or legal purposes.",
       "policy_excerpt": "Some data you can delete whenever you like... And some data we retain for longer periods of time when necessary for legitimate business or legal purposes.",
-      "concerns": ["Some data retained after deletion"],
-      "score_impact": -3.0
+      "concerns": [
+        "Some data retained after deletion"
+      ],
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -287,20 +318,104 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {"category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
-      {"category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
-      {"category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.00, "deduction": 0},
-      {"category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.00, "deduction": 0},
-      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
-      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
-      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
-      {"category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0},
-      {"category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25},
-      {"category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
-      {"category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.00, "deduction": 0},
-      {"category": "financial_payment", "risk": "unknown", "max": 15, "rate": 0.00, "deduction": 0},
-      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
-      {"category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0.00, "deduction": 0}
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "unknown",
+        "max": 20,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "safe",
+        "max": 5,
+        "rate": 0,
+        "deduction": 0
+      }
     ],
     "total_deductions": 70.5,
     "final_score": 66,

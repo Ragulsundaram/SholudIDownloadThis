@@ -21,9 +21,9 @@
     "description": "A popular video and photo editing app with AI-powered features, filters, effects, and tools for creating social media content."
   },
   "verdict": {
-    "overall_risk": "caution",
-    "score": 72,
-    "grade": "B",
+    "overall_risk": "safe",
+    "score": 83,
+    "grade": "A",
     "one_liner": "InShot keeps photos on device and needs no account, but policy is silent on location.",
     "summary": "InShot is a video and photo editing app that requires no account registration and keeps all your media stored locally on your device. It explicitly promises never to collect or store your photos or face data. It does show personalized ads through third-party SDKs, but data is anonymized and users can opt out. The privacy policy does not mention whether the app collects your location or accesses your contacts.",
     "recommendation": "recommended",
@@ -110,7 +110,7 @@
       "concerns": [
         "Policy is silent on location and GPS access"
       ],
-      "score_impact": -7.5
+      "score_impact": 0
     },
     {
       "id": "contacts_phonebook",
@@ -127,7 +127,7 @@
       "concerns": [
         "Policy is silent on contacts and phonebook access"
       ],
-      "score_impact": -10
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
@@ -149,7 +149,7 @@
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
@@ -261,16 +261,18 @@
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "InShot offers paid subscriptions for premium features. All payments go through Apple's App Store, so InShot does not directly handle your credit card information.",
-      "detail": "In-app purchases and subscriptions billed through Apple iTunes Account. No direct payment processing by InShot.",
-      "policy_excerpt": "Payment will be charged to iTunes Account at confirmation of purchase.",
-      "concerns": [],
-      "score_impact": -4.5
+      "plain_english": "The privacy policy does not mention whether InShot collects payment or financial information.",
+      "detail": "The privacy policy makes no mention of payments, subscriptions, or financial data collection.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy silent on payment collection"
+      ],
+      "score_impact": 0
     },
     {
       "id": "data_deletion_user_rights",
@@ -320,15 +322,15 @@
         "category": "location_gps",
         "risk": "unknown",
         "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "contacts_phonebook",
         "risk": "unknown",
         "max": 20,
-        "rate": 0.5,
-        "deduction": 10
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "storage_file_access",
@@ -388,10 +390,10 @@
       },
       {
         "category": "financial_payment",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "data_deletion_user_rights",
@@ -408,8 +410,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 56.5,
-    "final_score": 72,
+    "total_deductions": 34.5,
+    "final_score": 83,
     "grade": "B"
   }
 }

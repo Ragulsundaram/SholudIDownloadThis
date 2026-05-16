@@ -21,9 +21,9 @@
     "description": "A daily micro-learning app offering 15-minute book summaries, audio learning, and personalized reading goals to help users grow through bite-sized content."
   },
   "verdict": {
-    "overall_risk": "risky",
-    "score": 49,
-    "grade": "D",
+    "overall_risk": "caution",
+    "score": 63,
+    "grade": "C",
     "one_liner": "Headway tracks reading habits and shares data with over 20 advertising partners.",
     "summary": "Headway collects your name, email, reading preferences, and extensive device data including IP address, hardware ID, and advertising identifiers. It shares this data with over 20 third-party companies including Facebook, Google, TikTok, and Snapchat for advertising and analytics. The privacy policy does not clearly explain whether the app accesses your camera, contacts, local files, or health data.",
     "recommendation": "think_twice",
@@ -117,7 +117,7 @@
       "concerns": [
         "Policy is silent on camera and microphone access"
       ],
-      "score_impact": -7.5
+      "score_impact": 0
     },
     {
       "id": "location_gps",
@@ -151,7 +151,7 @@
       "concerns": [
         "Policy is silent on contacts and phonebook access"
       ],
-      "score_impact": -10.0
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
@@ -168,7 +168,7 @@
       "concerns": [
         "Policy is silent on storage and file access"
       ],
-      "score_impact": -5.0
+      "score_impact": 0
     },
     {
       "id": "data_sharing_third_parties",
@@ -194,7 +194,7 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
@@ -243,7 +243,7 @@
         "No age verification mechanism at sign-up",
         "Relies on self-attestation and post-hoc discovery"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -297,7 +297,7 @@
       "concerns": [
         "Policy is silent on health and biometric data"
       ],
-      "score_impact": -7.5
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
@@ -333,7 +333,7 @@
         "Some data retained for legal obligations",
         "Must cancel subscription before deletion to avoid charges"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -348,8 +348,7 @@
       "detail": "Material changes to the privacy policy will be notified through the Services or by other available means. Users will have an opportunity to review the revised policy. However, continued use after changes become effective constitutes acceptance.",
       "policy_excerpt": "If we decide to make material changes to this Privacy Policy, you will be notified through our Services or by other available means and will have an opportunity to review the revised Privacy Policy.",
       "concerns": [
-        "Continued use constitutes acceptance",
-        "'Other available means' is vague"
+        "Continued use constitutes acceptance"
       ],
       "score_impact": -1.5
     }
@@ -362,8 +361,8 @@
         "category": "camera_microphone",
         "risk": "unknown",
         "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "location_gps",
@@ -376,15 +375,15 @@
         "category": "contacts_phonebook",
         "risk": "unknown",
         "max": 20,
-        "rate": 0.5,
-        "deduction": 10.0
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "storage_file_access",
         "risk": "unknown",
         "max": 10,
-        "rate": 0.5,
-        "deduction": 5.0
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "data_sharing_third_parties",
@@ -412,7 +411,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "network_internet_activity",
@@ -432,8 +431,8 @@
         "category": "health_biometric",
         "risk": "unknown",
         "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "financial_payment",
@@ -447,7 +446,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",
@@ -457,8 +456,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 105.0,
-    "final_score": 49,
-    "grade": "D"
+    "total_deductions": 75,
+    "final_score": 63,
+    "grade": "C"
   }
 }

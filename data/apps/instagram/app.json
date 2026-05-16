@@ -22,7 +22,7 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 51,
+    "score": 46,
     "grade": "D",
     "one_liner": "Collects extensive activity data and shares it across Meta Companies for advertising.",
     "summary": "The privacy policy states that Instagram collects detailed activity, device, and content information to personalize ads. This data is shared with other Meta Companies and used to show ads on third-party apps and websites through Meta Audience Network. Users can delete their account, and the policy explicitly states Meta does not sell information.",
@@ -115,16 +115,16 @@
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy does not explicitly state that Instagram accesses your device's phonebook or contacts.",
-      "detail": "The policy mentions collecting information about friends, followers, and other connections within Meta Products, but does not explicitly mention uploading or accessing your device's contact list.",
-      "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy states that Instagram can access your contacts if you choose to upload or import them from your device, such as by syncing an address book.",
+      "detail": "The policy states: 'We also collect your contacts' or connections' information, such as their name and email address or phone number, if you choose to upload or import it from a device, like by syncing an address book.' It also specifically mentions how to connect your device's contact list on Instagram.",
+      "policy_excerpt": "We also collect your contacts' or connections' information, such as their name and email address or phone number, if you choose to upload or import it from a device, like by syncing an address book.",
+      "concerns": ["Contacts accessed if you choose to sync address book"],
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
@@ -256,16 +256,16 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy does not mention health or biometric data.",
-      "detail": "No health or biometric data is referenced in the provided privacy policy text.",
-      "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy states you might choose to provide health information, and that you can choose to verify your identity through facial recognition technology.",
+      "detail": "The policy states: 'You might choose to provide information about... health.' It also mentions facial recognition technology for account verification and face analysis to protect against impersonation and identity misuse.",
+      "policy_excerpt": "You might choose to provide information about your religious views, your sexual orientation, political views, health, racial or ethnic origin, philosophical beliefs or trade union membership.",
+      "concerns": ["Optional health information may be provided", "Facial recognition technology available for account verification", "Face analysis used for safety purposes"],
+      "score_impact": -4.5
     },
     {
       "id": "financial_payment",
@@ -339,10 +339,10 @@
       },
       {
         "category": "contacts_phonebook",
-        "risk": "safe",
+        "risk": "caution",
         "max": 20,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.3,
+        "deduction": 6
       },
       {
         "category": "storage_file_access",
@@ -395,10 +395,10 @@
       },
       {
         "category": "health_biometric",
-        "risk": "safe",
+        "risk": "caution",
         "max": 15,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "financial_payment",
@@ -422,8 +422,8 @@
         "deduction": 0
       }
     ],
-    "total_deductions": 100.75,
-    "final_score": 51,
+    "total_deductions": 111.25,
+    "final_score": 46,
     "grade": "D"
   }
 }

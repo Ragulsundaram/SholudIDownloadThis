@@ -22,7 +22,7 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 47,
+    "score": 53,
     "grade": "D",
     "one_liner": "Hinge collects extremely sensitive personal data including your sexual orientation, health info, racial background, and face geometry, and shares some data with advertisers and vendors.",
     "summary": "Hinge collects account details, profile information, user content, and sensitive categories including sexual orientation, sexual life, health, racial or ethnic origins, religious beliefs, and political affiliations. The app also gathers purchase records, device and usage data, geolocation, face geometry for verification, and government ID if provided. Social media imports and details about others submitted via reports are also processed. Data is visible to members through profiles and disclosed to outside vendors for hosting, payments, analytics, and security. Advertising partners receive certain information for campaigns, and some of it is transformed into non-identifiable forms. Related companies also receive data to improve safety, recommendations, and cross-platform features. Users may request access, correction, deletion, or restriction. Retention periods vary: a safety window lasts three months after account closure (up to two years after a ban). Financial records kept for ten years. Face data erased within thirty days. Customer care exchanges and approximate download locations retained for five years. Biometric confirmation images may be retained for thirty-six months.",
@@ -40,7 +40,7 @@
       {
         "id": "red_biometric_collection",
         "title": "Collects your face geometry",
-        "plain_english": "Hinge may scan your face to verify your identity. Biometric confirmation images may be retained for up to thirty-six months.",
+        "plain_english": "Hinge may scan your face to verify your identity. Face data is normally deleted within 30 days.",
         "severity": "high"
       },
       {
@@ -117,19 +117,18 @@
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "risky",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "Hinge can import data from your social media accounts and collects information about others if you submit reports.",
-      "detail": "Social media imports and contact information of others are processed when you use certain features or submit reports involving other members.",
-      "policy_excerpt": "if you use the contact details of someone you know for a given feature or if you submit a query or report involving a member",
+      "plain_english": "The policy mentions phone contacts as a device permission you can withdraw, but does not clearly explain whether or how Hinge accesses your phone contacts.",
+      "detail": "The consent withdrawal section mentions phone contacts as a device permission, but the policy does not explicitly describe contact or phonebook access.",
+      "policy_excerpt": "",
       "concerns": [
-        "Social media data imported",
-        "Contact details of others processed through reports"
+        "Policy silent on how phone contacts are used"
       ],
-      "score_impact": -13
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
@@ -151,7 +150,7 @@
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "risky",
-      "access_type": null,
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
@@ -262,11 +261,10 @@
       "optional_access": true,
       "background_access": false,
       "plain_english": "Hinge collects your face geometry for verification and may collect health information if you include it in your profile. This is very sensitive data.",
-      "detail": "Face geometry collected for Selfie Verification. Health data may be provided in profile. Face data erased within thirty days normally, but biometric confirmation images may be retained for thirty-six months.",
+      "detail": "Face geometry collected for Selfie Verification with your consent. Health data may be provided in profile. Face data is normally deleted within 30 days.",
       "policy_excerpt": "You may choose to participate in certain of our features, like Selfie Verification, that involve the collection of face geometry data",
       "concerns": [
-        "Biometric data collected",
-        "Biometric confirmation images retained up to 36 months"
+        "Biometric data collected"
       ],
       "score_impact": -9.75
     },
@@ -297,12 +295,11 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "You can delete your Hinge account, but they keep your data for three months (or two years if you were banned). Financial records stay for ten years and customer service exchanges for five years.",
-      "detail": "Users may request access, correction, deletion, or restriction. Safety window: three months after closure, up to two years after ban. Financial records ten years. Face data thirty days. Customer care exchanges and approximate download locations retained for five years. Biometric confirmation images may be retained for thirty-six months.",
+      "detail": "Users may request access, correction, deletion, or restriction. Safety window: three months after closure, up to two years after ban. Financial records ten years. Face data thirty days. Customer care exchanges and approximate download locations retained for five years.",
       "policy_excerpt": "we keep customer care exchanges with you for five years from the date of the communication; customer care records and supporting data, as well as imprecise location of download/purchase, for five years",
       "concerns": [
         "Extremely long retention periods",
-        "Financial records kept 10 years",
-        "Biometric images kept up to 36 months"
+        "Financial records kept 10 years"
       ],
       "score_impact": -6.5
     },
@@ -342,10 +339,10 @@
       },
       {
         "category": "contacts_phonebook",
-        "risk": "risky",
+        "risk": "unknown",
         "max": 20,
-        "rate": 0.65,
-        "deduction": 13
+        "rate": 0.0,
+        "deduction": 0
       },
       {
         "category": "storage_file_access",
@@ -425,8 +422,8 @@
         "deduction": 0
       }
     ],
-    "total_deductions": 109.5,
-    "final_score": 47,
+    "total_deductions": 96.5,
+    "final_score": 53,
     "grade": "D"
   }
 }

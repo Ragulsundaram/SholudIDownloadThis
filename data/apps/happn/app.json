@@ -110,7 +110,7 @@
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
-      "background_access": false,
+      "background_access": true,
       "plain_english": "Happn collects your geographical position regularly to show you people you've crossed paths with. Your crossing points are displayed on your profile and a map, but other members cannot see your exact location.",
       "detail": "Geolocation collected regularly with consent. Crossing points displayed on profile and map. Exact location never shown to other members. City required if geolocation refused.",
       "policy_excerpt": "HAPPN will collect your Geographical position regularly. When the Geographical positions of two Members are within a certain radius, HAPPN pinpoints a Crossing point. Your Crossing points will be displayed on your profile, but Members with whom you cross paths can never see your exact location.",
@@ -158,14 +158,14 @@
       "icon": "Share2",
       "risk": "risky",
       "access_type": "continuous",
-      "required_for_core_function": true,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Happn shares your public profile with all other members. It also may share your email and phone number with social networks for marketing, and works with third-party service providers.",
+      "plain_english": "Happn shares your public profile with all other members. It may also share your email and phone number with social networks for marketing with your consent, and works with third-party service providers.",
       "detail": "Profile data visible to other members. Email and phone shared with social networks for campaign exclusion and lookalike targeting with consent. Third-party service providers used. Apple and Google handle payments.",
-      "policy_excerpt": "we may share you email address and telephone number with such entities to exclude you from our Marketing campaigns... The social networks which may receive your data for this purpose appear in the list of our service providers.",
+      "policy_excerpt": "we may share you email address and telephone number with such entities to exclude you from our Marketing campaigns... If you have given your consent, your data will be shared with these social networks... You may withdraw your consent at any time",
       "concerns": [
-        "Email and phone shared with social networks for marketing",
+        "Email and phone shared with social networks for marketing with consent",
         "Profile visible to strangers",
         "Third-party service providers"
       ],
@@ -176,7 +176,7 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
@@ -199,7 +199,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Happn tracks your activity in the app and shows personalized advertisements based on your age group, gender, and city. It also shares your email and phone with social networks for marketing campaigns.",
+      "plain_english": "Happn tracks your activity in the app and shows personalized advertisements based on your age group, gender, and city with your consent.",
       "detail": "Tracks activity such as likes, messages, crossings, and transactions. Personalized ads shown in-app based on age, gender, and city with consent. Email and phone shared with social networks for campaign exclusion and lookalike targeting.",
       "policy_excerpt": "Activity data (registration date, login dates, on or offline status, interactions with Members and third-party accounts, number of transactions, notifications received, notification preferences, etc.)... Display personalized advertisements on the HAPPN Application with regard to third-party products and services... personalized based only on your age group, gender and the country and/or city where you live.",
       "concerns": [
@@ -233,12 +233,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Happn collects your IP address, application version, language, operating system, and application crashes when you use the app.",
-      "detail": "IP address, server logs, application version, language, operating system, application crashes collected. Data may be collected with cookies or other tracking tools.",
-      "policy_excerpt": "IP, mobile ID, application version, telephone version and model, language used, operating system, application crashes, and advertisement ID. Data may be collected with cookies or other tracking tools.",
+      "plain_english": "Happn collects your IP address through server logs when you use the app.",
+      "detail": "IP address collected via server logs when you access the Services.",
+      "policy_excerpt": "server logs, which may contain information such as IP addresses",
       "concerns": [
-        "IP logging",
-        "App crash data collection"
+        "IP address logged"
       ],
       "score_impact": -1.5
     },
@@ -270,8 +269,8 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Happn collects biometric data from a video of your face to verify your profile photo is really you, with your consent. The video is stored on their servers for re-verification.",
-      "detail": "Biometric data collected for profile certification with consent. Video of face compared with photos. Video stored for re-verification if photos change. Face detection required for registration.",
+      "plain_english": "Happn uses face detection to verify you are a real person when you register. Optionally, with your consent, it collects biometric data from a video of your face for profile certification. The video is stored for re-verification.",
+      "detail": "Face detection is mandatory for registration. Optional biometric data collected for profile certification with consent. Video of face compared with photos. Video stored for re-verification if photos change.",
       "policy_excerpt": "HAPPN must, having obtained the Member's consent, collect the his or her biometric data using a video of his or her face, and compare this data with the Member's Profile Photos... the video will be stored in order to reverify the Member's profile should he or she add or delete other photos.",
       "concerns": [
         "Biometric data collection",

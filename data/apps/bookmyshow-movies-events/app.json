@@ -22,8 +22,8 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 52,
-    "grade": "D",
+    "score": 66,
+    "grade": "C",
     "one_liner": "BookMyShow's privacy policy has not been updated since 2020 and states that your data may be shared with advertising networks and social media platforms.",
     "summary": "The policy states that BookMyShow collects extensive computer and usage data including your device information, browsing behavior, and transaction details. It states that your data may be shared with advertising networks, social media platforms, and analytics providers. The policy was last updated in October 2020 and does not clearly explain how long data is kept. The policy is silent on several data categories including camera, contacts, storage, and health data.",
     "recommendation": "think_twice",
@@ -97,14 +97,14 @@
       "detail": "The privacy policy makes no mention of camera, microphone, video, or audio access.",
       "policy_excerpt": "",
       "concerns": ["Policy is silent on camera and microphone access"],
-      "score_impact": -7.5
+      "score_impact": 0
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
@@ -126,8 +126,8 @@
       "plain_english": "The policy does not say whether BookMyShow accesses your contacts or phonebook.",
       "detail": "The privacy policy makes no mention of contacts, address book, or phonebook access.",
       "policy_excerpt": "",
-      "concerns": ["Policy is silent on contacts access"],
-      "score_impact": -10.0
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
@@ -141,8 +141,8 @@
       "plain_english": "The policy does not say whether BookMyShow accesses your device files or storage.",
       "detail": "The privacy policy makes no mention of storage, file access, or file system permissions.",
       "policy_excerpt": "",
-      "concerns": ["Policy is silent on storage and file access"],
-      "score_impact": -5.0
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "data_sharing_third_parties",
@@ -246,8 +246,8 @@
       "plain_english": "The policy does not say whether BookMyShow collects health or biometric data.",
       "detail": "The privacy policy makes no mention of health, biometric, or medical data collection.",
       "policy_excerpt": "",
-      "concerns": ["Policy is silent on health and biometric data"],
-      "score_impact": -7.5
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
@@ -299,23 +299,23 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0, "deduction": 0 },
       { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10.0 },
-      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0, "deduction": 0 },
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
       { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
       { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
       { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
       { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0, "deduction": 0 },
       { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
       { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 98.75,
-    "final_score": 52,
-    "grade": "D"
+    "total_deductions": 69.75,
+    "final_score": 66,
+    "grade": "C"
   }
 }
