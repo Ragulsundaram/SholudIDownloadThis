@@ -64,26 +64,6 @@ These are the source of truth. Do not duplicate their contents here — link out
 8. **One app, one rating.** No platform fan-out. URL is `/app/{slug}`.
 9. **Any overlay, modal, drawer, or dropdown MUST use `createPortal(content, document.body)`.** The Navbar has `backdrop-filter` which breaks `fixed` positioning for any child element. Never nest a `fixed`-positioned overlay inside the Navbar or any element with `backdrop-filter`/`transform`/`filter`. See the "Layout & Overlay Rules" section in `docs/DESIGN.md` for the required pattern.
 
-## Environment setup — new machine / fresh clone
-
-Before doing anything else on a new machine, check whether the Python dependencies are ready:
-
-```bash
-python3 -c "import scrapling; print('ok')"
-```
-
-If that prints `ok`, the environment is ready — skip to the workflow below.
-
-If it errors (ModuleNotFoundError, browser not found, etc.), YOU must run the bootstrap script first:
-
-```bash
-bash setup.sh
-```
-
-`setup.sh` installs everything unattended: Homebrew (macOS), Python 3, scrapling, the Patchright Chromium binary, Node.js, and `npm install`. It is idempotent — safe to run more than once. After it completes, proceed normally. **Do not ask the user to run it — run it yourself via Bash.**
-
----
-
 ## Adding a new app — AUTOMATIC workflow
 
 **Trigger:** The user's message is (or contains) an App Store URL (`apps.apple.com/...`).
@@ -100,7 +80,7 @@ Run this via your Bash tool. The script does everything automatically:
 - Scrapes the full policy (handles JS, accordions, annotation popups, subpages)
 - Saves `{slug}_policy.md` in the project root with an App Metadata header
 
-If it errors with a ModuleNotFoundError or browser/playwright message, run `bash setup.sh` first (see "Environment setup" above), then retry.
+If it errors with a ModuleNotFoundError or browser/playwright message, the machine needs setup — see `macsetup.md` for instructions, then retry.
 
 ### Step 2 — Derive the slug
 The output filename tells you: `instagram_policy.md` → slug is `instagram`.
