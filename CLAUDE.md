@@ -68,7 +68,21 @@ These are the source of truth. Do not duplicate their contents here — link out
 
 **Trigger:** The user's message is (or contains) an App Store URL (`apps.apple.com/...`).
 
-**Do NOT ask any questions. Do NOT wait for confirmation. Execute every step below yourself using your Bash tool.** The user's only input is the URL.
+**Execute every step below yourself using your Bash tool.** The user's only input is the URL.
+
+### Step 0 — Check if the app already exists
+
+Use the iTunes API to derive the slug from the URL before scraping anything:
+1. Extract the app ID from the URL (`/id(\d+)`)
+2. Call `https://itunes.apple.com/lookup?id={app_id}` to get the app name
+3. Derive the slug (lowercase, non-alphanumeric → hyphens)
+4. Check `data/apps/{slug}/app.json` — if the file exists, **stop and ask the user**:
+
+> "{App Name}" is already in the site (last analyzed: {analyzed_at from app.json}). Do you want to re-scan and overwrite it, or skip?
+
+Wait for their answer. If they say skip, stop here. If they say re-scan, continue to Step 1.
+
+If the file does not exist, proceed to Step 1 without asking anything.
 
 ### Step 1 — YOU run the scraper
 ```bash
