@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
 
 import { getApp, getAllSlugs } from "@/lib/getApp";
+import { getAllApps } from "@/lib/getAllApps";
 import { compareRisk } from "@/lib/risk";
 import { deriveTrustIndicators } from "@/lib/trustIndicators";
 import { categoryNameToSlug } from "@/app/categories/page";
@@ -44,7 +45,7 @@ export default async function AppPage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const data = await getApp(slug);
+  const [data, allApps] = await Promise.all([getApp(slug), getAllApps()]);
   if (!data) notFound();
 
   const trust = deriveTrustIndicators(data.flags.green);
@@ -77,10 +78,10 @@ export default async function AppPage({
 
   return (
     <>
-      <Navbar />
+      <Navbar apps={allApps} />
 
       <main className="flex-1">
-        <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="px-4 py-10 sm:px-6 lg:px-8">
           <Breadcrumb name={data.app.name} category={data.app.category} />
 
           <div className="mt-6">

@@ -1,17 +1,17 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "http://www.jiosaavn.com/corporate/privacy",
     "terms_url": "",
     "policy_last_updated": "2024-11-14",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Full privacy policy could not be fetched; analysis is based on a failed fetch response and fallback defaults."
   },
   "app": {
     "slug": "jiosaavn",
-    "name": "JioSaavn \u2013 Music & Podcasts",
+    "name": "JioSaavn – Music & Podcasts",
     "developer": "Saavn Media Limited",
     "app_store_url": "https://apps.apple.com/in/app/jiosaavn-music-podcasts/id441813332",
     "app_store_id": "441813332",
@@ -21,414 +21,251 @@
     "description": "JioSaavn is an Indian music and podcast streaming app offering millions of songs, curated playlists, and podcasts in multiple languages."
   },
   "verdict": {
-    "overall_risk": "caution",
-    "score": 60,
-    "grade": "C",
-    "one_liner": "JioSaavn offers a huge catalog of Indian music and podcasts, but tracks your listening habits and shares your data with advertising networks and analytics providers.",
-    "summary": "JioSaavn is a popular Indian music streaming app that collects personal information, listening history, and device data. It shares usage information with advertising networks, analytics providers, and business partners for targeted advertising. While users can delete their accounts and opt out of interest-based ads, the app's business model relies heavily on data-driven advertising.",
+    "overall_risk": "risky",
+    "score": 50,
+    "grade": "D",
+    "one_liner": "The full privacy policy could not be retrieved, so this rating reflects high uncertainty.",
+    "summary": "The privacy policy fetch failed, returning only an access-denied message. Without the full policy text, a meaningful analysis is not possible. This rating is a default uncertainty score.",
     "recommendation": "think_twice",
-    "recommendation_reason": "JioSaavn tracks your listening habits, shares data with ad networks, and uses your activity for targeted advertising. If you want a more private music experience, consider Apple Music or Spotify with privacy settings tightened."
+    "recommendation_reason": "We could not verify the privacy practices because the full policy could not be fetched. Consider this app risky until a proper review can be completed."
   },
   "flags": {
-    "red": [
-      {
-        "id": "red_ad_tracking",
-        "title": "Listening data used for targeted ads",
-        "plain_english": "JioSaavn tracks what songs you listen to, how long you listen, and which playlists you create. This data is shared with advertising networks and used to show you targeted ads both on and off the platform.",
-        "severity": "high"
-      },
-      {
-        "id": "red_data_sharing",
-        "title": "Data shared with advertisers and analytics companies",
-        "plain_english": "JioSaavn shares your usage data, device identifiers, and demographic information with advertising networks, analytics providers, business partners, and rights holders. Some of this sharing is used for behavioral advertising.",
-        "severity": "high"
-      },
-      {
-        "id": "red_location_tracking",
-        "title": "Location tracked and shared with third parties",
-        "plain_english": "JioSaavn collects your approximate location and, with your consent, your precise GPS location. This location data is shared with third parties for analytics and advertising purposes.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_device_fingerprinting",
-        "title": "Unique device ID created for ad tracking",
-        "plain_english": "JioSaavn collects your IP address, device model, operating system, and advertising identifiers. On Android, the advertising identifier is collected automatically. This data is used to track your activity across apps and devices.",
-        "severity": "medium"
-      }
-    ],
-    "green": [
-      {
-        "id": "green_account_deletion",
-        "title": "Account deletion available in-app",
-        "plain_english": "You can delete your JioSaavn account directly through the app or website. Your data is scheduled for deletion within 30 days, and you have a 30-day window to cancel the deletion if you change your mind.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_opt_out_ads",
-        "title": "Opt-out options for targeted advertising",
-        "plain_english": "You can opt out of interest-based advertising through the Digital Advertising Alliance (DAA) and Network Advertising Initiative (NAI) tools. European users also have GDPR rights.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_no_under_18",
-        "title": "Not directed at children under 18",
-        "plain_english": "JioSaavn states its platform is not directed to children under 18 and does not knowingly collect personal information from anyone under 18.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_gdpr_rights",
-        "title": "GDPR rights available for EU users",
-        "plain_english": "European users have rights to access, rectify, erase, restrict, and port their data. JioSaavn provides mechanisms to exercise these rights.",
-        "severity": "positive"
-      }
-    ]
+    "red": [],
+    "green": []
   },
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "JioSaavn does not access your camera or microphone for its core music streaming function.",
-      "detail": "As a music and podcast streaming app, JioSaavn does not require or request camera or microphone access.",
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0.0
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -7.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "risky",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "JioSaavn collects your approximate location and may collect precise GPS location with your consent. This location data is shared with third parties for advertising and analytics.",
-      "detail": "General location is collected. Precise GPS location is collected with explicit consent. Location data is shared with third parties for analytics and advertising purposes.",
-      "policy_excerpt": "We may collect general information about the location of your device when a user has agreed to share GPS location information... We may share your location with certain third-parties for analytics and advertising purposes.",
-      "concerns": [
-        "Location shared with third parties for ads",
-        "GPS collected with consent but used for advertising"
-      ],
-      "score_impact": -9.75
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -7.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "If you connect your social media accounts, JioSaavn may access your friend list and profile information. This is optional.",
-      "detail": "Social media login (Facebook, Google) may provide access to friend lists and profile information. This is optional and used for social features.",
-      "policy_excerpt": "If you create an account using your credentials from a third-party social media site, we will have access to certain information from that site, such as your name, profile and account information.",
-      "concerns": [],
-      "score_impact": -6.0
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -10.0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "JioSaavn does not access your device's file storage or photo library for its core streaming function.",
-      "detail": "As a streaming app, JioSaavn does not require access to your device's files, photos, or storage beyond standard app caching.",
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0.0
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -5.0
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "risky",
-      "access_type": "continuous",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "JioSaavn shares your usage data, device identifiers, and demographic information with advertising networks, analytics providers, business partners, and rights holders. Your data may also be transferred during business sales.",
-      "detail": "Shared with advertisers, advertising networks, analytics companies, business partners, sponsors, rights holders, and service providers. Aggregate statistics and demographic data may also be shared with third parties.",
-      "policy_excerpt": "Your information may also be used by us or shared with our sponsors, partners, advertisers, advertising networks, advertising servers, and analytics companies or other third parties in connection with marketing, promotional, and other offers.",
-      "concerns": [
-        "Data shared with advertising networks for targeting",
-        "Usage data shared with analytics providers",
-        "Business transfer disclosures"
-      ],
-      "score_impact": -19.5
+      "background_access": false,
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -15.0
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "caution",
-      "access_type": "continuous",
-      "required_for_core_function": true,
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You need an account to use JioSaavn. The app collects your name, email, phone, date of birth, demographic info, and social media profiles. This data is used to personalize your experience and serve targeted ads.",
-      "detail": "Account creation requires personal information including name, email, phone, date of birth, and demographic info. Social media login provides additional profile data. Used for personalization and advertising.",
-      "policy_excerpt": "When you use the Platform, for example to register to create an account... we or our service providers or business partners may collect information that relates to you, including personal information, such as your name, e-mail address, telephone number, mobile phone number, geographic location, date of birth, demographic information, photos, and social media account details.",
-      "concerns": [
-        "Identity data used for ad personalization",
-        "Social media login shares friend lists and profiles"
-      ],
-      "score_impact": -4.5
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -7.5
     },
     {
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "risky",
-      "access_type": "continuous",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "JioSaavn tracks your listening habits, playlists, searches, and interactions with content and ads. It uses cookies, pixels, and device identifiers to show you targeted ads across platforms.",
-      "detail": "Tracks listening times, content accessed, purchases, playlist interactions, ad clicks, and app usage. Uses cookies, pixel tags, web beacons, and device IDs for interest-based advertising across platforms.",
-      "policy_excerpt": "Our platform uses cookies and similar technologies to... personalise your experience while visiting our Platform... to make our website/App and the advertising displayed on it more relevant to your interests. We may also share this information with third parties for this purpose.",
-      "concerns": [
-        "Cross-platform ad tracking using device IDs",
-        "Listening history used for ad targeting",
-        "Cookies and tracking pixels used extensively"
-      ],
-      "score_impact": -16.25
+      "background_access": false,
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -12.5
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "caution",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "JioSaavn says its platform is not directed at children under 18 and does not knowingly collect personal information from anyone under 18.",
-      "detail": "Explicitly states the platform is not directed to children under 18 and that they do not knowingly collect personal information from under-18 users. No specific child safety features are mentioned.",
-      "policy_excerpt": "The Platform is not directed to children under 18. We do not knowingly collect personal information from anyone under 18 years of age. If we determine upon collection that a user is under this age, we will not use or maintain his/her personal information.",
-      "concerns": [
-        "No robust age verification mechanism",
-        "High age threshold (18+) for a music app"
-      ],
-      "score_impact": -3.0
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -5.0
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "risky",
-      "access_type": "continuous",
-      "required_for_core_function": true,
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "JioSaavn logs your IP address, browser type, operating system, listening activity, and interactions with content and ads. This data is used for analytics, advertising, and service improvement.",
-      "detail": "Logs IP address, browser type, OS, activations, purchases, content accessed, listening times, page views, and interactions with songs, playlists, and ads. Used for analytics, advertising, and personalization.",
-      "policy_excerpt": "Information is logged about your use of the Platforms, including your browser type, operating system, activations, purchases, content you access, download listening times and the page served and the preceding page views.",
-      "concerns": [
-        "Extensive activity logging for advertising",
-        "IP address used for analytics and ads"
-      ],
-      "score_impact": -3.25
+      "background_access": false,
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -2.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "risky",
-      "access_type": "continuous",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "JioSaavn collects your IP address, device model, hardware info, mobile network, and advertising identifiers like IDFA and GAID. On Android, the ad ID is collected automatically.",
-      "detail": "Collects IP address, device model, hardware, mobile network, OS, and advertising identifiers (IDFA on iOS with consent, GAID on Android automatically). Used for analytics, advertising, and device management.",
-      "policy_excerpt": "JioSaavn may automatically collect your IP address or other unique identifier for the computer, mobile device, tablet or other device you use to access the Platform, including the hardware model and mobile network information. A Device Identifier is a number that is automatically assigned to your Device... IDFA in case of a ioS device is retrieved with user\u2019s express consent... In the case of an android device, IDFA is automatically collected.",
-      "concerns": [
-        "Advertising identifiers collected for tracking",
-        "Android GAID collected automatically",
-        "Device info shared with ad networks"
-      ],
-      "score_impact": -9.75
+      "background_access": false,
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -7.5
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "JioSaavn does not collect health or biometric data.",
-      "detail": "No mention of health, biometric, or fitness data collection in the privacy policy.",
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0.0
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -7.5
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "If you subscribe to JioSaavn Pro, payment details are processed by third-party payment processors. JioSaavn does not store your full payment details.",
-      "detail": "Payment information is collected during subscription purchases and processed by third-party payment processors. JioSaavn does not claim to store full card numbers.",
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": -4.5
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -7.5
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "caution",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your JioSaavn account through the app or website. Your data is scheduled for deletion within 30 days, with a 30-day grace period to cancel. Some residual data may remain due to backups.",
-      "detail": "Account deletion available in-app and on website. Data scheduled for deletion within 30 days. 30-day window to cancel deletion. Some residual data may remain in backups. EU users have additional GDPR rights.",
-      "policy_excerpt": "Upon receipt of a deletion request, all related information will be scheduled for deletion within a timeline of 30 days.",
-      "concerns": [
-        "Some residual data may remain in backups",
-        "30-day grace period before permanent deletion"
-      ],
-      "score_impact": -3.0
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -5.0
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "caution",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "JioSaavn may change its privacy policy at any time. They will post updates on the policy page and may email you about substantive changes. Continued use of the platform means you accept the changes.",
-      "detail": "Changes posted on the privacy policy page. Email notification for substantive changes. Continued use constitutes acceptance of updated terms.",
-      "policy_excerpt": "Any changes we may make to our Privacy Policy will be posted on this page and, in relation to substantive changes, will be notified to you by email. Please check back frequently to see any updates or changes to our Privacy Policy. If you do not agree or consent to these updates or changes, do not continue to use the Platform.",
-      "concerns": [
-        "Continued use = automatic acceptance"
-      ],
-      "score_impact": -1.5
+      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
+      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "policy_excerpt": "",
+      "concerns": ["Full policy text unavailable"],
+      "score_impact": -2.5
     }
   ],
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {
-        "category": "camera_microphone",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0.0
-      },
-      {
-        "category": "location_gps",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "caution",
-        "max": 20,
-        "rate": 0.3,
-        "deduction": 6.0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.0,
-        "deduction": 0.0
-      },
-      {
-        "category": "data_sharing_third_parties",
-        "risk": "risky",
-        "max": 30,
-        "rate": 0.65,
-        "deduction": 19.5
-      },
-      {
-        "category": "account_identity",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "behavioural_ad_tracking",
-        "risk": "risky",
-        "max": 25,
-        "rate": 0.65,
-        "deduction": 16.25
-      },
-      {
-        "category": "childrens_data",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
-      },
-      {
-        "category": "network_internet_activity",
-        "risk": "risky",
-        "max": 5,
-        "rate": 0.65,
-        "deduction": 3.25
-      },
-      {
-        "category": "device_fingerprinting",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
-      },
-      {
-        "category": "health_biometric",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0.0
-      },
-      {
-        "category": "financial_payment",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "data_deletion_user_rights",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
-      },
-      {
-        "category": "policy_change_notification",
-        "risk": "caution",
-        "max": 5,
-        "rate": 0.3,
-        "deduction": 1.5
-      }
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10.0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
+      { "category": "data_sharing_third_parties", "risk": "unknown", "max": 30, "rate": 0.5, "deduction": 15.0 },
+      { "category": "account_identity", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "behavioural_ad_tracking", "risk": "unknown", "max": 25, "rate": 0.5, "deduction": 12.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
+      { "category": "network_internet_activity", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 },
+      { "category": "device_fingerprinting", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "financial_payment", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "data_deletion_user_rights", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
+      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
     ],
-    "total_deductions": 81.0,
-    "final_score": 60,
-    "grade": "C"
+    "total_deductions": 102.5,
+    "final_score": 50,
+    "grade": "D"
   }
 }

@@ -1,391 +1,90 @@
-# Telegram iOS Review
+# Telegram Privacy Review
 
-**App:** Telegram Messenger  
-**Platform:** iOS  
-**Analyzed:** 2026-05-10  
+**Analyzed:** 2026-05-16  
 **Policy URL:** https://telegram.org/privacy  
-**Terms URL:** https://telegram.org/tos
+**Policy Date:** Latest changelog entry September 29, 2024  
+**Model:** claude-sonnet-4  
+**Method:** Strict legal-safe analysis — every claim backed by a direct verbatim quote.
 
 ---
 
-## JSON Output
+## Score Summary
 
-```json
-{
-  "meta": {
-    "schema_version": "1.0",
-    "analyzed_at": "2026-05-10",
-    "analyzed_by": "claude-sonnet-4-6",
-    "policy_url": "https://telegram.org/privacy",
-    "terms_url": "https://telegram.org/tos",
-    "policy_last_updated": "2024-09-01",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  "app": {
-    "slug": "telegram-ios",
-    "name": "Telegram Messenger",
-    "developer": "Telegram FZ-LLC",
-    "platform": "ios",
-    "app_store_url": "https://apps.apple.com/us/app/telegram-messenger/id686449807",
-    "app_store_id": "686449807",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/c0/1b/57c01b2f-70b3-cfee-4cfa-03aac0ea2b8d/Telegram-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-    "category": "Social",
-    "sub_category": "Messaging",
-    "description": "A free, cloud-based messaging app focused on speed and security, offering group chats, channels, and optional end-to-end encrypted secret chats."
-  },
-  "verdict": {
-    "overall_risk": "safe",
-    "score": 80,
-    "grade": "A",
-    "one_liner": "Telegram does not show you ads and does not sell your data, but your regular chats are stored on its servers and only secret chats are truly private.",
-    "summary": "Telegram is a privacy-focused messaging app with a strong commitment to no ads and no data selling. It offers genuinely end-to-end encrypted secret chats and calls, but standard cloud chats are stored on Telegram's servers with server-side encryption only. A phone number is required to sign up, and IP addresses may be retained for up to 12 months for anti-abuse purposes. The app provides excellent deletion controls including self-destruct timers and message deletion for all participants.",
-    "recommendation": "recommended",
-    "recommendation_reason": "Telegram is a solid choice for messaging privacy, especially if you use secret chats for sensitive conversations. It does not track you for ads and provides strong user rights and deletion controls."
-  },
-  "flags": {
-    "red": [
-      {
-        "id": "red_cloud_not_e2e",
-        "title": "Regular chats are not end-to-end encrypted",
-        "plain_english": "Standard cloud chats are encrypted on Telegram's servers, but Telegram holds the keys. Only 'secret chats' use true end-to-end encryption where only you and the recipient can read messages.",
-        "severity": "high"
-      },
-      {
-        "id": "red_phone_required",
-        "title": "A real phone number is required to sign up",
-        "plain_english": "You must provide a valid mobile phone number to create a Telegram account. Anonymous or pseudonymous sign-up is not possible.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_ip_retention",
-        "title": "Your IP address may be kept for up to 12 months",
-        "plain_english": "Telegram collects your IP address and device information to fight spam and abuse. This metadata can be stored for up to 12 months and may be shared with authorities if ordered by a court.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_bot_data_sharing",
-        "title": "Third-party bots receive your messages and profile",
-        "plain_english": "When you use a bot inside Telegram, your public profile data and messages are sent to the third-party bot developer, not to Telegram itself.",
-        "severity": "medium"
-      }
-    ],
-    "green": [
-      {
-        "id": "green_no_ads_no_tracking",
-        "title": "No ads and no tracking for advertising",
-        "plain_english": "Telegram explicitly states it does not use your data to show ads and does not track your behavior to sell to advertisers. This is a core company promise.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_secret_chats_e2e",
-        "title": "Secret chats and calls are end-to-end encrypted",
-        "plain_english": "Telegram offers secret chats that use true end-to-end encryption, meaning even Telegram cannot read the content. Voice and video calls are also end-to-end encrypted.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_strong_deletion",
-        "title": "Strong deletion and self-destruct controls",
-        "plain_english": "You can delete your entire account permanently, set messages to self-destruct, and delete messages for all chat participants within 48 hours of sending.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_no_third_party_selling",
-        "title": "No data sold to third parties",
-        "plain_english": "Telegram does not sell your personal information to advertisers or data brokers. The Play Store Data Safety label confirms no data is shared with third parties.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_open_source_clients",
-        "title": "Open source client apps",
-        "plain_english": "Telegram's client apps are open source, meaning security researchers can inspect the code to verify the app does what it claims.",
-        "severity": "positive"
-      }
-    ]
-  },
-  "categories": [
-    {
-      "id": "camera_microphone",
-      "label": "Camera & Microphone",
-      "icon": "Camera",
-      "risk": "caution",
-      "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
-      "background_access": false,
-      "plain_english": "Telegram only uses your camera and microphone when you actively send a photo, record a voice message, or make a call. It does not listen in the background.",
-      "detail": "Camera and microphone access is user-initiated for sending media, voice messages, and calls. Video and voice calls are end-to-end encrypted. There is no indication of background access.",
-      "policy_excerpt": "Camera and microphone are accessed only when you choose to create or share content, or during an active call.",
-      "concerns": [
-        "Standard voice messages sent in cloud chats are not end-to-end encrypted"
-      ],
-      "score_impact": -5
-    },
-    {
-      "id": "location_gps",
-      "label": "Location & GPS",
-      "icon": "MapPin",
-      "risk": "caution",
-      "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
-      "background_access": false,
-      "plain_english": "Telegram only accesses your location when you choose to share it in a chat or use the 'People Nearby' feature. Live location sharing stops when you turn it off, though it can continue briefly if the app is closed while active.",
-      "detail": "Location access is entirely user-initiated for geo-tagging messages, live location sharing, and the optional People Nearby feature. The App Store label lists 'Precise Location' as collected for App Functionality. Location data in chats follows the same cloud or secret-chat encryption rules as messages.",
-      "policy_excerpt": "Location data shared in chats follows the same cloud or secret-chat rules. Live Location and People Nearby continue broadcasting while active, even if the app is closed.",
-      "concerns": [
-        "Live location can continue briefly if app is closed while sharing is active"
-      ],
-      "score_impact": -5
-    },
-    {
-      "id": "contacts_phonebook",
-      "label": "Contacts & Phonebook",
-      "icon": "BookUser",
-      "risk": "caution",
-      "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
-      "background_access": false,
-      "plain_english": "Telegram can optionally sync your contacts to tell you when friends join. It only keeps the name and phone number, and you can stop syncing or erase this data at any time in your privacy settings.",
-      "detail": "Contact syncing is optional and can be disabled or erased in Settings > Privacy & Security > Data Settings. Only the contact's name and phone number are retained. The App Store label lists 'Contacts' as collected for App Functionality.",
-      "policy_excerpt": "If you share contacts, Telegram retains just the name and phone number to alert you when a contact joins; you may halt syncing or erase this information via Settings.",
-      "concerns": [
-        "Non-users' phone numbers uploaded without their consent if sync is enabled"
-      ],
-      "score_impact": -6
-    },
-    {
-      "id": "storage_file_access",
-      "label": "Storage & File Access",
-      "icon": "FolderOpen",
-      "risk": "safe",
-      "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
-      "background_access": false,
-      "plain_english": "Telegram only accesses your photos and files when you choose to send them in a chat. Files sent in secret chats are encrypted with a unique key before being stored on Telegram's servers.",
-      "detail": "File and media access is user-initiated for sending content in conversations. Media sent in secret chats is encrypted with a device-held key before upload, appearing as random data to the server. There is no indication of background library scanning.",
-      "policy_excerpt": "Secret-chat media is encrypted with a unique key before upload, appearing as meaningless random data to the service.",
-      "concerns": [],
-      "score_impact": 0
-    },
-    {
-      "id": "data_sharing_third_parties",
-      "label": "Data Sharing with 3rd Parties",
-      "icon": "Share2",
-      "risk": "caution",
-      "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram itself does not sell or share your data with advertisers. However, third-party bots you interact with receive your public profile and messages. Also, voice-to-text and translation features may send audio or text to Google or Microsoft.",
-      "detail": "Telegram's core policy is no data sharing with third parties for advertising. The Play Store Data Safety label confirms 'No data shared with third parties.' However, bot interactions transmit user data to third-party developers. Translation and voice-to-text features may send data to Google or Microsoft under contractual restrictions. Payment data goes directly to payment providers, not Telegram.",
-      "policy_excerpt": "Telegram does not sell or share user data with third parties for advertising. Third-party bots operate independently and receive user messages and profile data.",
-      "concerns": [
-        "Bot interactions send data to third-party developers",
-        "Voice-to-text and translation may send data to Google/Microsoft",
-        "Court-ordered disclosure of IP and phone number possible for suspected criminal activity"
-      ],
-      "score_impact": -9
-    },
-    {
-      "id": "account_identity",
-      "label": "Account & Identity Data",
-      "icon": "UserCircle",
-      "risk": "caution",
-      "access_type": "continuous",
-      "required_for_core_function": true,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "You must give Telegram a real phone number to sign up. Your username and chosen display name are public, but real names are not required. You can sign up without providing your real identity beyond the phone number.",
-      "detail": "A verified mobile phone number is mandatory for registration. However, Telegram allows pseudonymous use — you choose your own username and display name, and real names are not required. The App Store label lists 'Name' and 'Phone Number' as collected for App Functionality. Profile picture, bio, and username are visible to other users.",
-      "policy_excerpt": "To register, you must provide a mobile number plus basic account details such as a profile name, image, and bio. Usernames and chosen display names are publicly visible, but real names are not required.",
-      "concerns": [
-        "Real phone number required — no anonymous use",
-        "Username and profile photo visible to other users"
-      ],
-      "score_impact": -5
-    },
-    {
-      "id": "behavioural_ad_tracking",
-      "label": "Behavioural & Ad Tracking",
-      "icon": "BarChart2",
-      "risk": "safe",
-      "access_type": "never",
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram does not track your behavior to show you ads. The company explicitly promises it does not use your data for advertising and does not sell your information to advertisers.",
-      "detail": "Telegram's privacy policy contains two explicit commitments: 'We don't use your data to show you ads' and 'We only store the data that Telegram needs to function.' There is no behavioral tracking for ad targeting, no ad SDKs, and no cross-app tracking for advertising purposes. The Play Store Data Safety confirms no data is shared with third parties.",
-      "policy_excerpt": "We don't use your data to show you ads. We only store the data that Telegram needs to function.",
-      "concerns": [],
-      "score_impact": 0
-    },
-    {
-      "id": "childrens_data",
-      "label": "Children's Data Handling",
-      "icon": "Baby",
-      "risk": "caution",
-      "access_type": null,
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram's terms say you must be at least 16 years old, or have parental consent if younger. There is no age verification mechanism beyond self-reporting.",
-      "detail": "Telegram's Terms of Service require users to be at least 16 years old, or to have parental consent if under 16. There is no technical age verification beyond self-attestation. The platform is not specifically designed for children but is widely used by teenagers.",
-      "policy_excerpt": "Users must be at least 16 years old to use Telegram independently; parental consent is required for younger users.",
-      "concerns": [
-        "No age verification beyond self-attestation",
-        "Widely used by teens despite 16+ requirement"
-      ],
-      "score_impact": -3
-    },
-    {
-      "id": "network_internet_activity",
-      "label": "Network & Internet Activity",
-      "icon": "Wifi",
-      "risk": "caution",
-      "access_type": "continuous",
-      "required_for_core_function": true,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram logs your IP address and device information when you use the app to prevent spam and abuse. This metadata is stored for up to 12 months and may be shared with authorities if they have a valid court order.",
-      "detail": "IP addresses, device identifiers, and username change histories are collected and retained for anti-spam and anti-abuse purposes. The policy states this metadata is stored for '12 months maximum.' It may be disclosed to judicial authorities if served with a valid order establishing suspicion of criminal activity violating Telegram's terms. Quarterly transparency reports track such disclosures.",
-      "policy_excerpt": "Metadata such as IP addresses, devices used, and username change histories is stored for up to 12 months maximum to combat spam, abuse, and Terms of Service violations.",
-      "concerns": [
-        "IP address retained for up to 12 months",
-        "Court-ordered disclosure of IP and phone number possible",
-        "Automated algorithms may inspect cloud chats to detect spam"
-      ],
-      "score_impact": -2
-    },
-    {
-      "id": "device_fingerprinting",
-      "label": "Device Info & Fingerprinting",
-      "icon": "Smartphone",
-      "risk": "caution",
-      "access_type": "continuous",
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram collects basic device information like which devices you use and your username change history to protect your account from spam and unauthorized access. This data is stored for up to 12 months.",
-      "detail": "The policy mentions collection of 'devices used' and username change histories as metadata for anti-abuse purposes. This is limited to security and spam prevention, not used for advertising or profiling. Data is retained for up to 12 months. There is no mention of unique advertising identifiers or cross-app device linking.",
-      "policy_excerpt": "Metadata such as IP addresses, devices used, and username change histories is stored for up to 12 months maximum to combat spam, abuse, and Terms of Service violations.",
-      "concerns": [
-        "Device metadata retention up to 12 months",
-        "Limited disclosure about exact scope of device data collected"
-      ],
-      "score_impact": -5
-    },
-    {
-      "id": "health_biometric",
-      "label": "Health & Biometric Data",
-      "icon": "Heart",
-      "risk": "safe",
-      "access_type": null,
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram does not collect any health or biometric data. If you use Face ID or fingerprint to unlock the app, that data stays on your phone and is handled by Apple.",
-      "detail": "No health or biometric data collection is mentioned or implied in the privacy policy or terms of service. Device-level biometric authentication is handled by the operating system locally.",
-      "policy_excerpt": "No health or biometric data collection described in the policy.",
-      "concerns": [],
-      "score_impact": 0
-    },
-    {
-      "id": "financial_payment",
-      "label": "Financial & Payment Data",
-      "icon": "CreditCard",
-      "risk": "safe",
-      "access_type": null,
-      "required_for_core_function": false,
-      "optional_access": true,
-      "background_access": false,
-      "plain_english": "Telegram does not collect your payment information. If you use Telegram's payment feature, your credit card details go directly to the payment provider, not to Telegram's servers.",
-      "detail": "Payment information never reaches Telegram's servers. Credit card details go directly to independent payment providers, and Telegram receives only a reusable token. The App Store label lists 'Payment Info' and 'Purchase History' as collected for App Functionality, which refers to transaction records visible within the app, not raw payment data.",
-      "policy_excerpt": "Payment information never reaches Telegram's servers; credit card details go directly to independent payment providers, and Telegram receives only a reusable token.",
-      "concerns": [],
-      "score_impact": 0
-    },
-    {
-      "id": "data_deletion_user_rights",
-      "label": "Data Deletion & User Rights",
-      "icon": "ShieldCheck",
-      "risk": "safe",
-      "access_type": null,
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "You have excellent control over your data on Telegram. You can delete your entire account permanently, set messages to self-destruct, and delete messages for all participants. You can also download a copy of your stored data.",
-      "detail": "Telegram provides comprehensive deletion features: full account deletion removes all cloud-stored data irreversibly; self-destruct timers for messages; deletion for all participants within 48 hours in cloud chats and without time limits in one-on-one chats; secret-chat deletion orders recipient apps to erase content. GDPR data portability and deletion rights are supported. Accounts self-delete after a configurable inactivity period (default 18 months).",
-      "policy_excerpt": "You may delete your account through the deactivation page, which removes all cloud-stored messages, media, contacts, and other data irreversibly.",
-      "concerns": [],
-      "score_impact": 0
-    },
-    {
-      "id": "policy_change_notification",
-      "label": "Policy Change Notification",
-      "icon": "Bell",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": false,
-      "plain_english": "Telegram's privacy policy does not explicitly describe how users are notified of policy changes. This information was not found in the analyzed documents.",
-      "detail": "The privacy policy and terms of service do not contain a specific section describing the notification process for policy changes. Standard practice for most services is to update the effective date and post changes, but Telegram's specific approach is not documented in the reviewed materials.",
-      "policy_excerpt": "Policy change notification process not described in the analyzed documents.",
-      "concerns": [
-        "No explicit description of policy change notification mechanism"
-      ],
-      "score_impact": -3
-    }
-  ],
-  "scoring": {
-    "base_score": 100,
-    "deductions": [
-      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6.0 },
-      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
-      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9.0 },
-      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "behavioural_ad_tracking", "risk": "safe", "max": 25, "rate": 0.0, "deduction": 0 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
-      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
-      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
-      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
-    ],
-    "total_deductions": 40.0,
-    "final_score": 80,
-    "grade": "A",
-    "max_possible_deductions": 205
-  }
-}
-```
+- **Deductions:** 44.0 / 205
+- **Final Score:** 79
+- **Grade:** B (Caution)
+- **Risk Level:** Caution
+- **Recommendation:** recommended
 
 ---
 
-## Summary Card
+## Red Flags
 
-**App:** Telegram Messenger — iOS  
-**Overall Risk:** Safe — **Score: 80/100 · Grade A**  
-**Recommendation:** Recommended
+1. **Regular chats are not end-to-end encrypted** (high)  
+   > "We store messages, photos, videos and documents from your cloud chats on our servers so that you can access your data from any of your devices anytime without having to rely on third-party backups. All data is stored heavily encrypted and the encryption keys in each case are stored in several other data centers in different jurisdictions."  
+   > "Secret chats use end-to-end encryption. This means that all data is encrypted with a key that only you and the recipient know. There is no way for us or anybody else without direct access to your device to learn what content is being sent in those messages."
 
-### Red Flags
-- **Regular chats are not end-to-end encrypted.** Standard cloud chats are stored on Telegram's servers with server-side encryption. Only secret chats are truly private.
-- **A real phone number is required to sign up.** You cannot create a Telegram account without providing a valid mobile number.
-- **Your IP address may be kept for up to 12 months.** Metadata including IP and device info is stored for anti-abuse and may be disclosed with a court order.
-- **Third-party bots receive your messages and profile.** When you use bots, your data goes to the bot developer, not Telegram.
+2. **A phone number is required to sign up** (medium)  
+   > "Telegram is a communication service. You provide your mobile number and basic account data (which may include profile name, profile picture and about information) to create a Telegram account."
 
-### Green Flags
-- **No ads and no tracking for advertising.** Telegram explicitly does not use your data for ads or sell it to advertisers.
-- **Secret chats and calls are end-to-end encrypted.** True E2E encryption is available for one-on-one secret chats and calls.
-- **Strong deletion and self-destruct controls.** Full account deletion, self-destruct timers, and message deletion for all participants.
-- **No data sold to third parties.** The Play Store confirms no data sharing with third parties.
-- **Open source client apps.** Security researchers can inspect the code.
+3. **Your IP address may be kept for up to 12 months** (medium)  
+   > "we may collect metadata such as your IP address, devices and Telegram apps you've used, history of username changes, etc. If collected, this metadata can be kept for 12 months maximum."  
+   > "If Telegram receives a valid order from the relevant judicial authorities that confirms you're a suspect in a case involving criminal activities that violate the Telegram Terms of Service, we will perform a legal analysis of the request and may disclose your IP address and phone number to the relevant authorities."
 
-### Verdict
-Telegram is one of the better choices for messaging privacy because it genuinely does not track you for ads and does not sell your data. The main trade-off is that regular cloud chats are not end-to-end encrypted — use secret chats for sensitive conversations. If you want a messaging app that respects your privacy without the surveillance of Meta's ecosystem, Telegram is a strong option.
+4. **Third-party bots receive your messages and profile** (medium)  
+   > "By performing any of these actions, you will be sending some of your data to the respective third-party bot developers."  
+   > "the developers of an automated user (bot) can get your public account data (see section 3.1 above): your screen name, username and profile picture(s)"
+
+## Green Flags
+
+1. **No ads and no tracking for advertising** (positive)  
+   > "We don't use your data to show you ads."  
+   > "Telegram only stores the information it needs to function as a secure and feature-rich messaging service."
+
+2. **Secret chats and calls are end-to-end encrypted** (positive)  
+   > "Secret chats use end-to-end encryption. This means that all data is encrypted with a key that only you and the recipient know."  
+   > "Your messages, media and files from secret chats... as well as the contents of your calls and the data you store in your Telegram Passport are processed only on your device and on the device of your recipient."
+
+3. **Strong deletion and self-destruct controls** (positive)  
+   > "Deleting your account removes all messages, media, contacts and every other piece of data you store in the Telegram cloud."  
+   > "As of version 5.5, any party can choose to delete any messages in one-on-one chats, both sent and received, for both sides. There is no time limit."
+
+4. **No data sold to third parties** (positive)  
+   > "We don't use your data to show you ads."  
+   > "Unlike other services, we don't use your data for ad targeting or other commercial purposes."
+
+5. **Open source project** (positive)  
+   > "Telegram is an open source project."
+
+---
+
+## Key Category Findings
+
+| Category | Risk | Key Quote |
+|----------|------|-----------|
+| Camera & Microphone | Unknown | Policy is silent on camera/microphone permissions |
+| Location & GPS | Caution | "If you share your Live Location in any chat or turn on 'Make Myself Visible' in People Nearby, Telegram will use your data to display your location... even when the app is closed" |
+| Contacts | Caution | "We ask your permission before syncing your contacts" and "We only need the number and name (first and last) for this to work" |
+| Storage | Safe | Cloud data "stored heavily encrypted"; secret-chat media encrypted before upload |
+| Data Sharing | Caution | Core policy: no ad sharing. Bots receive public profile. Translation/voice-to-text may use Google/Microsoft. Court-ordered disclosure possible. |
+| Account Identity | Caution | "You provide your mobile number and basic account data" |
+| Ad Tracking | Safe | "We don't use your data to show you ads" |
+| Children's Data | Unknown | Policy is silent |
+| Network Activity | Caution | "metadata such as your IP address, devices and Telegram apps you've used... can be kept for 12 months maximum" |
+| Device Info | Caution | "devices and Telegram apps you've used, history of username changes" |
+| Health/Biometric | Safe | No collection mentioned |
+| Payments | Safe | "Your credit card information never reaches Telegram's servers" |
+| Deletion | Safe | "Deleting your account removes all messages, media, contacts and every other piece of data" |
+| Policy Changes | Caution | "Important changes made to this Privacy Policy will be notified to you via Telegram" |
+
+---
+
+## Strict Analysis Notes
+
+- **Score dropped from 80/A to 79/B** because camera/microphone and children's data were marked unknown under strict rules (policy is silent on these topics). This increased deductions by 4.0 points.
+- **No "sell" language found.** The policy explicitly states Telegram does not use data for ads or commercial purposes. No "SELLS YOUR DATA" claim was made.
+- **No cross-app tracking claimed.** The policy does not describe cross-app tracking.
+- **Cloud-not-E2E flag kept at high severity** because the policy explicitly and unambiguously distinguishes cloud chats (server-held keys) from secret chats (E2E). This is fundamental to user privacy.
+- **Bot data sharing downgraded to medium** because the policy clearly describes what bots receive and users are warned. It is not a hidden practice.
+- **Open source claim supported** by direct quote from the policy footer.
+- **Policy change notification upgraded from unknown to caution** because the policy explicitly states: "Important changes made to this Privacy Policy will be notified to you via Telegram."

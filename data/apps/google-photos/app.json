@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "http://www.google.co.uk/policies/privacy",
     "terms_url": "",
@@ -22,69 +22,57 @@
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 55,
+    "score": 69,
     "grade": "C",
-    "one_liner": "Google Photos offers free backup and powerful AI search, but Google scans your photos, uses your data for ads, and stores face groups on its servers.",
-    "summary": "Google Photos automatically backs up all your photos and videos to Google's cloud, where AI organizes them into albums, groups faces, and enables search. While convenient, this means Google has access to your entire photo library, uses your activity for advertising across Google services, and stores facial grouping data on its servers. Google provides good privacy controls and deletion options, but continued use feeds Google's extensive tracking ecosystem.",
+    "one_liner": "Google analyzes your uploaded photos and videos, but does not use them for personalized ads.",
+    "summary": "Google Photos automatically backs up photos and videos you upload to Google's cloud. The Google Privacy Policy states that Google uses automated systems to analyze your content to provide features tailored to how you use its services, and that uploaded photos and videos are used to help create albums and other creations. Importantly, the policy explicitly states that Google does not show personalized ads based on your content from Photos. However, your general activity across Google services may still be used for ads depending on your settings, and everything is linked to your Google Account.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Google Photos is convenient for backup, but Google scans your photos with AI, uses your activity for ads, and stores face grouping data on its servers. If privacy matters, consider Apple Photos with iCloud instead."
+    "recommendation_reason": "Google Photos is convenient for backup, but Google analyzes your uploaded content with automated systems and links your activity to your Google Account. If privacy matters, consider Apple Photos with iCloud instead."
   },
   "flags": {
     "red": [
       {
-        "id": "red_ai_scanning",
-        "title": "Google scans all your photos with AI",
-        "plain_english": "Google uses artificial intelligence to analyze every photo and video you upload. This includes face grouping, object recognition, and creating albums automatically. While this powers useful features like search, it means Google has deep insight into your visual life.",
-        "severity": "high"
-      },
-      {
-        "id": "red_ad_tracking",
-        "title": "Activity used for ads across Google services",
-        "plain_english": "Google tracks which photos you view, albums you create, and how you use the app. This activity feeds into your Google advertising profile and is used to show you personalized ads across Google Search, YouTube, and other Google apps.",
-        "severity": "high"
-      },
-      {
-        "id": "red_face_grouping",
-        "title": "Face grouping data stored on Google servers",
-        "plain_english": "Google Photos groups photos of the same person together using face recognition technology. The face geometry data used for this grouping is stored on Google's servers, not just on your device.",
-        "severity": "high"
-      },
-      {
-        "id": "red_cross_service_data",
-        "title": "Photos data linked to your Google Account profile",
-        "plain_english": "Everything you do in Google Photos is tied to your Google Account. This means your photo activity is linked with your searches, emails, location history, and purchases across all Google services.",
+        "id": "red_content_analyzed",
+        "title": "Google uses automated systems to analyze your uploads",
+        "plain_english": "Google's privacy policy states that it uses automated systems that analyze your content to provide features tailored to how you use its services. It also says photos and videos you upload to Google Photos are used to help you create albums and other creations.",
         "severity": "medium"
       },
       {
-        "id": "red_geotag_collection",
-        "title": "Location data extracted from your photos",
-        "plain_english": "Google reads the location metadata embedded in your photos and combines it with your IP address and device location to build a detailed location history. This is used for features like location-based albums and advertising.",
+        "id": "red_data_linked_to_account",
+        "title": "Your Photos activity is linked to your Google Account",
+        "plain_english": "Google's privacy policy states that when you are signed in, information is collected and stored with your Google Account and treated as personal information.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_location_collected",
+        "title": "Location information is collected when you use Google services",
+        "plain_english": "Google's privacy policy states that it collects location information when you use its services, including for ads and search results. It does not clearly explain whether Google Photos specifically extracts location from your photo metadata.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_activity_may_be_used_for_ads",
+        "title": "Your activity across Google services may be used for ads",
+        "plain_english": "Google's privacy policy states that depending on your settings, it may show you personalized ads based on your interests and activity across Google services. However, the policy explicitly states that Google does not show personalized ads based on your content from Photos.",
         "severity": "medium"
       }
     ],
     "green": [
       {
         "id": "green_encryption",
-        "title": "Encryption in transit and at rest",
-        "plain_english": "Google encrypts your photos while they are being uploaded and downloaded, and also while they are stored on Google's servers.",
+        "title": "Encryption protects data in transit",
+        "plain_english": "Google's privacy policy states that it uses encryption to keep your data private while in transit.",
         "severity": "positive"
       },
       {
         "id": "green_deletion_tools",
-        "title": "You can delete photos and your entire account",
-        "plain_english": "Google provides tools to delete individual photos, bulk delete, or delete your entire Google Account. You can also download all your data using Google Takeout before leaving.",
+        "title": "You can delete your Photos content and account",
+        "plain_english": "Google's privacy policy states that you can delete your content from specific Google services, delete specific Google products, or delete your entire Google Account. You can also export a copy of your content.",
         "severity": "positive"
       },
       {
-        "id": "green_no_ownership_claim",
-        "title": "Your photos remain yours",
-        "plain_english": "Google does not claim ownership of your photos or videos. The content you upload remains your property.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_privacy_controls",
-        "title": "Granular sharing and privacy controls",
-        "plain_english": "You can choose which photos to share, with whom, and whether to allow link sharing. Albums are private by default.",
+        "id": "green_photos_content_not_used_for_ads",
+        "title": "Google does not use your Photos content for personalized ads",
+        "plain_english": "Google's privacy policy explicitly states that it does not show you personalized ads based on your content from Photos.",
         "severity": "positive"
       }
     ]
@@ -114,12 +102,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Google reads location data embedded in your photos and may use your IP address to estimate your location for organizing albums and ads.",
-      "detail": "Location data is extracted from photo metadata and combined with IP-based location for features like location-based albums and maps. Google also uses location for advertising purposes across its services.",
+      "plain_english": "Google collects location information when you use its services. The policy does not clearly explain whether Google Photos specifically reads location data embedded in your uploads.",
+      "detail": "The general Google Privacy Policy says location is collected for driving directions, search results, and ads. It does not specifically mention extracting EXIF location metadata from uploaded photos.",
       "policy_excerpt": "We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location.",
       "concerns": [
-        "Location metadata from photos is read and stored",
-        "IP address used for location inference and ads"
+        "Policy does not clearly explain whether photo location metadata is extracted"
       ],
       "score_impact": -4.5
     },
@@ -127,32 +114,32 @@
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "You can optionally give access to your contacts to share photos and albums with people you know.",
-      "detail": "Contacts access is optional and only used for sharing features. Google does not continuously upload your contacts list for Photos-specific purposes.",
+      "plain_english": "The policy does not mention whether Google Photos accesses your phone contacts.",
+      "detail": "The general Google Privacy Policy mentions suggesting recipients from your contacts when sharing content, but does not explicitly state whether Photos accesses contacts.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": -6.0
+      "concerns": ["Policy silent on contact access for Photos"],
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
       "risk": "caution",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "Google Photos needs access to your photo library to back up and store your photos and videos on Google's cloud servers.",
-      "detail": "Full photo library access is required for the app's core backup function. Photos and videos are uploaded to Google's servers where they may be scanned by AI for organization and search.",
+      "detail": "Full photo library access is required for the app's core backup function. The policy states that photos and videos you upload are used to help create albums and other creations.",
       "policy_excerpt": "We also collect the content you create, upload, or receive from others when using our services. This includes things like email you write and receive, photos and videos you save, docs and spreadsheets you create.",
       "concerns": [
-        "All uploaded photos are scanned by AI for face grouping and object recognition",
-        "Photos stored on third-party servers"
+        "All uploaded photos are stored on Google's servers",
+        "Automated systems analyze your uploaded content"
       ],
       "score_impact": -3.0
     },
@@ -164,14 +151,13 @@
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "Google shares your information with advertising partners, analytics providers, and other Google companies. Your photo activity contributes to your advertising profile.",
-      "detail": "Google shares data with affiliates, advertising partners, service providers, and domain administrators. While Google says it does not sell your personal information, it extensively shares aggregated and demographic data for advertising.",
-      "policy_excerpt": "We provide personal information to our affiliates and other trusted businesses or persons to process it for us, based on our instructions and in compliance with our Privacy Policy.",
+      "background_access": false,
+      "plain_english": "Google's privacy policy states that personal information is shared with affiliates and trusted businesses for external processing, and non-personally identifiable information is shared with partners including advertisers.",
+      "detail": "The policy says Google does not share personal information outside of Google except with consent, domain administrators, for external processing, or for legal reasons. However, it also says non-personally identifiable information may be shared publicly and with partners like publishers, advertisers, and developers.",
+      "policy_excerpt": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons. We may share non-personally identifiable information publicly and with our partners — like publishers, advertisers, developers, or rights holders.",
       "concerns": [
-        "Data shared with Google's advertising partners",
-        "Cross-service data linking",
-        "Domain administrator access for work accounts"
+        "Data shared with Google's external processors",
+        "Non-personally identifiable information shared with advertisers"
       ],
       "score_impact": -19.5
     },
@@ -180,13 +166,13 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "caution",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "You need a Google Account to use Google Photos. Google collects your name, email, and phone number, and links your Photos activity to your broader Google identity.",
-      "detail": "A Google Account is required. Your Photos activity is linked to your Google Account and combined with data from Search, YouTube, Maps, and other Google services.",
-      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "detail": "A Google Account is required. The policy states that when you create an account, you provide personal information including your name and password, and you can add a phone number or payment information. When signed in, information is stored with your Google Account.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account. When you're signed in, we also collect information that we store with your Google Account, which we treat as personal information.",
       "concerns": [
         "Cross-service account linking",
         "Activity combined across all Google services"
@@ -197,37 +183,34 @@
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "Google tracks how you use Photos \u2014 which photos you view, albums you create, and searches you make \u2014 to build an advertising profile and show you personalized ads across Google services.",
-      "detail": "Google collects detailed usage data including content interactions, search terms, album creation, and sharing activity. This is combined with data from all Google services to build a behavioral advertising profile.",
-      "policy_excerpt": "Google processes information to provide advertising, including online identifiers, browsing and search activity, and information about your location and interactions with advertisements.",
+      "background_access": false,
+      "plain_english": "Google may use your activity across services for personalized ads depending on your settings, but it explicitly says it does not use your Photos content for ads.",
+      "detail": "The general policy says depending on your settings, Google may show personalized ads based on your activity across services. However, the policy explicitly states: 'We don't show you personalized ads based on your content from Drive, Gmail, or Photos.'",
+      "policy_excerpt": "Depending on your settings, we may also show you personalized ads based on your interests and activity across Google services. We don't show you personalized ads based on your content from Drive, Gmail, or Photos.",
       "concerns": [
-        "Cross-service activity tracking",
-        "Ad profile building from photo activity",
-        "Data shared with advertisers"
+        "General activity may be used for ads",
+        "Cross-service activity tracking"
       ],
-      "score_impact": -16.25
+      "score_impact": -7.5
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You must be 13 or older to create a Google Account. Parents can use Family Link to manage Google Accounts for children under 13.",
-      "detail": "Google requires users to be 13+. Family Link allows supervised accounts for younger children with parental controls.",
+      "plain_english": "Google offers Family Link for children under 13.",
+      "detail": "The general Google Privacy Policy references Family Link for children under the applicable age.",
       "policy_excerpt": "Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country)",
-      "concerns": [
-        "No robust age verification"
-      ],
-      "score_impact": -3.0
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "network_internet_activity",
@@ -237,12 +220,12 @@
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "Google logs your IP address, upload and download activity, and how you interact with the Photos service. This data is used for security, analytics, and advertising.",
-      "detail": "IP address, browser type, device info, and usage patterns are logged continuously. Network data is used for security, troubleshooting, and ad targeting.",
-      "policy_excerpt": "We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates.",
+      "background_access": false,
+      "plain_english": "Google logs your IP address, device info, and system activity continuously when you use Google services.",
+      "detail": "The policy states that Google collects information about the interaction of your apps, browsers, and devices with its services, including IP address, crash reports, and system activity.",
+      "policy_excerpt": "We collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.",
       "concerns": [
-        "IP address used for location inference and ads",
+        "IP address logged continuously",
         "Extensive usage logging"
       ],
       "score_impact": -3.25
@@ -255,13 +238,13 @@
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "Google collects detailed information about your device including unique identifiers, operating system, and carrier. This helps Google track your activity across apps and services.",
-      "detail": "Collects unique identifiers, browser type, device type, OS, carrier, application version, and other device info. Used for tracking, security, and advertising across Google services.",
+      "background_access": false,
+      "plain_english": "Google collects detailed information about your device including unique identifiers, operating system, and carrier.",
+      "detail": "The policy says Google collects unique identifiers, browser type, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
       "policy_excerpt": "The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
       "concerns": [
-        "Unique device identifiers used for cross-service tracking",
-        "Device fingerprint persists across reinstalls"
+        "Unique device identifiers collected",
+        "Carrier name and phone number collected"
       ],
       "score_impact": -9.75
     },
@@ -269,19 +252,16 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "risky",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google Photos uses face recognition technology to group photos of the same person together. The face geometry data is stored on Google's servers to power this feature.",
-      "detail": "Face grouping technology analyzes face geometry in your photos and stores this data on Google's servers. Google says this is not used to identify individuals outside of your account, but the biometric-like data is still stored externally.",
+      "plain_english": "The Google Privacy Policy does not mention collecting health or biometric data for Google Photos.",
+      "detail": "No health or biometric data collection is referenced in the privacy policy for Google Photos.",
       "policy_excerpt": "",
-      "concerns": [
-        "Face geometry data stored on external servers",
-        "Biometric-like data used for photo grouping"
-      ],
-      "score_impact": -9.75
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
@@ -293,8 +273,8 @@
       "optional_access": true,
       "background_access": false,
       "plain_english": "If you upgrade to Google One for extra storage, Google collects payment information through its payment processors.",
-      "detail": "Payment and billing information is collected when subscribing to Google One or other paid Google services. Processed by third-party payment processors.",
-      "policy_excerpt": "For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services.",
+      "detail": "The policy mentions that Google processes your payment information when you buy extra storage for Google Drive. This would apply to Google One storage upgrades for Photos as well.",
+      "policy_excerpt": "We process your payment information when you buy extra storage for Google Drive.",
       "concerns": [],
       "score_impact": -4.5
     },
@@ -308,8 +288,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "You can delete individual photos, albums, or your entire Google Account. Google Takeout lets you download your data first. Some data may be retained for legal or security reasons.",
-      "detail": "Provides tools to delete photos, albums, and entire account. Google Takeout available for data export. Some data retained for legal, security, and abuse prevention purposes.",
-      "policy_excerpt": "You can also delete your account at any time through your Google Account settings.",
+      "detail": "The policy provides tools to delete content from specific services or your entire account. Some data is retained for legal, security, and abuse prevention purposes.",
+      "policy_excerpt": "Delete your content from specific Google services. Delete specific Google products. Delete your entire Google Account. And some data we retain for longer periods of time when necessary for legitimate business or legal purposes.",
       "concerns": [
         "Some data retained after deletion for legal/security reasons"
       ],
@@ -319,18 +299,16 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google can change its privacy policy at any time. For major changes, they may notify you, but continued use of the service counts as acceptance.",
-      "detail": "Updated policy posted with a new effective date. Notice for material changes via email or posting. Continued use constitutes acceptance.",
-      "policy_excerpt": "If we do, we will change the 'last updated' date at the top of this policy... Under certain circumstances we will provide notice to you of these changes.",
-      "concerns": [
-        "Continued use = automatic acceptance"
-      ],
-      "score_impact": -1.5
+      "plain_english": "Google promises not to reduce your rights under its Privacy Policy without your explicit consent, and it provides more prominent notice for significant changes.",
+      "detail": "The general Google Privacy Policy states it will not reduce your rights without explicit consent, and provides more prominent notice for significant changes.",
+      "policy_excerpt": "We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. If changes are significant, we'll provide a more prominent notice.",
+      "concerns": [],
+      "score_impact": 0
     }
   ],
   "scoring": {
@@ -353,10 +331,10 @@
       },
       {
         "category": "contacts_phonebook",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 20,
-        "rate": 0.3,
-        "deduction": 6.0
+        "rate": 0.0,
+        "deduction": 0
       },
       {
         "category": "storage_file_access",
@@ -381,17 +359,17 @@
       },
       {
         "category": "behavioural_ad_tracking",
-        "risk": "risky",
+        "risk": "caution",
         "max": 25,
-        "rate": 0.65,
-        "deduction": 16.25
+        "rate": 0.3,
+        "deduction": 7.5
       },
       {
         "category": "childrens_data",
-        "risk": "caution",
+        "risk": "safe",
         "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
+        "rate": 0.0,
+        "deduction": 0
       },
       {
         "category": "network_internet_activity",
@@ -409,10 +387,10 @@
       },
       {
         "category": "health_biometric",
-        "risk": "risky",
+        "risk": "safe",
         "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
+        "rate": 0.0,
+        "deduction": 0
       },
       {
         "category": "financial_payment",
@@ -430,14 +408,14 @@
       },
       {
         "category": "policy_change_notification",
-        "risk": "caution",
+        "risk": "safe",
         "max": 5,
-        "rate": 0.3,
-        "deduction": 1.5
+        "rate": 0.0,
+        "deduction": 0
       }
     ],
-    "total_deductions": 93.0,
-    "final_score": 55,
+    "total_deductions": 64.0,
+    "final_score": 69,
     "grade": "C"
   }
 }

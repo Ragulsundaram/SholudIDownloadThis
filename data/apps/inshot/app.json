@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-12",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://inshot.cc/terms/privacy.html",
     "terms_url": "https://inshot.cc/terms/terms.html",
     "policy_last_updated": "2024-12-16",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Strict re-analysis: location/GPS and contacts/phonebook marked unknown because the privacy policy is silent on these categories. The policy is explicit about most other categories."
   },
   "app": {
-    "slug": "inshot-ios",
+    "slug": "inshot",
     "name": "InShot - AI Video Editor",
     "developer": "SHANTANU PTE. LTD.",
     "app_store_url": "https://apps.apple.com/in/app/inshot-ai-video-editor/id997362197",
@@ -21,13 +21,13 @@
     "description": "A popular video and photo editing app with AI-powered features, filters, effects, and tools for creating social media content."
   },
   "verdict": {
-    "overall_risk": "safe",
-    "score": 81,
-    "grade": "A",
-    "one_liner": "InShot is a privacy-friendly video editor that keeps your photos and videos on your device, anonymizes data for ads, and doesn't require an account to use.",
-    "summary": "InShot is a video and photo editing app with notably strong privacy practices. It requires no account registration, keeps all your media stored locally on your device, and explicitly promises never to collect or store your photos or face data. It does show personalized ads through third-party SDKs, but data is anonymized and users can opt out.",
+    "overall_risk": "caution",
+    "score": 72,
+    "grade": "B",
+    "one_liner": "InShot keeps photos on device and needs no account, but policy is silent on location.",
+    "summary": "InShot is a video and photo editing app that requires no account registration and keeps all your media stored locally on your device. It explicitly promises never to collect or store your photos or face data. It does show personalized ads through third-party SDKs, but data is anonymized and users can opt out. The privacy policy does not mention whether the app collects your location or accesses your contacts.",
     "recommendation": "recommended",
-    "recommendation_reason": "InShot is one of the more privacy-respecting video editors available. Your content stays on your device, no account is needed, and you have clear opt-outs for personalized advertising."
+    "recommendation_reason": "InShot is one of the more privacy-respecting video editors available. Your content stays on your device, no account is needed, and you have clear opt-outs for personalized advertising. However, the privacy policy is silent on location and contacts access."
   },
   "flags": {
     "red": [
@@ -87,8 +87,8 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "InShot uses your microphone when you record audio for videos. Your unfinished videos with audio are stored in the app's draft box on your local device. The app does not access your camera directly.",
-      "detail": "Microphone permission used for audio recording. Drafts stored locally. No camera access mentioned.",
+      "plain_english": "InShot uses your microphone when you record audio for videos. Your unfinished videos with audio are stored in the app's draft box on your local device.",
+      "detail": "Microphone permission used for audio recording. Drafts stored locally. The policy does not explicitly mention camera access for taking new photos.",
       "policy_excerpt": "When you use the audio recording feature, we need microphone permission to record audio; At the same time, your unfinished video will be stored in the InShot draft box and local device.",
       "concerns": [
         "Audio recordings stored in local drafts"
@@ -99,31 +99,35 @@
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "InShot does not collect or use your location information.",
-      "detail": "No location or GPS access mentioned in privacy policy.",
+      "plain_english": "The privacy policy does not say whether InShot collects or uses your location information.",
+      "detail": "No location or GPS access is mentioned in the privacy policy. Because the policy is silent, we cannot confirm whether this permission is requested.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": [
+        "Policy is silent on location and GPS access"
+      ],
+      "score_impact": -7.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "InShot does not ask for access to your contacts or phonebook.",
-      "detail": "No contacts or phonebook access mentioned.",
+      "plain_english": "The privacy policy does not say whether InShot asks for access to your contacts or phonebook.",
+      "detail": "No contacts or phonebook access is mentioned in the privacy policy. Because the policy is silent, we cannot confirm whether this permission is requested.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": [
+        "Policy is silent on contacts and phonebook access"
+      ],
+      "score_impact": -10
     },
     {
       "id": "storage_file_access",
@@ -136,9 +140,9 @@
       "background_access": false,
       "plain_english": "InShot needs access to your photos and videos so you can select them for editing, and to save your finished work back to your device. They explicitly promise they do not collect, modify, or delete anything from your storage.",
       "detail": "Storage permission required for selecting and saving media. Explicit promise not to obtain, modify, or delete local media content.",
-      "policy_excerpt": "When you use the video/photo editing or collage feature, we need permission to access your local media to select videos or images... We will not obtain any video or photos from your device, nor will we modify or delete the content in your local media storage.",
+      "policy_excerpt": "We will not obtain any video or photos from your device, nor will we modify or delete the content in your local media storage.",
       "concerns": [],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -151,12 +155,12 @@
       "background_access": false,
       "plain_english": "InShot shares some information with advertising partners and analytics providers, but they promise to only share what's necessary, require partners to keep it confidential, and anonymize the data so it can't identify you personally.",
       "detail": "Shared with advertising partners (Admob, AppLovin) and technical support partners. Data anonymized. Partners must meet same security standards. Immediate termination for violations.",
-      "policy_excerpt": "We will only share your personal information for legal, legitimate, necessary, specific and clear purposes... we require third parties to deal with shared information with confidentiality and security measures no less than those required by this policy.",
+      "policy_excerpt": "Share with advertising service and technical support partners.",
       "concerns": [
         "Ad SDK data sharing",
         "Firebase analytics"
       ],
-      "score_impact": -9.0
+      "score_impact": -9
     },
     {
       "id": "account_identity",
@@ -184,7 +188,7 @@
       "background_access": false,
       "plain_english": "InShot shows personalized ads through partners like Admob and AppLovin. These partners may collect information about how you use the app to show ads that match your interests. However, the data is anonymized, and you can turn off personalized ads in the app's settings.",
       "detail": "Personalized ads via Admob and AppLovin SDKs. Data anonymized. Pop-up consent for tracking. Opt-out available in Settings. Non-personalized ads shown after opt-out.",
-      "policy_excerpt": "Admob, AppLovin, as advertisers of InShot, may collect information generated during your use of our products and services, extract your preferences, and use them to show you ads that are more in line with your individual needs. We will use technical means to anonymize the data... InShot will display a pop up to ask you if allow these third parties to track your app use activities.",
+      "policy_excerpt": "Admob, AppLovin, as advertisers of InShot, may collect information generated during your use of our products and services, extract your preferences, and use them to show you ads that are more in line with your individual needs.",
       "concerns": [
         "Behavioral ad targeting",
         "Ad SDK tracking"
@@ -202,7 +206,7 @@
       "background_access": false,
       "plain_english": "InShot is designed for users 13 and older. If they accidentally collect information from a child under 13, they promise to delete it as soon as possible.",
       "detail": "13+ requirement. Will delete accidental children's data. Parental guidance recommended for minors.",
-      "policy_excerpt": "InShot mainly provides its products and services to people over 13 years old... If we learn that our products have accidentally collected children's personal information, we will delete the relevant information as soon as possible.",
+      "policy_excerpt": "If we learn that our products have accidentally collected children's personal information, we will delete the relevant information as soon as possible.",
       "concerns": [],
       "score_impact": 0
     },
@@ -215,9 +219,9 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "InShot uses your internet connection to download editing materials like stickers, filters, and effects. It does not collect or track your browsing history or what websites you visit.",
-      "detail": "Network permission used for downloading materials via WLAN or mobile data. No other information obtained through this permission.",
-      "policy_excerpt": "Network permission: If you want InShot download the material when your device used the 'WLAN & Mobile Data'. This permission is only used for the function mentioned above. We will not obtain any other information through this permission authorization.",
+      "plain_english": "InShot uses your internet connection to download editing materials like stickers, filters, and effects. It states it will not obtain any other information through the network permission.",
+      "detail": "Network permission used for downloading materials via WLAN or mobile data. The policy states it will not obtain any other information through this permission authorization.",
+      "policy_excerpt": "This permission is only used for the function mentioned above. We will not obtain any other information through this permission authorization.",
       "concerns": [],
       "score_impact": -1.5
     },
@@ -230,7 +234,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "InShot's advertising partners collect your device's unique identification code to show you personalized ads and measure app usage. This helps them recognize your device.",
+      "plain_english": "InShot's advertising partners collect your device's unique identification code to show you personalized ads and measure app usage.",
       "detail": "Ad SDKs (Admob, AppLovin) collect unique device identification codes. Firebase collects application software list and uploaded content for analytics.",
       "policy_excerpt": "Admob Ads SDK... Unique device identification code (Android ID)... AppLovin Ads SDK... Unique device identification code (Android ID)... Firebase SDK... Application software list, uploaded content",
       "concerns": [
@@ -279,9 +283,9 @@
       "background_access": false,
       "plain_english": "You can revoke any permissions you granted to InShot, delete your drafts and content, and opt out of personalized ads. InShot also provides CCPA and GDPR rights for California and EU users.",
       "detail": "Revoke permissions anytime. Opt out of personalized ads. CCPA rights (know, delete, opt-out, non-discrimination). GDPR rights (access, copy, delete, restrict, object, withdraw consent, complaint). Contact via email.",
-      "policy_excerpt": "You may revoke any permissions you have granted to us before, such as permission to access your camera or camera roll; Delete; Opt out. You have the right to 'opt out' of receiving personalized ads.",
+      "policy_excerpt": "You may revoke any permissions you have granted to us before, such as permission to access your camera or camera roll; Delete; Opt out.",
       "concerns": [],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -294,9 +298,9 @@
       "background_access": false,
       "plain_english": "InShot can update its privacy policy from time to time. For major changes, they will show you a pop-up notification in the app. If you keep using the app after changes, that means you agree to them.",
       "detail": "Pop-up notifications for major changes. Continued use constitutes agreement. Updated versions have same effect as original policy.",
-      "policy_excerpt": "When there are major changes to the terms of this policy, for example, changes of the purpose, method, and scope of personal information collection, we will remind you by means of pop-up notifications... your use or continued use of the products and/or services we provide means that you fully understand and agree to the entire content of this privacy policy (including updated versions).",
+      "policy_excerpt": "When there are major changes to the terms of this policy... we will remind you by means of pop-up notifications",
       "concerns": [
-        "Continued use = acceptance"
+        "Continued use equals acceptance"
       ],
       "score_impact": -1.5
     }
@@ -309,103 +313,103 @@
         "category": "camera_microphone",
         "risk": "caution",
         "max": 15,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 4.5
       },
       {
         "category": "location_gps",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0.00,
-        "deduction": 0
+        "rate": 0.5,
+        "deduction": 7.5
       },
       {
         "category": "contacts_phonebook",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 20,
-        "rate": 0.00,
-        "deduction": 0
+        "rate": 0.5,
+        "deduction": 10
       },
       {
         "category": "storage_file_access",
         "risk": "caution",
         "max": 10,
-        "rate": 0.30,
-        "deduction": 3.0
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "data_sharing_third_parties",
         "risk": "caution",
         "max": 30,
-        "rate": 0.30,
-        "deduction": 9.0
+        "rate": 0.3,
+        "deduction": 9
       },
       {
         "category": "account_identity",
         "risk": "safe",
         "max": 15,
-        "rate": 0.00,
+        "rate": 0,
         "deduction": 0
       },
       {
         "category": "behavioural_ad_tracking",
         "risk": "caution",
         "max": 25,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 7.5
       },
       {
         "category": "childrens_data",
         "risk": "safe",
         "max": 10,
-        "rate": 0.00,
+        "rate": 0,
         "deduction": 0
       },
       {
         "category": "network_internet_activity",
         "risk": "caution",
         "max": 5,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 1.5
       },
       {
         "category": "device_fingerprinting",
         "risk": "caution",
         "max": 15,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 4.5
       },
       {
         "category": "health_biometric",
         "risk": "safe",
         "max": 15,
-        "rate": 0.00,
+        "rate": 0,
         "deduction": 0
       },
       {
         "category": "financial_payment",
         "risk": "caution",
         "max": 15,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 4.5
       },
       {
         "category": "data_deletion_user_rights",
         "risk": "caution",
         "max": 10,
-        "rate": 0.30,
-        "deduction": 3.0
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",
         "risk": "caution",
         "max": 5,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 1.5
       }
     ],
-    "total_deductions": 39.0,
-    "final_score": 81,
-    "grade": "A"
+    "total_deductions": 56.5,
+    "final_score": 72,
+    "grade": "B"
   }
 }

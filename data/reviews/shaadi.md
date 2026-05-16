@@ -1,69 +1,37 @@
-# Shaadi.com iOS — Privacy Policy Review
+# Re-analysis: Shaadi.com
+**Date:** 2026-05-16  
+**Analyst:** claude-sonnet-4  
+**Policy:** https://www.shaadi.com/info/privacy
 
-**Reviewed:** 2026-05-12  
-**Policy:** https://www.shaadi.com/info/privacy  
-**Terms:** https://www.shaadi.com/info/terms  
-**Platform:** iOS  
-**Score:** 58/100 (Grade C, Caution)
+## Verdict
+- **Score:** 58 / Grade: C / Risk: caution
+- **Recommendation:** think_twice
+- **Needs review:** true — several claims could not be verified against the privacy policy text alone (terms may contain additional context).
 
----
+## Red Flags (4)
+1. **Government ID and selfie verification may be required** (medium) — Policy says "strongly encouraged" and "may be required from time to time." Removed unsupported claim that this is required to unlock core features like messaging.
+2. **Your profile is shared with other users by design** (medium) — Personal information is published to other registered users for matchmaking. Downgraded from high because it is the explicit core purpose.
+3. **Collects bank account, credit card, and UPI details for paid services** (medium)
+4. **The platform explicitly operates as an advertising service** (medium) — Policy states: "Shaadi.com is an advertising platform providing targeted advertising services."
 
-## Summary
+## Green Flags (3)
+1. **You can access, update, and delete your information**
+2. **Payment data is encrypted during transmission**
+3. **Shaadi.com states it does not sell your personal information** — New flag based on direct policy quote.
 
-Shaadi.com is India's largest matrimonial platform, owned by People Interactive (India) Private Limited. The platform explicitly defines itself as an "advertising platform providing targeted advertising services for the purpose of matchmaking." By design, it requires and publishes extensive personal and sensitive data to facilitate matrimonial introductions.
+## Removed Flags
+- **Removed `red_criminal_background_checks`:** Not mentioned in the privacy policy text.
+- **Removed `red_testimonials_used_forever`:** Privacy policy mentions testimonials are collected, but does not state they are licensed for perpetual marketing.
+- **Removed `green_chat_auto_delete`:** Not mentioned in privacy policy.
+- **Removed `green_age_verification_strong`:** Privacy policy is completely silent on age requirements.
 
-Key concerns: mandatory government ID and selfie verification for core features, third-party criminal background checks, extensive behavioral tracking for advertising, public profile display by design, and irrevocable licensing of user content including testimonials for perpetual marketing use.
+## Key Changes in This Re-analysis
+- **Fixed `app.slug`:** Changed from `shaadi-ios` to `shaadi` to match folder name and URL convention.
+- **Fixed scoring rate errors:** `account_identity`, `behavioural_ad_tracking`, `device_fingerprinting`, and `financial_payment` all used incorrect rates (0.7–0.8 instead of 0.65 for risky). Corrected to schema-compliant rates.
+- **Changed `childrens_data` from safe to unknown:** Privacy policy is silent on age/children. Deduction changed from 0 to 5.0.
+- **Updated `policy_change_notification`:** Removed terms-based claims about "continued use = acceptance." Now reflects only what the privacy policy says: material changes will be notified as required by law.
+- **Updated `camera_microphone`:** Removed unsupported claims about video call features (Shaadi Meet / Shaadi Live) because they are not mentioned in the privacy policy.
+- **Updated `data_sharing_third_parties`:** Removed unsupported concern about "verification agencies conducting criminal background checks."
 
-Key positives: strong age requirements (21+ male, 18+ female), encryption for payment data, automatic chat deletion after 90 days, and tools for data access and deletion.
-
----
-
-## Methodology
-
-This review was conducted by analyzing the Shaadi.com Privacy Policy and Terms of Service, accessed via jina.ai text extraction on 2026-05-12.
-
-### Data Collection Observed
-
-- **Personal:** Name, gender, date of birth, contact details, education, employment, photos, marital status, interests
-- **Sensitive:** Government-issued identity proofs (Driving License, Passport, Aadhaar, PAN)
-- **Financial:** Bank account, debit/credit card, UPI ID
-- **Activity:** Login times, features used, searches, clicks, pages visited, messages exchanged
-- **Device:** IP address, device ID, device type, specifications, app settings, error reports, browser, OS, cookie identifiers
-- **Social Login:** Data from Google/Apple login
-- **Content:** Testimonials, success stories, photos, profile information
-
-### Notable Excerpts
-
-> "Shaadi.com is an advertising platform providing targeted advertising services for the purpose of matchmaking."
-
-> "Members are strongly encouraged to submit valid government-issued identification (e.g., Driving License, Passport, Aadhaar Card and PAN) and/or complete Selfie Verification, as may be required by Shaadi.com from time to time."
-
-> "By submitting your testimonials or success stories, including any photographs or personal details, you expressly and irrevocably authorize Shaadi.com to use, reproduce, publish, and publicly display such Content on the Platform and in Shaadi.com's marketing materials (online or offline) perpetually, without any further notice or compensation."
-
-> "Shaadi.com may, in its sole discretion, require mandatory submission of a valid government issued identity card and/or completion of Selfie Verification to unlock certain Platform features, including but not limited to viewing or sharing contact details of other Members, chatting etc."
-
----
-
-## Scoring Breakdown
-
-| Category | Risk | Max | Rate | Deduction |
-|----------|------|-----|------|-----------|
-| Camera & Microphone | caution | 15 | 0.30 | 4.5 |
-| Location & GPS | safe | 15 | 0.00 | 0 |
-| Contacts & Phonebook | safe | 20 | 0.00 | 0 |
-| Storage & File Access | caution | 10 | 0.30 | 3.0 |
-| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.5 |
-| Account & Identity | risky | 15 | 0.70 | 10.5 |
-| Behavioural & Ad Tracking | risky | 25 | 0.80 | 20.0 |
-| Children's Data | safe | 10 | 0.00 | 0 |
-| Network & Internet Activity | risky | 5 | 0.65 | 3.25 |
-| Device Fingerprinting | risky | 15 | 0.70 | 10.5 |
-| Health & Biometric | safe | 15 | 0.00 | 0 |
-| Financial & Payment | risky | 15 | 0.70 | 10.5 |
-| Data Deletion & User Rights | caution | 10 | 0.30 | 3.0 |
-| Policy Change Notification | caution | 5 | 0.30 | 1.5 |
-
-**Total deductions:** 86.25  
-**Final score:** round((1 − 86.25/205) × 100) = 58  
-**Grade:** C  
-**Risk:** Caution
+## Scoring
+Corrected rates and added `childrens_data` unknown deduction. Total deductions: 85.25. Score and grade unchanged (58, C).

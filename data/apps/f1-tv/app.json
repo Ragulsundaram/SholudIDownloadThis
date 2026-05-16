@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-kimi-k2.6",
     "policy_url": "https://account.formula1.com/#/en/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "2025-04-01",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Strict re-analysis: removed unsupported claim that F1 TV shares data with sponsors and promoters (policy lists them as sources, not recipients). Fixed storage_file_access and policy_change_notification to match actual text (silent on device storage, no 'continued use = acceptance'). Account identity access_type corrected to on_demand. Score updated to 72 (Grade B)."
   },
   "app": {
     "slug": "f1-tv",
@@ -22,37 +22,37 @@
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 69,
-    "grade": "C",
-    "one_liner": "F1 TV collects extensive viewing and payment data, shares it across the F1 group and with advertisers, but offers solid GDPR rights and opt-outs.",
-    "summary": "F1 TV is Formula 1's official streaming platform. It requires an account and collects identity, contact, financial, technical, and usage data. Your information is shared across the F1 group, with third-party sponsors, promoters, and advertising partners. You can opt out of email marketing and targeted ads, and GDPR deletion rights are available.",
+    "score": 72,
+    "grade": "B",
+    "one_liner": "F1 TV collects viewing and payment data, may share it across the F1 group and with advertising partners, but offers GDPR rights and opt-outs.",
+    "summary": "F1 TV is Formula 1's official streaming platform. It requires an account and collects identity, contact, financial, technical, and usage data. Your information is shared across the F1 group, with third-party service providers, partners, and advertising partners. You can opt out of email marketing and targeted ads, and GDPR deletion rights are available.",
     "recommendation": "think_twice",
-    "recommendation_reason": "F1 TV's privacy policy is fairly standard for a streaming service, but it does share your data with advertisers and profiling partners. If you only want to watch races casually, be aware your viewing habits feed into marketing profiles."
+    "recommendation_reason": "F1 TV states it shares your data with advertisers and profiling partners, and your viewing habits may be used for targeted advertising on third-party sites and social media."
   },
   "flags": {
     "red": [
       {
         "id": "red_targeted_ads",
         "title": "Targeted ads on third-party sites using your data",
-        "plain_english": "F1 TV uses your personal data to show you targeted and personalised adverts on third-party websites and applications, including social media sites. You can opt out through cookie preferences, but your data is still used to build an advertising profile.",
+        "plain_english": "F1 TV states that it may use your personal data to present you with targeted and personalised adverts on third-party websites and applications, including social media sites. You can adjust your cookie preferences, but the policy says it may analyse your data for profiling and personalisation of direct marketing.",
         "severity": "high"
       },
       {
         "id": "red_third_party_sharing",
-        "title": "Data shared with sponsors and promoters",
-        "plain_english": "F1 TV shares your personal data with third-party sponsors, promoters who organise race events, and other Formula 1 group companies. This means your details can end up with multiple organisations beyond just F1.",
-        "severity": "high"
+        "title": "Data shared with Formula 1 group companies and third-party partners",
+        "plain_english": "F1 TV states that it may share your personal data with Formula 1 group companies, third-party service providers, and third-party partners who act as independent data controllers. For US residents, it may also share identifiers and activity information with social media, advertising, and analytics partners.",
+        "severity": "medium"
       },
       {
         "id": "red_profiling",
         "title": "Your activity is profiled for marketing",
-        "plain_english": "F1 TV analyses your purchase history and usage data to build a marketing profile, which is used to personalise the direct marketing emails they send you.",
+        "plain_english": "F1 TV states that it may analyse data collected about you, such as your purchase history, by F1 and its Third Party Licensees for the purpose of profiling and personalisation of the direct marketing it sends you.",
         "severity": "medium"
       },
       {
         "id": "red_us_monitoring",
         "title": "Usage may be monitored in the US",
-        "plain_english": "For US residents, F1 TV and its partners may monitor your activity on the app using tracking technologies, and this information may be shared with advertising and analytics partners in ways that could be considered a 'sale' under some US privacy laws.",
+        "plain_english": "For US residents, F1 TV and its partners may monitor your activity on the app using tracking technologies, and this information may be shared with advertising and analytics partners in ways that may be considered a 'sale' under some US privacy laws.",
         "severity": "medium"
       }
     ],
@@ -127,16 +127,16 @@
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "F1 TV may store downloaded videos on your device if you use the offline download feature.",
-      "detail": "As a streaming app, F1 TV primarily delivers content over the internet. Offline downloads, if available, would require temporary storage access initiated by the user.",
+      "plain_english": "The privacy policy does not clearly state whether the app accesses your device's storage or files.",
+      "detail": "No explicit mention of device storage or file access in the reviewed privacy policy.",
       "policy_excerpt": "",
-      "concerns": ["Downloaded content stored locally"],
-      "score_impact": -3.0
+      "concerns": ["Not explicitly addressed in policy"],
+      "score_impact": 0
     },
     {
       "id": "data_sharing_third_parties",
@@ -152,7 +152,6 @@
       "policy_excerpt": "We may share your personal data with the following third parties... Our Formula 1 group companies. Our third party service providers... Our third party partners...",
       "concerns": [
         "Shared with multiple F1 group companies",
-        "Sponsors and promoters receive fan data",
         "Advertising and analytics partners may receive identifiers"
       ],
       "score_impact": -19.5
@@ -162,7 +161,7 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "caution",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
@@ -285,16 +284,16 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "F1 TV may update its privacy policy at any time and will post changes on this page. You are expected to check it periodically.",
-      "detail": "Changes are posted on the policy page. Significant changes are notified. No explicit requirement for re-consent.",
+      "plain_english": "F1 TV states it will post changes on this page and notify you of any significant changes to the privacy policy.",
+      "detail": "The policy states updates will be posted on the page and users will be notified of significant changes. There is no mention of 'continued use = acceptance'.",
       "policy_excerpt": "We may, from time to time, update this Privacy Policy. Any such changes will be posted on this page, and we will notify you of any significant changes.",
-      "concerns": ["Continued use implies acceptance of changes"],
-      "score_impact": -1.5
+      "concerns": [],
+      "score_impact": 0
     }
   ],
   "scoring": {
@@ -304,7 +303,7 @@
       {"category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
       {"category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
       {"category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0},
-      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
+      {"category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.00, "deduction": 0},
       {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
       {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
       {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
@@ -314,10 +313,10 @@
       {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
       {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
       {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
-      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5}
+      {"category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0.00, "deduction": 0}
     ],
-    "total_deductions": 62.75,
-    "final_score": 69,
-    "grade": "C"
+    "total_deductions": 58.25,
+    "final_score": 72,
+    "grade": "B"
   }
 }

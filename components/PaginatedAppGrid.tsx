@@ -1,28 +1,75 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { AppCard } from "./AppCard";
 
-const ITEMS_PER_PAGE = 15;
+const ITEMS_PER_PAGE = 16;
+
+function getPageFromUrl(): number {
+  if (typeof window === "undefined") return 1;
+  const params = new URLSearchParams(window.location.search);
+  const p = parseInt(params.get("page") ?? "1", 10);
+  return Number.isNaN(p) ? 1 : Math.max(1, p);
+}
+
+function setUrlPage(page: number) {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  if (page === 1) {
+    url.searchParams.delete("page");
+  } else {
+    url.searchParams.set("page", String(page));
+  }
+  window.history.replaceState(null, "", url.toString());
+}
 
 export function PaginatedAppGrid({ apps }: { apps: IndexEntry[] }) {
-  const [currentPage, setCurrentPage] = useState(1);
-
   const totalPages = Math.max(1, Math.ceil(apps.length / ITEMS_PER_PAGE));
+
+  const getValidPage = useCallback(
+    () => Math.min(getPageFromUrl(), totalPages),
+    [totalPages],
+  );
+
+  const [currentPage, setCurrentPage] = useState(getValidPage);
+
+  // Sync state when user navigates back/forward via browser buttons
+  useEffect(() => {
+    const onPopState = () => {
+      const p = getValidPage();
+      setCurrentPage(p);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [getValidPage]);
+
+  // If the app list shrinks and current page is now out of bounds, clamp it
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      const clamped = Math.max(1, totalPages);
+      setUrlPage(clamped);
+      setCurrentPage(clamped);
+    }
+  }, [currentPage, totalPages]);
+
   const start = (currentPage - 1) * ITEMS_PER_PAGE;
   const pageApps = apps.slice(start, start + ITEMS_PER_PAGE);
 
-  const goTo = (page: number) => {
-    if (page < 1 || page > totalPages) return;
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const goTo = useCallback(
+    (page: number) => {
+      if (page < 1 || page > totalPages) return;
+      setUrlPage(page);
+      setCurrentPage(page);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [totalPages],
+  );
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {pageApps.map((app) => (
           <AppCard key={app.slug} app={app} />
         ))}

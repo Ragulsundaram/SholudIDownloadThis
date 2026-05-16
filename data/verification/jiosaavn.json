@@ -1,0 +1,21 @@
+{
+  "slug": "jiosaavn",
+  "existing": {
+    "policy_url": "http://www.jiosaavn.com/corporate/privacy",
+    "developer": "Saavn Media Limited",
+    "category": "Music",
+    "name": "JioSaavn – Music & Podcasts"
+  },
+  "fresh": {
+    "policy_url": "http://www.jiosaavn.com/corporate/privacy",
+    "developer": "Saavn Media Limited",
+    "category": "Music",
+    "policy_text": "Access Denied\nYou don't have permission to access \"http://www.jiosaavn.com/corporate/privacy\" on this server.\n\nReference #18.c434d917.1778932066.f4a18e2\n\nhttps://errors.edgesuite.net/18.c434d917.1778932066.f4a18e2"
+  },
+  "comparison": {
+    "policy_url_match": true,
+    "developer_match": true,
+    "category_match": true,
+    "policy_text_length": 213
+  }
+}

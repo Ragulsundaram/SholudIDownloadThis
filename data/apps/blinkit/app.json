@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://grofers.com/privacy",
     "terms_url": "",
     "policy_last_updated": "2025-01-01",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Camera/microphone access and health/biometric data collection are not addressed in the provided privacy policy text. Please verify if these categories apply."
   },
   "app": {
     "slug": "blinkit",
@@ -22,43 +22,55 @@
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 58,
+    "score": 57,
     "grade": "C",
-    "one_liner": "Blinkit delivers groceries fast but tracks your device, shows tailored ads, and shares your data widely across the Zomato group and with advertisers.",
-    "summary": "Blinkit collects your real-time GPS location, device identifiers, and detailed usage data to facilitate deliveries and show you personalized ads. It shares information with affiliates like Zomato, sellers, brands, advertisers, and service providers. The app may also access metadata from files on your phone. On the positive side, you can request account deletion, payment data is handled by PCI-compliant processors, and the app says it does not knowingly collect data from users under 18.",
+    "one_liner": "Blinkit delivers groceries fast but tracks your device, checks what other apps you have, may record communications with delivery partners, and shares your data widely across the Zomato group.",
+    "summary": "Blinkit collects your real-time GPS location, device identifiers, and detailed usage data to facilitate deliveries and show you personalized ads. Its application may check what other apps are installed on your phone, and communications with delivery partners may be recorded for internal purposes. It shares information with affiliates like Zomato, sellers, brands, advertisers, and service providers. On the positive side, you can request account deletion, payment data is handled by PCI-compliant processors, and the app says it does not knowingly collect data from users under 18.",
     "recommendation": "think_twice",
-    "recommendation_reason": "If you are uncomfortable with broad data sharing across the Zomato ecosystem, tailored advertising, and device fingerprinting for ad tracking, consider whether the convenience of instant grocery delivery is worth the privacy trade-off."
+    "recommendation_reason": "If you are uncomfortable with broad data sharing across the Zomato ecosystem, tailored advertising, device fingerprinting for ad tracking, installed-apps scanning, or communications recording, consider whether the convenience of instant grocery delivery is worth the privacy trade-off."
   },
   "flags": {
     "red": [
       {
         "id": "red_ads_targeting",
-        "title": "Tailored ads and advertiser tracking",
-        "plain_english": "Blinkit shows you tailored ads and shares your data with advertisers and ad networks so they can target you. Advertising companies may also use your device ID to track your app usage.",
-        "severity": "high"
+        "title": "Tailored ads and device ID tracking",
+        "plain_english": "Blinkit states it enables display of advertisements to third-party advertisers' target audiences and that advertising companies may use your device ID to track your app usage.",
+        "severity": "medium"
       },
       {
         "id": "red_file_access",
-        "title": "App can access file metadata on your phone",
-        "plain_english": "Blinkit's applications may access metadata and other information associated with files stored on your mobile device, including your photos, audio, and video clips.",
+        "title": "App may access file metadata on your phone",
+        "plain_english": "Blinkit states its applications may access metadata and other information associated with files stored on your mobile device, including photographs, audio, and video clips.",
         "severity": "medium"
       },
       {
         "id": "red_contact_upload",
-        "title": "Contacts can be uploaded for features",
-        "plain_english": "You can upload your contacts or give the app access to your address book to use certain features. This includes names and phone numbers of people who may not have agreed to share their information.",
+        "title": "Contacts may be uploaded for features",
+        "plain_english": "Blinkit states you may provide contacts including friends to avail certain services, and its applications may access personal contacts and address book information stored on your device.",
         "severity": "medium"
       },
       {
         "id": "red_cross_group_sharing",
         "title": "Data shared across Zomato group companies",
-        "plain_english": "Blinkit shares your data with its parent company Zomato Limited and affiliates. This means your information can be used across Blinkit, Zomato, and other group platforms.",
+        "plain_english": "Blinkit states it shares your data with its subsidiaries and affiliates under its ultimate parent company Zomato Limited.",
         "severity": "medium"
       },
       {
         "id": "red_device_ids_ads",
-        "title": "Device IDs used for advertising",
-        "plain_english": "Blinkit collects unique mobile device identifiers that advertising companies can use to track your use of the app and show you more relevant ads.",
+        "title": "Device IDs collected and used for advertising",
+        "plain_english": "Blinkit states it collects unique mobile device identifiers and that advertising companies may use these device IDs to track your app usage and display more relevant ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_installed_apps_scanning",
+        "title": "App may check what other apps are on your phone",
+        "plain_english": "Blinkit states its application may collect information about the presence, absence, and details of other applications on your mobile phone, including across categories like shopping, fashion, food, and travel.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_communications_recorded",
+        "title": "Communications with delivery partners may be recorded",
+        "plain_english": "Blinkit states communications between you and delivery partners or sellers through its services may be recorded for internal purposes.",
         "severity": "medium"
       }
     ],
@@ -66,19 +78,19 @@
       {
         "id": "green_payment_encryption",
         "title": "Payment data is encrypted",
-        "plain_english": "Blinkit encrypts your payment card information using industry standard technologies and uses PCI-compliant payment gateway processors.",
+        "plain_english": "Blinkit states it encrypts payment card information using industry standard technologies and uses PCI-compliant payment gateway processors.",
         "severity": "positive"
       },
       {
         "id": "green_account_deletion",
         "title": "Account deletion is available",
-        "plain_english": "You can request permanent deletion of your account and associated data through the Contact Us link.",
+        "plain_english": "Blinkit states you can request permanent deletion of your account through the Contact Us link.",
         "severity": "positive"
       },
       {
         "id": "green_no_children_data",
         "title": "No data collection from children",
-        "plain_english": "Blinkit says its services are not intended for users under 18 and it does not knowingly collect personal information from anyone under the permissible age.",
+        "plain_english": "Blinkit states its services are not intended for users under 18 and it does not knowingly collect personal information from anyone under the permissible age.",
         "severity": "positive"
       }
     ]
@@ -88,15 +100,18 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit does not mention collecting camera or microphone data through the app.",
-      "detail": "The provided privacy policy does not describe access to camera or microphone. Any access would likely be user-initiated for customer support and is not mentioned.",
-      "policy_excerpt": "",
-      "concerns": [],
+      "plain_english": "Blinkit does not clearly state whether the app accesses your camera or microphone. The only image collection mentioned is via CCTV at physical premises and photos/videos at events.",
+      "detail": "The privacy policy does not describe in-app camera or microphone access. It mentions CCTV systems at facilities and collecting photographs or videos during events for promotional or documentation purposes, which may be shared with business or event partners.",
+      "policy_excerpt": "Image / video data: We may collect and process images and video recordings of individuals attending live events or visiting our office / store / other premises for security and safety purposes. This includes the use of closed-circuit television (CCTV) systems at our facilities.",
+      "concerns": [
+        "Policy is silent on in-app camera and microphone access",
+        "CCTV and event images may be collected at physical premises"
+      ],
       "score_impact": 0
     },
     {
@@ -108,9 +123,9 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit collects your real-time GPS location to deliver groceries to your address and show nearby stores or promotions.",
-      "detail": "The app collects real-time GPS location including latitude, longitude, and altitude. Location is used to customize services with location-based information and features.",
-      "policy_excerpt": "Our applications collect real-time information about the location of your device... including the latitude, longitude or altitude of your mobile device",
+      "plain_english": "Blinkit states it collects your real-time GPS location including latitude, longitude, and altitude to customize services with location-based information.",
+      "detail": "The app collects real-time GPS location. Location is used to customize services with location-based information and features.",
+      "policy_excerpt": "Our applications collect real-time information about the location of your device... we collect and process information about your mobile device's GPS location (including the latitude, longitude or altitude of your mobile device)",
       "concerns": [
         "Precise GPS location collected for delivery and promotions"
       ],
@@ -125,11 +140,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "You can upload your contacts or give Blinkit access to your address book to use certain features. This data is stored and processed by Blinkit.",
-      "detail": "The policy states that users can provide contacts including friends or other parties to avail certain services. It also mentions applications may access personal contacts and address book information stored on the device.",
-      "policy_excerpt": "You have the option to provide contacts including that of your friends or other parties to avail certain Services... personal contacts and address book information",
+      "plain_english": "Blinkit states you may provide contacts including friends to avail certain services, and its applications may access personal contacts and address book information stored on your device. By uploading contacts, you confirm you have those individuals' consent.",
+      "detail": "The policy states users can provide contacts to avail services and confirms they have those individuals' consent. It also mentions applications may automatically access personal contacts and address book information stored on the device as part of file metadata collection.",
+      "policy_excerpt": "You have the option to provide contacts including that of your friends or other parties to avail certain Services. By providing any such information you confirm that you have such individual's consent to share their personal information with Blinkit... personal contacts and address book information",
       "concerns": [
-        "Contacts uploaded without explicit consent from non-users"
+        "Applications may automatically access address book as part of file metadata",
+        "User confirms consent for contacts, but non-users may not be aware"
       ],
       "score_impact": -13
     },
@@ -142,7 +158,7 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Blinkit's apps may access metadata and other information from files stored on your phone, including photos, audio, and video clips.",
+      "plain_english": "Blinkit states its applications may access metadata and other information from files stored on your mobile device, including photographs, audio, and video clips.",
       "detail": "The policy explicitly mentions that applications may access metadata and other information associated with files stored on the mobile device, including photographs, audio, and video clips.",
       "policy_excerpt": "Our applications may also access metadata and other information associated with files stored on your mobile device. This may include, for example, photographs, audio and video clips.",
       "concerns": [
@@ -159,12 +175,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit shares your data with sellers, brands, advertisers, delivery partners, affiliates like Zomato, and service providers to run the platform and market products.",
-      "detail": "The policy describes sharing with subsidiaries and affiliates under Zomato Limited, contractors, sellers, suppliers, advertisers, service providers, legal authorities, and brands for feedback and campaigns.",
-      "policy_excerpt": "To our subsidiaries and affiliates, which are entities under common ownership or control of our ultimate parent company Zomato Limited... To contractors, sellers, suppliers, advertisers/service providers",
+      "plain_english": "Blinkit states it shares your data with subsidiaries and affiliates under Zomato Limited, contractors, sellers, advertisers, service providers, and brands for feedback and campaigns. It says marketing to third-parties requires your consent, but feedback you provide may be forwarded to sellers or manufacturers with your information.",
+      "detail": "The policy describes sharing with subsidiaries and affiliates under Zomato Limited, contractors, sellers, suppliers, advertisers, service providers, legal authorities, and brands for feedback and campaigns. It states third-party marketing requires user consent, but also says feedback may be forwarded to third-party sellers or manufacturers. Data may be shared with audit teams, payment gateways, banks, and other companies for fraud protection.",
+      "policy_excerpt": "To our subsidiaries and affiliates, which are entities under common ownership or control of our ultimate parent company Zomato Limited... To contractors, sellers, suppliers, advertisers/service providers... To third-parties, including suppliers, to market their products or services to you if you have consented to receive the promotional updates... we may forward your information to the relevant third party seller, manufacturer or service provider for improving the Services provided to you",
       "concerns": [
         "Data shared across Zomato group companies",
-        "Shared with advertisers and brands for marketing"
+        "Shared with advertisers and brands for marketing",
+        "Feedback may be forwarded to third-party sellers/manufacturers with your information",
+        "Marketing to third-parties requires consent, but broad sharing still occurs"
       ],
       "score_impact": -19.5
     },
@@ -177,10 +195,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit collects your name, email, phone number, address, and date of birth to create and manage your account and process deliveries.",
-      "detail": "Standard account information is collected including name, address, email, postal code, password, gender, mobile phone number, date of birth, and user bio.",
-      "policy_excerpt": "Name, address, email address, postal code, password and other information you may provide with your account, such as your gender, mobile phone number, date of birth, anniversary date, user bio and website.",
-      "concerns": [],
+      "plain_english": "Blinkit states it collects your name, email, phone number, address, and date of birth to create and manage your account. It also obtains information about you from third parties such as partners, marketers, and researchers.",
+      "detail": "Standard account information is collected including name, address, email, postal code, password, gender, mobile phone number, date of birth, anniversary date, user bio and website. The policy also states Blinkit may obtain information about you from third parties such as partners, marketers, third-party websites, and researchers, and combine it with information collected from or about you.",
+      "policy_excerpt": "Name, address, email address, postal code, password and other information you may provide with your account, such as your gender, mobile phone number, date of birth, anniversary date, user bio and website... We may also obtain information about you from third parties such as partners, marketers, third-party websites, and researchers, and combine that information with information which we collect from or about you.",
+      "concerns": [
+        "Information combined from third-party sources such as marketers and researchers"
+      ],
       "score_impact": -4.5
     },
     {
@@ -192,12 +212,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit tracks your searches, browsing, and app usage to show you targeted ads and shares this data with advertising partners.",
-      "detail": "The policy mentions using information to show relevant ads, enabling display of ads to third-party advertisers' target audiences, and allowing ad networks to serve tailored ads using cookies and device IDs.",
-      "policy_excerpt": "Enable us to show you ads that are relevant to you... display advertisements to third party advertisers'/service providers' target audiences",
+      "plain_english": "Blinkit states it uses your information to show relevant ads and allows third-party ad networks to serve tailored ads using cookies and device IDs. It says it does not disclose your personal information for these purposes without your consent, but if you click an ad, the advertiser may assume you meet its target criteria.",
+      "detail": "The policy mentions using information to show relevant ads, enabling display of ads to third-party advertisers' target audiences, and allowing ad networks to serve tailored ads using cookies and device IDs. It states it does not disclose personal information for these purposes without consent, but notes that clicking or interacting with an advertisement may lead the advertiser to assume you meet its target criteria.",
+      "policy_excerpt": "Enable us to show you ads that are relevant to you... display advertisements to third party advertisers'/service providers' target audiences. Even though we do not disclose your personal information for these purposes without your consent, if you click on or otherwise interact with an advertisement, the advertiser may assume that you meet its target criteria.",
       "concerns": [
         "Behavioral data used for ad targeting",
-        "Third-party ad networks serve tailored ads"
+        "Third-party ad networks serve tailored ads",
+        "Advertiser may assume you meet target criteria if you interact with an ad"
       ],
       "score_impact": -16.25
     },
@@ -210,7 +231,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit says its services are not for users under 18 and it does not knowingly collect data from anyone under that age.",
+      "plain_english": "Blinkit states its services are not intended for users under 18 and it does not knowingly collect personal information from anyone under the permissible age.",
       "detail": "The policy states services are not intended for users under the age of 18 unless permitted under applicable local laws, and it does not knowingly collect personal information from users under the permissible age.",
       "policy_excerpt": "The Services are not intended for users under the age of 18, unless permitted under applicable local laws. We do not knowingly collect any personal information from users or market to or solicit information from anyone under the Permissible Age.",
       "concerns": [
@@ -227,11 +248,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit logs your IP address, browsing details, search terms, and app usage to maintain and improve the service.",
-      "detail": "The policy collects usage information including traffic data, location data, logs, IP address, browser type, connection type and speed, and the URL of the last web page visited.",
-      "policy_excerpt": "Details of your use of our Services, including traffic data, location data, logs and other communication data... your IP address, operating systems, platforms, browser type",
+      "plain_english": "Blinkit states it logs your IP address, browsing details, search terms, app usage, and the URL of the last web page you visited before accessing its services.",
+      "detail": "The policy collects usage information including traffic data, location data, logs, IP address, browser type, connection type and speed, and the URL of the last web page visited before accessing Blinkit's websites.",
+      "policy_excerpt": "Details of your use of our Services, including traffic data, location data, logs and other communication data... your IP address, operating systems, platforms, browser type... The URL of the last web page you visited before visiting our websites.",
       "concerns": [
-        "IP address and browsing data logged continuously"
+        "IP address and browsing data logged continuously",
+        "Last web page visited before accessing Blinkit is recorded"
       ],
       "score_impact": -1.5
     },
@@ -244,12 +266,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit collects your device type, unique device identifier, mobile network information, and uses mobile device IDs that advertising companies can use to track you.",
-      "detail": "The policy explicitly collects device type, unique device identifier, mobile network information, and telephone number. It notes that advertising companies may use device IDs to track app usage, measure advertising performance, and display more relevant ads.",
-      "policy_excerpt": "Unique mobile device identifier (e.g. IDFA or other device IDs on Apple devices... mobile device IDs (the unique identifier assigned to a device by the manufacturer)... Advertising companies may use device IDs to track your use of our applications",
+      "plain_english": "Blinkit states it collects device identifiers including IDFA and mobile device IDs, notes that advertising companies may use these device IDs to track your app usage, and says the app may check what other applications are installed on your phone.",
+      "detail": "The policy explicitly collects device type, unique device identifier, mobile network information, and telephone number. It notes that advertising companies may use device IDs to track app usage, measure advertising performance, and display more relevant ads. It also states the application may collect information about the presence and details of other applications on your mobile phone.",
+      "policy_excerpt": "Unique mobile device identifier (e.g. IDFA or other device IDs on Apple devices... mobile device IDs (the unique identifier assigned to a device by the manufacturer)... Advertising companies may use device IDs to track your use of our applications... Blinkit may collect information about the presence and/ or absence and/ or details pertaining to other applications on your mobile phone",
       "concerns": [
         "Device IDs used for advertising tracking",
-        "Unique identifiers collected continuously"
+        "Unique identifiers collected continuously",
+        "Application may check what other apps are installed on your phone"
       ],
       "score_impact": -9.75
     },
@@ -257,15 +280,17 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit does not collect health or biometric data.",
+      "plain_english": "Blinkit does not clearly state whether it collects health or biometric data.",
       "detail": "The provided privacy policy does not mention collection of health or biometric data.",
       "policy_excerpt": "",
-      "concerns": [],
+      "concerns": [
+        "Policy is silent on health and biometric data"
+      ],
       "score_impact": 0
     },
     {
@@ -277,7 +302,7 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Blinkit collects and encrypts your payment card information and shares it with PCI-compliant payment processors to complete transactions.",
+      "plain_english": "Blinkit states it encrypts payment card information and shares it with PCI-compliant payment processors to complete transactions.",
       "detail": "Payment information is collected for purchases and shared with third-party payment gateway processors. The policy states credit or payment card information is encrypted using industry standard technologies.",
       "policy_excerpt": "When you submit credit or payment card information, we encrypt the information using industry standard technologies... shared with third-parties which assist in processing and fulfilling your requests, including PCI compliant payment gateway processors.",
       "concerns": [
@@ -294,7 +319,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can request to delete your account, but copies and backups of your data may remain in storage for legal and fraud prevention purposes.",
+      "plain_english": "Blinkit states you can request deletion of your account, but copies and backups may remain for recovery, legal rights, and fraud mitigation.",
       "detail": "The policy allows account deletion via Contact Us, but notes that copies and backups may remain in backup storage used for recovery, enforcing legal rights, and fraud mitigation.",
       "policy_excerpt": "Once you have requested for deletion of the data associated with your account, we will not be able to restore your account or any of its associated data to you. Copies and backups of your personal information may continue to remain in our backup storage used for recovery in case of contingencies, as well as for enforcing our legal rights and fraud / risk mitigation purposes.",
       "concerns": [
@@ -311,7 +336,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Blinkit can change its privacy policy at any time, and if you keep using the app after changes, that means you accept them.",
+      "plain_english": "Blinkit states its privacy policy may change from time to time and that continued use after changes is deemed acceptance.",
       "detail": "The policy states it may change from time to time and continued use after changes is deemed acceptance. Users are asked to check the policy periodically.",
       "policy_excerpt": "This policy may change from time to time, and your continued use of Blinkit's Services after it makes any change is deemed to be acceptance of those changes, so please check the policy periodically for any updates.",
       "concerns": [
@@ -326,7 +351,7 @@
     "deductions": [
       {
         "category": "camera_microphone",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 15,
         "rate": 0,
         "deduction": 0
@@ -396,7 +421,7 @@
       },
       {
         "category": "health_biometric",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 15,
         "rate": 0,
         "deduction": 0
@@ -423,8 +448,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 87,
-    "final_score": 58,
+    "total_deductions": 87.5,
+    "final_score": 57,
     "grade": "C"
   }
 }

@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-12",
-    "analyzed_by": "claude-sonnet-4-6",
-    "policy_url": "https://gotinder.com/privacy",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://policies.tinder.com/privacy/",
     "terms_url": "https://gotinder.com/terms",
     "policy_last_updated": "2026-04-04",
-    "needs_review": true,
-    "review_notes": "Tinder's privacy policy is written in an unusually casual/conversational tone but the data collection is extensive. Key concerns: collection of sensitive data (sexual orientation, health, political beliefs), biometric face geometry, government ID, precise geolocation, and broad sharing across Match Group family. The policy was updated April 2026. Washington and Nevada have a separate Consumer Health Data Privacy Policy supplement."
+    "needs_review": false,
+    "review_notes": ""
   },
   "app": {
-    "slug": "tinder-ios",
+    "slug": "tinder",
     "name": "Tinder Dating App: Date & Chat",
     "developer": "Tinder LLC",
     "app_store_url": "https://apps.apple.com/us/app/tinder-dating-app-date-chat/id547702041",
@@ -22,69 +22,69 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 42,
+    "score": 51,
     "grade": "D",
-    "one_liner": "Tinder collects deeply personal data including your sexual preferences, face geometry, and government ID, then shares it across every Match Group dating app.",
-    "summary": "Tinder collects extensive sensitive personal data including sexual orientation, sexual life, health information, political beliefs, face geometry biometrics, and government-issued ID. This data is shared across the entire Match Group family of businesses and used for behavioral ad targeting. Precise geolocation is collected if permitted. Users can delete their account but data shared across Match Group may persist.",
-    "recommendation": "avoid",
-    "recommendation_reason": "Tinder's data collection is extremely invasive, including biometric face geometry, government ID, and sensitive personal details. If privacy matters to you, avoid this app and consider dating apps with stronger privacy practices."
+    "one_liner": "Tinder may collect your face geometry, government ID, and sensitive profile details, and states that it shares your data with Match Group affiliates and advertising partners.",
+    "summary": "Tinder collects extensive personal data including account details, profile information, content you share, and usage behavior. It may collect sensitive profile data, face geometry for verification features, and government-issued ID. It generates insights and inferences about your preferences and behavior, and shares data with Match Group affiliates, service providers, advertisers, and law enforcement. Users can delete their account but data may be retained for safety and legal reasons.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Tinder's data collection includes optional biometric verification and sensitive profile details, and it shares data broadly across Match Group companies and with advertisers. If privacy matters to you, consider whether the risks are acceptable."
   },
   "flags": {
     "red": [
       {
-        "id": "red_sensitive_data_collection",
-        "title": "Collects your sexual life, health, and political beliefs",
-        "plain_english": "Tinder explicitly collects sensitive data you choose to share in your profile, including details about your sexual orientation, sexual life, health, and political beliefs. This data is treated as 'special category' data in many countries and is used for matching and profiling.",
+        "id": "red_collects_sensitive_profile_data",
+        "title": "May collect sensitive profile details",
+        "plain_english": "Tinder states that some profile data you choose to provide may be considered sensitive or special in certain countries, such as details about sexual orientation, sexual life, health, or political beliefs.",
         "severity": "high"
       },
       {
-        "id": "red_biometric_face_geometry",
-        "title": "Captures your face geometry for verification",
-        "plain_english": "Tinder collects face geometry data through Photo Verification, Photo Check, and ID + Photo Verification features. This is considered biometric data and may be used to verify your identity or for mandatory liveness checks in some regions.",
+        "id": "red_collects_face_geometry",
+        "title": "Collects face geometry for verification",
+        "plain_english": "Tinder states that certain features like Photo Verification, Photo Check, and ID + Photo Verification involve the collection of face geometry data, which may be considered biometric data in some jurisdictions.",
         "severity": "high"
       },
       {
-        "id": "red_government_id",
-        "title": "May require a copy of your government-issued ID",
-        "plain_english": "Tinder may ask you to upload a government-issued ID such as a passport or driver's license to verify your identity. This ID data is processed and stored by Tinder.",
+        "id": "red_may_require_government_id",
+        "title": "May require government-issued ID",
+        "plain_english": "Tinder states that you may provide a copy of your government-issued ID to help it check that you are who you say you are.",
         "severity": "high"
       },
       {
-        "id": "red_match_group_sharing",
-        "title": "Your data is shared across all Match Group dating apps",
-        "plain_english": "Tinder is part of the Match Group family. If you were banned from another Match Group service like Hinge or Plenty of Fish, your data is shared with Tinder so they can ban you too. Your profile and usage data is accessible across all Match Group platforms.",
+        "id": "red_shares_with_match_group",
+        "title": "Shares your data with Match Group companies",
+        "plain_english": "Tinder states that it shares data about you with Match Group affiliates and that they share data about you with Tinder. This includes cross-platform safety enforcement and service improvement.",
         "severity": "high"
       },
       {
-        "id": "red_precise_geolocation",
-        "title": "Collects precise GPS location if you allow it",
-        "plain_english": "If you grant permission, Tinder collects your exact latitude and longitude from your device. Even if you decline, it still infers approximate location from your IP address and network data.",
+        "id": "red_collects_precise_location",
+        "title": "Collects precise GPS location if permitted",
+        "plain_english": "Tinder states that it collects your geolocation latitude and longitude from your device if you give permission. If you decline, certain features will not be available.",
         "severity": "medium"
       },
       {
-        "id": "red_third_party_login_data",
-        "title": "Pulls data from your Facebook, Google, and Apple accounts",
-        "plain_english": "When you log in via Facebook, Google, Apple, Instagram, Spotify, or LinkedIn, Tinder pulls data from those accounts including photos, playlists, and profile information to build your dating profile.",
+        "id": "red_pulls_social_media_data",
+        "title": "Pulls data from linked social media accounts",
+        "plain_english": "Tinder states that you may share data with it through your accounts on other platforms such as Facebook, Instagram, Spotify, Apple, and LinkedIn, including photos, playlists, and profile information.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_age_verification",
-        "title": "Requires users to be at least 18 years old",
-        "plain_english": "Tinder requires all users to be at least 18 years old, which is stronger than apps that only require 13. This is appropriate given the dating context.",
+        "id": "green_age_requirement_18",
+        "title": "Requires users to be at least 18",
+        "plain_english": "Tinder states that its service is restricted to individuals who are at least 18 years old.",
         "severity": "positive"
       },
       {
         "id": "green_account_deletion",
-        "title": "You can delete your account and data",
-        "plain_english": "Tinder allows you to delete your account, which removes your profile and associated data from the service.",
+        "title": "You can delete your account",
+        "plain_english": "Tinder states that you can delete your account and data, though a safety retention window applies.",
         "severity": "positive"
       },
       {
         "id": "green_location_opt_out",
-        "title": "You can decline precise geolocation permission",
-        "plain_english": "Tinder asks for permission before accessing your precise GPS location. If you decline, you can still use the app but some location-based features won't work.",
+        "title": "You can decline precise geolocation",
+        "plain_english": "Tinder states that it asks for permission before accessing your precise GPS location, and that you can decline.",
         "severity": "positive"
       }
     ]
@@ -99,48 +99,47 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Tinder uses your camera when you upload photos, take verification selfies, or use video chat features. It does not access your camera in the background.",
-      "detail": "Camera access is user-initiated for profile photo uploads, Photo Verification selfies, ID verification photos, and optional video chat. Microphone is only used for video chat or voice messages. There is no background camera or microphone access.",
-      "policy_excerpt": "You share photos, videos, audio, text and other types of content when you use our service.",
+      "plain_english": "Tinder states that you share photos, videos, and audio on the service. It does not explicitly describe how camera and microphone access work on your device.",
+      "detail": "The policy states that users share photos, videos, and audio content. It does not explicitly mention camera or microphone permissions, background access, or recording mechanisms.",
+      "policy_excerpt": "You share photos, videos, audio, text and other types of content, such as your search queries or chats with other members.",
       "concerns": [
-        "Photo Verification requires uploading face geometry data",
-        "Video chat requires both camera and microphone access"
+        "No explicit mention of camera/microphone access mechanism"
       ],
       "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
+      "icon": "MapPin",
       "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Tinder asks for your precise GPS location to show nearby matches. If you say no, it still estimates your rough location from your IP address and network data.",
-      "detail": "Precise geolocation (latitude and longitude) is collected only with user permission and is used for the core matching feature (showing nearby users). If declined, approximate location is still inferred from IP address, device settings, and network information. Location data is a core component of the matching algorithm.",
-      "policy_excerpt": "If you give us permission, we can collect your geolocation (latitude and longitude) from your device. If you decline permission, certain features that rely on precise geolocation will not be available.",
+      "plain_english": "Tinder states that it collects your precise GPS location if you give permission, and that some features will not work if you decline. It may still infer approximate location from your IP address and network data.",
+      "detail": "Precise geolocation is collected only with permission. If declined, core features are limited. Approximate location is still inferred from IP and network data.",
+      "policy_excerpt": "If you give us permission, we can collect your geolocation (latitude and longitude) from your device. If you decline permission, certain features that rely on precise geolocation will not be available to you.",
       "concerns": [
-        "Approximate location inferred from IP even when GPS is declined",
-        "Location is a core matching feature that cannot be fully disabled"
+        "Approximate location inferred from IP even when GPS is declined"
       ],
-      "score_impact": -10.5
+      "score_impact": -9.75
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Tinder may ask for your contacts for the 'Friends in Common' feature, but this is optional and not required to use the app.",
-      "detail": "Contact access is optional and used for features like 'Friends in Common.' Users can also submit reports or queries involving other members. Tinder processes this data on behalf of users who choose to share it. Core matching functionality does not require contact access.",
-      "policy_excerpt": "When you choose to share with us information about other people, we process this data on your behalf to complete your request.",
+      "plain_english": "Tinder states that you may choose to share information about other people, such as contact details, for certain features. It does not clearly explain whether your full contact list is uploaded to its servers.",
+      "detail": "Contact sharing is optional and used for specific features like reports or queries involving other members. The policy does not explicitly describe uploading the full phonebook.",
+      "policy_excerpt": "When you choose to share with us information about other people (for example, if you use the contact details of someone you know for a given feature or if you submit a query or report involving a member), we process this data on your behalf to complete your request.",
       "concerns": [
-        "Friends in Common feature uploads contact data to Tinder servers"
+        "Limited detail on how contacts are processed or stored"
       ],
-      "score_impact": -14.0
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
@@ -151,11 +150,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Tinder only accesses your photos and files when you choose to upload them to your profile or share in chats.",
-      "detail": "File and media access is user-initiated for uploading profile photos, verification photos, videos, and other content to the service. There is no indication of broad library scanning or background file access.",
-      "policy_excerpt": "You share photos, videos, audio, text and other types of content when you use our service.",
+      "plain_english": "Tinder states that you share photos, videos, audio, and text when you use the service. It does not indicate broad library scanning or background file access.",
+      "detail": "File and media access is user-initiated for uploading content to the service. No indication of broad library scanning or background access.",
+      "policy_excerpt": "You share photos, videos, audio, text and other types of content, such as your search queries or chats with other members.",
       "concerns": [],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -166,17 +165,16 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Tinder shares your data with Match Group companies, advertisers, service providers, social media platforms, and law enforcement. If you get banned on Hinge, Tinder knows about it.",
-      "detail": "Tinder shares data across the Match Group family of businesses (Hinge, Match.com, Plenty of Fish, OkCupid, etc.), with third-party service providers for infrastructure and analytics, with advertising and marketing partners, with social media platforms when you link accounts, with law enforcement in response to legal requests, and with other users as part of the matching process. If banned from another Match Group service, that data is shared to enforce cross-platform bans.",
-      "policy_excerpt": "We are part of the Match Group family of businesses. Match Group considers the safety and security of members a top priority. If you were banned from another Match Group service, your data can be shared with us.",
+      "plain_english": "Tinder states that it shares your data with service providers, advertising partners, Match Group affiliates, and law enforcement when legally required. It also states that your data may be transferred in a merger or acquisition.",
+      "detail": "Data is shared with Match Group affiliates, service providers, advertisers, and law enforcement. Mergers and acquisitions may result in data transfers.",
+      "policy_excerpt": "We also share data with service providers and partners who assist us in operating the service, with other Match Group companies for the reasons laid out below and, in some cases, for legal and related reasons... We may transfer your data if we are involved, whether in whole or in part, in a merger, sale, acquisition, divestiture, restructuring, reorganization, dissolution, bankruptcy or other change of ownership or control.",
       "concerns": [
-        "Cross-platform data sharing with all Match Group dating apps",
-        "Advertising and marketing partners receive user data",
-        "Social media platforms receive data when accounts are linked",
-        "Law enforcement disclosures for legal requests",
-        "Ban data shared across entire Match Group ecosystem"
+        "Shared with Match Group affiliates",
+        "Shared with advertising partners",
+        "Law enforcement disclosures",
+        "M&A transfer risk"
       ],
-      "score_impact": -24.0
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
@@ -187,15 +185,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Tinder requires your phone number, email, and date of birth to create an account. You may also need to upload a government ID to verify your identity.",
-      "detail": "Account creation requires phone number, email address, and date of birth. Profile completion asks for gender, interests, preferences, and approximate location. Optional verification features may require government-issued ID. Social media login imports additional identity data from linked accounts. Identity is used for matching, safety enforcement, and cross-platform ban enforcement across Match Group.",
-      "policy_excerpt": "When you create an account, you give us basic information for your account to be set up such as your phone number, email address, and date of birth.",
+      "plain_english": "Tinder collects your phone number, email, and date of birth to create an account. It states that you may provide a government-issued ID for verification, and that you may share data from linked social media accounts.",
+      "detail": "Registration requires phone number, email, and date of birth. Optional government ID may be requested for verification. Social media login imports profile data from linked accounts.",
+      "policy_excerpt": "When you create an account, you give us basic information for your account to be set up such as your phone number, email address, and date of birth... You may provide us with a copy of your government-issued ID to help us check that you're who you say you are.",
       "concerns": [
-        "Government ID may be required for verification",
-        "Identity linked across all Match Group services",
-        "Social media login imports extensive profile data"
+        "Government ID may be requested",
+        "Social media login imports external data"
       ],
-      "score_impact": -10.5
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -206,16 +203,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Tinder tracks everything you do in the app — who you swipe on, who you match with, what you message — and uses it to show you ads and improve matching algorithms.",
-      "detail": "Tinder collects extensive usage data: login times, features used, actions taken (swipes, matches, messages), information shown to you, ads you interact with, and interactions with other users. This data is used for: running and measuring ad campaigns, personalized recommendations, improving the service through machine learning, and creating insights and inferences about preferences and behavior. Advertising IDs, cookies, and device identifiers are used for cross-app tracking.",
-      "policy_excerpt": "Using the service generates data about your activity, including how you use it and how you interact with others. We also receive data related to interactions you had with our ads on third party websites or apps.",
+      "plain_english": "Tinder states that it collects information about how you use the service, including features you use, ads you interact with, and how you interact with others. It says it generates insights and inferences about your preferences, behavior, and attitudes, and shares certain information with advertising partners.",
+      "detail": "Usage data including login times, features used, actions taken, ads interacted with, and interactions with others is collected. Insights and inferences are generated for advertising and personalization. Advertising IDs and cookies are used for tracking.",
+      "policy_excerpt": "Using the service generates data about your activity, including how you use it (e.g., when you logged in, features you've been using, actions taken, information shown to you, referring webpages, ads you interacted with) and how you interact with others... Using the service involves the generation of insights and inferences, drawn from your interactions... reflecting, e.g., your preferences, characteristics, predispositions, behavior, and attitudes.",
       "concerns": [
-        "Every swipe, match, and message is logged and analyzed",
-        "Behavioral data used for ad targeting across third-party platforms",
-        "Insights and inferences drawn from all activity data",
-        "Advertising IDs and cookies enable cross-site tracking"
+        "Behavioral data used for ad targeting",
+        "Insights and inferences generated from all activity",
+        "Advertising IDs enable tracking"
       ],
-      "score_impact": -20.0
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -226,9 +222,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Tinder requires all users to be at least 18 years old. This is stronger than the standard 13+ requirement and appropriate for a dating app.",
-      "detail": "Tinder explicitly requires users to be at least 18 years old to create an account. The Terms state that users must be individuals (not corporate entities) and at least 18. There is no Tinder Kids or equivalent youth service. This is appropriate for a dating app context.",
-      "policy_excerpt": "You are an individual at least 18 years old.",
+      "plain_english": "Tinder states that its service is restricted to individuals who are at least 18 years old.",
+      "detail": "The policy explicitly requires users to be 18 or older. No under-18 users are permitted. This is appropriate for a dating app.",
+      "policy_excerpt": "Our service is restricted to individuals who are 18 years of age or older. We do not permit individuals under the age of 18 on our platform.",
       "concerns": [],
       "score_impact": 0
     },
@@ -240,13 +236,13 @@
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "Tinder needs internet access to find matches and load profiles. It logs your IP address, which is used to estimate your location and for security.",
-      "detail": "Continuous internet access is required for the core matching and messaging functionality. Tinder collects IP addresses, network information, referring webpages, and connection data. IP addresses are used to infer approximate location and for security monitoring. Standard dating app usage generates ongoing connection logs.",
-      "policy_excerpt": "Using the service involves the collection of data from and about the device(s) you use to access our service, including hardware and software information such as IP address.",
+      "background_access": false,
+      "plain_english": "Tinder collects your IP address, network information, and device data when you use the service. It states that it uses this for security, analytics, and advertising.",
+      "detail": "IP address, network information, and device data are collected continuously. Used for security, analytics, and ad targeting.",
+      "policy_excerpt": "Using the service involves the collection of data from and about the device(s) you use to access our service, including hardware and software information such as IP address, device ID, device type, operating systems and configurations, network information.",
       "concerns": [
-        "IP-based location inference is always active",
-        "Connection logs retained for safety and security monitoring"
+        "IP address collected continuously",
+        "Network activity logged"
       ],
       "score_impact": -3.25
     },
@@ -259,16 +255,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Tinder collects extensive data about your device including its unique ID, advertising ID, movement sensors, and crash reports to identify your device and prevent banned users from returning.",
-      "detail": "Tinder collects: hardware and software information, IP address, device ID, device type, operating system and configurations, network information, device movement and sensor data, app settings and characteristics, app crashes, advertising IDs, and identifiers associated with cookies or other technologies that can uniquely identify a device or browser. This data is used for device identification, security (preventing banned users from creating new accounts), and ad targeting.",
-      "policy_excerpt": "Using the service involves the collection of data from and about the device(s) you use to access our service, including hardware and software information such as IP address, device ID, device type, operating systems and configurations, network information, device movement and sensor data, as well as app settings and characteristics, app crashes, advertising IDs and identifiers.",
+      "plain_english": "Tinder states that it collects device information including advertising IDs and identifiers associated with cookies or other technologies that can uniquely identify your device or browser.",
+      "detail": "Advertising IDs, cookie identifiers, and device-specific identifiers are collected for ad targeting and security.",
+      "policy_excerpt": "advertising IDs and identifiers associated with cookies or other technologies that can uniquely identify a device or browser.",
       "concerns": [
-        "Advertising IDs enable persistent cross-app tracking",
-        "Device data used to enforce bans across new accounts",
-        "Sensor data (movement) collected beyond basic device info",
+        "Advertising IDs collected for tracking",
         "Cookie-based identifiers track browser activity"
       ],
-      "score_impact": -10.5
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -279,16 +273,14 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Tinder collects face geometry data for Photo Verification and may collect health information if you choose to share it in your profile.",
-      "detail": "Face geometry data (biometric data) is collected through optional Photo Verification, Photo Check, and ID + Photo Verification features. In some regions, Face Check is mandatory. The profile may also include health information if the user chooses to provide it. Washington and Nevada residents have a separate Consumer Health Data Privacy Policy. The policy explicitly states that some profile data may be considered sensitive including details about sexual orientation, sexual life, health, or political beliefs.",
+      "plain_english": "Tinder states that it collects face geometry data for optional verification features, which may be considered biometric data. It also states that your profile may include sensitive information such as sexual orientation, sexual life, health, or political beliefs if you choose to provide it.",
+      "detail": "Face geometry is collected for Photo Verification, Photo Check, and ID + Photo Verification. Sensitive profile data may include health and political beliefs. Washington and Nevada have a separate Consumer Health Data Privacy Policy supplement.",
       "policy_excerpt": "You may choose to participate in certain of our features like Photo Verification, Photo Check, or ID + Photo Verification, that involve the collection of face geometry data, which may be considered biometric data in some jurisdictions.",
       "concerns": [
-        "Face geometry collected for verification features",
-        "Mandatory Face Check in some regions",
-        "Health and sensitive data may be included in user profiles",
-        "Biometric data shared with service providers for verification processing"
+        "Face geometry collected for verification",
+        "Health and sensitive data may be in user profiles"
       ],
-      "score_impact": -10.5
+      "score_impact": -9.75
     },
     {
       "id": "financial_payment",
@@ -299,12 +291,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Tinder only collects payment information if you subscribe to premium features like Tinder Plus, Gold, or Platinum. Regular swiping is free.",
-      "detail": "Payment data is only collected for optional premium subscriptions and in-app purchases (Tinder Plus, Gold, Platinum, Boosts, Super Likes, etc.). When paying directly (not through Apple/Google), credit/debit card numbers or other financial info is collected. Purchase history is retained for transaction records and refund processing.",
-      "policy_excerpt": "When you make a purchase or request a refund, we keep the details of the transaction. When you pay directly with us (rather than through a platform such as iOS or Android), you provide your debit or credit card number or other financial info.",
+      "plain_english": "Tinder states that it keeps transaction details when you make purchases. If you pay directly rather than through Apple or Google, you provide your debit or credit card number or other financial information.",
+      "detail": "Transaction details are kept for purchases and refunds. Direct payments (not via Apple/Google) require debit/credit card or other financial info.",
+      "policy_excerpt": "When you pay directly with us (rather than through a platform such as iOS or Android), you provide your debit or credit card number or other financial info.",
       "concerns": [
-        "Purchase history retained and used for offers and pricing",
-        "Payment data stored with Tinder when not using Apple/Google billing"
+        "Payment card data collected for direct payments"
       ],
       "score_impact": -4.5
     },
@@ -317,15 +308,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your Tinder account, but data already shared with Match Group companies, advertisers, or law enforcement may not be fully removed.",
-      "detail": "Users can delete their account through the app settings. The privacy policy states users have rights to access, correct, and delete their data under applicable laws (GDPR, CCPA, etc.). However, data shared across Match Group platforms, with service providers, or retained for legal compliance may persist after account deletion. The policy notes data is retained as long as necessary for the purposes described.",
-      "policy_excerpt": "You have the right to access, rectify, port, and erase your data, as well as the right to restrict and object to certain processing of your data.",
+      "plain_english": "Tinder states that you can delete your account, but implements a safety retention window of three months after account closure or one year after an account ban. It may also retain some data for legal compliance.",
+      "detail": "Account deletion is available. A 3-month safety retention window applies after closure (1 year after ban). Legal compliance may require longer retention for some data.",
+      "policy_excerpt": "You can also close your account as explained here and we'll delete your data as laid out in this Privacy Policy... we implement a safety retention window of three months following account closure or one year following an account ban.",
       "concerns": [
-        "Data shared across Match Group may persist after Tinder deletion",
-        "Some data retained for legal compliance and safety purposes",
-        "No clear timeline for full data deletion"
+        "Safety retention window applies after deletion",
+        "Some data retained for legal compliance"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -336,12 +326,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Tinder will notify you if the privacy policy changes, but by continuing to use the app after that, you automatically accept the new terms. You can't reject changes and keep using the service.",
-      "detail": "The Terms state that notice of material changes will be posted with an updated effective date, and users may be notified via email or in-app notification. However, continued use of the Services after the effective date constitutes consent to changes. The only way to reject is to stop using the service. Some changes (liability and dispute resolution) require affirmative acceptance.",
-      "policy_excerpt": "Notice of material changes will be posted on this page with an updated effective date. Your continued access or use of our Services after the effective date of the Terms constitutes your consent to any changes.",
+      "plain_english": "Tinder states that it will notify you before material privacy policy changes take effect, but your continued use of the service after the effective date constitutes acceptance.",
+      "detail": "Material changes are notified in advance. Continued use after the effective date equals acceptance. Some changes may require affirmative acceptance.",
+      "policy_excerpt": "We will notify you before material changes take effect so that you have time to review the changes... Your continued access or use of our Services after the effective date of the Terms constitutes your consent to any changes.",
       "concerns": [
-        "Passive acceptance by continued use",
-        "No mechanism to selectively reject specific changes"
+        "Passive acceptance by continued use"
       ],
       "score_impact": -1.5
     }
@@ -351,81 +340,60 @@
     "max_possible_deductions": 205,
     "deductions": [
       {
-        "category": "camera_microphone",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "location_gps",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.7,
-        "deduction": 10.5
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "risky",
-        "max": 20,
-        "rate": 0.7,
-        "deduction": 14.0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
-      },
-      {
         "category": "data_sharing_third_parties",
         "risk": "risky",
         "max": 30,
-        "rate": 0.8,
-        "deduction": 24.0
-      },
-      {
-        "category": "account_identity",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.7,
-        "deduction": 10.5
+        "rate": 0.65,
+        "deduction": 19.5
       },
       {
         "category": "behavioural_ad_tracking",
         "risk": "risky",
         "max": 25,
-        "rate": 0.8,
-        "deduction": 20.0
-      },
-      {
-        "category": "childrens_data",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "network_internet_activity",
-        "risk": "risky",
-        "max": 5,
         "rate": 0.65,
-        "deduction": 3.25
+        "deduction": 16.25
       },
       {
         "category": "device_fingerprinting",
         "risk": "risky",
         "max": 15,
-        "rate": 0.7,
-        "deduction": 10.5
+        "rate": 0.65,
+        "deduction": 9.75
       },
       {
         "category": "health_biometric",
         "risk": "risky",
         "max": 15,
-        "rate": 0.7,
-        "deduction": 10.5
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6
+      },
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "financial_payment",
@@ -435,11 +403,32 @@
         "deduction": 4.5
       },
       {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
         "category": "data_deletion_user_rights",
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "policy_change_notification",
@@ -449,8 +438,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 119.75,
-    "final_score": 42,
+    "total_deductions": 100.5,
+    "final_score": 51,
     "grade": "D"
   }
 }

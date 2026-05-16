@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://in.bookmyshow.com/privacy",
     "terms_url": "https://in.bookmyshow.com/terms-and-conditions",
     "policy_last_updated": "2020-10-20",
     "needs_review": true,
-    "review_notes": "Privacy policy is extremely outdated (last updated October 2020). Key concerns: extensive data sharing with advertising networks, social media platforms, and analytics providers; comprehensive device fingerprinting including hardware/software info; behavioral tracking for personalization and ads; no explicit policy change notification mechanism. Key positives: PCI DSS certified for payment security; reasonable security arrangements described; users can opt out of marketing and request data updates; dedicated grievance officer and DPO."
+    "review_notes": "Strict re-analysis: privacy policy is severely outdated (October 2020). Four categories are unknown because the policy is silent on camera/microphone, contacts, storage/file access, and health/biometric data. The policy explicitly states extensive data sharing with advertising networks, social media platforms, and analytics providers. Extensive device and behavioral tracking is described. Data retention is vague. Some user rights exist but are limited."
   },
   "app": {
     "slug": "bookmyshow-movies-events",
@@ -21,70 +21,64 @@
     "description": "India's largest online ticketing platform for movies, events, plays, sports, and activities."
   },
   "verdict": {
-    "overall_risk": "caution",
-    "score": 66,
-    "grade": "C",
-    "one_liner": "BookMyShow makes booking tickets easy, but it tracks your behavior extensively and shares your data with advertising networks and social media platforms.",
-    "summary": "BookMyShow is India's leading entertainment ticketing platform. It collects personal information including name, contact details, and financial data for transactions. The app also automatically collects comprehensive device and usage data including browser type, IP address, device ID, operating system, cookies, and detailed behavior logs. This data is shared with advertising networks, social media platforms, search engines, analytics providers, payment processors, and event organizers. The platform is PCI DSS certified for payment security and provides opt-out options for marketing. However, the privacy policy has not been updated since October 2020, raising concerns about whether current practices are accurately reflected.",
+    "overall_risk": "risky",
+    "score": 52,
+    "grade": "D",
+    "one_liner": "BookMyShow's privacy policy has not been updated since 2020 and states that your data may be shared with advertising networks and social media platforms.",
+    "summary": "The policy states that BookMyShow collects extensive computer and usage data including your device information, browsing behavior, and transaction details. It states that your data may be shared with advertising networks, social media platforms, and analytics providers. The policy was last updated in October 2020 and does not clearly explain how long data is kept. The policy is silent on several data categories including camera, contacts, storage, and health data.",
     "recommendation": "think_twice",
-    "recommendation_reason": "While BookMyShow is convenient for booking tickets, its privacy policy is severely outdated (2020) and it shares your data broadly with advertisers and social media platforms. Consider the privacy trade-off before creating an account."
+    "recommendation_reason": "BookMyShow's privacy policy has not been updated since 2020 and states that your data may be shared with advertising networks and social media platforms. Consider the privacy trade-off before creating an account."
   },
   "flags": {
     "red": [
       {
         "id": "red_privacy_policy_outdated",
         "title": "Privacy policy has not been updated since October 2020",
-        "plain_english": "BookMyShow's privacy policy was last updated in October 2020 — nearly 6 years ago. This means it may not accurately reflect how your data is currently being used.",
+        "plain_english": "The policy states it was last updated in October 2020. It may not reflect current practices.",
         "severity": "high"
       },
       {
         "id": "red_data_shared_ad_networks",
-        "title": "Your data is shared with advertising networks and social media platforms",
-        "plain_english": "BookMyShow shares your personal data with advertising networks and social media platforms so they can show you targeted ads. They also share with search engines and analytics providers.",
+        "title": "Shares data with advertising networks and social media platforms",
+        "plain_english": "The policy states that BookMyShow may share your data with advertising networks and social media platforms for selecting and serving relevant adverts, and with search engine and analytics providers.",
         "severity": "high"
       },
       {
         "id": "red_comprehensive_tracking",
-        "title": "App extensively tracks what you view, click, and search for",
-        "plain_english": "BookMyShow logs every page you view, how long you spend, what you search for, what you click on, and the services you use. This information is used to profile you and personalize content.",
+        "title": "Tracks what you view, click, and search for",
+        "plain_english": "The policy states that BookMyShow collects the pages and videos you view, how long you spend on them, what you search for, what you click on, and the services you use.",
         "severity": "medium"
       },
       {
-        "id": "red_device_fingerprinting",
-        "title": "App collects detailed device and hardware information",
-        "plain_english": "BookMyShow collects your browser type, IP address, operating system, device ID, cookies, hardware information, software information, and demographic data to build a profile of your device.",
+        "id": "red_vague_retention",
+        "title": "Vague data retention policy",
+        "plain_english": "The policy states that BookMyShow retains personal data for 'a variety of legitimate legal or business purposes' but does not clearly explain exactly how long or what those purposes are.",
         "severity": "medium"
-      },
-      {
-        "id": "red_under_18_not_allowed",
-        "title": "Users under 18 are technically not allowed but no verification exists",
-        "plain_english": "BookMyShow says you must be over 18 to use the service, but there is no age verification system. By using the app, you automatically agree that your legal guardian has consented.",
-        "severity": "low"
       }
     ],
     "green": [
       {
         "id": "green_pci_dss_certified",
         "title": "Payment data is protected by PCI DSS certification",
-        "plain_english": "BookMyShow is PCI DSS certified, which means your payment data is secured according to globally accepted data security standards.",
+        "plain_english": "The policy states that BookMyShow is PCI DSS certified, which means the data you submit is secured according to globally accepted data security standards.",
         "severity": "positive"
       },
       {
         "id": "green_marketing_opt_out",
-        "title": "You can opt out of marketing emails at any time",
-        "plain_english": "You can unsubscribe from marketing and promotional materials using the unsubscribe function in emails or by contacting customer support.",
+        "title": "You can opt out of marketing emails",
+        "plain_english": "The policy states that you can unsubscribe from receiving marketing information at any time by using the unsubscribe function within the electronic marketing material.",
         "severity": "positive"
       },
       {
         "id": "green_data_update_request",
         "title": "You can request updates to your personal data",
-        "plain_english": "You can contact BookMyShow to update your personal information, and they will try to process your request.",
+        "plain_english": "The policy states that you may update your personal data by contacting helpdesk@bookmyshow.com.",
         "severity": "positive"
       },
       {
         "id": "green_dedicated_grievance_officer",
         "title": "Dedicated customer grievance and data protection officer",
-        "plain_english": "BookMyShow has a dedicated Customer Grievance Officer who also serves as the Data Protection Officer for GDPR purposes.",
+        "plain_english": "The policy states that BookMyShow has a Customer Grievance Officer who also serves as the Data Protection Officer for GDPR purposes.",
         "severity": "positive"
       }
     ]
@@ -94,16 +88,16 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow does not use your camera or microphone.",
-      "detail": "The privacy policy makes no mention of camera or microphone access. As a ticketing app, BookMyShow does not require or request camera or microphone permissions.",
-      "policy_excerpt": "No camera or microphone access described in the policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy does not say whether BookMyShow accesses your camera or microphone.",
+      "detail": "The privacy policy makes no mention of camera, microphone, video, or audio access.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
     },
     {
       "id": "location_gps",
@@ -114,45 +108,41 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "BookMyShow collects your general location including the state or country you access the site from. It may also collect more precise location through your device.",
-      "detail": "The policy states that BookMyShow automatically collects 'the state or country from which you accessed Bookmyshow' and 'cookies and the ID and location of your device.' There is also mention of 'other geographic and demographic information.' No explicit mention of GPS permission requests.",
-      "policy_excerpt": "browser type, IP address, language, operating system, cookies and the ID and location of your device, the state or country from which you accessed Bookmyshow",
-      "concerns": [
-        "Device location is collected automatically",
-        "General location inferred from IP address",
-        "Geographic and demographic data collected"
-      ],
+      "plain_english": "The policy states that BookMyShow collects your device location and the state or country you access the site from, but it does not clearly explain whether this is precise GPS or general location.",
+      "detail": "The policy states it collects 'cookies and the ID and location of your device' and 'the state or country from which you accessed Bookmyshow.' It also mentions 'other geographic and demographic information.'",
+      "policy_excerpt": "cookies and the ID and location of your device, the state or country from which you accessed Bookmyshow",
+      "concerns": ["Device location collected automatically", "General location inferred from IP address", "Geographic and demographic data collected"],
       "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow does not access your contacts or phonebook.",
-      "detail": "The privacy policy makes no mention of contacts, address book, or phonebook access. There is no indication that the app requests contact permissions.",
-      "policy_excerpt": "No contacts or phonebook access described in the policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy does not say whether BookMyShow accesses your contacts or phonebook.",
+      "detail": "The privacy policy makes no mention of contacts, address book, or phonebook access.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10.0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow does not access your device files or storage.",
-      "detail": "The privacy policy does not mention storage or file access permissions. As a ticketing app, BookMyShow does not require broad file system access.",
-      "policy_excerpt": "No storage or file access described in the policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy does not say whether BookMyShow accesses your device files or storage.",
+      "detail": "The privacy policy makes no mention of storage, file access, or file system permissions.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage and file access"],
+      "score_impact": -5.0
     },
     {
       "id": "data_sharing_third_parties",
@@ -163,15 +153,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow shares your data with advertising networks, social media platforms, search engines, analytics providers, payment processors, event organizers, and cinemas.",
-      "detail": "Data is shared with a wide range of third parties: payment processing organizations, delivery organizations, fraud prevention and screening companies, credit risk management companies, mailing houses, advertising networks, social media platforms, search engine providers, and analytics providers. Data is also shared with ultimate event organizers and cinema theatres to verify ticket information and provide services. Data may be disclosed to legal, regulatory, governmental, tax, law enforcement or other authorities pursuant to applicable law.",
+      "plain_english": "The policy states that BookMyShow shares your data with advertising networks, social media platforms, search engines, analytics providers, payment processors, event organizers, and cinemas.",
+      "detail": "The policy states: 'We may share your data with advertising networks and/or social media platforms for the purposes of selecting and serving relevant adverts to you via those networks/platforms, and to search engine and analytics providers.' It also shares with ultimate entertainment providers for verification and service delivery.",
       "policy_excerpt": "We may share your data with advertising networks and/or social media platforms for the purposes of selecting and serving relevant adverts to you via those networks/platforms, and to search engine and analytics providers.",
-      "concerns": [
-        "Extensive sharing with advertising and social media partners",
-        "Search engines and analytics providers receive data",
-        "Event organizers and cinemas receive personal data for verification",
-        "Broad legal disclosure clause to authorities"
-      ],
+      "concerns": ["Extensive sharing with advertising and social media partners", "Search engines and analytics providers receive data", "Event organizers and cinemas receive personal data for verification"],
       "score_impact": -19.5
     },
     {
@@ -179,18 +164,14 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "caution",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow requires your name, contact information, and financial details to create an account and make transactions.",
-      "detail": "Account creation requires name, contact information, and financial information. The app collects account information including name, contact info, account ID, billing and transaction information, and account plan information. Users must be above 18 years of age to transact.",
-      "policy_excerpt": "Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information, account ID, billing and transaction information, and account plan information.",
-      "concerns": [
-        "Financial and billing information linked to account",
-        "Age restriction of 18+ not enforced",
-        "Comprehensive identity data required for transactions"
-      ],
+      "plain_english": "The policy states that BookMyShow requires your name, contact information, and financial details to create an account and make transactions.",
+      "detail": "The policy states that personal data is collected when you create an account, including name, contact information, and financial information for transactions. Users must be above 18 years of age to transact.",
+      "policy_excerpt": "We may collect your personal data when you: create an account with us or otherwise provide us with your personal data or use of any related services connected to Bookmyshow",
+      "concerns": ["Financial and billing information linked to account", "Age restriction of 18+ not enforced", "Comprehensive identity data required for transactions"],
       "score_impact": -4.5
     },
     {
@@ -202,15 +183,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow tracks everything you do on the app and website to personalize content and show you targeted ads through advertising partners.",
-      "detail": "Extensive behavioral tracking includes: pages/videos viewed, length of time spent, services used, content accessed, clicked on, searched for, transacted, date and time of visit, metadata, log files, error logs, pop-up and push message responses. This data is used for research, analytics, personalization, tailoring communications, and fraud prevention. Data is shared with advertising networks and social media platforms for targeted advertising.",
+      "plain_english": "The policy states that BookMyShow tracks what you do on the app and website to personalize content and serve relevant adverts through advertising partners.",
+      "detail": "The policy states it collects 'the services you use and the manner in which you use such services (ex: the content you access, view, click on, search for, transact etc.)' and shares data with advertising networks and social media platforms.",
       "policy_excerpt": "the services you use and the manner in which you use such services (ex: the content you access, view, click on, search for, transact etc.)",
-      "concerns": [
-        "Comprehensive behavioral tracking including every click and search",
-        "Data shared with advertising networks for targeted ads",
-        "Personalization based on detailed usage profiles",
-        "Fraud screening uses behavioral data"
-      ],
+      "concerns": ["Comprehensive behavioral tracking including every click and search", "Data shared with advertising networks for targeted ads", "Personalization based on detailed usage profiles"],
       "score_impact": -16.25
     },
     {
@@ -222,14 +198,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow says you must be over 18 to use the service, but there is no age verification system in place.",
-      "detail": "The policy states that a transaction on BookMyShow is to be conducted by persons above the age of 18 years only. Users under 18 are not allowed to make transactions. However, it is the duty of legal guardians to ensure their wards do not use the service without supervision. There is no explicit age verification mechanism described.",
+      "plain_english": "The policy states that you must be over 18 to make a transaction, but it does not describe any age verification system.",
+      "detail": "The policy states: 'A transaction on Bookmyshow is to be conducted by persons above the age of 18 years only. If you are under 18 years of age, you are not allowed to make a transaction in Bookmyshow.' It says it is the duty of legal guardians to supervise, but does not describe any verification mechanism.",
       "policy_excerpt": "A transaction on Bookmyshow is to be conducted by persons above the age of 18 years only. If you are under 18 years of age, you are not allowed to make a transaction in Bookmyshow.",
-      "concerns": [
-        "No age verification mechanism",
-        "Relies on self-attestation and guardian supervision",
-        "Automatic deemed consent from legal guardians"
-      ],
+      "concerns": ["No age verification mechanism described", "Relies on self-attestation and guardian supervision", "Automatic deemed consent from legal guardians"],
       "score_impact": -3.0
     },
     {
@@ -241,15 +213,10 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow logs your IP address, browser type, cookies, metadata, logs, error logs, and every page you visit.",
-      "detail": "Network activity data collected includes: browser type, IP address, language, operating system, cookies, device ID, state/country of access, pages/videos viewed, time spent, services used, content accessed/clicked/searched/transacted, date and time of visit, metadata, log files, error logs, other geographic and demographic information, hardware and software information. This is used for analysis, evaluation, personalization, and improving services.",
+      "plain_english": "The policy states that BookMyShow logs your IP address, browser type, cookies, metadata, logs, error logs, and every page you visit.",
+      "detail": "The policy states it automatically collects 'browser type, IP address, language, operating system, cookies and the ID and location of your device, the state or country from which you accessed Bookmyshow, the pages/videos you view, length of time spent on pages/videos, the services you use... metadata, logs files, error logs, other geographic and demographic information; and other hardware and software information.'",
       "policy_excerpt": "browser type, IP address, language, operating system, cookies and the ID and location of your device, the state or country from which you accessed Bookmyshow, the pages/videos you view, length of time spent on pages/videos",
-      "concerns": [
-        "Extensive network and usage logging",
-        "IP address collected and linked to behavior",
-        "Metadata and error logs retained",
-        "Hardware and software information logged"
-      ],
+      "concerns": ["Extensive network and usage logging", "IP address collected and linked to behavior", "Metadata and error logs retained", "Hardware and software information logged"],
       "score_impact": -3.25
     },
     {
@@ -261,31 +228,26 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow collects detailed information about your device including hardware, software, browser, operating system, and device ID to identify your device.",
-      "detail": "Device information collected includes: browser type, IP address, language, operating system, cookies, device ID, location of device, state/country of access, hardware information, software information, other geographic and demographic information. This creates a comprehensive device fingerprint used for analysis, personalization, and service improvement.",
+      "plain_english": "The policy states that BookMyShow collects detailed information about your device including hardware, software, browser, operating system, and device ID.",
+      "detail": "The policy states it collects 'browser type, IP address, language, operating system, cookies and the ID and location of your device, the state or country from which you accessed Bookmyshow' and 'other hardware and software information.'",
       "policy_excerpt": "browser type, IP address, language, operating system, cookies and the ID and location of your device, the state or country from which you accessed Bookmyshow",
-      "concerns": [
-        "Device ID collected for tracking",
-        "Hardware and software information logged",
-        "Comprehensive fingerprint including browser and OS",
-        "Cookies used for persistent identification"
-      ],
+      "concerns": ["Device ID collected", "Hardware and software information logged", "Comprehensive fingerprint including browser and OS", "Cookies used for persistent identification"],
       "score_impact": -9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow does not collect health or biometric data.",
-      "detail": "The privacy policy makes no mention of health, biometric, or medical data collection. As a ticketing app, there is no indication that BookMyShow requests or processes health-related data.",
-      "policy_excerpt": "No health or biometric data collection described in the policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy does not say whether BookMyShow collects health or biometric data.",
+      "detail": "The privacy policy makes no mention of health, biometric, or medical data collection.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data"],
+      "score_impact": -7.5
     },
     {
       "id": "financial_payment",
@@ -296,14 +258,10 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "BookMyShow processes your payment information for ticket purchases. Payments are secured with PCI DSS certification.",
-      "detail": "Payment processing is handled by third-party payment processing organizations. BookMyShow is PCI DSS certified, meaning data is secured according to globally accepted data security standards. Financial account information is collected as part of account information for transactions. Refund and transfer processing is also mentioned.",
+      "plain_english": "The policy states that BookMyShow processes your payment information for ticket purchases and is PCI DSS certified.",
+      "detail": "The policy states that financial transactions are processed and that 'We are PCI DSS certified which means that the data you submit to us is secure and protected against loss or theft in accordance with the globally accepted data security standards.'",
       "policy_excerpt": "verifying and carrying out financial transactions in relation to any payments or transfers you make",
-      "concerns": [
-        "Financial data shared with third-party payment processors",
-        "Billing and transaction information retained",
-        "Credit risk management companies may receive data"
-      ],
+      "concerns": ["Financial data shared with third-party payment processors", "Billing and transaction information retained", "Credit risk management companies may receive data"],
       "score_impact": -4.5
     },
     {
@@ -315,15 +273,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can request updates to your data and opt out of marketing. However, data retention periods are vague and based on 'legitimate legal or business purposes.'",
-      "detail": "Users can update personal data by contacting helpdesk@bookmyshow.com. Users can opt out of marketing by contacting allears@bookmyshow.com. Data is retained 'only for as long as necessary to provide the services' and thereafter for 'legitimate legal or business purposes' including legal mandates, contract obligations, and dispute resolution. No specific deletion timeframe is guaranteed.",
+      "plain_english": "The policy states that you can request updates to your data and opt out of marketing, but data retention periods are vague and based on 'legitimate legal or business purposes.'",
+      "detail": "The policy states users can update personal data by contacting helpdesk@bookmyshow.com and opt out of marketing by contacting allears@bookmyshow.com. Data is retained 'only for as long as necessary to provide the services' and thereafter for 'legitimate legal or business purposes.'",
       "policy_excerpt": "We retain personal data only for as long as necessary to provide the services you have requested and thereafter for a variety of legitimate legal or business purposes.",
-      "concerns": [
-        "Vague retention periods based on 'business purposes'",
-        "Deletion requests may be refused with reasons provided",
-        "No immediate one-click deletion option",
-        "Data retained for legal/contractual obligations"
-      ],
+      "concerns": ["Vague retention periods based on 'business purposes'", "Deletion requests may be refused with reasons provided", "No immediate one-click deletion option described", "Data retained for legal/contractual obligations"],
       "score_impact": -3.0
     },
     {
@@ -335,15 +288,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "If BookMyShow changes its privacy policy, it will be posted on the website. You should check it regularly, but there is no proactive notification system.",
-      "detail": "The policy states that if changes are made, the updated policy will be posted on the website with a new effective date. Users are told they 'should access our privacy policy regularly' but there is no explicit proactive notification mechanism described.",
+      "plain_english": "The policy states that if changes are made, the updated policy will be posted on the website with a new effective date. You are told to check regularly, but there is no explicit proactive notification mechanism described.",
+      "detail": "The policy states: 'If our privacy policy changes in the future, it will be posted here and a new effective date will be shown. You should access our privacy policy regularly to ensure you understand our current policies.'",
       "policy_excerpt": "If our privacy policy changes in the future, it will be posted here and a new effective date will be shown. You should access our privacy policy regularly to ensure you understand our current policies.",
-      "concerns": [
-        "No proactive notification of policy changes",
-        "Users must manually check for updates",
-        "No specific advance notice period",
-        "Last update was in 2020"
-      ],
+      "concerns": ["No proactive notification of policy changes described", "Users must manually check for updates", "No specific advance notice period described"],
       "score_impact": -1.5
     }
   ],
@@ -351,107 +299,23 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {
-        "category": "camera_microphone",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0,
-        "deduction": 0
-      },
-      {
-        "category": "location_gps",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "safe",
-        "max": 20,
-        "rate": 0,
-        "deduction": 0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0,
-        "deduction": 0
-      },
-      {
-        "category": "data_sharing_third_parties",
-        "risk": "risky",
-        "max": 30,
-        "rate": 0.65,
-        "deduction": 19.5
-      },
-      {
-        "category": "account_identity",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "behavioural_ad_tracking",
-        "risk": "risky",
-        "max": 25,
-        "rate": 0.65,
-        "deduction": 16.25
-      },
-      {
-        "category": "childrens_data",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
-      },
-      {
-        "category": "network_internet_activity",
-        "risk": "risky",
-        "max": 5,
-        "rate": 0.65,
-        "deduction": 3.25
-      },
-      {
-        "category": "device_fingerprinting",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
-      },
-      {
-        "category": "health_biometric",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0,
-        "deduction": 0
-      },
-      {
-        "category": "financial_payment",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "data_deletion_user_rights",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
-      },
-      {
-        "category": "policy_change_notification",
-        "risk": "caution",
-        "max": 5,
-        "rate": 0.3,
-        "deduction": 1.5
-      }
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10.0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 69.75,
-    "final_score": 66,
-    "grade": "C"
+    "total_deductions": 98.75,
+    "final_score": 52,
+    "grade": "D"
   }
 }

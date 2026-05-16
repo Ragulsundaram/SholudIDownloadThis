@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.zoom.com/en/trust/privacy/privacy-statement/",
     "terms_url": "https://www.zoom.com/en/trust/terms/",
     "policy_last_updated": "2026-02-02",
     "needs_review": false,
-    "review_notes": "Zoom's privacy policy is exceptionally detailed and transparent. Key concerns: extensive data sharing with third-party vendors, resellers, and marketing partners; comprehensive device fingerprinting including MAC address, hard disk ID, and Bluetooth signals; collection of mouse movements, clicks, and keystrokes for product improvement; facial geometry and voiceprint processing on servers with consent for enhanced features; account owners (especially employers) have broad access to meeting content, recordings, transcripts, and messages. Key positives: Zoom does not use meeting content to train AI models; basic video features (filters, avatars) processed on-device only; explicit no-sale statement under CCPA; strong EEA rights framework; material policy changes notified before taking effect."
+    "review_notes": "Re-analysis verified against February 2026 privacy policy. Removed unsupported red flag about meeting end-to-end encryption (no explicit quote in privacy policy). Rephrased device fingerprinting and keystroke flags to avoid strong verbs/purpose attribution without explicit text. Updated no-sale green flag to reflect exact hedged language."
   },
   "app": {
     "slug": "zoom-workplace",
@@ -24,10 +24,10 @@
     "overall_risk": "risky",
     "score": 54,
     "grade": "D",
-    "one_liner": "Zoom is essential for video meetings, but it extensively tracks your device, behavior, and meeting content — and your employer may have full access to everything you say or share.",
+    "one_liner": "Zoom is essential for video meetings, but it extensively collects device details, behavior, and meeting content — and your employer may have full access to everything you say or share.",
     "summary": "Zoom Workplace is a video-first communications platform for meetings, chat, phone, and collaboration. The app collects comprehensive personal data including account information, profile details, device identifiers, meeting content, chat messages, and extensive usage logs. Account owners (typically employers) can access recordings, transcripts, participant lists, and even the content of messages sent during meetings. Zoom shares data with third-party vendors, marketing partners, corporate affiliates, and app marketplace developers. The app does not use meeting content to train AI models and processes basic video effects on-device. Users have privacy rights depending on their jurisdiction, including the right to access, correct, or delete their data.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Zoom is a powerful and widely used tool, but be aware that your employer or meeting host may record, transcribe, and access everything you say or share in meetings. Your device is also extensively fingerprinted and your behavior is tracked for analytics and marketing."
+    "recommendation_reason": "Zoom is a powerful and widely used tool, but be aware that your employer or meeting host may record, transcribe, and access everything you say or share in meetings. Your device is also extensively fingerprinted and your behavior is collected for analytics and marketing."
   },
   "flags": {
     "red": [
@@ -35,43 +35,43 @@
         "id": "red_employer_access_meeting_content",
         "title": "Your employer can access everything you say and share in meetings",
         "plain_english": "If you use Zoom through a work account, your employer (the account owner) can view recordings, transcripts, chat messages, participant lists, and even direct messages sent during meetings.",
-        "severity": "high"
+        "severity": "high",
+        "policy_excerpt": "Account Owner: An account owner is the organization or individual that signs up for a Zoom account. ... Depending on their settings, account owners and the users they designate can access personal data for participants who join meetings and webinars on their account or send messages to users on their account. ... Depending on their settings, account owners also can see sender and receiver information, and other messaging data, along with the content of messages sent to and from users on their account (including from in-meeting chat where dedicated meeting group chats are enabled), unless the account owner has enabled Advanced Chat Encryption."
       },
       {
         "id": "red_comprehensive_device_fingerprinting",
-        "title": "Zoom builds an extremely detailed fingerprint of your device",
-        "plain_english": "Zoom collects your MAC address, hard disk ID, PC name, device model, operating system, battery level, WiFi info, and Bluetooth signals to identify and track your device.",
-        "severity": "high"
+        "title": "Zoom collects detailed information about your device",
+        "plain_english": "Zoom collects information about your device including your MAC address, hard disk ID, PC name, operating system version, battery level, WiFi information, and Bluetooth signals.",
+        "severity": "high",
+        "policy_excerpt": "Device Information: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include information about the speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, IP address (which may be used to infer general location at a city or country level), device attributes (like operating system version and battery level), WiFi information, and other device information (like Bluetooth signals)."
       },
       {
         "id": "red_keystrokes_mouse_tracked",
-        "title": "Your mouse movements, clicks, and keystrokes are logged",
-        "plain_english": "Zoom tracks your mouse movements, clicks, keystrokes, and actions like mute/unmute or video on/off to understand how you use the app and improve product design.",
-        "severity": "high"
+        "title": "Your mouse movements, clicks, and keystrokes are collected",
+        "plain_english": "Zoom collects information about your mouse movements, clicks, keystrokes, and actions such as mute/unmute or video on/off to understand how you use the app and improve product design.",
+        "severity": "high",
+        "policy_excerpt": "Usage Information Regarding Meetings, Webinars, Messaging, Collaborative Features and the Website: Information about how people and their devices interact with Zoom products and services, such as: when participants join and leave a meeting; whether participants sent messages and who they message with; performance data; mouse movements, clicks, keystrokes or actions (such as mute/unmute or video on/off), edits to transcript text, where authorized by the account owner and other inputs that help Zoom to understand feature usage, improve product design, and suggest features"
       },
       {
         "id": "red_facial_geometry_voiceprint_servers",
         "title": "Your facial geometry and voiceprint may be processed on servers",
         "plain_english": "If you enable enhanced video features and give consent, Zoom processes your facial geometry and voiceprint on its servers. This data is kept for up to 2 years.",
-        "severity": "medium"
+        "severity": "medium",
+        "policy_excerpt": "Enhanced Features: If you elect to enable certain features and you provide the requisite consent, Zoom may process data about your unique physical characteristics, including your facial geometry and /or voiceprint, for the purpose of offering the features. This data will be deleted when no longer necessary, adequate, or relevant to offering the features or when two years have passed since your last interaction with Zoom, whichever occurs first."
       },
       {
         "id": "red_data_shared_third_parties",
         "title": "Data shared with resellers, vendors, and marketing partners",
         "plain_english": "Zoom shares your data with resellers, third-party service providers, marketing and advertising partners, corporate affiliates, and third-party app developers in the Zoom App Marketplace.",
-        "severity": "medium"
+        "severity": "medium",
+        "policy_excerpt": "Zoom provides personal data to third parties only with consent or in one of the following circumstances... Resellers... Vendors... Marketing, Advertising, and Analytics Partners... Corporate Affiliates... Change of Control... Third-Party Developers... For Legal Purposes"
       },
       {
         "id": "red_targeted_advertising_cookies",
         "title": "Targeted advertising and analytics through cookies",
         "plain_english": "Zoom uses third-party cookies and trackers on its website and app to deliver targeted advertising and analyze your behavior. You can opt out through the cookie management tool.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_meeting_content_not_e2ee_by_default",
-        "title": "Meeting content is not end-to-end encrypted by default",
-        "plain_english": "Your video, audio, and chat in meetings are encrypted in transit but not end-to-end encrypted by default. Zoom has the technical ability to access meeting content if required for legal or safety reasons.",
-        "severity": "medium"
+        "severity": "medium",
+        "policy_excerpt": "Zoom uses third-party marketing, advertising, and analytics providers: to provide statistics and analysis about how people are using Zoom products and services, including our website; and to provide advertising and marketing for Zoom products and services, including targeted advertising based on your use of our website."
       }
     ],
     "green": [
@@ -79,31 +79,36 @@
         "id": "green_no_ai_training_meeting_content",
         "title": "Zoom does not use your meeting content to train AI models",
         "plain_english": "Zoom explicitly promises it does not use your audio, video, chat, screen sharing, or other meeting content to train its own or third-party artificial intelligence models.",
-        "severity": "positive"
+        "severity": "positive",
+        "policy_excerpt": "Zoom does not use any of your audio, video, chat, screen sharing, attachments or other communications-like Customer Content (such as poll results, whiteboard and reactions) to train Zoom's or its third-party artificial intelligence models."
       },
       {
         "id": "green_on_device_video_features",
         "title": "Basic video effects are processed on your device only",
         "plain_english": "Filters, studio effects, avatars, and gestures are processed entirely on your device. This data does not leave your device and cannot be used to identify you.",
-        "severity": "positive"
+        "severity": "positive",
+        "policy_excerpt": "Local Device Video Features: If you elect to enable certain video features, if available in your area, such as filters, studio effects, avatars, and gestures, information about your movements or the positioning of your face or hands may be processed on your device to apply the selected features. Such data does not leave your device, is not retained, cannot be used to identify you, and is only used to generate the selected effects."
       },
       {
         "id": "green_no_sale_ccpa",
         "title": "Zoom explicitly says it does not sell your personal data",
-        "plain_english": "Under California privacy law, Zoom states it does not sell your personal information and has no knowledge of selling data from minors under 16.",
-        "severity": "positive"
+        "plain_english": "Zoom states it does not sell your personal data in the conventional sense, and says it has no actual knowledge of selling or sharing personal information of consumers under 16.",
+        "severity": "positive",
+        "policy_excerpt": "We do not sell your personal data in the conventional sense. ... Zoom does not have actual knowledge that it \"sells\" or \"shares\" the personal information of consumers under 16 years of age."
       },
       {
         "id": "green_material_changes_notified",
         "title": "You are notified before material privacy policy changes take effect",
         "plain_english": "If Zoom makes material changes to its privacy policy, it will notify you and give you an opportunity to review before you choose to continue using the service.",
-        "severity": "positive"
+        "severity": "positive",
+        "policy_excerpt": "If we make material changes to this Privacy Statement, we will notify you and provide you an opportunity to review before you choose to continue using our products and services."
       },
       {
         "id": "green_regional_privacy_rights",
         "title": "Strong privacy rights for EEA and U.S. state residents",
         "plain_english": "Depending on where you live, you have rights to access, delete, correct, or port your data, and to object to processing or marketing communications.",
-        "severity": "positive"
+        "severity": "positive",
+        "policy_excerpt": "At your request, and as required by applicable law, we will: Inform you of what personal data we have about you that is under our control; Amend or correct such personal data... and/or Delete such personal data or direct you to applicable tools."
       }
     ]
   },
@@ -119,7 +124,7 @@
       "background_access": false,
       "plain_english": "Zoom needs your camera and microphone for video meetings. You choose when to turn them on. Basic video effects like filters and avatars are processed only on your device.",
       "detail": "Camera and microphone access is required for core video meeting functionality. Users control when video and audio are enabled. For basic video features (filters, studio effects, avatars, gestures), face and hand positioning data is processed entirely on the device and does not leave the device. For enhanced features requiring consent, facial geometry and/or voiceprint may be processed on Zoom's servers. Meeting hosts can record meetings, which may include video and audio. Recordings may be stored locally or in the cloud.",
-      "policy_excerpt": "If you elect to enable certain video features... information about your movements or the positioning of your face or hands may be processed on your device to apply the selected features. Such data does not leave your device, is not retained, cannot be used to identify you.",
+      "policy_excerpt": "Local Device Video Features: If you elect to enable certain video features, if available in your area, such as filters, studio effects, avatars, and gestures, information about your movements or the positioning of your face or hands may be processed on your device to apply the selected features. Such data does not leave your device, is not retained, cannot be used to identify you, and is only used to generate the selected effects.",
       "concerns": [
         "Meeting hosts can record video and audio",
         "Enhanced features process facial geometry/voiceprint on servers with consent",
@@ -155,11 +160,11 @@
       "background_access": false,
       "plain_english": "Zoom lets you add contacts manually or import them from third-party apps. Contacts are not automatically uploaded.",
       "detail": "Contact information can be added by users to create contact lists on Zoom. This may include contact information integrated from third-party apps or provided for referral invitations. Access is user-initiated and not automatic.",
-      "policy_excerpt": "Contact Information: Contact information added by accounts and/or their licensed end users to create contact lists on Zoom products and services, which may include contact information a user integrates from a third-party app.",
+      "policy_excerpt": "Contact Information: Contact information added by accounts and/or their licensed end users to create contact lists on Zoom products and services, which may include contact information a user integrates from a third-party app, or provided by users to process referral invitations.",
       "concerns": [
         "Third-party contact integration may upload address book data"
       ],
-      "score_impact": -6.0
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
@@ -177,7 +182,7 @@
         "Files exchanged through chat are scanned automatically",
         "Shared files may be visible to account owners and other participants"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -255,7 +260,7 @@
         "No age verification mechanism described",
         "Children under 16 may still participate in meetings as guests"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -286,7 +291,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Zoom collects an unusually detailed profile of your device including MAC address, hard disk ID, PC name, device model, operating system, battery level, and Bluetooth signals.",
+      "plain_english": "Zoom collects detailed information about your device including your MAC address, hard disk ID, PC name, operating system version, battery level, and Bluetooth signals.",
       "detail": "Comprehensive device information collected: speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, IP address, device attributes (operating system version, battery level), WiFi information, Bluetooth signals, and other device information. This creates a highly detailed device fingerprint used for service delivery, security, and analytics. The collection includes persistent identifiers that can track a device across sessions and reinstalls.",
       "policy_excerpt": "Device Information: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include information about the speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, IP address... device attributes (like operating system version and battery level), WiFi information, and other device information (like Bluetooth signals).",
       "concerns": [
@@ -309,7 +314,7 @@
       "background_access": false,
       "plain_english": "If you enable enhanced video features and give consent, Zoom processes your facial geometry and voiceprint on its servers. This data is kept for up to 2 years.",
       "detail": "For basic video features (filters, avatars, gestures), face and hand data is processed entirely on-device and does not leave the device. However, for enhanced features, if the user elects to enable them and provides consent, Zoom may process data about unique physical characteristics including facial geometry and/or voiceprint on its servers. This data is deleted when no longer necessary or after 2 years from last interaction, whichever occurs first. Account owners may need to enable these features before users can access them. Listed as sensitive personal information under CCPA.",
-      "policy_excerpt": "If you elect to enable certain features and you provide the requisite consent, Zoom may process data about your unique physical characteristics, including your facial geometry and /or voiceprint, for the purpose of offering the features. This data will be deleted when no longer necessary, adequate, or relevant to offering the features or when two years have passed since your last interaction with Zoom, whichever occurs first.",
+      "policy_excerpt": "Enhanced Features: If you elect to enable certain features and you provide the requisite consent, Zoom may process data about your unique physical characteristics, including your facial geometry and /or voiceprint, for the purpose of offering the features. This data will be deleted when no longer necessary, adequate, or relevant to offering the features or when two years have passed since your last interaction with Zoom, whichever occurs first.",
       "concerns": [
         "Facial geometry and voiceprint processed on external servers",
         "Up to 2-year retention for biometric data",
@@ -353,7 +358,7 @@
         "Retention periods not explicitly specified",
         "Some data may be kept for corporate/legal reasons even after deletion request"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -397,14 +402,14 @@
         "risk": "caution",
         "max": 20,
         "rate": 0.3,
-        "deduction": 6.0
+        "deduction": 6
       },
       {
         "category": "storage_file_access",
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "data_sharing_third_parties",
@@ -432,7 +437,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "network_internet_activity",
@@ -467,7 +472,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",

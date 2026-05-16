@@ -1,26 +1,26 @@
-# Google Drive iOS — Privacy Policy Review
+# Google Drive — Privacy Policy Review
 
-**Reviewed:** 2026-05-13
+**Reviewed:** 2026-05-16
 **Policy:** https://policies.google.com/privacy
 **Terms:** https://www.google.com/drive/terms-of-service
 **Platform:** iOS
-**Score:** 66/100 (Grade C, Caution)
+**Score:** 60/100 (Grade C, Caution)
 
 ---
 
 ## Summary
 
-Google Drive is a cloud storage and file synchronization service from Google. While it offers 15GB of free storage and strong collaboration features, using it means trusting Google with all your files. Google may scan your content for policy violations, uses your data to train AI models, and tracks your activity extensively across all Google services for advertising.
+Google Drive stores your files on Google's servers. Google uses automated systems to analyze uploaded content to detect abuse such as spam, malware, and illegal content. Google explicitly states it does not show personalized ads based on Drive content. Your data may be shared with affiliates, partners, and disclosed for legal reasons. Domain administrators may access Workspace accounts.
 
-Key concerns: files may be reviewed for policy violations, data used to train Google's AI models, extensive behavioral tracking and ad profiling, cross-service data linking, and domain administrator access for work accounts.
+Key concerns: automated analysis of uploads, data sharing with third parties and for legal reasons, domain administrator access, and broad device/network tracking.
 
-Key positives: Google does not claim ownership of your content, explicitly promises not to use Drive content for marketing campaigns, provides strong encryption, granular sharing controls, and comprehensive privacy management tools.
+Key positives: Google explicitly promises not to use Drive content for ads, provides encryption in transit, and allows deleting and exporting your data.
 
 ---
 
 ## Methodology
 
-This review was conducted by analyzing the Google Privacy Policy and Google Drive Additional Terms of Service, accessed via jina.ai text extraction on 2026-05-13.
+This review was conducted by analyzing the Google Privacy Policy (April 2, 2026) and Google Drive Additional Terms of Service, accessed via verification files and web extraction on 2026-05-16.
 
 ### Data Collection Observed
 
@@ -31,19 +31,16 @@ This review was conducted by analyzing the Google Privacy Policy and Google Driv
 - **Network:** IP address, referrer URL, crash reports, system activity
 - **Location:** IP-based location, device sensor data
 - **Communications:** Call and message logs if using Google communication services
-- **Public data:** Information from publicly accessible sources used for AI training
 
 ### Notable Excerpts
 
-> "Google Drive allows you to upload, submit, store, send and receive content. As described in the Google Terms of Service, your content remains yours. We do not claim ownership in any of your content, including any text, data, information, and files that you upload, share, or store in your Drive account."
+> "We also collect the content you create, upload, or receive from others when using our services. This includes things like email you write and receive, photos and videos you save, docs and spreadsheets you create."
 
-> "We will not use your content for marketing or promotional campaigns."
+> "We don't show you personalized ads based on your content from Drive, Gmail, or Photos."
 
-> "We may review content to determine whether it is illegal or violates our Program Policies, and we may remove or refuse to display content that we reasonably believe violates our policies or the law. But that does not necessarily mean that we review content, so please don't assume that we do."
+> "We use automated systems that analyze your content to provide you with things like customized search results, personalized ads, or other features tailored to how you use our services. And we analyze your content to help us detect abuse such as spam, malware, and illegal content."
 
-> "Google uses information to improve our services and to develop new products, features and technologies that benefit our users and the public. For example, we use publicly available information to help train Google's AI models and build products and features like Google Translate, Gemini Apps, and Cloud AI capabilities."
-
-> "Google processes information to provide advertising, including online identifiers, browsing and search activity, and information about your location and interactions with advertisements."
+> "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons."
 
 ---
 
@@ -51,22 +48,22 @@ This review was conducted by analyzing the Google Privacy Policy and Google Driv
 
 | Category | Risk | Max | Rate | Deduction |
 |----------|------|-----|------|-----------|
-| Camera & Microphone | safe | 15 | 0.00 | 0 |
-| Location & GPS | safe | 15 | 0.00 | 0 |
-| Contacts & Phonebook | safe | 20 | 0.00 | 0 |
-| Storage & File Access | caution | 10 | 0.30 | 3.0 |
-| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.5 |
-| Account & Identity | caution | 15 | 0.30 | 4.5 |
-| Behavioural & Ad Tracking | risky | 25 | 0.65 | 16.25 |
-| Children's Data | safe | 10 | 0.00 | 0 |
+| Camera & Microphone | unknown | 15 | 0.50 | 7.50 |
+| Location & GPS | caution | 15 | 0.30 | 4.50 |
+| Contacts & Phonebook | caution | 20 | 0.30 | 6.00 |
+| Storage & File Access | caution | 10 | 0.30 | 3.00 |
+| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.50 |
+| Account & Identity | caution | 15 | 0.30 | 4.50 |
+| Behavioural & Ad Tracking | caution | 25 | 0.30 | 7.50 |
+| Children's Data | safe | 10 | 0.00 | 0.00 |
 | Network & Internet Activity | risky | 5 | 0.65 | 3.25 |
 | Device Fingerprinting | risky | 15 | 0.65 | 9.75 |
-| Health & Biometric | safe | 15 | 0.00 | 0 |
-| Financial & Payment | caution | 15 | 0.30 | 4.5 |
-| Data Deletion & User Rights | caution | 10 | 0.30 | 3.0 |
-| Policy Change Notification | caution | 5 | 0.30 | 1.5 |
+| Health & Biometric | unknown | 15 | 0.50 | 7.50 |
+| Financial & Payment | caution | 15 | 0.30 | 4.50 |
+| Data Deletion & User Rights | caution | 10 | 0.30 | 3.00 |
+| Policy Change Notification | caution | 5 | 0.30 | 1.50 |
 
-**Total deductions:** 65.25
-**Final score:** round((1 − 65.25/205) × 100) = 66
+**Total deductions:** 82.0
+**Final score:** round((1 − 82.0/205) × 100) = 60
 **Grade:** C
 **Risk:** Caution

@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "kimi-k2.6",
     "policy_url": "https://procreate.com/app/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "unknown",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Strict re-analysis: policy is silent on policy change notification procedures."
   },
   "app": {
     "slug": "procreate-dreams",
@@ -84,8 +84,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "The app does not access or collect location data.",
-      "detail": "No mention of GPS or location services in the privacy policy.",
-      "policy_excerpt": "",
+      "detail": "Savage explicitly states it does not collect any data when using the Applications.",
+      "policy_excerpt": "Savage does not collect or share any data when using the Applications.",
       "concerns": [],
       "score_impact": 0
     },
@@ -99,8 +99,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "The app does not access your contacts or phonebook.",
-      "detail": "No contact access is mentioned or required.",
-      "policy_excerpt": "",
+      "detail": "Savage explicitly states it does not collect any data when using the Applications.",
+      "policy_excerpt": "Savage does not collect or share any data when using the Applications.",
       "concerns": [],
       "score_impact": 0
     },
@@ -174,8 +174,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "No children's data is collected because the app collects no data at all.",
-      "detail": "With zero data collection, there is no risk to children's data.",
-      "policy_excerpt": "",
+      "detail": "Savage explicitly states it does not collect any data when using the Applications.",
+      "policy_excerpt": "Savage does not collect or share any data when using the Applications.",
       "concerns": [],
       "score_impact": 0
     },
@@ -204,8 +204,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "No device information is collected or shared.",
-      "detail": "With no data collection, no device fingerprinting occurs.",
-      "policy_excerpt": "",
+      "detail": "Savage explicitly states it does not collect any data when using the Applications.",
+      "policy_excerpt": "Savage does not collect or share any data when using the Applications.",
       "concerns": [],
       "score_impact": 0
     },
@@ -234,8 +234,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "The app does not handle payments or collect financial data.",
-      "detail": "No payment features are mentioned or available in the app.",
-      "policy_excerpt": "",
+      "detail": "Savage explicitly states it does not collect any data when using the Applications.",
+      "policy_excerpt": "Savage does not collect or share any data when using the Applications.",
       "concerns": [],
       "score_impact": 0
     },
@@ -258,13 +258,13 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Policy changes are unlikely to affect your privacy because no data is collected.",
-      "detail": "The privacy policy exists but the app's no-data-collection stance means changes have minimal practical impact.",
+      "plain_english": "The privacy policy does not explain how users are notified of changes.",
+      "detail": "The policy makes no mention of change notification procedures or continued-use clauses.",
       "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
@@ -274,104 +274,20 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {
-        "category": "camera_microphone",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "location_gps",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "safe",
-        "max": 20,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "data_sharing_third_parties",
-        "risk": "safe",
-        "max": 30,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "account_identity",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "behavioural_ad_tracking",
-        "risk": "safe",
-        "max": 25,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "childrens_data",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "network_internet_activity",
-        "risk": "safe",
-        "max": 5,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "device_fingerprinting",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "health_biometric",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "financial_payment",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "data_deletion_user_rights",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.0,
-        "deduction": 0
-      },
-      {
-        "category": "policy_change_notification",
-        "risk": "safe",
-        "max": 5,
-        "rate": 0.0,
-        "deduction": 0
-      }
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "safe", "max": 30, "rate": 0.0, "deduction": 0 },
+      { "category": "account_identity", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
+      { "category": "behavioural_ad_tracking", "risk": "safe", "max": 25, "rate": 0.0, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "safe", "max": 5, "rate": 0.0, "deduction": 0 },
+      { "category": "device_fingerprinting", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.0, "deduction": 0 }
     ],
     "total_deductions": 0,
     "final_score": 100,

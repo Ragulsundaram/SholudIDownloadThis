@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-line bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <p className="text-sm font-semibold text-ink">ShouldIDownloadThis</p>
@@ -35,8 +35,10 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-10 text-xs text-ink-subtle">
-          Privacy ratings are produced by an automated analysis of each app&rsquo;s
-          published privacy policy and terms. Every rating can be flagged for review.
+          Privacy ratings are based on an automated reading of each app&rsquo;s
+          published privacy policy. We do not independently verify technical claims,
+          and our analysis may contain errors or omissions. Ratings are not legal advice.
+          Always read the full policy yourself before installing an app.
         </p>
       </div>
     </footer>

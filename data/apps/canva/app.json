@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-11",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
-    "policy_url": "https://www.canva.com/policies/privacy-policy/",
+    "policy_url": "http://about.canva.com/privacy-policy/",
     "terms_url": "https://www.canva.com/policies/terms-of-use/",
-    "policy_last_updated": "unknown",
-    "needs_review": false,
-    "review_notes": ""
+    "policy_last_updated": "2026-04-15",
+    "needs_review": true,
+    "review_notes": "Strict re-analysis: Canva's privacy policy is comprehensive and covers most categories. Key concerns include using user content for AI training, buying data from third-party sources, sharing with advertising partners, and vague data retention ('commercially reasonable time'). Three categories are unknown because the policy is silent on camera/microphone, contacts/phonebook, and health/biometric data. Positives include explicit no-selling of direct data to ad networks for their own marketing, COPPA/FERPA-certified education program with no ads or AI training, and opt-out controls for AI training and marketing."
   },
   "app": {
-    "slug": "canva-ios",
+    "slug": "canva",
     "name": "Canva",
     "developer": "Canva Pty Ltd",
     "app_store_url": "https://apps.apple.com/us/app/canva-ai-video-photo-editor/id897446215",
@@ -24,41 +24,41 @@
     "overall_risk": "risky",
     "score": 47,
     "grade": "D",
-    "one_liner": "Canva collects extensive personal data including your designs, location, and device info, uses it for AI training, and shares it with advertisers and vendors.",
-    "summary": "Canva gathers username, names, birthdate, phone number, communications, uploaded creations, and data from external accounts, public databases, and data aggregators. It also collects activity logs, hardware tokens, and geographic information. Data is used for functionality, analysis, personalization, and AI training (except Canva Education content). Shared with vendors for hosting, payments, and analysis; colleagues can see shared workspace materials; openly shared publications are public worldwide. Business email registrations may give organizations account oversight. External ad platforms receive data for tailored promotions. Canva states it does not sell directly collected information. Users can request access, amendments, or erasure. After account closure, data remains for a commercially reasonable time. Education accounts are warned after 12 months of inactivity and erased when school contracts end.",
+    "one_liner": "Canva collects extensive personal data including your designs and location, uses your content for AI training, and public posts may be indexed by search engines.",
+    "summary": "The policy states that Canva collects extensive personal data including your name, birthdate, phone number, location, and content you upload. It states that Canva may use your content to train AI algorithms and models, storing data as 'Memories,' though you can opt out. The policy states that Canva shares data with advertising partners and service providers, and may obtain additional information about you from third-party data providers or from other Canva users who share designs with you. Public content you post may be indexed by search engines. Team owners can reassign ownership of your content. The policy is silent on camera, contacts, and health data. Data is retained for a 'commercially reasonable time' after account closure.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Canva collects extensive data, uses your content for AI training, and shares with advertisers and vendors. While education accounts have some protections, the broad data collection and vague retention policy are concerning."
+    "recommendation_reason": "Canva collects extensive data, may use your content for AI training, public posts may be indexed by search engines, and team owners can reassign ownership of your content. The vague retention policy and employer account control possibility are concerning."
   },
   "flags": {
     "red": [
       {
         "id": "red_ai_training",
         "title": "Uses your content for AI training",
-        "plain_english": "Canva uses the designs and content you upload to train its artificial intelligence systems, unless you're on a special education plan.",
+        "plain_english": "The policy states that Canva may analyze your activity, content, and media uploads to train its algorithms, models, and AI products, storing data as 'Memories,' unless you are using Canva Education.",
         "severity": "high"
       },
       {
         "id": "red_data_aggregation",
-        "title": "Buys data from third-party brokers",
-        "plain_english": "Canva purchases additional information about you from commercial data brokers and public databases to build a fuller profile.",
-        "severity": "high"
+        "title": "May obtain data from third-party sources",
+        "plain_english": "The policy states that Canva may obtain information about you from third-party data providers and public sources, including your company, job title, and industry.",
+        "severity": "medium"
       },
       {
         "id": "red_ad_sharing",
         "title": "Shares data with ad platforms",
-        "plain_english": "Canva shares your information with external advertising companies so they can show you targeted ads.",
+        "plain_english": "The policy states that Canva shares your information with external advertising partners and social media platforms to show you personalized ads on Canva and other sites.",
         "severity": "medium"
       },
       {
         "id": "red_org_oversight",
         "title": "Employers may gain account control",
-        "plain_english": "If you sign up with a work email, your employer might be able to take control of your Canva account and see your designs.",
+        "plain_english": "The policy states that if you sign up with a work email, your employer or organization may be given control of your account and access to your content and designs.",
         "severity": "medium"
       },
       {
         "id": "red_vague_retention",
         "title": "Vague data retention policy",
-        "plain_english": "Canva says it keeps your data for a commercially reasonable time after you close your account, which is vague and could mean years.",
+        "plain_english": "The policy states that Canva keeps your data for a 'commercially reasonable time' after you close your account, which is vague and does not clearly explain how long.",
         "severity": "medium"
       }
     ],
@@ -66,13 +66,25 @@
       {
         "id": "green_education_protection",
         "title": "Education accounts protected",
-        "plain_english": "If you're a student using Canva through school, your content won't be used for AI training and you won't see ads.",
+        "plain_english": "The policy states that if you are a student using Canva Education, your content will not be used for AI training and you will not see ads.",
         "severity": "positive"
       },
       {
         "id": "green_no_selling",
-        "title": "Does not sell your data directly",
-        "plain_english": "Canva promises not to sell or rent the personal information it collects directly from you to other companies.",
+        "title": "Does not sell direct data to ad networks",
+        "plain_english": "The policy states that Canva does not sell or rent the personal information it collects directly from you to third-party ad servers or ad networks for those parties' own marketing purposes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ai_opt_out",
+        "title": "You can opt out of AI training",
+        "plain_english": "The policy states that you can manage whether Canva uses your data for training AI in your privacy settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_change_email",
+        "title": "Email notice for material policy changes",
+        "plain_english": "The policy states that Canva will notify you by email or on the website if there are material changes to how your personal information is collected, used, stored, or shared.",
         "severity": "positive"
       }
     ]
@@ -82,16 +94,18 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva can access your camera to take photos for your designs, but only when you choose to use it.",
-      "detail": "Camera access is on-demand for uploading photos to designs.",
+      "plain_english": "The policy does not say whether Canva accesses your camera or microphone.",
+      "detail": "The privacy policy makes no explicit mention of camera, microphone, video recording, or audio recording access on your device.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": -4.5
+      "concerns": [
+        "Policy is silent on camera and microphone access"
+      ],
+      "score_impact": -7.5
     },
     {
       "id": "location_gps",
@@ -102,11 +116,13 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Canva collects your geographic location to personalize your experience and show localized content.",
-      "detail": "Geographic information collected for personalization and localization.",
-      "policy_excerpt": "geographic information",
+      "plain_english": "The policy states that Canva may collect your precise or approximate location from your device, your IP address, or your payment provider, and uses it for advertising and analytics.",
+      "detail": "The policy states: 'Canva may collect your precise or approximate location: from you, when you provide, correct or confirm your location; by inferring your location from your IP address; and from our partners or your payment provider.' It lists purposes: 'localize and personalize content, comply with local laws, undertake aggregated analytics, understand if its users use Canva for domestic, business or educational use, improve advertising efficiency and estimate the tax liability of Canva.'",
+      "policy_excerpt": "Canva may collect your precise or approximate location: from you, when you provide, correct or confirm your location; by inferring your location from your IP address; and from our partners or your payment provider.",
       "concerns": [
-        "Location used for profiling"
+        "Location collected for advertising",
+        "Precise location may be collected",
+        "IP address used for location inference"
       ],
       "score_impact": -9.75
     },
@@ -119,31 +135,30 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't clearly say whether Canva accesses your phone contacts.",
-      "detail": "No specific mention of contacts or phonebook access.",
+      "plain_english": "The policy does not say whether Canva accesses your phone contacts.",
+      "detail": "The privacy policy makes no explicit mention of contacts, address book, or phonebook access.",
       "policy_excerpt": "",
       "concerns": [
-        "Not specified in policy"
+        "Policy is silent on contacts access"
       ],
-      "score_impact": -5.0
+      "score_impact": -10
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva needs access to your photos and files so you can upload them to your designs. Your uploaded creations are stored on their servers and may be used for AI training.",
-      "detail": "Full file access for uploading content. Uploads stored on servers and used for AI training (except education accounts).",
-      "policy_excerpt": "uploaded creations",
+      "plain_english": "The policy states that Canva collects the designs, images, documents, videos, and other media you upload to your account.",
+      "detail": "The policy states: 'We receive content that you create within Canva and media you upload, such as designs, images, documents, videos, and metadata about your content.' This is user-initiated upload for core functionality.",
+      "policy_excerpt": "We receive content that you create within Canva and media you upload, such as designs, images, documents, videos, and metadata about your content.",
       "concerns": [
-        "Uploads used for AI training",
-        "Publicly shared designs visible worldwide"
+        "Uploads stored on Canva servers"
       ],
-      "score_impact": -6.5
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -154,13 +169,16 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva shares your data with companies that host the service, process payments, and analyze usage. It also shares with advertisers and may transfer data during corporate restructuring.",
-      "detail": "Shared with vendors (hosting, payments, analysis), ad platforms, and may transfer during corporate restructuring. Organization oversight possible with business emails.",
-      "policy_excerpt": "Disclosure occurs with vendors handling hosting, payments, and analysis. Business email registrations may cause an organization to assume account oversight. During corporate restructuring, user records may transfer to successors. External ad platforms display tailored promotions.",
+      "plain_english": "The policy states that Canva shares your data with affiliates and third-party service providers for billing, hosting, analytics, advertising, and other functions. Your employer may gain control of a work account. Public content you post may be indexed by search engines. Team owners can reassign ownership of your content.",
+      "detail": "The policy lists extensive sharing with: billing, customer support, email services, hosting, data analytics, machine learning, security, advertising, domain registration, delivery providers. It also says: 'If your Administered Account is controlled by an Admin Entity, the Admin Entity's admin may access, transfer and control your Administered Account and all content and designs associated with it.' For public posts: 'When you set your profile to public, or make User Content public, your information becomes publicly available globally, searchable by other users and can be indexed by search engines.' For teams: 'If requested by the Team Owner, Canva may re-assign ownership of any User Content you post in the Team to the Team Owner or to another Team member.' Design collaboration exposes your name, avatar, email, and usage metrics to other collaborators. Canva also shares, sells or transfers information during corporate restructuring.",
+      "policy_excerpt": "We share your information with Canva affiliates and third-party service providers for the purpose of providing the Service to you, to facilitate Canva's legitimate interests or if you consent... When you set your profile to public, or make User Content public, your information becomes publicly available globally, searchable by other users and can be indexed by search engines... If requested by the Team Owner, Canva may re-assign ownership of any User Content you post in the Team to the Team Owner or to another Team member.",
       "concerns": [
-        "Shared with advertisers",
-        "Organization oversight possible",
-        "Data may transfer during restructuring"
+        "Shared with numerous vendors including advertisers",
+        "Public content may be indexed by search engines",
+        "Employer may control work accounts",
+        "Team owner can reassign ownership of your content",
+        "Design collaboration exposes email and usage metrics",
+        "Data may be shared, sold or transferred during corporate restructuring"
       ],
       "score_impact": -19.5
     },
@@ -173,13 +191,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva collects extensive identity data including your name, birthdate, phone number, and data from your social media accounts. They also buy extra data about you from data brokers.",
-      "detail": "Username, names, birthdate, phone number, external account data, and commercial data aggregator information collected.",
-      "policy_excerpt": "username, your first and last names, birthdate, phone number, data from external account connections, publicly available databases, and commercial data aggregators",
+      "plain_english": "The policy states that Canva collects your name, birthdate, phone number, profession, and address. It may also obtain your company, job title, and industry from third-party sources, and may obtain your details from another Canva user when they share a design with you.",
+      "detail": "The policy states: 'We may ask for certain information when you register for a Canva account or interact with us (such as a username, your first and last names, birthdate, phone number, profession, physical and e-mail address).' It also says: 'We may obtain information about you from third-party sources, such as public sources, social media platforms and third-party data providers... Examples... include your company, company size, job title and seniority, industry and other profile information.' Additionally: 'We also may have obtained your details from another Canva user, for example when they have shared a design with you, or when you have interacted with their design.'",
+      "policy_excerpt": "We may ask for certain information when you register for a Canva account or interact with us (such as a username, your first and last names, birthdate, phone number, profession, physical and e-mail address)... We also may have obtained your details from another Canva user, for example when they have shared a design with you, or when you have interacted with their design.",
       "concerns": [
         "Extensive identity data collected",
         "Birthdate collected",
-        "Data purchased from brokers"
+        "Data obtained from third-party sources including data providers",
+        "Data obtained from other Canva users who share designs with you"
       ],
       "score_impact": -9.75
     },
@@ -192,12 +211,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva tracks your activity logs and shares data with ad platforms to show you targeted advertisements.",
-      "detail": "Activity logs and hardware tokens tracked continuously. Shared with external ad platforms for tailored promotions.",
-      "policy_excerpt": "activity logs, hardware tokens, and geographic information. External ad platforms display tailored promotions.",
+      "plain_english": "The policy states that Canva uses cookies, device identifiers, and clear gifs to track your usage over time, and shares this data with advertising partners to show you personalized ads. Your hashed email may be shared with LiveRamp for ad matching.",
+      "detail": "The policy states: 'cookies... allow us or our business partners to track your usage of the Service over time... deliver personalized advertisements.' It also uses 'clear GIFs... to anonymously track the online usage patterns', 'device identifiers... may remain persistently on your device', and shares with 'third party ad servers, ad networks and social media platforms (like Facebook, Google, LiveRamp, Outbrain, Taboola and Appsflyer).' The policy explicitly says: 'You can opt out of having your email matched by Liveramp here or by emailing privacy@canva.com.' Canva Education users are excluded from ad tracking.",
+      "policy_excerpt": "We partner with third party ad servers, ad networks and social media platforms (like Facebook, Google, LiveRamp, Outbrain, Taboola and Appsflyer) to deliver personalized advertisements on our Service and other sites that may be of interest to you and/or to measure their effectiveness... You can opt out of having your email matched by Liveramp here or by emailing privacy@canva.com.",
       "concerns": [
         "Behavior tracked for ads",
-        "Shared with ad platforms"
+        "Device identifiers used for tracking",
+        "Data shared with ad networks",
+        "Hashed email shared with LiveRamp for ad matching",
+        "Clear gifs used to track email and site usage"
       ],
       "score_impact": -16.25
     },
@@ -205,19 +227,19 @@
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva has an education program that doesn't show ads or use content for AI training, but it still collects data from students and warns about deletion after 12 months of inactivity.",
-      "detail": "Canva Education: no ads, no AI training on user content. Inactive student accounts warned after 12 months, erased when school contract ends.",
-      "policy_excerpt": "Canva Education: We will not use User Content of Canva Education for AI training. The education platform shows no ads to pupils.",
+      "plain_english": "The policy states that Canva's main service is not directed at children and it does not knowingly collect personal information from children. A separate education program has additional safeguards.",
+      "detail": "The policy states: 'The Service and our content are not directed at children. Children are not permitted to sign up by themselves for the Service. Canva does not knowingly collect or solicit personal information from children. If we learn that we have collected personal information from a child without verification of parental consent where this is required, we will delete that information as quickly as possible.' The Canva Education program is COPPA/FERPA certified and does not show ads to students.",
+      "policy_excerpt": "The Service and our content are not directed at children. Children are not permitted to sign up by themselves for the Service. Canva does not knowingly collect or solicit personal information from children.",
       "concerns": [
-        "Student data still collected",
-        "12-month inactivity deletion warning"
+        "No age verification described for main service",
+        "Student data collected in education program"
       ],
-      "score_impact": -6.5
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -228,11 +250,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva logs your internet activity and device signals to run the service and personalize your experience.",
-      "detail": "Activity logs captured continuously for service functionality and personalization.",
-      "policy_excerpt": "activity logs",
+      "plain_english": "The policy states that Canva logs your browser type, pages visited, clicks, and interactions with links on the Service. It also tracks how you interact with links to third-party services by monitoring redirecting clicks.",
+      "detail": "The policy states: 'Log file information is automatically reported by your browser or mobile device each time you access the Service... server logs may include anonymous information such as your web request, browser type, referring / exit pages and URLs, number of clicks and how you interact with links on the Service, domain names, landing pages, pages viewed.' It also explicitly states: 'If you use them, we will keep track of how you interact with links, including to third-party services that we are not responsible for, by monitoring redirecting clicks or other methods.'",
+      "policy_excerpt": "Log file information is automatically reported by your browser or mobile device each time you access the Service... If you use them, we will keep track of how you interact with links, including to third-party services that we are not responsible for, by monitoring redirecting clicks or other methods.",
       "concerns": [
-        "Activity logged continuously"
+        "Activity logged continuously",
+        "Pages viewed and clicks tracked",
+        "Link interactions with third-party services monitored",
+        "Referring pages recorded"
       ],
       "score_impact": -3.25
     },
@@ -245,11 +270,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva collects hardware tokens and device information to track you and personalize your experience.",
-      "detail": "Hardware tokens collected continuously for tracking and personalization.",
-      "policy_excerpt": "hardware tokens",
+      "plain_english": "The policy states that Canva uses device identifiers including the Android Advertising ID and iOS Advertising Identifier to track your device and usage.",
+      "detail": "The policy states: 'Device Identifiers used by Canva include the Android Advertising ID and iOS Advertising Identifier.' And: 'Device identifiers are small data files that uniquely identify your mobile device. A device identifier may convey information to us about how you use the Service. A device identifier may remain persistently on your device.'",
+      "policy_excerpt": "Device Identifiers used by Canva include the Android Advertising ID and iOS Advertising Identifier.",
       "concerns": [
-        "Device fingerprinting for tracking"
+        "Advertising IDs collected",
+        "Device identifiers may remain persistently",
+        "Used to track how you use the Service"
       ],
       "score_impact": -9.75
     },
@@ -257,16 +284,18 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Canva does not collect health or biometric data.",
-      "detail": "No health or biometric data collection.",
+      "plain_english": "The policy does not say whether Canva collects health or biometric data.",
+      "detail": "The privacy policy makes no mention of health, biometric, or medical data collection.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": [
+        "Policy is silent on health and biometric data"
+      ],
+      "score_impact": -7.5
     },
     {
       "id": "financial_payment",
@@ -277,11 +306,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Canva collects payment information when you upgrade to a paid plan. Payments are processed by third-party vendors.",
-      "detail": "Payment data collected for premium subscriptions, processed by vendors.",
-      "policy_excerpt": "vendors handling payments",
+      "plain_english": "The policy states that Canva uses third-party service providers for billing, but it does not clearly say whether Canva itself sees your card details.",
+      "detail": "The policy lists 'Billing' as a function for which data is shared with third parties. It also says: 'giving you access to your designs and billing you for transactions that you make via the Service.' There is no explicit statement about whether raw card data is seen by Canva or only by the processor.",
+      "policy_excerpt": "Billing",
       "concerns": [
-        "Payment data shared with vendors"
+        "Payment data shared with third-party vendors",
+        "No explicit statement that app never sees card details"
       ],
       "score_impact": -4.5
     },
@@ -289,37 +319,38 @@
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can ask Canva to delete your data, but they keep it for a commercially reasonable time which could mean a long while. Student accounts get warnings after a year of not using the app.",
-      "detail": "Users may request access, amendments, or erasure. After account closure, profiles remain for a commercially reasonable time. Education accounts warned after 12 months of inactivity.",
-      "policy_excerpt": "Individuals may request access, amendments, or erasure by contacting the privacy team. After account closure, profiles and materials remain for a commercially reasonable time to satisfy regulatory, audit, and backup needs. Under the education program, inactive student accounts receive deletion warnings after twelve months.",
+      "plain_english": "The policy states that you can request deletion of your data, but Canva may retain your information for a commercially reasonable time for legal and backup purposes.",
+      "detail": "The policy states: 'Following termination or deactivation of your user account, Canva will retain your profile information and User Content for a commercially reasonable time, and for as long as we have a valid purpose to do so. In particular, Canva will retain your information for the purpose of complying with its legal and audit obligations, and for backup and archival purposes.' Users can request access, correction, or deletion by contacting privacy@canva.com.",
+      "policy_excerpt": "Following termination or deactivation of your user account, Canva will retain your profile information and User Content for a commercially reasonable time, and for as long as we have a valid purpose to do so.",
       "concerns": [
         "Vague retention period",
         "Commercially reasonable time is undefined",
-        "Publicly shared content may persist"
+        "Publicly shared content may persist on third-party sites"
       ],
-      "score_impact": -6.5
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't clearly say how Canva will tell you if the privacy rules change.",
-      "detail": "No specific policy change notification mechanism mentioned.",
-      "policy_excerpt": "",
+      "plain_english": "The policy states that Canva will notify you by email or on the website if there are material changes, but it does not say you must actively agree to the changes.",
+      "detail": "The policy states: 'If we make any material changes to the way we collect, use, store and/or share your personal information, we will notify you on our website or by sending an email to the email address associated with your Canva account. We recommend that you check this page from time to time to inform yourself of any changes.'",
+      "policy_excerpt": "If we make any material changes to the way we collect, use, store and/or share your personal information, we will notify you on our website or by sending an email to the email address associated with your Canva account.",
       "concerns": [
-        "No clear notification mechanism stated"
+        "No explicit requirement to actively re-agree",
+        "Users must still check page periodically"
       ],
-      "score_impact": -2.5
+      "score_impact": -1.5
     }
   ],
   "scoring": {
@@ -328,10 +359,10 @@
     "deductions": [
       {
         "category": "camera_microphone",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0.5,
+        "deduction": 7.5
       },
       {
         "category": "location_gps",
@@ -345,14 +376,14 @@
         "risk": "unknown",
         "max": 20,
         "rate": 0.5,
-        "deduction": 10.0
+        "deduction": 10
       },
       {
         "category": "storage_file_access",
-        "risk": "risky",
+        "risk": "caution",
         "max": 10,
-        "rate": 0.65,
-        "deduction": 6.5
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "data_sharing_third_parties",
@@ -377,10 +408,10 @@
       },
       {
         "category": "childrens_data",
-        "risk": "risky",
+        "risk": "caution",
         "max": 10,
-        "rate": 0.65,
-        "deduction": 6.5
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "network_internet_activity",
@@ -398,10 +429,10 @@
       },
       {
         "category": "health_biometric",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.5,
+        "deduction": 7.5
       },
       {
         "category": "financial_payment",
@@ -412,20 +443,20 @@
       },
       {
         "category": "data_deletion_user_rights",
-        "risk": "risky",
+        "risk": "caution",
         "max": 10,
-        "rate": 0.65,
-        "deduction": 6.5
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 5,
-        "rate": 0.5,
-        "deduction": 2.5
+        "rate": 0.3,
+        "deduction": 1.5
       }
     ],
-    "total_deductions": 109.25,
+    "total_deductions": 108.25,
     "final_score": 47,
     "grade": "D"
   }

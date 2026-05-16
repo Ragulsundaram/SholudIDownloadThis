@@ -404,6 +404,67 @@ Use **Lucide React** for all UI icons (consistent, open source, tree-shakeable).
 
 ---
 
+## Layout & Overlay Rules — Read Before Touching Positioning
+
+These are not design opinions — they are CSS facts that cause silent bugs if ignored.
+
+### Rule 1: All overlays, modals, drawers, and dropdowns MUST use React Portal
+
+Any component that floats above the rest of the page (mobile sidebar, modal dialog, tooltip panel, dropdown menu) must be rendered via `createPortal(content, document.body)` rather than as a child of the triggering element.
+
+**Why:** The Navbar has `backdrop-filter: blur()` applied. In CSS, `backdrop-filter` (and also `transform`, `filter`, `will-change: transform`) on a parent element creates a new *containing block*. Any `fixed`-positioned element nested inside such a parent is positioned relative to that parent — not the viewport. The result looks like a floating, misaligned, or backgroundless overlay. The fix is always the same: render outside the problematic ancestor using a portal.
+
+**Pattern to use every time:**
+
+```tsx
+"use client";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+
+export function MyOverlay() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const overlay = (
+    <div className="fixed inset-0 z-[200]">
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-y-0 left-0 w-64" style={{ backgroundColor: "var(--card)" }}>
+        {/* content */}
+      </div>
+    </div>
+  );
+
+  return (
+    <>
+      <button onClick={...}>Open</button>
+      {mounted && createPortal(overlay, document.body)}
+    </>
+  );
+}
+```
+
+Note the `mounted` guard — required because `document.body` doesn't exist during server-side rendering.
+
+### Rule 2: Use CSS variables for overlay backgrounds, not Tailwind arbitrary values
+
+When styling an overlay panel background, use an inline style with the CSS variable rather than a Tailwind arbitrary value like `bg-[#111111]`:
+
+```tsx
+// Wrong — Tailwind may not generate this class if it can't statically scan it
+<div className="bg-[#111111]">
+
+// Correct — always works, respects dark/light mode automatically
+<div style={{ backgroundColor: "var(--card)" }}>
+```
+
+The `--card` variable is `#ffffff` in light mode and `#18181b` in dark mode, defined in `app/globals.css`.
+
+### Rule 3: When an overlay looks wrong, check positioning before changing colors
+
+If an overlay panel looks transparent, floating, or has text bleeding through it, the cause is almost always a positioning issue (Rule 1), not a color issue. Do not iterate on `z-index` or background color — first verify that the overlay is rendered via `createPortal` outside any ancestor with `backdrop-filter`/`transform`/`filter`.
+
+---
+
 ## Responsive Breakpoints
 
 Using Tailwind defaults:

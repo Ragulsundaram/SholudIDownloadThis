@@ -3,26 +3,31 @@ import { ShieldQuestion } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { NavbarSearch } from "./NavbarSearch";
 import { CompareBasket } from "./CompareBasket";
+import { MobileSidebar } from "./MobileSidebar";
 
 type Props = {
   apps?: IndexEntry[];
+  categoryList?: string[];
 };
 
-export function Navbar({ apps = [] }: Props) {
+export function Navbar({ apps = [], categoryList }: Props) {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-page/80 backdrop-blur supports-[backdrop-filter]:bg-page/60">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 text-ink hover:opacity-80">
-          <ShieldQuestion className="h-6 w-6 text-brand" />
-          <span className="text-base font-semibold tracking-tight">
-            ShouldIDownloadThis
-          </span>
-        </Link>
+      <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3">
+          <MobileSidebar apps={apps} categoryList={categoryList} />
+          <Link href="/" className="flex items-center gap-2 text-ink hover:opacity-80">
+            <ShieldQuestion className="h-6 w-6 text-brand" />
+            <span className="text-base font-semibold tracking-tight">
+              ShouldIDownloadThis
+            </span>
+          </Link>
+        </div>
         <nav className="flex items-center gap-1 text-sm">
           <NavbarSearch apps={apps} />
           <CompareBasket apps={apps} />
           <Link
-            href="/browse"
+            href="/categories"
             className="rounded-md px-3 py-2 text-ink-muted hover:bg-divider hover:text-ink"
           >
             Browse

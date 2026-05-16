@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-12",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.terabox.com/terms/privacy?lang=en",
     "terms_url": "https://www.terabox.com/terms/duty?lang=en",
     "policy_last_updated": "2023-04-18",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Policy contains a direct contradiction: it requires facial recognition information for some services but claims not to collect or store facial biometric information. Location collection is vague ('depending on the device settings')."
   },
   "app": {
-    "slug": "terabox-ios",
+    "slug": "terabox",
     "name": "TeraBox: 1TB Cloud & AI Space",
     "developer": "FLEXTECH INC.",
     "app_store_url": "https://apps.apple.com/in/app/terabox-1tb-cloud-ai-space/id1509453185",
@@ -22,63 +22,63 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 49,
+    "score": 52,
     "grade": "D",
-    "one_liner": "TeraBox gives you 1TB of free storage but scans your files with AI, sends your audio to Google, and builds a behavioral profile of you for automated marketing decisions.",
-    "summary": "TeraBox is a cloud storage service that collects extensive data including all files you upload, your contacts, device identifiers, and even your clipboard contents. It uses AI to scan and categorize your photos, sends audio recordings to Google for transcription, and explicitly builds behavioral profiles for automated marketing. While it offers encryption and security features, the breadth of data collection and sharing raises significant privacy concerns.",
+    "one_liner": "TeraBox states that it scans your uploaded photos with AI, sends audio to Google for transcription, and may build behavioral profiles for automated marketing.",
+    "summary": "TeraBox is a cloud storage service that collects files you upload, your contacts, device information, and clipboard contents for specific features. It uses AI to categorize your uploaded photos, sends audio to Google for transcription, and explicitly states that it may create behavioral profiles for automated marketing. It offers encryption and account deletion features, but its broad data collection and sharing practices raise privacy concerns.",
     "recommendation": "think_twice",
-    "recommendation_reason": "TeraBox offers generous free storage but at a significant privacy cost. Your files are scanned by AI, your audio is sent to Google, and your behavior is profiled for marketing. Consider alternatives with stronger privacy commitments."
+    "recommendation_reason": "TeraBox offers free cloud storage, but the privacy cost is significant. Your files are scanned by AI, audio is sent to Google, and your behavior may be profiled for marketing. Consider alternatives with stronger privacy commitments."
   },
   "flags": {
     "red": [
       {
-        "id": "red_ai_file_scanning",
-        "title": "AI scans all your uploaded photos",
-        "plain_english": "TeraBox uses artificial intelligence to analyze your uploaded photos, identifying faces, locations, scenes, and objects. While they say this is only for organization, your entire photo library is being analyzed by their systems.",
+        "id": "red_behavioral_profiling_marketing",
+        "title": "Builds behavioral profiles for automated marketing",
+        "plain_english": "TeraBox explicitly states that it may process your personal information to create profiles about your operation habits, interests, or credit. It says it uses these profiles for automated decision-making to send you personalized or marketing information.",
         "severity": "high"
       },
       {
-        "id": "red_audio_sent_to_google",
-        "title": "Audio recordings sent to Google",
-        "plain_english": "When you use the transcription or note-taking features, your audio files are sent to Google's servers for processing. This means Google has access to anything you record.",
-        "severity": "high"
-      },
-      {
-        "id": "red_behavioral_profiling",
-        "title": "Builds behavioral profiles for marketing",
-        "plain_english": "TeraBox explicitly creates detailed profiles about your habits, interests, and even creditworthiness from your usage data. These profiles are used to send you personalized marketing messages through automated decisions.",
-        "severity": "high"
-      },
-      {
-        "id": "red_clipboard_access",
-        "title": "Reads your clipboard without permission",
-        "plain_english": "TeraBox reads whatever you have copied to your clipboard, including invitation codes, file links, passwords, and redemption codes. While they say they don't read it for other purposes, they have access to anything you copy.",
+        "id": "red_ai_photo_categorization",
+        "title": "Uses AI to categorize your uploaded photos",
+        "plain_english": "TeraBox states that it provides smart classification services based on your uploaded data, including automated clustering of photos based on people, scenes, and geographic locations.",
         "severity": "medium"
       },
       {
-        "id": "red_contacts_uploaded",
-        "title": "Uploads and stores your phone contacts",
-        "plain_english": "If you grant permission, TeraBox uploads your phone contacts, email addresses, and social media contacts to their servers to make sharing easier. This sensitive information is stored on their servers.",
+        "id": "red_audio_sent_to_google",
+        "title": "Sends your audio to Google for transcription",
+        "plain_english": "TeraBox states that when you use its transcription or note-taking features, your audio content is transmitted to Google for processing.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_clipboard_read",
+        "title": "May read your clipboard for specific features",
+        "plain_english": "TeraBox states that it will read your clipboard information when you use invitation codes, access file links shared by other users, add friends through passwords, or obtain membership services through redemption codes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_contacts_stored_on_servers",
+        "title": "Stores your contacts on its servers if you allow access",
+        "plain_english": "TeraBox states that if you choose to allow it to access your contact information, it stores this information on its server.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_encryption",
+        "id": "green_encryption_at_rest",
         "title": "Encrypts files at rest",
-        "plain_english": "TeraBox uses encryption to protect your files while they are stored on their servers, and offers two-factor authentication to help keep your account secure.",
+        "plain_english": "TeraBox states that it uses encryption of files at rest as part of its security measures.",
         "severity": "positive"
       },
       {
         "id": "green_account_deletion",
         "title": "Account deletion available in app",
-        "plain_english": "You can delete your TeraBox account directly within the app settings. They promise to delete your data within 30 days of receiving the request.",
+        "plain_english": "TeraBox states that you can delete your account directly within the app settings.",
         "severity": "positive"
       },
       {
         "id": "green_opt_out_marketing",
         "title": "Can opt out of marketing emails",
-        "plain_english": "You can unsubscribe from marketing emails at any time by clicking the unsubscribe link. You can also refuse automated decision-making through app settings or by contacting them.",
+        "plain_english": "TeraBox states that you can opt out of receiving marketing material at any time by clicking the unsubscribe link in emails.",
         "severity": "positive"
       }
     ]
@@ -93,12 +93,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "You can use the camera to take photos for upload, and record audio for transcription. These are optional features and only active when you choose to use them.",
-      "detail": "Camera used for photo capture and AI beautification. Audio recorded for transcription sent to Google. No background access mentioned.",
-      "policy_excerpt": "If you enable camera permissions or authorize access to your photo library, please note that uploaded images may contain faces... When you use our transcription or note-taking features, the audio content you choose to upload is sent to our servers for processing.",
+      "plain_english": "TeraBox may access your camera when you choose to upload photos, and may send audio you upload to Google for transcription.",
+      "detail": "Camera access is used for uploading photos. Audio you upload for transcription is sent to Google for processing. The policy does not mention background camera or microphone access.",
+      "policy_excerpt": "If you enable camera permissions or authorize access to your photo library, please note that uploaded images may contain faces... When you use our transcription or note-taking features, the audio content you choose to upload is sent to our servers for processing. To provide transcription and note generation services, your audio content is transmitted to Google, our third-party AI service provider, for processing.",
       "concerns": [
-        "Photos sent to AI processing",
-        "Audio sent to Google"
+        "Audio sent to third-party Google servers",
+        "Policy does not clearly state whether camera access is optional or required"
       ],
       "score_impact": -4.5
     },
@@ -111,11 +111,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TeraBox may collect your location information depending on your device settings, particularly when you access the service or upload photos with location metadata.",
-      "detail": "Location information collected depending on device settings. Photo metadata may include geographic locations.",
-      "policy_excerpt": "Device information... may include IP address, browser, and device information, web pages visited prior to accessing TeraBox, identifiers tied to the device, and location information depending on the device settings.",
+      "plain_english": "TeraBox states that device information may include location information depending on your device settings, but does not clearly explain whether this means GPS or only IP-based location.",
+      "detail": "The policy mentions location information in the context of device information, stating it depends on device settings. It does not describe when or how GPS permission is requested, or whether location is used for purposes beyond optimization and protection.",
+      "policy_excerpt": "Device information: This refers to information about the device used to access the Services and may include IP address, browser, and device information, web pages visited prior to accessing TeraBox, identifiers tied to the device, and location information depending on the device settings.",
       "concerns": [
-        "Location collected based on device settings"
+        "Ambiguous whether GPS or IP-based location is collected",
+        "Purpose beyond optimization is not clearly explained"
       ],
       "score_impact": -4.5
     },
@@ -128,14 +129,14 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TeraBox can access your phone contacts, email addresses, and social media contacts to help you share files. They store this contact information on their servers.",
-      "detail": "Contacts access is optional but stored on server if granted. Includes phone contacts, emails, Facebook and Twitter contacts.",
+      "plain_english": "TeraBox states that if you allow it to access your contact information, it stores this information on its server for sharing and collaboration features.",
+      "detail": "Contact access is optional. If granted, TeraBox stores phone contacts, email addresses, and social media contacts on its servers.",
       "policy_excerpt": "You can choose to allow TeraBox to access your contact information to facilitate certain operations... We store this information on our server for you to use.",
       "concerns": [
-        "Contacts stored on servers",
-        "Includes social media contacts"
+        "Contacts stored on external servers",
+        "Includes social media contacts if granted"
       ],
-      "score_impact": -13.0
+      "score_impact": -13
     },
     {
       "id": "storage_file_access",
@@ -146,31 +147,30 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "As a cloud storage app, TeraBox stores all files you upload. They also offer an optional AI feature that scans your photos to organize them by people, places, and objects.",
-      "detail": "All uploaded user data stored on servers. Optional Smart Photo Categorization scans uploaded photos for faces, locations, scenes, and objects.",
+      "plain_english": "As a cloud storage app, TeraBox stores the files, photos, and videos you upload. It also states that it may use AI to categorize your uploaded photos by people, scenes, and geographic locations.",
+      "detail": "All uploaded user data is stored on TeraBox servers. The policy states that smart classification services automatically cluster photos based on people, scenes, and geographic locations.",
       "policy_excerpt": "User data: It is data that you store on TeraBox, such as files, documents, photos, videos, and audio... we provide smart classification services based on User Data (including automated clustering of photos based on people, scenes, and geographic locations).",
       "concerns": [
-        "AI scanning of uploaded files",
-        "Smart categorization analyzes photo content"
+        "AI analysis of uploaded photo content"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "risky",
-      "access_type": "continuous",
-      "required_for_core_function": true,
+      "access_type": null,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox shares your data with Google for audio transcription, third-party service providers, and other companies under the same corporate group. They also share with other users when you use team or share features.",
-      "detail": "Shared with Google (audio processing), third-party rendering providers, Flextech affiliates, other users via Teamwork/Share, and service providers. Cross-border data transfers mentioned.",
+      "plain_english": "TeraBox states that it shares your audio content with Google for transcription, may share infrastructure with Flextech affiliates, and may work with trusted third-party service providers. When you use Teamwork or Share functions, your information is visible to other users you cooperate with.",
+      "detail": "Data is shared with Google for audio transcription, with Flextech affiliates for infrastructure, and with third-party service providers. Cross-border transfers are mentioned. User-initiated sharing features expose data to other users.",
       "policy_excerpt": "To provide transcription and note generation services, your audio content is transmitted to Google, our third-party AI service provider, for processing. We may share infrastructure, systems, and technology with Flextech affiliates... We may work with certain trusted third parties (such as customer support or IT service providers).",
       "concerns": [
         "Audio sent to Google",
-        "Shared with affiliates",
-        "Cross-border transfers"
+        "Shared with corporate affiliates",
+        "Cross-border transfers mentioned"
       ],
       "score_impact": -19.5
     },
@@ -179,17 +179,17 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox collects your email, phone number, and social media profile data for your account. For some features, they require your real name, government ID number, and even facial recognition verification.",
-      "detail": "Account requires email/phone/SNS login. Some services require real name, identity document number, and facial recognition for authentication.",
-      "policy_excerpt": "In the event that it is required by laws and regulations... you must provide your real name, identity document number, and facial recognition information for account authentication... we may compare the real-name information you provide to Terabox with that registered at institutions permitted by laws and regulations or authorized by government agencies.",
+      "plain_english": "TeraBox collects your email, phone number, and social media profile data for your account. For some services, it states that you must provide your real name, identity document number, and facial recognition information.",
+      "detail": "Account creation requires email or phone. Social login imports nickname and profile image. Some services require real-name verification including identity document number and facial recognition. Real-name data may be compared with government records.",
+      "policy_excerpt": "Account information: We collect information such as the email address and phone number that you provide to us when you perform operations such as registering for an account... if you log in with an SNS account, then we will receive your nickname and SNS profile image... you must provide your real name, identity document number, and facial recognition information for account authentication... we may compare the real-name information you provide to Terabox with that registered at institutions permitted by laws and regulations or authorized by government agencies.",
       "concerns": [
         "Facial recognition required for some features",
         "Government ID comparison",
-        "SNS login links external data"
+        "Social login links external profile data"
       ],
       "score_impact": -9.75
     },
@@ -202,13 +202,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox tracks everything you do in the app and builds a detailed profile of your habits and interests. They use this profile to send you personalized marketing messages through automated decisions.",
-      "detail": "Explicit creation of label information reflecting operation habits, interests, and credit. Used for automated decision-making and personalized/marketing information. Also tracks search queries, usage info, and cookies.",
-      "policy_excerpt": "We can aggregate, integrate, identify, analyze, portray, or further process the personal information... to form a variety of label information with different degrees of granularity that reflect your operation habits, interests, or credit... We will use label information for automated decision-making in specific scenarios and applications, so as to send you personalized information and/or marketing information.",
+      "plain_english": "TeraBox explicitly states that it may process your personal information to create profiles about your operation habits, interests, or credit, and uses these profiles for automated decision-making to send you personalized or marketing information.",
+      "detail": "The policy explicitly describes creating 'label information' from personal information to reflect operation habits, interests, or credit. This is used for automated decision-making and marketing. Users can refuse via contact or app settings.",
+      "policy_excerpt": "to form a variety of label information with different degrees of granularity that reflect your operation habits, interests, or credit... We will use label information for automated decision-making in specific scenarios and applications, so as to send you personalized information and/or marketing information.",
       "concerns": [
         "Behavioral profiling for marketing",
         "Automated decision-making",
-        "Creditworthiness labels"
+        "Creditworthiness labels inferred"
       ],
       "score_impact": -16.25
     },
@@ -221,51 +221,50 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox says users should be at least 13 years old, but their terms say you must be 15. This inconsistency is confusing. They say they will remove data on children under 13 if discovered.",
-      "detail": "Privacy policy says 13+ (or local age of majority). Terms say 15+. No knowingly collecting from children under 13.",
-      "policy_excerpt": "We do not knowingly collect or solicit personal information from children under the age of 13... You must be at least 15 years old (or older, depending on where you live) to use the Services.",
+      "plain_english": "TeraBox states that users must be at least 13 years old, but does not describe how it verifies age.",
+      "detail": "The policy states that no one under 13 is allowed and users must be at least 13. There is no description of age verification mechanisms.",
+      "policy_excerpt": "No one under 13 is allowed to use or access the Services... you are at least 13 years old and over the minimum age for accessing and using the Services as required by the laws of your country",
       "concerns": [
-        "Inconsistent age requirements",
-        "Weak age verification"
+        "No described age verification mechanism"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox collects your IP address and even tracks which websites you visited right before opening TeraBox. They also log every action you take in the app, like creating, editing, and moving files.",
-      "detail": "Collects IP address, web pages visited prior to accessing TeraBox, and all usage operations (editing, viewing, creating, moving files).",
-      "policy_excerpt": "Device information: This refers to information about the device used to access the Services and may include IP address, browser, and device information, web pages visited prior to accessing TeraBox... Usage information: It is information about how the Services are used, including operations performed in your account such as editing, viewing, creating, and moving files or folders.",
+      "plain_english": "TeraBox states that it collects your IP address and the web pages you visited before opening TeraBox. It says this is used to optimize and protect the Services, but does not clearly explain all purposes.",
+      "detail": "Device information includes IP address and referrer pages. Usage information includes editing, viewing, creating, and moving files. Stated purpose is optimization and protection.",
+      "policy_excerpt": "Device information: This refers to information about the device used to access the Services and may include IP address, browser, and device information, web pages visited prior to accessing TeraBox, identifiers tied to the device... Usage information: It is information about how the Services are used, including operations performed in your account such as editing, viewing, creating, and moving files or folders.",
       "concerns": [
         "Referrer tracking",
         "IP collection",
         "Detailed usage logging"
       ],
-      "score_impact": -3.25
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox collects detailed information about your device, including unique identifiers tied to your device, your browser type, and your operating system. This helps them track and identify your device.",
-      "detail": "Collects device identifiers, browser info, OS, and IP. Used to optimize and protect services.",
-      "policy_excerpt": "Device information: This refers to information about the device used to access the Services and may include IP address, browser, and device information, web pages visited prior to accessing TeraBox, identifiers tied to the device...",
+      "plain_english": "TeraBox states that it collects device information that may include identifiers tied to your device. It says this is used to optimize and protect the Services, but does not clearly explain whether these identifiers are used for advertising or tracking.",
+      "detail": "The policy mentions 'identifiers tied to the device' as part of device information. The stated purpose is optimization and protection. The behavioral profiling section does not explicitly link device identifiers to marketing.",
+      "policy_excerpt": "Device information: This refers to information about the device used to access the Services and may include IP address, browser, and device information, web pages visited prior to accessing TeraBox, identifiers tied to the device, and location information depending on the device settings.",
       "concerns": [
         "Device identifiers collected",
-        "Persistent tracking possible"
+        "Purpose for ads or tracking not explicitly stated"
       ],
-      "score_impact": -9.75
+      "score_impact": -4.5
     },
     {
       "id": "health_biometric",
@@ -276,13 +275,13 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TeraBox collects your facial recognition information for account verification on some services. Their optional Smart Album feature also uses facial analysis to group your photos by people.",
-      "detail": "Facial recognition collected for account authentication. Smart Photo Categorization identifies portraits in photos. Claims not to store facial biometric information.",
+      "plain_english": "TeraBox states that you must provide facial recognition information for account authentication on some services. It also claims not to collect or store facial biometric information, which contradicts the requirement for facial recognition data.",
+      "detail": "The policy explicitly requires facial recognition information for some services, but immediately claims not to collect or store facial biometric information. This is contradictory. Smart Photo Categorization also identifies people in photos.",
       "policy_excerpt": "you must provide your real name, identity document number, and facial recognition information for account authentication... We do not collect or store any users' facial biometric information.",
       "concerns": [
-        "Facial recognition for auth",
-        "Portrait identification in photos",
-        "Claims vs practice discrepancy"
+        "Facial recognition required for some features",
+        "Direct contradiction in policy text",
+        "Portrait identification in photos via AI categorization"
       ],
       "score_impact": -9.75
     },
@@ -295,12 +294,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TeraBox offers paid subscriptions for extra features and storage. Payments are processed through Apple or Google's app stores, so TeraBox does not directly handle your credit card.",
-      "detail": "In-app purchases processed through Software Store (Apple/Google). Website payments through unspecified gateway.",
+      "plain_english": "TeraBox states that in-app purchases are processed through your Software Store account, so it does not directly collect your credit card information.",
+      "detail": "Payment processing for in-app purchases goes through Apple/Google Software Store. Website payment method is unspecified.",
       "policy_excerpt": "When you make an in-app purchase, you will be prompted to enter details for your account with your Software Store.",
-      "concerns": [
-        "Payment processed by third parties"
-      ],
+      "concerns": [],
       "score_impact": -4.5
     },
     {
@@ -312,15 +309,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your account in the app settings, and TeraBox promises to delete your data within 30 days. However, they may refuse if you have unused Premium benefits, and they may keep some data for legal reasons.",
-      "detail": "Account deletion available in app. May take 30 days. May refuse if unused Premium benefits or account data exists. May retain for legal obligations. Backup deletion delayed. Data export/copy rights available.",
-      "policy_excerpt": "If you want to delete your account, please send an email to helpdesk@terabox.com with such a request and we will delete your account within 30 days after receiving your request. However, 1) we will not delete your account information until we have verified your user identity; 2) such deletion of information from our servers and backup storage may be delayed; 3) we may retain this information if necessary to fulfill our legal obligations.",
+      "plain_english": "TeraBox states that you may delete your account through the app or by email, but deletion may take 30 days and some information may be retained for legal obligations, dispute resolution, or backup storage.",
+      "detail": "Account deletion available via app settings or email. 30-day processing time. May be delayed for identity verification, backup deletion, or legal retention.",
+      "policy_excerpt": "we will delete your account within 30 days after receiving your request. However, 1) we will not delete your account information until we have verified your user identity; 2) such deletion of information from our servers and backup storage may be delayed; 3) we may retain this information if necessary to fulfill our legal obligations, resolve disputes, or exercise our rights under the Contract.",
       "concerns": [
-        "Deletion may be refused",
-        "30-day delay",
-        "Backup retention"
+        "Deletion may be delayed",
+        "Backup retention",
+        "Legal retention"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -331,11 +328,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TeraBox can change its privacy policy at any time and will post the new version on its website. They say they will notify you if changes materially affect your rights, but continued use means you accept the changes.",
-      "detail": "Releases latest version on website. Notifies if revision materially affects rights. Business transfer notification mentioned.",
-      "policy_excerpt": "This Privacy Policy may be modified from time to time. We will release the latest version of it on TeraBox's website if a revision is made. We will notify you if any such revision materially affects your rights.",
+      "plain_english": "TeraBox states that it will post privacy policy revisions on its website and will notify you if a revision materially affects your rights. It does not clearly explain how you will be notified or what happens if you do not agree to the changes.",
+      "detail": "Policy changes posted on website. Notification only if materially affects rights. No explicit description of notification method.",
+      "policy_excerpt": "We will release the latest version of it on TeraBox's website if a revision is made. We will notify you if any such revision materially affects your rights.",
       "concerns": [
-        "Material effect threshold for notification"
+        "Material effect threshold for notification is subjective",
+        "No explicit opt-out mechanism described"
       ],
       "score_impact": -1.5
     }
@@ -345,46 +343,11 @@
     "max_possible_deductions": 205,
     "deductions": [
       {
-        "category": "camera_microphone",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.30,
-        "deduction": 4.5
-      },
-      {
-        "category": "location_gps",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.30,
-        "deduction": 4.5
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "risky",
-        "max": 20,
-        "rate": 0.65,
-        "deduction": 13.0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.30,
-        "deduction": 3.0
-      },
-      {
         "category": "data_sharing_third_parties",
         "risk": "risky",
         "max": 30,
         "rate": 0.65,
         "deduction": 19.5
-      },
-      {
-        "category": "account_identity",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
       },
       {
         "category": "behavioural_ad_tracking",
@@ -394,21 +357,14 @@
         "deduction": 16.25
       },
       {
-        "category": "childrens_data",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.30,
-        "deduction": 3.0
-      },
-      {
-        "category": "network_internet_activity",
+        "category": "contacts_phonebook",
         "risk": "risky",
-        "max": 5,
+        "max": 20,
         "rate": 0.65,
-        "deduction": 3.25
+        "deduction": 13
       },
       {
-        "category": "device_fingerprinting",
+        "category": "account_identity",
         "risk": "risky",
         "max": 15,
         "rate": 0.65,
@@ -422,29 +378,71 @@
         "deduction": 9.75
       },
       {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
         "category": "financial_payment",
         "risk": "caution",
         "max": 15,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 4.5
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "data_deletion_user_rights",
         "risk": "caution",
         "max": 10,
-        "rate": 0.30,
-        "deduction": 3.0
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
       },
       {
         "category": "policy_change_notification",
         "risk": "caution",
         "max": 5,
-        "rate": 0.30,
+        "rate": 0.3,
         "deduction": 1.5
       }
     ],
-    "total_deductions": 104.75,
-    "final_score": 49,
+    "total_deductions": 98.25,
+    "final_score": 52,
     "grade": "D"
   }
 }

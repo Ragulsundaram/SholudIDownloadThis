@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://support.bendingspoons.com/privacy.html?app=1470373330",
     "terms_url": "",
     "policy_last_updated": "2026-02-12",
     "needs_review": false,
-    "review_notes": "Terms and Conditions URL not found online. Bending Spoons privacy policy is unusually detailed with GDPR legal basis annotations for every processing activity. Key concerns: face data (biometric) is uploaded to servers and shared with third-party AI providers; behavioral profiling for ad campaign measurement happens under legitimate interest without requiring ad consent; data retention up to 2 years for AI generation and 10 years for legal defense; no explicit policy change notification mechanism. Key positives: images not used for AI training without explicit opt-in; enhanced images deleted after 1 day; does not sell data or images; strong GDPR rights exercisable within app."
+    "review_notes": "Strict re-analysis completed. Key fixes: upgraded policy_change_notification from unknown to caution because policy explicitly states 'We'll notify users of any modification... in accordance with applicable privacy laws.' Removed red_no_explicit_policy_change_notification flag. Fixed network_internet_activity plain_english that incorrectly attributed network logs to ad profiling. Fixed financial_payment plain_english that claimed Apple processes all payments without direct policy quote."
   },
   "app": {
     "slug": "remini-ai-photo-enhancer",
@@ -22,7 +22,7 @@
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 64,
+    "score": 65,
     "grade": "C",
     "one_liner": "Remini enhances your photos with AI, but uploads your images and face data to servers, tracks your activity for ads, and shares data with third-party AI providers.",
     "summary": "Remini uses AI to enhance photos and videos by improving resolution and colors. It uploads your images and videos to its servers for processing, and may retain them for up to 2 years for AI generation features. The app collects device identifiers, interaction data, and uses third-party tracking for personalized ads with consent. Face data is processed to enhance photos and generate AI images, and may be shared with third-party AI service providers under contract. The app does not sell your images or data, and offers automatic deletion after retention periods. Users have GDPR rights including access, deletion, and objection, exercisable within the app.",
@@ -60,12 +60,6 @@
         "title": "Your data is kept for up to 2 years, and some for up to 10 years",
         "plain_english": "AI generation images and face data may be kept for up to 2 years. Other personal data is kept for 3 years. In extraordinary cases, data may be retained up to 10 years for legal defense.",
         "severity": "medium"
-      },
-      {
-        "id": "red_no_explicit_policy_change_notification",
-        "title": "Privacy policy does not explain how you are notified of changes",
-        "plain_english": "The policy shows a last updated date but does not explain if or how you will be warned before important privacy policy changes take effect.",
-        "severity": "low"
       }
     ],
     "green": [
@@ -255,13 +249,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Remini logs your IP address, network usage, crashes, and errors. This data is used for troubleshooting and to build your user profile for service improvement and ad measurement.",
-      "detail": "Network activity data collected includes: IP address, network usage, Internet connectivity, latency, failures, crashes, and error logs. This is used for troubleshooting (1-year retention), service improvement (3-year retention), and profiling including ad campaign measurement. IP address is also used as a mobile identifier and may be used for general location inference.",
+      "plain_english": "Remini logs your IP address, network usage, crashes, and errors. It states this is used to fix bugs, ensure app quality, and improve the service.",
+      "detail": "Network activity data collected includes: IP address, network usage, Internet connectivity, latency, failures, crashes, and error logs. The policy states this is used for troubleshooting and ensuring quality. It does not clearly explain whether network logs are also used for advertising campaign measurement.",
       "policy_excerpt": "Internet and network activity information (such as IP address, and information about network usage, Internet connectivity, latency, failures, crashes, and error logs)",
       "concerns": [
         "IP address used as identifier and potentially for location inference",
-        "Network logs used for profiling and ad measurement",
-        "3-year retention for service improvement"
+        "Network logs used for troubleshooting and quality assurance"
       ],
       "score_impact": -3.25
     },
@@ -315,12 +308,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Remini offers subscriptions through Apple. Apple processes all payments, so the app itself never sees your credit card details. The app does collect subscription status information.",
-      "detail": "The app offers weekly, monthly, and yearly subscriptions. All payments are processed through Apple's in-app purchase system, so Bending Spoons never directly handles payment card data. The app does collect information about your subscription status for service delivery and customer support.",
+      "plain_english": "Remini collects information about your subscription and in-app purchases. The privacy policy does not clearly explain whether the app sees your payment card details.",
+      "detail": "The app offers weekly, monthly, and yearly subscriptions. The privacy policy mentions 'Information about your subscription' and 'Commercial information (such as in-app purchases)' but does not explicitly state whether Bending Spoons directly handles payment card data or whether Apple processes all payments. Subscription-related information is retained for up to 3 years.",
       "policy_excerpt": "Information about your subscription",
       "concerns": [
-        "Subscription data retained for 3 years after expiration",
-        "Payment disputes handled through Apple with limited visibility"
+        "Policy does not explain who processes payment card details",
+        "Subscription data retained for up to 3 years after expiration"
       ],
       "score_impact": -4.5
     },
@@ -348,20 +341,19 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy does not explicitly explain how you will be notified of changes.",
-      "detail": "The privacy policy includes a 'Last updated' date (February 12, 2026) but does not contain a dedicated section explaining how users will be notified of material policy changes, what advance notice will be given, or whether continued use constitutes acceptance of changes.",
-      "policy_excerpt": "Last updated: February 12, 2026",
+      "plain_english": "Remini says it will notify you of privacy policy changes in accordance with applicable privacy laws. It does not explain the exact method or how much advance notice you will receive.",
+      "detail": "The privacy policy states: 'We may modify, integrate, or update—in whole or in part—this privacy policy. We'll notify users of any modification, integration, or update in accordance with applicable privacy laws.' It does not specify the notification method (e.g., email, in-app), the advance notice period, or what happens if a user does not agree to the changes.",
+      "policy_excerpt": "We may modify, integrate, or update—in whole or in part—this privacy policy. We'll notify users of any modification, integration, or update in accordance with applicable privacy laws.",
       "concerns": [
-        "No explicit policy change notification mechanism described",
-        "Unknown whether users are notified of material changes",
-        "Last updated date suggests changes happen without clear notice protocol"
+        "Does not specify notification method",
+        "Does not specify advance notice period"
       ],
-      "score_impact": -2.5
+      "score_impact": -1.5
     }
   ],
   "scoring": {
@@ -461,14 +453,14 @@
       },
       {
         "category": "policy_change_notification",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 5,
-        "rate": 0.5,
-        "deduction": 2.5
+        "rate": 0.3,
+        "deduction": 1.5
       }
     ],
-    "total_deductions": 73.0,
-    "final_score": 64,
+    "total_deductions": 72.0,
+    "final_score": 65,
     "grade": "C"
   }
 }

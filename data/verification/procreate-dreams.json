@@ -1,0 +1,21 @@
+{
+  "slug": "procreate-dreams",
+  "existing": {
+    "policy_url": "https://procreate.com/app/privacy-policy",
+    "developer": "Savage Interactive Pty Ltd",
+    "category": "Photo & Video",
+    "name": "Procreate Dreams"
+  },
+  "fresh": {
+    "policy_url": "https://procreate.com/app/privacy-policy",
+    "developer": "Savage Interactive Pty Ltd",
+    "category": "Photo & Video",
+    "policy_text": "App Privacy Policy\n\nThis following document sets forth the Privacy Policy for the Savage Software Group Pty Ltd (Savage) applications Procreate, Procreate Dreams, and Procreate Pocket (the Applications). For the procreate.com website please refer to the Website Privacy Policy.\n\nProcreate and your data\n\nSavage does not collect or share any data when using the Applications.\n\nWhen using the Applications, this is how your data is stored:\n\nYour artwork, movies, Time-lapse videos, brushes and color palettes are all saved directly into your iPad.\nYou are not required to login to access your data, artworks, or movies.\nThe Applications do not connect to any Savage web services at any time.\nWhen using FacePaint, the Application (Procreate for iPad) will request access to your front facing camera using the TrueDepth API. Savage does not collect or store your TrueDepth data at any time.\nWhen using Palette Capture, the Application (Procreate for iPad) will request access your camera. Savage does not collect or store your camera data at any time.\n\nSavage believes strongly in not collecting or sharing your data, period. It belongs to you.\n\nContacting us\n\nIf you have any questions about this Privacy Policy or would like further information, please contact us.\n\nSavage Interactive Pty Ltd\n304 Elizabeth St, Hobart TAS 7000 Australia\n\nCONTACT US"
+  },
+  "comparison": {
+    "policy_url_match": true,
+    "developer_match": true,
+    "category_match": true,
+    "policy_text_length": 1347
+  }
+}

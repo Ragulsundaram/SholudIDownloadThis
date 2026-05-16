@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "http://www.swiggy.com/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "2026-04-17",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Camera/microphone, contact book access for customers, and children's data are not addressed in the privacy policy. Strict legal-safe review flagged these as unknown."
   },
   "app": {
     "slug": "swiggy",
@@ -51,14 +51,14 @@
       },
       {
         "id": "red_health_data_collection",
-        "title": "Health data like prescriptions and blood group are collected",
-        "plain_english": "Swiggy collects prescriptions for pharmaceutical orders and blood group information from delivery partners.",
-        "severity": "high"
+        "title": "Swiggy may collect prescription and blood group data",
+        "plain_english": "Swiggy states it may collect prescription information for pharmaceutical orders and blood group data from delivery partners.",
+        "severity": "medium"
       },
       {
         "id": "red_broad_file_access",
-        "title": "The app can access files and metadata on your device",
-        "plain_english": "Swiggy may access metadata and other information associated with files stored on your mobile device with your consent.",
+        "title": "The app may access metadata from files on your device",
+        "plain_english": "Swiggy states its applications may access metadata and other information associated with files stored on your mobile device with your consent.",
         "severity": "medium"
       }
     ],
@@ -87,7 +87,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy does not mention camera or microphone access.",
+      "plain_english": "The privacy policy does not mention camera or microphone access for customers.",
       "detail": "No explicit mention of camera or microphone usage in the provided privacy policy text.",
       "policy_excerpt": "",
       "concerns": [
@@ -105,7 +105,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy collects real-time location data from your device to facilitate deliveries and track orders.",
-      "detail": "Location data is collected continuously during active use to enable delivery tracking and route optimization.",
+      "detail": "The policy states applications collect real-time information about the location of your device, as permitted by you.",
       "policy_excerpt": "Our applications collect real-time information about the location of your device, as permitted by you.",
       "concerns": [
         "Real-time location tracked during deliveries",
@@ -140,7 +140,7 @@
       "optional_access": true,
       "background_access": false,
       "plain_english": "Swiggy may access metadata and other information from files stored on your device with your consent.",
-      "detail": "The app can access metadata and information associated with other files on your mobile device.",
+      "detail": "The policy states the app can access metadata and information associated with other files on your mobile device.",
       "policy_excerpt": "Our applications also may access metadata and other information associated with other files stored on your mobile device with your consent.",
       "concerns": [
         "Broad file metadata access"
@@ -194,7 +194,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Swiggy tracks your behavior, searches, and clicks to serve ads, and you cannot opt out of advertising on the platform.",
+      "plain_english": "Swiggy explicitly states you cannot opt out of advertising on its platforms. It tracks your searches, clicks, and usage using cookies and advertising identifiers.",
       "detail": "Swiggy uses cookies, pixel tags, web beacons, device IDs, and Flash LSOs to track behavior. Third-party advertisers also track you.",
       "policy_excerpt": "You cannot opt out of advertising on the Platforms, you may opt out of much interest-based advertising on third party sites and through third party ad networks.",
       "concerns": [
@@ -249,7 +249,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Swiggy collects detailed device information including advertising identifiers, installed apps, device motion, and phone state to fingerprint your device.",
+      "plain_english": "Swiggy collects detailed device information including advertising identifiers, installed apps, device motion, and phone state.",
       "detail": "Device info includes hardware models, OS, software, file names, device identifiers, advertising identifiers, device motion, mobile network, installed applications, and phone state.",
       "policy_excerpt": "we may collect information or employ third party plugins that collect information about the devices you use to access our Services, including the hardware models, operating systems and versions, software, file names and versions, preferred languages, device identifiers, advertising identifiers, device motion information, mobile network information, installed applications on device and phone state.",
       "concerns": [
@@ -268,11 +268,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Swiggy collects prescriptions for pharmaceutical orders and blood group data from delivery partners.",
+      "plain_english": "Swiggy states it may collect prescription information for pharmaceutical orders and blood group data from delivery partners.",
       "detail": "Health data collected includes prescriptions for Instamart pharmaceutical purchases and blood group for delivery partners.",
       "policy_excerpt": "Additionally, we may also collect information relating to you (including your prescriptions), to facilitate through the Instamart Platform, your purchase of pharmaceutical drugs from retail pharmacies.",
       "concerns": [
-        "Prescription data collected",
+        "Prescription data collected for pharmaceutical orders",
         "Blood group collected for delivery partners"
       ],
       "score_impact": -9.75
@@ -303,7 +303,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can request data deletion by email, but Swiggy retains anonymized and aggregated data indefinitely for analytics.",
+      "plain_english": "You can request data deletion by email, but Swiggy states it may retain anonymized and aggregated data indefinitely.",
       "detail": "Deletion requests take up to 5 business days, but anonymized/aggregated data is retained as long as necessary.",
       "policy_excerpt": "We may, however, retain and store your personal information in anonymized or aggregated form, for as long as necessary, and use it as permitted under applicable law, including for analytics, improving our products and services, and other business purposes.",
       "concerns": [
@@ -321,7 +321,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Swiggy may update its policy at any time. Continued use after changes means you accept them.",
+      "plain_english": "Swiggy states continued use after policy changes constitutes consent. It says it will try to notify you of significant changes but does not clearly explain what happens if you disagree.",
       "detail": "Policy updates are posted on the page. Significant changes may get prominent notice or email, and consent is obtained where required.",
       "policy_excerpt": "your continued use of the Services following the changes to this Privacy Policy will constitute your consent and acceptance of those changes.",
       "concerns": [

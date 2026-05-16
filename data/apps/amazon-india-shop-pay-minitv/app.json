@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://amazon.in/privacy",
     "terms_url": "",
     "policy_last_updated": "2025-11-18",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Health/biometric data collection and broad storage/file access are not addressed in the provided privacy policy text. Please verify if these categories apply."
   },
   "app": {
     "slug": "amazon-india-shop-pay-minitv",
@@ -22,10 +22,10 @@
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 55,
+    "score": 58,
     "grade": "C",
-    "one_liner": "Amazon collects extensive data including your contacts, device files, and browsing habits to power its shopping and advertising services, but promises not to sell your personal information.",
-    "summary": "Amazon India's privacy policy reveals broad data collection across categories. It accesses device file metadata, uploads contacts for certain features, tracks your full browsing behavior, and uses advertising identifiers for interest-based ads. On the positive side, Amazon explicitly commits to not selling personal information, uses encryption and PCI DSS standards, and promises not to materially weaken privacy protections for past data without consent. The policy is transparent but data hungry.",
+    "one_liner": "Amazon collects extensive data including your contacts and browsing habits for advertising, but explicitly states it does not sell your personal information.",
+    "summary": "Amazon India's privacy policy reveals broad data collection. It accesses device contacts for certain features, logs your full browsing clickstream, and uses advertising identifiers for interest-based ads. On the positive side, Amazon explicitly commits to not selling personal information, uses encryption and PCI DSS standards, and promises not to materially weaken privacy protections for past data without consent.",
     "recommendation": "think_twice",
     "recommendation_reason": "If you are concerned about behavioral tracking, contact uploads, and broad device fingerprinting for ads, consider whether the convenience of Amazon's ecosystem is worth the data trade-off."
   },
@@ -33,32 +33,32 @@
     "red": [
       {
         "id": "red_interest_based_ads",
-        "title": "Your behavior powers interest-based ads",
-        "plain_english": "Amazon tracks your shopping history, browsing habits, and app usage to show you targeted ads. It also shares an advertising identifier with ad companies to measure ad performance.",
-        "severity": "high"
-      },
-      {
-        "id": "red_file_metadata_scan",
-        "title": "App can access file metadata on your phone",
-        "plain_english": "Amazon's apps may access metadata and other information associated with files stored on your mobile device, including photographs, audio, and video clips.",
+        "title": "Your behavior may power interest-based ads",
+        "plain_english": "Amazon states it uses your personal information to display interest-based ads and shares advertising identifiers with ad companies to measure ad performance.",
         "severity": "medium"
       },
       {
         "id": "red_contact_upload",
         "title": "Contacts can be uploaded for certain features",
-        "plain_english": "Amazon allows you to upload your mobile device contacts for certain services. This includes phone numbers of people who may not have agreed to share their information.",
+        "plain_english": "Amazon states you can upload your contacts, including access to mobile device contacts, for certain services.",
         "severity": "medium"
       },
       {
         "id": "red_device_fingerprinting",
         "title": "Device identifiers used for advertising",
-        "plain_english": "Amazon collects device identifiers, advertising IDs, and cookie data to recognize you and deliver targeted ads across its services.",
+        "plain_english": "Amazon states it collects device identifiers and advertising IDs to recognize your device and deliver ads.",
         "severity": "medium"
       },
       {
         "id": "red_url_clickstream",
         "title": "Full browsing clickstream is logged",
-        "plain_english": "Amazon collects the full URL clickstream of the websites you visit, along with page interaction details like scrolling, clicks, and mouse-overs.",
+        "plain_english": "Amazon states it collects the full URL clickstream of websites you visit, along with page interaction details such as scrolling, clicks, and mouse-overs.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_sharing",
+        "title": "Data shared with sellers, advertisers, and service providers",
+        "plain_english": "Amazon states it shares your data with third-party sellers, service providers, and other companies for fraud protection and credit risk reduction. It also shares advertising identifiers with ad companies.",
         "severity": "medium"
       }
     ],
@@ -72,7 +72,7 @@
       {
         "id": "green_encryption_in_transit",
         "title": "Encryption and PCI DSS compliance",
-        "plain_english": "Amazon uses encryption protocols to protect your information during transmission and follows Payment Card Industry security standards for card data.",
+        "plain_english": "Amazon states it uses encryption protocols to protect your information during transmission and follows PCI DSS when handling payment card data.",
         "severity": "positive"
       },
       {
@@ -84,7 +84,7 @@
       {
         "id": "green_ad_preferences",
         "title": "Advertising preferences can be adjusted",
-        "plain_english": "You can adjust your advertising preferences and opt out of some interest-based ads through Amazon's Advertising Preferences page.",
+        "plain_english": "Amazon states you can adjust your advertising preferences and opt out of some interest-based ads through its Advertising Preferences page.",
         "severity": "positive"
       }
     ]
@@ -99,9 +99,9 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Amazon only uses your camera and microphone when you actively choose to use features like image search, voice search, or Alexa voice services.",
-      "detail": "The policy mentions voice, image, and camera services. Voice input and images are collected when you actively use these features. There is no indication of background camera or microphone access.",
-      "policy_excerpt": "When you use our voice, image and camera services, we use your voice input, images, videos, and other personal information to respond to your requests.",
+      "plain_english": "Amazon states it uses your voice input, images, and videos when you actively use voice, image, or camera services.",
+      "detail": "Camera and microphone are accessed only when you initiate features like image search, voice search, or Alexa. There is no mention of background access.",
+      "policy_excerpt": "When you use our voice, image and camera services, we use your voice input, images, videos, and other personal information to respond to your requests, provide the requested service to you, and improve our services.",
       "concerns": [
         "Voice recordings may be stored and used to improve services"
       ],
@@ -112,15 +112,15 @@
       "label": "Location & GPS",
       "icon": "MapPin",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Amazon collects your device location when you use location-related features like delivery tracking, and also estimates your general location from your IP address.",
-      "detail": "Location information is collected automatically and when you provide it. It is used for delivery, recommendations, and fraud prevention. IP-based location inference is continuous.",
-      "policy_excerpt": "We automatically collect and store certain types of information about your use of Amazon Services, including information about your interaction with content and services... the location of your device or computer.",
+      "plain_english": "Amazon states it automatically collects the location of your device or computer when you use its services.",
+      "detail": "Location information is collected automatically and when you provide it. It is used for delivery, recommendations, and fraud prevention.",
+      "policy_excerpt": "We automatically collect and store certain types of information about your use of Amazon Services, including information about your interaction with content and services available through Amazon Services... the location of your device or computer.",
       "concerns": [
-        "IP-based location inference is continuous"
+        "Location collected automatically"
       ],
       "score_impact": -4.5
     },
@@ -133,8 +133,8 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Amazon allows you to upload your contacts for certain services. This means phone numbers and names from your address book are sent to Amazon's servers.",
-      "detail": "The policy explicitly mentions uploading contacts and accessing mobile device contacts for certain services. This data is stored on Amazon servers.",
+      "plain_english": "Amazon states you can upload your contacts, including access to mobile device contacts, for certain services.",
+      "detail": "The policy explicitly mentions uploading contacts and accessing mobile device contacts for certain services.",
       "policy_excerpt": "upload your contacts, including access to mobile device contacts for certain services",
       "concerns": [
         "Non-users' contact information uploaded without their consent"
@@ -145,18 +145,18 @@
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "risky",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon's apps may access metadata and other information associated with files stored on your mobile device, including photos, audio, and video clips.",
-      "detail": "The policy states that applications may access metadata and other information associated with files on your device. This is broad library access beyond user-initiated uploads.",
-      "policy_excerpt": "Our applications may also access metadata and other information associated with files stored on your mobile device. This may include, for example, photographs, audio and video clips.",
+      "plain_english": "Amazon does not clearly state whether its app accesses files or storage on your device beyond user-initiated uploads.",
+      "detail": "The policy mentions uploading or streaming images, videos, and audio files, but does not explicitly describe broad file metadata access or storage permissions.",
+      "policy_excerpt": "",
       "concerns": [
-        "Broad file metadata access beyond user-initiated uploads"
+        "Policy is silent on broad storage or file access"
       ],
-      "score_impact": -6.5
+      "score_impact": 0
     },
     {
       "id": "data_sharing_third_parties",
@@ -167,11 +167,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon shares your data with sellers, merchants, advertisers, service providers, and other companies for fraud protection, delivery, and credit risk reduction.",
-      "detail": "Amazon explicitly states it does not sell personal information, but shares it with a wide array of third parties including third-party advertisers, sellers on the marketplace, restaurants, merchants, and service providers. Data is also exchanged with other companies for fraud protection and credit risk reduction.",
-      "policy_excerpt": "We share customers' personal information related to those transactions with that third party... We employ other companies and individuals to perform functions on our behalf.",
+      "plain_english": "Amazon states it shares your data with sellers, service providers, and other companies for fraud protection and credit risk reduction. It also shares advertising identifiers with ad companies. The policy explicitly states users consent to sharing personal information, including sensitive personal information, with third parties and service providers.",
+      "detail": "Amazon explicitly states it does not sell personal information, but shares it with third parties involved in transactions, service providers, and for fraud protection. The opening paragraph explicitly states users consent to collecting, storing, processing, transferring, and sharing personal information, including sensitive personal information, with third parties or service providers. It shares advertising identifiers with ad companies.",
+      "policy_excerpt": "You also agree and consent to us collecting, storing, processing, transferring, and sharing your personal information (including sensitive personal information) with third parties or service providers... We share customers' personal information related to those transactions with that third party... exchanging information with other companies and organizations for fraud protection and credit risk reduction... we will share your advertising identifier and data about that event",
       "concerns": [
-        "Data shared with third-party advertisers and ad companies",
+        "Explicit consent covers sharing sensitive personal information with third parties",
+        "Data shared with third-party sellers and service providers",
+        "Advertising identifiers shared with ad companies",
         "Data exchanged with other companies for fraud protection"
       ],
       "score_impact": -19.5
@@ -185,11 +187,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You must provide your name, address, phone number, and email to use Amazon. For some services, government IDs like PAN numbers may be collected.",
-      "detail": "Account creation requires extensive identity data. The policy mentions collection of officially valid documents including PAN numbers for identity verification. However, Amazon states it does not use identifiable personal information for interest-based ads.",
-      "policy_excerpt": "identifying information such as your name, address and phone numbers... information and officially valid documents regarding identity and address information, including PAN numbers",
+      "plain_english": "Amazon states it collects your name, address, phone numbers, age, and government IDs such as PAN numbers for identity verification. The policy explicitly states users consent to the collection and sharing of sensitive personal information.",
+      "detail": "Account creation requires extensive identity data. The policy mentions collection of officially valid documents including PAN numbers for identity verification. The opening paragraph explicitly states that by using Amazon Services, users agree to the collection, storage, processing, and sharing of personal information, including sensitive personal information.",
+      "policy_excerpt": "You also agree and consent to us collecting, storing, processing, transferring, and sharing your personal information (including sensitive personal information)... identifying information such as your name, address and phone numbers... information and officially valid documents regarding identity and address information, including PAN numbers",
       "concerns": [
-        "Government ID collected for verification"
+        "Government ID collected for verification",
+        "Explicit consent covers sensitive personal information"
       ],
       "score_impact": -4.5
     },
@@ -202,12 +205,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon uses your shopping history, searches, browsing behavior, and device identifiers to show you interest-based ads both on and off Amazon.",
-      "detail": "The policy describes extensive use of personal information for advertising, including interest-based ads. It uses advertising identifiers and shares them with ad companies. While Amazon says it does not use information that personally identifies you for interest-based ads, it uses cookies, device identifiers, and behavioral data for ad targeting.",
-      "policy_excerpt": "We use your personal information to display interest-based ads for features, products, and services that might be of interest to you.",
+      "plain_english": "Amazon states it uses your personal information to display interest-based ads, but says it does not use information that personally identifies you for this purpose. It shares advertising identifiers with ad companies to measure ad performance.",
+      "detail": "The policy describes using personal information for interest-based ads, but explicitly states it does not use information that personally identifies you to display interest-based ads. It uses advertising identifiers and shares them with ad companies. Some ad companies may also use this information to serve you relevant ads from other advertisers.",
+      "policy_excerpt": "We use your personal information to display interest-based ads for features, products, and services that might be of interest to you. We do not use information that personally identifies you to display interest-based ads... we use an advertising identifier like a cookie, a device identifier... we will share your advertising identifier and data about that event",
       "concerns": [
-        "Behavioral tracking for ad targeting across services",
-        "Advertising identifiers shared with ad companies"
+        "Behavioral tracking for ad targeting",
+        "Advertising identifiers shared with ad companies",
+        "Some ad companies may use the data to serve ads from other advertisers"
       ],
       "score_impact": -16.25
     },
@@ -220,7 +224,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon says its services are not for children under 18 without a parent or guardian. Products for children are sold to adults only.",
+      "plain_english": "Amazon states its services are not for children under 18 without a parent or guardian.",
       "detail": "The policy states that users under 18 may use Amazon Services only with the involvement of a parent or guardian. There is no technical age verification mechanism described.",
       "policy_excerpt": "If you are under the age of 18 years, you may use Amazon Services only with the involvement of a parent or guardian.",
       "concerns": [
@@ -237,12 +241,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon logs your IP address, full URL clickstream, and detailed page interactions including scrolling, clicks, and how long you stay on pages.",
-      "detail": "The policy explicitly collects the full URL clickstream, page interaction data, IP address, and browsing details. This is used for recommendations, ads, and diagnostics. The scope of logging is extensive and goes beyond standard security logging.",
-      "policy_excerpt": "the full Uniform Resource Locator (URL) clickstream to, through, and from our websites, including date and time; products and content you viewed or searched for; page response times, download errors, length of visits to certain pages, and page interaction information",
+      "plain_english": "Amazon states it logs your full URL clickstream, page interactions including scrolling and clicks, and your IP address.",
+      "detail": "The policy explicitly collects the full URL clickstream, page interaction data, IP address, and browsing details.",
+      "policy_excerpt": "the full Uniform Resource Locator (URL) clickstream to, through, and from our websites, including date and time; products and content you viewed or searched for; page response times, download errors, length of visits to certain pages, and page interaction information (such as scrolling, clicks, and mouse-overs);",
       "concerns": [
         "Extensive URL clickstream logging",
-        "Page interactions tracked for profiling"
+        "Page interactions tracked"
       ],
       "score_impact": -3.25
     },
@@ -255,12 +259,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon collects device identifiers, advertising IDs, cookies, device configurations, and Wi-Fi credentials to recognize your device and deliver ads.",
-      "detail": "The policy mentions collection of device log files, configurations, unique identifiers, cookies, and advertising identifiers. These are used for recognition, advertising, and service improvement.",
-      "policy_excerpt": "device log files and configurations, including Wi-Fi credentials... We use cookies and other identifiers... we use an advertising identifier like a cookie, a device identifier",
+      "plain_english": "Amazon states it collects device log files, configurations, and uses advertising identifiers and cookies to recognize your device. Wi-Fi credentials are collected only if you choose to sync them across your Amazon devices.",
+      "detail": "The policy mentions collection of device log files, configurations, unique identifiers, cookies, and advertising identifiers. Wi-Fi credentials are collected only if you opt in to automatically synchronize them with your other Amazon devices. These are used for recognition, advertising, and service improvement.",
+      "policy_excerpt": "device log files and configurations, including Wi-Fi credentials, if you choose to automatically synchronize them with your other Amazon devices... We may also use device identifiers, cookies, and other technologies... we use an advertising identifier like a cookie, a device identifier",
       "concerns": [
-        "Advertising identifiers collected and used for tracking",
-        "Device configurations and Wi-Fi credentials collected"
+        "Advertising identifiers collected",
+        "Wi-Fi credentials collected only when you opt in to sync across Amazon devices"
       ],
       "score_impact": -9.75
     },
@@ -268,15 +272,17 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Amazon does not collect health or biometric data through this app.",
+      "plain_english": "Amazon does not clearly state whether it collects health or biometric data.",
       "detail": "The provided privacy policy text does not mention collection of health or biometric data for the Amazon India shopping app.",
       "policy_excerpt": "",
-      "concerns": [],
+      "concerns": [
+        "Policy is silent on health and biometric data"
+      ],
       "score_impact": 0
     },
     {
@@ -284,15 +290,16 @@
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
       "risk": "caution",
-      "access_type": null,
+      "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Amazon collects and processes your payment card information following industry security standards when you make purchases.",
-      "detail": "Payment information is collected and handled in accordance with PCI DSS. The app processes payment card data directly for transactions.",
-      "policy_excerpt": "We follow the Payment Card Industry Data Security Standard (PCI DSS) when handling payment card data.",
+      "plain_english": "Amazon states it processes your payment card information following industry security standards when you make purchases. It also collects credit history information from credit bureaus for some customers.",
+      "detail": "Payment information is collected and handled in accordance with PCI DSS. The app processes payment card data directly for transactions. The policy also states Amazon collects credit history information from credit bureaus to help prevent and detect fraud and to offer certain credit or financial services to some customers.",
+      "policy_excerpt": "We follow the Payment Card Industry Data Security Standard (PCI DSS) when handling payment card data... credit history information from credit bureaus, which we use to help prevent and detect fraud and to offer certain credit or financial services to some customers.",
       "concerns": [
-        "Payment data retained for transactions and fraud prevention"
+        "Payment data retained for transactions and fraud prevention",
+        "Credit history information collected from credit bureaus"
       ],
       "score_impact": -4.5
     },
@@ -305,7 +312,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can access and update some of your information in Your Account. For other data, you can submit a request, but the policy does not clearly detail deletion rights in the provided text.",
+      "plain_english": "Amazon states you can access and update some information in Your Account. For other data, you can submit a request, but the policy does not clearly detail deletion rights in the provided text.",
       "detail": "The policy mentions accessing information through Your Account and submitting requests for information not available there. It does not explicitly describe account deletion or data erasure procedures in the provided text, though some choices like opting out of communications are described.",
       "policy_excerpt": "You can access your information... in the 'Your Account' section... To request access to personal information that is not available through Your Account you can submit a request here.",
       "concerns": [
@@ -356,10 +363,10 @@
       },
       {
         "category": "storage_file_access",
-        "risk": "risky",
+        "risk": "unknown",
         "max": 10,
-        "rate": 0.65,
-        "deduction": 6.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "data_sharing_third_parties",
@@ -405,7 +412,7 @@
       },
       {
         "category": "health_biometric",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 15,
         "rate": 0,
         "deduction": 0
@@ -432,8 +439,8 @@
         "deduction": 0
       }
     ],
-    "total_deductions": 92.25,
-    "final_score": 55,
+    "total_deductions": 85.75,
+    "final_score": 58,
     "grade": "C"
   }
 }

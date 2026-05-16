@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.uber.com/legal/en/document/?name=privacy-notice",
     "terms_url": "",
@@ -33,32 +33,32 @@
     "red": [
       {
         "id": "red_precise_location",
-        "title": "Precise location tracked and shared",
-        "plain_english": "Uber collects your exact location during every trip and when the app is open, and shares it with drivers and advertisers.",
+        "title": "Precise location tracked and approximate location shared with advertisers",
+        "plain_english": "Uber collects your precise location during trips and when the app is open. It shares your approximate location and trip details with ad intermediaries such as Google and The Trade Desk to personalize ads.",
         "severity": "high"
       },
       {
         "id": "red_gov_id_biometric",
         "title": "Government ID and facial scans collected",
-        "plain_english": "For verification and age-restricted items, Uber may require photos of your government ID and real-time selfies, which are stored on its servers.",
+        "plain_english": "For verification and age-restricted items, Uber may require photos of your government ID and real-time selfies. This biometric data is stored for up to three years.",
         "severity": "high"
       },
       {
         "id": "red_ad_data_resellers",
         "title": "Data shared with ad networks and resellers",
-        "plain_english": "Uber buys demographic and interest data from data resellers and shares your information with many advertising companies to target ads.",
+        "plain_english": "Uber receives demographic and interest data from data resellers and shares your information with advertising companies, ad intermediaries, and social media platforms to target ads.",
         "severity": "high"
       },
       {
         "id": "red_retention",
         "title": "Data kept for years after deletion",
-        "plain_english": "Even if you delete your account, Uber can keep your data for up to seven years for legal and tax reasons, and longer for fraud or safety issues.",
+        "plain_english": "Even if you delete your account, Uber can keep your data for up to seven years for tax, insurance, and legal reasons, and longer for fraud or safety issues.",
         "severity": "medium"
       },
       {
-        "id": "red_ai_training",
-        "title": "Customer support data used with GenAI",
-        "plain_english": "Uber may use generative AI tools to process your customer support communications for training and quality purposes.",
+        "id": "red_ai_support",
+        "title": "Customer support data processed with GenAI",
+        "plain_english": "Uber may use generative AI tools to process your customer support communications for quality and investigation purposes.",
         "severity": "medium"
       }
     ],
@@ -100,7 +100,7 @@
         "In-cabin video recording for autonomous rides.",
         "Audio recordings of support calls."
       ],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
@@ -111,14 +111,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Uber tracks your precise location during trips and when the app is open. Your location is shared with drivers and used to personalize ads.",
-      "detail": "Precise location tracked from request until trip/delivery ends and when app is open. Shared with driver and used for ads.",
+      "plain_english": "Uber tracks your precise location during trips and when the app is open. Your approximate location is shared with ad intermediaries for targeting.",
+      "detail": "Precise location tracked from request until trip/delivery ends and when app is open. Approximate location shared with ad intermediaries. Pickup/dropoff locations shared with drivers.",
       "policy_excerpt": "If you request a ride, we track your driver's location during your trip and link that data to your account... We also determine your approximate location and can determine your precise location if you allow us to do so through the settings on your phone.",
       "concerns": [
         "Precise location tracked continuously during active sessions.",
-        "Location data shared with ad intermediaries for targeting."
+        "Approximate location shared with ad intermediaries for targeting."
       ],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "contacts_phonebook",
@@ -150,7 +150,7 @@
       "concerns": [
         "User content uploaded for support may include sensitive images."
       ],
-      "score_impact": 3.0
+      "score_impact": -3.0
     },
     {
       "id": "data_sharing_third_parties",
@@ -168,7 +168,7 @@
         "Data shared with data resellers and ad intermediaries.",
         "Broad list of advertising and analytics partners."
       ],
-      "score_impact": 19.5
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
@@ -179,14 +179,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Uber requires government ID and facial verification for some features, and links your profile to advertising data from third-party data brokers.",
+      "plain_english": "Uber requires government ID and facial verification for some features, and receives demographic and interest data from third-party data brokers for advertising.",
       "detail": "Collects government ID, selfies, facial verification. Receives enrichment data (demographics, interests, lifestyle) from data resellers for ads.",
       "policy_excerpt": "Government-issued identification documents... User-submitted selfies Facial verification information... Enrichment data such as demographics (age range, household income range, gender), general interests and lifestyle, general purchasing behavior, viewing preferences and streaming habits.",
       "concerns": [
         "Government ID and biometric data collected.",
         "Identity linked to third-party marketing data."
       ],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -204,7 +204,7 @@
         "Audience building based on inferred interests and characteristics.",
         "Cross-app tracking via ad intermediaries."
       ],
-      "score_impact": 16.25
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -215,13 +215,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Uber is not designed for children, and some features like Uber for teens require parental setup. There is no detailed child-specific privacy program.",
-      "detail": "Not directed at children. Uber for teens exists but requires adult account. No specific children's privacy safeguards detailed.",
+      "plain_english": "Uber's privacy notice does not include a dedicated children's privacy section. Some features like Uber for teens require parental setup.",
+      "detail": "The rider privacy notice does not explicitly address protections for users under 18 beyond referencing Uber for teen accounts.",
       "policy_excerpt": "",
       "concerns": [
         "Teen accounts linked to adult accounts; limited child-specific protections described."
       ],
-      "score_impact": 3.0
+      "score_impact": -3.0
     },
     {
       "id": "network_internet_activity",
@@ -238,7 +238,7 @@
       "concerns": [
         "IP and activity data used for profiling and ad targeting."
       ],
-      "score_impact": 3.25
+      "score_impact": -3.25
     },
     {
       "id": "device_fingerprinting",
@@ -256,7 +256,7 @@
         "Advertising identifiers collected and shared with ad networks.",
         "Unique device identifiers used for tracking."
       ],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -274,7 +274,7 @@
         "Government ID and facial data stored on servers.",
         "Real-time selfies compared against ID photos."
       ],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "financial_payment",
@@ -291,7 +291,7 @@
       "concerns": [
         "Payment data shared with third-party processors."
       ],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -309,7 +309,7 @@
         "Data retained for up to 7 years for legal reasons.",
         "Fraud and safety data kept after deletion request."
       ],
-      "score_impact": 3.0
+      "score_impact": -3.0
     },
     {
       "id": "policy_change_notification",
@@ -326,7 +326,7 @@
       "concerns": [
         "Continued use after notification constitutes acceptance."
       ],
-      "score_impact": 1.5
+      "score_impact": -1.5
     }
   ],
   "scoring": {

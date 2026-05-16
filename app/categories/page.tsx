@@ -132,7 +132,7 @@ export default async function CategoriesPage() {
 
   return (
     <>
-      <Navbar apps={apps} />
+      <Navbar apps={apps} categoryList={sidebarCategories} />
 
       <main className="flex-1">
         <div className="flex gap-5 px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">

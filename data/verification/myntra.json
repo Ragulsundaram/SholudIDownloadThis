@@ -1,0 +1,21 @@
+{
+  "slug": "myntra",
+  "existing": {
+    "policy_url": "https://www.myntra.com/privacypolicy",
+    "developer": "Myntra Designs Private Limited",
+    "category": "Shopping",
+    "name": "Myntra - Fashion Shopping App"
+  },
+  "fresh": {
+    "policy_url": "",
+    "developer": "Myntra Designs Private Limited",
+    "category": "Shopping",
+    "policy_text": ""
+  },
+  "comparison": {
+    "policy_url_match": false,
+    "developer_match": true,
+    "category_match": true,
+    "policy_text_length": 0
+  }
+}

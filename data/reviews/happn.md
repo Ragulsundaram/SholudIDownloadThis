@@ -1,68 +1,24 @@
-# happn iOS — Privacy Policy Review
+# happn Review
 
-**Reviewed:** 2026-05-12
-**Policy:** https://www.happn.com/privacy-policy?l=en
-**Terms:** https://www.happn.com/terms
-**Platform:** iOS
-**Score:** 57/100 (Grade C, Caution)
+**Analyzed:** 2026-05-16  
+**Policy:** https://www.happn.com/privacy-policy?l=en  
+**Policy Updated:** 2026-05-11  
+**Score:** 57 / Grade: C / Risk: Caution  
 
----
+## Red Flags
 
-## Summary
+- **Your location is collected regularly to find crossing points** — Happn's privacy policy states that it collects your geographical position regularly when geolocation is enabled. Crossing points with other members are displayed on your profile, but other members cannot see your exact location.
+- **Your email and phone may be shared with social networks for marketing** — Happn's privacy policy states that it may share your email address and telephone number with social networks and third-party applications for hashing purposes. This is used to exclude you from happn's own marketing campaigns and to help happn reach profiles similar to yours who may be interested in its services. Happn says the existence of your profile will never be disclosed to these similar profiles.
+- **Biometric data is collected for profile certification with your consent** — Happn's privacy policy states that to certify a profile, it must collect biometric data using a video of your face and compare this data with your profile photos. The policy states the biometric data are immediately deleted after comparison, but the video is stored to reverify your profile if you add or delete photos.
+- **A face photo is required to register** — Happn's privacy policy states that at least one profile photo containing a person's face is required to register, and your face must be detectable in one of your photos. If your face cannot be detected, you will not be able to create an account.
+- **Your activity and profile information are used to suggest profiles to others** — Happn's privacy policy states that based on your activity in the application, your position, and the information on your profile, your profile may be suggested to other members. It also states that happn can recommend other members who may interest you via your Shortlist.
 
-happn is a French location-based dating app that shows you profiles of people you've crossed paths with in real life. While it keeps messages private and doesn't handle payment data, its privacy practices have several concerns.
+## Green Flags
 
-Key concerns: continuous location tracking to find crossing points, sharing email/phone with social networks for advertising, facial recognition for profile verification, mandatory face photo for registration, and extensive behavioral tracking for AI recommendations.
+- **Messages are private and not viewed by Happn staff** — Happn's privacy policy states that messages and voice messages are strictly private, only involve the members involved, and happn's authorized managers do not view these conversations. Messages are only shared in cases of judicial requests or to comply with applicable law.
+- **Happn does not collect your banking information** — Happn's privacy policy explicitly states that it does not collect or process any banking data, and that Apple's App Store and Google's Play Store handle all payment information.
+- **GDPR data rights are available** — Happn's privacy policy references rights to access, rectify, delete, and export your personal data under the GDPR. You can exercise these rights by contacting happn support.
 
-Key positives: messages are strictly private, Apple/Google handle all payments so happn never sees banking data, strong 18+ age requirement, and GDPR rights available.
+## Verdict
 
----
-
-## Methodology
-
-This review was conducted by analyzing the happn Privacy Policy and Terms of Service, accessed via jina.ai text extraction on 2026-05-12.
-
-### Data Collection Observed
-
-- **Personal:** First name, age, birthdate, gender, height, profession, education, interests, lifestyle, description
-- **Contact:** Email, phone number (depending on signup method)
-- **Location:** Continuous geolocation, crossing points with other members, city
-- **Activity:** All interactions (likes, messages, crossings, transactions, notifications), login dates, online status
-- **Device:** IP address, mobile ID, app version, device model, OS, language, advertisement ID
-- **Biometric:** Video of face for profile certification, face detection for registration
-- **Identity:** Identity document verification in some jurisdictions
-- **Messages:** Text and voice messages stored on servers
-
-### Notable Excerpts
-
-> "Your Geographical position is collected with your express consent only... HAPPN will collect your Geographical position regularly. When the Geographical positions of two Members are within a certain radius, HAPPN pinpoints a Crossing point."
-
-> "we may share you email address and telephone number with such entities to exclude you from our Marketing campaigns. This information is provided for 'hashing' purposes. This can also help HAPPN disseminate its campaigns to profiles similar to yours."
-
-> "HAPPN must, having obtained the Member's consent, collect the his or her biometric data using a video of his or her face, and compare this data with the Member's Profile Photos."
-
----
-
-## Scoring Breakdown
-
-| Category | Risk | Max | Rate | Deduction |
-|----------|------|-----|------|-----------|
-| Camera & Microphone | caution | 15 | 0.30 | 4.5 |
-| Location & GPS | risky | 15 | 0.65 | 9.75 |
-| Contacts & Phonebook | safe | 20 | 0.00 | 0 |
-| Storage & File Access | caution | 10 | 0.30 | 3.0 |
-| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.5 |
-| Account & Identity | risky | 15 | 0.65 | 9.75 |
-| Behavioural & Ad Tracking | risky | 25 | 0.65 | 16.25 |
-| Children's Data | safe | 10 | 0.00 | 0 |
-| Network & Internet Activity | caution | 5 | 0.30 | 1.5 |
-| Device Fingerprinting | risky | 15 | 0.65 | 9.75 |
-| Health & Biometric | risky | 15 | 0.65 | 9.75 |
-| Financial & Payment | safe | 15 | 0.00 | 0 |
-| Data Deletion & User Rights | caution | 10 | 0.30 | 3.0 |
-| Policy Change Notification | caution | 5 | 0.30 | 1.5 |
-
-**Total deductions:** 87.75
-**Final score:** round((1 − 87.75/205) × 100) = 57
-**Grade:** C
-**Risk:** Caution
+happn's core feature requires regular location tracking, and it shares your email and phone number with social networks for marketing purposes. The app also requires a face photo to register and may collect biometric data for optional profile certification. On the positive side, your messages are private, happn never sees your payment details, and you have full GDPR rights. Consider whether the real-world matching feature is worth the privacy trade-offs.

@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-12",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-kimi-k26",
     "policy_url": "https://www.crunchyroll.com/privacy",
     "terms_url": "https://crunchyroll.com/tos",
-    "policy_last_updated": "2026-01-01",
-    "needs_review": false,
-    "review_notes": ""
+    "policy_last_updated": "2022-07-27",
+    "needs_review": true,
+    "review_notes": "Strict legal-safe re-analysis against provided SPE privacy policy text. Removed fabricated quotes not present in the text (COPPA, 'does not sell for money', 'Ad IDs', 'continued use = acceptance'). Corrected health_biometric, childrens_data, device_fingerprinting to match actual text. Scoring math corrected: total deductions 61.5 yielding score 70 (Grade B)."
   },
   "app": {
-    "slug": "crunchyroll-ios",
+    "slug": "crunchyroll",
     "name": "Crunchyroll",
     "developer": "Crunchyroll, LLC",
     "app_store_url": "https://apps.apple.com/in/app/crunchyroll/id329913454",
@@ -22,57 +22,57 @@
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 65,
-    "grade": "C",
-    "one_liner": "Crunchyroll tracks your viewing habits, browsing history, and device activity to show you targeted ads, but it offers decent privacy controls and doesn't sell your data directly.",
-    "summary": "Crunchyroll, owned by Sony Pictures Entertainment, collects extensive data including your viewing history, browsing behavior, and device identifiers. It shares this data with advertising networks and analytics providers for targeted ads, though it claims not to sell personal information for money. The app offers opt-outs for targeted advertising and respects state privacy laws like CCPA.",
+    "score": 70,
+    "grade": "B",
+    "one_liner": "Collects extensive usage data and shares it with third parties for advertising and analytics.",
+    "summary": "Crunchyroll collects detailed usage information including webpages viewed, video history, and device identifiers. It shares data with business partners, Sony group companies, and third-party platforms for advertising, analytics, and matching purposes. The policy mentions converting email or phone numbers into unique values for ad matching. While it provides some user rights and opt-outs, it retains broad rights to keep residual data and does not clearly commit to proactive notifications for policy changes.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Crunchyroll engages in significant behavioral tracking and ad targeting. While it provides opt-outs and doesn't sell data outright, the extensive data sharing with advertising networks is a notable privacy concern."
+    "recommendation_reason": "Crunchyroll engages in significant behavioral tracking and shares personal data with multiple third parties for advertising and analytics. The extensive data collection and broad retention rights are notable privacy concerns."
   },
   "flags": {
     "red": [
       {
         "id": "red_extensive_tracking",
         "title": "Extensive behavioral tracking",
-        "plain_english": "Crunchyroll tracks your viewing history, browsing behavior, search history, clicks, scrolling, and interactions with ads across its apps and websites. This data is used to build a detailed profile of your interests.",
+        "plain_english": "The policy states it collects usage information including your browser type, operating system, webpages and apps you view, video history, and what you looked at before accessing the Content. It also uses cookies, web beacons, and tracking technologies to personalize ads and analyze browsing behavior.",
         "severity": "high"
       },
       {
         "id": "red_ad_targeting",
         "title": "Shares data for targeted advertising",
-        "plain_english": "Crunchyroll shares your personal information with advertising networks, social networks, and data analytics companies to show you targeted ads. While they say they don't sell your data for money, this sharing may be considered a 'sale' under some state privacy laws.",
+        "plain_english": "The policy states it may share your personal data with business partners, Sony group companies, and third-party platforms for advertising and analytics. It also mentions converting your email address or telephone number into a unique value for ad matching.",
         "severity": "high"
       },
       {
-        "id": "red_cross_app_tracking",
-        "title": "Tracks you across apps and devices",
-        "plain_english": "Crunchyroll uses device identifiers and advertising IDs to track your activity across different apps and devices. They also use cookies and tracking pixels to follow you across websites.",
+        "id": "red_cross_device_tracking",
+        "title": "Third-party cross-device tracking",
+        "plain_english": "The policy notes that third parties may use tracking technologies for interest-based advertising, including cross-device tracking, through cookies and similar technologies.",
         "severity": "medium"
       },
       {
         "id": "red_sony_sharing",
-        "title": "Shares data with Sony affiliates",
-        "plain_english": "As part of Sony Pictures Entertainment, Crunchyroll shares your data with other Sony group companies for marketing and account management purposes.",
+        "title": "Shares data with Sony group companies",
+        "plain_english": "The policy states it may disclose personal data to other Sony group companies for analytics, account authentication, account management, and direct marketing purposes.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_no_direct_sale",
-        "title": "Does not sell data for money",
-        "plain_english": "Crunchyroll explicitly states that it does not sell your personal information in exchange for money. It only shares data for advertising and analytics purposes.",
+        "id": "green_user_rights",
+        "title": "Some user rights available",
+        "plain_english": "The policy states you may have rights to access, review, delete, or object to processing of your personal data where required by applicable law.",
         "severity": "positive"
       },
       {
-        "id": "green_privacy_rights",
-        "title": "State privacy rights available",
-        "plain_english": "If you live in California or other covered states, you have rights to access, delete, and opt out of the sale or sharing of your personal information. You can also opt out of targeted advertising.",
+        "id": "green_marketing_opt_out",
+        "title": "Opt-out for marketing communications",
+        "plain_english": "Users can opt out of email newsletters and unsubscribe from SMS or MMS messages by replying STOP.",
         "severity": "positive"
       },
       {
-        "id": "green_coppa_compliant",
-        "title": "COPPA compliant for children",
-        "plain_english": "Crunchyroll has a separate Children's Privacy Policy and claims not to knowingly collect personal information from children under 13 in violation of COPPA.",
+        "id": "green_no_automated_decisions",
+        "title": "No automated decision-making with legal effects",
+        "plain_english": "The policy states it does not carry out fully automated decision-making or profiling that has a legal or similarly significant effect on you.",
         "severity": "positive"
       }
     ]
@@ -82,15 +82,15 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll does not require access to your camera or microphone to stream anime.",
-      "detail": "No camera or microphone access mentioned for the streaming service.",
+      "plain_english": "The privacy policy does not clearly state whether the app accesses your camera or microphone.",
+      "detail": "No camera or microphone access mentioned in the reviewed privacy policy.",
       "policy_excerpt": "",
-      "concerns": [],
+      "concerns": ["Not explicitly addressed in policy"],
       "score_impact": 0
     },
     {
@@ -98,46 +98,44 @@
       "label": "Location & GPS",
       "icon": "MapPin",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Crunchyroll may collect your location from your IP address, Bluetooth, and WiFi to manage content rights and territory restrictions. You can disable location-based services in your device settings.",
-      "detail": "Geolocation inferred from IP, Bluetooth beacons, WiFi hotspots, and precise mobile location. Used for territory restrictions and targeted content.",
-      "policy_excerpt": "Geolocation data inferred from your IP address, mobile linking to Bluetooth beacons and wifi hotspots at our locations, and precise geolocation based on mobile device location.",
-      "concerns": [
-        "Location used for content rights"
-      ],
+      "plain_english": "The policy states it may use GPS, geo-filtering, and other location-aware technologies to locate you, sometimes precisely, for purposes such as verifying your location, delivering or restricting content, and advertising based on your location. Some service providers may also provide the physical location of your device.",
+      "detail": "The policy mentions GPS, geo-filtering, and location-aware technologies for verifying location, territory restrictions, and location-based advertising. Users can turn off precise geo-location tracking through device settings. Some service providers may also provide the physical location of the device used to access the Content.",
+      "policy_excerpt": "Subject to applicable laws, we may use GPS (global positioning systems) software, geo-filtering and other location-aware technologies to locate (sometimes precisely) you for purposes such as verifying your location and delivering or restricting content (e.g. territory restrictions) and advertising based on your location. You can turn off precise geo-location tracking through the location settings on your device and/or in our Content (if available). Some service providers may also provide us with the physical location of the device used to access the Content.",
+      "concerns": ["Precise location may be used for advertising", "Location used for content territory restrictions"],
       "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll does not ask for access to your contacts list.",
-      "detail": "No contacts or phonebook access mentioned.",
+      "plain_english": "The privacy policy does not clearly state whether the app accesses your contacts list.",
+      "detail": "No contacts or phonebook access mentioned in the reviewed privacy policy.",
       "policy_excerpt": "",
-      "concerns": [],
+      "concerns": ["Not explicitly addressed in policy"],
       "score_impact": 0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll does not access files on your device. It streams content directly from its servers.",
-      "detail": "No file access mentioned. Streaming app only.",
+      "plain_english": "The privacy policy does not clearly state whether the app accesses files on your device.",
+      "detail": "No file access mentioned in the reviewed privacy policy.",
       "policy_excerpt": "",
-      "concerns": [],
+      "concerns": ["Not explicitly addressed in policy"],
       "score_impact": 0
     },
     {
@@ -149,14 +147,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll shares your data with advertising networks, data analytics companies, social networks, and other Sony companies. They say they don't sell it for money, but they do share it for targeted ads and analytics.",
-      "detail": "Shared with advertising networks, analytics providers, social networks, Sony group companies, and service providers. Explicitly states no sale for money but sharing for targeted advertising may constitute 'sale' under state laws.",
-      "policy_excerpt": "SPE does not sell Personal Information in exchange for money. SPE shares Personal Information with third parties in compliance with the law to deliver targeted ads and other tailored communications to consumers.",
-      "concerns": [
-        "Data shared with advertisers",
-        "Shared with Sony affiliates",
-        "May be considered 'sale' under state laws"
-      ],
+      "plain_english": "The policy states it may share your data with business partners, other Sony group companies, third-party service providers, and for business reorganization purposes. It may also share if you consent for marketing.",
+      "detail": "The policy describes sharing with business partners, other Sony group companies for analytics and direct marketing, third parties providing services (hosting, email, advertising, data analysis), and in business reorganizations. It states: 'We may ask for your consent to share your Personal Data with third parties for their own marketing purposes.' The policy does not contain an explicit statement that it does not sell personal data for money.",
+      "policy_excerpt": "We may disclose Personal Data to our business partners or other Sony group companies in accordance with applicable law... We share data with our business partners, as well as third parties who perform functions on our behalf, such as hosting or operating our site and apps, sending emails, performing marketing and advertising services, and carrying out data analysis... We may ask for your consent to share your Personal Data with third parties for their own marketing purposes... In addition, we work with third-party platforms and websites (such as social networking platforms) to serve targeted advertisements on such third-party services and platforms to you or others, and we may convert your email address, telephone number, or other information into a unique value and provide it to these third-party platforms for matching purposes.",
+      "concerns": ["Data shared with advertisers and social platforms", "Shared with Sony affiliates for analytics and marketing", "Email and phone may be converted to unique values for ad matching", "Data may transfer during business reorganization"],
       "score_impact": -19.5
     },
     {
@@ -164,17 +158,14 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "caution",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You need an account to use Crunchyroll. They collect your name, email, address, and payment information. You can also sign in with third-party accounts like Facebook.",
-      "detail": "Account requires name, email, address. Optional social login. Payment info collected for subscriptions.",
-      "policy_excerpt": "Identifiers, such as name, email address, mailing address, online identifier, Internet Protocol address, and other similar identifiers. Personal records, such as name, signature, address, telephone number, credit card number, debit card number, or other financial information.",
-      "concerns": [
-        "Social login links external data",
-        "Financial info collected"
-      ],
+      "plain_english": "The policy states it collects identification data like your name, date of birth, gender, postal address, username, and password. It also collects contact information like your email and phone number, and payment information for subscriptions.",
+      "detail": "The policy describes 'Identification Data' (name, surname, date of birth, gender, postal address, username, password, security questions), 'Contact Information' (email, phone number), and 'Payment Information' (card details, subscription status, payment history). Social login via third-party services is mentioned under Third-Party Services.",
+      "policy_excerpt": "Identification Data: Information that allows us to differentiate you from other individuals. This may include demographic information, such as: name and surname, date of birth, gender, postal address, username, password, and answers to account security questions. Contact Information: Information that allows us to keep in touch with you. This may include: email address and phone number. Payment Information: information that allows us or our third party providers to process payments where required to grant you access to our Content, related purchase or subscription status, and payment history.",
+      "concerns": ["Financial info collected", "Social login links external data"],
       "score_impact": -4.5
     },
     {
@@ -186,30 +177,25 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll tracks everything you watch, search for, and click on. They use cookies, tracking pixels, and advertising IDs to show you targeted ads and share your behavior with ad networks.",
-      "detail": "Extensive tracking including viewing history, browsing history, search history, clicks, scrolling, cursor movement. Uses cookies, web beacons, SDKs, Ad IDs. Google Analytics. Session monitoring. Shares with ad networks.",
-      "policy_excerpt": "Internet or other electronic network activity information, browsing history, search history, and information regarding your interactions with our websites, applications, or advertisements... SPE uses cookies and other tracking technologies... to collect and store information about your interactions with our Service.",
-      "concerns": [
-        "Extensive activity tracking",
-        "Cross-app/device tracking",
-        "Ad targeting",
-        "Session monitoring"
-      ],
+      "plain_english": "The policy states it uses cookies, web beacons, and tracking technologies to personalize content and advertising, remember your preferences, analyze usage, and serve targeted ads. It may convert your email or phone into a unique value for ad matching.",
+      "detail": "The policy describes three purposes for tracking technologies: (1) providing requested services and settings, (2) showing relevant ads and content recommendations (including cross-device tracking), and (3) analyzing and improving browsing experience. It explicitly states: 'we may convert your email address, telephone number, or other information into a unique value and provide it to these third-party platforms for matching purposes.' It uses Adobe and Google analytics. Location-aware technologies including GPS may be used for location-based advertising.",
+      "policy_excerpt": "Cookies, web beacons (also known as \"tracking pixels\") and other tracking technologies may be used by SPE and third parties including other Sony group companies to collect information about your interactions with the Content or the emails which SPE sends to you... we may convert your email address, telephone number, or other information into a unique value and provide it to these third-party platforms for matching purposes... Subject to applicable laws, we may use GPS (global positioning systems) software, geo-filtering and other location-aware technologies to locate (sometimes precisely) you for purposes such as verifying your location and delivering or restricting content (e.g. territory restrictions) and advertising based on your location.",
+      "concerns": ["Email and phone converted to unique values for ad matching", "Cross-device tracking mentioned", "GPS used for location-based advertising", "Extensive activity tracking across apps and emails"],
       "score_impact": -16.25
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll has a separate Children's Privacy Policy and says it doesn't knowingly collect data from children under 13 in violation of COPPA.",
-      "detail": "COPPA compliant. Separate Children's Privacy Policy. Under 18 content removal available for California residents.",
-      "policy_excerpt": "SPE does not knowingly collect Personal Information as defined by the U.S. Children's Privacy Protection Act ('COPPA') in a manner that is not permitted by COPPA.",
-      "concerns": [],
+      "plain_english": "The policy mentions that where online services are provided to children and consent is required by law, parental or guardian consent is required. It does not specify age thresholds or detailed child protection practices.",
+      "detail": "The policy only references children in the context of requiring parental or guardian consent when legally required because a child is below a relevant age threshold. It does not mention COPPA or specify what ages are considered children.",
+      "policy_excerpt": "Where we are providing online services to children and the relevant processing requires consent, to the extent required by law (for example because the child is below a relevant age threshold) we require parental or guardian consent to do this.",
+      "concerns": ["No specific age threshold or child protection details provided"],
       "score_impact": 0
     },
     {
@@ -221,52 +207,41 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll collects your IP address, browsing history, search history, and detailed records of how you interact with their apps, websites, and advertisements.",
-      "detail": "IP address, browsing history, search history, interactions with websites/apps/ads collected continuously.",
-      "policy_excerpt": "Internet or other electronic network activity information, browsing history, search history, and information regarding your interactions with our websites, applications, or advertisements.",
-      "concerns": [
-        "Browsing history collected",
-        "Search history collected",
-        "Ad interaction tracking"
-      ],
+      "plain_english": "The policy states it collects usage information including your browser type, operating system, webpages and apps you view, how long you view them, game or video history, and what you looked at before accessing their content. It also automatically collects your IP address.",
+      "detail": "Usage Information includes internet browser type and version, operating system, service provider, webpages/videos/apps viewed, time viewed, game or video history, skill level, demographic info, time zone, language, and what you looked at before accessing Content. IP address is automatically collected as a device identifier.",
+      "policy_excerpt": "Usage Information may consist of your internet browser type and version, operating system, service provider, the webpages, videos and apps you viewed, the time you viewed them and for how long, game or video history, skill level, demographic information about you (such as your age, gender, language, location and interest areas, where available), time zone, language, and what you looked at before accessing our Content. Device Identifiers: We may also automatically collect your IP address or other unique identifier for the computer, mobile device, technology, or other device you use to access the Content.",
+      "concerns": ["Browsing and viewing history collected", "IP address collected automatically"],
       "score_impact": -3.25
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll collects detailed device information including your device identifiers, advertising IDs, and uses cookies to track your device across apps and websites.",
-      "detail": "Device identifiers, Ad IDs, cookies, SDKs, tracking technologies used to track across apps and devices.",
-      "policy_excerpt": "Some use device identifiers or other identifiers such as 'Ad IDs' to associate app user activity to a particular app and to track user activity across apps and/or devices.",
-      "concerns": [
-        "Cross-app tracking",
-        "Advertising ID collection",
-        "Persistent tracking"
-      ],
-      "score_impact": -9.75
+      "plain_english": "The policy states it automatically collects your IP address and other unique identifiers for the device you use to access the Content. Some service providers may also provide the physical location of your device.",
+      "detail": "The policy describes collecting IP addresses and unique identifiers automatically assigned to devices. It notes that some service providers may provide physical location. It does not mention advertising IDs or cross-app tracking in the provided text.",
+      "policy_excerpt": "Device Identifiers: We may also automatically collect your IP address or other unique identifier for the computer, mobile device, technology, or other device you use to access the Content. A unique identifier is a number that is automatically assigned to your device when you access a web site or its servers, and our computers identify your device by this number. Some service providers may also provide us with the physical location of the device used to access the Content.",
+      "concerns": ["Unique device identifiers collected automatically", "Service providers may provide device physical location"],
+      "score_impact": -4.5
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll's parent company Sony Pictures Entertainment may collect biometric information for fraud prevention and identity verification, though it's unclear if this applies specifically to the Crunchyroll app.",
-      "detail": "Biometric information mentioned in general Sony privacy policy for fraud prevention and identity resolution. Unclear if specifically used by Crunchyroll app.",
-      "policy_excerpt": "Biometric information, which may include sensitive Personal Information used to uniquely identify you... To prevent and address fraud, breach of policies or terms, and threats or harm... For identity resolution.",
-      "concerns": [
-        "Biometric data collection mentioned",
-        "Unclear applicability to Crunchyroll"
-      ],
-      "score_impact": -4.5
+      "plain_english": "The privacy policy does not mention health or biometric data.",
+      "detail": "The provided privacy policy text does not mention health, biometric, or medical data collection.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data"],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
@@ -277,12 +252,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Crunchyroll collects your credit card or debit card information when you subscribe to a paid plan.",
+      "plain_english": "Crunchyroll states it collects your credit card or debit card information when you subscribe to a paid plan.",
       "detail": "Credit card, debit card, and other financial information collected for subscriptions.",
       "policy_excerpt": "Personal records (which includes the information listed in Cal. Civ. Code § 1798.80(e)), such as... credit card number, debit card number, or other financial information.",
-      "concerns": [
-        "Financial data collected"
-      ],
+      "concerns": ["Financial data collected"],
       "score_impact": -4.5
     },
     {
@@ -294,12 +267,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can access, correct, and delete some of your information through your account settings. If you live in certain states, you have additional rights to request deletion or opt out of data sharing.",
-      "detail": "Account tools for access/correct/delete. State-specific rights (CCPA, etc.). May retain as required by law.",
-      "policy_excerpt": "SPE provides you with tools and account settings to access, correct, delete, or modify certain information associated with your account.",
-      "concerns": [
-        "May retain data as required by law"
-      ],
+      "plain_english": "The policy states you may have rights to access, review, delete, or object to processing of your personal data where required by applicable law. However, it notes that residual or cached data may remain archived, and it reserves the right to retain data as permitted or required by law.",
+      "detail": "The policy describes rights to access, review, port, delete, block, object to, or withdraw consent to processing of Personal Data, subject to applicable law. It explicitly states that residual and/or cached data may remain archived, and reserves the right to retain data as permitted or required by law or for as long as reasonably necessary.",
+      "policy_excerpt": "Where required by applicable law, you may have the right to obtain confirmation that we maintain certain Personal Data relating to you, to verify its content, origin, and accuracy, as well as the right to access, review, port, delete, or to block or to object to, or withdraw consent to the processing of certain Personal Data... We will make reasonable efforts to make such requested changes in our then-active and relevant consumer databases as soon as practicable, but it is not always possible to change, remove or delete your information or public postings from our databases and residual and/or cached data may remain archived thereafter if our retention of this data falls within an exemption from the fulfilment of your data subject rights under applicable law. Further, we reserve the right to retain your Personal Data (a) as permitted by applicable law; (b) as required by applicable law; and (c) for so long as reasonably necessary to fulfil the purposes for which the data is retained except to the extent prohibited by applicable law.",
+      "concerns": ["Residual and cached data may remain after deletion request", "Data may be retained as required or permitted by law"],
       "score_impact": -3.0
     },
     {
@@ -311,12 +282,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Crunchyroll can change its privacy policy at any time. The new policy takes effect as soon as it's posted. If you keep using the app, that means you agree to the changes.",
-      "detail": "Changes effective upon posting. Continued use constitutes consent.",
-      "policy_excerpt": "SPE reserves the right to revise this Privacy Policy at any time. Any changes will be effective upon the posting of the revised Privacy Policy unless otherwise stated. Your continued use of the Service indicates your consent to the Privacy Policy then posted.",
-      "concerns": [
-        "Continued use = acceptance"
-      ],
+      "plain_english": "The policy states it may be updated from time to time, and the effective date is posted above. It says updated versions will be posted on the Content and consent will be asked when legally required by applicable law.",
+      "detail": "The policy states updates are posted and users are encouraged to visit periodically. Consent is asked when legally required. There is no explicit mention of proactive user notification (e.g., email) for changes.",
+      "policy_excerpt": "We may update this Privacy and Cookies Policy from time to time as our services and privacy practices change, or as required by law. The effective date of our Privacy and Cookies Policy is posted above, and we encourage you to visit our Content periodically to stay informed about our privacy practices. We will post the updated version of the Privacy and Cookies Policy on our Content and ask for your consent when legally required by applicable law.",
+      "concerns": ["No explicit proactive notification mentioned", "Users must check periodically for updates"],
       "score_impact": -1.5
     }
   ],
@@ -324,107 +293,23 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {
-        "category": "camera_microphone",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0.00,
-        "deduction": 0
-      },
-      {
-        "category": "location_gps",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.30,
-        "deduction": 4.5
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "safe",
-        "max": 20,
-        "rate": 0.00,
-        "deduction": 0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.00,
-        "deduction": 0
-      },
-      {
-        "category": "data_sharing_third_parties",
-        "risk": "risky",
-        "max": 30,
-        "rate": 0.65,
-        "deduction": 19.5
-      },
-      {
-        "category": "account_identity",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.30,
-        "deduction": 4.5
-      },
-      {
-        "category": "behavioural_ad_tracking",
-        "risk": "risky",
-        "max": 25,
-        "rate": 0.65,
-        "deduction": 16.25
-      },
-      {
-        "category": "childrens_data",
-        "risk": "safe",
-        "max": 10,
-        "rate": 0.00,
-        "deduction": 0
-      },
-      {
-        "category": "network_internet_activity",
-        "risk": "risky",
-        "max": 5,
-        "rate": 0.65,
-        "deduction": 3.25
-      },
-      {
-        "category": "device_fingerprinting",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
-      },
-      {
-        "category": "health_biometric",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.30,
-        "deduction": 4.5
-      },
-      {
-        "category": "financial_payment",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.30,
-        "deduction": 4.5
-      },
-      {
-        "category": "data_deletion_user_rights",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.30,
-        "deduction": 3.0
-      },
-      {
-        "category": "policy_change_notification",
-        "risk": "caution",
-        "max": 5,
-        "rate": 0.30,
-        "deduction": 1.5
-      }
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
     ],
-    "total_deductions": 71.25,
-    "final_score": 65,
-    "grade": "C"
+    "total_deductions": 61.5,
+    "final_score": 70,
+    "grade": "B"
   }
 }

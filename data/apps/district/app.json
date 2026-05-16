@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-kimi-k26",
     "policy_url": "https://www.district.in/policies/privacy",
     "terms_url": "",
     "policy_last_updated": "2025-07-25",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Strict legal-safe re-analysis. Camera & Microphone marked as unknown because the policy mentions CCTV at physical premises but does not explicitly state the app accesses device camera or microphone. Other categories verified against explicit quotes. Score: 52 (Grade D)."
   },
   "app": {
     "slug": "district",
@@ -22,43 +22,43 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 50,
+    "score": 52,
     "grade": "D",
-    "one_liner": "District collects extensive personal and device data, shares it with advertisers and data brokers, and tracks your precise location with limited meaningful opt-out.",
-    "summary": "District (by Zomato) gathers a wide range of personal information including your identity, location, contacts, and device details. It may also check what other apps are installed on your phone. This data is shared across the Eternal group of companies (including Blinkit and Hyperpure), with advertising partners, data brokers, and analytics providers. The app uses cookies and device identifiers to track your behavior across services and serve targeted ads.",
+    "one_liner": "Collects extensive personal data, shares across Eternal group, tracks precise location, and checks other installed apps.",
+    "summary": "District (by Zomato) collects a wide range of personal information including your identity, precise GPS location, contacts, and device details. It states it may check what other apps are installed on your phone. This data is shared across the Eternal group of companies (including Blinkit and Hyperpure), with advertising partners, and with analytics providers. The app uses cookies and device identifiers to track your behavior and serve targeted ads.",
     "recommendation": "think_twice",
-    "recommendation_reason": "District's privacy practices are invasive and opaque. It checks what other apps you have, tracks your precise location, and shares data with a broad network of partners. Only use it if you are comfortable with aggressive data collection for convenience booking."
+    "recommendation_reason": "District states it may check what other apps are installed on your phone, collects precise GPS location, and shares your data across the Eternal group of companies and with advertising partners. This level of data collection and sharing is significant."
   },
   "flags": {
     "red": [
       {
         "id": "red_installed_apps_check",
-        "title": "District checks what other apps are installed on your phone",
-        "plain_english": "District may scan your phone to see what other apps you have installed. The policy says this is to enable features like payment and UPI links, but it does not clearly limit the scan to only Eternal apps such as Zomato or Blinkit.",
+        "title": "District may check what other apps are installed on your phone",
+        "plain_english": "District states that if you use Eternal's applications such as Zomato, Blinkit, District or Hyperpure, it may collect information about the presence and/or absence and/or details pertaining to other applications on your mobile phone.",
         "severity": "high"
       },
       {
         "id": "red_precise_location_tracking",
         "title": "Your precise GPS location is collected and linked to your profile",
-        "plain_english": "When you use location features, District collects your exact GPS coordinates and associates them with your device ID and other information they hold about you.",
+        "plain_english": "District states that when you use location-enabled services, it may collect and process information about your mobile device's GPS location including latitude, longitude, or altitude, and may associate location data with your device ID.",
         "severity": "high"
       },
       {
         "id": "red_data_brokers",
-        "title": "Your data is shared with data brokers and ad networks",
-        "plain_english": "District obtains information about you from data brokers and shares your data with advertising partners, analytics providers, and the broader Eternal group of companies including Blinkit and Hyperpure.",
+        "title": "Your data is shared with advertisers and Eternal group companies",
+        "plain_english": "District states it shares your data with subsidiaries and affiliates including Blinkit and Hyperpure, contractors, advertisers, service providers, and potential buyers in mergers. Third-party ad networks serve tailored ads using their own tracking technologies.",
         "severity": "high"
       },
       {
         "id": "red_broad_file_access",
-        "title": "The app can scan files and metadata on your device",
-        "plain_english": "District's applications may access metadata and other information associated with files stored on your mobile device, including photographs, audio, video clips, and personal contacts.",
+        "title": "The app may access files and metadata on your device",
+        "plain_english": "District states its applications may access metadata and other information associated with files stored on your mobile device, including photographs, audio and video clips, and personal contacts.",
         "severity": "high"
       },
       {
-        "id": "red_cctv_biometric",
+        "id": "red_cctv_premises",
         "title": "CCTV at events may capture your image",
-        "plain_english": "District may collect and process images and video recordings of individuals attending events or visiting office premises for security and safety purposes, including CCTV footage that can capture identifying details.",
+        "plain_english": "District states it may collect and process images and video recordings of individuals attending events or visiting office premises for security and safety purposes, including CCTV footage that can capture identifying details.",
         "severity": "medium"
       }
     ],
@@ -66,13 +66,19 @@
       {
         "id": "green_account_deletion",
         "title": "You can request account deletion",
-        "plain_english": "You can request permanent deletion of your account through the Contact Us link, though copies and backups may remain for recovery and legal purposes.",
+        "plain_english": "District states you can request permanent deletion of your account through the Contact Us link, though copies and backups may remain for recovery and legal purposes.",
         "severity": "positive"
       },
       {
         "id": "green_pci_compliant",
         "title": "Payment processors are PCI compliant",
-        "plain_english": "District uses third-party payment gateway processors that are validated as compliant with payment card industry security standards.",
+        "plain_english": "District states the third party service providers providing payment gateway and payment processing services are validated as compliant with payment card industry security standards.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_health_consent",
+        "title": "Health data only collected with explicit consent",
+        "plain_english": "District states if you choose to connect third-party health platforms, it may collect health-related data, but this is collected only with your explicit consent.",
         "severity": "positive"
       }
     ]
@@ -82,18 +88,16 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "District may collect images and videos when you upload them, and CCTV at events or offices may record your image for security.",
-      "detail": "Users can upload photos and videos as part of reviews or event documentation. Additionally, CCTV systems at facilities may capture images, vehicle information, and other identifying details for security and safety purposes.",
-      "policy_excerpt": "We may collect and process images and video recordings of individuals attending events or visiting our office premises for security and safety purposes.",
-      "concerns": [
-        "CCTV footage captures identifiable images at events"
-      ],
-      "score_impact": -4.5
+      "plain_english": "The privacy policy does not clearly state whether the District app accesses your camera or microphone. It mentions CCTV at physical premises but not device camera access.",
+      "detail": "No explicit mention of camera or microphone access for the mobile app in the reviewed privacy policy. CCTV is referenced for physical event security only.",
+      "policy_excerpt": "",
+      "concerns": ["Not explicitly addressed in policy for device camera/mic"],
+      "score_impact": 0
     },
     {
       "id": "location_gps",
@@ -104,13 +108,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "District collects your exact GPS location when you use location-enabled services and links it to your device ID and other profile data.",
-      "detail": "Precise GPS location including latitude, longitude, and altitude is collected from mobile devices when location services are enabled. Location data is associated with device ID and other user information to customize services.",
-      "policy_excerpt": "When you use one of our location-enabled services, we may collect and process information about your mobile device's GPS location... and we may associate location data with your device ID and other information we hold about you.",
-      "concerns": [
-        "Precise GPS collected and linked to device ID",
-        "Location data shared with merchant partners"
-      ],
+      "plain_english": "District states it may collect your mobile device's GPS location including latitude, longitude, and altitude, and may associate it with your device ID.",
+      "detail": "Precise GPS location is collected from mobile devices when location services are enabled. Location data is associated with device ID and other user information to customize services.",
+      "policy_excerpt": "When you use one of our location-enabled services, we may collect and process information about your mobile device's GPS location (including the latitude, longitude or altitude of your mobile device) and the time the location information is recorded to customize the Services with location-based information and features... we may associate location data with your device ID and other information we hold about you.",
+      "concerns": ["Precise GPS collected and linked to device ID", "Location data shared with merchant partners"],
       "score_impact": -9.75
     },
     {
@@ -122,13 +123,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "If you allow it, District uploads your contact book to its servers to help you find friends or share referrals.",
-      "detail": "Contact book access is optional. When granted, the app collects names and phone numbers from your device and processes them. You are required to represent that you have obtained consent from your contacts.",
+      "plain_english": "District states that if you choose to use services requiring contact book upload, it will collect and process the name and phone number of contacts stored on your device.",
+      "detail": "Contact book access is optional. When granted, the app collects names and phone numbers from your device and processes them. The policy states you must represent that you have obtained consent from your contacts.",
       "policy_excerpt": "If you choose to utilise any of our services which require uploading of your contact book, then we will collect and process such information as well, which could include the name and phone number of contacts stored on your device(s).",
-      "concerns": [
-        "Contacts uploaded to servers",
-        "User must obtain consent from contacts, but enforcement is unclear"
-      ],
+      "concerns": ["Contacts uploaded to servers", "User must obtain consent from contacts, but enforcement is unclear"],
       "score_impact": -13.0
     },
     {
@@ -140,12 +138,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "District can access metadata and files stored on your device, including your photos, videos, and audio clips.",
+      "plain_english": "District states its applications may access metadata and files stored on your device, including your photos, videos, audio clips, and personal contacts.",
       "detail": "The applications may access metadata and other information associated with files stored on the mobile device, including photographs, audio and video clips, and personal contacts. This broad access is framed as enabling features.",
       "policy_excerpt": "Our applications may also access metadata and other information associated with files stored on your mobile device. This may include, for example, photographs, audio and video clips, personal contacts and address book information.",
-      "concerns": [
-        "Broad file and metadata access beyond user-initiated uploads"
-      ],
+      "concerns": ["Broad file and metadata access beyond user-initiated uploads"],
       "score_impact": -6.5
     },
     {
@@ -157,15 +153,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District shares your data with Eternal group companies, advertisers, data brokers, analytics providers, merchants, and payment processors.",
-      "detail": "Data is shared with subsidiaries and affiliates (Blinkit, Hyperpure), contractors, advertisers, service providers, potential buyers in mergers, and merchant partners. Third-party advertisers and ad networks (Google Analytics, DoubleClick) serve tailored ads using their own tracking technologies.",
+      "plain_english": "District states it shares your data with Eternal group companies, advertisers, service providers, potential buyers in mergers, and merchant partners.",
+      "detail": "Data is shared with subsidiaries and affiliates (Blinkit, Hyperpure), contractors, advertisers, service providers, potential buyers in mergers, and merchant partners. Third-party advertisers and ad networks serve tailored ads using their own tracking technologies.",
       "policy_excerpt": "We may disclose personal information that we collect or you provide... to our subsidiaries and affiliates... to contractors, suppliers, advertisers/service providers... to an actual or potential buyer or other successor in the event of a merger.",
-      "concerns": [
-        "Shared with data brokers and ad networks",
-        "Shared across Eternal group companies",
-        "Shared with merchant partners for order fulfillment",
-        "No clear opt-out from data sharing"
-      ],
+      "concerns": ["Shared with advertisers and ad networks", "Shared across Eternal group companies", "Shared with merchant partners for order fulfillment", "No clear opt-out from data sharing"],
       "score_impact": -19.5
     },
     {
@@ -173,18 +164,14 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District collects extensive identity data including your name, email, phone, date of birth, gender, profile picture, and government ID for service partners, and combines it with third-party data.",
-      "detail": "Account creation requires extensive personal information. Data is combined with information from third-party sources (social login, data brokers, public sources) to build a comprehensive profile. For service partners, government IDs may be collected.",
+      "plain_english": "District states it collects extensive identity data including your name, email, phone, date of birth, gender, profile picture, and may combine it with third-party data.",
+      "detail": "Account creation requires extensive personal information. Data is combined with information from third-party sources (social login, data brokers, public sources) to build a comprehensive profile.",
       "policy_excerpt": "Name, address, email address, postal code, password and other information you may provide with your account, such as your gender, mobile phone number, date of birth, anniversary date, user bio, nationality and website.",
-      "concerns": [
-        "Extensive identity data collected",
-        "Combined with third-party data sources",
-        "Government ID collected for service partners"
-      ],
+      "concerns": ["Extensive identity data collected", "Combined with third-party data sources"],
       "score_impact": -9.75
     },
     {
@@ -196,14 +183,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District tracks your searches, clicks, time spent, and device info to show you targeted ads through partners like Google and DoubleClick.",
-      "detail": "The app collects search terms, ads clicked, features used, time spent, and device identifiers. Third-party ad networks (Google Analytics, DoubleClick) serve tailored ads using their own tracking technologies. Data from third-party sources is combined to enrich profiles.",
+      "plain_english": "District states third-party advertisers and partners use cookies and device IDs to collect data about your service usage and personalize ads. Eternal uses pixel tags to measure page popularity.",
+      "detail": "The app collects search terms, ads clicked, features used, time spent, and device identifiers. Third-party ad networks serve tailored ads using their own tracking technologies. Data from third-party sources is combined to enrich profiles.",
       "policy_excerpt": "Third-party advertisers and partners accessible via our Services use their own tracking technologies (like cookies and device IDs) to collect data about your Service usage. They use this to personalize ads shown to you.",
-      "concerns": [
-        "Third-party ad networks track activity across services",
-        "Cross-app presence may be used for feature gating",
-        "Limited opt-out from tailored advertising"
-      ],
+      "concerns": ["Third-party ad networks track activity across services", "Cross-app presence may be used for feature gating", "Limited opt-out from tailored advertising"],
       "score_impact": -16.25
     },
     {
@@ -215,13 +198,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District says it is not meant for children under 18, but it allows adults to provide limited information about minors for event bookings.",
-      "detail": "Services are generally not directed at individuals under 18. However, adults may provide limited information about a minor to access certain services (e.g., purchasing a family-friendly event ticket). The adult must consent on behalf of the minor.",
+      "plain_english": "District states its services are generally not directed at individuals under 18, but adults may provide limited information about minors for certain services like event bookings.",
+      "detail": "Services are generally not directed at individuals under 18. However, adults may provide limited information about a minor to access certain services. The adult must consent on behalf of the minor.",
       "policy_excerpt": "Our Services are generally not directed to or intended for use by individuals under the age of 18... we recognize that certain services offered through our platform may be open to use by Minors.",
-      "concerns": [
-        "No robust age verification",
-        "Minor data collected for event bookings with limited safeguards"
-      ],
+      "concerns": ["No robust age verification", "Minor data collected for event bookings with limited safeguards"],
       "score_impact": -3.0
     },
     {
@@ -233,12 +213,10 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District logs your IP address, search queries, pages viewed, clicks, and how long you use the app to improve services and target ads.",
-      "detail": "The app collects extensive usage data including search queries, pages viewed, features used, content interactions, timestamps, referral URLs, error logs, and IP addresses. This is used for service improvement, personalization, and advertising.",
+      "plain_english": "District states it logs your search queries, pages viewed, clicks, time spent, and referral URLs to improve services and target ads.",
+      "detail": "The app collects extensive usage data including search queries, pages viewed, features used, content interactions, timestamps, referral URLs, error logs, and IP addresses.",
       "policy_excerpt": "Details about your interactions with our Services, such as search queries, pages viewed, features used, content interactions (clicks, scrolls, time spent), transaction history summaries, error logs, timestamps, referral URLs.",
-      "concerns": [
-        "Extensive interaction logging for ads and profiling"
-      ],
+      "concerns": ["Extensive interaction logging for ads and profiling"],
       "score_impact": -1.5
     },
     {
@@ -250,14 +228,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District collects your device ID, advertising ID, operating system, browser, and mobile network info to track you. It may also check what other apps are installed on your phone.",
-      "detail": "Collects IP address, device type, OS, browser, unique device identifiers (IDFA, Android Advertising ID), mobile network info, device settings, and details about other applications on the phone. The policy says this is for enabling features like payment and UPI links, not for advertising. Unlike cookies, mobile device IDs cannot be deleted by the user.",
+      "plain_english": "District states it collects your device ID, advertising ID, operating system, browser, and mobile network info. It also states it may check what other apps are installed on your phone.",
+      "detail": "Collects IP address, device type, OS, browser, unique device identifiers (IDFA, Android Advertising ID), mobile network info, device settings, and details about other applications on the phone. The policy states mobile device IDs cannot be deleted by the user.",
       "policy_excerpt": "We may also collect your unique mobile device identifier (e.g. IDFA or other device IDs on Apple devices like the iPhone and iPad). If you're using our Services on a mobile device, we may use mobile device IDs... to recognize you. Unlike cookies, mobile device IDs cannot be deleted.",
-      "concerns": [
-        "Advertising identifiers collected",
-        "Installed apps list may be checked",
-        "Mobile device IDs cannot be deleted by users"
-      ],
+      "concerns": ["Advertising identifiers collected", "Installed apps list may be checked", "Mobile device IDs cannot be deleted by users"],
       "score_impact": -9.75
     },
     {
@@ -269,8 +243,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District does not collect health or biometric data through the app unless you explicitly connect a third-party health platform.",
-      "detail": "Health-related data is only collected if the user explicitly connects third-party health platforms like Health Connect. This is opt-in and consent-based. Biometric data is not collected through the app itself.",
+      "plain_english": "District states it does not collect health data through the app unless you explicitly connect a third-party health platform.",
+      "detail": "Health-related data is only collected if the user explicitly connects third-party health platforms like Health Connect. This is opt-in and consent-based. Biometric data is not mentioned for collection through the app.",
       "policy_excerpt": "If you choose to connect third-party health platforms (such as Health Connect or similar services), we may collect and process health-related data... This data is collected only with your explicit consent.",
       "concerns": [],
       "score_impact": 0
@@ -284,12 +258,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "If you make a purchase, your payment details are handled by third-party processors. District may store some billing information.",
-      "detail": "Payment card information is collected for transactions and shared with PCI-compliant payment gateway processors. Third-party processors may store card information for future use. The app does not directly store full card details.",
+      "plain_english": "District states that if you make a purchase, your payment details are handled by third-party processors. District may store some billing information.",
+      "detail": "Payment card information is collected for transactions and shared with PCI-compliant payment gateway processors. Third-party processors may store card information for future use.",
       "policy_excerpt": "We may require your credit or debit card account information. By submitting your credit or debit card account information through our Services, you expressly consent to the sharing of your information with third-party payment processors.",
-      "concerns": [
-        "Third-party processors may store card data for future transactions"
-      ],
+      "concerns": ["Third-party processors may store card data for future transactions"],
       "score_impact": -4.5
     },
     {
@@ -301,13 +273,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can request account deletion, but backups and copies of your data may remain for recovery, legal reasons, and fraud prevention.",
+      "plain_english": "District states you can request account deletion, but backups and copies of your data may remain for recovery, legal reasons, and fraud prevention.",
       "detail": "Users can request permanent deletion through the Contact Us link. Once deleted, the account and associated data cannot be restored. However, copies and backups may remain in backup storage for recovery, enforcing legal rights, and fraud mitigation.",
       "policy_excerpt": "Copies and backups of your personal information may continue to remain in our backup storage used for recovery in case of contingencies, as well as for enforcing our legal rights and fraud / risk mitigation purposes.",
-      "concerns": [
-        "Backups retained after deletion",
-        "No clear timeline for complete erasure"
-      ],
+      "concerns": ["Backups retained after deletion", "No clear timeline for complete erasure"],
       "score_impact": -3.0
     },
     {
@@ -319,12 +288,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "District can change its privacy policy at any time, and if you keep using the app, that means you accept the new terms.",
+      "plain_english": "District states it can change its privacy policy at any time, and your continued use of the services means you accept the changes.",
       "detail": "The policy states it may change from time to time and that continued use after changes constitutes acceptance. Material changes may be posted on the policy page, but there is no explicit requirement for re-consent.",
       "policy_excerpt": "This policy may change from time to time, your continued use of Eternal's Services after it makes any change is deemed to be acceptance of those changes, so please check the policy periodically for any updates.",
-      "concerns": [
-        "Continued use implies acceptance of updates"
-      ],
+      "concerns": ["Continued use implies acceptance of updates"],
       "score_impact": -1.5
     }
   ],
@@ -332,23 +299,23 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {"category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
-      {"category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
-      {"category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13.0},
-      {"category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5},
-      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
-      {"category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
-      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
-      {"category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
-      {"category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5},
-      {"category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
-      {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
-      {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
-      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0},
-      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5}
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13.0 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
     ],
-    "total_deductions": 102.5,
-    "final_score": 50,
+    "total_deductions": 98.0,
+    "final_score": 52,
     "grade": "D"
   }
 }

@@ -1,67 +1,65 @@
-# Crunchyroll iOS — Privacy Policy Review
+# Crunchyroll Privacy Review
 
-**Reviewed:** 2026-05-12
-**Policy:** https://www.crunchyroll.com/privacy
-**Terms:** https://crunchyroll.com/tos
-**Platform:** iOS
-**Score:** 65/100 (Grade C, Caution)
+**Date:** 2026-05-16  
+**Policy URL:** https://www.crunchyroll.com/privacy  
+**Analyst:** claude-kimi-k26  
+**Method:** Strict legal-safe re-analysis
 
 ---
 
 ## Summary
 
-Crunchyroll is an anime streaming app owned by Sony Pictures Entertainment. While it provides a massive content library, its privacy practices involve extensive data collection and sharing for advertising purposes.
+Crunchyroll's privacy policy is a Sony Pictures Entertainment (SPE) joint policy covering all SPE content. Under strict legal-safe rules, the policy is silent on device camera/microphone access, contacts access, and file storage access, so these categories are marked as **unknown** with `needs_review: true`.
 
-Key concerns: extensive behavioral tracking across apps and websites, sharing data with advertising networks and Sony affiliates, cross-app/device tracking via advertising IDs, and collection of browsing and search history.
+The policy explicitly states that SPE **does not sell Personal Information in exchange for money**, but it does share data for targeted advertising and analytics. It also explicitly mentions tracking user activity **across apps and/or devices** using Ad IDs.
 
-Key positives: does not sell data for money, offers state privacy rights (CCPA, etc.), COPPA compliant, and provides opt-outs for targeted advertising.
+## Key Verbatim Quotes
 
----
+- "SPE does not sell Personal Information in exchange for money."
+- "SPE shares Personal Information with third parties in compliance with the law to deliver targeted ads and other tailored communications to consumers."
+- "Some use device identifiers or other identifiers such as 'Ad IDs' to associate app user activity to a particular app and to track user activity across apps and/or devices."
+- "Geolocation data inferred from your IP address, mobile linking to Bluetooth beacons and wifi hotspots at our locations, and precise geolocation based on mobile device location."
+- "Internet or other electronic network activity information, browsing history, search history, and information regarding your interactions with our websites, applications, or advertisements."
+- "SPE does not knowingly collect Personal Information as defined by the U.S. Children's Privacy Protection Act ('COPPA') in a manner that is not permitted by COPPA."
 
-## Methodology
+## Category-by-Category Reasoning
 
-This review was conducted by analyzing the Crunchyroll Privacy Policy (Sony Pictures Entertainment) and Terms of Service, accessed via jina.ai text extraction on 2026-05-12.
+| Category | Risk | Deduction | Reasoning |
+|----------|------|-----------|-----------|
+| Camera & Microphone | unknown | 0 | Policy silent on device camera/mic. |
+| Location & GPS | caution | 4.5 | Explicit quote on geolocation from IP, Bluetooth, WiFi, and precise mobile location. |
+| Contacts & Phonebook | unknown | 0 | Policy silent on contacts. |
+| Storage & File Access | unknown | 0 | Policy silent on device file access. |
+| Data Sharing with 3rd Parties | risky | 19.5 | Explicit sharing for targeted ads + Sony group sharing. No-sale-for-money is a mitigating factor. |
+| Account & Identity | caution | 4.5 | Standard account data collection (name, email, financial info). |
+| Behavioural & Ad Tracking | risky | 16.25 | Explicit browsing history, search history, interactions, cookies, Ad IDs tracking. |
+| Children's Data | safe | 0 | Explicit COPPA compliance statement. |
+| Network & Internet Activity | risky | 3.25 | Explicit IP, browsing history, search history, ad interaction collection. |
+| Device Fingerprinting | risky | 9.75 | Explicit cross-app/device tracking via Ad IDs. |
+| Health & Biometric | caution | 4.5 | Policy lists biometric information as a category it "may collect" for fraud prevention. Cautious language used because applicability to Crunchyroll specifically is not clearly stated. |
+| Financial & Payment | caution | 4.5 | Explicit credit/debit card collection for subscriptions. |
+| Data Deletion & User Rights | caution | 3.0 | Tools available; may retain as required by law. |
+| Policy Change Notification | caution | 1.5 | Changes effective upon posting; continued use = consent. |
 
-### Data Collection Observed
+## Scoring
 
-- **Personal:** Name, email, mailing address, phone number, date of birth, gender
-- **Financial:** Credit card, debit card, other financial info
-- **Activity:** Viewing history, browsing history, search history, clicks, scrolling, cursor movement, app interactions, ad interactions
-- **Device:** IP address, device identifiers, advertising ID, application version, OS
-- **Location:** IP-inferred location, Bluetooth beacons, WiFi hotspots, precise mobile geolocation
-- **Biometric:** May collect for fraud prevention (general Sony policy)
-- **Commercial:** Products purchased, viewing tendencies
+- **Total deductions:** 71.25
+- **Final score:** 65 (Grade C)
 
-### Notable Excerpts
+## Red Flags
 
-> "Internet or other electronic network activity information, browsing history, search history, and information regarding your interactions with our websites, applications, or advertisements."
+1. Extensive behavioral tracking (high) — supported by explicit quote on browsing/search/interaction history.
+2. Shares data for targeted advertising (high) — supported by explicit quote on sharing for ads.
+3. Tracks user activity across apps and devices (medium) — supported by explicit quote on Ad IDs and cross-app tracking.
+4. Shares data with Sony group companies (medium) — supported by explicit quote on affiliate sharing.
 
-> "SPE does not sell Personal Information in exchange for money. SPE shares Personal Information with third parties in compliance with the law to deliver targeted ads and other tailored communications to consumers."
+## Green Flags
 
-> "Some use device identifiers or other identifiers such as 'Ad IDs' to associate app user activity to a particular app and to track user activity across apps and/or devices."
+1. Does not sell Personal Information for money — directly quoted.
+2. State privacy rights available — CCPA/opt-out mentioned.
+3. COPPA compliant — directly quoted.
 
----
+## Notes
 
-## Scoring Breakdown
-
-| Category | Risk | Max | Rate | Deduction |
-|----------|------|-----|------|-----------|
-| Camera & Microphone | safe | 15 | 0.00 | 0 |
-| Location & GPS | caution | 15 | 0.30 | 4.5 |
-| Contacts & Phonebook | safe | 20 | 0.00 | 0 |
-| Storage & File Access | safe | 10 | 0.00 | 0 |
-| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.5 |
-| Account & Identity | caution | 15 | 0.30 | 4.5 |
-| Behavioural & Ad Tracking | risky | 25 | 0.65 | 16.25 |
-| Children's Data | safe | 10 | 0.00 | 0 |
-| Network & Internet Activity | risky | 5 | 0.65 | 3.25 |
-| Device Fingerprinting | risky | 15 | 0.65 | 9.75 |
-| Health & Biometric | caution | 15 | 0.30 | 4.5 |
-| Financial & Payment | caution | 15 | 0.30 | 4.5 |
-| Data Deletion & User Rights | caution | 10 | 0.30 | 3.0 |
-| Policy Change Notification | caution | 5 | 0.30 | 1.5 |
-
-**Total deductions:** 71.25
-**Final score:** round((1 − 71.25/205) × 100) = 65
-**Grade:** C
-**Risk:** Caution
+- The previous analysis had a math error: total_deductions was listed as 75.75 but the actual sum of deductions was 71.25. This has been corrected.
+- The "cross-app tracking" red flag is explicitly supported by the text, satisfying the strict rule.

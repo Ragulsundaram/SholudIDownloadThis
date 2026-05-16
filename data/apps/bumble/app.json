@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-11",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
-    "policy_url": "https://bumble.com/en-us/privacy",
+    "policy_url": "http://bumble.com/privacy/",
     "terms_url": "https://bumble.com/en-us/terms",
     "policy_last_updated": "unknown",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Strict re-analysis: Bumble's privacy policy is comprehensive and covers all 14 categories. Key concerns include optional biometric collection retained up to 3 years, message content review for topics and sentiments, extensive data sharing with numerous vendors and advertising partners, and long retention periods (up to 15 years for severe cases). Positives include clear 18+ age requirement with termination, proactive email notice for material policy changes, GDPR data rights, and opt-out controls for marketing and biometrics."
   },
   "app": {
-    "slug": "bumble-ios",
+    "slug": "bumble",
     "name": "Bumble",
     "developer": "Bumble Inc.",
     "app_store_url": "https://apps.apple.com/us/app/bumble-dating-app-meet-date/id930441707",
@@ -22,57 +22,75 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 41,
+    "score": 54,
     "grade": "D",
-    "one_liner": "Bumble collects sensitive personal data including your biometrics, tracks your behavior and conversations, and shares it with numerous vendors and advertisers.",
-    "summary": "Bumble gathers identifiers like name, email, birth date, gender, location, photographs, and phone number. Optional details include height and faith. Social profile connections import additional data. Security checks capture phone numbers and, when opted in, facial geometry through biometric analysis by firms like Veriff. The platform also records geographic coordinates, hardware identifiers, billing details, engagement metrics, hyperlink usage, conversation themes, help desk tickets, and tracking technologies. Member profiles display this data to other users. Vendors including Twilio, Prove, Zendesk, Sierra, Cinder, Typeform, Kantar, Google Cloud, and OpenAI receive limited records for authentication, support, moderation, hosting, research, and AI features. Advertising partners obtain device signatures and behavior summaries. The organization releases material to satisfy legal demands, stop scams, uphold safety rules, facilitate ownership changes, and may furnish anonymized figures to observers. Users maintain various controls including access, amendment, removal, transfer, or limitation. European residents and some U.S. state residents have additional protections. Removing a profile triggers a roughly four-week grace period. Unused accounts for around four years also become eligible for clearance. Financial documentation archived for a decade. Proof of ejection kept 6-15 years. Help correspondences kept 6 years. Biometric images retained 36 months.",
+    "one_liner": "Bumble collects extensive personal data including optional biometrics, reviews message content, shares data with advertisers, and makes your general location visible to other members.",
+    "summary": "The policy states that Bumble collects name, contact details, photographs, location, device information, and optional biometric data for verification. Your general location may appear on your profile to other members. Bumble reviews message content to identify topics and sentiments, and has a 'review before you send' feature that scans texts automatically. It shares data with many service providers and advertising partners, and sends personal information to the US and UK regardless of where you live. Some data may be retained for up to 15 years in severe cases, but Bumble also begins deleting data after 4 years of account inactivity.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Bumble collects sensitive data including biometrics, tracks conversations and behavior, and shares with many vendors and advertisers. Data retention is excessive, with some information kept for up to 15 years."
+    "recommendation_reason": "Bumble collects sensitive data including optional biometrics, reviews messages for trends, makes your general location visible to other members, and shares data with many vendors and advertisers. If you use the app, be aware of what you share in messages and consider whether the privacy trade-off is acceptable."
   },
   "flags": {
     "red": [
       {
         "id": "red_biometric_collection",
-        "title": "Collects facial biometrics",
-        "plain_english": "Bumble scans your face through a third-party company called Veriff to verify your identity, and keeps that biometric data for up to 3 years.",
+        "title": "Collects facial biometrics if you opt in",
+        "plain_english": "The policy states that if you choose photo or ID verification, Bumble scans your photo using facial recognition technology and keeps verification scans for up to 3 years.",
         "severity": "high"
       },
       {
-        "id": "red_conversation_tracking",
-        "title": "Tracks your conversations",
-        "plain_english": "Bumble analyzes the themes and topics of your conversations with matches to improve the app and target ads.",
-        "severity": "high"
+        "id": "red_message_content_review",
+        "title": "Reviews message content for topics and sentiments",
+        "plain_english": "The policy states that Bumble reviews the content of messages to identify topics, sentiments, and trends, but claims to remove personally identifying information before reviewing.",
+        "severity": "medium"
       },
       {
         "id": "red_extensive_vendors",
-        "title": "Shares with many vendors",
-        "plain_english": "Bumble shares your data with at least 10 different companies including Google Cloud, OpenAI, and Zendesk for various services.",
-        "severity": "high"
+        "title": "Shares data with many vendors",
+        "plain_english": "The policy states that Bumble shares your data with numerous companies including Veriff, Twilio, Zendesk, Google Cloud, OpenAI, and advertising partners.",
+        "severity": "medium"
       },
       {
         "id": "red_long_retention",
-        "title": "Keeps data for years",
-        "plain_english": "Even after you delete your account, Bumble keeps your financial records for 10 years, ejection proof for up to 15 years, and help chats for 6 years.",
-        "severity": "high"
+        "title": "Keeps some data for years after deletion",
+        "plain_english": "The policy states that even after you delete your account, purchase records may be kept for 10 years, blocked account evidence for up to 15 years, and help chats for 6 years.",
+        "severity": "medium"
       },
       {
         "id": "red_advertiser_sharing",
-        "title": "Shares with advertisers",
-        "plain_english": "Bumble shares your device information and behavior with advertising partners to show you targeted ads.",
+        "title": "Shares data with advertisers",
+        "plain_english": "The policy states that Bumble shares your device information, age, gender, and behavior with advertising partners and marketing service providers to show you targeted ads.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_data_rights",
-        "title": "User data rights available",
-        "plain_english": "You can ask to see, fix, or delete your data. European and some U.S. users have extra legal protections.",
+        "id": "green_biometric_opt_in",
+        "title": "Biometric verification is optional",
+        "plain_english": "The policy states that photo verification and ID verification are optional. You only go through them if you choose to.",
         "severity": "positive"
       },
       {
-        "id": "green_biometric_opt_in",
-        "title": "Biometric verification is optional",
-        "plain_english": "Face verification is not required. You only go through it if you choose to.",
+        "id": "green_data_rights",
+        "title": "User data rights available",
+        "plain_english": "The policy states that you can request to access, correct, delete, or transfer your data. European and some U.S. users have additional legal protections.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_change_email",
+        "title": "Email notice for material policy changes",
+        "plain_english": "The policy states that Bumble will let you know by email or notice of any material changes to the privacy policy.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_marketing_opt_out",
+        "title": "You can opt out of marketing and targeted ads",
+        "plain_english": "The policy states that you can withdraw consent for marketing and opt out of targeted advertising through app settings or device privacy preferences.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_auto_deletion_inactive",
+        "title": "Data auto-deleted after 4 years of inactivity",
+        "plain_english": "The policy states that Bumble begins deleting your personal information after 4 years of no activity on your account.",
         "severity": "positive"
       }
     ]
@@ -87,10 +105,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble needs your camera for profile photos and optional face verification. It only uses it when you choose.",
-      "detail": "Camera used for profile photos and optional biometric verification.",
-      "policy_excerpt": "photographs, facial geometry through biometric analysis",
+      "plain_english": "The policy states that Bumble uses your camera for profile photos, photo verification, ID verification, and video calls, and your microphone for audio calls. Access is only when you choose to use these features.",
+      "detail": "The policy describes camera use for profile photographs, optional photo verification, optional ID verification, sending images and videos, and video/audio call functions. It does not claim background camera or microphone access.",
+      "policy_excerpt": "To allow video and audio call functions, and the sending of images and videos.",
       "concerns": [
+        "Camera used for profile photos and verification",
+        "Microphone used for audio calls",
         "Biometric verification uses camera"
       ],
       "score_impact": -4.5
@@ -99,37 +119,39 @@
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Bumble collects your exact location to show you people nearby. This is a core feature of the dating app.",
-      "detail": "Geographic coordinates recorded for nearby matching.",
-      "policy_excerpt": "geographic coordinates",
+      "plain_english": "The policy states that Bumble collects your location when you use the app, and your general location information may appear on your profile to other members. Bumble also uses location data to detect if you are on a university campus. You can turn location off in device settings.",
+      "detail": "The policy states: 'If you give Bumble access to your location in your device settings, we will collect information about your location when you use your mobile device.' It explicitly says 'by enabling your general location information to appear to people seeing your profile and show you the profiles of people who are near you.' It also describes using recent location data to check if your coordinates match a general university or college area for student-targeted offers. WiFi access points and longitude/latitude are mentioned.",
+      "policy_excerpt": "If you give Bumble access to your location in your device settings, we will collect information about your location when you use your mobile device... by enabling your general location information to appear to people seeing your profile and show you the profiles of people who are near you... We collect recent location data of where you opened the App to see if your device’s coordinates match a general university or college area.",
       "concerns": [
-        "Precise location tracked",
-        "Used for profiling"
+        "Precise location collected when app is in use",
+        "General location visible to other members on your profile",
+        "Location used to detect university campus attendance",
+        "Coordinates saved to offer features"
       ],
-      "score_impact": -9.75
+      "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Bumble can import your social media profiles when you connect them. This brings in additional data about you and your friends.",
-      "detail": "Social media connections import additional data.",
-      "policy_excerpt": "Connecting outside social profiles from Spotify or the social network linked at signup imports additional facts",
+      "plain_english": "The policy states that you can choose to give Bumble access to your device's address book, and it will only be used when you want to add someone to your contacts.",
+      "detail": "The policy states: 'You can also choose to give our App access to your device's address book, which will only be used when you want to add someone to your contacts.' Social media logins bring in your own profile data, not your friends' phonebooks.",
+      "policy_excerpt": "You can also choose to give our App access to your device's address book, which will only be used when you want to add someone to your contacts.",
       "concerns": [
-        "Social media data imported",
-        "Friend data may be imported"
+        "Address book access is optional",
+        "Only used for adding contacts"
       ],
-      "score_impact": -13.0
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
@@ -140,11 +162,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble needs access to your photos so you can upload them to your profile. You choose which photos to share.",
-      "detail": "File access for uploading profile photos.",
-      "policy_excerpt": "photographs",
+      "plain_english": "The policy states that you can send images and videos through the app, which requires access to your photos and files when you choose.",
+      "detail": "The policy mentions sending images and videos, profile photos, and verification photos. This implies user-initiated file access for uploading content.",
+      "policy_excerpt": "To allow video and audio call functions, and the sending of images and videos.",
       "concerns": [],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -155,13 +177,16 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble shares your data with many companies that help run the app, including Twilio, Google Cloud, OpenAI, and advertising partners.",
-      "detail": "Shared with Twilio, Prove, Zendesk, Sierra, Cinder, Typeform, Kantar, Google Cloud, and OpenAI for various services. Advertising partners receive device signatures and behavior summaries.",
-      "policy_excerpt": "Vendors including Twilio, Prove, Zendesk, Sierra, Cinder, Typeform, Kantar, Google Cloud, and OpenAI receive limited records for authentication, support, moderation, hosting, research, and artificial intelligence features. Advertising collaborators obtain device signatures and behavior summaries.",
+      "plain_english": "The policy states that Bumble shares your data with numerous service providers, advertising partners, marketing service providers, and Facebook. It also states your personal information will be sent to and used in the US and UK regardless of what country you live in.",
+      "detail": "The policy lists extensive sharing: Veriff, Twilio, Prove, Zendesk, Sierra, Cinder, Typeform, Kantar, Google Cloud, OpenAI, payment processors, moderators, marketing service providers, advertising partners, and Facebook. OpenAI retains inputs and prompts for only 30 days. It claims to investigate service providers and make data unidentifiable where possible. The policy explicitly states: 'Your personal information will be sent to and used in the US and UK, no matter what country you live in.' BFF profiles are automatically visible both in BFF mode on the main app and on the separate Bumble For Friends app.",
+      "policy_excerpt": "We typically use Service Providers like: Billing services... Authentication services... Veriff... Twilio... Prove... Social media providers... Customer support services... Zendesk... Sierra... Cinder... Typeform... Kantar... Google Cloud... OpenAI... Your personal information will be sent to and used in the US and UK, no matter what country you live in.",
       "concerns": [
         "Shared with numerous vendors",
-        "Shared with advertisers",
-        "May transfer during ownership changes"
+        "Shared with advertising partners and marketing service providers",
+        "Shared with Facebook for marketing",
+        "Data transferred to US and UK regardless of residence",
+        "BFF profile automatically visible on separate Bumble For Friends app",
+        "Data may transfer during ownership changes"
       ],
       "score_impact": -19.5
     },
@@ -174,12 +199,13 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble collects a lot of personal information including your name, birth date, gender, photos, and phone number. They can also collect your face geometry if you opt in for verification.",
-      "detail": "Name, email, birth date, gender, location, photographs, phone number, optional height/faith, facial geometry collected.",
-      "policy_excerpt": "name, email, birth date, gender, location, photographs, and phone digits. Security checks capture telephone digits and, when users opt in, facial geometry through biometric analysis performed by firms such as Veriff",
+      "plain_english": "The policy states that Bumble collects extensive personal information including your name, gender, birth date, location, photos, phone number, and sexual preference. If you use Facebook login, Facebook may also share your pages you like and current town or city with Bumble.",
+      "detail": "The policy lists: Name, username, gender identity, location, email, date/location of birth, photographs, mobile number, sexual preference, and optional details like religion, height, interests. For Facebook login, Facebook may share name, profile picture, email, date of birth, other profile photos, gender, pages you like, and current town or city. Demographic and behavioral data (gender, age, device ID, coarse location) is shared with advertising partners, but the policy does not state that full identity profiles are shared with advertisers.",
+      "policy_excerpt": "Name, Username, Gender identity, Location (city, town), Email address, Date, and location of birth, Photographs, Mobile number, Sexual preference... Facebook: If you choose to register or sign in using your Facebook account, you give Facebook permission to share your name and profile picture with us... pages you like, current town or city",
       "concerns": [
-        "Extensive identity data",
-        "Biometric data collected"
+        "Extensive identity data collected",
+        "Optional profile details include sensitive categories",
+        "Facebook login shares pages you like and current town"
       ],
       "score_impact": -9.75
     },
@@ -192,12 +218,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble tracks how you engage with the app, which links you click, and the themes of your conversations. They share this with advertisers.",
-      "detail": "Engagement metrics, hyperlink usage, conversation themes tracked continuously. Shared with advertising partners.",
-      "policy_excerpt": "how viewers engage with pictures, hyperlink usage, conversation themes, and tracking technologies. Advertising collaborators obtain device signatures and behavior summaries.",
+      "plain_english": "The policy states that Bumble tracks your app activity, profile interactions, and message topics to personalize the app and show you targeted ads. It also scans messages automatically with a 'review before you send' feature and uses location to detect if you are on a university campus for student targeting.",
+      "detail": "The policy states: 'We review the content of messages sent in the App to identify topics, sentiments, and trends across our Users.' It also describes a 'review before you send' feature where texts are scanned automatically to keep conversations respectful. The app tracks profile engagement, vote history, hyperlink usage, and uses matching algorithms. For users aged 18-24 in US/Canada, it uses recent location data to detect campus attendance for targeted offers. Data is shared with advertising partners and marketing service providers.",
+      "policy_excerpt": "We review the content of messages sent in the App to identify topics, sentiments, and trends across our Users... To enable the ‘review before you send’ functionality, where any texts are scanned automatically... We collect recent location data of where you opened the App to see if your device’s coordinates match a general university or college area.",
       "concerns": [
-        "Conversation themes analyzed",
-        "Behavior shared with advertisers"
+        "Message topics analyzed",
+        "'Review before you send' scans texts automatically",
+        "Location used to detect university campus attendance",
+        "Behavior shared with advertisers",
+        "Matching algorithms use activity data"
       ],
       "score_impact": -16.25
     },
@@ -210,9 +239,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble is an adult dating app and does not allow users under 18.",
-      "detail": "Dating app for adults only. No children's data handling.",
-      "policy_excerpt": "",
+      "plain_english": "The policy states that Bumble is for adults only and requires users to be at least 18 years old.",
+      "detail": "The policy states: 'you must be at least 18 years old to use Bumble. We do not knowingly collect any information or market to children, minors, or anyone under 18 years old. If we become aware that someone under 18 has registered a Bumble account and shared personal information with us, we will take steps to terminate that person's registration.'",
+      "policy_excerpt": "you must be at least 18 years old to use Bumble. We do not knowingly collect any information or market to children, minors, or anyone under 18 years old. If we become aware that someone under 18 has registered a Bumble account and shared personal information with us, we will take steps to terminate that person's registration.",
       "concerns": [],
       "score_impact": 0
     },
@@ -225,12 +254,13 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble logs your internet activity including which links you click and your help desk conversations. They keep this for years.",
-      "detail": "Hyperlink usage and help desk tickets tracked. Retained for extended periods.",
-      "policy_excerpt": "hyperlink usage, help desk tickets, and tracking technologies",
+      "plain_english": "The policy states that Bumble logs your IP address, link clicks, and help desk conversations, and keeps this information for years.",
+      "detail": "The policy states it collects 'IP address', 'hyperlink usage', 'help desk tickets', and 'tracking technologies'. It also mentions 'log and usage data' and 'access logs'.",
+      "policy_excerpt": "If you contact our Customer Support team via our Feedback Page, we will collect your IP address and will receive your email address and the information you share with us to help resolve your request. We keep records of our communications with you for 6 years after your account is deleted.",
       "concerns": [
-        "Links clicked tracked",
-        "Help conversations logged"
+        "IP address collected and logged",
+        "Help conversations retained for 6 years",
+        "Link clicks tracked"
       ],
       "score_impact": -3.25
     },
@@ -243,11 +273,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Bumble collects hardware identifiers to track your device and keep your account secure.",
-      "detail": "Hardware identifiers collected continuously for security and tracking.",
-      "policy_excerpt": "hardware identifiers",
+      "plain_english": "The policy states that Bumble collects your device's unique identifier, model, operating system, and usage data, and shares your device ID with advertisers.",
+      "detail": "The policy states it collects 'device's unique identifier, model, and operating system, as well as log and usage data.' It explicitly shares 'Advertising identifier associated with your device (Device ID)' with marketing service providers.",
+      "policy_excerpt": "When you use the App, we will collect information about your device for the purposes described in this Policy. This information covers your device's unique identifier, model, and operating system, as well as log and usage data.",
       "concerns": [
-        "Device fingerprinting for tracking"
+        "Device ID shared with marketing service providers",
+        "Device model and OS collected",
+        "Usage data linked to device"
       ],
       "score_impact": -9.75
     },
@@ -260,12 +292,13 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Bumble collects your face geometry through a third-party company for verification. This biometric data is kept for up to 3 years.",
-      "detail": "Facial geometry collected via Veriff for verification. Biometric images retained for 36 months.",
-      "policy_excerpt": "facial geometry through biometric analysis performed by firms such as Veriff. Biometric confirmation images may be retained for 36 months",
+      "plain_english": "The policy states that if you choose photo or ID verification, Bumble collects your facial geometry through biometric analysis, and keeps verification scans for up to 3 years.",
+      "detail": "The policy states: 'If you choose to verify your profile photo, we will scan each photo that you submit. This scan can include the use of facial recognition technology... If you choose to also verify your ID, our third party partner called Veriff will carry out the ID check on our behalf... involves the collection of biometric data.' It states: 'We will only keep the scans as long as we need them for these purposes, but never longer than 3 years after your last interaction with us.'",
+      "policy_excerpt": "If you choose to verify your profile photo, we will scan each photo that you submit. This scan can include the use of facial recognition technology to compare the submitted photo(s) to your profile photo... If you choose to also verify your ID, our third party partner called Veriff will carry out the ID check on our behalf... involves the collection of biometric data",
       "concerns": [
-        "Biometric data collected",
-        "Retained for 3 years"
+        "Biometric data collected if you opt in",
+        "Retained for up to 3 years",
+        "Shared with Veriff for ID verification"
       ],
       "score_impact": -9.75
     },
@@ -278,11 +311,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Bumble collects billing details when you buy premium features. Financial records are kept for 10 years.",
-      "detail": "Billing details collected. Financial documentation archived for a decade.",
-      "policy_excerpt": "billing details, monetary documentation may be archived for a decade",
+      "plain_english": "The policy states that Bumble processes your payment information through a third-party payment processor and keeps it for audit and fraud prevention.",
+      "detail": "The policy states: 'If you decide to purchase any of our premium services, we will process your payment information via our third-party payment processor and keep it for audit/tax purposes and to prevent fraud.'",
+      "policy_excerpt": "If you decide to purchase any of our premium services, we will process your payment information via our third-party payment processor and keep it for audit/tax purposes and to prevent fraud.",
       "concerns": [
-        "Financial records kept 10 years"
+        "Payment data shared with third-party processor",
+        "Retained for tax and audit purposes"
       ],
       "score_impact": -4.5
     },
@@ -290,39 +324,40 @@
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your Bumble account, but there's a 4-week grace period where you can still recover it. Unused accounts are cleared after about 4 years. Financial records stay for 10 years and ejection proof for up to 15 years.",
-      "detail": "Removing a profile triggers a roughly four-week grace period. Accounts unused for around four years also become eligible for clearance. Financial documentation archived for a decade. Proof of ejection kept 6-15 years. Help correspondences kept 6 years. Biometric images retained 36 months.",
-      "policy_excerpt": "Removing a profile triggers a roughly four-week grace period during which reinstatement remains possible. Accounts unused for around four years also become eligible for clearance. Monetary documentation may be archived for a decade, proof of ejection for half a dozen to fifteen years based on gravity, and help correspondences are kept for a six-year span following profile removal. Biometric confirmation images may be retained for 36 months.",
+      "plain_english": "The policy states that you can delete your account, with a 28-day grace period. Bumble also begins deleting your personal information after 4 years of account inactivity. Some data is kept for years for legal and business purposes.",
+      "detail": "The policy states: 'If you delete your account, we make sure it is no longer viewable on the App... it's possible to restore your account for up to 28 days after deleting.' It also states: 'We will also begin the process of deleting your personal information if you are no longer actively using your account, i.e. after 4 years of no activity on your account.' After these periods, deletion begins unless data must be kept for legal compliance, dispute resolution, or fraud prevention. Specific retention: purchases 10 years, blocked accounts 6-15 years, payment disputes 6 years. Users have GDPR rights including access, rectification, erasure, and portability.",
+      "policy_excerpt": "If you delete your account, we make sure it is no longer viewable on the App. Just in case you delete by accident or change your mind, it's possible to restore your account for up to 28 days after deleting... We will also begin the process of deleting your personal information if you are no longer actively using your account, i.e. after 4 years of no activity on your account.",
       "concerns": [
-        "4-week deletion grace period",
-        "Unused accounts kept 4 years",
-        "Financial records 10 years",
-        "Ejection proof up to 15 years",
-        "Biometric images 3 years"
+        "28-day deletion grace period",
+        "Auto-deletion begins after 4 years of inactivity",
+        "Purchases retained 10 years",
+        "Blocked account records kept 6-15 years",
+        "Some data kept for legal purposes"
       ],
-      "score_impact": -6.5
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't clearly say how Bumble will tell you if the privacy rules change.",
-      "detail": "No specific policy change notification mechanism mentioned.",
-      "policy_excerpt": "",
+      "plain_english": "The policy states that Bumble will email you or post a notice if there are material changes, but you should also check the policy regularly.",
+      "detail": "The policy states: 'We will need to change this Policy from time to time, but the most current version (at http://bumble.com/privacy-policy) controls how we use your information. Be sure to regularly check for updates, but we will let you know by email or notice of any material changes.'",
+      "policy_excerpt": "We will need to change this Policy from time to time, but the most current version (at http://bumble.com/privacy-policy) controls how we use your information. Be sure to regularly check for updates, but we will let you know by email or notice of any material changes.",
       "concerns": [
-        "No clear notification mechanism stated"
+        "Continued use likely equals acceptance",
+        "Users encouraged to check regularly"
       ],
-      "score_impact": -2.5
+      "score_impact": -1.5
     }
   ],
   "scoring": {
@@ -338,24 +373,24 @@
       },
       {
         "category": "location_gps",
-        "risk": "risky",
+        "risk": "caution",
         "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "contacts_phonebook",
-        "risk": "risky",
+        "risk": "caution",
         "max": 20,
-        "rate": 0.65,
-        "deduction": 13.0
+        "rate": 0.3,
+        "deduction": 6
       },
       {
         "category": "storage_file_access",
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "data_sharing_third_parties",
@@ -415,21 +450,21 @@
       },
       {
         "category": "data_deletion_user_rights",
-        "risk": "risky",
+        "risk": "caution",
         "max": 10,
-        "rate": 0.65,
-        "deduction": 6.5
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 5,
-        "rate": 0.5,
-        "deduction": 2.5
+        "rate": 0.3,
+        "deduction": 1.5
       }
     ],
-    "total_deductions": 121.75,
-    "final_score": 41,
+    "total_deductions": 95.25,
+    "final_score": 54,
     "grade": "D"
   }
 }

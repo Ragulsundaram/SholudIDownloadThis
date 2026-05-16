@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://rapido.bike/privacy.html",
     "terms_url": "",
     "policy_last_updated": "unknown",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Strict re-analysis completed. Key fixes: device_fingerprinting plain_english incorrectly attributed an advertising purpose (policy explicitly states no targeted advertising). Downgraded red_health_data_collection severity from high to medium because policy says 'may collect' and applies only to Captains. Tightened red flag titles to match policy verbs exactly. Removed unsupported concern about device fingerprint persisting after reinstall."
   },
   "app": {
     "slug": "rapido",
@@ -33,21 +33,21 @@
     "red": [
       {
         "id": "red_background_location",
-        "title": "Captains are tracked even when the app is closed",
+        "title": "Captains' location is collected when the app is closed",
         "plain_english": "Rapido collects location data in the background whenever Captains enable On-Duty, even when the app is not in use.",
         "severity": "high"
       },
       {
         "id": "red_government_id_collection",
-        "title": "Government IDs and selfies are required for Captains",
+        "title": "Government IDs and selfies may be required for Captains",
         "plain_english": "Rapido collects Aadhaar, PAN, driving license, and real-time selfies for identity verification.",
         "severity": "high"
       },
       {
         "id": "red_health_data_collection",
-        "title": "Health information is collected from Captains",
+        "title": "May collect health information from Captains",
         "plain_english": "Rapido may collect body temperature, symptoms, and vaccination status from Captains.",
-        "severity": "high"
+        "severity": "medium"
       },
       {
         "id": "red_broad_data_sharing",
@@ -57,7 +57,7 @@
       },
       {
         "id": "red_call_recording",
-        "title": "Calls with Rapido may be recorded for Captains",
+        "title": "Calls with Rapido are recorded for Captains",
         "plain_english": "If you are a Captain or Vendor Partner, Rapido records your calls with them and stores related call details.",
         "severity": "medium"
       }
@@ -248,8 +248,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Rapido collects extensive device details including device ID, model, OS, installed apps, touch gestures, and scrolling activity.",
-      "detail": "Device information includes technical info, aggregated usage, device identifier, manufacturer, model, OS, geolocation, mobile network, screens visited, touch gestures, scrolling, and actions performed.",
+      "plain_english": "Rapido collects detailed device and usage behavior information, including touch gestures and scrolling. It explicitly states this data is not used for targeted advertising.",
+      "detail": "Device information includes technical info, aggregated usage, device identifier, manufacturer, model, OS, geolocation, mobile network, screens visited, touch gestures, scrolling, and actions performed. The policy explicitly states: 'Please note, we do not use the information collected from you for targeted advertising.'",
       "policy_excerpt": "Device Identifier of your Device, your preferred language and country site, manufacturer, software, and model of your Device, Device type, operating systems and versions, your geolocation, mobile network data, screens you have visited, your touch gestures performed in your Rapido App, your scrolling activity, and any other actions you have performed during your use of Rapido App.",
       "concerns": [
         "Extensive device behavior tracking",
@@ -266,7 +266,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Rapido collects health-related information like body temperature, symptoms, and vaccination status from Captains.",
+      "plain_english": "Rapido may collect health-related information like body temperature, symptoms, and vaccination status from Captains.",
       "detail": "Health data is collected from Captains including body temperature, symptoms, vaccination status, and other health conditions.",
       "policy_excerpt": "If you are a Captain, we may collect certain health related Information and declarations such as body temperature, symptoms, vaccination status and other health conditions.",
       "concerns": [

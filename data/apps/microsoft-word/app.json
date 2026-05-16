@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
-    "analyzed_by": "claude-opus-4-7",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-kimi-k2.6",
     "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
     "terms_url": "https://www.microsoft.com/en-us/servicesagreement",
     "policy_last_updated": "2026-03",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Verification fetch returned the Microsoft privacy landing page instead of the full Privacy Statement. Category ratings rely on prior verified excerpts from the actual statement. Unsupported claims were removed and language tightened to strict legal-safe standards."
   },
   "app": {
     "slug": "microsoft-word",
@@ -24,41 +24,35 @@
     "overall_risk": "caution",
     "score": 59,
     "grade": "C",
-    "one_liner": "Word collects your contacts, device ID, and usage data, shares it with advertisers and third-party platforms, and your documents may be processed by Microsoft's AI — but you can opt out of some tracking.",
-    "summary": "Microsoft Word requires a Microsoft account and collects a wide range of data: email, name, phone number, contacts, device identifiers, product interaction data, and crash diagnostics. This data is linked to you (not just anonymized). Microsoft shares data with affiliates, vendors, and third-party advertising platforms for targeted ads. Documents stored in OneDrive or processed by connected experiences are sent to Microsoft's cloud and may be used for AI training. On the positive side, Microsoft does not use email, chat, or document content for ad targeting, provides a privacy dashboard for managing data, and offers data export and account deletion. However, account deletion has a 60-day waiting period, some data may be retained, and policy changes take effect on continued use without requiring active re-consent.",
+    "one_liner": "Word may share your data with advertisers and process documents on Microsoft cloud servers.",
+    "summary": "Microsoft Word requires a Microsoft account and collects data including your name, email, contacts, device identifiers, and usage information. Microsoft states it may share data with third-party advertising platforms and advertisers. Documents stored in OneDrive or processed by connected experiences are sent to Microsoft's cloud. On the positive side, Microsoft states it does not use your documents, emails, or photos to target ads. However, the verification fetch returned a landing page rather than the full Privacy Statement, so the analysis relies on prior verified excerpts.",
     "recommendation": "think_twice",
-    "recommendation_reason": "While Word is a capable document editor, its data practices under the broader Microsoft privacy policy mean your personal information, contacts, and usage patterns are shared with advertising networks and third-party platforms. Users who care about data minimization should consider alternatives or adjust privacy settings."
+    "recommendation_reason": "Microsoft states it may share your data with advertising platforms and collect device identifiers and usage data. The verification fetch could not retrieve the full Privacy Statement for re-verification."
   },
   "flags": {
     "red": [
       {
         "id": "red_third_party_ad_sharing",
         "title": "Shares data with ad platforms",
-        "plain_english": "Microsoft shares your data with third-party advertising platforms and advertisers to deliver and measure targeted ads.",
+        "plain_english": "Microsoft states it may share data with third-party advertising platforms and advertisers to deliver and measure ads.",
         "severity": "high"
       },
       {
-        "id": "red_contacts_uploaded",
-        "title": "Collects and links your contacts",
-        "plain_english": "Word collects your contacts and links them to your identity, so Microsoft knows who you communicate with.",
+        "id": "red_contacts_collection",
+        "title": "May collect contacts for sharing",
+        "plain_english": "Microsoft states it may collect contacts and relationships data from sharing, contact management, and communication features.",
         "severity": "medium"
       },
       {
-        "id": "red_device_fingerprinting",
-        "title": "Extensive device tracking",
-        "plain_english": "Microsoft collects device identifiers, hardware info, and creates unique tracking IDs that follow you across sessions.",
+        "id": "red_device_data_collection",
+        "title": "Collects device identifiers and usage data",
+        "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and nearby network data.",
         "severity": "medium"
-      },
-      {
-        "id": "red_ai_training_on_data",
-        "title": "Data may train AI models",
-        "plain_english": "Microsoft states it may use your data to develop and train AI models, including analyzing how you use its products.",
-        "severity": "high"
       },
       {
         "id": "red_policy_changes_without_consent",
         "title": "Policy changes without active consent",
-        "plain_english": "Microsoft can change its privacy policy at any time, and continued use of the app means you accept the changes — no need to click agree again.",
+        "plain_english": "Microsoft states it may update the privacy statement, and if you disagree, you must stop using the Services and close your Microsoft account.",
         "severity": "medium"
       }
     ],
@@ -66,25 +60,7 @@
       {
         "id": "green_no_content_based_ads",
         "title": "No content-based ad targeting",
-        "plain_english": "Microsoft does not use your email, chat messages, video calls, documents, or photos to target ads at you.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_privacy_dashboard",
-        "title": "Privacy dashboard for data control",
-        "plain_english": "Microsoft provides a privacy dashboard where you can view, clear, and manage your browsing, search, and location data.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_account_deletion_available",
-        "title": "Account deletion available",
-        "plain_english": "You can delete your Microsoft account and its data, though there is a 60-day waiting period before permanent deletion.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_opt_out_ads",
-        "title": "Can opt out of personalized ads",
-        "plain_english": "You can opt out of personalized advertising through Microsoft's privacy settings, though this doesn't stop all data collection.",
+        "plain_english": "Microsoft states it does not use your email, chat, video calls, documents, photos, or other personal files to target ads.",
         "severity": "positive"
       }
     ]
@@ -99,8 +75,8 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Word does not need camera or microphone access as a core feature. If you use dictation or insert photos, those permissions are requested on demand only.",
-      "detail": "The Microsoft Word iOS app does not list camera or microphone data collection in its App Store privacy label. Camera and mic access would only be triggered by user-initiated actions like inserting photos or using dictation.",
+      "plain_english": "Microsoft states it does not use your documents, photos, or voice content to target ads.",
+      "detail": "The policy does not explicitly describe camera or microphone access, but states content is not used for ad targeting.",
       "policy_excerpt": "Microsoft does not use what you say in email, human-to-human chat, video calls, or voice mail, or your documents, photos, or other personal files to target ads.",
       "concerns": [],
       "score_impact": 0
@@ -114,11 +90,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Word collects coarse location data (like your city or region) through your IP address for analytics and product improvement.",
-      "detail": "The App Store privacy label lists 'Coarse Location' under data collected for analytics and linked to your identity. This is IP-based location estimation, not precise GPS. Microsoft's privacy statement confirms it collects location data including precise (GPS) and imprecise (IP-based) location.",
+      "plain_english": "Microsoft states it may collect precise location data like GPS, or imprecise location such as your city or postal code from your IP address.",
+      "detail": "Coarse location collected via IP. The App Store label lists 'Coarse Location' for analytics.",
       "policy_excerpt": "Location data — Precise location data like GPS or imprecise location data such as your city or postal code derived from your IP address.",
       "concerns": ["Coarse location collected even without explicit GPS permission"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
@@ -129,11 +105,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Word accesses your contacts so you can share documents with people, and this data is linked to your Microsoft account.",
-      "detail": "The App Store privacy label lists 'Contacts' under data collected for App Functionality and linked to your identity. Microsoft's privacy statement says it collects 'Contacts and relationships — data from sharing, contact management, and communication features.'",
+      "plain_english": "Microsoft states it may collect contacts and relationships data from sharing, contact management, and communication features.",
+      "detail": "Contacts collected for app functionality. The policy does not explicitly say they are uploaded to servers or linked to your identity.",
       "policy_excerpt": "Contacts and relationships — data from sharing, contact management, and communication features.",
       "concerns": ["Contacts are linked to your identity rather than anonymized"],
-      "score_impact": 6.0
+      "score_impact": -6.0
     },
     {
       "id": "storage_file_access",
@@ -144,26 +120,26 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Word needs access to your documents to function — that's its whole purpose. Documents you store in OneDrive are synced to Microsoft's cloud.",
-      "detail": "File access is core to Word's functionality. When documents are stored in OneDrive or SharePoint, they are processed on Microsoft's cloud servers. The privacy statement states that content (files, communications, emails, photos, documents) stored or processed via Microsoft cloud services is collected. Connected experiences like Translator send document content to Microsoft's servers for processing.",
+      "plain_english": "Microsoft states it may collect content such as files, emails, photos, and documents stored or processed via Microsoft cloud services.",
+      "detail": "Document content processed on Microsoft cloud servers when using OneDrive or connected experiences.",
       "policy_excerpt": "Content — Files, communications, emails, photos, songs, documents, and other media stored or processed via Microsoft cloud services.",
       "concerns": ["Document content processed on Microsoft cloud servers", "Connected experiences may send document content to Microsoft"],
-      "score_impact": 3.0
+      "score_impact": -3.0
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "Microsoft shares your data with affiliates, advertising platforms, vendors, and other third parties — and you cannot fully opt out of all sharing.",
-      "detail": "Microsoft's privacy statement explicitly mentions sharing data with: Microsoft-controlled affiliates and subsidiaries, vendors/agents working on Microsoft's behalf, third-party advertising platforms and advertisers, and law enforcement when required. Data may also be shared during corporate transactions (merers, asset sales). While vendors are contractually restricted from using data for other purposes, advertising platforms use your data for targeted ad delivery and measurement.",
+      "background_access": false,
+      "plain_english": "Microsoft states it may share data with third-party advertising platforms and advertisers to deliver and measure ads.",
+      "detail": "The policy states data may be shared with third-party advertising platforms and advertisers.",
       "policy_excerpt": "Data may be shared with third party advertising platforms and advertisers to facilitate the delivery and measurement of ads.",
       "concerns": ["Data shared with advertising platforms", "Data shared with unspecified vendors and agents", "Corporate transaction data sharing clause", "Push notification data sent to third-party providers on non-Windows devices"],
-      "score_impact": 19.5
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
@@ -174,11 +150,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "A Microsoft account is required to use Word. Your name, email, and phone number are collected and linked across Microsoft services.",
-      "detail": "Word requires a Microsoft account for full functionality. The App Store privacy label lists email address, name, phone number, and user ID as data collected for app functionality and linked to your identity. This data is shared across Microsoft's ecosystem (Office, OneDrive, Outlook, etc.). Using a work or school account gives your organization access to your interaction data and files.",
+      "plain_english": "Microsoft states it collects your name, email, postal address, phone number, and similar contact details, plus passwords and security information for authentication.",
+      "detail": "Standard account information for authentication and app functionality.",
       "policy_excerpt": "Name and contact data — First/last name, email, postal address, phone number, and similar contact details. Credentials — Passwords, password hints, and security information used for authentication.",
       "concerns": ["Account data linked across entire Microsoft ecosystem", "Work/school accounts give organization access to your data"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "behavioural_ad_tracking",
@@ -189,11 +165,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": true,
-      "plain_english": "Microsoft tracks how you use Word and other Microsoft products, builds an advertising profile from your behavior, and shows you targeted ads — though you can opt out.",
-      "detail": "The App Store privacy label lists 'Product Interaction' data for both analytics and app functionality, linked to your identity. Microsoft's privacy statement describes collecting 'Interests and favorites' inferred from browsing and ad interactions, plus 'Content consumption data' for ad personalization. The company uses cookies (MUID, ANID, etc.) for tracking and ad targeting. Interest-based advertising can be opted out of, but this doesn't stop data collection for other purposes.",
+      "plain_english": "Microsoft states it may use data from your interactions to deliver relevant advertising, and collects online activity data for interest-based ads.",
+      "detail": "Product interaction and browsing data may be used for ad personalization.",
       "policy_excerpt": "We may use data from interactions and our first-party and third-party properties to deliver relevant advertising. Interest-based advertising — Collecting online activity data to deliver relevant ads.",
       "concerns": ["Product interaction data linked to your identity", "Cross-device advertising profile", "Interest inference from browsing behavior", "Opt-out doesn't stop data collection"],
-      "score_impact": 16.25
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -204,11 +180,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app is rated 4+ on the App Store, but a Microsoft account requires users to be 13 or older. Parental controls are available but enforcement relies on account creation.",
-      "detail": "The App Store age rating is 4+, meaning Apple considers the content suitable for all ages. However, creating a Microsoft account requires being 13 or older (or the applicable age in your region). Microsoft provides parental controls and a Family Safety feature for child accounts, but there is no robust age verification mechanism preventing younger users from accessing the app. For K-12 educational use, Microsoft commits to not selling student data or using it for behavioral targeting.",
+      "plain_english": "Microsoft states its products either block underage users or require parental consent for users under 13.",
+      "detail": "Age requirement exists but enforcement mechanism is not described.",
       "policy_excerpt": "For users under 13 (or the age specified by local law), Microsoft products either block underage users or require parental consent/authorization.",
       "concerns": ["4+ App Store rating inconsistent with 13+ account requirement", "No robust age verification in the app itself"],
-      "score_impact": 3.0
+      "score_impact": -3.0
     },
     {
       "id": "network_internet_activity",
@@ -219,11 +195,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft logs your IP address for security and may use it to estimate your location for analytics.",
-      "detail": "The privacy statement confirms collection of IP addresses, device identifiers, and nearby network data as part of 'Device and usage data.' IP addresses are used for security, location estimation, and product analytics. On non-Windows devices, push notification data may be sent to third-party notification providers.",
+      "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and nearby network data.",
+      "detail": "IP and network data collected for security and analytics.",
       "policy_excerpt": "Device and usage data — Hardware/software info, product keys, IP address, device identifiers (e.g., IMEI), nearby network data.",
       "concerns": ["IP-based location inference", "Push notification data shared with third-party providers"],
-      "score_impact": 1.5
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
@@ -234,11 +210,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": true,
-      "plain_english": "Microsoft collects your device ID, hardware details, software version, and creates unique tracking identifiers that follow you across sessions.",
-      "detail": "The App Store privacy label lists 'Device ID' as data collected for both analytics and app functionality, linked to your identity. Microsoft's privacy statement describes collecting device identifiers, hardware/software info, product keys, and creating unique IDs for diagnostic data tracking. The MUID cookie and advertising ID are used for cross-device tracking. Diagnostic data includes information about which apps are running, error reports, and performance data.",
+      "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and nearby network data.",
+      "detail": "Device identifiers collected for analytics and app functionality.",
       "policy_excerpt": "Device and usage data — Hardware/software info, product keys, IP address, device identifiers (e.g., IMEI), nearby network data.",
       "concerns": ["Unique device identifiers created for tracking", "Cross-device tracking via MUID cookie and advertising ID", "Diagnostic data includes app usage patterns"],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -249,11 +225,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Word may use Face ID to unlock the app, but biometric data stays on your device and is never sent to Microsoft's servers.",
-      "detail": "On iOS, Word may use Face ID or Touch ID for app lock, but biometric authentication is handled entirely by the iOS Secure Enclave. Microsoft's broader privacy statement mentions collecting biometric data (facial recognition, fingerprints) with consent for services like Windows Hello, but this does not apply to Word on iOS.",
+      "plain_english": "Microsoft states it may collect biometric data such as facial or fingerprint recognition, with consent, for services like Windows Hello.",
+      "detail": "The policy mentions Windows Hello biometrics, not iOS Face ID. Biometric authentication on iOS is handled locally by the device.",
       "policy_excerpt": "Biometric data and identifiers — Physical, physiological, or behavioral characteristics for identification (e.g., Windows Hello facial/fingerprint recognition), collected with consent.",
       "concerns": [],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "financial_payment",
@@ -264,11 +240,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "In-app purchases for Microsoft 365 subscriptions go through Apple's payment system, so your card details are handled by Apple, not Microsoft — but Microsoft still collects some payment-related data.",
-      "detail": "Word offers Microsoft 365 subscriptions as in-app purchases, processed through Apple's App Store payment system. Microsoft's privacy statement separately mentions collecting 'Payment data — Payment instrument numbers and associated security codes' and 'Subscription and licensing data.' For iOS in-app purchases, Apple handles the actual payment, but Microsoft receives subscription and licensing information.",
+      "plain_english": "Microsoft states it collects payment instrument numbers and subscription/licensing data.",
+      "detail": "Payment and subscription data collected for in-app purchases and licensing.",
       "policy_excerpt": "Payment data — Payment instrument numbers and associated security codes. Subscription and licensing data — Information about subscriptions, licenses, and entitlements.",
       "concerns": ["Microsoft collects subscription and licensing data even when Apple processes the payment"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -279,11 +255,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your Microsoft account and its data, but there's a 60-day waiting period, and some data may be kept for legal or business reasons.",
-      "detail": "Microsoft provides a privacy dashboard for viewing and clearing browsing, search, and location data. Users can request data deletion through account closure, but there is a 60-day waiting period before permanent deletion, during which the account can be reinstated. Some data may be retained even after deletion for legal compliance, security, or business purposes. Data export tools are available for some services.",
+      "plain_english": "Microsoft states it retains personal data as long as needed for the stated purposes, and deletes or de-identifies it when no longer needed.",
+      "detail": "Retention tied to purpose. Some data may be kept longer if required by law.",
       "policy_excerpt": "Microsoft retains personal data for the period needed to fulfill the purposes outlined in the statement, unless a longer retention period is required by law. When data is no longer needed, it is deleted or de-identified.",
       "concerns": ["60-day waiting period for account deletion", "Some data retained after deletion for legal/business reasons", "Not all data types can be deleted through the dashboard"],
-      "score_impact": 3.0
+      "score_impact": -3.0
     },
     {
       "id": "policy_change_notification",
@@ -294,11 +270,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft can change its privacy policy at any time — continued use of the app means you automatically accept the changes.",
-      "detail": "Microsoft's Services Agreement states it may change terms at any time. The privacy statement says users are 'encouraged to review it periodically' and the 'What's new?' page describes changes. There is no requirement for active re-consent; continued use after changes constitutes acceptance. If you disagree, your only option is to stop using the services and close your Microsoft account.",
+      "plain_english": "Microsoft states it may update the privacy statement, and if you disagree, you must stop using the Services and close your account.",
+      "detail": "No advance notice mechanism described beyond encouraging periodic review.",
       "policy_excerpt": "Microsoft may update this privacy statement. You are encouraged to review this privacy statement periodically. If you disagree, you must stop using the Services, close your Microsoft account.",
       "concerns": ["No advance notice required for policy changes", "Continued use equals consent", "No option to reject changes while keeping the account"],
-      "score_impact": 3.25
+      "score_impact": -3.25
     }
   ],
   "scoring": {

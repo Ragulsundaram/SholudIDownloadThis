@@ -1,0 +1,21 @@
+{
+  "slug": "lightroom",
+  "existing": {
+    "policy_url": "https://www.adobe.com/privacy/policy-linkfree.html",
+    "developer": "ADOBE SYSTEMS SOFTWARE IRELAND LIMITED",
+    "category": "Photo & Video",
+    "name": "Lightroom Photo & Video Editor"
+  },
+  "fresh": {
+    "policy_url": "http://www.adobe.com/go/privacy_policy_linkfree_uk",
+    "developer": "ADOBE SYSTEMS SOFTWARE IRELAND LIMITED",
+    "category": "Photo & Video",
+    "policy_text": ""
+  },
+  "comparison": {
+    "policy_url_match": false,
+    "developer_match": true,
+    "category_match": true,
+    "policy_text_length": 0
+  }
+}

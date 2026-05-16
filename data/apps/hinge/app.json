@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-11",
+    "analyzed_at": "2026-05-16",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://hinge.co/privacy",
     "terms_url": "https://hinge.co/terms",
-    "policy_last_updated": "unknown",
+    "policy_last_updated": "2025-11-24",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Strict re-analysis: corrected customer care retention from 6 years to 5 years per policy text. Downgraded red_advertiser_sharing from high to medium because the policy states some advertising data is transformed into non-identifiable forms. Downgraded red_long_retention from high to medium because financial retention is standard for tax compliance and face data is normally deleted within 30 days. Corrected total_deductions arithmetic."
   },
   "app": {
-    "slug": "hinge-ios",
+    "slug": "hinge",
     "name": "Hinge",
     "developer": "Hinge, Inc. (Match Group)",
     "app_store_url": "https://apps.apple.com/us/app/hinge-dating-app-match-date/id595287172",
@@ -22,43 +22,43 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 41,
+    "score": 47,
     "grade": "D",
-    "one_liner": "Hinge collects extremely sensitive personal data including your sexual orientation, health info, racial background, and even your face geometry, then shares it with advertisers and vendors.",
-    "summary": "Hinge collects account details, profile information, user content, and sensitive categories including sexual orientation, sexual life, health, racial or ethnic origins, religious beliefs, and political affiliations. The app also gathers purchase records, device and usage data, geolocation, face geometry for verification, and government ID if provided. Social media imports and details about others submitted via reports are also processed. Data is visible to members through profiles and disclosed to outside vendors for hosting, payments, analytics, and security. Advertising partners receive information for campaigns. Related companies also receive data to improve safety, recommendations, and cross-platform features. Users may request access, correction, deletion, or restriction. Retention periods vary: a safety window lasts three months after account closure (up to two years after a ban). Financial records kept for a decade. Face data erased within thirty days. Customer care exchanges and approximate download locations retained for five years. Biometric confirmation images may be retained for 36 months.",
+    "one_liner": "Hinge collects extremely sensitive personal data including your sexual orientation, health info, racial background, and face geometry, and shares some data with advertisers and vendors.",
+    "summary": "Hinge collects account details, profile information, user content, and sensitive categories including sexual orientation, sexual life, health, racial or ethnic origins, religious beliefs, and political affiliations. The app also gathers purchase records, device and usage data, geolocation, face geometry for verification, and government ID if provided. Social media imports and details about others submitted via reports are also processed. Data is visible to members through profiles and disclosed to outside vendors for hosting, payments, analytics, and security. Advertising partners receive certain information for campaigns, and some of it is transformed into non-identifiable forms. Related companies also receive data to improve safety, recommendations, and cross-platform features. Users may request access, correction, deletion, or restriction. Retention periods vary: a safety window lasts three months after account closure (up to two years after a ban). Financial records kept for ten years. Face data erased within thirty days. Customer care exchanges and approximate download locations retained for five years. Biometric confirmation images may be retained for thirty-six months.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Hinge collects extremely sensitive personal data including sexual orientation, health information, and biometrics. It shares this data with advertisers and vendors, and retains some of it for years even after you delete your account."
+    "recommendation_reason": "Hinge collects extremely sensitive personal data including sexual orientation, health information, and biometrics. It shares some data with advertisers and vendors, and retains some information for years even after you delete your account."
   },
   "flags": {
     "red": [
       {
         "id": "red_sensitive_data",
         "title": "Collects highly sensitive data",
-        "plain_english": "Hinge collects information about your sexual orientation, health, race, religion, and politics. This is extremely personal and could be harmful if leaked.",
+        "plain_english": "Hinge collects information about your sexual orientation, health, race, religion, and politics if you choose to provide it. This is extremely personal and could be harmful if leaked.",
         "severity": "high"
       },
       {
         "id": "red_biometric_collection",
         "title": "Collects your face geometry",
-        "plain_english": "Hinge scans your face to verify your identity and keeps that biometric data for up to three years.",
+        "plain_english": "Hinge may scan your face to verify your identity. Biometric confirmation images may be retained for up to thirty-six months.",
         "severity": "high"
       },
       {
         "id": "red_advertiser_sharing",
         "title": "Shares data with advertisers",
-        "plain_english": "Hinge shares your information with advertising partners so they can target ads to you.",
-        "severity": "high"
+        "plain_english": "Hinge shares certain information with advertising partners so they can target ads to you. Some of your data is transformed into a form that cannot be used to identify you personally.",
+        "severity": "medium"
       },
       {
         "id": "red_long_retention",
         "title": "Keeps data for years",
-        "plain_english": "Even after you delete your account, Hinge keeps your financial records for 10 years, your face data for 3 years, and customer service chats for 6 years.",
-        "severity": "high"
+        "plain_english": "Even after you delete your account, Hinge keeps your financial records for ten years, your customer care exchanges for five years, and biometric confirmation images for up to thirty-six months.",
+        "severity": "medium"
       },
       {
         "id": "red_government_id",
         "title": "May request government ID",
-        "plain_english": "Hinge can ask for your government ID for verification purposes, which is a serious privacy risk.",
+        "plain_english": "Hinge can ask for your government ID for verification purposes, which is a serious privacy risk if provided.",
         "severity": "medium"
       }
     ],
@@ -72,7 +72,7 @@
       {
         "id": "green_face_data_deleted",
         "title": "Face data deleted within 30 days",
-        "plain_english": "If you don't use the verification feature, your face geometry data is deleted within 30 days.",
+        "plain_english": "If you do not use the verification feature, your face geometry data is deleted within thirty days.",
         "severity": "positive"
       }
     ]
@@ -87,9 +87,9 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Hinge needs your camera so you can upload profile photos. It also uses your camera for face verification.",
-      "detail": "Camera used for profile photos and face geometry verification.",
-      "policy_excerpt": "face geometry for verification",
+      "plain_english": "Hinge needs your camera for face verification and to upload profile photos.",
+      "detail": "Camera is used for profile photos and face geometry verification. Audio content may also be shared through chats.",
+      "policy_excerpt": "You may choose to participate in certain of our features, like Selfie Verification, that involve the collection of face geometry data",
       "concerns": [
         "Face geometry captured for verification"
       ],
@@ -104,12 +104,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Hinge collects your exact location to show you potential matches nearby. This is used for matching and profiling.",
-      "detail": "Geolocation collected with permission for nearby matching.",
-      "policy_excerpt": "geolocation with permission",
+      "plain_english": "Hinge collects your exact location if you give permission, to show you potential matches nearby.",
+      "detail": "Geolocation collected with permission for nearby matching. If you decline permission, features that rely on precise geolocation will not be available.",
+      "policy_excerpt": "If you give us permission, we collect your geolocation (latitude and longitude) from your device.",
       "concerns": [
         "Precise location tracked",
-        "Used for profiling"
+        "Used for matching"
       ],
       "score_impact": -9.75
     },
@@ -122,14 +122,14 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Hinge can import your social media profiles and contacts. This data is used to build your profile and find connections.",
-      "detail": "Social media imports and contact information processed.",
-      "policy_excerpt": "Social media imports and details about others submitted via reports",
+      "plain_english": "Hinge can import data from your social media accounts and collects information about others if you submit reports.",
+      "detail": "Social media imports and contact information of others are processed when you use certain features or submit reports involving other members.",
+      "policy_excerpt": "if you use the contact details of someone you know for a given feature or if you submit a query or report involving a member",
       "concerns": [
         "Social media data imported",
-        "Contacts processed"
+        "Contact details of others processed through reports"
       ],
-      "score_impact": -13.0
+      "score_impact": -13
     },
     {
       "id": "storage_file_access",
@@ -140,11 +140,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Hinge needs access to your photos so you can upload them to your profile. You choose which photos to share.",
-      "detail": "File access for uploading profile photos.",
-      "policy_excerpt": "profile information, and user content",
+      "plain_english": "Hinge needs access to your photos and videos so you can upload them to your profile.",
+      "detail": "File access for uploading profile photos, videos, and audio content. You choose which content to share.",
+      "policy_excerpt": "you share photos, videos, audio, text and other types of content",
       "concerns": [],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -156,8 +156,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Hinge shares your data with companies that run the app, advertisers, and other dating apps in the same company. Your profile is visible to all members.",
-      "detail": "Shared with vendors (hosting, payments, analytics, security), advertising partners, and related companies for safety and cross-platform features.",
-      "policy_excerpt": "disclosed to outside vendors for hosting, payments, analytics, and security. Advertising partners receive information for campaigns, and related companies also receive data to improve safety, recommendations, and cross-platform features.",
+      "detail": "Shared with vendors (hosting, payments, analytics, security), advertising partners, and related companies for safety and cross-platform features. Your public profile is visible to other members.",
+      "policy_excerpt": "We share data with vendors and partners who help us operate, promote and improve our service. They provide us services such as data hosting and maintenance, analytics, customer care, marketing, advertising, payment processing, legal support, and security operations.",
       "concerns": [
         "Shared with advertisers",
         "Shared with related companies (Match Group)",
@@ -174,12 +174,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Hinge collects extremely sensitive identity data including your sexual orientation, health, race, religion, politics, and even government ID. This is far more than most apps ask for.",
-      "detail": "Sexual orientation, sexual life, health, racial/ethnic origins, religious beliefs, political affiliations, government ID, face geometry collected.",
-      "policy_excerpt": "sexual orientation, sexual life, health, racial or ethnic origins, religious beliefs or political affiliations, government ID if provided, face geometry for verification",
+      "plain_english": "Hinge collects extremely sensitive identity data including your sexual orientation, health, race, religion, and politics if you choose to provide it. It may also ask for government ID.",
+      "detail": "Sexual orientation, sexual life, health, racial or ethnic origins, religious beliefs, political affiliations, government ID, and face geometry are collected if you provide them. Some of this data is considered sensitive or special in certain countries.",
+      "policy_excerpt": "Some of this data may be considered sensitive or special in certain countries, such as details about sexual orientation, sexual life, health, racial or ethnic origins, religious beliefs or political affiliations.",
       "concerns": [
-        "Extremely sensitive data collected",
-        "Government ID requested",
+        "Extremely sensitive data collected if provided",
+        "Government ID may be requested",
         "Biometric data collected"
       ],
       "score_impact": -9.75
@@ -193,12 +193,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Hinge tracks how you use the app and shares this with advertisers to show you targeted ads. American users can opt out of some tracking.",
-      "detail": "Device and usage data tracked continuously. Shared with advertising partners. U.S. users may opt out of targeted advertising.",
-      "policy_excerpt": "device and usage data, how viewers engage with pictures, hyperlink usage, conversation themes, and American users may opt out of targeted advertising",
+      "plain_english": "Hinge tracks how you use the app and may share certain information with advertising partners to show you relevant ads. American users can opt out of some tracking.",
+      "detail": "Device and usage data tracked continuously. Shared with advertising partners. U.S. users may opt out of targeted advertising, sales, or sharing under applicable laws.",
+      "policy_excerpt": "To help improve the relevance of these ads, we provide certain info about you to third parties, including advertising partners",
       "concerns": [
         "Behavior tracked for ads",
-        "Conversation themes analyzed"
+        "Interactions with ads on third-party sites tracked"
       ],
       "score_impact": -16.25
     },
@@ -212,8 +212,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Hinge is an adult dating app and does not allow users under 18.",
-      "detail": "Dating app for adults only. No children's data handling.",
-      "policy_excerpt": "",
+      "detail": "Dating app restricted to individuals 18 years of age or older. The platform does not permit individuals under 18.",
+      "policy_excerpt": "Our service is restricted to individuals who are 18 years of age or older. We do not permit individuals under the age of 18 on our platform.",
       "concerns": [],
       "score_impact": 0
     },
@@ -226,11 +226,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Hinge logs your internet activity including which links you click and where you downloaded the app from. This is used for safety and profiling.",
-      "detail": "Hyperlink usage and approximate download locations tracked. Retained for five years.",
-      "policy_excerpt": "hyperlink usage, approximate download locations retained for five years",
+      "plain_english": "Hinge logs your internet activity including which ads you interact with and where you downloaded the app from. This is used for safety and profiling.",
+      "detail": "Referring webpages, ads interacted with, and approximate download locations tracked. Customer care records and imprecise location of download retained for five years in support of safety efforts.",
+      "policy_excerpt": "information shown to you, referring webpages, ads you interacted with",
       "concerns": [
-        "Links clicked tracked",
+        "Ads clicked tracked",
         "Download location logged"
       ],
       "score_impact": -3.25
@@ -245,8 +245,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Hinge collects detailed device information to track you and keep your account secure.",
-      "detail": "Device and usage data collected continuously.",
-      "policy_excerpt": "device and usage data",
+      "detail": "Device and usage data collected continuously, including IP address, device ID, device type, operating system, app settings, advertising IDs, and identifiers associated with cookies or other technologies.",
+      "policy_excerpt": "IP address, device ID, device type, operating systems and configurations, network information, as well as app settings and characteristics, app crashes, advertising IDs",
       "concerns": [
         "Device data collected for tracking"
       ],
@@ -261,12 +261,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Hinge collects your face geometry for verification and may ask for health information in your profile. This is very sensitive data.",
-      "detail": "Face geometry collected for verification. Health data may be provided in profile. Face data erased within 30 days normally, but biometric confirmation images retained for 36 months.",
-      "policy_excerpt": "face geometry for verification, health, biometric confirmation images may be retained for 36 months",
+      "plain_english": "Hinge collects your face geometry for verification and may collect health information if you include it in your profile. This is very sensitive data.",
+      "detail": "Face geometry collected for Selfie Verification. Health data may be provided in profile. Face data erased within thirty days normally, but biometric confirmation images may be retained for thirty-six months.",
+      "policy_excerpt": "You may choose to participate in certain of our features, like Selfie Verification, that involve the collection of face geometry data",
       "concerns": [
         "Biometric data collected",
-        "Retained for up to 3 years"
+        "Biometric confirmation images retained up to 36 months"
       ],
       "score_impact": -9.75
     },
@@ -279,9 +279,9 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Hinge collects purchase records when you buy premium features. Financial records are kept for 10 years.",
-      "detail": "Purchase records collected. Financial records retained for a decade.",
-      "policy_excerpt": "purchase records, financial records are kept for a decade",
+      "plain_english": "Hinge collects purchase records when you buy premium features. If you pay directly rather than through Apple or Google, you provide your card number.",
+      "detail": "Purchase records collected. If paying directly, debit or credit card number or other financial information is provided. Financial records retained for ten years to comply with tax and accounting legal requirements.",
+      "policy_excerpt": "When you pay directly with us (rather than through a platform such as iOS or Android), you provide your debit or credit card number or other financial information.",
       "concerns": [
         "Financial records kept 10 years"
       ],
@@ -296,13 +296,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your Hinge account, but they keep your data for 3 months (or 2 years if you were banned). Financial records stay for 10 years and customer service chats for 6 years.",
-      "detail": "Users may request access, correction, deletion, or restriction. Safety window: 3 months after closure, up to 2 years after ban. Financial records 10 years. Face data 30 days. Customer care 5 years. Biometric images 36 months.",
-      "policy_excerpt": "You can access and review some data directly by logging into your account. A safety window lasts three months after account closure, or up to two years after a ban. Financial records are kept for a decade, while face data is normally erased within thirty days. Customer care exchanges and approximate download locations are retained for five years. Biometric confirmation images may be retained for 36 months.",
+      "plain_english": "You can delete your Hinge account, but they keep your data for three months (or two years if you were banned). Financial records stay for ten years and customer service exchanges for five years.",
+      "detail": "Users may request access, correction, deletion, or restriction. Safety window: three months after closure, up to two years after ban. Financial records ten years. Face data thirty days. Customer care exchanges and approximate download locations retained for five years. Biometric confirmation images may be retained for thirty-six months.",
+      "policy_excerpt": "we keep customer care exchanges with you for five years from the date of the communication; customer care records and supporting data, as well as imprecise location of download/purchase, for five years",
       "concerns": [
         "Extremely long retention periods",
         "Financial records kept 10 years",
-        "Biometric images kept 3 years"
+        "Biometric images kept up to 36 months"
       ],
       "score_impact": -6.5
     },
@@ -310,18 +310,16 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't clearly say how Hinge will tell you if the privacy rules change.",
-      "detail": "No specific policy change notification mechanism mentioned.",
-      "policy_excerpt": "",
-      "concerns": [
-        "No clear notification mechanism stated"
-      ],
-      "score_impact": -2.5
+      "plain_english": "Hinge says it will notify you before material privacy policy changes take effect so you have time to review them.",
+      "detail": "The policy explicitly states that users will be notified before material changes take effect, allowing time to review changes.",
+      "policy_excerpt": "We will notify you before material changes take effect so that you have time to review the changes.",
+      "concerns": [],
+      "score_impact": 0
     }
   ],
   "scoring": {
@@ -347,14 +345,14 @@
         "risk": "risky",
         "max": 20,
         "rate": 0.65,
-        "deduction": 13.0
+        "deduction": 13
       },
       {
         "category": "storage_file_access",
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "data_sharing_third_parties",
@@ -421,14 +419,14 @@
       },
       {
         "category": "policy_change_notification",
-        "risk": "unknown",
+        "risk": "safe",
         "max": 5,
-        "rate": 0.5,
-        "deduction": 2.5
+        "rate": 0,
+        "deduction": 0
       }
     ],
-    "total_deductions": 121.75,
-    "final_score": 41,
+    "total_deductions": 109.5,
+    "final_score": 47,
     "grade": "D"
   }
 }

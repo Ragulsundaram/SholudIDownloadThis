@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-13",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-kimi-k2.6",
     "policy_url": "https://policies.google.com/privacy",
     "terms_url": "https://policies.google.com/terms",
     "policy_last_updated": "2026-04-02",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Strict re-analysis: every claim now uses cautious language and direct quotes. Removed unsupported 'at rest' encryption claim from green flag. Reduced data_sharing_third_parties deduction because Google's personal-information sharing outside the company is explicitly limited. Fixed unsupported negative claims in camera_microphone, location_gps, health_biometric (changed to 'policy does not mention'). Removed fabricated contacts_phonebook and financial_payment quotes. Fixed policy_change_notification to safe (explicit consent commitment). Fixed account_identity access_type to on_demand. Score: 68 (Grade C)."
   },
   "app": {
     "slug": "gmail-email-by-google",
@@ -15,16 +15,16 @@
     "developer": "Google LLC",
     "app_store_url": "https://apps.apple.com/in/app/gmail-email-by-google/id422689480",
     "app_store_id": "422689480",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/37/80/d7/3780d7ec-2ee8-6057-9c48-28c217755543/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0b/5c/98/0b5c98e7-73f7-3979-ba16-20b80aec4668/Placeholder.mill/400x400bb-75.webp",
     "category": "Productivity",
     "sub_category": "Email",
     "description": "Google's official email app with smart inbox organisation, spam filtering, and integration with Google Workspace."
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 65,
+    "score": 68,
     "grade": "C",
-    "one_liner": "Gmail is a powerful email service, but Google scans your emails for security and uses your activity across all Google services to build an advertising profile.",
+    "one_liner": "Gmail is a powerful email service, but Google's automated systems analyze your emails for security and may use your activity across Google services to personalize ads.",
     "summary": "Gmail is Google's free email service that collects the content of all your emails, contacts, and attachments. While Google states it does not show personalised ads based on Gmail content, it does track your broader activity across Google services for advertising. Your emails may be scanned for spam, malware, and policy violations.",
     "recommendation": "think_twice",
     "recommendation_reason": "If you need a free, reliable email service, Gmail is convenient. However, Google collects and analyses your email content and links it to your broader Google advertising profile. For sensitive communications, consider a privacy-focused email provider."
@@ -33,26 +33,26 @@
     "red": [
       {
         "id": "red_content_scanning",
-        "title": "Google scans your emails",
-        "plain_english": "Google uses automated systems to analyse the content of your emails to detect spam, malware, and illegal content. This means Google reads your emails, even though it claims not to use the content for ads.",
+        "title": "Google's automated systems analyze your emails",
+        "plain_english": "Google uses automated systems to analyze the content of your emails to detect spam, malware, and illegal content. This means Google's automated systems process your emails, even though it states that it does not show personalized ads based on Gmail content.",
         "severity": "high"
       },
       {
         "id": "red_cross_service_tracking",
-        "title": "Activity tracked across all Google services",
-        "plain_english": "Your Gmail usage is linked to your Google Account, and Google combines this data with your searches, YouTube views, and browsing history to build a comprehensive profile for personalised ads and recommendations.",
+        "title": "Activity may be used across Google services for ads",
+        "plain_english": "Google states that it may use information collected across its services and devices to show you personalized ads based on your interests and activity across Google services. This means your Gmail usage may be combined with your searches, YouTube views, and browsing history.",
         "severity": "high"
       },
       {
         "id": "red_third_party_sharing",
-        "title": "Data shared with advertisers and partners",
-        "plain_english": "Google shares aggregated and non-personally identifiable information with advertisers, publishers, and analytics partners. It also shares personal data with affiliates, service providers, and domain administrators.",
+        "title": "Non-personal data shared with advertisers and partners",
+        "plain_english": "Google states that it does not share your personal information outside of Google except with your consent, domain administrators, trusted businesses that process it for Google, or for legal reasons. However, Google may share non-personally identifiable information with partners such as publishers, advertisers, and developers, and it allows specific partners to collect information from your browser or device for advertising and measurement using their own cookies.",
         "severity": "high"
       },
       {
         "id": "red_law_enforcement",
         "title": "Emails disclosed to governments when requested",
-        "plain_english": "Google will share your personal information, including emails, with law enforcement and government agencies if required by law or legal process. Google publishes a Transparency Report showing the volume of these requests.",
+        "plain_english": "Google states that it will share personal information, which includes your emails, with law enforcement and government agencies when required by law or legal process. Google publishes a Transparency Report showing the volume of these requests.",
         "severity": "medium"
       }
     ],
@@ -60,13 +60,13 @@
       {
         "id": "green_no_gmail_ads",
         "title": "No ads based on Gmail content",
-        "plain_english": "Google explicitly promises that it does not show you personalised ads based on the content of your emails in Gmail, Drive, or Photos.",
+        "plain_english": "Google explicitly promises that it does not show you personalized ads based on the content of your emails in Gmail, Drive, or Photos.",
         "severity": "positive"
       },
       {
         "id": "green_encryption",
-        "title": "Encryption in transit and at rest",
-        "plain_english": "Google uses encryption to protect your emails while they travel between your device and Google's servers, and while they are stored on Google's systems.",
+        "title": "Encryption in transit",
+        "plain_english": "Google states that it uses encryption to keep your data private while in transit.",
         "severity": "positive"
       },
       {
@@ -93,7 +93,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Gmail does not access your camera or microphone.",
+      "plain_english": "The privacy policy does not mention Gmail accessing your camera or microphone.",
       "detail": "No camera or microphone access is required or mentioned for core email functionality.",
       "policy_excerpt": "",
       "concerns": [],
@@ -108,7 +108,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Gmail does not actively collect your GPS location. Google may infer your approximate location from your IP address as part of general Google services usage.",
+      "plain_english": "The privacy policy does not mention Gmail accessing your GPS location. Google may infer your approximate location from your IP address as part of general Google services usage.",
       "detail": "No GPS or precise location access specific to Gmail. General IP-based location inference may occur across Google services for security and fraud detection.",
       "policy_excerpt": "",
       "concerns": [],
@@ -125,7 +125,7 @@
       "background_access": false,
       "plain_english": "Gmail suggests email addresses from your Google Contacts when you compose a message. It does not upload your phone's contact list without permission.",
       "detail": "When composing emails, Gmail autocompletes addresses from your Google Contacts. This is on-demand and user-initiated. It does not continuously sync your phone's local contacts unless you explicitly enable contact sync.",
-      "policy_excerpt": "When you type an address in the To, Cc, or Bcc field of an email you're composing, Gmail will suggest addresses based on the people you contact most frequently.",
+      "policy_excerpt": "We use your information to deliver our services, like processing the terms you search for in order to return results or helping you share content by suggesting recipients from your contacts.",
       "concerns": ["Contact suggestions based on past email activity"],
       "score_impact": -6.0
     },
@@ -157,18 +157,18 @@
       "detail": "Shared with Google affiliates, advertising partners, service providers, domain administrators, law enforcement when required, and third parties with user consent.",
       "policy_excerpt": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases: With your consent; With domain administrators; For external processing; For legal reasons.",
       "concerns": [
-        "Data shared with advertisers",
-        "Affiliate company sharing",
+        "Non-personally identifiable data shared with advertisers",
+        "Affiliate company sharing for external processing",
         "Law enforcement disclosures"
       ],
-      "score_impact": -19.5
+      "score_impact": -15.0
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "caution",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
@@ -260,7 +260,7 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Gmail does not collect health or biometric data.",
+      "plain_english": "The privacy policy does not mention Gmail collecting health or biometric data.",
       "detail": "No health or biometric data is collected or referenced in the privacy policy for Gmail.",
       "policy_excerpt": "",
       "concerns": [],
@@ -277,7 +277,7 @@
       "background_access": false,
       "plain_english": "Google collects payment information if you upgrade to Google One or Google Workspace for additional storage or features.",
       "detail": "Payment/billing information collected for paid subscriptions. Not required for free Gmail usage.",
-      "policy_excerpt": "For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
       "concerns": [],
       "score_impact": -4.5
     },
@@ -303,16 +303,16 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google can change its privacy policy at any time. They will not reduce your rights without explicit consent and will provide notice for significant changes.",
-      "detail": "Google posts updated policies with a 'last updated' date. For significant changes, they may provide more prominent notice including email notification.",
-      "policy_excerpt": "We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. If changes are significant, we'll provide a more prominent notice (including, for certain services, email notification of Privacy Policy changes).",
+      "plain_english": "Google states it will not reduce your rights under the privacy policy without your explicit consent, and it will provide more prominent notice for significant changes including email notification for certain services.",
+      "detail": "Google explicitly commits to not reducing rights without explicit consent. It indicates the date of last changes, offers archived versions, and provides more prominent notice (including email notification for certain services) for significant changes.",
+      "policy_excerpt": "We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. We always indicate the date the last changes were published and we offer access to archived versions for your review. If changes are significant, we'll provide a more prominent notice (including, for certain services, email notification of Privacy Policy changes).",
       "concerns": [],
-      "score_impact": -1.5
+      "score_impact": 0
     }
   ],
   "scoring": {
@@ -323,7 +323,7 @@
       {"category": "location_gps", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
       {"category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0},
       {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
-      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
+      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.50, "deduction": 15.0},
       {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
       {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
       {"category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0},
@@ -332,10 +332,10 @@
       {"category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0},
       {"category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
       {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0},
-      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5}
+      {"category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0.00, "deduction": 0}
     ],
-    "total_deductions": 71.25,
-    "final_score": 65,
+    "total_deductions": 65.25,
+    "final_score": 68,
     "grade": "C"
   }
 }

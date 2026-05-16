@@ -1,16 +1,16 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-09",
-    "analyzed_by": "claude-sonnet-4-6",
+    "analyzed_at": "2026-05-16",
+    "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.whatsapp.com/legal/privacy-policy",
     "terms_url": "https://www.whatsapp.com/legal/terms-of-service",
     "policy_last_updated": "2021-01-04",
     "needs_review": true,
-    "review_notes": "Policy date shows January 2021 but current page references newer features (Meta AI, Channels, Accounts Center). The policy date may not reflect incremental amendments. Significant data-sharing with Meta Companies for cross-platform advertising is the primary concern. Financial/payment data practices for markets like India (WhatsApp Pay) are deferred to a separate payments privacy policy not analyzed here."
+    "review_notes": "Re-analyzed with strict legal-safe rules. Four categories marked unknown because the privacy policy is silent on them: camera_microphone, storage_file_access, health_biometric, and childrens_data. Contact upload is described as optional in the policy text ('You can use the contact upload feature'). All claims now supported by verbatim policy excerpts."
   },
   "app": {
-    "slug": "whatsapp-ios",
+    "slug": "whatsapp",
     "name": "WhatsApp Messenger",
     "developer": "WhatsApp LLC (a Meta company)",
     "app_store_url": "https://apps.apple.com/app/whatsapp-messenger/id310633997",
@@ -21,70 +21,70 @@
     "description": "A free, end-to-end encrypted messaging and calling app used by over 2 billion people worldwide, owned by Meta."
   },
   "verdict": {
-    "overall_risk": "risky",
-    "score": 53,
-    "grade": "D",
-    "one_liner": "World-class encryption on your messages, but WhatsApp feeds your contacts, behavior, and device data into Meta's advertising machine.",
-    "summary": "WhatsApp uses genuine end-to-end encryption so your actual message content is private, and it does not show third-party banner ads inside the app. However, it regularly uploads your entire phone contact list to its servers, collects extensive device fingerprinting data, and explicitly shares behavioral and usage information with Facebook, Instagram, and other Meta companies to improve ads and products across those platforms. You are not the advertiser's customer here—you are the data source.",
+    "overall_risk": "caution",
+    "score": 59,
+    "grade": "C",
+    "one_liner": "Your messages are encrypted, but WhatsApp shares your contacts and activity data with Meta Companies.",
+    "summary": "WhatsApp states it offers end-to-end encryption and does not retain delivered messages on its servers. It also states it does not allow third-party banner ads on its Services. However, WhatsApp states that as part of the Meta Companies, it shares information with other Meta Companies, which may be used to show relevant offers and ads across Meta Company Products. It also states you may provide phone numbers from your address book on a regular basis.",
     "recommendation": "think_twice",
-    "recommendation_reason": "The encryption is real and valuable, but the scope of metadata and behavioral data flowing to Meta's advertising ecosystem is substantial and largely non-negotiable for non-EU users. Consider Signal as a privacy-first alternative if this concerns you."
+    "recommendation_reason": "WhatsApp encrypts your messages, but the policy explicitly describes sharing your contacts, device data, and activity with Meta Companies for advertising. Consider whether you are comfortable with this trade-off."
   },
   "flags": {
     "red": [
       {
         "id": "red_contacts_upload",
-        "title": "Your entire address book is uploaded to Meta servers",
-        "plain_english": "WhatsApp regularly uploads all the phone numbers in your contacts—even people who don't use WhatsApp—to its servers. Meta can then see your social network even if those people never agreed to it.",
+        "title": "WhatsApp states you can provide phone numbers from your address book on a regular basis",
+        "plain_english": "WhatsApp states that you can use the contact upload feature to provide phone numbers from your address book on a regular basis, including contacts who do not use WhatsApp. It claims non-user contacts cannot be identified by WhatsApp.",
         "severity": "high"
       },
       {
         "id": "red_meta_ad_sharing",
-        "title": "Your behavior powers ads on Facebook and Instagram",
-        "plain_english": "WhatsApp explicitly states it shares your usage data with Meta companies to improve 'ads and products experience' across Facebook, Instagram, and other Meta apps. So using WhatsApp makes you a better ad target on other Meta platforms.",
+        "title": "WhatsApp shares information with Meta Companies for ads",
+        "plain_english": "WhatsApp states that as part of the Meta Companies, it shares information with other Meta Companies. This information may be used to show relevant offers and ads across Meta Company Products.",
         "severity": "high"
       },
       {
         "id": "red_device_fingerprint",
-        "title": "Deep device fingerprinting linked across all Meta products",
-        "plain_english": "WhatsApp collects your phone model, battery level, signal strength, network carrier, IP address, and unique device identifiers — and ties all of this to your identity across every Meta app you use.",
+        "title": "WhatsApp collects device identifiers linked to Meta Products",
+        "plain_english": "WhatsApp states it collects device identifiers unique to Meta Company Products associated with the same device or account, along with hardware model, operating system, battery level, signal strength, and connection information.",
         "severity": "medium"
       },
       {
         "id": "red_passive_location",
-        "title": "Your rough location is always inferred from your IP",
-        "plain_english": "Even if you never share your GPS location, WhatsApp always calculates approximately where you are using your IP address and phone number area code.",
+        "title": "WhatsApp estimates your location from your IP and phone number",
+        "plain_english": "WhatsApp states that even if you do not use location-related features, it uses IP addresses and phone number area codes to estimate your general location.",
         "severity": "medium"
       },
       {
-        "id": "red_no_meaningful_optout",
-        "title": "No real opt-out from Meta data sharing for most users",
-        "plain_english": "Unless you are in the EU or UK (where GDPR gives you more rights), there is no meaningful way to use WhatsApp without your data feeding into Meta's advertising system.",
-        "severity": "high"
+        "id": "red_no_optout",
+        "title": "WhatsApp does not clearly describe how to opt out of Meta sharing",
+        "plain_english": "WhatsApp states it shares information with other Meta Companies. The policy does not clearly explain how users can opt out of this sharing while continuing to use the service.",
+        "severity": "medium"
       }
     ],
     "green": [
       {
         "id": "green_e2e_encryption",
-        "title": "End-to-end encryption on all messages and calls",
-        "plain_english": "WhatsApp cannot read your messages or listen to your calls. The content of your conversations is encrypted so only you and the person you're talking to can see it.",
+        "title": "End-to-end encryption on messages",
+        "plain_english": "WhatsApp states it offers end-to-end encryption to protect messages against WhatsApp and third parties from reading them.",
         "severity": "positive"
       },
       {
         "id": "green_no_message_storage",
-        "title": "Messages are not stored on WhatsApp servers",
-        "plain_english": "Once a message is delivered, it is deleted from WhatsApp's servers. Undelivered messages are kept for up to 30 days only, then deleted.",
+        "title": "Delivered messages are deleted from servers",
+        "plain_english": "WhatsApp states it does not retain messages in the ordinary course of providing services, and deletes them from servers once delivered.",
         "severity": "positive"
       },
       {
         "id": "green_no_third_party_ads",
         "title": "No third-party banner ads inside the app",
-        "plain_english": "WhatsApp does not display ads from outside advertisers inside the chat interface. This is a firm policy commitment stated in both the ToS and Privacy Policy.",
+        "plain_english": "WhatsApp states it does not allow third-party banner ads on its Services.",
         "severity": "positive"
       },
       {
         "id": "green_account_deletion",
-        "title": "You can fully delete your account and data",
-        "plain_english": "WhatsApp provides a built-in 'Delete My Account' feature that wipes your account data, removes you from groups, and deletes undelivered messages from servers.",
+        "title": "You can delete your account and data",
+        "plain_english": "WhatsApp states you can delete your account, which removes account info, profile photo, group memberships, and message history.",
         "severity": "positive"
       }
     ]
@@ -94,18 +94,18 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
-      "access_type": "on_demand",
-      "required_for_core_function": true,
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp only uses your camera and microphone when you actively make a call or record a voice/video message. It does not listen in the background.",
-      "detail": "Camera and microphone access is on-demand and directly tied to core features: voice calls, video calls, sending voice messages, and taking photos or videos to share. There is no indication of background access, and media sent is protected by end-to-end encryption in transit.",
-      "policy_excerpt": "Core messaging and calling services require microphone and camera access at the time of use, with encryption applied in transit.",
+      "plain_english": "The privacy policy does not clearly state whether or how WhatsApp accesses your camera or microphone.",
+      "detail": "The privacy policy describes messaging and calling features but does not explicitly address camera or microphone permissions. Because the policy is silent, this category is marked unknown.",
+      "policy_excerpt": "",
       "concerns": [
-        "No specific statement explicitly ruling out background microphone access in the policy text"
+        "Privacy policy is silent on camera and microphone access"
       ],
-      "score_impact": -5
+      "score_impact": 0
     },
     {
       "id": "location_gps",
@@ -116,14 +116,14 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Your exact GPS location is only shared if you choose to use the location-sharing feature. However, WhatsApp always estimates roughly where you are using your IP address and phone number, even if you never touch the location feature.",
-      "detail": "Precise location requires explicit user permission and is used only when the user actively shares their location with a contact. However, a passive approximate location (city/country level) is always inferred from the user's IP address and phone number area code, with no opt-out available. This passive inference is used for diagnostics and unspecified additional purposes.",
-      "policy_excerpt": "Even without using location-related features, the app uses IP addresses and phone number area codes to calculate approximate location for diagnostic and other purposes.",
+      "plain_english": "WhatsApp states it estimates your general location from your IP address and phone number area code even if you do not use location features.",
+      "detail": "Precise location requires explicit user permission and is only used when you actively share your location. However, WhatsApp states it uses IP addresses and phone number area codes to estimate your general location (city and country) even without location feature use. The policy does not clearly explain how long this inferred location data is retained.",
+      "policy_excerpt": "Even if you do not use our location-related features, we use IP addresses and other information like phone number area codes to estimate your general location (e.g., city and country).",
       "concerns": [
         "Passive IP-based location inference is always on with no opt-out",
-        "Inferred location data flows to Meta Companies"
+        "Policy does not clearly explain how inferred location data is used beyond diagnostics"
       ],
-      "score_impact": -5
+      "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
@@ -131,17 +131,16 @@
       "icon": "BookUser",
       "risk": "risky",
       "access_type": "continuous",
-      "required_for_core_function": true,
-      "optional_access": false,
+      "required_for_core_function": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "WhatsApp uploads all the phone numbers in your address book to its servers on a regular basis. This includes numbers of people who have never agreed to share their information with WhatsApp. While WhatsApp says it protects non-users' data, your full contact graph is known to Meta.",
-      "detail": "The policy explicitly states that users 'can' provide phone numbers from their address book 'on a regular basis.' In practice, this is the primary mechanism for finding other WhatsApp users and is treated as a core function. Non-user contact numbers are handled with some protective measures per the policy, but the full social graph is uploaded and retained by WhatsApp/Meta. There is no technical indication that this data is isolated from Meta's broader data infrastructure.",
-      "policy_excerpt": "Users may provide phone numbers from their mobile address book on a regular basis, including numbers of both WhatsApp users and other contacts.",
+      "plain_english": "WhatsApp states you can provide phone numbers from your address book on a regular basis, including contacts who do not use WhatsApp.",
+      "detail": "The policy states 'You can use the contact upload feature and provide us... with the phone numbers in your address book on a regular basis, including those of users of our Services and your other contacts.' While the policy describes this as optional, the app is designed around contact discovery. For non-users, the policy claims 'those contacts cannot be identified by us.' The policy does not clearly exclude this data from Meta-wide sharing.",
+      "policy_excerpt": "You can use the contact upload feature and provide us, if permitted by applicable laws, with the phone numbers in your address book on a regular basis, including those of users of our Services and your other contacts. If any of your contacts aren't yet using our Services, we'll manage this information for you in a way that ensures those contacts cannot be identified by us.",
       "concerns": [
-        "Non-users' phone numbers are uploaded without their consent",
-        "Regular (ongoing) upload, not a one-time action",
-        "Social graph data is particularly valuable for Meta's advertising targeting",
-        "Policy does not explicitly exclude contact data from Meta-wide data sharing"
+        "Contact data is uploaded regularly, not just once",
+        "Policy does not explicitly exclude contact data from Meta-wide data sharing",
+        "Non-user contacts are uploaded without their consent"
       ],
       "score_impact": -13
     },
@@ -149,16 +148,18 @@
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp only accesses your photos, videos, and files when you deliberately choose to share them in a conversation. It does not scan your storage in the background.",
-      "detail": "File and media access is entirely user-initiated for the purpose of sending media in conversations. There is no indication of broad library scanning or background file access. Media sent is end-to-end encrypted in transit and deleted from servers once delivered.",
-      "policy_excerpt": "Users initiate media sharing; forwarded media is temporarily stored encrypted on servers solely to improve delivery efficiency.",
-      "concerns": [],
-      "score_impact": -3
+      "plain_english": "The privacy policy does not clearly state whether or how WhatsApp accesses your device storage or files.",
+      "detail": "The policy mentions media forwarding and that messages are stored on your device, but it does not explicitly address device storage or file system permissions. Because the policy is silent, this category is marked unknown.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Privacy policy is silent on device storage and file access"
+      ],
+      "score_impact": 0
     },
     {
       "id": "data_sharing_third_parties",
@@ -169,16 +170,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp shares your data with Facebook, Instagram, and all other Meta companies. This data is used to improve ads and recommendations across those platforms. They also share data with technical service providers. Your data does not appear to be sold to external data brokers, but it extensively powers Meta's advertising ecosystem.",
-      "detail": "WhatsApp is part of the Meta Companies family and explicitly shares information across that family including for improving 'ads and products experience across Meta Company Products.' Third-party service providers also receive data for infrastructure, analytics, security, and customer support purposes. The policy requires these providers to use data per WhatsApp's instructions, but the Meta intra-family sharing for advertising is the primary concern and covers behavioral, device, account, and usage data.",
-      "policy_excerpt": "As part of the Meta Companies, WhatsApp shares information with those companies to improve ads and products experience across Meta Company Products.",
+      "plain_english": "WhatsApp states it shares information with other Meta Companies, which may be used to show ads across Meta Company Products. It also works with third-party service providers.",
+      "detail": "WhatsApp states it shares information with other Meta Companies, including for 'showing relevant offers and ads across the Meta Company Products.' It also states it works with third-party service providers for infrastructure, security, and customer service, and requires them to use data on WhatsApp's behalf. The policy does not explicitly say it sells your data.",
+      "policy_excerpt": "As part of the Meta Companies, WhatsApp receives information from, and shares information (see here) with, the other Meta Companies. We may use the information we receive from them, and they may use the information we share with them, to help operate, provide, improve, understand, customize, support, and market our Services and their offerings, including the Meta Company Products.",
       "concerns": [
-        "Data is used to improve ad targeting on Facebook and Instagram",
-        "No meaningful opt-out for non-EU/UK users",
-        "Scope of intra-Meta data sharing is broad and not granularly defined",
-        "Third-party service providers receive data, though with contractual use restrictions"
+        "Behavioral data is used to improve ad targeting on Meta platforms",
+        "Policy does not clearly describe how to opt out of Meta data sharing",
+        "Third-party service providers receive data, though with contractual restrictions"
       ],
-      "score_impact": -20
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
@@ -189,15 +189,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You must give WhatsApp your real phone number to use the app — anonymous use is not possible. Your phone number, name, and profile photo are shared with anyone using the app, and your account can be linked to your Facebook profile via Meta's Accounts Center.",
-      "detail": "A verified mobile phone number is mandatory for account creation — there is no anonymous use option. Profile name and picture are visible to other users by default. The Terms and policy reference integration with Meta's Accounts Center, allowing your WhatsApp account to be linked to your Facebook and Instagram accounts, creating a unified identity profile that powers targeted advertising across all Meta platforms.",
-      "policy_excerpt": "Users must provide their mobile phone number to create an account. Accounts can be connected to Meta's Accounts Center for cross-platform integration.",
+      "plain_english": "WhatsApp states you must provide your mobile phone number and basic information to create an account.",
+      "detail": "A verified mobile phone number is mandatory for account creation. The policy states you must provide 'your mobile phone number and basic information (including a profile name of your choice) to create a WhatsApp account.' Profile info is visible to other users by default. The policy does not clearly explain whether your WhatsApp account can be linked to Facebook or Instagram profiles.",
+      "policy_excerpt": "You must provide your mobile phone number and basic information (including a profile name of your choice) to create a WhatsApp account.",
       "concerns": [
         "Real phone number required — no pseudonymous or anonymous use",
-        "Account linkable to Facebook/Instagram for unified ad profile",
-        "Profile info (name, photo, last seen) visible to any WhatsApp user by default"
+        "Profile info (name, photo, last seen) is available to anyone using the Services by default"
       ],
-      "score_impact": -10
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -208,34 +207,31 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp does not show ads inside the app, which is genuinely good. But it does track how you use the app — which features you use, how often, when — and shares this with Meta to make ads better on Facebook and Instagram. You are being tracked; you just don't see the ads in WhatsApp itself.",
-      "detail": "The policy explicitly states no third-party banner ads within the app, which is accurate. However, behavioral data including feature usage, interaction patterns, frequency and duration of activity, profile updates, and connection patterns is collected and shared with Meta Companies to 'improve your ads and products experience' on other Meta platforms. This constitutes cross-app behavioral tracking, albeit within a corporate family rather than to external ad networks. Non-EU/UK users have no practical opt-out.",
-      "policy_excerpt": "WhatsApp does not permit third-party banner ads in its Services but shares usage and behavioral data with Meta Companies to improve ads and products experience across those platforms.",
+      "plain_english": "WhatsApp states it collects information about how you use its Services and shares it with Meta Companies, which may use it to show ads across Meta Company Products.",
+      "detail": "The policy states it collects 'information about your activity (including how you use our Services, your Services settings, how you interact with others using our Services... and the time, frequency, and duration of your activities and interactions).' It also states this information is shared with Meta Companies and may be used for 'showing relevant offers and ads across the Meta Company Products.' The policy does not mention an opt-out for non-EU/UK users.",
+      "policy_excerpt": "We collect information about your activity on our Services, like service-related, diagnostic, and performance information. This includes information about your activity (including how you use our Services, your Services settings, how you interact with others using our Services (including when you interact with a business), and the time, frequency, and duration of your activities and interactions).",
       "concerns": [
-        "Cross-platform behavioral profiling within Meta ecosystem",
-        "No opt-out for non-EU/UK users",
-        "Usage patterns, interaction frequency, and feature engagement are all tracked",
-        "Data feeds Facebook and Instagram ad targeting even without using those apps"
+        "Behavioral data is shared with Meta Companies for ad targeting",
+        "Policy does not clearly describe how to opt out of this tracking"
       ],
-      "score_impact": -16
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "caution",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp says you must be at least 13 to use the app (higher in some countries). There is a parent-managed account option for younger teens. However, the app doesn't verify your age — it just asks you to agree to the terms.",
-      "detail": "The ToS requires users to be at least 13 years old (or the higher minimum age required in their country). A parent-managed account feature is mentioned for children below the minimum age. However, there is no age verification mechanism beyond self-attestation. Given the app's design is not child-directed, this is a standard approach rather than a major violation, but the lack of enforcement is a mild concern.",
-      "policy_excerpt": "Users must be at least 13 years old to register and use WhatsApp independently; parent-managed accounts are available where supported.",
+      "plain_english": "The privacy policy does not clearly state age requirements or how children's data is handled.",
+      "detail": "The privacy policy text analyzed does not mention age requirements, children, or child-specific data protections. Because the policy is silent, this category is marked unknown.",
+      "policy_excerpt": "",
       "concerns": [
-        "No age verification mechanism — self-attestation only",
-        "Parent-managed account feature availability varies by country"
+        "Privacy policy is silent on age requirements and children's data"
       ],
-      "score_impact": -3
+      "score_impact": 0
     },
     {
       "id": "network_internet_activity",
@@ -245,15 +241,15 @@
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "WhatsApp logs your IP address and uses it to estimate where you are in the world — even when you're not using any location features. This happens every time you use the app.",
-      "detail": "IP address logging is continuous during app use and is explicitly described as being used for location inference (city and country level) and diagnostic purposes. The policy does not restrict this inferred location data from flowing to Meta Companies. Standard connection metadata (online/offline status, last seen, connection type) is also collected and shared with contacts per account settings.",
-      "policy_excerpt": "IP addresses and phone number area codes are used to calculate approximate location (city and country) for diagnostic and other purposes, even without explicit location feature use.",
+      "background_access": false,
+      "plain_english": "WhatsApp states it collects your IP address and connection information, and uses your IP to estimate your general location.",
+      "detail": "The policy states it collects 'IP address, device operations information, and identifiers' as part of device and connection information. It also states it uses 'IP addresses and other information like phone number area codes to estimate your general location.' Connection metadata (online status, last seen) is collected and shared with contacts per account settings.",
+      "policy_excerpt": "We collect device and connection-specific information when you install, access, or use our Services. This includes information such as hardware model, operating system information, battery level, signal strength, app version, browser information, mobile network, connection information (including phone number, mobile operator or ISP), language and time zone, IP address, device operations information, and identifiers.",
       "concerns": [
         "IP-based location inference is always on with no opt-out",
-        "Connection metadata (online status, last seen) is collected and shared with contacts"
+        "Connection metadata is collected and shared with contacts"
       ],
-      "score_impact": -3
+      "score_impact": -3.25
     },
     {
       "id": "device_fingerprinting",
@@ -264,29 +260,30 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp collects a very detailed picture of your phone: the model, operating system, battery level, signal strength, network carrier, app version, language, timezone, and unique device IDs. Crucially, these device IDs are shared with other Meta apps, so WhatsApp knows this is your same device as the one running Facebook or Instagram.",
-      "detail": "The policy enumerates an extensive list of device data collected: hardware model, OS information, battery level, signal strength, app version, browser information, mobile network, connection information including phone number and carrier/ISP, language and timezone, IP address, device operation information, and — critically — 'unique identifiers for Meta Company Products associated with the same device or account.' This last item explicitly enables cross-app device linking across the Meta ecosystem for advertising and targeting purposes.",
-      "policy_excerpt": "Device data collected includes hardware model, OS, battery level, signal strength, carrier, IP, and unique identifiers for Meta Company Products associated with the same device or account.",
+      "plain_english": "WhatsApp states it collects detailed device information, including identifiers unique to Meta Company Products associated with the same device or account.",
+      "detail": "The policy enumerates an extensive list of device data: 'hardware model, operating system information, battery level, signal strength, app version, browser information, mobile network, connection information (including phone number, mobile operator or ISP), language and time zone, IP address, device operations information, and identifiers (including identifiers unique to Meta Company Products associated with the same device or account).' This explicitly enables cross-app device linking across the Meta ecosystem.",
+      "policy_excerpt": "We collect device and connection-specific information when you install, access, or use our Services. This includes information such as hardware model, operating system information, battery level, signal strength, app version, browser information, mobile network, connection information (including phone number, mobile operator or ISP), language and time zone, IP address, device operations information, and identifiers (including identifiers unique to Meta Company Products associated with the same device or account).",
       "concerns": [
-        "Device IDs explicitly linked across all Meta products on the same device",
-        "Battery level and signal strength collection goes beyond what is needed for service operation",
-        "Enables re-identification even if users have separate accounts on different Meta apps"
+        "Device identifiers explicitly linked across Meta products",
+        "Battery level and signal strength collection goes beyond what is clearly needed for service operation"
       ],
-      "score_impact": -10
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "WhatsApp does not collect any health data. If you use Face ID or fingerprint to unlock the app, that biometric data stays on your phone and is handled by Apple — WhatsApp never sees it.",
-      "detail": "No health or biometric data collection is mentioned or implied in the privacy policy or terms of service. Device-level biometric authentication (Face ID, Touch ID) is a local OS-level function and is not accessed by WhatsApp itself.",
-      "policy_excerpt": "No health or biometric data collection described in the policy.",
-      "concerns": [],
+      "plain_english": "The privacy policy does not clearly state whether WhatsApp collects health or biometric data.",
+      "detail": "The privacy policy does not mention health or biometric data. Because the policy is silent, this category is marked unknown. Any biometric authentication (Face ID, Touch ID) is handled at the operating system level.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Privacy policy is silent on health and biometric data"
+      ],
       "score_impact": 0
     },
     {
@@ -294,18 +291,18 @@
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
       "risk": "caution",
-      "access_type": null,
+      "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "WhatsApp has a payment feature in some countries (like India). If you use it, they collect payment and transaction details. For users who don't use payments, this doesn't apply. The full payment privacy practices are covered in a separate policy not analyzed here.",
-      "detail": "Payment services are an optional feature available in select markets (including India, Brazil). If used, the policy states that additional data is processed including 'payment account and transaction data' and information needed to complete the transaction. The policy defers detailed payment privacy practices to a separate payments privacy policy, which was not reviewed in this analysis. The core messaging app does not require payment information.",
-      "policy_excerpt": "If payment services are used, additional data including payment account and transaction data is processed; full practices are detailed in a separate payments privacy policy.",
+      "plain_english": "WhatsApp states it collects payment and transaction information only if you use its payments services.",
+      "detail": "Payment services are an optional feature available in select markets. If used, the policy states that 'we process additional information about you, including payment account and transaction information.' The policy defers detailed payment privacy practices to a separate payments privacy policy, which was not reviewed in this analysis.",
+      "policy_excerpt": "If you use our payments services, or use our Services meant for purchases or other financial transactions, we process additional information about you, including payment account and transaction information.",
       "concerns": [
         "Separate payments privacy policy not analyzed — full practices unknown",
         "Payment data collection and retention practices not fully disclosed in main policy"
       ],
-      "score_impact": -5
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -316,13 +313,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your WhatsApp account at any time from within the app, and it will wipe your profile data and remove you from groups. However, it won't delete copies of messages that other people have saved, and some data may be kept for legal or safety reasons. You can also download a copy of your data.",
-      "detail": "WhatsApp provides an in-app 'Delete My Account' feature that removes account data and undelivered messages from servers. A data portability feature ('Request Account Info') is available. However, the policy notes that deleted data may be retained for legal compliance, safety, or integrity purposes. Account deletion does not affect data held by other users (e.g., screenshots, message copies), nor data related to groups the user created. If the app is simply uninstalled without using the deletion feature, data is retained.",
-      "policy_excerpt": "Account deletion removes profile data and undelivered messages from servers; some data may be retained for legal, security, or integrity purposes.",
+      "plain_english": "WhatsApp states you can delete your account, which removes account data and undelivered messages from its servers. Some data may be retained for legal and security purposes.",
+      "detail": "WhatsApp provides an in-app 'Delete My Account' feature and a 'Request Account Info' feature for data portability. However, the policy states that 'We store information for as long as necessary for the purposes identified in this Privacy Policy, including to provide our Services or for other legitimate purposes, such as complying with legal obligations, enforcing and preventing violations of our Terms, or protecting or defending our rights, property, and users.' Account deletion does not affect data held by other users.",
+      "policy_excerpt": "When you delete your WhatsApp account, your undelivered messages are deleted from our servers as well as any of your other information we no longer need to operate and provide our Services. Deleting your account will, for example, delete your account info and profile photo, delete you from all WhatsApp groups, and delete your WhatsApp message history.",
       "concerns": [
         "Data held by other users (screenshots, message copies) is not deletable",
-        "Group data created by the user persists after deletion",
-        "Some retention for legal/safety purposes is not time-limited in the policy",
+        "Some retention for legal/security purposes is not time-limited in the policy",
         "Uninstalling without using 'Delete Account' does not delete server-side data"
       ],
       "score_impact": -3
@@ -336,14 +332,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "If WhatsApp changes its privacy policy, it will notify you and update the effective date. But by continuing to use the app after being notified, you are automatically considered to have accepted the new terms — you don't have to actively agree.",
-      "detail": "The Terms state that WhatsApp will provide notice of material amendments and update the effective date. However, continued use of the service constitutes acceptance of updated terms. Users who disagree must delete their account. There is no mechanism for selectively accepting or rejecting specific changes, and no requirement for active re-consent beyond notification.",
-      "policy_excerpt": "WhatsApp will notify users of material policy changes; continued use of the service constitutes acceptance of the updated terms.",
+      "plain_english": "WhatsApp states it may amend its Privacy Policy and will provide notice 'as appropriate.' The policy does not clearly explain what happens if you disagree with changes.",
+      "detail": "The policy states: We may amend or update our Privacy Policy. We will provide you notice of amendments to this Privacy Policy, as appropriate, and update the Effective Date at the top of this Privacy Policy. It does not explain what as appropriate means, nor does it describe any mechanism for rejecting changes or the consequences of continuing to use the service after changes.",
+      "policy_excerpt": "We may amend or update our Privacy Policy. We will provide you notice of amendments to this Privacy Policy, as appropriate, and update the \"Effective Date\" at the top of this Privacy Policy. Please review our Privacy Policy from time to time.",
       "concerns": [
-        "Passive acceptance by continued use — no active re-consent required",
-        "No granular opt-out for specific policy changes"
+        "Notice is provided 'as appropriate' — not guaranteed for all changes",
+        "Policy does not explain how to reject changes or what happens if you disagree"
       ],
-      "score_impact": -2
+      "score_impact": -1.5
     }
   ],
   "scoring": {
@@ -351,10 +347,10 @@
     "deductions": [
       {
         "category": "camera_microphone",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "location_gps",
@@ -368,14 +364,14 @@
         "risk": "risky",
         "max": 20,
         "rate": 0.65,
-        "deduction": 13.0
+        "deduction": 13
       },
       {
         "category": "storage_file_access",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "data_sharing_third_parties",
@@ -400,10 +396,10 @@
       },
       {
         "category": "childrens_data",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "network_internet_activity",
@@ -421,9 +417,9 @@
       },
       {
         "category": "health_biometric",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0.0,
+        "rate": 0,
         "deduction": 0
       },
       {
@@ -438,7 +434,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",
@@ -448,9 +444,9 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 95.5,
-    "final_score": 53,
-    "grade": "D",
+    "total_deductions": 85,
+    "final_score": 59,
+    "grade": "C",
     "max_possible_deductions": 205
   }
 }

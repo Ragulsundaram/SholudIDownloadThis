@@ -62,6 +62,7 @@ These are the source of truth. Do not duplicate their contents here — link out
 6. **Risk colors (green/amber/orange/red) carry meaning only.** Never use them as decoration. Never hardcode their hex — use the CSS variables in `globals.css`.
 7. **Plain-English copy must pass the 14-year-old test.** No legalese, no jargon.
 8. **One app, one rating.** No platform fan-out. URL is `/app/{slug}`.
+9. **Any overlay, modal, drawer, or dropdown MUST use `createPortal(content, document.body)`.** The Navbar has `backdrop-filter` which breaks `fixed` positioning for any child element. Never nest a `fixed`-positioned overlay inside the Navbar or any element with `backdrop-filter`/`transform`/`filter`. See the "Layout & Overlay Rules" section in `docs/DESIGN.md` for the required pattern.
 
 ## Data pipeline (v1, manual)
 
