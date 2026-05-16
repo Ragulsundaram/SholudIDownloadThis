@@ -1,6 +1,6 @@
 # ShouldIDownloadThis 📲
 
-> Before you tap "Install" — know what you're agreeing to.
+> Before you tap "Install" — know what you're agreeing to. 
 
 **ShouldIDownloadThis** is a free, public web platform that reads the privacy policies and terms & conditions of apps so you don't have to. It gives every app a clear, visual, category-by-category privacy rating — in plain English — so any person can make an informed choice in under 30 seconds.
 
