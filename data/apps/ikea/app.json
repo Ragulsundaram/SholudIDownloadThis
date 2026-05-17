@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.ikea.com/gb/en/customer-service/privacy-policy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-06",
+    "needs_review": true,
+    "review_notes": "Scraper returned incorrect App Store URL and ID (Meesho instead of IKEA). Please verify and correct the App Store URL and ID before publishing."
+  },
+  "app": {
+    "slug": "ikea",
+    "name": "IKEA",
+    "developer": "Inter IKEA Systems B.V.",
+    "app_store_url": "https://apps.apple.com/in/app/meesho--online-shopping/id1452164827",
+    "app_store_id": "1452164827",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5b/a7/88/5ba78849-a070-37b2-be4c-af5ec2f2e12e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "",
+    "description": "Furniture and home goods shopping app with store locator, loyalty rewards, and in-store features."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "A major retailer that collects extensive shopping and browsing data for personalization and shares it across its corporate group and advertising partners.",
+    "summary": "IKEA's privacy policy reveals comprehensive data collection spanning your identity, purchases, browsing behavior, and device information. While the company explicitly states it never sells personal data, it shares data widely with marketing agencies, advertising partners, and other IKEA group companies. Your shopping habits are tracked and combined with third-party data to segment you into customer groups and show targeted ads on social media. The policy provides standard GDPR rights and opt-out mechanisms, but retention periods remain vague and the app-specific data collection details (like camera and contacts access) are not addressed in this website-focused policy.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you frequently shop at IKEA or use the app, be aware that your browsing and purchase data is used for behavioral advertising and shared across the IKEA corporate group. The privacy protections are standard for a large retailer, but the tracking and data sharing are significant."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_data_sharing",
+        "title": "Shares data with advertisers and group companies",
+        "plain_english": "IKEA shares your personal data with marketing agencies, advertising partners, and other companies in the IKEA Group. Your data may also be transferred to countries like the USA and India.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Tracks your shopping behavior for targeted ads",
+        "plain_english": "IKEA monitors your browsing activity, purchase history, and app usage. They use this information to show you personalized ads on Facebook, Twitter, and other websites.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Tracks your location in stores via WiFi",
+        "plain_english": "When you connect to free in-store WiFi, IKEA may collect your location and device data to analyze how people move around their stores.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_combining_data",
+        "title": "Combines your data with third-party information",
+        "plain_english": "IKEA merges the information you give them with data from third parties and social media platforms to build customer segments and personalize marketing.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Explicitly promises never to sell your data",
+        "plain_english": "The policy clearly states: We will never sell any of your personal data to a third party.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_user_rights",
+        "title": "Provides data access and deletion rights",
+        "plain_english": "You can ask IKEA to see, correct, delete, or transfer your personal data. They aim to respond within one month and provide a dedicated privacy contact.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_marketing",
+        "title": "Easy opt-out for marketing messages",
+        "plain_english": "You can stop marketing emails, SMS, and direct mail at any time through your account settings or by clicking unsubscribe links.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security",
+        "title": "Uses encryption and security safeguards",
+        "plain_english": "IKEA says they protect your data using encryption, firewalls, password protection, and strict physical controls in their buildings.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't specifically say whether the IKEA app accesses your phone's camera or microphone.",
+      "detail": "The scraped policy text focuses on in-store CCTV and security cameras, not mobile app permissions. There is no explicit mention of camera or microphone access for the app itself.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on app camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "IKEA collects your location data when you browse their website or use their in-store WiFi, which helps them track store traffic and personalize your experience.",
+      "detail": "The policy mentions collecting 'Website / browsing history, including location data' and location/device data via in-store WiFi on an anonymous basis. IP addresses are also collected and can infer approximate location.",
+      "policy_excerpt": "Website / browsing history, including location data",
+      "concerns": ["Location data collected via browsing and WiFi", "IP address may reveal approximate location"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention whether the app can access your phone's contacts.",
+      "detail": "No mention of contacts or phonebook access in the provided policy text.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app accesses files or photos on your phone.",
+      "detail": "No explicit mention of storage, file access, or photo library access in the provided policy text.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on file storage access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA shares your data with advertising partners, marketing agencies, and other companies in the IKEA Group, and may send it to countries outside the UK.",
+      "detail": "The policy states they share data with trusted third party service providers, marketing agencies, advertising partners, and group companies (IKEA Ireland Limited, IKEA IT AB, IKEA of Sweden AB). Data may be transferred to the USA, India, and other countries. They claim to put safeguards in place.",
+      "policy_excerpt": "We will never sell any of your personal data to a third party. However, in order for us to provide our services to you, we share your personal data with our trusted third party service providers or our group companies",
+      "concerns": ["Data shared with advertising and marketing partners", "Data transferred outside UK/EEA to USA and India", "Group companies receive personal data"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA collects your name, email, phone number, address, and date of birth, and combines it with other data to segment you into customer groups.",
+      "detail": "The policy lists extensive identity data collection including name, email, mobile number, date of birth, address, and account login details. This data is combined with purchase history, browsing behavior, and third-party data for customer segmentation and personalization.",
+      "policy_excerpt": "Your name and title, Your email address, Your mobile telephone number, Your date of birth, Your address",
+      "concerns": ["Identity data combined with third-party information", "Used for customer segmentation and profiling"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA tracks what you browse and buy, then uses that information to show you targeted ads on social media and other websites.",
+      "detail": "The policy describes using browsing activity, session replays, purchase history, and cookies to personalize marketing. They place ads on Facebook, Twitter, and third-party websites using pixels and cookies. Customer segmentation and automated decision-making are used for recommendations.",
+      "policy_excerpt": "To show you advertising on such Social Media platforms as Facebook and Twitter or third party advertising that may appear on other websites you use.",
+      "concerns": ["Behavioral tracking for targeted advertising", "Cross-platform ads on social media", "Automated decision-making for customer segmentation"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA says they don't try to collect data from kids under 18, but they don't have a way to actually check your age.",
+      "detail": "The policy states they do not intentionally collect personal data from those under 18, but there is no mention of age verification mechanisms in the app or website.",
+      "policy_excerpt": "We do not knowingly solicit personal data from children or send them requests for personal data... we do not intentionally collect personal data from those under the age of 18.",
+      "concerns": ["No age verification mechanism mentioned"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA records your IP address, browser type, and browsing history when you use their website or app.",
+      "detail": "The policy explicitly mentions collecting IP addresses, browser type, operating system, platform, time zone, and website/browsing history. This is used for security, personalization, and monitoring.",
+      "policy_excerpt": "your IP address or other device identifier, your browser type and version, your time zone setting, operating system and platform",
+      "concerns": ["Browsing history and session replays monitored", "IP address logged"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA collects information about your device type, browser, and operating system to tailor your online experience.",
+      "detail": "Device information including device type, browser, OS, platform, and IP address is collected. This is used to personalize the website, ensure proper display, and for advertising through cookies.",
+      "policy_excerpt": "Information about your device type, Website / browsing history, including location data, Cookie information",
+      "concerns": ["Device data used for personalization and ads"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The IKEA app doesn't collect health or biometric data.",
+      "detail": "The policy mentions processing special category data (including health data) only when voluntarily provided for specific circumstances like delivery assistance or complaints. This is not part of the app's standard data collection.",
+      "policy_excerpt": "IKEA processes special category data where this is provided by you during the course of correspondence with us to inform us of any delivery/assistance requirements",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "IKEA collects your credit or debit card details to process orders and shares them with third parties for fraud prevention.",
+      "detail": "Payment information is collected for order fulfillment. The policy states financial information is shared with third parties for fraud analysis and credit checks. They mention encryption but do not state that they use third-party processors exclusively.",
+      "policy_excerpt": "Your credit or debit card, or other payment information... We share your financial information including your credit, debit card or other payment information with third parties to ensure that your payment is safe",
+      "concerns": ["Payment data shared with third parties for fraud checks", "Credit agencies may receive data for credit requests"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask IKEA to see, correct, or delete your data, but they only keep it for as long as they think is necessary.",
+      "detail": "The policy lists GDPR rights including access, correction, deletion, and transfer. However, retention periods are described as varying and data is kept 'as long as is necessary' without specific timeframes. Personal information is deleted or anonymized at the end of the retention period.",
+      "policy_excerpt": "In broad terms, we will only retain your personal data for as long as is necessary for the purposes described in this Privacy policy.",
+      "concerns": ["Retention periods are vague and not specified", "Deletion may not be immediate"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "IKEA can update their privacy policy at any time and says they'll tell you about big changes, but you should check it yourself regularly.",
+      "detail": "The policy states they may update it from time to time and will let users know about significant changes. However, it does not specify how users will be notified or whether continued use constitutes acceptance.",
+      "policy_excerpt": "We may update this Privacy policy from time to time. If we make significant changes, we will let you know but please regularly check this policy",
+      "concerns": ["Notification method not specified", "No explicit requirement to re-agree"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 85.25,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

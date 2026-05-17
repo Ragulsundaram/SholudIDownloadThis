@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.nykaafashion.com/lp/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2026-01-29",
+    "needs_review": true,
+    "review_notes": "Camera, contacts, and storage categories are not addressed in the privacy policy and were rated Unknown. App Store URL in scraped metadata was incorrect (listed IKEA) and corrected manually."
+  },
+
+  "app": {
+    "slug": "nykaa-fashion-shopping-app",
+    "name": "Nykaa Fashion - Shopping App",
+    "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
+    "app_store_url": "https://apps.apple.com/in/app/nykaa-fashion-shopping-app/id1439872423",
+    "app_store_id": "1439872423",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/fe/56/cafe56ff-c983-d2e9-db3f-8fc815c137bd/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion & Lifestyle",
+    "description": "Indian fashion and lifestyle e-commerce app for clothing, accessories, and beauty products."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "A popular Indian fashion shopping app that collects extensive personal data and shares it widely for advertising and logistics.",
+    "summary": "Nykaa Fashion collects significant personal information including identity, contact, location, device, and payment details to run its e-commerce platform. It shares this data with numerous third-party service providers and uses advertising SDKs to track your behavior and show personalized ads. While it offers some user rights and uses known payment processors, the broad data sharing, behavioral tracking, and passive policy-change approach earn it a Caution rating.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you shop for fashion in India, Nykaa Fashion works well, but be aware that your personal data is shared with many partners and used for targeted advertising. Privacy-conscious users should consider the trade-off."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_third_party_sharing",
+        "title": "Shares data with many third parties",
+        "plain_english": "The app shares your personal information with delivery companies, payment processors, marketing firms, and analytics companies. It also uses advertising tools that build a profile of your interests to target you with ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioural_ad_tracking",
+        "title": "Tracks you for targeted ads",
+        "plain_english": "The app shows interest-based ads and uses third-party tools like Clevertap, Appsflyer, and Gamooga to collect your behavior and device signals. They use this to create a user persona for personalized marketing.",
+        "severity": "high"
+      },
+      {
+        "id": "red_passive_policy_changes",
+        "title": "Changes posted without direct notice",
+        "plain_english": "If the company updates its privacy policy, it only posts changes on the website. You won't get an email or app alert, so you have to remember to check yourself.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_unclear_data_retention",
+        "title": "Some data kept even after deletion",
+        "plain_english": "While you can request account deletion by emailing privacy@nykaa.com, the company says it may keep some of your data for legal or regulatory reasons without clearly stating exactly what or for how long.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_fingerprinting_ads",
+        "title": "Builds a profile from your device",
+        "plain_english": "The app collects device information and network carrier details, then combines this with your behavior to create a profile used for targeting ads and personalized content.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_adult_only_policy",
+        "title": "Clearly states it is for adults only",
+        "plain_english": "The app says it is meant for adults and does not knowingly collect information from children.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_known_payment_processors",
+        "title": "Uses trusted payment gateways",
+        "plain_english": "Payments are handled by well-known third-party processors like Razorpay, PayU, and Cashfree, which typically meet security standards.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_grievance_officer",
+        "title": "Provides a grievance officer contact",
+        "plain_english": "The company lists a specific grievance officer with name, address, email, and phone number for handling complaints, which is required under Indian law.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_request_option",
+        "title": "Allows data deletion requests",
+        "plain_english": "You can ask to delete your account and associated data by emailing privacy@nykaa.com, though some information may be kept for legal reasons.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app uses your camera or microphone.",
+      "detail": "The policy is silent on camera and microphone access. No explicit mention of photo uploads via camera or voice/video features.",
+      "policy_excerpt": "The policy does not explicitly mention access to camera or microphone.",
+      "concerns": [
+        "Policy is silent on this category"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your location and IP address when you use it, mainly to deliver products and show relevant content. It does not mention tracking your location all the time in the background.",
+      "detail": "The policy lists location details and IP address as collected categories. Technical details include device information, location, and network carrier when using mobile applications. This is used for order delivery and personalization.",
+      "policy_excerpt": "Location details such as data we get about your location, IP address, logs, or from where you connect a computer to the internet. Technical details such as device information, location and network carrier when you use our mobile applications.",
+      "concerns": [
+        "No explicit mention of background location access",
+        "IP address used for location inference"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "No reference to contacts, address book, or phonebook data in the policy.",
+      "policy_excerpt": "The policy does not mention contacts or phonebook access.",
+      "concerns": [
+        "Policy is silent on this category"
+      ],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses files or storage on your phone.",
+      "detail": "No explicit mention of file system access, photo library access, or storage permissions.",
+      "policy_excerpt": "The policy does not mention storage or file access.",
+      "concerns": [
+        "Policy is silent on this category"
+      ],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your personal information with many third parties, including delivery companies, payment processors, marketing partners, and analytics firms. It also uses advertising SDKs to show you targeted ads and create a profile of your interests.",
+      "detail": "The policy states broad sharing with third parties for order processing, delivery, email communication, marketing assistance, payment processing, customer support, data analysis, and fraud prevention. It explicitly mentions third-party SDKs (Clevertap, Appsflyer, Crashlytics, Gamooga) that may collect PII for targeted marketing and ads. While contractual obligations are mentioned, the scope of sharing is wide.",
+      "policy_excerpt": "We may share your personal data with select third parties, group companies for the below purposes including but not limited to: Order processing, Delivering packages, Sending email communication and marketing assistance, Processing payments, Providing customer support, Analyzing data...",
+      "concerns": [
+        "Broad sharing with many third-party categories",
+        "Advertising SDKs collect data for targeting",
+        "No clear in-app opt-out for data sharing described"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must give personal details like your name, email, phone number, and address to create an account and buy products. The app also notes your payment card type and bank name for transactions.",
+      "detail": "Collects demographic and identity data including name, email, contact number, shipping address, country, date of birth, and profile picture. Also lists transaction amount, bank name, card number, and card type. Payment is processed by third-party gateways (PayU, Razorpay, Cashfree), but the policy explicitly lists card number as a collected category, which is ambiguous.",
+      "policy_excerpt": "Contact details such as Name, email address, contact number, shipping address, country, date of birth, profile picture... Details such as Transaction amount, bank name, card number, card type.",
+      "concerns": [
+        "Card details mentioned as collected, though payment processed by third parties",
+        "Open and public data may also be collected"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shows you interest-based ads and uses tracking tools to build a profile of what you like. This helps them target you with personalized marketing and product suggestions.",
+      "detail": "The policy states they use personal information to display interest-based ads. They rely on third-party analytics partners to gather first-party and third-party signals for personalized insights and targeted marketing. SDKs (Clevertap, Appsflyer, Crashlytics, Gamooga) collect contextual and behavioral non-PII data from device signals to create a user persona for enhanced personalization.",
+      "policy_excerpt": "We use your personal information to display interest-based ads for features, products, and services that might be of interest to you. We rely on Third Party analytics partners to gather a variety of first-party & Third Party Signals... to source high-value personalized insights to enhance personalisation and targeted marketing.",
+      "concerns": [
+        "Interest-based advertising using personal information",
+        "Third-party analytics partners collect behavioral signals",
+        "User persona created for enhanced personalization",
+        "No clear in-app opt-out for ad tracking described"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is meant for adults only and says it does not knowingly collect information from children.",
+      "detail": "The platform is directed to be used by adults only. It explicitly states that minors should not make purchases, register, or submit personal information. The company does not knowingly collect information from minors.",
+      "policy_excerpt": "Our platform is directed to be used by adults only... We or our associates /affiliates do not knowingly collect information from minors.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your internet connection details like your IP address to help run the service and keep it secure.",
+      "detail": "IP addresses and logs are collected as part of online identifiers and technical data. This is standard for service delivery and security, though also used for personalization.",
+      "policy_excerpt": "Location details such as data we get about your location, IP address, logs, or from where you connect a computer to the internet.",
+      "concerns": [
+        "IP address used, potentially for location inference"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects details about your device and network carrier, and combines this with your behavior to build a profile for targeted ads and personalization.",
+      "detail": "Technical details such as device information, location, and network carrier are collected. Third-party partners collect and combine contextual and behavioral non-PII data from device signals to create a user persona for enhanced personalization and targeting.",
+      "policy_excerpt": "Technical details such as device information, location and network carrier when you use our mobile applications. Collect and combine contextual and behavioral non-PII data from device signals to provide detailed insights by creating a user persona for enhanced personalisation.",
+      "concerns": [
+        "Device signals used for ad targeting and user profiling",
+        "Third-party SDKs involved in fingerprinting"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect any health or biometric data.",
+      "detail": "The privacy policy does not mention health, fitness, or biometric information.",
+      "policy_excerpt": "The policy does not mention health or biometric data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses trusted payment companies like Razorpay, PayU, and Cashfree to handle your payments. The policy mentions card details, but these are likely processed securely by the payment partners rather than stored by the app itself.",
+      "detail": "Payment processing is handled by third-party SDKs: PayU, Razorpay, Cashfree. The policy lists transaction amount, bank name, card number, and card type as collected categories, which is ambiguous about whether raw card data is retained by Nykaa. In practice, Indian regulations require payment gateways to handle card data, but the policy wording is imprecise.",
+      "policy_excerpt": "Details such as Transaction amount, bank name, card number, card type. Payment - Complete customers' payment transaction - Example - PayU, Razorpay, Cashfree.",
+      "concerns": [
+        "Policy explicitly lists card number as collected personal information, creating ambiguity about storage"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask to delete your account and data by emailing privacy@nykaa.com, but some information may be kept for legal or business reasons.",
+      "detail": "Users can opt to get their account and associated data deleted by contacting privacy@nykaa.com. However, the policy states data is kept as long as required for legal or regulatory reasons, and there is no self-service deletion option.",
+      "policy_excerpt": "you as a customer can also opt to get your account and associated data deleted. We keep the Personal Information we collect about you on our systems or with third parties for as long as it is required for the purposes set out in this Privacy Policy and for legal or regulatory reasons.",
+      "concerns": [
+        "No self-service deletion mechanism",
+        "Data retention for legal/regulatory reasons is vague"
+      ],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes, the company will post the update on its website but won't notify you directly. You have to check the page yourself to see if anything changed.",
+      "detail": "Changes are posted on the privacy policy page. Users are expected to re-visit regularly. No email, push notification, or advance notice is mentioned. No requirement for active re-consent.",
+      "policy_excerpt": "Any changes we may make to this Privacy Policy in the future will be posted on this page. We recommend that you re-visit this page regularly to check for any updates.",
+      "concerns": [
+        "No proactive notification to users",
+        "No advance notice or re-consent requirement"
+      ],
+      "score_impact": -3.25
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 }
+    ],
+    "total_deductions": 89.25,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

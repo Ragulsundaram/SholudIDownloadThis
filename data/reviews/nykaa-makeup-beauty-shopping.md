@@ -1,0 +1,343 @@
+```json
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.nykaa.com/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2026-01-29",
+    "needs_review": true,
+    "review_notes": "The policy contains a direct contradiction: it states 'No such data is shared outside Nykaa' immediately after describing extensive sharing with third-party analytics partners. The exact scope of card number storage is also unclear."
+  },
+  "app": {
+    "slug": "nykaa-makeup-beauty-shopping",
+    "name": "Nykaa – Makeup/Beauty Shopping",
+    "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
+    "app_store_url": "https://apps.apple.com/in/app/nykaa---makeup-beauty-shopping/id1022363908",
+    "app_store_id": "1022363908",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/88/a8/c088a8a6-6143-0912-7f9a-28d631ed3d4f/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Beauty & Fashion",
+    "description": "A beauty and personal care e-commerce app that sells cosmetics, skincare, haircare, fragrances, and wellness products."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 47,
+    "grade": "D",
+    "one_liner": "Heavy data collection and ad tracking with broad third-party sharing.",
+    "summary": "Nykaa collects extensive personal data including your location, device details, and payment information, then shares it with multiple analytics and advertising partners to build user profiles and serve targeted ads. Cross-border data transfers and vague retention policies add to the risk. While they offer account deletion and use encryption, the overall privacy posture is weak for a shopping app.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Broad data sharing with advertising networks, extensive tracking, and collection of sensitive data like card numbers and skin analysis results make this app a risky choice for privacy-conscious users."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "heavy_ad_tracking_and_data_sharing",
+        "title": "Extensive ad tracking and third-party data sharing",
+        "plain_english": "The app shares your personal information with analytics and advertising companies like Clevertap, Appsflyer, and Gamooga so they can build a profile of your interests and show you targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "location_tracked_for_ads",
+        "title": "Location tracked to serve personalized ads",
+        "plain_english": "The app collects where you are and uses that information to show you location-based ads, search results, and personalized content.",
+        "severity": "high"
+      },
+      {
+        "id": "card_numbers_collected",
+        "title": "Credit and debit card numbers collected",
+        "plain_english": "The app explicitly lists your card number as data it collects during purchases, which goes beyond what many secure payment setups require.",
+        "severity": "high"
+      },
+      {
+        "id": "cross_border_data_transfers",
+        "title": "Data sent to countries with weaker privacy laws",
+        "plain_english": "Your personal information may be transferred to other countries that might have less strict privacy protections than India.",
+        "severity": "medium"
+      },
+      {
+        "id": "vague_data_retention",
+        "title": "Vague rules on how long data is kept",
+        "plain_english": "The company says it keeps your data for as long as needed for business or legal reasons, but does not give a clear time limit or guarantee complete deletion.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "named_third_party_sdks",
+        "title": "Lists specific third-party tools used",
+        "plain_english": "The policy names the exact outside companies and software tools it uses, such as PayU, Razorpay, Google, and Facebook, so you know who is handling your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "encryption_used",
+        "title": "Encryption protects data in transit",
+        "plain_english": "The company says it uses encryption to protect your personal information when it is being sent between your device and their servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "account_deletion_offered",
+        "title": "Account deletion available on request",
+        "plain_english": "You can email the company to ask for your account and associated data to be deleted, which is a basic privacy right they provide.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your camera if you use the SkinScan feature to analyze your skin, but it is not required for shopping. Your photo is not shared with outside companies.",
+      "detail": "The SkinScan feature collects skin analysis results (skin rating and skin type) with third-party help, but the policy states no PII including the user's image is shared with third parties.",
+      "policy_excerpt": "Nykaa SkinScan - When you use the SkinScan feature, we will collect, calculate and store your skin analysis results with the help of third-parties... No PII including your image is shared with any Third Parties.",
+      "concerns": ["Third parties involved in processing skin analysis results"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your location and uses it to show you personalized ads, search results, and content based on where you are.",
+      "detail": "Location data is collected from the mobile device and used for location-based services including advertising, search results, and personalized content.",
+      "policy_excerpt": "We may also receive/store information about your location and your mobile device... We may use this information for internal analysis and to provide you with location-based services, such as advertising, search results, and other personalized content.",
+      "concerns": ["Location used for advertising", "No clear opt-out mentioned"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your contacts or phonebook.",
+      "detail": "No explicit mention of contacts, phonebook, or address book access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on this category"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explain whether the app accesses files or storage on your device.",
+      "detail": "No explicit mention of file system, photo library, or storage access beyond the broad statement that the app receives and stores any information provided.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on this category"],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with many outside companies including analytics and advertising partners who build profiles to target you with ads.",
+      "detail": "Nykaa shares data with analytics SDKs (Clevertap, Appsflyer, Crashlytics, Gamooga), payment processors, login providers, group companies, and service providers. Cross-border transfers are also permitted.",
+      "policy_excerpt": "Nykaa app contains third party SDKs that collect personally identifiable information... We may share your personal data with select third parties, group companies...",
+      "concerns": ["Analytics SDKs collect PII for ad targeting", "Cross-border data transfers to potentially weaker jurisdictions", "Contradictory statement that 'No such data is shared outside Nykaa'"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects detailed personal information like your name, email, phone number, address, date of birth, and even your picture, then uses it to target ads and recommendations at you.",
+      "detail": "Demographic and identity data includes name, email, contact number, shipping address, date of birth, and picture including skin type. This data is used for personalization, recommendations, and advertising.",
+      "policy_excerpt": "Demographic & Identity Data: Contact details such as Name, email address, contact number, shipping address, country, date of birth, Picture including skin type.",
+      "concerns": ["Extensive identity data collected", "Used for advertising and personalization", "Data combined with third-party sources"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks your behavior across the platform, builds a profile of your interests, and shows you targeted ads using data from both Nykaa and outside partners.",
+      "detail": "Nykaa uses cookies, pixel tags, log files, clickstream analytics, and third-party analytics SDKs to collect behavioral and contextual data, build user personas, and deliver personalized ads and content.",
+      "policy_excerpt": "We rely on Third Party analytics partners to gather a variety of first-party & Third Party Signals... to source high-value personalized insights to enhance personalisation and targeted marketing.",
+      "concerns": ["User personas built from behavioral data", "Interest-based ads displayed", "Third-party analytics partners involved", "Do Not Track signals not respected"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app says it is for adults only and does not knowingly collect data from children, but there is no real system in place to stop kids from signing up.",
+      "detail": "The policy states the platform is for adults only and minors should not make purchases or submit personal information, but there is no technical enforcement mechanism described.",
+      "policy_excerpt": "Our platform is directed to be used by adults only. If you are not an adult, while you may look at our site, you should not make a purchase, register, or submit Personal Information to us.",
+      "concerns": ["No age verification or enforcement mechanism"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your internet activity, IP address, and which pages you view, then uses that information to figure out your interests and show you personalized content.",
+      "detail": "Network activity is logged via cookies, pixel tags, log files, and clickstream analytics. IP addresses and usage data are used for internal analysis, location inference, advertising, and personalization.",
+      "policy_excerpt": "Location details such as data we get about your location, IP address, logs... Usage data details such as data about how you use our Platform or web-based properties, pages viewed, etc.",
+      "concerns": ["IP address used for location inference and profiling", "Clickstream data used for personalization"],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects a unique ID for your device, your network carrier, and other technical details to track and target you with personalized ads.",
+      "detail": "The policy explicitly mentions collecting a unique identifier for the device, device information, location, network carrier, and first/third party signals from mobile devices. This is used for internal analysis, advertising, and shared with analytics partners.",
+      "policy_excerpt": "We may also receive/store information about your location and your mobile device, including a unique identifier for your device.",
+      "concerns": ["Unique device identifier collected", "Device data used for ad targeting", "Shared with third-party analytics"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If you use the SkinScan feature, the app stores your skin analysis results and shares the processing with outside companies to recommend products.",
+      "detail": "SkinScan collects, calculates, and stores skin analysis results including skin rating and skin type. Third parties are involved in this processing, though the policy claims no PII or image is shared with them.",
+      "policy_excerpt": "Nykaa SkinScan - When you use the SkinScan feature, we will collect, calculate and store your skin analysis results with the help of third-parties, which include your skin rating and skin type.",
+      "concerns": ["Health-adjacent data stored on servers", "Third-party processing involved", "Used for product recommendations and promotions"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your credit or debit card number to process purchases, but uses outside payment companies like Razorpay and PayU to handle the actual transaction.",
+      "detail": "The policy lists card number, bank name, card type, and transaction amount as collected personal information. Payment processing is handled by third-party SDKs including PayU, Razorpay, and Cashfree. Encryption is mentioned for transmission.",
+      "policy_excerpt": "Details such as Transaction amount, Bank Name, Card Type, Card number.",
+      "concerns": ["Card number explicitly listed as collected data", "Broad 'receive and store any information' statement"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask to delete your account by emailing the company, but they may keep some of your data for legal or business reasons and do not say for exactly how long.",
+      "detail": "Users can request account deletion via privacy@nykaa.com. However, retention policy states data is kept 'for as long as it is required for the purposes set out in this Privacy Policy and for legal or regulatory reasons,' which is vague.",
+      "policy_excerpt": "you as a customer can also opt to get your account and associated data deleted... We keep the Personal Information we collect about you on our systems or with third parties for as long as it is required for the purposes set out in this Privacy Policy and for legal or regulatory reasons.",
+      "concerns": ["Vague retention period", "No mention of data export capability"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the company changes this privacy policy, they will post the new version online, but they will not email you or ask you to agree again.",
+      "detail": "Changes are posted on the privacy policy page with a recommendation to revisit regularly. No proactive notification mechanism or requirement for renewed consent is described.",
+      "policy_excerpt": "Any changes we may make to this Privacy Policy in the future will be posted on this page. We recommend that you re-visit this page regularly to check for any updates.",
+      "concerns": ["No proactive notification of changes", "No active re-consent required"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 109.5,
+    "final_score": 47,
+    "grade": "D"
+  }
+}
+```
+
+## Summary Card
+
+**App:** Nykaa – Makeup/Beauty Shopping
+**Overall Risk:** Risky — Score: 47/100 (Grade D)
+
+### Red Flags
+- **Extensive ad tracking and third-party data sharing:** The app shares your personal information with analytics and advertising companies like Clevertap, Appsflyer, and Gamooga so they can build a profile of your interests and show you targeted ads.
+- **Location tracked to serve personalized ads:** The app collects where you are and uses that information to show you location-based ads, search results, and personalized content.
+- **Credit and debit card numbers collected:** The app explicitly lists your card number as data it collects during purchases, which goes beyond what many secure payment setups require.
+- **Data sent to countries with weaker privacy laws:** Your personal information may be transferred to other countries that might have less strict privacy protections than India.
+- **Vague rules on how long data is kept:** The company says it keeps your data for as long as needed for business or legal reasons, but does not give a clear time limit or guarantee complete deletion.
+
+### Green Flags
+- **Lists specific third-party tools used:** The policy names the exact outside companies and software tools it uses, such as PayU, Razorpay, Google, and Facebook, so you know who is handling your data.
+- **Encryption protects data in transit:** The company says it uses encryption to protect your personal information when it is being sent between your device and their servers.
+- **Account deletion available on request:** You can email the company to ask for your account and associated data to be deleted, which is a basic privacy right they provide.
+
+### Verdict
+Nykaa collects extensive personal data including your location, device details, and payment information, then shares it with multiple analytics and advertising partners to build user profiles and serve targeted ads. Cross-border data transfers and vague retention policies add to the risk. While they offer account deletion and use encryption, the overall privacy posture is weak for a shopping app. Think twice before sharing sensitive information.

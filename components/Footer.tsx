@@ -20,6 +20,7 @@ export function Footer() {
               <li><Link href="/browse" className="hover:text-ink">Browse all apps</Link></li>
               <li><Link href="/request" className="hover:text-ink">Request an app</Link></li>
               <li><Link href="/compare" className="hover:text-ink">Compare apps</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-ink">Disclaimer</Link></li>
             </ul>
           </div>
           <div>
@@ -34,12 +35,18 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <p className="mt-10 text-xs text-ink-subtle">
-          Privacy ratings are based on an automated reading of each app&rsquo;s
-          published privacy policy. We do not independently verify technical claims,
-          and our analysis may contain errors or omissions. Ratings are not legal advice.
-          Always read the full policy yourself before installing an app.
-        </p>
+        <div className="mt-10 space-y-2 border-t border-line pt-8">
+          <p className="text-xs text-ink-subtle">
+            Ratings are AI-generated from publicly available privacy policies and App Store data. They reflect policy language — not verified app behaviour. Not legal advice.{" "}
+            <Link href="/disclaimer" className="underline underline-offset-2 hover:text-ink-muted">
+              Full disclaimer
+            </Link>
+          </p>
+          <p className="text-xs text-ink-subtle">
+            All app names, logos, and trademarks are the property of their respective owners. ShouldIDownloadThis is an independent service and is not affiliated with or endorsed by any app developer or Apple Inc.
+          </p>
+          <p className="text-xs text-ink-subtle">© {new Date().getFullYear()} ShouldIDownloadThis</p>
+        </div>
       </div>
     </footer>
   );

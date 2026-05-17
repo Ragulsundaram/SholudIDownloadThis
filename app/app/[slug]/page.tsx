@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, TriangleAlert } from "lucide-react";
 
 import { getApp, getAllSlugs } from "@/lib/getApp";
 import { getAllApps } from "@/lib/getAllApps";
@@ -102,6 +102,16 @@ export default async function AppPage({
 
           <div className="mt-8">
             <VerdictHero verdict={data.verdict} />
+          </div>
+
+          <div className="mt-3 mx-auto flex w-fit items-center gap-2 rounded-xl border border-caution-line bg-caution-soft px-4 py-3">
+            <TriangleAlert className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-caution-ink" />
+            <p className="text-xs leading-relaxed text-caution-ink">
+              AI-generated from the published privacy policy as of {data.meta.analyzed_at}. Not legal advice.{" "}
+              <Link href="/disclaimer" className="underline underline-offset-2 hover:opacity-80">
+                Full disclaimer
+              </Link>
+            </p>
           </div>
 
           <div className="mt-10">

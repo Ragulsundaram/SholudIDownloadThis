@@ -28,13 +28,13 @@ export function Navbar({ apps = [], categoryList }: Props) {
           <CompareBasket apps={apps} />
           <Link
             href="/categories"
-            className="rounded-md px-3 py-2 text-ink-muted hover:bg-divider hover:text-ink"
+            className="hidden rounded-md px-3 py-2 text-ink-muted hover:bg-divider hover:text-ink lg:block"
           >
             Browse
           </Link>
           <Link
             href="/request"
-            className="rounded-md px-3 py-2 text-ink-muted hover:bg-divider hover:text-ink"
+            className="hidden rounded-md px-3 py-2 text-ink-muted hover:bg-divider hover:text-ink lg:block"
           >
             Request an app
           </Link>

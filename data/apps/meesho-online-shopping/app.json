@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.meesho.com/privacy",
+    "terms_url": "https://www.meesho.com/legal/terms-conditions",
+    "policy_last_updated": "2025-06-23",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "meesho-online-shopping",
+    "name": "Meesho: Online Shopping",
+    "developer": "Meesho Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/meesho-online-shopping/id1457958492",
+    "app_store_id": "1457958492",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/05/e2/7605e296-5e74-886e-dbd5-7830b30345b2/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "E-Commerce",
+    "description": "Meesho is an Indian online shopping app for fashion, home, and electronics, allowing users to buy products and also resell them to their network."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 48,
+    "grade": "D",
+    "one_liner": "Meesho collects extensive personal data including government IDs and device contacts, then shares it broadly with advertisers and affiliates.",
+    "summary": "Meesho's privacy policy reveals broad and invasive data practices. It accesses your contacts and address book, collects government IDs like Aadhaar and PAN, tracks which other apps are on your phone, and logs the last website you visited before opening Meesho. All of this data is used for advertising and shared with a wide network of third-party service providers, advertisers, and affiliates. On the positive side, the app uses PCI-compliant payment processors and offers a Grievance Officer for data-deletion requests.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are uncomfortable with an app reading your contacts, tracking your other installed apps, and sharing your purchase behavior with advertisers and affiliates, consider whether Meesho's low prices are worth the privacy trade-off."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_data_sharing",
+        "title": "Data shared widely with advertisers and affiliates",
+        "plain_english": "Meesho shares your personal information with holding companies, subsidiaries, outside advertisers, and third-party marketers who may contact you about their own products and services.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_app_tracking",
+        "title": "Tracks your other apps and device ID for ads",
+        "plain_english": "Meesho collects which other apps are installed on your phone and shares your device advertising ID with ad companies so they can track what you do and show you more ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_contacts_access",
+        "title": "Contacts and address book accessed from device",
+        "plain_english": "Meesho may access the personal contacts and address book information stored on your mobile device, and it collects contact details of people you add to orders.",
+        "severity": "high"
+      },
+      {
+        "id": "red_government_id_collection",
+        "title": "Government IDs like Aadhaar and PAN collected",
+        "plain_english": "Meesho collects sensitive identity documents including your Aadhaar number, PAN, and other tax identification numbers as part of its identity verification process.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_url_tracking",
+        "title": "Last visited website and browsing activity logged",
+        "plain_english": "Meesho records the last web page you visited before opening their app, along with your clicks, search queries, and pages viewed, and uses this to show you ads.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_deletion_request",
+        "title": "Deletion request available via Grievance Officer",
+        "plain_english": "You can request deletion of your personal information by contacting the Grievance Officer, and the company promises to delete or de-identify your data after the retention period.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_pci_payments",
+        "title": "Payments handled by PCI compliant processors",
+        "plain_english": "Your credit or payment card information is shared only with PCI compliant payment gateway processors to complete your orders.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_underage_deletion",
+        "title": "Claims to delete underage accounts if discovered",
+        "plain_english": "Meesho says its services are not for users under 18 and promises to delete the account and related information if it learns a user is underage.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not clearly state whether the app accesses your camera or microphone.",
+      "detail": "The policy mentions photographs and audio clips in the context of stored files and user content, but it does not explicitly describe camera or microphone access.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy is silent on explicit camera or microphone access"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Meesho collects real-time location information from your device and uses it for delivery, recommendations, and advertising.",
+      "detail": "The policy states that applications collect real-time information about the location of your device, as permitted by you. Location data is also mentioned as part of automatically collected usage information.",
+      "policy_excerpt": "Our applications collect real-time information about the location of your device, as permitted by you.",
+      "concerns": [
+        "Real-time location collected",
+        "Location data used for advertising and shared with third parties"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Meesho may access the personal contacts and address book information stored on your mobile device, and it collects contact details of people you add to orders.",
+      "detail": "The policy explicitly mentions accessing metadata and information associated with files on your device, including personal contacts and address book information. It also collects contact information of people you add to or notify of your orders.",
+      "policy_excerpt": "Our Services also may access metadata and other information associated with other files stored on your mobile device. This may include, for example, photographs, audio and video clips, personal contacts and address book information.",
+      "concerns": [
+        "Address book and contacts accessed from device storage",
+        "Contact information of order recipients collected"
+      ],
+      "score_impact": -13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Meesho may access metadata and other information associated with files stored on your mobile device, including your photographs, audio, and video clips.",
+      "detail": "The policy explicitly states that services may access metadata and other information associated with files stored on your mobile device, including photographs, audio and video clips, and personal contacts.",
+      "policy_excerpt": "Our Services also may access metadata and other information associated with other files stored on your mobile device. This may include, for example, photographs, audio and video clips, personal contacts and address book information.",
+      "concerns": [
+        "Broad file metadata access on device",
+        "Photos, audio, and video clips potentially scanned"
+      ],
+      "score_impact": -6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho shares your personal information with affiliates, advertisers, service providers, and third-party marketers who may contact you about their products.",
+      "detail": "The policy describes sharing data with holding companies, subsidiaries, affiliates, contractors, advertisers, service providers, and third-parties to market their products to you. It also allows sharing in mergers, for legal purposes, and with social networks. De-identified data can be shared without limitation.",
+      "policy_excerpt": "To third-parties to market their products or services to you which We feel may be of interest or beneficial to you. We contractually require these third-parties to keep personal information confidential and use it only for the purposes for which We disclose it to them.",
+      "concerns": [
+        "Broad sharing with affiliates and advertisers",
+        "Third-party marketers may contact you",
+        "De-identified data shared without limitation",
+        "Data may transfer in a merger or sale"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho collects extensive personal information including your name, income, employer, and government IDs like Aadhaar and PAN, then uses it for advertising and recommendations.",
+      "detail": "The policy lists extensive PII collected including name, email, contact number, educational qualifications, occupation, date of birth, marital status, monthly income, number of children, employer details, Aadhaar number, PAN, and social security or tax IDs. This data is used for advertising, recommendations, and shared with network followers for marketing.",
+      "policy_excerpt": "Personally Identifiable Information can include, but not be limited to, information such as your name, email address, contact number... Aadhaar number, PAN, social security and tax identification numbers... We may also share your preferences or the Services availed by you with your network followers on the Company for marketing and other promotional activities of Our Services.",
+      "concerns": [
+        "Government IDs collected for verification",
+        "Identity data linked to advertising and marketing profiles",
+        "Preferences shared with network followers for promotion"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho tracks your app usage and device ID to show you interest-based ads, and shares your advertising ID with ad companies to measure ad performance.",
+      "detail": "The policy states that personal information is used to display interest-based ads. Advertising companies may use mobile device IDs to track app usage, count ads, measure performance, and show relevant ads. Analytics companies may also use device IDs to track usage. Third-party cookies are used for marketing.",
+      "policy_excerpt": "We use your personal information to display interest-based ads for features, products, and services that might be of interest to you... Advertising companies may use device IDs to track your use of Our applications, track the number of advertisements displayed, measure advertising performance and display advertisements that are more relevant to you.",
+      "concerns": [
+        "Behavioral tracking for ad targeting",
+        "Device advertising IDs shared with ad companies",
+        "Third-party cookies used for marketing",
+        "No clear opt-out mechanism described"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho says its services are for users 18 and older, and promises to delete an account if it learns the user is under 18, but there is no technical age check.",
+      "detail": "The policy states services are not intended for users under 18 and that use is only available to persons who can form a legally binding contract. It promises to delete the account if it becomes aware a user is under 18, but no technical verification mechanism is described.",
+      "policy_excerpt": "The Services are not intended for users under the age of 18 (eighteen)... If We become aware that a person submitting personal information is under the age of 18 years, We will delete the account and any related information as soon as possible.",
+      "concerns": [
+        "No technical age verification mechanism"
+      ],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho logs your IP address, the last website you visited before opening Meesho, your clicks, searches, and pages viewed, and uses this data for advertising.",
+      "detail": "The policy collects usage information including traffic data, location data, logs, IP addresses, last URL visited, search queries, clicks, pages viewed, visit duration, and error logs. This is used for advertising, personalization, and shared with service providers for analysis.",
+      "policy_excerpt": "Usage information: Details of your use of our Services, including traffic data, location data, logs and other communication data... Last URL visited: The URL of the last web page you visited before visiting Our websites.",
+      "concerns": [
+        "Full browsing activity and last URL logged",
+        "Network data used for advertising and profiling",
+        "Shared with service providers for analytics"
+      ],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho collects your device type, unique device ID, operating system, browser, mobile network, and even which other apps are installed on your phone to personalize ads and track you.",
+      "detail": "The policy collects IP address, OS, browser type, device type, unique device identifier, mobile network info, device telephone number, and mobile device IDs (IDFA, GAID). It also explicitly collects information about the presence, absence, and details of other applications on your mobile phone across categories like shopping, fashion, food, and travel.",
+      "policy_excerpt": "Computer and device information: Information about your computer, Internet connection and mobile device, including your IP address, operating systems, platforms, browser type... device type, device's unique device identifier, mobile network information and the device's telephone number... the applications We gather information for, may vary across categories including, without limitation, shopping, fashion, food and travel.",
+      "concerns": [
+        "Unique device identifiers collected for advertising",
+        "List of other installed apps gathered",
+        "Device signals used for profiling and ad targeting"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect any health or biometric data.",
+      "detail": "No mention of health, medical, or biometric data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Meesho collects your billing and payment card information and shares it with PCI compliant payment gateway processors to complete your purchases.",
+      "detail": "The policy states that transactional information including billing and credit or payment card information is collected and shared with third-parties that assist in processing requests, including PCI compliant payment gateway processors. The company also uses scoring methods to assess credit risks.",
+      "policy_excerpt": "billing information and credit or payment card information. This information may be shared with third-parties which assist in processing and fulfilling your requests, including PCI compliant payment gateway processors.",
+      "concerns": [
+        "Payment data collected and shared with processors",
+        "Credit risk scoring methods used"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can close your account in profile settings or request deletion through the Grievance Officer, but Meesho reserves the right to keep some data for legal or fraud-prevention purposes.",
+      "detail": "The policy says users can close an account via profile settings and request deletion by raising a request with the Grievance Officer. However, the company reserves the right to retain personal information as required by applicable law, and may archive information for fraud investigation or legal obligations. Data may also be retained in anonymized form for research.",
+      "policy_excerpt": "A user can close an account by visiting the profile settings page on Our website. A user may request for deletion of its personal information by raising a request with the Grievance Officer... We reserve the right to retain your personal information in accordance with applicable laws... We may archive information to prevent, investigate, or identify possible wrongdoing in connection with the Service or to comply with legal obligations.",
+      "concerns": [
+        "No guaranteed complete deletion",
+        "Data may be retained for legal or fraud purposes",
+        "Anonymized data kept for research"
+      ],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meesho can change its privacy policy at any time and says that if you keep using the app after changes are posted, you automatically agree to them.",
+      "detail": "The policy states it may change from time to time, and continued use after any change is deemed acceptance. Changes are posted on the policy page, and users are encouraged to check periodically.",
+      "policy_excerpt": "This Policy may change from time to time, your continued use of the Company's Services after it makes any change is deemed to be acceptance of those changes, so please check the Policy periodically for updates.",
+      "concerns": [
+        "Continued use equals acceptance",
+        "No advance notice period specified"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 107.25,
+    "final_score": 48,
+    "grade": "D"
+  }
+}

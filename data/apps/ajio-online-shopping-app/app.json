@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.ajio.com/privacypolicy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "ajio-online-shopping-app",
+    "name": "AJIO Online Shopping App",
+    "developer": "Reliance Retail Limited",
+    "app_store_url": "https://apps.apple.com/in/app/ajio-online-shopping-app/id1113425372",
+    "app_store_id": "1113425372",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/82/d4/9f/82d49f7d-3f73-7cf1-2204-68718b12754b/AppIcon-0-0-1x_U007emarketing-0-10-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion & Lifestyle",
+    "description": "AJIO is an online fashion and lifestyle shopping app offering clothing, footwear, accessories, and home products for men, women, and kids."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 53,
+    "grade": "D",
+    "one_liner": "A popular shopping app that aggressively tracks your behavior and shares your data widely across the Reliance ecosystem and with advertisers.",
+    "summary": "AJIO collects extensive personal and behavioral data, shares it broadly with affiliates and third-party advertisers, and tracks your location in the background for marketing purposes. While it offers basic opt-outs for promotional emails and uses secure payment gateways, the overall privacy posture is weak for a shopping app.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app shares purchase history and browsing behavior across multiple platforms and tracks your location in the background for deals. If you value privacy, consider using the website in a browser with tracking protection instead."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_affiliate_sharing",
+        "title": "Broad data sharing with affiliates and ad networks",
+        "plain_english": "AJIO shares your name, contact details, purchase history, shopping preferences, and browsing behavior with its parent company Reliance, other platforms it runs, and third-party advertisers to show you personalized offers and ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_background_location_marketing",
+        "title": "Background location tracking for marketing",
+        "plain_english": "The app can collect your precise location even when it is closed or you are not using it, sending store updates and exclusive deals based on where you are. You can disable this in your phone settings, but it is enabled by default if you consent.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioral_tracking_ads",
+        "title": "Behavioral tracking across services",
+        "plain_english": "AJIO tracks what you browse and buy to recommend products and serve targeted ads. It also allows outside advertising companies to place tracking cookies on your device.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sale_of_data_transfer",
+        "title": "Data may transfer if company is sold",
+        "plain_english": "If AJIO or Reliance sells part or all of its business, your personal information can be transferred to the new owner. You only get a chance to opt out if the new owner plans to use your data differently.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_difficult_deletion",
+        "title": "No easy way to delete your account data",
+        "plain_english": "To request deletion of your information, you must email customer care. There is no self-service delete button in the app, and the policy does not clearly promise complete erasure of all your data.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_opt_out_promotions",
+        "title": "You can opt out of marketing emails",
+        "plain_english": "AJIO lets you unsubscribe from promotional emails and newsletters by clicking an unsubscribe link or contacting customer care.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_health_data",
+        "title": "No health or biometric data collected",
+        "plain_english": "The app does not ask for or store any health, medical, or biometric information beyond what your phone provides for basic security.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_child_protection",
+        "title": "Claims not to collect data from minors",
+        "plain_english": "AJIO states it is not meant for users under 18 and promises to delete a child's information if a parent or guardian reports it.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_secure_payments",
+        "title": "Payments handled by encrypted third-party gateways",
+        "plain_english": "Your card and bank details are processed through external, encrypted payment gateways rather than being stored directly by the app in plain text.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your camera and microphone when you actively choose to use features like uploading product photos or voice search. It does not record in the background.",
+      "detail": "The policy mentions camera and microphone access with user consent (Section 3.7) and states voice, image, and camera inputs are used to respond to user requests and improve services (Section 4.3). No background access is described.",
+      "policy_excerpt": "When you use our voice, image and camera services, we use your voice input, images, videos, and other Information to respond to your requests, provide the requested Products to you, and improve our services or the Platform.",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": true,
+      "plain_english": "AJIO collects your location through Bluetooth and Wi-Fi signals, and can track you in the background even when the app is closed to send nearby store deals and updates.",
+      "detail": "Section 3.6 states the app may collect precise location data in the background with opt-in consent, even when closed or not in use, for nearby offline store updates, exclusive deals, and a smoother shopping experience. Users can disable this in device settings.",
+      "policy_excerpt": "We may collect precise location data from your device in the background to provide relevant services, such as location-based notifications on offline stores related updates, exclusive deals, and a smoother shopping experience.",
+      "concerns": ["Background tracking enabled by default after opt-in", "Used for marketing, not just delivery"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your contacts or phonebook.",
+      "detail": "No mention of contacts, phonebook, or address book access was found in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on this category"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may access your photos and files when you choose to upload an image, such as for a product review or profile picture.",
+      "detail": "The policy mentions camera usage with consent (Section 3.7) and references images and videos in Section 4.3, implying user-initiated file access for product-related features. No broad library scanning is described.",
+      "policy_excerpt": "The Platform also may collect other information about you in ways that the Platform describe to you or otherwise with your consent like the permission to access your location, camera usage, microphone access etc.",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AJIO shares your personal information widely with other companies in the Reliance group, outside advertisers, and service providers that handle deliveries and payments.",
+      "detail": "Sections 5.1-5.4 and 5.7 describe sharing with third-party service providers (payment gateways, logistics), Reliance affiliates for cross-platform shopping experiences, and advertisers/sponsors. Data shared includes name, contact, email, gender, date of birth, purchase history, shopping preferences, saved addresses, payment information, and browsing behavior. Non-personal information is also shared with partners and developers (Section 5.8).",
+      "policy_excerpt": "The Information collected from you may be shared with our affiliates for providing a seamless/smoother and integrated shopping experience on our Platforms and/or on other online platforms and/or offline stores managed and/or operated by us.",
+      "concerns": ["Broad affiliate sharing for advertising and loyalty programs", "Aggregate personal info shared with advertisers and sponsors", "Potential transfer of data in a business sale"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AJIO requires your full name, phone number, email, gender, and date of birth, then links that identity to your shopping behavior and shares it across other platforms for ads and recommendations.",
+      "detail": "Sections 3.2 and 3.3 state that Personal Information including full name, contact numbers, residential address, email, gender, and date of birth is collected. Section 5.7 confirms this is shared with affiliates and other platforms. The app uses this data to build a profile for personalized offers and recommendations (Sections 4.2.5, 4.2.8, 4.2.9).",
+      "policy_excerpt": "We may collect a variety of Information from you, including your name, mailing address, phone number, email address and contact preferences... Personal Information shall include but is not limited to your full name, personal contact numbers, residential address, email address, gender, date of birth.",
+      "concerns": ["Identity linked to advertising profile", "Shared across Reliance platforms without clear limits"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AJIO tracks what you look at and buy to show you targeted ads and recommendations, and allows outside ad companies to place tracking cookies on your device.",
+      "detail": "Sections 4.2.5, 4.2.8, and 4.2.9 describe using browsing behavior for recommendations and marketing communications. Section 9.4 allows third-party ad servers and technology vendors to place cookies. Aggregate findings including personal info in unidentifiable form are shared with advertisers and sponsors (Section 9.1). Users can opt out of promotional emails (Section 10.1).",
+      "policy_excerpt": "We may allow other companies or entities to serve advertisements that may be of interest to you. These companies or entities include third party advertisement servers, advertisement agencies, advertisement technology vendors and research firms. In the course of serving advertisements or optimizing the services to Users, we may allow authorised third parties to place or recognize a unique cookie on the User's browser.",
+      "concerns": ["Third-party ad cookies allowed", "Browsing behavior used for targeted ads", "Limited opt-out only for promotional emails, not core tracking"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AJIO says it is not for kids under 18 and will delete a child's data if a parent reports it, but it does not explain how it actually checks ages.",
+      "detail": "Section 3.5 states the Platforms are not directed towards minors, they do not knowingly collect data from users under 18, and will delete information within a reasonable time if discovered. No age verification mechanism is described.",
+      "policy_excerpt": "The Platforms are not directed towards minors. We do not knowingly collect Personal Information from any User who is under 18 (Eighteen) years.",
+      "concerns": ["No age verification mechanism described"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app automatically records your IP address, browser type, and internet provider to study overall user trends and improve its services.",
+      "detail": "Section 9.1 states the app automatically receives the URL of the referring site, IP address, OS, browser type, email patterns, and ISP name. This is used for trend analysis and improving services. The link between IP and personally identifiable info is not shared with third parties without permission, except when required by law. Aggregate findings are shared with advertisers, sponsors, and partners.",
+      "policy_excerpt": "When you visit, access or browse the Platforms, we automatically receive the uniform resource locator of the site from which such you visit... the internet protocol address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider.",
+      "concerns": ["Aggregate network data shared with advertisers and sponsors"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AJIO collects hardware identifiers, unique app IDs, and Bluetooth and Wi-Fi signals from your phone to recognize your device and deliver location-based services.",
+      "detail": "Section 3.2 mentions hardware identifiers and unique systems or application software as Non-Personal Information. Section 3.6 mentions Bluetooth and Wi-Fi signals for location collection. This data is combined with other information and used for platform improvement and cross-platform experiences.",
+      "policy_excerpt": "Non-Personal Information includes data or information that doesn't personally identify you and may include hardware identifiers, unique systems or application software etc.",
+      "concerns": ["Device signals used for location and profiling", "Combined with personal info to identify users"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect any health or biometric data.",
+      "detail": "No mention of health, medical, or biometric data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "To buy products, your payment details are sent through secure, encrypted third-party payment gateways rather than being stored directly by AJIO.",
+      "detail": "Section 3.3 lists financial information such as bank account, credit card, or debit card details as Sensitive Personal Data. Section 5.5 clarifies that third-party payment gateways collect and process this information under encryption for billing purposes only. The policy also disclaims liability for payment gateway actions. However, Section 5.7 mentions payment information is among data shared/stored, creating some ambiguity.",
+      "policy_excerpt": "A third-party payment gateway provider may be required to collect certain financial information from you including, but not restricted to, your credit/debit card number or your bank account details... All Financial Information collected from the you by such third-party payment gateway providers will be used only for billing and payment processes.",
+      "concerns": ["Policy ambiguous about whether AJIO itself retains payment info"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request changes or deletion of your data by emailing customer care, but there is no simple delete button in the app and the policy does not promise complete removal of everything.",
+      "detail": "Section 3.4 allows users to access, amend, alter, or require deletion by contacting customercare@ajio.com. No self-service deletion mechanism is described. The policy does not specify what data is fully deleted versus retained for legal or business purposes. Section 6 says information is retained as long as necessary for the purposes outlined or as required by law.",
+      "policy_excerpt": "You may access, amend, alter or require deletion of your information partially or fully by contacting us at customercare@ajio.com.",
+      "concerns": ["No in-app self-service deletion", "Retention for legal/business purposes not fully explained"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AJIO can change its privacy policy at any time and says that if you keep using the app after changes are posted, you automatically agree to them.",
+      "detail": "Section 11 states the Privacy Policy is subject to changes based on business, legal, or regulatory requirements. Significant changes are communicated on a best-effort basis. Continued use after changes is deemed acceptance.",
+      "policy_excerpt": "While we make all reasonable efforts to communicate any significant changes to this Privacy Policy to you on best effort basis, we encourage you to review this Privacy Policy whenever you visit our Platforms to understand how your Information is used. Your continued use of the Platforms after any changes, modifications and amendments to this Privacy Policy will be deemed as your acceptance to such changes, modifications and amendments.",
+      "concerns": ["Continued use equals acceptance", "Best-effort communication only for significant changes"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 96,
+    "final_score": 53,
+    "grade": "D"
+  }
+}

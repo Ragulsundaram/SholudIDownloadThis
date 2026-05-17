@@ -147,7 +147,7 @@ export default async function CategoriesPage() {
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
               {ALL_CATEGORIES.map((cat) => (
                 <CategoryCard key={cat.slug} category={cat} />
               ))}
@@ -184,7 +184,7 @@ function CategoryCard({ category }: { category: CategoryDef }) {
             Featured
           </span>
         )}
-        <span className="text-xl font-bold text-white drop-shadow-sm">
+        <span className="text-sm font-bold text-white drop-shadow-sm sm:text-xl">
           {category.featuredLabel ?? category.name}
         </span>
       </div>

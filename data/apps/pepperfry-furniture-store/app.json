@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "http://www.pepperfry.com/privacy-policy.html",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "pepperfry-furniture-store",
+    "name": "Pepperfry Furniture Store",
+    "developer": "Pepperfry Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/pepperfry-furniture-store/id972047429",
+    "app_store_id": "972047429",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/02/a2/2402a296-6e34-9132-af91-20da786c68e1/AppIcon-1x_U007ephone-0-1-0-85-220-0.jpeg/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Furniture & Home Decor",
+    "description": "Indian online marketplace for furniture, home decor, and furnishings with delivery tracking and payment integration."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "Popular furniture shopping app that shares your data widely with affiliates and tracks you for marketing.",
+    "summary": "Pepperfry is a well-known Indian furniture and home decor marketplace. While it handles payments securely through third-party processors and protects passwords with standard measures, its privacy policy raises concerns. The company shares personal information broadly with affiliates, joint ventures, and third-party marketers, and may include your data in business sales or transfers. They actively track your behavior using cookies and web beacons for advertising and analytics. Deletion is possible but may cancel your account. Several key privacy areas are not addressed at all in the policy, including location, contacts, camera, and file access.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Pepperfry is a legitimate furniture store, but its privacy policy reveals broad data sharing with affiliates and business partners, plus active tracking for ads. If you only need to browse furniture occasionally, the privacy trade-off may not be worth creating an account."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_third_party_sharing",
+        "title": "Shares your data with many affiliates and partners",
+        "plain_english": "Pepperfry shares your personal information with its parent companies, affiliates, joint ventures, agents, and third-party service providers for marketing and services. They also say your data may be sold or transferred during a merger, acquisition, or bankruptcy.",
+        "severity": "high"
+      },
+      {
+        "id": "red_tracks_for_ads",
+        "title": "Tracks your behavior for ads and marketing",
+        "plain_english": "Pepperfry collects how you use the app and website, uses cookies and web beacons to follow your activity, and sends you ads, promotions, and marketing materials from themselves and their business partners.",
+        "severity": "high"
+      },
+      {
+        "id": "red_weak_change_notice",
+        "title": "Policy changes accepted automatically",
+        "plain_english": "If Pepperfry updates its privacy rules, your continued use of the app counts as agreeing to the new terms. They won't ask you to confirm or re-accept the changes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_deletion_penalty",
+        "title": "Deleting data may cancel your account",
+        "plain_english": "You can ask Pepperfry to delete your personal data by emailing customer service. But be warned: deleting certain information might cancel your account and lock you out of app features.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_payment_processor_safe",
+        "title": "Payment details stay with providers",
+        "plain_english": "When you pay, your card and bank details go straight to payment providers. Pepperfry says it never sees or stores your actual financial information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_password_protected",
+        "title": "Passwords are reasonably protected",
+        "plain_english": "The company says it uses reasonable security measures to protect your account password from being exposed or disclosed, even to their own staff.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_health_biometric",
+        "title": "No health or biometric data collected",
+        "plain_english": "This is a furniture shopping app, so it doesn't need or collect health information, heart rate, fingerprints, or Face ID data beyond what your phone handles locally.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_available",
+        "title": "You can request data deletion",
+        "plain_english": "Although you have to email customer service, Pepperfry does offer a way to ask for your personal information to be deleted from their records.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't say whether the app can access your camera or microphone. Since Pepperfry is a furniture store app, it may use the camera for things like uploading room photos, but this isn't explained.",
+      "detail": "No mention of camera or microphone access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't mention whether the app collects your location. A shopping app might use it for delivery or store finder, but they don't say.",
+      "detail": "No mention of GPS or location data collection.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on location access"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say if the app reads your phone contacts. There's no mention of accessing your address book or contact list.",
+      "detail": "No mention of contacts or phonebook access.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't explain if the app accesses files or storage on your phone. It's unclear whether it can read your photos or documents.",
+      "detail": "No mention of storage or file access.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage/file access"],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Pepperfry shares your personal information with its parent companies, affiliates, joint ventures, agents, and third-party service providers. They also say your data may be sold or transferred during a merger, acquisition, or bankruptcy.",
+      "detail": "The policy states that Platform Entities, joint ventures, agents, or third parties may access user information for services, marketing, and commercial transactions. In business transfers (merger, acquisition, reorganization, bankruptcy), personal information may be sold or transferred.",
+      "policy_excerpt": "We may enable access of the Users' information to the Platform Entities, joint ventures, agents or third parties for the purposes of the services provided by them or for any other marketing related activity... Platform may sell, transfer or otherwise share some or all of its assets, including your Personal Information, in connection with a merger, acquisition, reorganization or sale of assets or in the event of bankruptcy.",
+      "concerns": ["Broad sharing with affiliates and joint ventures", "Personal information included in business transfers/sales", "Marketing-related sharing"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Pepperfry collects your email, password, shipping and billing info, and transaction details to run your account. They say they protect your password with reasonable security measures.",
+      "detail": "Standard account data collection for e-commerce: registration details, shipping/billing info, transaction details, usage behavior, computer/network details.",
+      "policy_excerpt": "Your registration details which may include the email address and password provided by You... Your shipping, billing, tax registration, and other information pertaining to Your sale or purchase transaction... Details of the computer system or computer network which You use to visit the Website.",
+      "concerns": ["Collects network/computer details", "Broad sharing of account data with affiliates"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Pepperfry tracks how you use the app and website, collects your behavior through cookies and web beacons, and uses this to send you ads, promotions, and marketing materials from themselves and their partners.",
+      "detail": "They collect information to track User behavior and preferences for internal analytics through server log files, cookies, and web beacons. They combine and aggregate this with other data to provide a 'better experience' and use it for direct marketing, online/offline advertising, and promotion materials.",
+      "policy_excerpt": "We may also collect information to track User behavior and preferences for internal analytics... through the use of server log files and tracking technologies to collect and analyze certain types of technical information and may include cookies and web beacons... to serve various promotion materials and advertising materials to you.",
+      "concerns": ["Behavioral tracking via cookies and web beacons", "Direct marketing and advertising", "Aggregation and combination of user data"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There's no mention of children or age restrictions in the privacy policy. It's unclear how they handle data from users under 18.",
+      "detail": "No mention of children's data, age requirements, or COPPA/GDPR-K compliance.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on children's data protections"],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Pepperfry logs your activity on the site and app, including your IP address and how you browse, to understand usage patterns and for security.",
+      "detail": "They track user behavior and preferences for internal analytics using server log files and tracking technologies. Standard network logging.",
+      "policy_excerpt": "We may also collect information to track User behavior and preferences for internal analytics from all Users of the Website. This information is collected through the use of server log files and tracking technologies.",
+      "concerns": ["IP and usage behavior logged", "Used for analytics and potentially profiling"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Pepperfry collects details about your computer or phone and network when you use the app, and uses cookies and tracking tools to recognize your device.",
+      "detail": "They collect details of the computer system or computer network used to visit the website. They also use cookies, web beacons, and tracking technologies for analytics.",
+      "policy_excerpt": "Details of the computer system or computer network which You use to visit the Website and undertake any activity on the Website... through the use of server log files and tracking technologies to collect and analyze certain types of technical information.",
+      "concerns": ["Device/network details collected", "Cookies and tracking technologies used"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This is a furniture shopping app, so it doesn't collect health or biometric data like heart rate or fingerprints. There's no mention of such data in the policy.",
+      "detail": "No health or biometric data is collected by a furniture shopping app.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "When you pay, your card and bank details go straight to payment providers like Razorpay or PayPal. Pepperfry says it never sees or stores your actual financial information.",
+      "detail": "The policy explicitly states that the website and platform never receive financial and payment information from service providers, and that users' financial info is dealt with by those providers according to their own policies.",
+      "policy_excerpt": "You understand, agree and acknowledge that the Website and Platform never receives Your financial and payment information from these service provider. Your personal information, sensitive personal information and financial information will be dealt by these service providers.",
+      "concerns": ["Users must trust third-party payment providers' privacy policies"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask Pepperfry to delete your personal data by emailing customer service. But be warned: deleting certain info might cancel your account and lock you out of app features.",
+      "detail": "Deletion is available via email request to customer service. However, they note that deletion of certain Personal Information may lead to cancellation of registration and loss of access to features. No mention of data export.",
+      "policy_excerpt": "If You wish to have the Personal Information that You have provided to us deleted, You can always do so by sending a request to us on the e-mail id of our Customer Services department... You may note that deletion of certain Personal Information may lead to cancellation of your registration with the Website and your access to certain features of the Website.",
+      "concerns": ["Deletion may result in account cancellation", "No mention of data export", "Must email customer service, no self-service option mentioned"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If Pepperfry changes its privacy policy, they expect you to keep checking the page. Just continuing to use the app counts as accepting the new rules — they won't ask you to agree again.",
+      "detail": "The policy states that continued subscription/use constitutes acceptance of the then-current privacy policy. Users are encouraged to visit the page periodically.",
+      "policy_excerpt": "Your continued subscription to our Services constitutes an acceptance of the then-current Privacy Policy and Terms of Use so We encourage You to visit this page periodically to review any changes.",
+      "concerns": ["No active re-agreement required", "Changes apply retroactively via continued use"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 90.25,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

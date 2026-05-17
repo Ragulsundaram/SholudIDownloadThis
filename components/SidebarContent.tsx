@@ -18,6 +18,7 @@ import {
   Music,
   Newspaper,
   Code,
+  PlusCircle,
   type LucideIcon,
 } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
@@ -117,6 +118,16 @@ export function SidebarContent({ apps, categoryList, onNavigate }: SidebarConten
       >
         <LayoutGrid className="h-4 w-4 flex-shrink-0" />
         <span>All Categories</span>
+        <ChevronRight className="ml-auto h-3.5 w-3.5 flex-shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+      </Link>
+
+      <Link
+        href="/request"
+        onClick={onNavigate}
+        className="group flex items-center gap-2 rounded-lg py-1.5 text-sm text-ink-muted transition-colors hover:bg-divider hover:text-ink"
+      >
+        <PlusCircle className="h-4 w-4 flex-shrink-0" />
+        <span>Request an app</span>
         <ChevronRight className="ml-auto h-3.5 w-3.5 flex-shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
       </Link>
     </>

@@ -126,6 +126,20 @@
     "needs_review": true
   },
   {
+    "slug": "urban-ladder",
+    "name": "Urban Ladder",
+    "developer": "Urban Ladder Home Decor Solutions Private Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/73/e9/c8/73e9c847-f31c-551b-e624-79812a3e07fa/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "",
+    "one_liner": "A furniture shopping app that collects standard personal data and shares it with partners, but also records calls and allows third-party ad cookies.",
+    "score": 73,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
+    "needs_review": true
+  },
+  {
     "slug": "f1-tv",
     "name": "F1 TV",
     "developer": "Formula One Digital Media Limited",
@@ -504,6 +518,20 @@
     "needs_review": false
   },
   {
+    "slug": "lenskart-eyewear",
+    "name": "Lenskart: Eyewear",
+    "developer": "Lenskart Solutions Private Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/75/9f/0c759fa6-7c63-f92f-c0d9-ccd7aaad5aaa/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Eyeglasses, sunglasses, and contact lenses shopping app with virtual 3D try-on features.",
+    "one_liner": "Collects facial scans, prescription details, and tracks your device for ads.",
+    "score": 59,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
+    "needs_review": true
+  },
+  {
     "slug": "microsoft-bing-search",
     "name": "Microsoft Bing Search",
     "developer": "Microsoft Corporation",
@@ -571,6 +599,20 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-16",
+    "needs_review": true
+  },
+  {
+    "slug": "ikea",
+    "name": "IKEA",
+    "developer": "Inter IKEA Systems B.V.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5b/a7/88/5ba78849-a070-37b2-be4c-af5ec2f2e12e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Furniture and home goods shopping app with store locator, loyalty rewards, and in-store features.",
+    "one_liner": "A major retailer that collects extensive shopping and browsing data for personalization and shares it across its corporate group and advertising partners.",
+    "score": 58,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
     "needs_review": true
   },
   {
@@ -658,6 +700,34 @@
     "needs_review": false
   },
   {
+    "slug": "nykaa-fashion-shopping-app",
+    "name": "Nykaa Fashion - Shopping App",
+    "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/fe/56/cafe56ff-c983-d2e9-db3f-8fc815c137bd/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Indian fashion and lifestyle e-commerce app for clothing, accessories, and beauty products.",
+    "one_liner": "A popular Indian fashion shopping app that collects extensive personal data and shares it widely for advertising and logistics.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
+    "needs_review": true
+  },
+  {
+    "slug": "pepperfry-furniture-store",
+    "name": "Pepperfry Furniture Store",
+    "developer": "Pepperfry Private Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/02/a2/2402a296-6e34-9132-af91-20da786c68e1/AppIcon-1x_U007ephone-0-1-0-85-220-0.jpeg/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Indian online marketplace for furniture, home decor, and furnishings with delivery tracking and payment integration.",
+    "one_liner": "Popular furniture shopping app that shares your data widely with affiliates and tracks you for marketing.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
     "slug": "rapido",
     "name": "Rapido: Bike-Taxi, Auto & Cabs",
     "developer": "Roppen Transportation Services Private Limited",
@@ -669,6 +739,20 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-16",
+    "needs_review": false
+  },
+  {
+    "slug": "adidas-shop-shoes-clothing",
+    "name": "adidas: Shop Shoes & Clothing",
+    "developer": "runtastic GmbH",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/60/ab/f060abf4-9bb8-f674-2b45-0d72096ac505/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Shop adidas shoes, clothing, and accessories. Browse collections, get personalized recommendations, try on products with AR, and track orders.",
+    "one_liner": "Heavy tracking and data sharing for advertising, with background location access and extensive profiling.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
     "needs_review": false
   },
   {
@@ -725,6 +809,20 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-16",
+    "needs_review": false
+  },
+  {
+    "slug": "ajio-online-shopping-app",
+    "name": "AJIO Online Shopping App",
+    "developer": "Reliance Retail Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/82/d4/9f/82d49f7d-3f73-7cf1-2204-68718b12754b/AppIcon-0-0-1x_U007emarketing-0-10-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "AJIO is an online fashion and lifestyle shopping app offering clothing, footwear, accessories, and home products for men, women, and kids.",
+    "one_liner": "A popular shopping app that aggressively tracks your behavior and shares your data widely across the Reliance ecosystem and with advertisers.",
+    "score": 53,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-18",
     "needs_review": false
   },
   {
@@ -840,6 +938,20 @@
     "needs_review": false
   },
   {
+    "slug": "meesho-online-shopping",
+    "name": "Meesho: Online Shopping",
+    "developer": "Meesho Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/05/e2/7605e296-5e74-886e-dbd5-7830b30345b2/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Meesho is an Indian online shopping app for fashion, home, and electronics, allowing users to buy products and also resell them to their network.",
+    "one_liner": "Meesho collects extensive personal data including government IDs and device contacts, then shares it broadly with advertisers and affiliates.",
+    "score": 48,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
     "slug": "canva",
     "name": "Canva",
     "developer": "Canva Pty Ltd",
@@ -896,6 +1008,20 @@
     "needs_review": false
   },
   {
+    "slug": "nykaa-makeup-beauty-shopping",
+    "name": "Nykaa \u2013 Makeup/Beauty Shopping",
+    "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/88/a8/c088a8a6-6143-0912-7f9a-28d631ed3d4f/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "A beauty and personal care e-commerce app that sells cosmetics, skincare, haircare, fragrances, and wellness products.",
+    "one_liner": "Heavy data collection and ad tracking with broad third-party sharing.",
+    "score": 47,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-18",
+    "needs_review": true
+  },
+  {
     "slug": "truecaller",
     "name": "Truecaller: Caller ID & Block",
     "developer": "True Software Scandinavia AB",
@@ -908,6 +1034,20 @@
     "risk": "risky",
     "analyzed_at": "2026-05-16",
     "needs_review": true
+  },
+  {
+    "slug": "flipkart-online-shopping-app",
+    "name": "Flipkart - Online Shopping App",
+    "developer": "Flipkart Internet Private Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/16/a0/fe16a076-2175-915f-f3cc-6cac77cfb5e3/AppIcon-fk-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "",
+    "one_liner": "Flipkart collects extensive personal and financial data and shares it broadly with affiliates, advertisers, and business partners.",
+    "score": 46,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-18",
+    "needs_review": false
   },
   {
     "slug": "instagram",
@@ -938,6 +1078,20 @@
     "needs_review": true
   },
   {
+    "slug": "h-m",
+    "name": "H&M",
+    "developer": "H & M Hennes & Mauritz AB",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/37/d4/c837d4da-2fb9-aa1d-f09e-2758b55c0638/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "The official H&M shopping app for browsing and purchasing fashion and home products, managing orders, and accessing member-exclusive offers.",
+    "one_liner": "Limited disclosures confirm tracking and ad data sharing, but most privacy practices remain unverified.",
+    "score": 45,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-18",
+    "needs_review": true
+  },
+  {
     "slug": "jiohotstar",
     "name": "JioHotstar",
     "developer": "JIOSTAR INDIA PRIVATE LIMITED",
@@ -949,6 +1103,20 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-17",
+    "needs_review": false
+  },
+  {
+    "slug": "tata-cliq-luxury-shopping-app",
+    "name": "Tata CLiQ Luxury Shopping App",
+    "developer": "Tata Unistore Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/31/58/33/315833fe-9cd3-c30e-7255-6e6b858c90a0/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Luxury fashion and lifestyle shopping app by Tata Unistore.",
+    "one_liner": "Extensive data collection and broad sharing across the Tata Group ecosystem for marketing and profiling.",
+    "score": 45,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-05-18",
     "needs_review": false
   },
   {

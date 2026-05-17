@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "kimi-k2.6",
+    "policy_url": "https://adidasapp.adidas.com/legal/en-GB/privacy_policy.html",
+    "terms_url": "",
+    "policy_last_updated": "2025-11-01",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "adidas-shop-shoes-clothing",
+    "name": "adidas: Shop Shoes & Clothing",
+    "developer": "runtastic GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/adidas--shop-shoes---clothing/id1266591536",
+    "app_store_id": "1266591536",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/60/ab/f060abf4-9bb8-f674-2b45-0d72096ac505/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "",
+    "description": "Shop adidas shoes, clothing, and accessories. Browse collections, get personalized recommendations, try on products with AR, and track orders."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "Heavy tracking and data sharing for advertising, with background location access and extensive profiling.",
+    "summary": "The adidas shopping app collects extensive personal data including background location, device fingerprints, and health metrics, then shares it widely with advertising partners and social media platforms for targeted marketing. While it offers transparent data rights tools, the sheer scale of tracking and third-party sharing makes it a privacy concern.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app engages in extensive behavioral tracking, creates unified consumer profiles, shares data with numerous advertising and analytics partners, and accesses background location for marketing purposes."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_ad_tracking",
+        "title": "Extensive ad tracking across platforms",
+        "plain_english": "Adidas uses cookies, pixels, and device fingerprints to track what you do online and offline, then shows you targeted ads on Facebook, Google, Instagram, and other platforms.",
+        "severity": "high"
+      },
+      {
+        "id": "red_background_location_marketing",
+        "title": "Background location for marketing pushes",
+        "plain_english": "The app can track your location even when it is closed to send you push notifications about nearby stores or events.",
+        "severity": "high"
+      },
+      {
+        "id": "red_unified_consumer_profile",
+        "title": "Unified consumer profile across channels",
+        "plain_english": "Adidas combines your online browsing, in-store visits, social media activity, and purchase history into one detailed profile used for personalized marketing.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_collection",
+        "title": "Health and body measurements stored",
+        "plain_english": "If you share them, the app stores details like your weight, BMI, and heartbeat on its servers to help with size recommendations and fitness features.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_data_sharing",
+        "title": "Wide sharing with advertising partners",
+        "plain_english": "Your personal data is shared with many outside companies including advertising agencies, social media platforms, and analytics firms for marketing and fraud prevention.",
+        "severity": "high"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_data_rights_tools",
+        "title": "Self-service data rights available",
+        "plain_english": "You can request a copy of your data, download it in a portable format, or delete your account using built-in tools in the app and website.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_camera_opt_in_no_storage",
+        "title": "Camera use is opt-in with no storage",
+        "plain_english": "Features that use your camera, like augmented-reality try-on, ask for permission first and the app says it does not save any photos or videos.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_inactive_account_deletion",
+        "title": "Inactive accounts deleted after 4 years",
+        "plain_english": "If you do not use your account for four years, adidas will automatically delete the data connected to it.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_secure_payment_processors",
+        "title": "Uses standard secure payment processors",
+        "plain_english": "Payments are handled by well-known processors like Apple Pay, Google Pay, PayPal, Adyen, and Klarna, which helps keep your card details secure.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your camera if you choose to use features like augmented-reality try-on or label scanning. It asks for permission first and says it does not save any photos or videos from your camera.",
+      "detail": "Camera is used only for optional AR try-on and product label scanning. The policy states permission is required and images are not stored.",
+      "policy_excerpt": "On our apps we give you the possibility to use your device camera for different purposes... We will ask for your permission before you use your camera to try this feature. We will not store any photos and videos from your device camera.",
+      "concerns": ["Camera access is optional but used for marketing-adjacent features like AR try-on."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": true,
+      "plain_english": "The app can track your location in the background, even when you are not using it, to send you push notifications about nearby stores or events.",
+      "detail": "Geofence-based push notifications require background location access. The app checks location every 15 minutes on Android and stores last known location temporarily on Apple devices.",
+      "policy_excerpt": "When you enable location sharing for the adidas app, including when you're not using the app, or when the app is closed, you allow the adidas app to continue to access your mobile device's location data in the background.",
+      "concerns": ["Background location access is used for marketing push notifications, not core shopping functionality.", "Location data is combined with other personal data for profiling and targeted marketing."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "The privacy policy does not mention any collection or use of contacts or phonebook data.",
+      "policy_excerpt": "No mention of contacts or phonebook access in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not scan or access files on your device beyond what you voluntarily share through camera or photo features.",
+      "detail": "While the policy mentions 'data stored on device when access is granted' under Mobile Device Information, there is no evidence of broad file system scanning or file access.",
+      "policy_excerpt": "Mobile Device Information... data stored on device when access is granted, log information when access to device (such as camera) is granted.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adidas shares your personal data with many outside companies, including advertising partners like Facebook and Google, analytics firms, and payment fraud detectors, to target ads and improve marketing.",
+      "detail": "The policy lists extensive third-party recipients including Advertising Agency Partners, Social Media Platforms (Facebook, Google, Instagram, Snapchat), analytics providers (Adobe, Google Analytics, Flurry, Apps Flyer), and many others. Data is shared for targeted advertising and business analytics.",
+      "policy_excerpt": "We share your Personal Data with our Advertising Agency Partners as well as Social Media Platforms... In order to do this, we share your Personal Data with our Advertising Agency Partners as well as Social Media Platforms.",
+      "concerns": ["Extensive sharing with advertising and social media partners for targeted marketing.", "Data enrichment creates unified profiles that are shared across adidas platforms and partners.", "Payment risk data (including partial credit card details) is shared with fraud prevention providers and used to train their models for other clients."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adidas builds a detailed profile about you by combining information from your purchases, browsing, social media, and even offline store visits into one unified identity.",
+      "detail": "The policy describes 'Data Enrichment' where adidas creates a single unified consumer profile by matching all personal data collected directly or indirectly across digital and offline channels. This includes social media interactions, in-store data, and browsing behavior linked to your identity.",
+      "policy_excerpt": "We create a single, unified consumer profile of you by matching all personal data which you can be identified. This includes personal data we collected directly or indirectly from you across digital media or offline.",
+      "concerns": ["Comprehensive identity profiling across all touchpoints (online, offline, social media).", "Profile data is used for targeted advertising and marketing personalization.", "Social media identifiers and handles are collected and linked to your profile."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app tracks what you do online and offline to show you targeted ads and personalized marketing messages across different websites and apps.",
+      "detail": "Adidas uses cookies, pixels, tags, beacons, and javascript to track browsing behavior. They use profiling, audience management, and data models to target ads on third-party platforms like Facebook, Google, YouTube, and Instagram. Analytics tools include Google Analytics, Adobe Analytics, Facebook Business Manager, and mobile app analytics.",
+      "policy_excerpt": "adidas uses cookies, tags, pixels, tag containers, beacons, javascript and other similar web tracking technologies... to collect information about your current browsing session... create personalised marketing campaigns.",
+      "concerns": ["Cross-platform behavioral tracking using cookies, pixels, and device fingerprinting.", "Data models are built using machine learning to predict preferences and optimize ad targeting.", "Marketing analytics retention periods of up to 38 months (Google Analytics)."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is a shopping platform and the policy does not indicate it is designed for children. There are no specific child-targeted data practices mentioned.",
+      "detail": "The privacy policy does not mention specific children's data protections, but the app is clearly an adult shopping platform, not child-directed.",
+      "policy_excerpt": "No specific mention of children's data handling in the policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your internet address and browsing activity to figure out where you are and what you like, which is used to improve its marketing.",
+      "detail": "Browsing Information including IP address, clickstream data, pages visited, and referral URLs are collected. IP addresses are used for location inference and security screening.",
+      "policy_excerpt": "Browsing Information... This may include: browser name, IP address (including hashed IP address), clickstream data, data and time of site visits, time remained on site, pages visited.",
+      "concerns": ["IP address is used for location inference and security screening.", "Browsing behavior is logged and used for profiling and marketing analytics."],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adidas collects a unique fingerprint of your device and browser to identify you and help target ads to you.",
+      "detail": "Device fingerprint (including browser fingerprint) is explicitly listed as part of Identity Information. Device EUI, device ID, IP/Wifi Information, and operating system are also collected. This is used for identity verification, security, and marketing.",
+      "policy_excerpt": "Identity Information... your device fingerprint (including your browser fingerprint)... Mobile Device Information... device EUI, device ID, device fingerprint, IP/Wifi Information, operating system.",
+      "concerns": ["Explicit collection of device and browser fingerprints for identification.", "Fingerprint data is linked to your identity profile and used for marketing and analytics.", "Device information is shared with advertising and analytics partners."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you choose to share it, the app collects health details like your weight, BMI, and heartbeat to help with size recommendations and fitness features.",
+      "detail": "Measurements (shoe size, clothes size, height, weight, chest, waist, hip, inseam, body shape, heel-toe measurement) and Health Information (BMI, heartbeat per minute) are collected with consent. This data is stored on adidas servers and linked to your profile.",
+      "policy_excerpt": "Health Information... body mass index (BMI), heartbeat per minute... This is used only when you have allowed us to use it – with your consent - for specific reasons and purposes.",
+      "concerns": ["Health data including BMI and heartbeat are stored on company servers.", "Measurement data is used for size recommendations via third-party machine learning providers.", "Health and fitness data may be combined with other profile data for analytics."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your payment details to process purchases and shares some of this information with fraud-prevention companies.",
+      "detail": "Payment Information (credit card details, bank details, payment platform details) is collected for order processing. Partial credit card details are shared with Payment Risk Solution Providers for fraud detection. Standard payment processors (Adyen, Klarna, PayPal, Apple Pay, Google Pay) are used.",
+      "policy_excerpt": "Payment, Purchase and Transaction Information... your payment information (credit card details, or bank details, or payment platform details)... including your: Identity Information, Contact Information, Payment, Purchase and Transaction Information (including partial credit card details) will also be disclosed to the PRS Provider.",
+      "concerns": ["Partial credit card details are shared with fraud prevention providers.", "Payment risk data is used to train machine learning models for the provider's other clients."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request to see, download, or delete your data using a self-service tool, but some information like past orders must be kept for up to 10 years for legal reasons.",
+      "detail": "Self-service tools are available for access, portability, and deletion. Standard processing time is one month. Order/transactional data is archived for 10 years for legal compliance. Inactive accounts are deleted after 4 years.",
+      "policy_excerpt": "To delete your order/transactional information... the information will be archived and kept on file for 10 years to comply with legal and contractual requirements.",
+      "concerns": ["Order and transactional data is retained for 10 years even after deletion requests.", "Deletion processing can take up to one month (or three months in complex cases)."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Adidas says it will tell you about big changes to this privacy policy ahead of time, usually by email, but it is not clear if you have to agree again.",
+      "detail": "Significant changes are announced in advance and users are informed, potentially via email. However, continued use may constitute acceptance of changes.",
+      "policy_excerpt": "As required by law, when we make any significant changes that would have an impact on your rights and your Personal Data, we will announce these changes in advance, and make sure you are informed of these changes, which may require us to send you an email announcement.",
+      "concerns": ["No explicit requirement for users to actively re-agree to policy changes.", "Policy does not specify a notice period for significant changes."],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.0, "deduction": 0 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 89.75,
+    "final_score": 56,
+    "grade": "C"
+  }
+}
