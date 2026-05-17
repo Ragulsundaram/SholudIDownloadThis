@@ -437,15 +437,15 @@
     "slug": "perplexity-ai-search-chat",
     "name": "Perplexity - AI Search & Chat",
     "developer": "Perplexity AI Inc.",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fe/23/6f/fe236fd3-235a-cd82-de80-c3e178cc4aed/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/88/bb/1e/88bb1eb7-0cfc-dd73-aeba-84e0069d70b9/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220-0.png/512x512bb.jpg",
     "category": "Productivity",
     "description": "AI-powered search and chat that delivers direct answers with cited sources.",
     "one_liner": "AI search that automatically collects usage data and shares it with advertising partners and data enrichment companies.",
-    "score": 55,
+    "score": 58,
     "grade": "C",
     "risk": "caution",
-    "analyzed_at": "2026-05-16",
-    "needs_review": true
+    "analyzed_at": "2026-05-17",
+    "needs_review": false
   },
   {
     "slug": "photoroom-ai-photo-editor",
