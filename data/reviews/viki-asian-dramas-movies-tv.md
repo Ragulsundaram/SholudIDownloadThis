@@ -7,8 +7,8 @@
 **Privacy Policy:** https://www.viki.com/legal/privacy
 **Terms of Use:** http://viki.com/legal/terms_of_use
 **Policy Last Updated:** 8 April 2026
-**Analyzed:** 2026-05-16
-**Analyzed By:** claude-sonnet-4
+**Analyzed:** 2026-05-17
+**Analyzed By:** claude-kimi-k2.5
 
 ---
 

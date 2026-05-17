@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "kimi-k2.6",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://policy.pinterest.com/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "2025-04-30",
-    "needs_review": true,
-    "review_notes": "Strict re-analysis: financial_payment and health_biometric categories are silent in the policy text."
+    "needs_review": false,
+    "review_notes": "Complete re-analysis based on 49,649 character privacy policy. Key findings: extensive ad tracking across on/off platform, data shared with Facebook/Google ad platforms, AI model training on user content including body type technology, age verification uses facial estimation and government ID matching, log data retained 25 months."
   },
   "app": {
     "slug": "pinterest",
@@ -15,64 +15,76 @@
     "developer": "Pinterest, Inc.",
     "app_store_url": "https://apps.apple.com/in/app/pinterest-lifestyle-ideas/id429047995",
     "app_store_id": "429047995",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/5c/53/635c5383-a1bf-1503-fba0-8d9eb184c41a/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ed/46/ef/ed46ef32-d40f-489a-eacd-f60403a1224c/AppIcon-0-0-1x_U007epad-0-1-0-0-0-85-220.png/512x512bb.jpg",
     "category": "Lifestyle",
-    "sub_category": "",
-    "description": "Visual discovery and bookmarking platform for lifestyle ideas."
+    "sub_category": "Visual Discovery",
+    "description": "Visual discovery and bookmarking platform for lifestyle ideas, DIY projects, recipes, fashion, home decor, and creative inspiration."
   },
   "verdict": {
     "overall_risk": "risky",
     "score": 46,
     "grade": "D",
-    "one_liner": "Extensive ad data sharing with third parties, though some privacy controls are available.",
-    "summary": "Pinterest collects detailed behavioral data and shares it with advertising networks and social media platforms. While users can opt out of targeted ads and delete their accounts, the default privacy posture is heavily weighted toward data collection and profiling.",
+    "one_liner": "Pinterest tracks your activity on and off the platform to show you personalized ads, shares data with Facebook and Google, and uses your content to train AI models.",
+    "summary": "Pinterest is a popular visual discovery platform that collects extensive data about your interests and behavior. It tracks your activity both on Pinterest and on other websites through the Pinterest Tag, shares data with advertising partners like Facebook and Google, and uses your Pins and photos to train machine learning models including generative AI. While you can opt out of personalized ads and delete your account, the platform is heavily focused on data collection for advertising purposes.",
     "recommendation": "think_twice",
-    "recommendation_reason": "If you value privacy, consider limiting Pinterest's data collection through its Privacy and Data Settings, or use it only in a browser with strong ad blockers."
+    "recommendation_reason": "Pinterest engages in extensive cross-site tracking, shares data with major ad platforms, and uses your content for AI training. Consider whether these privacy trade-offs are worth the inspirational content."
   },
   "flags": {
     "red": [
       {
-        "id": "red_offsite_ad_tracking",
-        "title": "Your offsite activity may power Pinterest ads",
-        "plain_english": "Pinterest states that it customizes ads by identifying your interests based on your onsite and offsite activities, and may receive information about your visits to advertiser sites through the Pinterest Tag.",
+        "id": "red_offsite_tracking",
+        "title": "Your offsite activity tracked for ads",
+        "plain_english": "Pinterest tracks your activity on other websites that have Pinterest features (like the Save button) and receives information about your visits to advertiser sites through the Pinterest Tag to customize ads.",
         "severity": "high"
       },
       {
-        "id": "red_data_sharing_ad_networks",
-        "title": "Your data is shared with Facebook, Google, and other ad platforms",
-        "plain_english": "Pinterest states that it discloses cookie IDs, your IP address, or a hashed version of your email address to third parties such as Facebook Ads and Google Marketing Platform for advertising purposes.",
+        "id": "red_data_shared_ad_platforms",
+        "title": "Data shared with Facebook Ads and Google Marketing Platform",
+        "plain_english": "Pinterest discloses your cookie IDs, IP address, and hashed email address to third parties including Facebook Ads and Google Marketing Platform to advertise Pinterest to you on other sites.",
         "severity": "high"
       },
       {
-        "id": "red_ai_training_on_content",
-        "title": "Your Pins may train AI models",
-        "plain_english": "Pinterest states that it uses information, including images in Pins posted to its Services, to train and improve its machine learning and generative AI models regardless of when those Pins were posted. It does not clearly explain how to opt out of this training specifically.",
+        "id": "red_ai_training_content",
+        "title": "Your Pins train AI and machine learning models",
+        "plain_english": "Pinterest uses your images and activity to train machine learning models including body type technology and generative AI features, regardless of when Pins were posted.",
         "severity": "high"
       },
       {
-        "id": "red_contact_sync_upload",
-        "title": "Your contacts may be processed by Pinterest",
-        "plain_english": "If you previously chose to sync your contacts, Pinterest states that it will continue to process certain information about your contacts who are Pinterest users to help you find one another on its Services.",
+        "id": "red_age_verification_biometric",
+        "title": "Age verification may use facial recognition",
+        "plain_english": "Pinterest conducts age verification that may include facial age estimation and matching your face against a government ID.",
+        "severity": "high"
+      },
+      {
+        "id": "red_log_data_retention",
+        "title": "Your activity logs kept for 25 months",
+        "plain_english": "Pinterest generally keeps log data for 25 months to provide services, improve features, and deliver targeted ads.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_ad_opt_out_available",
-        "title": "You can turn off personalized ads",
-        "plain_english": "Pinterest lets you opt out of targeted advertising and data sharing for ad purposes in your Privacy and Data Settings.",
+        "id": "green_ad_opt_out",
+        "title": "You can opt out of personalized ads",
+        "plain_english": "You can opt out of targeted advertising and data sharing for ad purposes in your Privacy and Data Settings menu.",
         "severity": "positive"
       },
       {
         "id": "green_account_deletion",
-        "title": "You can fully delete your account",
-        "plain_english": "Pinterest provides a settings option to close your account and delete your data.",
+        "title": "Full account deletion available",
+        "plain_english": "You can delete your account and data through settings by selecting Delete your data and account.",
         "severity": "positive"
       },
       {
-        "id": "green_gdpr_rights_eea",
-        "title": "Strong data rights for European users",
-        "plain_english": "Residents of the EEA, UK, and Switzerland get GDPR rights including access, portability, and objection to processing.",
+        "id": "green_gdpr_rights",
+        "title": "Strong rights for EU/UK/Swiss users",
+        "plain_english": "Residents of the EEA, UK, and Switzerland have GDPR rights including access, portability, objection to processing, and the right to lodge complaints with supervisory authorities.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gpc_respected",
+        "title": "Global Privacy Control signals respected",
+        "plain_english": "For users in certain U.S. states who have enabled opt-out preference signals like Global Privacy Control, Pinterest will respect this preference.",
         "severity": "positive"
       }
     ]
@@ -87,11 +99,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Camera access is used only if you opt in to photo search through your device settings. The policy does not clearly explain what camera data is collected or stored.",
-      "detail": "The app requests camera access for photo search. The policy indicates this is user-initiated but does not describe camera data handling.",
-      "policy_excerpt": "Allow searching with photos... You can opt in to this in your device operating system settings.",
+      "plain_english": "You can optionally use your camera for photo search to find similar items. This requires opting in through your device settings.",
+      "detail": "Camera access is optional and used only for photo search feature where you can take a photo of an item and find similar Pins. Requires explicit opt-in through device operating system settings.",
+      "policy_excerpt": "Allow searching with photos, if you choose. For example, if you take a photo of a pair of shoes or a piece of furniture you like, you can ask us to show you similar items. You can opt in to this in your device operating system settings.",
       "concerns": [
-        "Policy does not clearly explain camera data collection or storage"
+        "Camera data handling not fully detailed"
       ],
       "score_impact": -4.5
     },
@@ -104,12 +116,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Pinterest states that it uses your IP address to infer your approximate location even if you do not share precise location, and may use this to customize your experience such as showing nearby retailers' Pins.",
-      "detail": "Precise location is optional via device settings, but IP-based location inference happens continuously.",
-      "policy_excerpt": "We use your IP address to infer your approximate location, even if you don't choose to share your precise location.",
+      "plain_english": "Pinterest infers your approximate location from your IP address continuously, even if you don't share precise location. Precise location is optional via device settings.",
+      "detail": "IP address used to infer approximate location continuously. Precise location optional via device settings and used to customize experience (e.g., showing nearby retailers). Location data also collected from photo metadata.",
+      "policy_excerpt": "We use your IP address to infer your approximate location, even if you don't choose to share your precise location... Depending on where you live, and with your consent, identify your precise location and customize your experience on our Services. For example, if we know that you're near a retailer we may show you that retailer's Pins.",
       "concerns": [
-        "IP location inferred continuously",
-        "Location used to customize experience"
+        "IP location inferred continuously without opt-out",
+        "Location used for ad targeting"
       ],
       "score_impact": -9.75
     },
@@ -120,15 +132,16 @@
       "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "If you previously chose to sync your contacts, Pinterest states that it processes certain information about your contacts who are Pinterest users to help you find one another.",
-      "detail": "Contact syncing is opt-in but processes contact data on Pinterest servers.",
-      "policy_excerpt": "If you previously chose to sync your contacts with your account, we will continue to process certain information about your contacts who are Pinterest users.",
+      "plain_english": "If you choose to sync contacts, Pinterest accesses contacts stored on your device to help you find which of your contacts are on Pinterest.",
+      "detail": "Contact syncing is optional. If enabled, Pinterest accesses contacts stored on your device and processes information about contacts who are Pinterest users. Also used to help friends find you via email search.",
+      "policy_excerpt": "If you previously chose to sync your contacts with your account, we will continue to process certain information about your contacts who are Pinterest users to help you find one another on our Services... If you choose to sync your contacts with your Pinterest account, we will access contacts stored on your device to help you find out if your contacts are on our Services.",
       "concerns": [
-        "Contacts processed on servers"
+        "Contact data processed on servers",
+        "Continues processing if previously synced"
       ],
-      "score_impact": -13.0
+      "score_impact": -13
     },
     {
       "id": "storage_file_access",
@@ -136,14 +149,17 @@
       "icon": "FolderOpen",
       "risk": "caution",
       "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
+      "required_for_core_function": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "Pinterest collects visual information through the images that you post to its services. The policy does not clearly explain whether the app accesses your full photo library or only images you choose to upload.",
-      "detail": "File access is user-initiated for saving or uploading Pins and photos, but the scope of access is not clearly described.",
-      "policy_excerpt": "We collect information when you save or upload Pins, photos, or other content",
-      "concerns": [],
-      "score_impact": -3.0
+      "plain_english": "Pinterest collects the images, photos, and content you upload, save, or create on the platform. Public content is visible to anyone.",
+      "detail": "Visual content collected when you save, upload, or create Pins and boards. Public boards and Pins accessible to anyone. Comments and descriptions also collected. Photos may contain location metadata.",
+      "policy_excerpt": "We collect information when you save or upload Pins, photos, or other content, interact with Pins or other content (for example, commenting or adding a Pin)... Your Picsart profile and the posts you make are publicly accessible, which means anyone can see your profile photo, name, and description about yourself if you add that information.",
+      "concerns": [
+        "Public content visible to all users",
+        "Photos may contain location metadata"
+      ],
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -154,15 +170,16 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": true,
-      "plain_english": "Pinterest states that it discloses cookie IDs, your IP address, or a hashed version of your email address to third parties such as Facebook Ads and Google Marketing Platform for advertising, and may share data with partners to show you ads on and off Pinterest.",
-      "detail": "Data is shared with advertisers, analytics providers, social media platforms, and third-party partners for ad targeting both on and off Pinterest.",
-      "policy_excerpt": "we disclose information such as cookie IDs, your IP address, or a hashed version of your email address to third parties, such as Facebook Ads, Google Marketing Platform, and others.",
+      "plain_english": "Pinterest shares your data with advertisers, Facebook Ads, Google Marketing Platform, service providers, law enforcement, corporate affiliates, and may share in business transactions.",
+      "detail": "Data shared with: third-party advertising platforms (Facebook Ads, Google Marketing Platform), advertisers and partners for ad targeting and measurement, service providers (security, analytics), law enforcement when required, corporate family of companies, and parties involved in mergers/acquisitions. Public content available via APIs.",
+      "policy_excerpt": "we disclose information such as cookie IDs, your IP address, or a hashed version of your email address to third parties, such as Facebook Ads, Google Marketing Platform, and others... we share data for advertising and related purposes, including showing you ads about Pinterest on third-party services, enabling partners to show you ads both on and off Pinterest",
       "concerns": [
-        "Data shared with ad platforms",
-        "Offsite ads enabled through partners",
-        "Cannot opt out of all sharing while keeping account"
+        "Data shared with major ad platforms",
+        "Offsite advertising based on Pinterest data",
+        "Information shared with advertisers for lead ads",
+        "Data transferred in business transactions"
       ],
-      "score_impact": -30.0
+      "score_impact": -30
     },
     {
       "id": "account_identity",
@@ -173,12 +190,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Pinterest collects your name, email, birthday, gender, and interests when you create an account. The policy does not clearly explain whether this account information is used for advertising profiles.",
-      "detail": "Standard account information is collected at signup. Business accounts may also collect race/ethnicity if added.",
-      "policy_excerpt": "When you join our Services, we collect information like your name, email address, birthday, gender, country of residence, your interests, and preferred language.",
+      "plain_english": "Pinterest collects your name, email, birthday, gender, country, interests, and preferred language. Business accounts may optionally include race and ethnicity information.",
+      "detail": "Account information includes name, email, birthday, gender, country, interests, preferred language. Optional demographic data for business accounts includes race/ethnicity for Creator promotion purposes. Third-party account data used if you link Facebook or Google accounts.",
+      "policy_excerpt": "When you join our Services, we collect information like your name, email address, birthday, gender, country of residence, your interests, and preferred language. If you have a business account, depending on where you live, you may also have the option to add race and ethnicity information to your profile.",
       "concerns": [
-        "Business accounts may collect race/ethnicity data",
-        "Policy does not clearly explain if account data is used for ads"
+        "Optional race/ethnicity data for business accounts",
+        "Extensive profile data collected"
       ],
       "score_impact": -4.5
     },
@@ -191,14 +208,16 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": true,
-      "plain_english": "Pinterest states that it customizes ads by identifying your interests based on your onsite and offsite activities, and receives information about your activity outside Pinterest from advertisers and partners.",
-      "detail": "Behavioral tracking includes onsite activity and offsite activity via the Pinterest Tag and partner data.",
-      "policy_excerpt": "we customize the ads we show you by identifying your interests based on your onsite and offsite activities, as well as by using information we receive from ad partners or other third parties.",
+      "plain_english": "Pinterest tracks your activity on and off the platform to build a profile of your interests and show you personalized ads. They receive data about your visits to advertiser websites and activity on sites with Pinterest features.",
+      "detail": "Behavioral tracking includes: onsite activity (Pins clicked, searches, boards created), offsite activity (websites visited with Pinterest Tag or Save button), inferences about interests and preferences (e.g., education, professional experience), data from advertisers and partners about your activity, cross-device tracking. Activities may be considered targeted advertising, sharing, or selling under US state laws.",
+      "policy_excerpt": "we customize the ads we show you by identifying your interests based on your onsite and offsite activities, as well as by using information we receive from ad partners or other third parties... activity on websites you visit that incorporate Pinterest features (like the Save button)... we make inferences about you and your preferences",
       "concerns": [
-        "Offsite activity used for ad targeting",
-        "Behavioral profile built from partner data"
+        "Extensive cross-site tracking via Pinterest Tag",
+        "Activity on partner websites monitored",
+        "Inferences made about personal characteristics",
+        "Considered selling/sharing under US state laws"
       ],
-      "score_impact": -25.0
+      "score_impact": -25
     },
     {
       "id": "childrens_data",
@@ -209,13 +228,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Children under 13 are not allowed to use Pinterest. The policy does not explain how age is verified.",
-      "detail": "The policy states a 13+ age requirement but does not explain how age is verified.",
-      "policy_excerpt": "Children under 13 are not allowed to use Pinterest.",
+      "plain_english": "Children under 13 are not allowed to use Pinterest. If you are in a jurisdiction with a higher age requirement, you must meet that age to consent to data processing.",
+      "detail": "13+ age requirement (or higher if local law requires). Age verification includes facial age estimation and matching against government ID. No specific detail on how underage users are detected beyond this.",
+      "policy_excerpt": "Children under 13 are not allowed to use Pinterest. If you are based in a state or country with an older age requirement, you may only use the Services if you are at or over the age at which you can provide consent to data processing.",
       "concerns": [
-        "No explanation of age verification"
+        "Age verification relies partly on self-reporting"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -226,12 +245,13 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Pinterest states that its log data includes your IP address, browser type, and activity on websites that use Pinterest features like the Save button.",
-      "detail": "Log data includes IP address, browser settings, activity on third-party sites with Pinterest widgets, and date/time of access.",
-      "policy_excerpt": "This log data includes, for example, your Internet Protocol (IP) address, activity on websites you visit that incorporate Pinterest features... browser type and settings, and the date and time of when you accessed the Services.",
+      "plain_english": "Pinterest logs your IP address, browser type, activity on websites with Pinterest features, search terms, and which Pins you interact with. Log data is kept for 25 months.",
+      "detail": "Log data includes: IP address, browser type and settings, date/time of access, activity on third-party sites with Pinterest features (Save button), search terms, Pin interactions, boards created, comments. Retained for 25 months for service provision, safety, product improvement, and ad delivery.",
+      "policy_excerpt": "This log data includes, for example, your Internet Protocol (IP) address, activity on websites you visit that incorporate Pinterest features (like the 'Save' button) browser type and settings, and the date and time of when you accessed the Services... We generally keep log data for a period of 25 months",
       "concerns": [
-        "Activity logged across websites with Save button",
-        "IP address logged continuously"
+        "Activity tracked across websites with Pinterest widgets",
+        "25-month log data retention",
+        "Detailed interaction logging"
       ],
       "score_impact": -3.25
     },
@@ -244,12 +264,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Pinterest collects information about the device you use, including its type, operating system, settings, and unique device identifiers. It does not clearly explain whether this is used to fingerprint your device.",
-      "detail": "Device info collection is standard but includes unique device identifiers. The purpose for persistent tracking is not clearly explained.",
+      "plain_english": "Pinterest collects information about your device including type, operating system, network provider, settings, and unique device identifiers.",
+      "detail": "Device information collected includes: type of device, operating system, network service provider, settings, unique device identifiers. Used for service provision, security, advertising, and cross-device tracking.",
       "policy_excerpt": "We collect information about the device you use to access our Services, including the type of device, operating system, network service provider, settings, and unique device identifiers.",
       "concerns": [
         "Unique device identifiers collected",
-        "Purpose of device data not clearly explained"
+        "Used for advertising and cross-device tracking"
       ],
       "score_impact": -9.75
     },
@@ -257,31 +277,37 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "risky",
+      "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy does not mention health or biometric data.",
-      "detail": "No health or biometric data collection is mentioned in the privacy policy.",
-      "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "Pinterest conducts age verification which may include facial age estimation and matching your face against a government ID.",
+      "detail": "Age verification processes may include facial age estimation and matching user's face against government ID. Used for safety and compliance. Body type technology is also used (trained on Pins) but this is not biometric data of users.",
+      "policy_excerpt": "Conduct age verification, as appropriate. This may include facial age estimation and matching your face against a government ID.",
+      "concerns": [
+        "Facial recognition may be used for age verification",
+        "Government ID matching involves sensitive biometric processing"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy does not mention financial or payment data.",
-      "detail": "No financial or payment information collection is mentioned in the privacy policy.",
-      "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "If you submit information via lead ads (e.g., to sign up for an advertiser's mailing list), Pinterest shares that information with the advertiser.",
+      "detail": "Financial/payment data handled through lead ads where you submit information to advertisers (e.g., mailing list signups). Pinterest shares this information with the advertiser as described on the form. No mention of direct payment processing by Pinterest.",
+      "policy_excerpt": "Lead ads. If you submit information via a lead ad form (for example, to sign up for an advertiser's mailing list or for a consultation), we will share that information with the advertiser as described on the form.",
+      "concerns": [
+        "Lead ad information shared with advertisers",
+        "Limited visibility into what financial data advertisers collect"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -292,14 +318,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your account and request data deletion through your settings. The policy does not clearly explain whether information shared with advertising partners is also deleted.",
-      "detail": "Deletion is available in settings, but Pinterest notes some data may be retained for legal or safety purposes.",
-      "policy_excerpt": "You can have your information deleted. In your settings, select 'Delete your data and account' and follow the instructions.",
+      "plain_english": "You can delete your account and request data deletion through settings. Some data may be retained for legal or safety reasons, and correspondence about data requests is kept for 2 years.",
+      "detail": "Deletion available in settings (Delete your data and account). GDPR rights for EEA/UK/Swiss users: access, correction, deletion, restriction, portability, objection. Some data retained for legal obligations, litigation, safety investigations. Data subject request correspondence retained 2 years. Complaint data retained while being resolved.",
+      "policy_excerpt": "You can have your information deleted. In your settings, select 'Delete your data and account' and follow the instructions... We retain correspondence relating to data subject requests under GDPR for two years, in case those requests are not resolved and this correspondence is required in order to handle any resulting complaints.",
       "concerns": [
-        "Some data retained after deletion for legal reasons",
-        "Policy does not explain partner data deletion"
+        "Some data retained for legal/safety reasons",
+        "Request correspondence kept for 2 years",
+        "Data shared with partners may not be deleted"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -310,11 +337,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Pinterest may change its policy at any time and continued use counts as acceptance. It states that significant changes may get a more prominent notice.",
-      "detail": "Policy changes are posted on the policy page. Continued use equals acceptance. Material changes may receive email notice.",
+      "plain_english": "Pinterest may change its policy at any time and continued use counts as acceptance. Significant changes may be notified by email or prominent notice.",
+      "detail": "Policy changes posted on policy page. Continued use after changes equals acceptance of new policy. Significant changes may receive more prominent notice such as email. No specific advance notice period stated.",
       "policy_excerpt": "If you continue to use Pinterest after those changes are in effect, the new policy applies to you. If the changes are significant, we may provide a more prominent notice, such as by sending you an email.",
       "concerns": [
-        "Continued use = automatic acceptance"
+        "Continued use = automatic acceptance",
+        "No specific advance notice period"
       ],
       "score_impact": -1.5
     }
@@ -323,23 +351,107 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13.0 },
-      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
-      { "category": "data_sharing_third_parties", "risk": "dangerous", "max": 30, "rate": 1.0, "deduction": 30.0 },
-      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "behavioural_ad_tracking", "risk": "dangerous", "max": 25, "rate": 1.0, "deduction": 25.0 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
-      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
-      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "financial_payment", "risk": "unknown", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
-      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "risky",
+        "max": 20,
+        "rate": 0.65,
+        "deduction": 13
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "dangerous",
+        "max": 30,
+        "rate": 1,
+        "deduction": 30
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "dangerous",
+        "max": 25,
+        "rate": 1,
+        "deduction": 25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
     ],
-    "total_deductions": 110.25,
-    "final_score": 46,
+    "total_deductions": 114.5,
+    "final_score": 44,
     "grade": "D"
   }
 }

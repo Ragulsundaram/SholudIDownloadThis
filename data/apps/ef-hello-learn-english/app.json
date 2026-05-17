@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.5",
+    "policy_url": "https://hello.ef.com/privacy-policy",
+    "terms_url": "https://hello.ef.com/terms-of-service",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "ef-hello-learn-english",
+    "name": "EF Hello: Learn English",
+    "developer": "Signum International AG",
+    "app_store_url": "https://apps.apple.com/in/app/id1324622665",
+    "app_store_id": "1324622665",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/f3/46/3cf346e9-42e2-d06d-2a4f-64e944e94105/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "sub_category": "Language Learning",
+    "description": "AI-powered English learning app with personalized tutoring, pronunciation coaching, and bite-sized lessons."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 50,
+    "grade": "D",
+    "one_liner": "Extensive data sharing with advertisers and marketing partners raises significant privacy concerns.",
+    "summary": "EF Hello collects substantial personal information including identity data, location, device fingerprints, and payment details. The app shares this data broadly with advertising platforms, corporate affiliates, and numerous third-party service providers for marketing purposes. While they provide some user rights and data deletion options, the extensive tracking and data sharing practices make this a risky choice for privacy-conscious users.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Heavy data sharing with advertising networks and marketing partners. Your learning activity is tracked and used for targeted marketing."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_ad_tracking",
+        "title": "Extensive marketing tracking",
+        "plain_english": "The app uses cookies, device tracking, and services like Salesforce Marketing Cloud to monitor what you read, click, and forward in emails. This data is used to send you targeted ads and marketing messages.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sharing",
+        "title": "Shared with many third parties",
+        "plain_english": "Your personal data is shared with advertising platforms, social media companies (Facebook, Instagram, Snapchat), marketing agencies, IT providers, and business partners. With your consent, it can also be shared with affiliates for their own marketing.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Location data collected",
+        "plain_english": "If you enable location services, the app collects your physical location to provide personalized services and redirect you to local websites. Location may also be collected during app crashes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_long_retention",
+        "title": "Data kept for years",
+        "plain_english": "Your personal data is kept for 2-5 years after you close your account. Marketing data is kept for up to 5 years after your last use of the service.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_user_rights",
+        "title": "User rights provided",
+        "plain_english": "You can request access to your data, correct inaccurate information, delete your account, and opt out of marketing communications. These rights are available under GDPR and CCPA.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_age_requirement",
+        "title": "16+ age requirement",
+        "plain_english": "The app requires users to be at least 16 years old and promises to delete data if they discover a user is under 16.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_selling",
+        "title": "No selling to data brokers",
+        "plain_english": "The privacy policy explicitly states they do not sell your personal information to third parties as defined under California privacy law.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention camera or microphone access.",
+      "detail": "No information found in the privacy policy regarding camera or microphone permissions or usage.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera/microphone usage"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects your physical location if you enable it on your device. This is used for personalized services and redirecting you to local websites. Location data is also automatically collected when app crashes occur.",
+      "detail": "Location is collected when enabled by the user and during crash reporting via Instabug. The physical location of the device is logged at the time of crashes.",
+      "policy_excerpt": "Provided that you have enabled that function on your device, we collect the physical location of it to provide you with personalized location-based services and content.",
+      "concerns": ["Location collected during crashes without explicit user opt-in", "Location used for personalization and redirects"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention access to your contacts or phonebook.",
+      "detail": "No information found regarding contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention file or storage access.",
+      "detail": "No specific information about storage or file access permissions.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with advertising platforms, social media companies, IT service providers, marketing agencies, and business partners. With your consent, data can also be shared with corporate affiliates for their marketing purposes.",
+      "detail": "Data sharing includes: corporate affiliates for marketing (with consent), third party service providers (IT, payment processing, marketing automation), business partners, social media platforms (Facebook, Instagram, Snapchat, LinkedIn, etc.), and other third parties for fraud prevention and legal compliance.",
+      "policy_excerpt": "We share Personal Data with third parties in connection with the delivery of services to you and the operation of our business... to advertising platforms...", "concerns": ["Broad sharing with advertising platforms", "Data shared with social media platforms", "Affiliates can use data for marketing with consent"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects extensive identity information including your name, email, phone number, address, birth date, gender, profile picture, and social media account IDs. This data is linked to your account and shared with partners.",
+      "detail": "Account and identity data collected: name, contact details (postal/email/phone), user ID, username, profile picture, social media account ID, country of residence/citizenship, birth date, gender. This data is shared with corporate affiliates and third parties.",
+      "policy_excerpt": "Name and contact details (e.g. postal and email address, telephone number); Account information or user ID (e.g. user name, profile picture or social media account ID); Country of residence or citizenship; Birth date; Gender",
+      "concerns": ["Extensive personal data collection", "Social media account linking shares profile data", "Data linked to marketing profiles"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks your behavior using cookies, app usage monitoring, and crash reporting tools. This data is used to analyze your interests and send targeted marketing through email, SMS, and messaging apps.",
+      "detail": "Tracking includes: cookies and pixel tags, mobile app usage data (downloaded files, access times), Instabug crash reporting (collects device info, location at crash time), Salesforce Marketing Cloud for email behavior tracking (what you read, click, forward). Marketing includes email, SMS, WhatsApp, Facebook Messenger, chat bots, telemarketing, and traditional mail.",
+      "policy_excerpt": "To analyse and improve our offers by identifying usage trends... To market our products and services, including special promotions based on your interests, for example through email marketing solutions such as Salesforce Marketing Cloud's management software which maintains mailing lists and schedules and modifies email messages based on what recipients read, click-on or forward",
+      "concerns": ["Email opens and clicks tracked", "Behavioral profiling for targeted ads", "Marketing via multiple channels including messaging apps"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app requires users to be at least 16 years old. If they find out you're under 16, they'll delete your data. However, there's no strong verification system mentioned.",
+      "detail": "Age requirement is 16+. The policy states they sometimes do verification checks and will delete information if they learn a user is under 16 without parental consent.",
+      "policy_excerpt": "To use EF Products, you must be at least 16 years old. We are not responsible for checking your age but sometimes we still do verification checks. If we learn that you are under the age of 16 and that we have collected information about you without consent from your parent or guardian, we will delete the information as soon as possible",
+      "concerns": ["No robust age verification system"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browser type, pages visited, and time of visits. This is standard practice for most apps.",
+      "detail": "Network data collected includes: IP address (logged automatically), MAC address, browser type and version, service provider, computer type, screen resolution, OS info, page views, and visit times.",
+      "policy_excerpt": "an IP Address is identified and logged automatically in our server log files whenever you visit the EF Products, along with the time of the visit and the page(s) that were visited",
+      "concerns": ["IP logging for all visits", "Device fingerprinting data collected"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects extensive device information including your device ID, IP address, MAC address, browser details, screen resolution, and operating system. This creates a unique fingerprint of your device.",
+      "detail": "Device data includes: device ID, device mode, IP address, MAC address, browser type/version, screen resolution, OS name/version, device manufacturer and model, server log data, app usage statistics, malfunction and crash data. Instabug crash reporting also collects device info and location at time of crash.",
+      "policy_excerpt": "Technical information, e.g. screen/user name, IP address, browser and device data, information collected through cookies, pixel tags and other technologies, server log file data, app usage data and location data... information on the device such as device ID, device mode, time of failure and the physical location of a device at the time of a crash",
+      "concerns": ["Comprehensive device fingerprinting", "Device ID collected and tracked", "Crash reporting includes location data"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data, except in rare situations where you explicitly consent (such as for providing specific services).",
+      "detail": "Policy states they do not generally seek to collect sensitive personal data including health information. Only collected with explicit consent when necessary for services.",
+      "policy_excerpt": "We do not generally seek to collect any sensitive Personal Data... In certain situations, this might however be necessary... We will make sure that we receive your explicit consent to such processing",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your credit card numbers, payment data, or bank account details when you make purchases. This is necessary for subscription services.",
+      "detail": "Financial data collected includes credit/debit card numbers, payment data, and bank account details. Shared with payment processors and third parties for payment solutions.",
+      "policy_excerpt": "Credit and debit card number, payment data or bank account details... For the transmission and communication to third-party companies for the purpose of offering payment solutions",
+      "concerns": ["Payment data shared with third parties", "Financial information collected and stored"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request to access, correct, or delete your data. However, your data is kept for 2-5 years after account closure, and marketing data is kept for up to 5 years after your last service.",
+      "detail": "User rights include: access, correction, erasure, restriction, portability, and objection. However, retention periods are long (2-5 years for account data, up to 5 years for marketing data). Deletion is subject to legal obligations and legitimate grounds.",
+      "policy_excerpt": "We will only keep your Personal Data for 2-5 years after the expiry of your account... We will keep limited parts of your Personal Data which are necessary for marketing purposes until you withdraw your consent, but in no event for longer than 5 years after your last completed service",
+      "concerns": ["Long data retention periods", "Marketing data kept for 5 years", "Some data may be retained for legal claims"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company will post policy changes on their website and provide notice before implementing significant changes. Where required by law, they'll ask for your consent.",
+      "detail": "Policy states changes will be posted on the page with prominent notice before implementation. Won't significantly reduce rights without informing users. Prior consent sought where required by law.",
+      "policy_excerpt": "We will not significantly reduce your rights under this Privacy Policy without informing you. We will post any Privacy Policy changes on this page and, prior to implementing such changes, we will provide a more prominent notice. Where required by law, we will seek your prior consent to any change.",
+      "concerns": ["No specific timeline for advance notice mentioned"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 101.5,
+    "final_score": 50,
+    "grade": "D"
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.bazaart.com/terms#privacy",
+    "terms_url": "https://www.bazaart.com/terms",
+    "policy_last_updated": "2026-03-02",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "bazaart-ai-photo-editor-design",
+    "name": "Bazaart AI Photo Editor Design",
+    "developer": "Bazaart Ltd.",
+    "app_store_url": "https://apps.apple.com/in/app/id515094775",
+    "app_store_id": "515094775",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/9b/37/2c9b379f-c18f-fe8f-becf-7d3e9f6a0f04/Bazaart_Icon_v3-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220-0.png/512x512bb.jpg",
+    "category": "Photo & Video",
+    "sub_category": "Graphics & Design",
+    "description": "AI-powered photo and video editor for creating designs, removing backgrounds, and generating content."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "Powerful AI editing app that shares data with numerous third parties for analytics and AI processing.",
+    "summary": "Bazaart collects personal information and shares it with a wide network of third-party services including Facebook, Google Analytics, and multiple AI providers. While the app provides legitimate photo editing functions, the extensive data sharing and tracking practices raise privacy concerns. Server-side processing of photos and videos occurs, though data is deleted after a few days.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Extensive third-party data sharing with analytics and advertising services, plus AI processing of photos on external servers."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_third_party_sharing",
+        "title": "Data shared with 20+ third parties",
+        "plain_english": "Your information is shared with over 20 third-party services including Facebook, Google Analytics, AppsFlyer, and multiple AI companies. These services track your behavior and process your data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_photos_processed_on_servers",
+        "title": "Photos processed on company servers",
+        "plain_english": "When you use certain features, copies of your photos and videos are uploaded to Bazaart's servers for processing. While they say this data is deleted after a few days, your content still leaves your device.",
+        "severity": "high"
+      },
+      {
+        "id": "red_promotional_contact",
+        "title": "Marketing contact allowed",
+        "plain_english": "The company can contact you with promotional offers and newsletters using your email address and phone number. You may receive marketing messages after signing up.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ai_processing_external",
+        "title": "AI features use external services",
+        "plain_english": "AI-generated content is created using external services like OpenAI, Google Gemini, and Replicate. Your prompts and images may be sent to these third-party AI providers.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_user_deletion_rights",
+        "title": "Users can delete their data",
+        "plain_english": "You can request deletion of your personal information through the app. The company provides a way to review and remove your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_mandatory_signup",
+        "title": "No required account creation",
+        "plain_english": "You can use basic features without creating an account. Signup is only required for cloud sync and premium features.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_face_data_not_stored",
+        "title": "Face detection data not retained",
+        "plain_english": "When the app detects faces in photos using Apple's Vision Framework, your face data is not kept or stored by the company.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Camera and microphone access are requested for taking photos and transcribing videos. These permissions are needed for the app's core editing features.",
+      "detail": "App requests camera permission for taking photos and videos, microphone and speech recognition permissions to transcribe videos.",
+      "policy_excerpt": "We may require additional device permissions to provide you certain parts of the services. These include camera permission for taking photos and videos, microphone and speech recognition permissions to transcribe videos.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not appear to collect or use your location or GPS data.",
+      "detail": "No explicit mention of GPS or location data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Storage permission is requested to access files on your device for processing and saving your designs.",
+      "detail": "App requires storage permissions to access files on the device for processing.",
+      "policy_excerpt": "We may require additional device permissions to provide you certain parts of the services. These include... storage permissions to access files on your device for processing.",
+      "concerns": [],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with over 20 third-party companies including Facebook, Google Analytics, AppsFlyer, and AI service providers for analytics, advertising, and processing.",
+      "detail": "Extensive list of third parties including Apple Analytics, Facebook, AppsFlyer, Amplitude, OneSignal, Google Payments, Google Analytics, Firebase, Hotjar Analytics, Sentry.io, Unsplash, Noun Project, Pexels, Replicate Inc., Soundstripe, Google Gemini, OpenAI ChatGPT, Paddle, and Refiner.",
+      "policy_excerpt": "We may use your email address with third party services, including Amplitude for analytics and Paddle for payments. We use the following third party services: (i) Apple Analytics; (ii) Facebook; (iii) AppsFlyer; (iv) Amplitude; (v) OneSignal; (vi) Google Payments; (vii) Google Analytics; (viii) Firebase; (ix) Hotjar Analytics; (x) Sentry.io.",
+      "concerns": ["Extensive third-party ecosystem", "Multiple analytics and tracking services", "AI processing by external providers"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you register, the app collects your name, photo, and email address. You can use basic features without an account.",
+      "detail": "Registration info includes name, photo, and email address. Account is optional for basic features but required for cloud backup and premium features.",
+      "policy_excerpt": "Moreover, when you register, we may retain the information you provided us at registration, including your name, photo and email address.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses multiple tracking services including Facebook, Google Analytics, AppsFlyer, and others to monitor your behavior and usage patterns.",
+      "detail": "Uses Facebook, AppsFlyer, Google Analytics, Amplitude, Hotjar Analytics, and Firebase for tracking and analytics.",
+      "policy_excerpt": "We use the following third party services: (i) Apple Analytics; (ii) Facebook; (iii) AppsFlyer; (iv) Amplitude; (v) OneSignal; (vi) Google Payments; (vii) Google Analytics; (viii) Firebase; (ix) Hotjar Analytics; (x) Sentry.io.",
+      "concerns": ["Multiple advertising and analytics trackers", "Cross-service tracking through Facebook and Google"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app requires users to be 13 or older, or have parental consent if under 18. However, there's no strong verification system mentioned.",
+      "detail": "Terms state users must be 13+ or have guardian consent if 13-18. No mention of COPPA compliance or specific child data protections.",
+      "policy_excerpt": "When enrolling into the service, you represent and warrant that: (i) you are either over 18 years of age, or if you're over 13 and under 18, you obtained your legal guardian's consent to these terms.",
+      "concerns": ["Self-certified age with no verification", "App may appeal to younger users with sticker creation features"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app requires internet access for AI features and cloud services. No concerning network monitoring practices mentioned.",
+      "detail": "Network access required for AI processing and cloud features. Standard IP logging likely occurs but not explicitly mentioned for profiling.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects technical device information like your IP address and operating system, and shares it with multiple analytics companies for tracking purposes.",
+      "detail": "Collects IP address, operating system, and technical device information. Shared with analytics providers including Google Analytics, Firebase, and AppsFlyer.",
+      "policy_excerpt": "We collect some raw information which may be considered as personally identifiable, which is technical information about your device, such as your IP address, your operating system and other technical information.",
+      "concerns": ["IP address collection", "Multiple device identifiers through analytics SDKs"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses Apple's Vision Framework to detect faces in photos but explicitly states that face data is not retained.",
+      "detail": "Uses on-device face detection via Apple's Vision Framework. Face data is not retained according to the policy.",
+      "policy_excerpt": "We use Apple's Vision Framework on iOS to inspect whether photos contain a person's face or not. However, in such use, your face data is not retained if the photo is found to include face data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payments are processed through Paddle and your Apple/Google account. The app itself doesn't store your payment card details.",
+      "detail": "Uses Paddle as payment processor and Apple/Google accounts for billing. No raw card data stored by Bazaart.",
+      "policy_excerpt": "We may charge our fees through your Apple or Google account or independently... We use Paddle to process payments.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion of your information through the app, though specific details about what gets deleted and retention periods are limited.",
+      "detail": "Users can review and request deletion of information. However, specifics about data export formats or complete deletion timelines are not detailed.",
+      "policy_excerpt": "Can You Review or Remove Your Information? Yes. You can always review your information using our software and panel. You can also request to delete all relevant information.",
+      "concerns": ["Limited detail on deletion scope and timelines"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You'll be notified of policy changes via electronic communication, and you have 30 days to terminate if you don't agree with the changes.",
+      "detail": "Users informed via electronic communication of amendments. Option to terminate with 30 days notice if terms are unacceptable.",
+      "policy_excerpt": "We may amend these terms from time to time, provided that you shall be informed through electronic communication on such amendment and shall be granted the option to terminate your agreements with us by providing a 30 days prior written notice.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 }
+    ],
+    "total_deductions": 71.5,
+    "final_score": 65,
+    "grade": "C"
+  }
+}

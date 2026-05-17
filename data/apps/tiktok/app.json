@@ -1,8 +1,8 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://www.tiktok.com/legal/privacy-policy",
     "terms_url": "https://www.tiktok.com/legal/terms-of-service",
     "policy_last_updated": "2025-07-08",
@@ -12,53 +12,59 @@
   "app": {
     "slug": "tiktok",
     "name": "TikTok",
-    "developer": "TikTok Ltd.",
+    "developer": "TIKTOK PTE. LTD.",
     "app_store_url": "https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320",
     "app_store_id": "835599320",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e2/4f/22/e24f22d8-3570-89bd-8acb-4ff7be733411/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Entertainment",
     "sub_category": "Video",
-    "description": "Users view and explore clips, broadcast in real time, and browse products from merchants. The service delivers a customized viewing stream, simple production utilities, audio and visual enhancements, and numerous preset security settings."
+    "description": "A short-form video platform for creating, sharing, and discovering content, with live streaming, shopping features, and personalized recommendations."
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 49,
+    "score": 53,
     "grade": "D",
-    "one_liner": "TikTok collects extensive data about your activity, location, contacts, and device, and states that it shares it with advertisers and business partners for personalized ads.",
-    "summary": "TikTok collects a wide range of data including account details, content you upload, messages, clipboard, contacts, purchases, and identity documents. It automatically collects usage behavior, inferred interests, gender, age range, device identifiers, IP address, and location. It uses cookies and web beacons to track browsing. Data is shared with business partners, service providers, advertisers, affiliates, researchers, sellers, and law enforcement when required. Users can access, delete, update, or rectify data through the privacy portal. Data is retained as long as necessary for the platform plus legal and safety needs.",
-    "recommendation": "think_twice",
-    "recommendation_reason": "TikTok collects extensive personal data and shares it widely with advertisers and partners. While you can delete your account, the app's broad data collection and sharing practices pose significant privacy risks."
+    "one_liner": "Extensive data collection including keystroke patterns and face analysis, with broad sharing across advertising networks.",
+    "summary": "TikTok collects extensive data including account details, content, messages, clipboard, contacts, and identity documents. It tracks usage behavior, infers sensitive attributes (interests, gender, age), and collects keystroke patterns, device identifiers, and location. Face and body features are analyzed in uploaded videos. Data is shared with advertisers, business partners, corporate affiliates, and law enforcement. Users have data rights and can delete accounts, but retention is broad.",
+    "recommendation": "avoid",
+    "recommendation_reason": "TikTok's data collection is exceptionally broad, including keystroke patterns, face/body analysis, and cross-device tracking. Combined with extensive sharing with advertisers and corporate partners, this poses significant privacy risks."
   },
   "flags": {
     "red": [
       {
-        "id": "red_infers_your_traits",
+        "id": "red_keystroke_tracking",
+        "title": "Collects keystroke patterns and rhythms",
+        "plain_english": "TikTok states it collects 'keystroke patterns or rhythms' as part of technical information about your device.",
+        "severity": "high"
+      },
+      {
+        "id": "red_face_body_analysis",
+        "title": "Analyzes face and body features in your videos",
+        "plain_english": "TikTok collects information about videos and images, including 'the existence and location within an image of face and body features and attributes' for effects, moderation, demographic classification, and ad recommendations.",
+        "severity": "high"
+      },
+      {
+        "id": "red_infers_traits",
         "title": "Infers your interests, gender, and age range",
-        "plain_english": "TikTok states that it infers your attributes, including your interests, gender, and age range, for the purpose of personalising content.",
+        "plain_english": "TikTok explicitly states it infers your attributes, including interests, gender, and age range, for personalizing content.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_device_tracking",
+        "title": "Tracks activity across multiple devices",
+        "plain_english": "TikTok uses device IDs and user ID to identify activity across devices, and may associate you with information from devices other than those you use to log in.",
         "severity": "high"
       },
       {
         "id": "red_shares_with_advertisers",
-        "title": "Shares data with advertisers and business partners",
-        "plain_english": "TikTok explicitly states that it shares your information with advertisers, advertising partners, publishers, and third-party measurement companies.",
+        "title": "Shares data with advertisers and partners",
+        "plain_english": "TikTok shares information with advertisers, advertising partners, publishers, third-party measurement companies, business partners, service providers, and corporate affiliates.",
         "severity": "high"
-      },
-      {
-        "id": "red_tracks_across_devices",
-        "title": "Tracks your activity across devices",
-        "plain_english": "TikTok explicitly states that it uses your device IDs and user ID to identify your activity across devices, and may associate you with information from devices other than those you use to log in.",
-        "severity": "high"
-      },
-      {
-        "id": "red_analyzes_video_content",
-        "title": "Analyzes objects and faces in your videos",
-        "plain_english": "TikTok states that it may collect information about the videos, images, and audio in your User Content, such as identifying objects, scenery, face and body features, and the text of spoken words.",
-        "severity": "medium"
       },
       {
         "id": "red_broad_retention",
-        "title": "Keeps your data for broad purposes",
-        "plain_english": "TikTok states that it retains your information for as long as necessary to provide the Platform and for other purposes set out in the privacy policy, including legal, safety, and business interests.",
+        "title": "Keeps data indefinitely for broad purposes",
+        "plain_english": "TikTok retains information as long as necessary to provide the Platform, plus for legal obligations, legitimate business interests, and defense of legal claims.",
         "severity": "medium"
       }
     ],
@@ -66,19 +72,19 @@
       {
         "id": "green_account_deletion",
         "title": "You can delete your account",
-        "plain_english": "TikTok states that you may delete your entire account in Settings.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_user_controls",
-        "title": "Privacy controls available",
-        "plain_english": "TikTok states that it provides tools in Settings to control who can view your videos, send you messages, or post comments.",
+        "plain_english": "TikTok allows you to delete your entire account in Settings.",
         "severity": "positive"
       },
       {
         "id": "green_data_rights_portal",
-        "title": "Data rights request portal",
-        "plain_english": "TikTok states that you may submit a request to exercise your data rights, such as access, deletion, update, or rectification, through its privacy portal.",
+        "title": "Data rights request portal available",
+        "plain_english": "TikTok provides a privacy portal to submit requests for access, deletion, update, or rectification of your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_controls",
+        "title": "Privacy controls for content visibility",
+        "plain_english": "TikTok provides Settings tools to control who can view videos, send messages, or post comments.",
         "severity": "positive"
       }
     ]
@@ -88,34 +94,36 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok accesses your camera and microphone when you create or upload photos, videos, or livestreams. It states that it may analyze the objects, scenery, and audio in your content.",
-      "detail": "Camera and microphone are used for creating and uploading content. The policy states that TikTok may analyze objects, scenery, face and body features, and spoken words in uploaded content for effects, moderation, and recommendations.",
-      "policy_excerpt": "We process the content you generate on the Platform, including photographs, audios and videos you upload or create... We may collect information about the videos, images and audio that are a part of your User Content, such as identifying the objects and scenery that appear.",
+      "plain_english": "Camera and microphone are used for creating content. TikTok analyzes objects, scenery, face/body features, and spoken words in uploaded videos.",
+      "detail": "Camera and microphone access is required for creating and uploading videos and livestreams. TikTok collects User Content through pre-loading at creation time. The platform analyzes video content including objects, scenery, face and body features/attributes, and text of spoken words for effects, moderation, demographic classification, and recommendations.",
+      "policy_excerpt": "We process the content you generate on the Platform... We may collect information about the videos, images and audio that are a part of your User Content, such as identifying the objects and scenery that appear, the existence and location within an image of face and body features and attributes",
       "concerns": [
-        "Visual and audio content analyzed automatically"
+        "Face and body feature analysis",
+        "Audio content analyzed for spoken words",
+        "Content pre-loaded before explicit save/upload"
       ],
-      "score_impact": -4.5
+      "score_impact": -9.75
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
       "risk": "risky",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TikTok states that it collects your approximate location automatically using your SIM card and IP address. With your permission, it may also collect precise GPS location.",
-      "detail": "Approximate location is inferred from SIM card and IP address without requiring explicit permission. Precise GPS is collected only with permission. Location is used for personalized content and advertising.",
+      "plain_english": "Approximate location collected automatically via SIM card and IP address. Precise GPS collected with permission.",
+      "detail": "Approximate location is inferred automatically from SIM card and IP address without requiring explicit permission. Precise GPS location is collected only with explicit permission. Location information from User Content is also collected if you choose to add it.",
       "policy_excerpt": "We collect information about your approximate location, including location information based on your SIM card and/or IP address. With your permission, we may also collect precise location data (such as GPS).",
       "concerns": [
-        "Approximate location collected automatically",
-        "Precise GPS collected with permission"
+        "Approximate location collected automatically without permission",
+        "IP address used for location inference"
       ],
       "score_impact": -9.75
     },
@@ -128,13 +136,14 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TikTok states that if you choose to sync your phone contacts, it will access and collect names, phone numbers, and email addresses to match against existing users.",
-      "detail": "Contact sync is optional. If enabled, TikTok accesses and collects names, phone numbers, and email addresses from your phone and social network contacts to find existing users.",
+      "plain_english": "If you sync phone contacts, TikTok accesses names, phone numbers, and email addresses to match against existing users.",
+      "detail": "Contact sync is optional. If enabled, TikTok accesses and collects names, phone numbers, and email addresses from phone and social network contacts. This is matched against existing users for friend suggestions. Social network public profile information is also collected.",
       "policy_excerpt": "If you choose to sync your phone contacts, we will access and collect information such as names, phone numbers, and email addresses, and match that information against existing users of the Platform.",
       "concerns": [
-        "Contacts collected and matched against user database"
+        "Contacts matched against user database",
+        "Social network contacts also collected if shared"
       ],
-      "score_impact": -13
+      "score_impact": -13.0
     },
     {
       "id": "storage_file_access",
@@ -145,13 +154,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok processes the photos, videos, and audio that you upload or create. It states that it may pre-load content during creation or import, even if you do not choose to save or upload it.",
-      "detail": "User Content is collected through pre-loading at creation, import, or upload regardless of whether you save or upload it. Clipboard access requires permission.",
+      "plain_english": "User Content is pre-loaded at creation time regardless of whether you save or upload. Clipboard accessed with permission.",
+      "detail": "User Content (photos, videos, audio) is collected through pre-loading at the time of creation, import, or upload, regardless of whether you choose to save or upload. Clipboard content is accessed with permission for sharing or pasting content.",
       "policy_excerpt": "We collect User Content through pre-loading at the time of creation, import, or upload, regardless of whether you choose to save or upload that User Content",
       "concerns": [
-        "Content pre-loaded before you choose to save or upload"
+        "Content pre-loaded before explicit save decision",
+        "App and file names/types collected"
       ],
-      "score_impact": -3
+      "score_impact": -3.0
     },
     {
       "id": "data_sharing_third_parties",
@@ -162,14 +172,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that it shares your information with business partners, service providers, advertisers, advertising networks, its corporate group, independent researchers, and law enforcement when legally required. It also states that your information may be transferred in a sale or merger.",
-      "detail": "Data is shared with advertisers, business partners, service providers, corporate affiliates, independent researchers, and law enforcement. Mergers and acquisitions may result in data transfers.",
-      "policy_excerpt": "We share your information with the following parties: Business Partners... Service Providers... Advertisers, Advertising Networks, Publishers, and Measurement Partners... Our Corporate Group... We may also disclose your information to third parties: in the event that we sell or buy any business or assets... if we sell, buy, merge, are acquired by, or partner with other companies or businesses.",
+      "plain_english": "Extensive sharing with advertisers, business partners, service providers, corporate affiliates, researchers, sellers, and law enforcement. Data may transfer in M&A.",
+      "detail": "Data is shared with business partners, service providers (cloud, moderation, marketing), payment processors, advertisers and ad networks, independent researchers, corporate group affiliates, and law enforcement when required. Data may be disclosed in sale, merger, or business transactions. Aggregated statistics shared with analytics users.",
+      "policy_excerpt": "We share your information with the following parties: Business Partners... Service Providers... Advertisers, Advertising Networks, Publishers, and Measurement Partners... Our Corporate Group... in the event that we sell or buy any business or assets",
       "concerns": [
         "Shared with advertisers for targeting",
         "Shared with corporate affiliates",
-        "Transferred in M&A transactions",
-        "Shared with law enforcement when required"
+        "May transfer in M&A transactions",
+        "Shared with law enforcement when required",
+        "Aggregated insights shared with creators/advertisers"
       ],
       "score_impact": -19.5
     },
@@ -182,11 +193,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok collects your username, email, phone number, date of birth, and profile photo or video when you register. It states that it may sometimes ask for proof of identity or age for certain features.",
-      "detail": "Registration requires username, email or phone, date of birth, and profile media. Proof of identity or age may be requested for livestream, verified accounts, or business accounts.",
-      "policy_excerpt": "You give us information when you register on the Platform, including your username, password, date of birth (where applicable), email address and/or telephone number, information you disclose in your user account, and your photograph or profile video... We sometimes ask you to provide proof of identity or age in order to use certain features",
+      "plain_english": "Collects username, password, DOB, email/phone, profile photo/video. May require proof of identity/age for certain features.",
+      "detail": "Registration requires username, password, date of birth (where applicable), email address and/or telephone number, profile information, and photograph or profile video. Proof of identity or age may be requested for livestream, verified accounts, business accounts, or age verification purposes.",
+      "policy_excerpt": "You give us information when you register on the Platform, including your username, password, date of birth (where applicable), email address and/or telephone number... We sometimes ask you to provide proof of identity or age in order to use certain features",
       "concerns": [
-        "Identity documents may be requested for some features"
+        "Identity documents may be requested",
+        "Phone number linked to account"
       ],
       "score_impact": -9.75
     },
@@ -199,13 +211,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that it collects information about how you use the Platform, including videos you watch, ads you view, your browsing and search history, and what content you like. It says it uses this to deliver personalized advertising on and off the Platform, and may infer your interests, gender, and age range.",
-      "detail": "Usage data including viewed ads, watched videos, browsing history, and liked content is collected continuously. Cookies and web beacons are used for tracking on and off the Platform. Inferences about interests, gender, and age are drawn for personalization.",
-      "policy_excerpt": "We collect information regarding your use of the Platform, e.g., how you engage with the Platform, including how you interact with content we show to you, the advertisements you view, videos you watch and problems encountered, browsing and search history, the content you like... We also infer your attributes, including your interests, gender and age range for the purpose of personalising content.",
+      "plain_english": "Heavy tracking of usage behavior. Infers interests, gender, age. Uses cookies and web beacons for on and off-platform tracking.",
+      "detail": "Usage information collected includes how you engage with content, ads viewed, videos watched, browsing and search history, liked content, saved favorites, followed users. Cookies and web beacons used to track on and off Platform. Infers attributes including interests, gender, and age range for personalization. Third-party data from advertisers and partners used to match outside activities with TikTok account.",
+      "policy_excerpt": "We collect information regarding your use of the Platform, e.g., how you engage with the Platform, including how you interact with content we show to you, the advertisements you view... We also infer your attributes, including your interests, gender and age range for the purpose of personalising content.",
       "concerns": [
         "Inferred sensitive attributes",
-        "Behavior used for ad targeting",
-        "Cross-site tracking via cookies"
+        "Cross-site tracking via cookies",
+        "Third-party data matched to account"
       ],
       "score_impact": -16.25
     },
@@ -218,13 +230,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that it is not directed at children under 13, or under 16 in some regions. It does not describe how it verifies age.",
-      "detail": "The policy states the platform is not directed at children under 13 (or 16 in some jurisdictions like Australia). No age verification mechanism is described.",
+      "plain_english": "Platform not directed at children under 13 (16 in some regions like Australia, 18 in others). Age verification may include ID submission.",
+      "detail": "TikTok states it is not directed at children under 13. Higher minimum ages apply in certain regions (16 in Australia, 18 in Egypt, Israel, Kenya, Nigeria, etc.). Age verification may require proof of identity. Guardian's Guide available for parents.",
       "policy_excerpt": "TikTok is not directed at children under the age of 13. In certain cases this age may be higher due to local regulatory requirements",
       "concerns": [
-        "No described age verification mechanism"
+        "Higher age requirements in some jurisdictions",
+        "ID may be required for age verification"
       ],
-      "score_impact": -3
+      "score_impact": -3.0
     },
     {
       "id": "network_internet_activity",
@@ -235,12 +248,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok collects your IP address, user agent, and mobile carrier automatically. It states that it uses your IP address and SIM card information to determine your approximate location.",
-      "detail": "IP address, user agent, mobile carrier, and other device data are collected automatically. IP and SIM data are used for approximate location inference.",
-      "policy_excerpt": "We collect certain information about the device you use to access the Platform, such as your IP address, user agent, mobile carrier... We collect information about your approximate location, including location information based on your SIM card and/or IP address.",
+      "plain_english": "Collects IP address, user agent, mobile carrier, time zone, and network type automatically.",
+      "detail": "IP address, user agent, mobile carrier, time zone settings, and network type are collected automatically. IP address and SIM card information used to determine approximate location.",
+      "policy_excerpt": "We collect certain information about the device you use to access the Platform, such as your IP address, user agent, mobile carrier, time zone settings... We collect information about your approximate location, including location information based on your SIM card and/or IP address.",
       "concerns": [
-        "IP used for approximate location inference",
-        "Network data logged continuously"
+        "IP used for location inference"
       ],
       "score_impact": -3.25
     },
@@ -253,13 +265,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that it collects device information including advertising identifiers, device IDs, and user IDs. It explicitly states that it uses these identifiers to identify your activity across multiple devices, and may associate you with information from devices other than those you use to log in.",
-      "detail": "Advertising identifiers, device IDs, and user IDs are collected. Cross-device tracking is explicitly described, including association with devices you do not use to log in.",
-      "policy_excerpt": "We automatically assign user IDs and device IDs. Where you log-in from multiple devices, we use your information such as your device IDs and user ID to identify your activity across devices. We may also associate you with information collected from devices other than those you use to log-in to the Platform.",
+      "plain_english": "Extensive device collection including keystroke patterns, advertising IDs, device IDs, with cross-device tracking.",
+      "detail": "Collects advertising identifiers, device IDs, user IDs (automatically assigned), device model, device system, network type, screen resolution, operating system, app and file names/types, keystroke patterns or rhythms, battery state, audio settings, connected audio devices. Cross-device tracking explicitly implemented - may associate you with devices you don't use to log in.",
+      "policy_excerpt": "identifiers for advertising purposes, model of your device, the device system, network type, your screen resolution and operating system, app and file names and types, keystroke patterns or rhythms, battery state... Where you log-in from multiple devices, we use your information such as your device IDs and user ID to identify your activity across devices.",
       "concerns": [
-        "Cross-device tracking via device IDs",
-        "Advertising identifiers collected",
-        "Association with devices you do not use to log in"
+        "Keystroke patterns/rhythms collected",
+        "Cross-device tracking",
+        "Association with devices you don't log in from",
+        "App and file names collected"
       ],
       "score_impact": -9.75
     },
@@ -267,18 +280,20 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that it analyzes face and body features in your uploaded videos and images for special effects, content moderation, and demographic classification. It does not claim to collect or store separate biometric health data.",
-      "detail": "Face and body feature analysis occurs in uploaded content for effects, moderation, and demographic classification. No separate biometric health data collection is claimed.",
+      "plain_english": "Analyzes face and body features/attributes in videos for effects, moderation, demographic classification, and recommendations.",
+      "detail": "TikTok collects information about videos and images including existence and location of face and body features and attributes. This is used to enable special video effects, content moderation, demographic classification, content and ad recommendations. Also analyzes nature of audio.",
       "policy_excerpt": "We may collect information about the videos, images and audio that are a part of your User Content, such as identifying the objects and scenery that appear, the existence and location within an image of face and body features and attributes",
       "concerns": [
-        "Face and body feature analysis in uploaded content"
+        "Face feature analysis in uploaded content",
+        "Body feature analysis",
+        "Demographic classification"
       ],
-      "score_impact": -4.5
+      "score_impact": -9.75
     },
     {
       "id": "financial_payment",
@@ -289,11 +304,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "TikTok states that it collects payment card information, billing details, and delivery information when you make purchases on the Platform, such as buying TikTok Coins or goods through shopping features.",
-      "detail": "Payment card info, billing, delivery, and contact details are collected for purchases. This includes TikTok Coins and shopping transactions.",
-      "policy_excerpt": "When you make a purchase or payment on or through the Platform, including when you buy TikTok Coins or purchase goods through our shopping features, we collect information about the purchase or payment transaction, such as payment card information, billing, delivery, and contact information, and items you purchased.",
+      "plain_english": "Payment card info, billing, delivery, and contact information collected for purchases.",
+      "detail": "Payment card information, billing, delivery, and contact information collected when purchasing TikTok Coins or goods through shopping features. Transaction details and items purchased also collected. Shared with sellers, payment providers, and fulfillment providers.",
+      "policy_excerpt": "When you make a purchase or payment on or through the Platform, including when you buy TikTok Coins or purchase goods through our shopping features, we collect information about the purchase or payment transaction, such as payment card information, billing, delivery, and contact information",
       "concerns": [
-        "Payment card information collected directly"
+        "Payment card information collected directly",
+        "Email may be shared with sellers for marketing"
       ],
       "score_impact": -4.5
     },
@@ -306,14 +322,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that you may delete your account and uploaded content through Settings. It also states that it retains information as long as necessary to provide the Platform and for legal, safety, and business purposes.",
-      "detail": "Account and content deletion are available. Retention is broad: kept as long as necessary for platform operation, legal obligations, safety, and legitimate business interests.",
+      "plain_english": "Account and User Content can be deleted. Data rights portal available. Broad retention for legal, safety, and business purposes.",
+      "detail": "Users can delete account and User Content in Settings. Privacy portal available for exercising data rights (access, deletion, update, rectification). However, retention is broad: kept as long as necessary to provide Platform, plus for contractual/legal obligations, legitimate business interests, and defense of legal claims. Some data may be kept after account deletion for violations.",
       "policy_excerpt": "Should you choose to do so, you may delete your entire account in Settings. We retain information for as long as necessary to provide the Platform and for the other purposes set out in this Privacy Policy.",
       "concerns": [
         "Broad retention policy",
-        "Some data kept after account deletion"
+        "Data kept for legal and business purposes",
+        "Violation data retained even after account removal"
       ],
-      "score_impact": -3
+      "score_impact": -3.0
     },
     {
       "id": "policy_change_notification",
@@ -324,9 +341,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "TikTok states that your continued use of the Platform after a privacy policy update constitutes acceptance of the new policy.",
-      "detail": "Updates are posted with a new 'Last Updated' date. Continued access or use after the updated date constitutes acceptance. No explicit opt-out mechanism is described beyond stopping use.",
-      "policy_excerpt": "Your continued access to or use of the Platform after the date of the updated policy constitutes your acceptance of the updated policy.",
+      "plain_english": "Continued use after policy update constitutes acceptance. Changes notified by updating 'Last Updated' date.",
+      "detail": "Policy updates notified by updating the 'Last Updated' date and posting the new policy. Continued access or use after the updated date constitutes acceptance. If you don't agree, you must stop using the Platform.",
+      "policy_excerpt": "Your continued access to or use of the Platform after the date of the updated policy constitutes your acceptance of the updated policy. If you do not agree to the updated policy, you must stop accessing or using the Platform.",
       "concerns": [
         "Passive acceptance by continued use"
       ],
@@ -356,7 +373,14 @@
         "risk": "risky",
         "max": 20,
         "rate": 0.65,
-        "deduction": 13
+        "deduction": 13.0
+      },
+      {
+        "category": "camera_microphone",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
       },
       {
         "category": "location_gps",
@@ -380,18 +404,11 @@
         "deduction": 9.75
       },
       {
-        "category": "camera_microphone",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
         "category": "health_biometric",
-        "risk": "caution",
+        "risk": "risky",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0.65,
+        "deduction": 9.75
       },
       {
         "category": "financial_payment",
@@ -401,20 +418,6 @@
         "deduction": 4.5
       },
       {
-        "category": "storage_file_access",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3
-      },
-      {
-        "category": "childrens_data",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3
-      },
-      {
         "category": "network_internet_activity",
         "risk": "risky",
         "max": 5,
@@ -422,11 +425,25 @@
         "deduction": 3.25
       },
       {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
         "category": "data_deletion_user_rights",
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3
+        "deduction": 3.0
       },
       {
         "category": "policy_change_notification",
@@ -436,8 +453,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 105.25,
-    "final_score": 49,
+    "total_deductions": 96.25,
+    "final_score": 53,
     "grade": "D"
   }
 }

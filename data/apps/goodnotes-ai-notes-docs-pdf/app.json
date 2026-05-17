@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.goodnotes.com/privacy-policy",
+    "terms_url": "https://www.goodnotes.com/terms-and-conditions",
+    "policy_last_updated": "2026-03",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "goodnotes-ai-notes-docs-pdf",
+    "name": "Goodnotes: AI Notes, Docs, PDF",
+    "developer": "Goodnotes Limited",
+    "app_store_url": "https://apps.apple.com/in/app/id1444383602",
+    "app_store_id": "1444383602",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/59/73/af5973cc-bd4e-c6df-103a-eaefe3cf23d0/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Education",
+    "description": "AI-powered note-taking, PDF annotation, and document management app with handwriting recognition, audio transcription, and collaborative features."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 78,
+    "grade": "B",
+    "one_liner": "Strong privacy commitments with local-first data storage, but AI features require sharing content with third-party providers.",
+    "summary": "Goodnotes takes a privacy-conscious approach by keeping your notes on your device by default and explicitly stating they don't sell data. However, enabling cloud sync, AI features, or certain integrations requires sharing data with multiple third-party service providers. The AI features in particular involve processing your notebook content through external AI models.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Good privacy practices with local-first storage and clear no-sale policy, but users should carefully consider opt-in AI features that require content sharing."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_ai_content_processing",
+        "title": "AI features process notebook content externally",
+        "plain_english": "When you use Goodnotes AI features (like AI summaries, search, or meeting transcripts), your notebook content, conversation histories, and documents are processed by third-party AI providers like Amazon Web Services and Microsoft. This requires explicit opt-in consent, but means your private notes leave your device.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_sharing",
+        "title": "Many third-party service providers used",
+        "plain_english": "Goodnotes shares your data with numerous third parties including Google Analytics, Mixpanel, Amplitude, AWS, Datadog, Mailchimp, Zendesk, and others for analytics, cloud storage, customer support, and marketing. While they claim not to sell data, the broad service provider network increases exposure.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_marketing_profiling",
+        "title": "Uses data for targeted advertising",
+        "plain_english": "Goodnotes uses your data for marketing and targeted advertising, including 'Customer Match' with Google to find similar audiences. While they claim to obtain consent for marketing cookies, they also rely on 'legitimate interests' for personalization activities.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_cloud_sync_exposure",
+        "title": "Cloud backup shares note content",
+        "plain_english": "If you enable Goodnotes Cloud or iCloud sync, your notes and documents (including any personal data in them) are stored on third-party servers. While Goodnotes claims they don't access your notes, using cloud features means your content is no longer only on your device.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_local_first",
+        "title": "Notes stay on your device by default",
+        "plain_english": "Goodnotes stores your notes and documents locally on your device by default. They explicitly state they do not store your notes on their own servers and do not access or collect data from your notebooks without your permission.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sale_commitment",
+        "title": "Explicit no-sale data commitment",
+        "plain_english": "The policy clearly states 'We never sell or rent your data or notebook content to third parties.' This is a strong privacy commitment that many apps don't make.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_biometric_profiling",
+        "title": "No biometric profiling from handwriting",
+        "plain_english": "Goodnotes explicitly states they don't use your handwriting data to create individual digital templates or profiles for identifying you, so they don't consider this biometric data processing.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_security",
+        "title": "Strong security measures in place",
+        "plain_english": "The policy describes technical safeguards including data encryption, secure servers, access controls, and breach notification procedures. They also limit access to personal data to those with genuine business need.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_compliance",
+        "title": "Comprehensive GDPR rights provided",
+        "plain_english": "Goodnotes provides full GDPR rights including access, rectification, erasure, data portability, and objection rights. Users can delete data via the app and export their information.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your microphone to record audio notes and meeting transcripts, but only when you actively choose to use these features. Audio recordings are stored locally unless you enable cloud sync.",
+      "detail": "Microphone access is used for Audio Recordings and Meeting Notes features. Audio is transcribed using AI when enabled. Recordings sync to cloud only if iCloud or Goodnotes Cloud is enabled.",
+      "policy_excerpt": "Audio Recordings: Record and transcribe audio seamlessly",
+      "concerns": ["AI transcription processes audio externally", "Transcripts may be stored on third-party servers"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes may collect your general location (like your time zone and country) from your device and IP address. This is used for service optimization and analytics, not for tracking your precise movements.",
+      "detail": "Location data includes time zone settings and country derived from IP address and device settings. Used for service provision and analytics.",
+      "policy_excerpt": "usage data when you visit or otherwise use the Services, including details of the location of the device used and IP address",
+      "concerns": ["IP address may infer approximate location", "Location combined with other data for analytics"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes does not request or access your contacts or phonebook. Collaboration is done through shareable links, not by accessing your contacts list.",
+      "detail": "No mention of contacts access in the privacy policy. Collaboration features use link sharing rather than contact integration.",
+      "policy_excerpt": "We do not access or collect data (including any Personal Data) from your notes or documents without your consent",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes needs file access so you can import PDFs, documents, and images into your notebooks. Your files are stored locally on your device by default, and the app can't access files you haven't explicitly imported.",
+      "detail": "File access is core to the app's PDF annotation and document management features. Files remain on-device unless cloud sync is explicitly enabled.",
+      "policy_excerpt": "When you create notes or documents when using the Services, these are stored on the Goodnotes application on your device",
+      "concerns": ["Cloud sync exposes files to third-party infrastructure"],
+      "score_impact": 3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes shares data with many service providers (like AWS for cloud storage, Google Analytics for usage data, and Zendesk for support) but explicitly states they never sell your data or notebook content to third parties.",
+      "detail": "Third parties include Google Analytics, Mailchimp, AWS, Datadog, Mixpanel, Amplitude, Paddle, HubSpot, Braze, Zendesk, and AI providers. Data sharing agreements are in place.",
+      "policy_excerpt": "We never sell or rent your data or notebook content to third parties... We only share your data when you explicitly give us permission to do so and with the third parties specifically identified in this policy",
+      "concerns": ["Large number of service providers", "AI features share content with external providers", "Google Customer Match shares hashed customer lists"],
+      "score_impact": 9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to create an account with your name and email to use Goodnotes. This is standard for most apps, and the information is used to manage your account and provide customer support.",
+      "detail": "Account creation requires name, email, country, and language. Account data is used for service provision, support, and marketing (with consent).",
+      "policy_excerpt": "basic Personal Data about you (personal identifiers and contact information such as first name, family name, email address, country and your language)",
+      "concerns": ["Email used for marketing if consent given", "Account data shared with analytics providers"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes tracks how you use the app to improve their services and for marketing. They use tools like Google Analytics and Mixpanel, and run targeted ads with your consent. They also use 'Customer Match' to find similar audiences on Google.",
+      "detail": "Analytics via Google Analytics for Firebase, Mixpanel, Amplitude. Marketing uses cookies for personalization and targeted advertising with opt-in consent. Customer Match shares hashed data with Google.",
+      "policy_excerpt": "To carry out data driven marketing via our use of Cookies and similar technologies to enable Goodnotes and its business partners to track your engagement with the website and our Services for profiling purposes",
+      "concerns": ["Profiling for marketing purposes", "Customer Match shares data with Google", "Legitimate interests used for some personalization"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes clearly states their app is not for children under 16. This is a responsible approach to protecting children's privacy.",
+      "detail": "Explicit age restriction of 16+ for sign-ups. Policy states they do not collect special categories of personal data.",
+      "policy_excerpt": "Children under the age of 16 are not permitted to sign up by themselves for the Services",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes collects your IP address and network information when you use the app or website. This is used for security, service provision, and analytics. It's fairly standard but does create a log of your activity.",
+      "detail": "IP addresses, device type, usage data, and network activity are logged for security, diagnostics, and service improvement.",
+      "policy_excerpt": "usage data when you visit or otherwise use the Services... IP address, device type, other unique device identification, storage usage, data usage",
+      "concerns": ["IP address can approximate location", "Activity logs linked to account"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes collects device information like your device type, unique identifiers, and storage usage to help the app work properly and for analytics. This is fairly standard but does help identify your device across sessions.",
+      "detail": "Device info includes device type, unique device identification, storage usage, data usage, time zone settings. Used for diagnostics and service optimization.",
+      "policy_excerpt": "activity data relating to your usage of the Services... IP address, device type, other unique device identification, storage usage, data usage, time zone settings",
+      "concerns": ["Unique device identifiers used for analytics", "Device info combined with other data for profiling"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes does not collect health data or biometric information. They specifically state they don't use your handwriting to create biometric profiles for identifying you.",
+      "detail": "Explicit statement that handwriting is not used for biometric profiling. No health data collection. App not intended for HIPAA-covered entities.",
+      "policy_excerpt": "we will not... use your handwriting data to create an individual digital template or profile for the purpose of identifying you, and we therefore do not consider that we process any biometric data about you",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you make purchases, payment processing is handled by third-party processors (like Paddle). Goodnotes doesn't store your full credit card details, only limited information like your postal code and transaction history.",
+      "detail": "Payment processing outsourced to Paddle. Limited transaction data collected. Card details stored by payment processor, not Goodnotes.",
+      "policy_excerpt": "your credit card or debit card information... may be collected and stored by third party payment processors with which we work. We may also collect some limited information, such as your postal code and details of your transaction history",
+      "concerns": ["Transaction history retained", "Payment processor has card data"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes provides strong data rights including the ability to access, delete, and export your data. You can delete your account and data through the app, and they comply with GDPR requirements.",
+      "detail": "Full GDPR rights provided including access, rectification, erasure, portability, and objection. Deletion available via app. Data Protection Officer contactable.",
+      "policy_excerpt": "The right to request that we erase your Personal Data in certain circumstances... You may also exercise some of your rights (e.g. the right to request that we erase your Personal Data) via the Goodnotes application",
+      "concerns": ["Some data may be retained for legal obligations"],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Goodnotes may update their privacy policy and will notify you through the app, website, or by email. However, continued use of the app after changes counts as accepting the new policy.",
+      "detail": "Changes notified via site, app, or email. Users advised to check policy page for updates. Continued use constitutes acceptance.",
+      "policy_excerpt": "The Company reserves the right to make changes to this Policy at any time by giving notice to its users on the site, the Goodnotes application, or as notified by us to you (by email for example)",
+      "concerns": ["Continued use = acceptance of changes"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 45.0,
+    "final_score": 78,
+    "grade": "B"
+  }
+}

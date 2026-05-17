@@ -1,7 +1,9 @@
-# Zomato Privacy Review
+# Zomato — Privacy Review
 
-**Analyzed:** 2026-05-16  
-**Policy:** http://www.zomato.com/privacy (April 22, 2020, via Wayback Machine)
+**Date:** 2026-05-17
+**Analyst:** claude-kimi-k2.5
+**Policy:** https://www.zomato.com/policies/privacy/
+**Policy Last Updated:** 2025-07-25
 
 ## Methodology
 Re-analysis performed with strict legal-safe rules: every claim directly quoted, no strong verbs from weak evidence, no invented purposes, high-severity flags require explicit unambiguous backing.

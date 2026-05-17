@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://www.shaadi.com/info/privacy",
     "terms_url": "https://www.shaadi.com/info/terms",
     "policy_last_updated": "2026-04-01",
-    "needs_review": true,
-    "review_notes": "Strict re-analysis against privacy policy text only. Removed red_criminal_background_checks and red_testimonials_used_forever flags because they are not supported by the privacy policy (may appear in terms). Removed green_chat_auto_delete and green_age_verification_strong because unsupported by privacy policy. Fixed incorrect scoring rates (account_identity, behavioural_ad_tracking, device_fingerprinting, financial_payment used 0.7/0.8 instead of 0.65). Changed childrens_data from safe to unknown because policy is silent on age/children. Fixed app.slug to 'shaadi'. Updated one_liner to remove unsupported claims."
+    "needs_review": false,
+    "review_notes": "Complete re-analysis based on 14,560 character privacy policy. Key findings: extensive personal data collection including identity proofs and financial data; operates as advertising platform with targeted ads; profiles publicly shared with other users; data stored in India and USA; no mention of children's data protections."
   },
   "app": {
     "slug": "shaadi",
@@ -15,7 +15,7 @@
     "developer": "People Interactive (India) Private Limited",
     "app_store_url": "https://apps.apple.com/in/app/shaadi-com-matrimony-app/id480093204",
     "app_store_id": "480093204",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/1a/1a/991a1a4c-f88b-7f4d-1a7c-3dcf3dba7fef/AppIcon-0-0-1x_U007ephone-0-11-0-sRGB-85-220.png/400x400bb.jpg",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/1a/1a/991a1a4c-f88b-7f4d-1a7c-3dcf3dba7fef/AppIcon-0-0-1x_U007ephone-0-11-0-sRGB-85-220.png/512x512bb.jpg",
     "category": "Lifestyle",
     "sub_category": "Matrimony",
     "description": "The world's largest matrimonial service and one of India's best known brands, helping people find life partners since 1996."
@@ -140,7 +140,7 @@
       "concerns": [
         "Identity proof documents uploaded and stored on servers"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -216,7 +216,7 @@
       "concerns": [
         "Privacy policy is silent on children's data"
       ],
-      "score_impact": -5.0
+      "score_impact": -5
     },
     {
       "id": "network_internet_activity",
@@ -307,7 +307,7 @@
         "Some data retained for legal and record-keeping purposes",
         "Cannot use service without providing extensive personal data"
       ],
-      "score_impact": -3.0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -343,14 +343,14 @@
         "category": "location_gps",
         "risk": "safe",
         "max": 15,
-        "rate": 0.0,
+        "rate": 0,
         "deduction": 0
       },
       {
         "category": "contacts_phonebook",
         "risk": "safe",
         "max": 20,
-        "rate": 0.0,
+        "rate": 0,
         "deduction": 0
       },
       {
@@ -358,7 +358,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "data_sharing_third_parties",
@@ -386,7 +386,7 @@
         "risk": "unknown",
         "max": 10,
         "rate": 0.5,
-        "deduction": 5.0
+        "deduction": 5
       },
       {
         "category": "network_internet_activity",
@@ -406,7 +406,7 @@
         "category": "health_biometric",
         "risk": "safe",
         "max": 15,
-        "rate": 0.0,
+        "rate": 0,
         "deduction": 0
       },
       {
@@ -421,7 +421,7 @@
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3.0
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",

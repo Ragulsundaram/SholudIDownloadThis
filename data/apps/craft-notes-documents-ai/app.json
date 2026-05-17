@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.craft.do/privacy",
+    "terms_url": "https://www.craft.do/terms",
+    "policy_last_updated": "2025-11-21",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "craft-notes-documents-ai",
+    "name": "Craft: Notes, Documents, AI",
+    "developer": "Craft Docs Limited",
+    "app_store_url": "https://apps.apple.com/in/app/id1487937127",
+    "app_store_id": "1487937127",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/4d/13/144d1341-4a4f-dd42-800b-5013410d02c4/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "",
+    "description": "An all-in-one space for writing, organizing, and collaborating with AI assistance"
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 80,
+    "grade": "A",
+    "one_liner": "Privacy-first notes app that explicitly promises not to sell your data or read your notes",
+    "summary": "Craft takes a strong privacy stance with clear promises not to sell user data or use it for advertising. The company explicitly states they will never access private notes without consent. While some data is shared with third-party service providers for analytics and functionality, the overall approach is transparent and user-focused.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "Strong privacy commitments, no data selling, user rights for deletion, and transparent practices make this a trustworthy choice for note-taking"
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_usage_tracking",
+        "title": "Usage data collected via cookies",
+        "plain_english": "The app collects information about how you use it through cookies and similar technologies. This includes tracking which documents you visit and how you interact with the app.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_analytics",
+        "title": "Third-party analytics providers",
+        "plain_english": "Craft uses third-party services to collect and analyze how people use the app. While these providers have their own privacy policies, your usage data is still being processed by external companies.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_international_transfers",
+        "title": "Data stored worldwide including US",
+        "plain_english": "Your information may be transferred and stored in countries around the world, including the United States. These countries may have different data protection laws than where you live.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_selling",
+        "title": "Explicit no-selling promise",
+        "plain_english": "Craft clearly states they do not sell your data to others or use it for advertising. This is a strong privacy commitment that many apps avoid making.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_notes_privacy",
+        "title": "Private notes stay private",
+        "plain_english": "The company promises they will never read or access your private notes without your written or verbal consent. Your notes belong to you, period.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_user_rights",
+        "title": "Data deletion rights available",
+        "plain_english": "You can request deletion of your personal information by contacting support. They also promptly remove cached Google data when you disconnect integrations.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_optional_integrations",
+        "title": "Third-party connections are optional",
+        "plain_english": "Connections to services like Google Calendar are completely optional and only happen when you choose to enable them. You can disconnect anytime in settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protection",
+        "title": "Not directed at children under 16",
+        "plain_english": "The service is not intended for children under 16, and they will delete any data collected from children if discovered. This shows responsible data practices.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app likely only accesses camera or microphone when you actively choose to add photos or recordings to your notes. Not required for core functionality.",
+      "detail": "As a notes and documents app, any camera access would be user-initiated for attaching media. No evidence of background or continuous access.",
+      "policy_excerpt": "Not explicitly mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Location data is not mentioned in the privacy policy and doesn't appear necessary for a notes app.",
+      "detail": "No reference to GPS or location tracking in the policy. App functionality (document creation, AI assistance) doesn't require location data.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't request access to your contacts or phonebook according to the privacy policy.",
+      "detail": "No mention of contact access in the policy. While you can share content with friends, this appears to be through manual entry rather than contact importing.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app needs access to store your documents and notes, which is core to how it works. Your content is stored on Craft's servers.",
+      "detail": "As a document and notes app, Craft requires storage access to function. Documents are stored on Craft's servers with sync across devices. Users can attach files and images to documents.",
+      "policy_excerpt": "Craft provides an all-in-one space allowing our users to write, collaborate, and get organized.",
+      "concerns": ["Documents stored on company servers", "Sync requires cloud storage"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Craft shares some data with third-party service providers (like analytics and payment processing), but explicitly promises not to sell your data to advertisers.",
+      "detail": "Data is shared with service providers for: providing services, analytics, and payment processing. YouTube API is used for video features. However, Craft explicitly states they do not sell data to others or use it for advertising. Google user data is never used for advertising or shared with data brokers.",
+      "policy_excerpt": "We may share any personal information we collect about you with our third-party service providers... Craft does not own your data, nor do we sell it to others or use it for advertising.",
+      "concerns": ["Third-party analytics providers", "YouTube API integration requires Google terms acceptance", "Service providers have access to user data"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to provide your name and email to create an account. An optional profile photo can also be added.",
+      "detail": "Account creation requires name, email address, and optional profile photo. This is standard for cloud-based services. Account information is used for identification, communication, and service provision.",
+      "policy_excerpt": "When you create an account or otherwise use the Services, we collect information such as your name, email address, and an optional profile photo.",
+      "concerns": ["Email required for account", "Profile visible in shared spaces"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Craft tracks how you use the app for analytics and improvement, but doesn't use this data for advertising purposes.",
+      "detail": "Usage data is collected via cookies and similar technologies for analytics, engagement measurement, and service improvement. Third-party providers process this data. However, Craft explicitly states data is not used for advertising.",
+      "policy_excerpt": "We collect and log Internet or other electronic network information on how you and others access and use Craft... Craft does not own your data, nor do we sell it to others or use it for advertising.",
+      "concerns": ["Usage tracking via cookies", "Third-party analytics", "Behavioral data collected"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not intended for children under 16, and they will delete any data accidentally collected from children.",
+      "detail": "Service is explicitly not directed to children under 16. Company will delete child's data if discovered and terminate the account. Shows responsible data practices.",
+      "policy_excerpt": "The Services are not directed to children under 16 (or other age as required by local law), and we do not knowingly collect personal information from children.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your internet activity is logged as you use the app, which helps with security and syncing your notes across devices.",
+      "detail": "Network activity is logged as part of usage data collection. This includes visiting shared documents. Required for cloud sync functionality and security monitoring.",
+      "policy_excerpt": "We collect and log Internet or other electronic network information on how you and others access and use Craft, for example, the act of visiting a shared document.",
+      "concerns": ["Activity logging", "IP address likely collected"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Limited device information may be collected for app functionality and analytics, but not for creating detailed profiles about you.",
+      "detail": "Standard device information likely collected as part of usage data and analytics. No evidence of aggressive fingerprinting or device tracking for advertising.",
+      "policy_excerpt": "Usage data may be collected through cookies, and similar technologies.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't collect health or biometric information.",
+      "detail": "No mention of health or biometric data collection. Biometric authentication (Face ID/Touch ID) would be handled by the device locally, not stored by Craft.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you subscribe, payment is processed through third-party providers. Craft handles the transaction but doesn't store your full credit card details.",
+      "detail": "Payment processing is mentioned as a service provided. Uses third-party payment processors (likely Apple for in-app purchases). Craft processes payments but full card details likely handled by payment processor.",
+      "policy_excerpt": "Processing your payments and otherwise servicing your purchase orders",
+      "concerns": ["Payment data involved", "Subscription processing"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion of your data by emailing support. Google data is removed when you disconnect integrations.",
+      "detail": "Users have right to request correction and deletion. Must contact support@craft.do to exercise rights. Google integration data is promptly removed upon disconnection. Data retained as long as you use services or as required by law.",
+      "policy_excerpt": "Request Correction of your personal information where it is inaccurate or incomplete. Request Deletion of your personal information. If you would like to exercise any of these rights, please contact us at support@craft.do.",
+      "concerns": ["Must contact support for deletion", "Some data may be retained as required by law"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy may change, but they say major changes are rare. You should check back periodically for updates.",
+      "detail": "Policy may be amended as new features or legal requirements arise. No specific advance notification mechanism mentioned beyond checking back. Continued use constitutes acceptance.",
+      "policy_excerpt": "Although significant changes are rare, this policy may be amended as new features, technology, or legal requirements arise, so please check back from time to time.",
+      "concerns": ["No specific notification mechanism", "Continued use = acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 34.5,
+    "final_score": 83,
+    "grade": "A"
+  }
+}

@@ -1,22 +1,22 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://www.whatsapp.com/legal/privacy-policy",
     "terms_url": "https://www.whatsapp.com/legal/terms-of-service",
-    "policy_last_updated": "2021-01-04",
-    "needs_review": true,
-    "review_notes": "Re-analyzed with strict legal-safe rules. Four categories marked unknown because the privacy policy is silent on them: camera_microphone, storage_file_access, health_biometric, and childrens_data. Contact upload is described as optional in the policy text ('You can use the contact upload feature'). All claims now supported by verbatim policy excerpts."
+    "policy_last_updated": "2025-03-20",
+    "needs_review": false,
+    "review_notes": "Re-scanned with 2025 policy updates. Key changes include Meta AI integration, calling/media effects features, and updated contact storage for device restoration. Core privacy model unchanged: e2e encryption for messages but extensive Meta data sharing for contacts, device info, and usage patterns."
   },
   "app": {
     "slug": "whatsapp",
     "name": "WhatsApp Messenger",
-    "developer": "WhatsApp LLC (a Meta company)",
-    "app_store_url": "https://apps.apple.com/app/whatsapp-messenger/id310633997",
+    "developer": "WhatsApp Inc.",
+    "app_store_url": "https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
     "app_store_id": "310633997",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7e/a9/02/7ea902c3-1c26-a0cf-5127-2b6df2b5feba/Placeholder.mill/400x400bb-75.webp",
-    "category": "Social",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/39/65/6e3965c2-34d4-63ee-8a08-31450b59ecd1/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
     "sub_category": "Messaging",
     "description": "A free, end-to-end encrypted messaging and calling app used by over 2 billion people worldwide, owned by Meta."
   },
@@ -85,6 +85,12 @@
         "id": "green_account_deletion",
         "title": "You can delete your account and data",
         "plain_english": "WhatsApp states you can delete your account, which removes account info, profile photo, group memberships, and message history.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_meta_ai_opt_out",
+        "title": "Can opt out of Meta AI messaging",
+        "plain_english": "WhatsApp provides an option for users to choose whether to message with Meta AI, keeping this feature optional.",
         "severity": "positive"
       }
     ]

@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://rapido.bike/privacy.html",
     "terms_url": "",
     "policy_last_updated": "unknown",
     "needs_review": false,
-    "review_notes": "Strict re-analysis completed. Key fixes: device_fingerprinting plain_english incorrectly attributed an advertising purpose (policy explicitly states no targeted advertising). Downgraded red_health_data_collection severity from high to medium because policy says 'may collect' and applies only to Captains. Tightened red flag titles to match policy verbs exactly. Removed unsupported concern about device fingerprint persisting after reinstall."
+    "review_notes": "Complete re-analysis based on 34,196 character privacy policy. Key findings: extensive data collection for Captains including background location, government IDs, health data; data sharing with TPSPs and for market research; explicit statement of no targeted advertising; 180-day retention post-account closure."
   },
   "app": {
     "slug": "rapido",
@@ -15,7 +15,7 @@
     "developer": "Roppen Transportation Services Private Limited",
     "app_store_url": "https://apps.apple.com/in/app/rapido-bike-taxi-auto-cabs/id1198464606",
     "app_store_id": "1198464606",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a8/8f/17/a88f17f1-dcf7-9283-36ae-d0c60bda99ef/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0a/62/c4/0a62c46b-85f6-ab3e-1ff1-b9bea70747c3/AppIcon-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
     "category": "Travel",
     "sub_category": "Ride Hailing",
     "description": "Bike-taxi, auto and cab ride-hailing service in India."

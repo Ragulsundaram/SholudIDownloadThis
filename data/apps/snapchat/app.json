@@ -1,8 +1,8 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://values.snap.com/privacy/privacy-policy",
     "terms_url": "https://values.snap.com/terms",
     "policy_last_updated": "2025-04-07",
@@ -15,64 +15,82 @@
     "developer": "Snap, Inc.",
     "app_store_url": "https://apps.apple.com/us/app/snapchat/id447188370",
     "app_store_id": "447188370",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/71/d8/6e/71d86ed5-8e4c-8486-03b2-8b4412b42a94/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    "category": "Social",
-    "sub_category": "Photo & Video Messaging",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3a/89/d7/3a89d72c-63fe-8dab-9c4a-278580a8a918/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Photo & Video",
+    "sub_category": "Social Messaging",
     "description": "A multimedia messaging app known for ephemeral photos and videos, creative filters, and location-based features like Snap Map."
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 66,
+    "score": 55,
     "grade": "C",
-    "one_liner": "Snapchat deletes messages by default, but tracks your interests for ads and collects detailed device data.",
-    "summary": "Snapchat collects account details, content you send, usage behavior, and device information. It personalizes content and ads based on your activity. Data is shared with service providers, business partners, and anti-fraud companies. Messages delete by default within about 24 hours, and users can access deletion and ad settings.",
+    "one_liner": "Heavy data collection for ads and personalization; chats auto-delete but shadow profiles exist from contacts.",
+    "summary": "Snapchat collects extensive data including device information, location, contacts, and usage behavior to personalize content and ads. While private communications are not used for ad targeting and chats auto-delete within 24 hours, the platform creates shadow profiles from other users' contact uploads and shares data broadly with partners.",
     "recommendation": "think_twice",
-    "recommendation_reason": "The ephemeral messaging is a privacy plus, but Snapchat tracks your behavior for ads and collects device identifiers and installed apps. Use it with awareness and check your privacy settings."
+    "recommendation_reason": "Snapchat's ephemeral messaging is genuine for chats, but the platform collects extensive data for personalization and advertising. Consider your privacy tolerance and adjust ad settings and contact permissions accordingly."
   },
   "flags": {
     "red": [
       {
-        "id": "red_snap_maps_location",
-        "title": "Snap Map can share your precise location if you enable it",
-        "plain_english": "Snapchat states that if you share your location on Snap Map, it may show your precise location to friends or suggest places in your neighborhood.",
-        "severity": "medium"
+        "id": "red_ad_personalization",
+        "title": "Heavy ad personalization using your interests across the platform",
+        "plain_english": "Snapchat uses your interests and preferences from collected information to personalize, target, and measure ads. It tracks what content you view, engage with, and save to build an advertising profile.",
+        "severity": "high"
       },
       {
-        "id": "red_device_data_collection",
-        "title": "Snapchat collects detailed device and app data",
-        "plain_english": "Snapchat states it collects device information including hardware, software, advertising identifiers, installed applications, and sensor data.",
-        "severity": "medium"
+        "id": "red_shadow_profiles",
+        "title": "Creates shadow profiles from other users' contact uploads",
+        "plain_english": "If another Snapchat user uploads their contact list which includes your information, Snapchat may combine that with other information it has about you to understand who you may want to communicate with, even if you've never shared your contacts.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Extensive device fingerprinting including installed apps",
+        "plain_english": "Snapchat collects detailed device information including hardware, software, OS, device memory, advertising identifiers, list of apps installed, browser type, device sensors, and wireless connections.",
+        "severity": "high"
       },
       {
         "id": "red_data_sharing",
-        "title": "Snapchat shares data with partners and authorities",
-        "plain_english": "Snapchat states it shares information with service providers, business partners, anti-fraud partners, affiliates, and legal authorities when required.",
+        "title": "Extensive data sharing with advertisers and partners",
+        "plain_english": "Snapchat shares information with service providers, business partners, anti-fraud partners, advertisers, and affiliates. Data is used for ad targeting, fraud prevention, and service improvement.",
         "severity": "medium"
       },
       {
-        "id": "red_broad_retention",
-        "title": "Snapchat keeps data as long as it says it needs it",
-        "plain_english": "Snapchat states it keeps information as long as you tell it to, or as long as it needs it to provide services or comply with legal requirements.",
+        "id": "red_vague_retention",
+        "title": "Vague data retention: kept 'as long as we need it'",
+        "plain_english": "Snapchat states it keeps information as long as you tell it to, and otherwise 'as long as we need it' to provide services or comply with legal requirements. This broad language allows indefinite retention.",
         "severity": "medium"
       }
     ],
     "green": [
       {
+        "id": "green_private_communications_not_for_ads",
+        "title": "Private Snaps and Chats are NOT used for ad personalization",
+        "plain_english": "Snapchat explicitly states it does not use private content and communications you send to friends to personalize your experience, make recommendations, or show you ads.",
+        "severity": "positive"
+      },
+      {
         "id": "green_ephemeral_messages",
-        "title": "Messages delete by default within about 24 hours",
-        "plain_english": "Snapchat states its systems are designed to delete chats within 24 hours after they are opened by all recipients, unless you save them.",
+        "title": "Messages delete by default within 24 hours",
+        "plain_english": "Snapchat's systems are designed to delete Chats within 24 hours after being opened by all recipients, unless you've changed default settings or decide to save them.",
         "severity": "positive"
       },
       {
-        "id": "green_user_controls",
-        "title": "You can access, update, and delete your data",
-        "plain_english": "Snapchat states you can access, update, delete your information, decide who can contact you, and download your data from within the app.",
+        "id": "green_private_communications_not_shared",
+        "title": "Private communications NOT shared with third-party service providers",
+        "plain_english": "Snapchat states it does not share private communications with service providers, maintaining separation between your private messages and external partners.",
         "severity": "positive"
       },
       {
-        "id": "green_ad_settings",
-        "title": "You can change advertising settings",
-        "plain_english": "Snapchat states you can change your advertising settings in the Snapchat app.",
+        "id": "green_truedepth_privacy",
+        "title": "TrueDepth camera data used in real-time only, not stored",
+        "plain_english": "On iOS, Snapchat uses Apple's TrueDepth camera to improve Lenses, but this information is processed in real-time only and is not stored on servers or shared with third parties.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_family_center",
+        "title": "Family Center provides parental oversight for teens",
+        "plain_english": "Family Center allows parents or guardians to monitor teen accounts, including friends list and location sharing, though message content is not shared.",
         "severity": "positive"
       }
     ]
@@ -82,16 +100,16 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat accesses your camera and microphone when you choose to send photos, videos, or voice messages, and during calls.",
-      "detail": "Camera and microphone are core to the messaging experience. The policy states they are accessed when you create or share content or during active calls.",
-      "policy_excerpt": "images and other information from your device's camera, photos, and microphone (like the ability to take photos, videos, view stored photos and videos, and access the microphone to record audio while recording video)",
+      "plain_english": "Full camera and microphone access for Snaps, video calls, and content creation. TrueDepth camera used for Lenses in real-time only.",
+      "detail": "Camera and microphone are core to Snapchat's functionality. Users can take photos, record videos, make voice/video calls, and apply Lenses. TrueDepth camera data on iOS is used in real-time only and not stored.",
+      "policy_excerpt": "images and other information from your device's camera, photos, and microphone... On iOS we use Apple's TrueDepth camera to improve the quality of Lenses. Note, however, that this information is used in real time",
       "concerns": [],
-      "score_impact": -4.5
+      "score_impact": -9.75
     },
     {
       "id": "location_gps",
@@ -102,12 +120,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Snapchat collects your IP address automatically, and may collect precise GPS location if you explicitly grant permission.",
-      "detail": "The policy states it collects location information via IP address automatically, and precise location through GPS only if you explicitly grant device-level permission. Snap Map can share your location with friends.",
+      "plain_english": "IP address collected automatically; precise GPS location collected if permission granted, including with Snaps posted to Snap Map and Spotlight.",
+      "detail": "IP address is collected automatically for all users. Precise GPS location is only collected when explicitly granted permission. Location data is stored with Snaps saved to Memories, Snap Map, and Spotlight submissions.",
       "policy_excerpt": "location information (IP address). location information (precise location through methods like GPS signals)",
       "concerns": [
         "IP address collected continuously",
-        "Precise GPS location shared with friends if enabled"
+        "Precise GPS location shared with friends if Snap Map enabled"
       ],
       "score_impact": -9.75
     },
@@ -120,11 +138,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Snapchat may access your device contacts if you grant permission. Other users may also upload your contact information to Snapchat.",
-      "detail": "The policy states device phonebook access requires explicit permission. It also notes that if another user uploads their contacts containing your information, Snapchat may combine it with other data it has about you.",
+      "plain_english": "Full device contacts access if granted. Creates shadow profiles from other users' contact uploads without your consent.",
+      "detail": "Device phonebook access requires explicit permission for friend finding. Additionally, if another user uploads contacts containing your information, Snapchat may combine it with other data it has about you to understand who you may want to communicate with.",
       "policy_excerpt": "information about your device phonebook (contacts and related information). if another Snapchatter uploads their contact list which includes your information, we may combine that with other information we have about you",
       "concerns": [
-        "Contacts uploaded by other users without your consent"
+        "Shadow profiles created from other users' contact uploads",
+        "Contact info used to determine alternate communication methods"
       ],
       "score_impact": -13.0
     },
@@ -137,8 +156,8 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat accesses your photos and videos when you choose to send or save them. Content saved to Memories stays on Snapchat's servers until you delete it.",
-      "detail": "The policy states you can send photos and videos from your device, and content saved to Memories persists until you delete it.",
+      "plain_english": "Full access to device photos and camera roll for saving Snaps to Memories and uploading content.",
+      "detail": "Users can save Snaps to Memories, upload photos and videos from device to Stories and Spotlight. Access requires explicit permission.",
       "policy_excerpt": "images and other information from your device's camera, photos, and microphone",
       "concerns": [
         "Saved media persists on servers until deleted"
@@ -149,69 +168,69 @@
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat shares information with service providers, business partners, anti-fraud partners, and legal authorities. It does not explicitly state that it sells your data.",
-      "detail": "The policy states data is shared with service providers, business and integrated partners, anti-fraud partners, affiliates, and when required by legal process. Private communications are not shared with most partners.",
-      "policy_excerpt": "We share your information with our service providers.We share your information with business and integrated partners.We share your information, such as device and usage information, with industry partners working to prevent fraud",
+      "plain_english": "Extensive data sharing with service providers, advertisers, business partners, anti-fraud partners, and affiliates. Does not share private communications.",
+      "detail": "Data is shared with service providers (payments, ad measurement), advertisers (targeting and measurement), business partners, anti-fraud partners, and affiliates. Private communications are not shared with most partners.",
+      "policy_excerpt": "We share your information with our service providers... We share your information with business and integrated partners... We share your information, such as device and usage information, with industry partners working to prevent fraud",
       "concerns": [
-        "Shared with advertisers for ad measurement",
-        "Shared with anti-fraud partners"
+        "Data shared with advertisers for ad targeting",
+        "Shared with anti-fraud partners",
+        "Shared with business and integrated partners"
       ],
-      "score_impact": -9.0
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat collects your name, username, email, birthday, phone number, and profile picture when you create an account.",
-      "detail": "The policy states account details include name, username, email, birthday, and phone number, plus profile details like Bitmoji and profile picture.",
-      "policy_excerpt": "account details (information about you, like your name, username, email address, birthday, and phone number).profile details (like your Bitmoji and profile picture)",
+      "plain_english": "Standard account data collected: name, username, email, birthday, phone number, Bitmoji, and profile picture.",
+      "detail": "Basic account details include name, username, email address, birthday, and phone number. Profile details include Bitmoji and profile picture. Users can access and update most information in app settings. Two-factor authentication available.",
+      "policy_excerpt": "account details (information about you, like your name, username, email address, birthday, and phone number). profile details (like your Bitmoji and profile picture)",
       "concerns": [],
-      "score_impact": -4.5
+      "score_impact": 0
     },
     {
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat uses your interests, preferences, and advertising identifiers to personalize and measure ads. You can change advertising settings in the app.",
-      "detail": "The policy states Snapchat uses interests and preferences to personalize, target, and measure ads. It uses cookies, pixels, and unique advertising identifiers.",
-      "policy_excerpt": "we use your interests and preferences from the information we've collected to personalize, target, and measure ads.cookies, pixels (small graphic data that recognize user activity...), web storage, unique advertising identifiers",
+      "plain_english": "Heavy ad personalization using interests, preferences, cookies, pixels, and advertising identifiers across platforms.",
+      "detail": "Snapchat uses interests and preferences to personalize, target, and measure ads. Uses cookies, pixels, and unique advertising identifiers. Content analysis used for targeting (e.g., dog in photo → dog food ads). Cross-platform tracking when linking to other services. Private communications NOT used for ad personalization.",
+      "policy_excerpt": "we use your interests and preferences from the information we've collected to personalize, target, and measure ads. cookies, pixels... unique advertising identifiers",
       "concerns": [
-        "Behavior tracked for ads by default",
-        "Advertising identifiers collected"
+        "Heavy behavioral tracking for ads",
+        "Advertising identifiers collected",
+        "Content analyzed for ad targeting"
       ],
-      "score_impact": -7.5
+      "score_impact": -9.75
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat states its services are for users 13 and older, and claims it will delete accounts if it learns a user is under 13. It does not clearly explain how it verifies age.",
-      "detail": "The policy states services are not directed to children under 13, and users must confirm they are 13 or older. If Snapchat has actual knowledge a user is under 13, it will delete the account.",
-      "policy_excerpt": "Our Services are not directed to children under the age of 13, and you must confirm that you are 13 years or older in order to create an account and use our Services. If we have actual knowledge that you are under the age of 13... we will stop providing Services to you and delete your account and data.",
-      "concerns": [
-        "No clear age verification mechanism described"
-      ],
-      "score_impact": -3.0
+      "plain_english": "Services directed to users 13+. Accounts deleted if underage use discovered. Additional protections for teens via Family Center.",
+      "detail": "Services explicitly for individuals 13 and older. Under-13 accounts deleted if discovered. Family Center allows parents/guardians to monitor teen accounts. Some features limited for users under 18.",
+      "policy_excerpt": "Our Services are not directed to children under the age of 13, and you must confirm that you are 13 years or older... If we have actual knowledge that you are under the age of 13... we will stop providing Services to you and delete your account and data.",
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "network_internet_activity",
@@ -222,8 +241,8 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat logs details about how you use its services, including access times, pages viewed, IP address, and cookies.",
-      "detail": "The policy states log information includes details about how you've used services, access times, pages viewed, IP address, and unique identifiers like cookies.",
+      "plain_english": "Usage logs including access times, pages viewed, IP address, and interaction data collected.",
+      "detail": "Log information includes access times, pages viewed, IP address, unique identifiers. Usage information about interactions with Services collected, including Lenses viewed, Stories watched, and interactions.",
       "policy_excerpt": "log information (such as details about how you've used our Services, access times, pages viewed, IP address, and unique identifiers like cookies)",
       "concerns": [],
       "score_impact": -1.5
@@ -232,19 +251,20 @@
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat collects device information including hardware, software, advertising identifiers, installed applications, and sensor data.",
-      "detail": "The policy explicitly lists device information collected: hardware, software, OS, device memory, advertising identifiers, apps installed, browser type, device sensors, and wireless connections.",
-      "policy_excerpt": "device information (such as your hardware or software, operating system, device memory, advertising identifiers, apps installed, browser type, information from device sensors that measure the motion of your device or compasses and microphones, including whether you have headphones connected, and information about your wireless and mobile connections)",
+      "plain_english": "Extensive device data collected: hardware, software, OS, device memory, advertising identifiers, installed apps, browser, sensors, wireless connections.",
+      "detail": "Collects hardware and software information, OS, device memory, advertising identifiers, list of apps installed, browser type, device sensors (motion, compass, microphone), headphone connection status, and wireless/mobile connections.",
+      "policy_excerpt": "device information (such as your hardware or software, operating system, device memory, advertising identifiers, apps installed, browser type, information from device sensors... and information about your wireless and mobile connections)",
       "concerns": [
         "Advertising identifiers collected",
-        "Installed applications list accessed"
+        "Installed applications list accessed",
+        "Device sensors monitored"
       ],
-      "score_impact": -4.5
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -255,8 +275,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat uses Apple's TrueDepth camera data to improve Lenses in real time, but states it does not store this information on its servers.",
-      "detail": "The policy explicitly states TrueDepth camera information is used in real time and not stored on servers or shared with third parties.",
+      "plain_english": "TrueDepth camera data used for Lenses in real-time only; not stored on servers or shared. No health data collection mentioned.",
+      "detail": "TrueDepth camera is used on iOS for Lens effects. Data is processed in real-time only and is not stored on servers or shared with third parties. No other biometric or health data collection mentioned.",
       "policy_excerpt": "On iOS we use Apple's TrueDepth camera to improve the quality of Lenses. Note, however, that this information is used in real time — we don't store this information on our servers or share it with third parties.",
       "concerns": [],
       "score_impact": 0
@@ -270,11 +290,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Snapchat collects payment information only if you use its commerce products to make a purchase.",
-      "detail": "The policy states payment and related information is collected only when you use commerce products to buy something. It does not clearly explain how payment data is protected.",
-      "policy_excerpt": "If you use our commerce products to buy something, like those latest sneakers, we may ask you for payment and related information (like your physical address, so we can ship the product to you, payment information, so we can process the payment, and transaction history)",
+      "plain_english": "Payment information collected for commerce products including physical address and transaction history.",
+      "detail": "Payment and shipping information collected for purchases through commerce products. Transaction history stored. Processed by service providers. Only collected when using commerce features.",
+      "policy_excerpt": "If you use our commerce products to buy something... we may ask you for payment and related information (like your physical address... payment information... and transaction history)",
       "concerns": [],
-      "score_impact": -4.5
+      "score_impact": -3.0
     },
     {
       "id": "data_deletion_user_rights",
@@ -285,9 +305,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your account and some data, but Snapchat states it keeps information as long as it needs it for services or legal requirements.",
-      "detail": "The policy states information is kept as long as you tell them to, or as long as they need it. Courts or legal requirements may extend preservation. Some information may be kept in backup.",
-      "policy_excerpt": "we keep information as long as you tell us to, and otherwise as long as we need it.we may need to comply with legal requirements to store your data which stops us from deleting your information",
+      "plain_english": "Account deletion and data download available. Chats auto-delete within 24 hours, but retention is vague ('as long as we need it').",
+      "detail": "Account deletion available through app settings. Data download tool available for exporting information. Snaps and Chats auto-delete within 24 hours after being opened. Memories stored until user deletes. Retention language is broad: 'as long as we need it'. Data may be retained for legal compliance, dispute resolution, or abuse investigation.",
+      "policy_excerpt": "we keep information as long as you tell us to, and otherwise as long as we need it. we may need to comply with legal requirements to store your data which stops us from deleting your information",
       "concerns": [
         "Broad retention policy",
         "Law enforcement can extend retention"
@@ -303,9 +323,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Snapchat states it will notify you of policy changes by revising the date on the policy or providing additional notice, but does not clearly explain what happens if you disagree.",
-      "detail": "The policy states changes may be communicated by revising the date or providing additional notice such as in-app notifications. It does not state that users can reject changes.",
-      "policy_excerpt": "We may change this Privacy Policy from time to time. But when we do, we'll let you know one way or another. Sometimes, we'll let you know by revising the date at the top of the Privacy Policy... Other times, we may provide you with additional notice (such as adding a statement to our websites' homepages or providing you with an in-app notification)",
+      "plain_english": "Changes posted with revised date; additional notice (in-app notification or email) for material changes.",
+      "detail": "Changes effective immediately upon posting. Revised date shown at top of policy. Material changes notified via in-app notification or email. Support site has latest retention period information.",
+      "policy_excerpt": "We may change this Privacy Policy from time to time... Sometimes, we'll let you know by revising the date at the top of the Privacy Policy... Other times, we may provide you with additional notice (such as... providing you with an in-app notification)",
       "concerns": [],
       "score_impact": -1.5
     }
@@ -316,10 +336,10 @@
     "deductions": [
       {
         "category": "camera_microphone",
-        "risk": "caution",
+        "risk": "risky",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0.65,
+        "deduction": 9.75
       },
       {
         "category": "location_gps",
@@ -344,31 +364,31 @@
       },
       {
         "category": "data_sharing_third_parties",
-        "risk": "caution",
+        "risk": "risky",
         "max": 30,
-        "rate": 0.3,
-        "deduction": 9.0
+        "rate": 0.65,
+        "deduction": 19.5
       },
       {
         "category": "account_identity",
-        "risk": "caution",
+        "risk": "safe",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0.0,
+        "deduction": 0.0
       },
       {
         "category": "behavioural_ad_tracking",
-        "risk": "caution",
+        "risk": "risky",
         "max": 25,
-        "rate": 0.3,
-        "deduction": 7.5
+        "rate": 0.65,
+        "deduction": 16.25
       },
       {
         "category": "childrens_data",
-        "risk": "caution",
+        "risk": "safe",
         "max": 10,
-        "rate": 0.3,
-        "deduction": 3.0
+        "rate": 0.0,
+        "deduction": 0.0
       },
       {
         "category": "network_internet_activity",
@@ -379,10 +399,10 @@
       },
       {
         "category": "device_fingerprinting",
-        "risk": "caution",
+        "risk": "risky",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0.65,
+        "deduction": 9.75
       },
       {
         "category": "health_biometric",
@@ -413,8 +433,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 69.25,
-    "final_score": 66,
+    "total_deductions": 91.5,
+    "final_score": 55,
     "grade": "C"
   }
 }

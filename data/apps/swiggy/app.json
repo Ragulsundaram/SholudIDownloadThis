@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "http://www.swiggy.com/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "2026-04-17",
-    "needs_review": true,
-    "review_notes": "Camera/microphone, contact book access for customers, and children's data are not addressed in the privacy policy. Strict legal-safe review flagged these as unknown."
+    "needs_review": false,
+    "review_notes": "Complete re-analysis based on 24,622 character privacy policy. Key findings: extensive data sharing with restaurants, advertisers, AI providers; no opt-out for in-app ads; detailed device tracking including installed apps; health data collection for prescriptions and delivery partners; data stored on AWS servers outside India."
   },
   "app": {
     "slug": "swiggy",
@@ -15,7 +15,7 @@
     "developer": "BUNDL TECHNOLOGIES PRIVATE LIMITED",
     "app_store_url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
     "app_store_id": "989540920",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/85/b5/3b/85b53bbe-fa11-e893-ac37-a7f75edfc9ca/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/38/00/823800a6-2f51-3c48-c6af-cbd5e1bc6208/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Food & Drink",
     "sub_category": "Food Delivery",
     "description": "Food delivery, grocery, and restaurant platform in India."
@@ -60,6 +60,12 @@
         "title": "The app may access metadata from files on your device",
         "plain_english": "Swiggy states its applications may access metadata and other information associated with files stored on your mobile device with your consent.",
         "severity": "medium"
+      },
+      {
+        "id": "red_data_outside_india",
+        "title": "Your data is stored on servers outside India",
+        "plain_english": "Swiggy stores data with Amazon Web Services which may store data on servers located outside of India.",
+        "severity": "medium"
       }
     ],
     "green": [
@@ -82,18 +88,18 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy does not mention camera or microphone access for customers.",
-      "detail": "No explicit mention of camera or microphone usage in the provided privacy policy text.",
-      "policy_excerpt": "",
+      "plain_english": "Swiggy may collect photographs from delivery partners (PDPs/Pickers). Camera access for customers is not explicitly mentioned.",
+      "detail": "The policy states that photographs may be collected from PDPs/Pickers for delivery purposes. For regular customers, camera access is not explicitly mentioned in the policy.",
+      "policy_excerpt": "Specifically from PDPs/Pickers we may collect: photographs, phone number, name, Pan card, Aadhar/Voter ID, driving license...",
       "concerns": [
-        "Policy is silent on camera and microphone"
+        "Photographs collected from delivery partners"
       ],
-      "score_impact": -7.5
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
@@ -105,7 +111,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy collects real-time location data from your device to facilitate deliveries and track orders.",
-      "detail": "The policy states applications collect real-time information about the location of your device, as permitted by you.",
+      "detail": "The policy states applications collect real-time information about the location of your device, as permitted by you. Location data is shared with delivery partners.",
       "policy_excerpt": "Our applications collect real-time information about the location of your device, as permitted by you.",
       "concerns": [
         "Real-time location tracked during deliveries",
@@ -117,18 +123,18 @@
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy does not clearly mention contact book access for customers.",
-      "detail": "The policy mentions emergency contact details for delivery partners but is silent on general contact access for users.",
-      "policy_excerpt": "",
+      "plain_english": "Swiggy collects emergency contact details from delivery partners (PDPs). Regular customer contact access is not explicitly mentioned.",
+      "detail": "The policy mentions collecting emergency contact details for delivery partners but does not explicitly state contact access for regular customers.",
+      "policy_excerpt": "Specifically from PDPs/Pickers we may collect: photographs, phone number, name... nominee/spouse/emergency contact details",
       "concerns": [
-        "Policy is silent on contact access for regular users"
+        "Emergency contact details collected from delivery partners"
       ],
-      "score_impact": -10.0
+      "score_impact": -6.0
     },
     {
       "id": "storage_file_access",
@@ -157,13 +163,14 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy shares your data extensively with restaurants, merchants, advertisers, AI providers, and group companies.",
-      "detail": "Data is shared with service providers, restaurants, advertisers, AI assistants, academic partners, and affiliated group companies.",
+      "detail": "Data is shared with service providers, restaurants, advertisers, AI assistants, academic partners, and affiliated group companies. AI service providers receive order details, delivery information, preferences, and interaction data.",
       "policy_excerpt": "We may share your information with our vendors, consultants, marketing partners, Retail Pharmacies, Medical Practitioners, delivery partners, research firms and other service providers, business partners, payment processing companies.",
       "concerns": [
         "Extensive third-party sharing",
         "AI providers receive personal data",
         "Advertising networks receive data",
-        "Data shared across group companies"
+        "Data shared across group companies",
+        "Data stored on AWS servers outside India"
       ],
       "score_impact": -30.0
     },
@@ -177,7 +184,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy collects extensive identity data including name, email, address, phone, gender, and government IDs for delivery partners.",
-      "detail": "Account info includes full name, email, address, postal code, password, gender, mobile, and profile picture. Delivery partners must provide PAN, Aadhaar, and driving license.",
+      "detail": "Account info includes full name, email, address, postal code, password, gender, mobile, and profile picture. Delivery partners must provide PAN, Aadhaar/Voter ID, and driving license.",
       "policy_excerpt": "Your full name, email address, address, postal code, password and other information you may provide with your account, such as your gender, mobile phone number etc.",
       "concerns": [
         "Government IDs collected for delivery partners",
@@ -195,7 +202,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy explicitly states you cannot opt out of advertising on its platforms. It tracks your searches, clicks, and usage using cookies and advertising identifiers.",
-      "detail": "Swiggy uses cookies, pixel tags, web beacons, device IDs, and Flash LSOs to track behavior. Third-party advertisers also track you.",
+      "detail": "Swiggy uses cookies, pixel tags, web beacons, device IDs, and Flash LSOs to track behavior. Third-party advertisers also track you. Analytics companies use mobile device IDs to track usage.",
       "policy_excerpt": "You cannot opt out of advertising on the Platforms, you may opt out of much interest-based advertising on third party sites and through third party ad networks.",
       "concerns": [
         "No opt-out for in-app ads",
@@ -208,18 +215,18 @@
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy does not mention children's data protections or age requirements.",
-      "detail": "No explicit statement about children's data or age limits in the provided policy text.",
-      "policy_excerpt": "",
+      "plain_english": "The privacy policy does not specifically mention children's data protections or age requirements.",
+      "detail": "No explicit statement about children's data or age limits in the provided policy text. The policy is incorporated within Terms of Use which likely have age requirements.",
+      "policy_excerpt": "This Policy is a part of and incorporated within, and is to be read along with, the Terms of Use.",
       "concerns": [
         "Policy is silent on children's data"
       ],
-      "score_impact": -5.0
+      "score_impact": -3.0
     },
     {
       "id": "network_internet_activity",
@@ -231,7 +238,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy logs your IP address, browser type, and clickstream data for analytics and advertising.",
-      "detail": "Log files contain IP addresses, browser type, ISP, referring pages, app crashes, and clickstream data.",
+      "detail": "Log files contain IP addresses, browser type, ISP, referring pages, app crashes, and clickstream data. Used to administer website, learn about user behavior, improve products and services, and gather demographic information.",
       "policy_excerpt": "We analyse the log files of our Platforms that may contain Internet Protocol (IP) addresses, browser type and language, Internet service provider (ISP), referring, app crashes, page viewed and exit websites and applications, operating system, date/time stamp, and clickstream data.",
       "concerns": [
         "Clickstream data analyzed",
@@ -250,7 +257,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy collects detailed device information including advertising identifiers, installed apps, device motion, and phone state.",
-      "detail": "Device info includes hardware models, OS, software, file names, device identifiers, advertising identifiers, device motion, mobile network, installed applications, and phone state.",
+      "detail": "Device info includes hardware models, OS, software, file names, device identifiers, advertising identifiers, device motion, mobile network, installed applications, and phone state. Analytics companies use mobile device IDs to track usage.",
       "policy_excerpt": "we may collect information or employ third party plugins that collect information about the devices you use to access our Services, including the hardware models, operating systems and versions, software, file names and versions, preferred languages, device identifiers, advertising identifiers, device motion information, mobile network information, installed applications on device and phone state.",
       "concerns": [
         "Advertising identifiers collected",
@@ -269,8 +276,8 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy states it may collect prescription information for pharmaceutical orders and blood group data from delivery partners.",
-      "detail": "Health data collected includes prescriptions for Instamart pharmaceutical purchases and blood group for delivery partners.",
-      "policy_excerpt": "Additionally, we may also collect information relating to you (including your prescriptions), to facilitate through the Instamart Platform, your purchase of pharmaceutical drugs from retail pharmacies.",
+      "detail": "Health data collected includes prescriptions for Instamart pharmaceutical purchases and blood group for delivery partners. Also facilitates consultation with registered medical practitioners.",
+      "policy_excerpt": "Additionally, we may also collect information relating to you (including your prescriptions), to facilitate through the Instamart Platform, your purchase of pharmaceutical drugs from retail pharmacies",
       "concerns": [
         "Prescription data collected for pharmaceutical orders",
         "Blood group collected for delivery partners"
@@ -287,7 +294,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy collects billing information stored in a tokenized manner and uses PCI-compliant payment processors.",
-      "detail": "Payment data is tokenized and processed by PCI-compliant third-party service providers.",
+      "detail": "Payment data is tokenized and processed by PCI-compliant third-party service providers. Billing information stored in tokenized manner.",
       "policy_excerpt": "The third-party service providers with respect to our vault and tokenization services and our payment gateway and payment processing are compliant with the payment card industry standard.",
       "concerns": [
         "Payment data collected but tokenized"
@@ -304,7 +311,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "You can request data deletion by email, but Swiggy states it may retain anonymized and aggregated data indefinitely.",
-      "detail": "Deletion requests take up to 5 business days, but anonymized/aggregated data is retained as long as necessary.",
+      "detail": "Deletion requests take up to 5 business days, but anonymized/aggregated data is retained as long as necessary for analytics, improving products and services, and other business purposes.",
       "policy_excerpt": "We may, however, retain and store your personal information in anonymized or aggregated form, for as long as necessary, and use it as permitted under applicable law, including for analytics, improving our products and services, and other business purposes.",
       "concerns": [
         "Anonymized data retained indefinitely",
@@ -322,7 +329,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Swiggy states continued use after policy changes constitutes consent. It says it will try to notify you of significant changes but does not clearly explain what happens if you disagree.",
-      "detail": "Policy updates are posted on the page. Significant changes may get prominent notice or email, and consent is obtained where required.",
+      "detail": "Policy updates are posted on the page. Significant changes may get prominent notice or email, and consent is obtained where required. Continued use equals acceptance.",
       "policy_excerpt": "your continued use of the Services following the changes to this Privacy Policy will constitute your consent and acceptance of those changes.",
       "concerns": [
         "Continued use = automatic acceptance"
@@ -336,10 +343,10 @@
     "deductions": [
       {
         "category": "camera_microphone",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "location_gps",
@@ -350,10 +357,10 @@
       },
       {
         "category": "contacts_phonebook",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 20,
-        "rate": 0.5,
-        "deduction": 10.0
+        "rate": 0.3,
+        "deduction": 6.0
       },
       {
         "category": "storage_file_access",
@@ -385,10 +392,10 @@
       },
       {
         "category": "childrens_data",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 10,
-        "rate": 0.5,
-        "deduction": 5.0
+        "rate": 0.3,
+        "deduction": 3.0
       },
       {
         "category": "network_internet_activity",
@@ -433,8 +440,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 144.0,
-    "final_score": 30,
+    "total_deductions": 135.0,
+    "final_score": 34,
     "grade": "F"
   }
 }

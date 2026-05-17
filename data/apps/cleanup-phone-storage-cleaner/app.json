@@ -1,0 +1,317 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://cleanup.photos/privacy",
+    "terms_url": "https://cleanup.photos/terms",
+    "policy_last_updated": "2026-05-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "cleanup-phone-storage-cleaner",
+    "name": "Cleanup: Phone Storage Cleaner",
+    "developer": "DEEP FLOW SOFTWARE SERVICES - FZCO",
+    "app_store_url": "https://apps.apple.com/in/app/id1510944943",
+    "app_store_id": "1510944943",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/07/4e/65074e0d-9e1c-004e-3199-96342a5dbe4f/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg",
+    "category": "Utilities",
+    "sub_category": "Photo & Video",
+    "description": "Clean up your iPhone and optimize storage in seconds. Remove duplicate photos, videos, and junk emails. Cleanup helps you clear your camera roll, merge duplicate contacts, compress videos, and organize storage."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "Storage cleaner that keeps your photos local but aggressively tracks you for ads.",
+    "summary": "Cleanup promises offline processing for your photos and contacts, which is good. However, it collects extensive device data and shares it with multiple advertising partners including Facebook, Google, and Adjust for personalized ads. The app is functional but comes with significant tracking trade-offs.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While the app does what it says locally, the extensive ad tracking and data sharing with multiple third parties is concerning for a utility app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_aggressive_ad_tracking",
+        "title": "Aggressive ad tracking with multiple partners",
+        "plain_english": "The app collects your advertising ID (IDFA), device ID, and usage data to show you personalized ads. This information is shared with Google, Facebook, Apple, Adjust, and Firebase Analytics. Even though some is optional, the default setup enables extensive tracking.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Collects detailed device fingerprint",
+        "plain_english": "The app gathers extensive information about your device including device name, model, manufacturer, operating system version, unique device identifiers, and region. This creates a unique fingerprint of your device that can be used to track you across apps.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_shared_globally",
+        "title": "Data transferred internationally",
+        "plain_english": "Your personal data is sent to servers and cloud providers located outside your country. While they use Standard Contractual Clauses for protection, your data may be stored in jurisdictions with different privacy laws.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_email_access_broad",
+        "title": "Can read, send, and delete your emails",
+        "plain_english": "If you allow email access for the inbox cleaning feature, the app can read, compose, send, and delete your emails. While they claim emails are not stored on their servers, the permission scope is very broad.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_local_photo_processing",
+        "title": "Photos stay on your device",
+        "plain_english": "Unlike many apps, Cleanup processes your photos and videos locally on your phone. They explicitly state they do not store your photos, contacts, or videos on their servers. Your memories stay under your control.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_optional_permissions",
+        "title": "Most permissions are optional",
+        "plain_english": "Access to contacts, photos, and email is optional and can be denied or disabled in your phone settings. The app tells you that certain features won't work without permission, but you have the choice.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_payment_data",
+        "title": "Never sees your payment details",
+        "plain_english": "When you pay for subscriptions, your credit card details are handled by third-party processors like Paddle. The app never sees or stores your actual payment card information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_review_before_delete",
+        "title": "Review before anything is deleted",
+        "plain_english": "The app shows you a final review screen before actually deleting anything. Nothing is removed without your explicit approval, so you won't accidentally lose important photos or contacts.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This app does not access your camera or microphone. It's a storage cleaner that only works with files already on your device.",
+      "detail": "The privacy policy does not mention any camera or microphone access. The app functions entirely as a file management and cleaning tool.",
+      "policy_excerpt": "No camera or microphone permissions mentioned in the privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app doesn't request your GPS location, but it can estimate your general area from your IP address and device region settings. This is used for personalization and analytics.",
+      "detail": "The policy states they determine general location based on IP address and region information of the device, not precise GPS coordinates.",
+      "policy_excerpt": "We may be able to determine the general area of your device's location when it interacts with our Services, based on the information associated with your IP address and the region information of the device.",
+      "concerns": ["Location inferred from IP address", "Used for personalization"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your contacts to help you merge duplicates and clean up your address book. However, your contacts are processed only on your device and are not uploaded to their servers.",
+      "detail": "Contact access is optional. If granted, the app can detect duplicate contacts and help merge them. The policy explicitly states contacts are not stored on their servers.",
+      "policy_excerpt": "We do not store any of your contact list, photos and videos on our servers; activities to process these will be carried out on your device or your own cloud services only.",
+      "concerns": ["Access to full contact list", "Can modify contacts"],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This is a storage cleaner app, so it needs access to your photos, videos, and files to find duplicates and help you free up space. Your files stay on your device and aren't uploaded.",
+      "detail": "Core app functionality requires broad access to photo library to identify duplicates, similar photos, screenshots, and large videos. Processing is done locally.",
+      "policy_excerpt": "We may ask for your permission to access your device's photo file or gallery app... We do not store any of your contact list, photos and videos on our servers; activities to process these will be carried out on your device.",
+      "concerns": ["Broad access to photo library required", "Can delete files permanently"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with multiple companies including Google, Facebook, Apple, Adjust, and Firebase for advertising and analytics. Some of this happens automatically, not just when you give explicit consent.",
+      "detail": "Marketing data including usage data, IDFA, IDFV, and GAID is shared with service providers for marketing analysis and personalized advertising. Data is also transferred internationally using Standard Contractual Clauses.",
+      "policy_excerpt": "The Company may also transfer your Marketing Data to service providers (incl. Google, Apple, Facebook SDK, Adjust and Firebase Analytics, which are embedded into our service) for the purpose of conducting marketing analysis studies and execution of advertising.",
+      "concerns": ["Shared with multiple ad networks", "Personalized advertising enabled", "International data transfers"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you contact them for support, they collect your name, email, and phone number. If you allow email cleaning, they also get your Google user ID and email address. This is fairly standard.",
+      "detail": "Identity data is collected when contacting support or when granting email access. Email account information includes Google user ID, username, profile picture, and email address.",
+      "policy_excerpt": "When you contact us, such as via e-mail or our phone number, we may process your name, surname, phone number and e-mail address... E-mail account information: Google user ID, nickname, username, profile picture, user token, Open ID, phone number, e-mail address",
+      "concerns": ["Email metadata collected", "Google account info accessed"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app tracks how you use it and shares this with advertising companies to show you targeted ads. They collect your advertising ID and build a profile of your interests based on app usage.",
+      "detail": "Marketing data includes usage data, IDFA, IDFV, GAID, and Firebase Analytics identifier. This is used for personalized advertising and marketing analysis. Some tracking is optional with consent, but SDKs are embedded.",
+      "policy_excerpt": "When you give us permission, we may collect your Usage Data; and an identifier for advertisers designated in your mobile device... Marketing Data may be processed for conducting marketing analysis studies and execution of advertising (including personalised advertisements).",
+      "concerns": ["IDFA and GAID collected", "Usage profiling for ads", "Multiple tracking SDKs embedded"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not for children under 16. They don't knowingly collect data from kids, and they ask users under 18 to get parental permission.",
+      "detail": "Explicit age restriction of 16+ with no intentional collection from children under 16. Users under 18 must have parental permission.",
+      "policy_excerpt": "We do not permit the use of our application by children under the age of 16. We do not knowingly collect or process personal data from anyone under the age of 16.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, how you use the app, and network activity. This is partly for security and partly to understand how users interact with the app.",
+      "detail": "Log data includes IP address, network movements, visit data, usage duration, features accessed, and actions taken within the app.",
+      "policy_excerpt": "This log data includes internet traffic data, network movements, Internet Protocol ('IP') address, device name, device information, operating system version, visit data, information about your use of Services.",
+      "concerns": ["IP address logged", "Usage patterns tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects extensive details about your device including its name, model, manufacturer, operating system, unique identifiers, and hardware. This creates a unique fingerprint that can identify your device across different services.",
+      "detail": "Comprehensive device information is collected including device ID, model, manufacturer, OS version, region information, and hardware model. Combined with advertising identifiers, this enables device fingerprinting.",
+      "policy_excerpt": "Device Information: We may collect data about the device you use to interact with our Services, including the device name, device ID, its model, its manufacturer, region information, device's operating system, device identifiers, hardware model.",
+      "concerns": ["Device ID collected", "Hardware fingerprinting", "Region tracking"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This app doesn't collect or process any health or biometric data. It has no reason to access this type of information.",
+      "detail": "No health or biometric data is mentioned in the privacy policy. The policy explicitly states they do not process sensitive personal data.",
+      "policy_excerpt": "No, we do not process any sensitive personal data. Please do not share with us any content that might have any sensitive personal data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "When you pay for a subscription, your credit card details are handled by a third-party payment processor. The app never sees or stores your actual payment card information.",
+      "detail": "Payment processing is handled by third parties like Paddle. The app only receives order information (date, amount, status) but not actual card details.",
+      "policy_excerpt": "Please note that we do not collect your payment method details, such as your credit card number, as we do not directly process your payment.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request to see, delete, or export your data by emailing them. However, they keep some data for legal reasons and may take up to 30 days to respond. The process requires identity verification.",
+      "detail": "Users have rights to access, rectify, delete, restrict processing, and data portability. Requests are handled within 30 days. Some data retention occurs for legal obligations and limitation periods.",
+      "policy_excerpt": "Our Company will enable you to file such requests via email... our Company will finalize your requests, free of charge, within 30 (thirty) days at the latest.",
+      "concerns": ["30-day response time", "Identity verification required", "Some data retained for legal periods"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If they make big changes to this policy, they'll try to notify you through the app or by email. But just continuing to use the app counts as accepting the new terms.",
+      "detail": "Material changes are notified via app interface, email, or other means. Continued use constitutes acceptance unless law requires explicit consent.",
+      "policy_excerpt": "If we make material changes... we will provide you with prominent notice before the changes take effect... Your continued use of the Services after the effective date of any revised Privacy Policy constitutes your acknowledgment of the updated terms.",
+      "concerns": ["Continued use = automatic acceptance", "Opt-out only by stopping use"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3},
+      {"category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
+      {"category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5},
+      {"category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75},
+      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3},
+      {"category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5}
+    ],
+    "total_deductions": 69.5,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

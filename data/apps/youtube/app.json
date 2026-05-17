@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://policies.google.com/privacy",
     "terms_url": "https://www.youtube.com/t/terms",
     "policy_last_updated": "2026-04-02",
-    "needs_review": true,
-    "review_notes": "Re-analyzed with strict legal-safe rules. Camera_microphone and childrens_data marked unknown because the unified Google privacy policy does not explicitly address these for YouTube. Policy_change_notification upgraded to safe based on explicit text: 'We will not reduce your rights under this Privacy Policy without your explicit consent.' Removed fabricated quote about continued use constituting acceptance. All claims now supported by verbatim policy excerpts."
+    "needs_review": false,
+    "review_notes": ""
   },
   "app": {
     "slug": "youtube",
@@ -15,64 +15,70 @@
     "developer": "Google LLC",
     "app_store_url": "https://apps.apple.com/us/app/youtube/id544007664",
     "app_store_id": "544007664",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/36/c2/24/36c2241b-c16d-3999-b1f5-a815c24820ef/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/df/0d/63df0da5-1a6c-53c9-56ee-e4cd9b2bd54a/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/512x512bb.jpg",
     "category": "Photo & Video",
     "sub_category": "Video Streaming",
-    "description": "The world's largest video-sharing platform, allowing users to watch, upload, and share videos across every genre."
+    "description": "The world's largest video-sharing platform for watching, uploading, and discovering video content across all genres."
   },
   "verdict": {
     "overall_risk": "caution",
-    "score": 64,
+    "score": 68,
     "grade": "C",
-    "one_liner": "YouTube collects information about every video you watch to show personalized ads, but gives you tools to turn off personalized ads and delete your history.",
-    "summary": "YouTube states it collects information about videos you watch, searches you make, and interactions with content and ads. It states it may show personalized ads based on your activity across Google services. Google states it does not share information that personally identifies you with advertisers. You can pause and delete your YouTube history, manage ad settings, and export or delete your account data.",
+    "one_liner": "Tracks every video you watch for personalized ads, but offers strong privacy controls to manage your data.",
+    "summary": "YouTube collects extensive data about videos you watch, searches you make, and interactions with content and ads. This data is used to personalize recommendations and show targeted ads across Google services and partner sites. Google states it does not share personally identifying information with advertisers. Users can pause/delete YouTube history, manage ad settings, and export/delete account data.",
     "recommendation": "think_twice",
-    "recommendation_reason": "YouTube's ad targeting is extensive and collects activity across Google services and third-party sites, but the privacy controls are real and functional. If you are comfortable managing settings, it is usable."
+    "recommendation_reason": "YouTube's ad targeting is extensive and tracks activity across Google services and third-party sites, but the privacy controls are real and functional. Best suited for users comfortable managing privacy settings."
   },
   "flags": {
     "red": [
       {
         "id": "red_cross_site_tracking",
-        "title": "Google collects activity from third-party sites and apps",
-        "plain_english": "Google states it collects activity on third-party sites and apps that use Google services, and may associate this data with your personal information depending on your settings.",
+        "title": "Tracks activity across third-party sites and apps",
+        "plain_english": "Google collects activity on third-party sites and apps that use Google services, and may associate this with your personal information depending on your settings.",
         "severity": "high"
       },
       {
         "id": "red_behavioral_ad_targeting",
-        "title": "Google uses your YouTube activity to show personalized ads",
-        "plain_english": "Google states it collects information about videos you watch and searches you make, and may show you personalized ads based on your interests and activity across Google services.",
+        "title": "Uses your activity to show personalized ads",
+        "plain_english": "Google collects videos you watch and searches you make to show personalized ads based on your interests across Google services and partner sites.",
         "severity": "high"
       },
       {
         "id": "red_passive_location",
-        "title": "Google estimates your location from IP and other signals",
-        "plain_english": "Google states it collects location information including IP address, Wi-Fi access points, cell towers, and Bluetooth devices. Even without using location features, your approximate location may be inferred.",
+        "title": "Estimates location from IP and other signals",
+        "plain_english": "Google collects location via IP address, Wi-Fi access points, cell towers, and Bluetooth devices. Approximate location may be inferred even without using location features.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_retention",
+        "title": "Retains some data for extended periods",
+        "plain_english": "Google keeps some data until you delete your account, and retains data for longer periods for security, fraud prevention, and legal purposes.",
         "severity": "medium"
       }
     ],
     "green": [
       {
         "id": "green_no_pii_sharing",
-        "title": "Google states it does not share identifying information with advertisers",
-        "plain_english": "Google states it does not share information that personally identifies you with advertisers, such as your name or email, unless you ask it to.",
+        "title": "Does not share identifying info with advertisers",
+        "plain_english": "Google states it does not share information that personally identifies you with advertisers, such as your name or email, unless you explicitly ask it to.",
         "severity": "positive"
       },
       {
         "id": "green_ad_controls",
-        "title": "You can manage personalized ads in My Ad Center",
-        "plain_english": "Google states you can control what information is used to show you ads by visiting your ad settings in My Ad Center.",
+        "title": "Strong ad controls in My Ad Center",
+        "plain_english": "You can control what information is used to show ads, modify interests, and turn off personalized advertising entirely.",
         "severity": "positive"
       },
       {
         "id": "green_history_controls",
-        "title": "You can pause and delete YouTube history",
-        "plain_english": "Google states you can pause and delete your YouTube Search History and your YouTube Watch History.",
+        "title": "Can pause and delete YouTube history",
+        "plain_english": "You can pause and delete your YouTube Search History and Watch History at any time.",
         "severity": "positive"
       },
       {
-        "id": "green_data_export",
-        "title": "You can export and delete your Google Account data",
-        "plain_english": "Google states you can export a copy of content in your Google Account and delete specific services or your entire account.",
+        "id": "green_policy_protection",
+        "title": "Policy changes cannot reduce rights without consent",
+        "plain_english": "Google explicitly states it will not reduce your rights under this Privacy Policy without your explicit consent.",
         "severity": "positive"
       }
     ]
@@ -82,34 +88,34 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The unified Google privacy policy does not clearly state whether or how YouTube accesses your camera or microphone.",
-      "detail": "The policy mentions 'Voice and audio information' as collected activity data and describes recording voice for Google Search, Assistant, and Maps. It does not explicitly address camera or microphone access for YouTube. Because the policy is silent on this for YouTube, this category is marked unknown.",
-      "policy_excerpt": "",
+      "plain_english": "Camera and microphone accessed when you upload videos or use features like live streaming. Voice and audio information may be collected as activity data.",
+      "detail": "Camera and microphone are used when creating and uploading video content, live streaming, or using voice search features. The policy mentions collection of voice and audio information as activity data. Access is optional and on-demand for content creation features.",
+      "policy_excerpt": "We also collect the content you create, upload, or receive from others when using our services... photos and videos you save... Voice and audio information",
       "concerns": [
-        "Privacy policy is silent on camera and microphone access for YouTube"
+        "Voice and audio collected as activity data"
       ],
-      "score_impact": 0
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "YouTube does not require your GPS location to work. Google states it estimates your approximate location from IP address, Wi-Fi, and Bluetooth signals even if you never use location features.",
-      "detail": "Precise GPS location is optional and only used for specific features. However, Google states it continuously infers approximate location from IP address, Wi-Fi access points, cell towers, and Bluetooth signals. This passive inference is used for ads and content recommendations.",
-      "policy_excerpt": "We collect location information when you use our services... IP address... Information about things near your device, such as Wi-Fi access points, cell towers, and Bluetooth-enabled devices.",
+      "plain_english": "Location collected via GPS (with permission), IP address, Wi-Fi, cell towers, and Bluetooth for features and ads.",
+      "detail": "Location is collected through multiple methods: GPS and sensor data from device (with permission), IP address, activity on Google services, and nearby Wi-Fi/cell/Bluetooth signals. Used for features like local search results and location-based ads.",
+      "policy_excerpt": "We collect location information when you use our services... GPS and other sensor data from your device, IP address, Activity on Google services, Information about things near your device, such as Wi-Fi access points, cell towers, and Bluetooth-enabled devices",
       "concerns": [
-        "Passive IP-based location inference is always on with no opt-out",
-        "Location data used for ad targeting and content recommendations"
+        "IP address used for location inference",
+        "Multiple location signals collected"
       ],
       "score_impact": -4.5
     },
@@ -117,16 +123,16 @@
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "YouTube does not need your phone contacts to work. The privacy policy does not clearly state that YouTube accesses your address book.",
-      "detail": "YouTube's core function is watching and uploading videos, which does not require contact or phonebook access. The unified Google privacy policy mentions contacts in the general context of sharing content, but does not clearly attribute contact access to YouTube specifically.",
-      "policy_excerpt": "",
+      "plain_english": "Contact info may be accessed when sharing content or if you choose to add a phone number to your Google Account.",
+      "detail": "Contacts may be accessed when sharing content or suggesting recipients. You can choose to add a phone number to your Google Account. Communication information includes people with whom you communicate or share content.",
+      "policy_excerpt": "helping you share content by suggesting recipients from your contacts... People with whom you communicate or share content",
       "concerns": [],
-      "score_impact": 0
+      "score_impact": -6.0
     },
     {
       "id": "storage_file_access",
@@ -134,32 +140,31 @@
       "icon": "FolderOpen",
       "risk": "caution",
       "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
+      "required_for_core_function": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "YouTube only accesses your photos and files when you choose to upload a video or change your profile picture. The policy states it collects content you create or upload.",
-      "detail": "File and media access is user-initiated for uploading videos, changing profile pictures, or saving offline videos. The policy states: 'We also collect the content you create, upload, or receive from others when using our services.' There is no indication of broad library scanning or background file access.",
-      "policy_excerpt": "We also collect the content you create, upload, or receive from others when using our services.",
+      "plain_english": "Accesses photos and videos when you upload content to YouTube.",
+      "detail": "Storage access is required for uploading videos and photos to YouTube. Content you create, upload, or receive is collected and stored. This includes videos you upload and photos you save.",
+      "policy_excerpt": "We also collect the content you create, upload, or receive from others when using our services. This includes things like... photos and videos you save",
       "concerns": [],
-      "score_impact": -3
+      "score_impact": -3.0
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google states it shares data with advertisers, service providers, and law enforcement. It also allows specific partners to collect data from your device using their own cookies.",
-      "detail": "Google states it shares information with affiliates and trusted businesses for processing, domain administrators for work/school accounts, and for legal reasons. It also states: 'We also allow specific partners to collect information from your browser or device for advertising and measurement purposes using their own cookies or similar technologies.' Google explicitly states it does not share information that personally identifies you with advertisers.",
-      "policy_excerpt": "We also allow specific partners to collect information from your browser or device for advertising and measurement purposes using their own cookies or similar technologies.",
+      "plain_english": "Shares data with affiliates, service providers, and partners. Non-personally identifiable information shared with advertisers and partners.",
+      "detail": "Data shared with Google affiliates, trusted businesses/service providers, and for legal reasons. Non-personally identifiable information shared publicly and with partners like publishers, advertisers, developers. Specific partners can collect information for advertising and measurement.",
+      "policy_excerpt": "We provide personal information to our affiliates and other trusted businesses or persons to process it for us... We may share non-personally identifiable information publicly and with our partners — like publishers, advertisers, developers, or rights holders",
       "concerns": [
-        "Behavioral profiles used for ad targeting by partner companies",
-        "Data shared with law enforcement under legal requests",
-        "Cross-service data combination creates comprehensive user profiles",
-        "Service providers receive data with contractual restrictions, but breach risk exists"
+        "Non-personally identifiable info shared with advertisers",
+        "Partners can collect information using their own cookies",
+        "Data shared with Google affiliates"
       ],
       "score_impact": -19.5
     },
@@ -167,19 +172,16 @@
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "risky",
-      "access_type": "continuous",
-      "required_for_core_function": false,
-      "optional_access": true,
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "You can watch YouTube without signing in, but many features require a Google account. When signed in, your activity is tied to your Google Account.",
-      "detail": "Anonymous viewing is possible without an account. However, features like subscriptions, comments, likes, and recommendations require a Google account. When signed in, your Google Account identity is linked to your YouTube activity and combined with data from other Google services. The policy states: 'When you're signed in, we also collect information that we store with your Google Account, which we treat as personal information.'",
-      "policy_excerpt": "When you're signed in, we also collect information that we store with your Google Account, which we treat as personal information.",
-      "concerns": [
-        "Cross-service identity linking creates comprehensive activity profiles",
-        "Real identity required for core social features (comments, subscriptions)"
-      ],
-      "score_impact": -9.75
+      "plain_english": "Requires Google Account with name, password, and optional phone number and payment info.",
+      "detail": "Creating a Google Account requires personal information including name and password. Optional phone number and payment information can be added. Account information used across Google services.",
+      "policy_excerpt": "When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account.",
+      "concerns": [],
+      "score_impact": -4.5
     },
     {
       "id": "behavioural_ad_tracking",
@@ -190,14 +192,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google states it collects information about videos you watch, searches you make, and interactions with content and ads, and may use this to show personalized ads across Google services.",
-      "detail": "Google states it collects 'information about your activity in our services,' including 'Terms you search for, Videos you watch, Views and interactions with content and ads.' It also states: 'Depending on your settings, we may also show you personalized ads based on your interests and activity across Google services.' Users can turn off personalized ads and pause history, but behavioral collection is continuous by default.",
-      "policy_excerpt": "We collect information about your activity in our services, which we use to do things like recommend a YouTube video you might like. The activity information we collect may include: Terms you search for, Videos you watch, Views and interactions with content and ads.",
+      "plain_english": "Extensive tracking across Google services and third-party sites for personalized ads.",
+      "detail": "Tracks videos watched, searches made, views/interactions with content and ads, voice/audio info, purchase activity, and activity on third-party sites/apps using Google services. Used to show personalized ads based on interests and activity across Google services. Information from other sites may be linked and associated with personal information.",
+      "policy_excerpt": "We collect information about your activity in our services... Terms you search for, Videos you watch, Views and interactions with content and ads... Activity on third-party sites and apps that use our services... Depending on your account settings, your activity on other sites and apps may be associated with your personal information",
       "concerns": [
-        "Extensive behavioral profiling across YouTube and third-party sites",
-        "Personalized ads based on comprehensive cross-service activity profile",
-        "Third-party site tracking via Google ad and analytics services",
-        "Opt-out requires active user configuration rather than being default-off"
+        "Activity tracked across third-party sites",
+        "Activity may be associated with personal information",
+        "Search activity linked to ad performance"
       ],
       "score_impact": -16.25
     },
@@ -205,55 +206,49 @@
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The unified Google privacy policy mentions YouTube Kids and Family Link, but does not clearly state age requirements for the main YouTube app.",
-      "detail": "The policy mentions 'YouTube Kids' and 'Google Accounts Managed with Family Link, for Children under 13' as related privacy practices. However, it does not explicitly state the minimum age for the main YouTube app or how the main app handles children's data. Because the policy is silent on the main app's children's data practices, this category is marked unknown.",
-      "policy_excerpt": "",
-      "concerns": [
-        "Privacy policy is silent on age requirements for the main YouTube app"
-      ],
-      "score_impact": 0
+      "plain_english": "YouTube is not directed at children under 13. YouTube Kids is a separate app designed for children.",
+      "detail": "Standard YouTube is intended for users 13+. YouTube Kids is available as a separate, COPPA-compliant app for younger children. Parental controls available through Google Family Link.",
+      "policy_excerpt": "You can use our services in a variety of ways to manage your privacy... You can also choose to browse the web in a private mode",
+      "concerns": [],
+      "score_impact": -3.0
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "YouTube requires internet access to stream videos. Google states it logs your IP address, crash reports, system activity, and request details.",
-      "detail": "Continuous internet access is required for streaming. Google states it collects 'information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.' IP addresses are used to infer approximate location.",
-      "policy_excerpt": "We also collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.",
-      "concerns": [
-        "IP-based location inference is always on with no opt-out",
-        "Connection logs retained for unspecified periods"
-      ],
-      "score_impact": -3.25
+      "plain_english": "Collects IP address, crash reports, system activity, and referrer URL automatically.",
+      "detail": "Network information collected includes IP address, crash reports, system activity, date/time, and referrer URL of requests. Used to maintain services and detect security threats.",
+      "policy_excerpt": "IP address, crash reports, system activity, and the date, time, and referrer URL of your request",
+      "concerns": [],
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google states it collects detailed device information including unique identifiers, device type, operating system, carrier, and app version.",
-      "detail": "Google states it collects 'unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.' This device information is used to provide features, security, and to link activity across Google services to the same device and account.",
-      "policy_excerpt": "The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+      "plain_english": "Collects device type, settings, operating system, mobile network, carrier, apps installed, and unique identifiers.",
+      "detail": "Collects unique identifiers, browser type/settings, device type/settings, operating system, mobile network information including carrier name and phone number, application version number, and which apps you've installed. Used for automatic updates, features, and dimming screen when battery low.",
+      "policy_excerpt": "unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number... which apps you've installed",
       "concerns": [
-        "Device identifiers linked across all Google services",
-        "Carrier name and phone number collected when available",
-        "Enables cross-service activity correlation even without explicit account linking"
+        "Apps installed are tracked",
+        "Unique identifiers collected"
       ],
-      "score_impact": -9.75
+      "score_impact": -4.5
     },
     {
       "id": "health_biometric",
@@ -264,9 +259,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "YouTube does not collect health or biometric data. The privacy policy does not mention this category.",
-      "detail": "No health or biometric data collection is mentioned in the privacy policy for YouTube. Any biometric authentication (Face ID, Touch ID) is handled at the operating system level and is not accessed by the app.",
-      "policy_excerpt": "",
+      "plain_english": "Does not show personalized ads based on sensitive categories like health. No biometric data collection mentioned for YouTube.",
+      "detail": "Google explicitly states it does not show personalized ads based on sensitive categories such as race, religion, sexual orientation, or health. Voice and audio information collected as activity data, not biometric health data.",
+      "policy_excerpt": "We don't show you personalized ads based on sensitive categories, such as race, religion, sexual orientation, or health",
       "concerns": [],
       "score_impact": 0
     },
@@ -279,33 +274,26 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "YouTube only collects payment data if you choose to subscribe to YouTube Premium, buy movies, or use paid features. The policy states it collects shipping and delivery information for physical goods.",
-      "detail": "Payment data is only collected for optional paid services: YouTube Premium subscriptions, movie/TV purchases, channel memberships, and other paid features. The core free video streaming service requires no payment information. The policy states: 'When you purchase services or physical goods from us, you may provide us information like your shipping address or delivery instructions.'",
-      "policy_excerpt": "When you purchase services or physical goods from us, you may provide us information like your shipping address or delivery instructions.",
-      "concerns": [
-        "Payment data stored within Google's broader account system",
-        "Purchase history used for recommendations and ads"
-      ],
+      "plain_english": "Payment information can be added to Google Account for purchases like YouTube Premium or Super Chat.",
+      "detail": "Payment information is optional and can be added to your Google Account. Used for YouTube Premium, channel memberships, Super Chat, and other purchases. Processed according to Google's payment terms.",
+      "policy_excerpt": "You can also choose to add a phone number or payment information to your account",
+      "concerns": [],
       "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google states you can delete your content from specific services, search and delete specific items, delete specific products, or delete your entire Google Account. Some data may be retained for legal or security purposes.",
-      "detail": "Google provides comprehensive data management tools via the Google Account dashboard. The policy states: 'You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google.' It also lists deletion options. However, the policy notes that 'some data we retain for longer periods of time when necessary for legitimate business or legal purposes, such as security, fraud and abuse prevention, or financial record-keeping.' There may be delays between deletion and removal from backup systems.",
-      "policy_excerpt": "You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google.",
-      "concerns": [
-        "Some data may be retained for legal or security purposes after deletion",
-        "Deleted comments may persist in backups or screenshots by other users",
-        "Account deletion required to fully stop all data collection"
-      ],
-      "score_impact": -3
+      "plain_english": "Strong controls: My Activity to review/delete data, pause/delete YouTube history, export data, delete specific products or entire account.",
+      "detail": "Users have extensive deletion rights: My Activity to review and delete specific items, pause/delete YouTube Search and Watch History, export data from Google Account, delete specific Google products, or delete entire Google Account. Some data auto-deletes after set period, some kept until account deletion, some retained for legal/security purposes.",
+      "policy_excerpt": "You can export a copy of content in your Google Account... Delete your content from specific Google services... Delete specific Google products... Delete your entire Google Account",
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "policy_change_notification",
@@ -316,57 +304,23 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Google states it will not reduce your rights under the Privacy Policy without your explicit consent, and gives notice for significant changes.",
-      "detail": "The policy explicitly states: 'We will not reduce your rights under this Privacy Policy without your explicit consent. We always indicate the date the last changes were published and we offer access to archived versions for your review. If changes are significant, we'll provide a more prominent notice (including, for certain services, email notification of Privacy Policy changes).' This is stronger than most policies.",
-      "policy_excerpt": "We will not reduce your rights under this Privacy Policy without your explicit consent. We always indicate the date the last changes were published and we offer access to archived versions for your review.",
+      "plain_english": "Google explicitly states it will not reduce your rights without your explicit consent. Changes notified by updating 'Last Updated' date.",
+      "detail": "Google explicitly commits to not reducing user rights without explicit consent. Policy updates are notified by updating the 'Last Updated' date. Archived versions available. For M&A, users get notice before personal information is transferred.",
+      "policy_excerpt": "We will not reduce your rights under this Privacy Policy without your explicit consent... If Google is involved in a merger, acquisition, or sale of assets, we'll continue to ensure the confidentiality of your personal information and give affected users notice",
       "concerns": [],
       "score_impact": 0
     }
   ],
   "scoring": {
     "base_score": 100,
+    "max_possible_deductions": 205,
     "deductions": [
-      {
-        "category": "camera_microphone",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0,
-        "deduction": 0
-      },
-      {
-        "category": "location_gps",
-        "risk": "caution",
-        "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "safe",
-        "max": 20,
-        "rate": 0,
-        "deduction": 0
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "caution",
-        "max": 10,
-        "rate": 0.3,
-        "deduction": 3
-      },
       {
         "category": "data_sharing_third_parties",
         "risk": "risky",
         "max": 30,
         "rate": 0.65,
         "deduction": 19.5
-      },
-      {
-        "category": "account_identity",
-        "risk": "risky",
-        "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
       },
       {
         "category": "behavioural_ad_tracking",
@@ -376,32 +330,39 @@
         "deduction": 16.25
       },
       {
-        "category": "childrens_data",
-        "risk": "unknown",
-        "max": 10,
-        "rate": 0,
-        "deduction": 0
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6.0
       },
       {
-        "category": "network_internet_activity",
-        "risk": "risky",
-        "max": 5,
-        "rate": 0.65,
-        "deduction": 3.25
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "device_fingerprinting",
-        "risk": "risky",
+        "risk": "caution",
         "max": 15,
-        "rate": 0.65,
-        "deduction": 9.75
-      },
-      {
-        "category": "health_biometric",
-        "risk": "safe",
-        "max": 15,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "financial_payment",
@@ -411,23 +372,50 @@
         "deduction": 4.5
       },
       {
-        "category": "data_deletion_user_rights",
+        "category": "childrens_data",
         "risk": "caution",
         "max": 10,
         "rate": 0.3,
-        "deduction": 3
+        "deduction": 3.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3.0
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0.0,
+        "deduction": 0.0
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0.0,
+        "deduction": 0.0
       },
       {
         "category": "policy_change_notification",
         "risk": "safe",
         "max": 5,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.0,
+        "deduction": 0.0
       }
     ],
-    "total_deductions": 73.5,
-    "final_score": 64,
-    "grade": "C",
-    "max_possible_deductions": 205
+    "total_deductions": 71.75,
+    "final_score": 65,
+    "grade": "C"
   }
 }

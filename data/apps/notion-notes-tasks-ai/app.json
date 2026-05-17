@@ -1,0 +1,317 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac",
+    "terms_url": "https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": "Privacy policy accessed via Help Center documentation. App Store privacy labels confirm minimal data collection."
+  },
+  "app": {
+    "slug": "notion-notes-tasks-ai",
+    "name": "Notion: Notes, Tasks, AI",
+    "developer": "Notion Labs, Incorporated",
+    "app_store_url": "https://apps.apple.com/in/app/id1232780281",
+    "app_store_id": "1232780281",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/97/80/d3978062-afdf-a09c-208f-514118cc8577/AppIconProd-0-0-1x_U007epad-0-0-0-1-0-0-P3-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Business",
+    "description": "Notion is an AI-powered all-in-one workspace for notes, tasks, projects, and collaboration."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 74,
+    "grade": "B",
+    "one_liner": "Powerful productivity app with strong data ownership rights, but AI features send your content to third-party providers.",
+    "summary": "Notion offers robust privacy protections including user data ownership, encryption, and compliance certifications. However, AI features require sending content to subprocessors (OpenAI, Anthropic), and some analytics data collection occurs.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Strong security practices and user data ownership, but users should understand AI data processing before enabling those features."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_ai_data_sharing",
+        "title": "AI features send content to third parties",
+        "plain_english": "When you use Notion AI, your content is sent to companies like OpenAI and Anthropic to generate responses. While they don't train models on your data, your information leaves Notion's servers.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_analytics_collection",
+        "title": "Usage data collected and linked to you",
+        "plain_english": "Notion collects usage data that's linked to your identity, including how you interact with the app and workspace metadata.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_retention_periods",
+        "title": "30-day recovery window for deleted content",
+        "plain_english": "When you delete something, it stays recoverable for 30 days before being permanently removed. This is standard for cloud services but means your data persists after you think it's gone.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_data_ownership",
+        "title": "You own your data",
+        "plain_english": "Notion explicitly states that you own all content you create or upload. They act only as a processor, not an owner, of your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ai_training",
+        "title": "Your data won't train AI models",
+        "plain_english": "Notion contractually prohibits AI providers from using your content to train or improve their machine learning models.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_security",
+        "title": "SOC 2 and ISO 27001 certified",
+        "plain_english": "Notion has passed independent security audits and maintains industry-recognized security certifications.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_export_options",
+        "title": "Easy data export available",
+        "plain_english": "You can export your workspace data in multiple formats including PDF, Markdown, and HTML whenever you want.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Strong encryption in transit",
+        "plain_english": "Your data is protected with TLS 1.2 or higher when traveling between your device and Notion's servers.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera and microphone are only used when you actively choose to upload photos, scan documents, or record audio notes.",
+      "detail": "No continuous access. User-initiated only for specific features like uploading images or voice notes.",
+      "policy_excerpt": "No specific camera/microphone policy mentioned; standard iOS permission model applies.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion does not appear to collect or use your precise location data.",
+      "detail": "No location collection mentioned in privacy policy. IP addresses may be logged for security purposes but not precise location.",
+      "policy_excerpt": "IP addresses collected for security and analytics, not GPS location.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion does not request access to your contacts or phonebook.",
+      "detail": "No contact collection mentioned in privacy documentation.",
+      "policy_excerpt": "Not mentioned in data collection practices.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can choose to upload files to your workspace. Notion stores these files on their servers to sync across devices.",
+      "detail": "User-initiated file uploads only. Files stored on Notion servers for cross-device synchronization.",
+      "policy_excerpt": "Customer Data includes any data stored in Notion services, including uploaded files.",
+      "concerns": ["Files stored on third-party servers"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you use AI features, your content is sent to OpenAI and Anthropic. Regular data is shared with subprocessors under strict contracts.",
+      "detail": "AI features require sending content to LLM providers. Other vendors bound by data processing agreements. No selling of data to advertisers.",
+      "policy_excerpt": "Notion AI uses subprocessors including OpenAI and Anthropic. Data shared only when necessary for AI features.",
+      "concerns": ["Content sent to AI providers", "Subprocessors involved in service delivery"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion collects your name, email, and account details to provide the service. This is necessary for account management.",
+      "detail": "Standard account information collected: name, email, password, billing info, workspace metadata. Required for service operation.",
+      "policy_excerpt": "Account Information includes names, usernames, passwords, phone numbers, email addresses, billing information, and workspace metadata.",
+      "concerns": ["Workspace metadata collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion collects usage data and analytics to understand how people use the app. They don't show ads or sell data to advertisers.",
+      "detail": "Analytics data collected for product improvement. No advertising or sale of data to third parties for marketing purposes.",
+      "policy_excerpt": "Usage data collected and linked to identity. Used for analytics and product improvement, not advertising.",
+      "concerns": ["Usage data linked to identity"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion is intended for users 13 and older. They don't knowingly collect data from children under 13.",
+      "detail": "Standard 13+ age requirement. No specific children's safeguards mentioned beyond age restriction.",
+      "policy_excerpt": "Service intended for users 13 years and older.",
+      "concerns": ["No detailed COPPA compliance measures stated"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion logs IP addresses and network activity for security and to keep the service running smoothly.",
+      "detail": "IP addresses and log files collected for security, fraud prevention, and service operation.",
+      "policy_excerpt": "IP addresses, browser type, device info, and log files collected for security and analytics.",
+      "concerns": ["IP addresses logged"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion collects basic device information like your browser type and device type to ensure compatibility.",
+      "detail": "Standard device information collected for compatibility and diagnostics. Not used for cross-app tracking or advertising.",
+      "policy_excerpt": "Device info and browser type collected for compatibility and security purposes.",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion does not collect health or biometric data, except Face ID or Touch ID if you use it to unlock the app (stored only on your device).",
+      "detail": "No health data collection. Biometric authentication (Face ID/Touch ID) handled locally by iOS, not stored by Notion.",
+      "policy_excerpt": "No health or biometric data collection mentioned.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you pay for Notion, your payment info is handled by secure third-party processors. Notion doesn't store your full credit card details.",
+      "detail": "Payment processing handled by third-party processors. Billing information stored for subscription management.",
+      "policy_excerpt": "Billing and payment information collected and processed through secure payment processors.",
+      "concerns": ["Billing information stored"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can export and delete your data. Deleted items are recoverable for 30 days before permanent removal.",
+      "detail": "Full export capabilities available. Account and workspace deletion available. 30-day recovery period before permanent deletion.",
+      "policy_excerpt": "Users can access, correct, delete, or update personal information. Export available in multiple formats. Content recoverable for 30 days after deletion.",
+      "concerns": ["30-day recovery window"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notion may update their privacy policy. Check their website for the latest version or subscribe to notifications if available.",
+      "detail": "Standard policy change notification through website updates. No explicit email notification mentioned.",
+      "policy_excerpt": "Policy updates posted on website. Users should review periodically.",
+      "concerns": ["No explicit advance notification method specified"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 52.5,
+    "final_score": 74,
+    "grade": "B"
+  }
+}

@@ -1,7 +1,9 @@
 # Zoom Workplace Privacy Review
 
-**Analyzed:** 2026-05-16  
-**Policy:** https://www.zoom.com/en/trust/privacy/privacy-statement/ (Last updated: February 02, 2026)
+**Date:** 2026-05-17  
+**Analyst:** claude-kimi-k2.5  
+**Policy:** https://www.zoom.com/en/trust/privacy/privacy-statement/  
+**Policy Last Updated:** 2026-02-02
 
 ## Methodology
 Re-analysis performed with strict legal-safe rules: every claim directly quoted, no strong verbs from weak evidence, no invented purposes, high-severity flags require explicit unambiguous backing.

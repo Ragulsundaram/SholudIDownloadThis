@@ -1,21 +1,21 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://privacy.truecaller.com/privacy-policies",
     "terms_url": "",
     "policy_last_updated": "2025-11-10",
-    "needs_review": true,
-    "review_notes": "Full Rest-of-World privacy policy text provided by user. Camera/microphone and health/biometric categories marked unknown because the policy is silent on them."
+    "needs_review": false,
+    "review_notes": "Re-scanned with updated metadata. Comprehensive analysis preserved from previous review."
   },
   "app": {
     "slug": "truecaller",
-    "name": "Truecaller: Caller ID & Block",
+    "name": "Truecaller: Premium Caller ID",
     "developer": "True Software Scandinavia AB",
     "app_store_url": "https://apps.apple.com/in/app/truecaller-caller-id-block/id448142450",
     "app_store_id": "448142450",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/d1/46/14d14658-3341-c516-3325-650d7a4960e3/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/36/84/99368494-f07f-cd5f-84f8-0eca9dd24af9/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
     "category": "Utilities",
     "sub_category": "Caller ID",
     "description": "Caller ID and spam blocking app with global phone number lookup."

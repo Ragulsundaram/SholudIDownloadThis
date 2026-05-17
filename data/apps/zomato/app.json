@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
-    "policy_url": "http://www.zomato.com/privacy",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
+    "policy_url": "https://www.zomato.com/policies/privacy/",
     "terms_url": "",
-    "policy_last_updated": "2020-04-22",
+    "policy_last_updated": "2025-07-25",
     "needs_review": false,
-    "review_notes": "Re-analysis based on April 2020 privacy policy (Wayback Machine capture, ~45k chars). This version differs from previously analyzed policy attributed to Eternal Limited. Prior unsupported quotes were removed or corrected. Camera and microphone hardware access is not explicitly addressed in this policy version."
+    "review_notes": "Updated to July 2025 policy. Developer is now Eternal Limited (formerly Zomato Limited). Key changes: Expanded data sharing with affiliates (Blinkit, District, Hyperpure), explicit mention of AI processing for personalization, and continued use constitutes acceptance of policy changes."
   },
   "app": {
     "slug": "zomato",
@@ -15,7 +15,7 @@
     "developer": "Zomato Media Pvt. Ltd.",
     "app_store_url": "https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896",
     "app_store_id": "434613896",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/74/28/67/7428677e-dc22-e562-dc19-316ea7dceec1/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1b/e2/2a/1be22a3b-489e-5597-2bea-b5e899535fb3/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
     "category": "Food & Drink",
     "sub_category": "",
     "description": "Discover restaurants, read reviews, and order food for delivery or dining out."

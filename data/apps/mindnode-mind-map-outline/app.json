@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://mindnode.com/privacy",
+    "terms_url": "https://www.mindnode.com/terms",
+    "policy_last_updated": "2024-11-25",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "mindnode-mind-map-outline",
+    "name": "MindNode: Mind Map & Outline",
+    "developer": "IdeasOnCanvas GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/id6446116532",
+    "app_store_id": "6446116532",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/93/0e/da/930eda1f-056b-6527-e61e-3e7edf64998b/AppIcon-0-1x_U007epad-0-1-sRGB-0-85-220-0.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "",
+    "description": "Mind mapping and outlining app for brainstorming, problem-solving, and project planning with collaboration features."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 88,
+    "grade": "A",
+    "one_liner": "A privacy-focused mind mapping app that collects minimal data, uses no ads or trackers, and provides strong GDPR-compliant data rights.",
+    "summary": "MindNode is a refreshing example of privacy-first app design. The Austrian company clearly commits to GDPR compliance, collects only essential technical data, doesn't sell data to advertisers, and provides end-to-end encryption for their collaboration features.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "Excellent privacy practices with no advertising, minimal data collection, encrypted collaboration, and clear user data rights. A model for privacy-respecting productivity apps."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "data_retention_extended",
+        "title": "Data kept 7+ years for tax compliance",
+        "plain_english": "MindNode keeps your purchase and account data for 7 years to comply with tax laws, plus another 3 years for legal claims. This is longer than strictly necessary for app functionality.",
+        "severity": "low"
+      },
+      {
+        "id": "us_data_transfers",
+        "title": "Data processed by US companies",
+        "plain_english": "Your data may be transferred to and processed in the United States by companies like Vercel (web hosting) and Fly.io (collaboration service). These transfers are covered by the EU-US Data Privacy Framework, but it's worth noting.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "e2e_encrypted_collaboration",
+        "title": "End-to-end encrypted collaboration",
+        "plain_english": "When using MindNode Live to collaborate with others, your document data is encrypted on your device and can only be decrypted by other participants. MindNode's servers never see your actual content.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_ad_tracking",
+        "title": "No advertising or behavioral tracking",
+        "plain_english": "MindNode doesn't show ads or track your behavior across other apps and websites. Their website analytics use Plausible, which is privacy-focused and doesn't use cookies.",
+        "severity": "positive"
+      },
+      {
+        "id": "anonymous_analytics",
+        "title": "Anonymous website analytics only",
+        "plain_english": "For their website, MindNode uses Plausible Analytics which doesn't track individual visitors or set cookies. They only see aggregated, anonymous data.",
+        "severity": "positive"
+      },
+      {
+        "id": "gdpr_compliance",
+        "title": "Full GDPR rights available",
+        "plain_english": "MindNode is transparent about your rights under GDPR, including access, correction, deletion, and data portability. They provide clear contact information for privacy requests.",
+        "severity": "positive"
+      },
+      {
+        "id": "optional_account",
+        "title": "Account is optional",
+        "plain_english": "You can use MindNode without creating an account. An account is only needed if you want to sync your subscription across multiple platforms.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't access your camera or microphone.",
+      "detail": "No mention of camera or microphone access in the privacy policy. As a mind mapping app, these permissions are not required for core functionality.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't track your location.",
+      "detail": "No location data collection mentioned in the privacy policy. The app does not require location services for any functionality.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't access your contacts.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode stores your mind maps in iCloud or locally on your device. Only you control your files.",
+      "detail": "The app stores documents in iCloud for syncing across devices. Documents are managed by the user and stored either locally or in their personal iCloud account.",
+      "policy_excerpt": "Your documents are managed directly in the app and are securely stored in iCloud.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode works with several service providers (like Vercel for hosting and Fly.io for collaboration), but your data is only shared to provide app functionality.",
+      "detail": "Data is shared with multiple processors: Vercel (web hosting), Fly.io (Live collaboration service), Mailjet (emails), Plausible (analytics), Teamwork (helpdesk), World4You, Hetzner, and Heroku. US transfers are covered by the Data Privacy Framework.",
+      "policy_excerpt": "Service Partners are entities different to IdeasOnCanvas that provide services to IdeasOnCanvas, e.g. that contribute to the functioning and improvement of the MindNode App.",
+      "concerns": [
+        "Multiple third-party processors involved",
+        "Some data may be transferred to the US"
+      ],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use MindNode without an account. If you create one for cross-platform sync, they store your email and device info. Data is kept for 7 years.",
+      "detail": "Optional MindNode Account requires email and password (stored encrypted). For licensing: device model, hashed serial number, OS version, app version, user ID, and language are collected. Data retained for 7 years for tax compliance plus 3 years for legal claims.",
+      "policy_excerpt": "At registration for your MindNode, we store the email address and a hash generated from the password submitted to us. The email address and hash are stored encrypted on our server.",
+      "concerns": [
+        "Data retention period is long (7+ years)",
+        "Device identifiers collected for licensing"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't show ads or track you for advertising. Their website analytics are anonymous and cookie-free.",
+      "detail": "No advertising or behavioral tracking in the app. Website uses Plausible Analytics which is privacy-focused, cookie-free, and only collects anonymous aggregated data.",
+      "policy_excerpt": "When you visit the MindNode Website, we collect some anonymous usage data for statistical purposes only. We don't track individual visitors and all the data is in aggregate only. No personal data is collected and no cookies are set for tracking or analytic purposes.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't knowingly collect data from children under 16.",
+      "detail": "Explicit statement that they do not knowingly collect Personal Data from children under 16 and will delete such information if discovered.",
+      "policy_excerpt": "We do not knowingly collect Personal Data from children under the age of 16. In case we learn that we have collected Personal Data of a child under the age of 16, we will delete that information as quickly as possible.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode logs basic server data (like your IP address) for security, but only keeps it for 20 days.",
+      "detail": "Server logs include IP addresses, system configuration, timestamps, and referring pages. Stored for only 20 days for security and website operation.",
+      "policy_excerpt": "For the above mentioned purposes, your information is processed based on § 165 para. 3 TKG 2021 and is stored for 20 days to ensure the operation of our website.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode collects basic device info (model, OS version) to verify your subscription and license the app.",
+      "detail": "For licensing: device model and version, hashed device serial number (Mac) or unique ID, OS version, app version, user identifier, and language. This is used to manage subscriptions across devices.",
+      "policy_excerpt": "At activation of the app, as a technical requirement to run the service, we sync an universal unique identifier (UUID) between devices so you don't have to register at each device for our app separately.",
+      "concerns": [
+        "Device identifiers collected and linked to subscription"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't collect health or biometric data.",
+      "detail": "No health or biometric data collection mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MindNode doesn't handle your payment info directly - Apple processes all purchases through the App Store.",
+      "detail": "App Store handles all payments. MindNode only receives digital purchase receipts from Apple containing purchase type, date, and app version at time of purchase. No credit card or banking details are collected.",
+      "policy_excerpt": "To manage and verify your subscription across multiple platforms, we collect your App Store digital purchase receipts, combine it with a generated unique device identifier and a pseudonymized identifier that is stored inside your iCloud account.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have full GDPR rights including access, correction, deletion, and data export. Contact them at privacy@mindnode.com.",
+      "detail": "Comprehensive GDPR rights including access (Art. 15), correction (Art. 16), deletion (Art. 17), restriction (Art. 18), objection (Art. 21), and portability (Art. 20). Clear contact information provided for exercising rights.",
+      "policy_excerpt": "We would furthermore like to inform you that you have the right, at all times, to request information concerning whether or not personal data is being processed, as well as access to your personal data process (see Art. 15 GDPR for details).",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy includes a clear 'last updated' date. Contact information is provided if you have concerns about changes.",
+      "detail": "Policy includes a last updated date (November 25, 2024). Users can contact privacy@mindnode.com with concerns or questions about policy changes.",
+      "policy_excerpt": "Last updated: November 25th, 2024",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      }
+    ],
+    "total_deductions": 18,
+    "final_score": 91,
+    "grade": "A"
+  }
+}

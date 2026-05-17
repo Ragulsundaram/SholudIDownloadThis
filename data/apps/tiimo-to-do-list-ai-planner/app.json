@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.tiimoapp.com/privacy-policy/",
+    "terms_url": "https://www.tiimoapp.com/terms-of-use",
+    "policy_last_updated": "2026-05-15",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "tiimo-to-do-list-ai-planner",
+    "name": "Tiimo: To-Do List & AI Planner",
+    "developer": "tiimo ApS",
+    "app_store_url": "https://apps.apple.com/in/app/id1480220328",
+    "app_store_id": "1480220328",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/25/a7/9c/25a79c65-dc92-6936-048a-f0e1303e7805/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Lifestyle",
+    "description": "Visual planning app with AI assistance, focus timers, and widgets designed for neurodivergent users including those with ADHD and Autism."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 80,
+    "grade": "A",
+    "one_liner": "Privacy-focused productivity app with strong GDPR compliance, though marketing cookies warrant attention.",
+    "summary": "Tiimo is a well-designed productivity app from a Danish company with strong privacy practices. They explicitly state they do not sell personal data, offer full GDPR rights, and use industry-standard security. The main concerns are marketing cookies and analytics tracking on their website and app.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Strong privacy commitments, GDPR-compliant, no selling of data, with clear user rights and reasonable data practices for a subscription app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_marketing_cookies",
+        "title": "Marketing cookies for targeted ads",
+        "plain_english": "The app uses cookies from YouTube, Google, and Facebook to track you across websites and show targeted ads. You can opt out, but this tracking is enabled by default.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_analytics_tracking",
+        "title": "Analytics tracking across services",
+        "plain_english": "Your app usage is tracked by Google Analytics and Microsoft Clarity to understand how you interact with the service. This is used to improve the app but does involve sharing data with these third parties.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_selling",
+        "title": "Explicit no-selling policy",
+        "plain_english": "Tiimo clearly states they do not sell your personal data to anyone. This is a strong privacy commitment.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_compliant",
+        "title": "Full GDPR rights available",
+        "plain_english": "As a Danish company, Tiimo fully supports GDPR. You can access, correct, delete, export, or restrict processing of your data at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protected",
+        "title": "Strong children's privacy safeguards",
+        "plain_english": "Accounts for children under 13 must be created by a parent or guardian. Tiimo does not knowingly collect data from children without consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_retention_limited",
+        "title": "Limited data retention period",
+        "plain_english": "Your data is kept only while you have an active subscription, plus up to 2 years afterward. After that, it's deleted.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This app does not access your camera or microphone.",
+      "detail": "No camera or microphone access is mentioned in the privacy policy. The app is a planning tool that does not require media capture.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track your precise location. It only knows your approximate location based on your IP address for basic service delivery.",
+      "detail": "Only approximate location based on IP address is collected automatically. No GPS tracking or location-based features.",
+      "policy_excerpt": "Approximate location (based on your IP address)",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access files on your device.",
+      "detail": "As a cloud-based planning app, storage access is not mentioned as being required.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with payment processors, hosting providers, and analytics services, but Tiimo explicitly states they do not sell your data.",
+      "detail": "Data is shared with trusted third parties including payment processors (App Store, Google Play), IT/hosting providers, and analytics services (Google Analytics, Microsoft Clarity). All partners must comply with GDPR.",
+      "policy_excerpt": "We do not sell your personal data. However, we may share your data with trusted third-party providers who help us deliver and improve Tiimo.",
+      "concerns": ["Data shared with analytics providers", "Some data processed outside EU/EEA with Standard Contractual Clauses"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to provide your name and email to create an account. This is standard for a subscription service.",
+      "detail": "Basic account information including name, email address, and subscription details are collected. Payment data is handled by third-party processors and not stored by Tiimo.",
+      "policy_excerpt": "Name, Email address, Subscription details, Payment data... We work with third-party payment processors to handle your payments. We do not store your full payment details.",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app and website use cookies to track your behavior for analytics and advertising purposes. You can opt out of this tracking.",
+      "detail": "Uses Google Analytics and Microsoft Clarity for analytics. Marketing cookies from YouTube, Google, and Facebook track visitors across websites for targeted advertising. Users can withdraw consent.",
+      "policy_excerpt": "Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and interesting to the individual user.",
+      "concerns": ["Cross-site tracking via marketing cookies", "Facebook pixel for advertising and analytics"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Children under 13 must have their account created by a parent. Tiimo does not collect data from children without parental consent.",
+      "detail": "Strong COPPA/GDPR-K compliant approach. Parental consent required for under-13 users. If discovered that a child provided data without consent, it is promptly deleted.",
+      "policy_excerpt": "If a child under 13 years of age uses Tiimo, their account must be created by a parent or legal guardian. We do not knowingly collect personal data from children without parental consent.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address and how you use the app are logged for security and to improve the service.",
+      "detail": "IP addresses and usage data are collected for security, analytics, and service improvement. This is standard practice.",
+      "policy_excerpt": "IP address, Usage data (e.g., how you interact with the app/website)",
+      "concerns": [],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Basic information about your device type and operating system is collected to ensure the app works properly.",
+      "detail": "Device information (device type, operating system) is collected for compatibility and service improvement. Crash data may be collected for debugging but is not personally linked.",
+      "policy_excerpt": "Device information (e.g., device type, operating system)",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data, though it offers optional mood tracking features.",
+      "detail": "No health or biometric data collection mentioned. The app has a 'Wellbeing' feature for mood tracking, but this appears to be local/user-controlled.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Payments are handled securely by Apple or Google - Tiimo never sees your full credit card details.",
+      "detail": "Payment processing is handled entirely by third-party processors (App Store, Google Play). Tiimo does not store full payment details.",
+      "policy_excerpt": "We work with third-party payment processors (like App Store and Google Play) to handle your payments... We do not store your full payment details.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have full control over your data. You can view, edit, delete, or export everything Tiimo knows about you at any time.",
+      "detail": "Comprehensive GDPR rights including access, correction, deletion, restriction, portability, and objection. Email hello@tiimo.dk to exercise rights. Response within one month.",
+      "policy_excerpt": "Access, Correction, Deletion, Restriction, Portability, Objection, Withdraw consent... To make a request, email us at hello@tiimo.dk",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes significantly, you'll be notified by email or in the app. Continuing to use the app means you accept the changes.",
+      "detail": "Significant changes are notified via email or through the app. Continued use constitutes acceptance of revised policy.",
+      "policy_excerpt": "If we make significant changes, we'll notify you by email or through the app. Continuing to use Tiimo after an update means you agree to the revised policy.",
+      "concerns": ["Continued use = acceptance rather than active re-consent"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 28.5,
+    "final_score": 86,
+    "grade": "A"
+  }
+}

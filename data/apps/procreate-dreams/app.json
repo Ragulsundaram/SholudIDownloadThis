@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "kimi-k2.6",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://procreate.com/app/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "unknown",
-    "needs_review": true,
-    "review_notes": "Strict re-analysis: policy is silent on policy change notification procedures."
+    "needs_review": false,
+    "review_notes": "Complete analysis based on 3,418 character privacy policy. Procreate Dreams is a privacy-perfect app that collects zero data. All data stays local on device, no account required, no network connection. Policy is silent on change notification procedures."
   },
   "app": {
     "slug": "procreate-dreams",
@@ -15,7 +15,7 @@
     "developer": "Savage Interactive Pty Ltd",
     "app_store_url": "https://apps.apple.com/in/app/procreate-dreams/id1595520602",
     "app_store_id": "1595520602",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/29/54/3a/29543af2-1480-97ae-0d13-43de43877374/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/d6/aa/abd6aa30-5546-2db5-7d67-7ae2750a6e5b/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
     "category": "Photo & Video",
     "sub_category": "Animation",
     "description": "Animation and creative storytelling app with zero data collection."
@@ -258,7 +258,7 @@
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
@@ -266,31 +266,117 @@
       "plain_english": "The privacy policy does not explain how users are notified of changes.",
       "detail": "The policy makes no mention of change notification procedures or continued-use clauses.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": [
+        "No notification method specified for policy changes"
+      ],
+      "score_impact": -1.5
     }
   ],
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.0, "deduction": 0 },
-      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
-      { "category": "data_sharing_third_parties", "risk": "safe", "max": 30, "rate": 0.0, "deduction": 0 },
-      { "category": "account_identity", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "behavioural_ad_tracking", "risk": "safe", "max": 25, "rate": 0.0, "deduction": 0 },
-      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
-      { "category": "network_internet_activity", "risk": "safe", "max": 5, "rate": 0.0, "deduction": 0 },
-      { "category": "device_fingerprinting", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 },
-      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0 },
-      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.0, "deduction": 0 }
+      {
+        "category": "camera_microphone",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "location_gps",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "safe",
+        "max": 20,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "safe",
+        "max": 30,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "account_identity",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "safe",
+        "max": 25,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "safe",
+        "max": 5,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
     ],
-    "total_deductions": 0,
-    "final_score": 100,
+    "total_deductions": 1.5,
+    "final_score": 99,
     "grade": "A"
   }
 }

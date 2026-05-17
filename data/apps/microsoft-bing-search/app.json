@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
+    "terms_url": "https://www.microsoft.com/en-us/servicesagreement",
+    "policy_last_updated": "2026-03",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "microsoft-bing-search",
+    "name": "Microsoft Bing Search",
+    "developer": "Microsoft Corporation",
+    "app_store_url": "https://apps.apple.com/in/app/id345323231",
+    "app_store_id": "345323231",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/52/3f/df/523fdf91-929b-2df9-9fce-7de666d14ce5/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Search",
+    "description": "Microsoft Bing delivers fast, intelligently curated answers with AI-powered Copilot Search. Features include visual search, voice search, image creator, and Microsoft Rewards."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 52,
+    "grade": "D",
+    "one_liner": "A powerful search app with extensive data collection and AI training practices that raises significant privacy concerns.",
+    "summary": "Microsoft Bing Search collects extensive personal data including location, search history, device info, and usage patterns. Data is used for personalized advertising and training AI models. While Microsoft provides some user controls, the breadth of data collection and sharing with third parties for advertising purposes is concerning.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Heavy data collection for advertising and AI training, though some opt-out controls are available."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_ai_training",
+        "title": "Your data trains AI models",
+        "plain_english": "Microsoft uses your search queries and interactions to train and improve their AI models, including Copilot. This means your questions and searches could be used to teach AI systems.",
+        "severity": "high"
+      },
+      {
+        "id": "red_personalized_ads",
+        "title": "Personalized advertising with data sharing",
+        "plain_english": "Your data is shared with third parties for personalized advertising purposes. Microsoft collects browsing data and combines it across services to target ads to you.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_service_tracking",
+        "title": "Tracks you across Microsoft services",
+        "plain_english": "Microsoft combines data from Bing, Windows, Edge, Office, and other services to build a detailed profile of you. Your activity in one app affects what you see in others.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Location data collected continuously",
+        "plain_english": "Your precise location is collected and can be used for search results, weather, local recommendations, and advertising purposes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_search_history",
+        "title": "Search history stored and used",
+        "plain_english": "All your search queries are logged and used to personalize results, improve services, and target ads. This creates a detailed record of your interests and activities.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_opt_out_ads",
+        "title": "Can opt out of personalized ads",
+        "plain_english": "Microsoft provides controls to opt out of personalized advertising, though this doesn't stop all data collection.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_controls",
+        "title": "Some data deletion options",
+        "plain_english": "You can view and delete some of your activity data through your Microsoft account privacy dashboard.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_frameworks",
+        "title": "Complies with privacy frameworks",
+        "plain_english": "Microsoft complies with EU-U.S. Data Privacy Framework and other international data protection standards.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera and microphone are only accessed when you use features like voice search or visual search. Not used in background.",
+      "detail": "Visual Search and voice search features require camera and microphone access on demand only.",
+      "policy_excerpt": "Search using an image or your voice. Visual Search uses your camera; voice search uses your microphone.",
+      "concerns": ["Image uploads may be used to improve Bing image processing services"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Your precise location is continuously collected for local search results, weather, and advertising. This includes GPS and IP-based location.",
+      "detail": "Location data is collected to provide local search results, nearby recommendations, weather, and for advertising purposes. Location history may be stored.",
+      "policy_excerpt": "We collect data about your location, which can be precise GPS location or inferred from your IP address and network data.",
+      "concerns": ["Continuous location collection", "Used for advertising", "Location history stored"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Bing Search does not request or access your contacts or phonebook.",
+      "detail": "No contact or phonebook access is mentioned in the privacy policy for Bing Search specifically.",
+      "policy_excerpt": "Not applicable - no contact access requested.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "File access is only used when you upload images for Visual Search. Files are not continuously scanned.",
+      "detail": "Storage access is limited to user-initiated image uploads for Visual Search feature.",
+      "policy_excerpt": "The photos you provided may be used to improve Bing image processing services.",
+      "concerns": ["Uploaded images may be retained for service improvement"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with vendors, affiliates, and third parties for personalized advertising and service operation. This includes data brokers and ad networks.",
+      "detail": "Microsoft shares personal data with affiliates, subsidiaries, vendors, and third parties for advertising, legal compliance, and service provision. Data may be shared for 'personalized advertising purposes'.",
+      "policy_excerpt": "We share your personal data with your consent or to complete any transaction or provide any product you have requested or authorized. We also share data with Microsoft-controlled affiliates and subsidiaries; with vendors working on our behalf.",
+      "concerns": ["Shared with data brokers for advertising", "Shared across Microsoft services", "Vendor access to data"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "A Microsoft account is optional but links all your activity across Microsoft services. Your identity is tied to searches and rewards when signed in.",
+      "detail": "Microsoft account allows syncing across devices and accessing personalized features. When signed in, search history and activity are linked to your account.",
+      "policy_excerpt": "If you have a Microsoft account, your account information is used to provide personalized experiences across Microsoft products.",
+      "concerns": ["Activity linked to identity when signed in", "Cross-service profile building"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your search queries, browsing, and app usage are tracked to show you personalized ads. This tracking happens across Microsoft services and partner sites.",
+      "detail": "Microsoft uses cookies and similar technologies to track user behavior across services. Data is combined to build advertising profiles. Users can opt out of personalized ads.",
+      "policy_excerpt": "We use cookies to store your preferences and settings, help with sign-in, provide personalized ads, and analyze site operations.",
+      "concerns": ["Cross-site tracking", "Behavioral profiling", "Search queries used for ads"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Microsoft states services are not intended for children under 13 without parental consent. Some data collection restrictions apply for child accounts.",
+      "detail": "Microsoft has a 'Privacy for young people' page and states they comply with COPPA. Parental consent required for accounts of children under 13.",
+      "policy_excerpt": "Young people may prefer starting with the Privacy for young people page. Parental consent required for Microsoft accounts of children under 13.",
+      "concerns": ["App rated 17+ in App Store", "No specific child mode mentioned"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "All your internet searches and browsing through Bing are logged. Your IP address is collected and used for location inference and security.",
+      "detail": "All search queries, click data, and browsing activity through Bing are logged. IP addresses are collected and may be used to infer location and for security purposes.",
+      "policy_excerpt": "We collect data about your interactions, use, and experiences with our products including search queries and browsing history.",
+      "concerns": ["Complete search history logged", "IP address retention", "Activity profiling"],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detailed device information is collected including device ID, operating system, and browser type. This is used to identify your device across services.",
+      "detail": "Microsoft collects device information including hardware ID, operating system, browser data, and device identifiers. Used for service provision and advertising.",
+      "policy_excerpt": "We collect data about your device including hardware model, operating system version, unique device identifiers, and mobile network information.",
+      "concerns": ["Device fingerprinting for tracking", "Unique device identifiers collected"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Bing Search does not collect health or biometric data. Face ID/Touch ID is handled locally by iOS if used for app unlock.",
+      "detail": "No health or biometric data collection mentioned. Biometric authentication is handled by device operating system.",
+      "policy_excerpt": "Not applicable for Bing Search app.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "No payment features within the Bing Search app. Microsoft Rewards credits are managed separately through your Microsoft account.",
+      "detail": "Bing Search does not process payments directly. Microsoft Rewards are handled through the associated Microsoft account.",
+      "policy_excerpt": "Microsoft Rewards: Earn more rewards is easy, simple, and fun. Just search with the Microsoft Bing app.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can view and delete some activity data through your Microsoft account privacy dashboard, but not all data may be deleted.",
+      "detail": "Microsoft provides privacy dashboard to view and manage some activity data. Users can request deletion of personal data, though some data may be retained for legal or operational purposes.",
+      "policy_excerpt": "You can control your personal data that Microsoft has obtained, and exercise your data protection rights, by contacting Microsoft or using various tools we provide.",
+      "concerns": ["Not all data may be deletable", "Some retention for legal purposes"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Policy changes are posted on the website with an updated date. Microsoft may notify users of significant changes, but continued use equals acceptance.",
+      "detail": "Microsoft updates the privacy statement periodically. Users are encouraged to review it regularly. Significant changes may be notified through service or email.",
+      "policy_excerpt": "We will update this privacy statement when necessary to reflect customer feedback and changes in our products and services.",
+      "concerns": ["Continued use equals acceptance", "No explicit re-consent required"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 83.25,
+    "final_score": 52,
+    "grade": "D"
+  }
+}

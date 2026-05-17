@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
-    "policy_url": "https://www.terabox.com/terms/privacy?lang=en",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
+    "policy_url": "https://www.terabox.com/box-static/disk-system/html/wap_privacy.html",
     "terms_url": "https://www.terabox.com/terms/duty?lang=en",
     "policy_last_updated": "2023-04-18",
-    "needs_review": true,
-    "review_notes": "Policy contains a direct contradiction: it requires facial recognition information for some services but claims not to collect or store facial biometric information. Location collection is vague ('depending on the device settings')."
+    "needs_review": false,
+    "review_notes": "Policy contains a direct contradiction regarding facial recognition data. Location collection remains vague. The new scrape confirms the same behavioral profiling and AI scanning practices."
   },
   "app": {
     "slug": "terabox",
@@ -15,7 +15,7 @@
     "developer": "FLEXTECH INC.",
     "app_store_url": "https://apps.apple.com/in/app/terabox-1tb-cloud-ai-space/id1509453185",
     "app_store_id": "1509453185",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b8/93/42/b89342da-054a-c410-3365-e86e0ed4347c/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-85-220.png/400x400bb.jpg",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/21/7c/97217ceb-c724-e20d-ef8d-ad0a0d74e59c/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
     "category": "Productivity",
     "sub_category": "Cloud Storage",
     "description": "A cloud storage app offering up to 1TB of free space for files, photos, and videos, with AI-powered features for photo categorization and audio transcription."
@@ -58,7 +58,7 @@
       {
         "id": "red_contacts_stored_on_servers",
         "title": "Stores your contacts on its servers if you allow access",
-        "plain_english": "TeraBox states that if you choose to allow it to access your contact information, it stores this information on its server.",
+        "plain_english": "TeraBox states that if you choose to allow it to access your contact information, it stores this information on its server for sharing and collaboration features.",
         "severity": "medium"
       }
     ],
@@ -72,13 +72,19 @@
       {
         "id": "green_account_deletion",
         "title": "Account deletion available in app",
-        "plain_english": "TeraBox states that you can delete your account directly within the app settings.",
+        "plain_english": "TeraBox states that you can delete your account directly within the app settings at [Account Avatar] - [Menu] - [Settings] - [Security Center] - [Account Deletion].",
         "severity": "positive"
       },
       {
         "id": "green_opt_out_marketing",
         "title": "Can opt out of marketing emails",
         "plain_english": "TeraBox states that you can opt out of receiving marketing material at any time by clicking the unsubscribe link in emails.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_permission_withdrawal",
+        "title": "Can withdraw permissions in device settings",
+        "plain_english": "TeraBox states that you can directly disable access to contacts, photos, camera, and other permissions in your device system settings to change or withdraw authorization.",
         "severity": "positive"
       }
     ]

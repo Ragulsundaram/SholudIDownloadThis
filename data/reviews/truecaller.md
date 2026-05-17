@@ -1,10 +1,9 @@
-# Truecaller: Caller ID & Block — Privacy Review
+# Truecaller: Premium Caller ID — Privacy Review
 
-**Analyzed:** 2026-05-16  
-**Policy URL:** https://privacy.truecaller.com/privacy-policies  
-**Terms URL:** (not found)  
-**Policy Last Updated:** 10 November 2025  
-**Needs Review:** true
+**Date:** 2026-05-17  
+**Analyst:** claude-kimi-k2.5  
+**Policy:** https://privacy.truecaller.com/privacy-policies  
+**Policy Last Updated:** 2025-11-10
 
 ---
 

@@ -1,76 +1,139 @@
-# Snapchat Privacy Review
+# Snapchat Privacy Policy Review
 
-**Analyzed:** 2026-05-16  
-**Policy URL:** https://values.snap.com/privacy/privacy-policy  
-**Policy Date:** Effective April 7, 2025  
-**Model:** claude-sonnet-4  
-**Method:** Strict legal-safe analysis — every claim backed by a direct verbatim quote.
-
----
-
-## Score Summary
-
-- **Deductions:** 69.25 / 205
-- **Final Score:** 66
-- **Grade:** C (Caution)
-- **Risk Level:** Caution
-- **Recommendation:** think_twice
+**Date:** 2026-05-17
+**Analyst:** claude-kimi-k2.5
+**Policy URL:** https://values.snap.com/privacy/privacy-policy
+**Policy Date:** April 7, 2025
 
 ---
 
-## Red Flags
+## Summary Card
 
-1. **Snap Map can share your precise location if you enable it** (medium)  
-   > "if you share your location on Snap Map, to show you suggestions like places you might like in your neighborhood, content others have posted to the Map, or your friends if they're sharing their location with you"  
-   > "location information (precise location through methods like GPS signals)"
+**App:** Snapchat
+**Overall Risk:** Caution (Grade C)
+**Score:** 55/100
 
-2. **Snapchat collects detailed device and app data** (medium)  
-   > "device information (such as your hardware or software, operating system, device memory, advertising identifiers, apps installed, browser type, information from device sensors that measure the motion of your device or compasses and microphones, including whether you have headphones connected, and information about your wireless and mobile connections)"
+### Red Flags
+- **Heavy ad personalization using your interests** — Uses interests, preferences, cookies, pixels, and advertising identifiers to target ads
+- **Creates shadow profiles from other users' contact uploads** — If another user uploads contacts containing your info, Snapchat combines it with other data about you
+- **Extensive device fingerprinting** — Collects hardware, software, OS, device memory, advertising identifiers, installed apps, browser, sensors
+- **Extensive data sharing with partners** — Shares with service providers, advertisers, business partners, anti-fraud partners, and affiliates
+- **Vague retention policy** — Keeps data "as long as we need it" with broad exceptions
 
-3. **Snapchat shares data with partners and authorities** (medium)  
-   > "We share your information with our service providers"  
-   > "We share your information with business and integrated partners"  
-   > "We share your information, such as device and usage information, with industry partners working to prevent fraud"  
-   > "comply with any valid legal process, governmental request, or applicable law, rule, or regulation"
+### Green Flags
+- **Private communications NOT used for ads** — Snaps and Chats with friends are not used for personalization or ad targeting
+- **Messages auto-delete** — Chats delete within 24 hours by default; Snaps delete after viewing
+- **Private communications NOT shared** — Not shared with third-party service providers
+- **TrueDepth data not stored** — TrueDepth camera data used in real-time only for Lenses; not stored on servers
+- **Family Center for teens** — Parental oversight available for teen accounts
 
-4. **Snapchat keeps data as long as it says it needs it** (medium)  
-   > "we keep information as long as you tell us to, and otherwise as long as we need it"  
-   > "we may need to comply with legal requirements to store your data which stops us from deleting your information"
-
-## Green Flags
-
-1. **Messages delete by default within about 24 hours** (positive)  
-   > "our systems are designed to delete Chats you send within 24 hours after your friend reads it"  
-   > "Snaps and Chats sent in Snapchat will be deleted by default from our servers within 24 hours after we detect they've been opened by all recipients"
-
-2. **You can access, update, and delete your data** (positive)  
-   > "You can access, update, and delete your information, decide who can contact you, and download your data from within the Snapchat app"
-
-3. **You can change advertising settings** (positive)  
-   > "you can change your advertising settings in the Snapchat app"
+### Verdict
+Snapchat's ephemeral messaging is genuine for chats, but the platform collects extensive data for personalization and advertising. The fact that private communications aren't monetized for ads is a significant positive, though shadow profiles from contact uploads and heavy device fingerprinting remain concerns.
 
 ---
 
-## Key Category Findings
+## Analysis Notes
 
-| Category | Risk | Key Quote |
+### Key Findings
+
+**1. Heavy Ad Personalization**
+Snapchat uses extensive data for ad targeting:
+- Interests and preferences from collected information to personalize, target, and measure ads
+- Cookies, pixels, and unique advertising identifiers
+- Content analysis for targeting (e.g., dog in photo → dog food ads)
+- Cross-platform tracking when linking Snapchat to other services
+
+**Key quote:**
+> "we use your interests and preferences from the information we've collected to personalize, target, and measure ads"
+
+**2. Shadow Profiles from Contact Uploads**
+Even if you don't share your contacts, Snapchat may have your information:
+> "if another Snapchatter uploads their contact list which includes your information, we may combine that with other information we have about you"
+
+**3. Private Communications Protected**
+Snapchat explicitly states that private content is NOT used for ads:
+> "We do not use the private content and communications you send to your friends to personalize your experience, make recommendations, or show you ads."
+
+**4. Extensive Device Data Collection**
+Device information includes:
+- Hardware, software, operating system, device memory
+- Advertising identifiers
+- **List of apps installed**
+- Browser type
+- Device sensors (motion, compass, microphone)
+- Wireless and mobile connections
+
+**5. Data Sharing Partners**
+- Service providers (payments, ad measurement, service protection)
+- Business and integrated partners
+- Anti-fraud partners
+- Advertisers
+- Affiliates
+
+**6. Ephemeral by Default**
+- Chats delete within 24 hours after being opened by all recipients
+- Snaps delete after being viewed (unless saved)
+- Memories persist until user deletes them
+
+**7. TrueDepth Camera Privacy**
+On iOS, TrueDepth camera data is processed in real-time only:
+> "On iOS we use Apple's TrueDepth camera to improve the quality of Lenses. Note, however, that this information is used in real time — we don't store this information on our servers or share it with third parties."
+
+**8. Vague Retention Policy**
+Snapchat states:
+> "we keep information as long as you tell us to, and otherwise as long as we need it"
+
+Data may be retained for:
+- Legal compliance
+- Dispute resolution
+- Fraud investigation
+- Abuse investigation
+
+---
+
+## Scoring Breakdown
+
+| Category | Risk | Deduction |
 |----------|------|-----------|
-| Camera & Microphone | Caution | "images and other information from your device's camera, photos, and microphone" |
-| Location & GPS | Risky | "location information (IP address)" and "precise location through methods like GPS signals" |
-| Contacts | Risky | "information about your device phonebook (contacts and related information)" |
-| Data Sharing | Caution | Shared with service providers, business partners, anti-fraud partners, and legal authorities |
-| Ad Tracking | Caution | "we use your interests and preferences from the information we've collected to personalize, target, and measure ads" |
-| Device Info | Caution | Collects advertising identifiers, installed applications, and sensor data |
-| Health/Biometric | Safe | "we don't store this information on our servers or share it with third parties" (TrueDepth) |
-| Deletion | Caution | Broad retention: "as long as we need it" |
-| Policy Changes | Caution | "we'll let you know one way or another" via date revision or additional notice |
+| Camera & Microphone | Risky | 9.75 |
+| Location & GPS | Risky | 9.75 |
+| Contacts & Phonebook | Risky | 13.0 |
+| Storage & File Access | Caution | 3.0 |
+| Data Sharing with 3rd Parties | Risky | 19.5 |
+| Account & Identity Data | Safe | 0 |
+| Behavioural & Ad Tracking | Risky | 16.25 |
+| Children's Data Handling | Safe | 0 |
+| Network & Internet Activity | Caution | 1.5 |
+| Device Info & Fingerprinting | Risky | 9.75 |
+| Health & Biometric Data | Safe | 0 |
+| Financial & Payment Data | Caution | 4.5 |
+| Data Deletion & User Rights | Caution | 3.0 |
+| Policy Change Notification | Caution | 1.5 |
+
+**Total Deductions:** 91.5
+**Final Score:** 55 (Grade C)
 
 ---
 
-## Strict Analysis Notes
+## Verbatim Policy Excerpts
 
-- **No "sell" language found.** The policy mentions transfer of data in a merger/acquisition scenario ("If we were to sell or negotiate to sell our business..."), but does not state that user data is sold as a product. No "SELLS YOUR DATA" claim was made.
-- **No cross-app tracking claimed.** The policy mentions receiving data from advertisers and other apps, but does not explicitly describe cross-app tracking by Snapchat itself.
-- **Purpose attribution avoided.** Where the policy does not explain why a data type is collected, the analysis states "does not clearly explain why."
-- **Snap Map risk downgraded to medium** because location sharing is explicitly opt-in ("if you share your location"). It is not unambiguous background tracking.
-- **High-severity red flags removed** because no red flag had explicit, unambiguous backing that would justify the highest severity under strict rules.
+**On No Targeted Advertising from Private Communications:**
+> "We do not use the private content and communications you send to your friends to personalize your experience, make recommendations, or show you ads."
+
+**On Shadow Profiles:**
+> "if another Snapchatter uploads their contact list which includes your information, we may combine that with other information we have about you to better understand who you may want to communicate with"
+
+**On Device Information:**
+> "device information (such as your hardware or software, operating system, device memory, advertising identifiers, apps installed, browser type, information from device sensors that measure the motion of your device or compasses and microphones, including whether you have headphones connected, and information about your wireless and mobile connections)"
+
+**On Data Retention:**
+> "we keep information as long as you tell us to, and otherwise as long as we need it to provide our Services, or as required by law"
+
+**On TrueDepth Camera:**
+> "On iOS we use Apple's TrueDepth camera to improve the quality of Lenses. Note, however, that this information is used in real time — we don't store this information on our servers or share it with third parties."
+
+**On Data Sharing:**
+> "We share your information with our service providers... We share your information with business and integrated partners... We share your information, such as device and usage information, with industry partners working to prevent fraud"
+
+**On Ephemeral Messages:**
+> "our systems are designed to delete Chats you send within 24 hours after your friend reads it (unless you've changed your default settings or decide to save it)"

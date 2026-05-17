@@ -1,9 +1,10 @@
-# Tinder Review
+# Tinder — Privacy Review
 
-**App:** Tinder Dating App: Date & Chat
-**Analyzed:** 2026-05-16
-**Policy URL:** https://policies.tinder.com/privacy/
-**Terms URL:** https://gotinder.com/terms
+**Date:** 2026-05-17
+**Analyst:** claude-kimi-k2.5
+**Policy:** https://policies.tinder.com/privacy/
+**Terms:** https://gotinder.com/terms
+**Policy Last Updated:** 2026-04-04
 
 ---
 

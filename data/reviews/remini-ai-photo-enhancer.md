@@ -1,7 +1,8 @@
-# Re-analysis: Remini — AI Photo Enhancer
-**Date:** 2026-05-16  
-**Analyst:** claude-sonnet-4  
-**Policy:** https://support.bendingspoons.com/privacy.html?app=1470373330
+# Remini — AI Photo Enhancer Privacy Review
+**Date:** 2026-05-17  
+**Analyst:** claude-kimi-k2.5  
+**Policy:** https://support.bendingspoons.com/privacy.html?app=1470373330  
+**Policy Last Updated:** 2026-02-12
 
 ## Verdict
 - **Score:** 65 / Grade: C / Risk: caution

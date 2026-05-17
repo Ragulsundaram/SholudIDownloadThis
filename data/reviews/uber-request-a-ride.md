@@ -1,67 +1,65 @@
-# Uber - Request a Ride
+# Uber — Request a Ride Privacy Review
+**Date:** 2026-05-17  
+**Analyst:** claude-kimi-k2.5  
+**Policy:** https://www.uber.com/legal/privacy  
+**Policy Last Updated:** 2026-03-26
 
-**Developer:** Uber Technologies, Inc.
-**Category:** Travel
-**Analyzed:** 2026-05-16 by claude-sonnet-4
+## Verdict
+- **Score:** 52 / Grade: D / Risk: risky
+- **Recommendation:** think_twice
 
-## Summary Card
+## Red Flags (5)
+1. **Precise location tracked and approximate location shared with advertisers** (high) — Uber collects your precise location during trips and when the app is open. It shares your approximate location and trip details with ad intermediaries such as Google and The Trade Desk to personalize ads.
+2. **Government ID and facial scans collected** (high) — For verification and age-restricted items, Uber may require photos of your government ID and real-time selfies. This biometric data is stored for up to three years.
+3. **Data shared with ad networks and resellers** (high) — Uber receives demographic and interest data from data resellers and shares your information with advertising companies, ad intermediaries, and social media platforms to target ads.
+4. **Calls with drivers and support may be recorded** (medium) — When you communicate with drivers through the app or contact customer support, your calls and messages may be recorded and stored.
+5. **Some data kept for up to 7 years** (medium) — Even after you delete your account, Uber retains location data, trip history, and communications for up to 7 years for legal and insurance purposes.
 
-- **Overall Risk:** RISKY
-- **Score:** 52/100
-- **Grade:** D
+## Green Flags (4)
+1. **Ad personalization can be disabled** — Uber lets you turn off personalized ads and marketing communications in the Privacy Center settings.
+2. **Account deletion available** — You can request account deletion through the Privacy Center, and most data is deleted within 90 days.
+3. **Download your data feature** — Uber provides a tool to download copies of your account, usage, communications, and device data.
+4. **Precise location is optional** — You can use Uber without sharing precise location, though you'll need to manually enter addresses.
 
-### Red Flags
+## Key Changes in This Re-analysis
+- **Updated metadata:** Date changed to 2026-05-17, analyst updated to claude-kimi-k2.5.
+- **No material changes to scoring:** Score remains 52 (Grade D) based on the same March 26, 2026 policy version.
 
-- **Precise location tracked and approximate location shared with advertisers** (high)
-  - Uber collects your precise location during trips and when the app is open. It shares your approximate location and trip details with ad intermediaries such as Google and The Trade Desk to personalize ads.
+## Scoring
+Total deductions: 99.0. Final score: 52 (Grade D).
 
-- **Government ID and facial scans collected** (high)
-  - For verification and age-restricted items, Uber may require photos of your government ID and real-time selfies. This biometric data is stored for up to three years.
+## Category Breakdown
 
-- **Data shared with ad networks and resellers** (high)
-  - Uber receives demographic and interest data from data resellers and shares your information with advertising companies, ad intermediaries, and social media platforms to target ads.
+| Category | Risk | Deduction |
+|----------|------|-----------|
+| Camera & Microphone | Risky | 9.75 |
+| Location & GPS | Risky | 9.75 |
+| Contacts & Phonebook | Caution | 6.0 |
+| Storage & File Access | Caution | 3.0 |
+| Data Sharing with 3rd Parties | Risky | 19.5 |
+| Account & Identity Data | Risky | 9.75 |
+| Behavioural & Ad Tracking | Risky | 16.25 |
+| Children's Data Handling | Safe | 0 |
+| Network & Internet Activity | Caution | 1.5 |
+| Device Info & Fingerprinting | Risky | 9.75 |
+| Health & Biometric Data | Risky | 9.75 |
+| Financial & Payment Data | Caution | 4.5 |
+| Data Deletion & User Rights | Caution | 3.0 |
+| Policy Change Notification | Caution | 1.5 |
 
-- **Data kept for years after deletion** (medium)
-  - Even if you delete your account, Uber can keep your data for up to seven years for tax, insurance, and legal reasons, and longer for fraud or safety issues.
+## Verbatim Policy Excerpts
 
-- **Customer support data processed with GenAI** (medium)
-  - Uber may use generative AI tools to process your customer support communications for quality and investigation purposes.
+**On Ad Data Sharing:**
+> "Ad and marketing partners and providers, including ad and marketing publishers (such as social media platforms), ad networks and advertisers, third-party data providers, ad technology vendors, measurement and analytics providers... Ad intermediaries, such as Criteo, Google, Rokt, The Trade Desk, TripleLift and others."
 
-### Green Flags
+**On Biometric Data:**
+> "Biometric data is generated when we use facial verification technology to confirm that your account is not being used by anyone other than you... 3 years for user-submitted selfies."
 
-- **Account deletion offered**
-  - You can request to delete your account and most associated data through the Privacy Center in the app.
+**On Data Resellers:**
+> "Marketing partners, advertisers, and service providers... data resellers... Enrichment data such as demographics (age range, household income range, gender), general interests and lifestyle, general purchasing behavior, viewing preferences and streaming habits."
 
-- **Personalized ads can be turned off**
-  - Uber allows you to opt out of personalized ads and marketing communications in the Privacy Center.
+**On Data Retention:**
+> "We generally delete data within 90 days of an account deletion request... retain your data for 7 years from collection if necessary for purposes of Uber's tax, insurance, legal or regulatory requirements."
 
-- **Location sharing controls**
-  - You can disable precise location collection and live location sharing with drivers through device and app settings.
-
-### Verdict
-
-Uber collects and shares an unusually large amount of sensitive data, including your location, identity documents, and trip details, with advertisers and data brokers. Use the privacy settings to limit ad personalization and location sharing if you choose to use the app.
-
----
-
-## Key Policy Excerpts
-
-> "We also determine your approximate location and can determine your precise location if you allow us to do so through the settings on your phone. If you do, we will collect your precise location from the time you request a ride or order until the ride is finished or your order is delivered. We also collect such data when you have the Uber app open on your phone's screen."
-
-> "Government-issued identification documents, such as driver's licenses or passports (which may contain identification photos and numbers, expiration date, and demographics) User-submitted selfies Facial verification information"
-
-> "Enrichment data such as demographics (age range, household income range, gender), general interests and lifestyle, general purchasing behavior, viewing preferences and streaming habits."
-
-> "Ad intermediaries, such as Criteo, Google, Rokt, The Trade Desk, TripleLift and others. We share data - including advertising or device identifier, hashed email address, approximate location, current trip or order information, and ad interaction data - with these intermediaries to enable their services and for such other purposes as are disclosed in their privacy notices."
-
-> "Uber retains your data for as long as necessary for the purposes described above... for 7 years from collection (unless you first delete your Uber account) if necessary for purposes of Uber's tax, insurance, legal or regulatory requirements"
-
-> "Uber may use GenAI tools for these purposes." (customer support)
-
-> "If we make significant changes, we will notify you in advance of the changes through the Uber apps or through other means, such as email."
-
----
-
-## Full Raw Policy Text
-
-The complete privacy notice text is stored in `data/verification/uber-request-a-ride.json`.
+**On Location:**
+> "We will collect your precise location from the time you request a ride or order until the ride is finished or your order is delivered. We also collect such data when you have the Uber app open on your phone's screen."

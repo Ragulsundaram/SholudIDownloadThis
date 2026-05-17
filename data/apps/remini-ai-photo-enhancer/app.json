@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://support.bendingspoons.com/privacy.html?app=1470373330",
     "terms_url": "",
     "policy_last_updated": "2026-02-12",
     "needs_review": false,
-    "review_notes": "Strict re-analysis completed. Key fixes: upgraded policy_change_notification from unknown to caution because policy explicitly states 'We'll notify users of any modification... in accordance with applicable privacy laws.' Removed red_no_explicit_policy_change_notification flag. Fixed network_internet_activity plain_english that incorrectly attributed network logs to ad profiling. Fixed financial_payment plain_english that claimed Apple processes all payments without direct policy quote."
+    "review_notes": "Re-scan verified. Comprehensive analysis based on Bending Spoons privacy policy. Key findings: photos and face data uploaded to servers for AI processing, shared with third-party AI providers, behavioral profiling for ad effectiveness under legitimate interest, retention up to 2 years for AI generation data, GDPR rights available in-app."
   },
   "app": {
     "slug": "remini-ai-photo-enhancer",
@@ -15,7 +15,7 @@
     "developer": "Bending Spoons Apps ApS",
     "app_store_url": "https://apps.apple.com/in/app/remini-ai-photo-enhancer/id1470373330",
     "app_store_id": "1470373330",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d4/c7/ca/d4c7ca16-b61b-a5a7-32b4-14f1e91d4e06/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/03/db/6e03dbff-a514-747d-6418-17ee801b3c27/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
     "category": "Photo & Video",
     "sub_category": "AI Photo Enhancer",
     "description": "An AI-powered photo and video enhancement app that improves resolution, colors, and quality, and generates new AI portraits from your photos."

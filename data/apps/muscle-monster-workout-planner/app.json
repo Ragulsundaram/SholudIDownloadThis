@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.musclemonster.fit/privacy_policy.html",
+    "terms_url": "https://www.musclemonster.fit/en/terms.html",
+    "policy_last_updated": "2024-06-18",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "muscle-monster-workout-planner",
+    "name": "Muscle Monster Workout Planner",
+    "developer": "TechPioneers Limited",
+    "app_store_url": "https://apps.apple.com/in/app/id6471547318",
+    "app_store_id": "6471547318",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/01/c7/2a/01c72a56-d75e-1161-a600-8e1ac8741906/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Fitness",
+    "description": "AI-driven workout planner with over 1200 exercises, personalized fitness plans, and progress tracking for gym and home workouts."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 69,
+    "grade": "C",
+    "one_liner": "A fitness app that collects workout data and device info, with explicit 'no sale' guarantee but requires email for full data deletion.",
+    "summary": "Muscle Monster Workout Planner collects fitness-related data, usage patterns, and device information. While the app explicitly guarantees your data will never be sold and limits sharing to aggregated/non-identifiable data only, deleting your account requires contacting support via email. The app is not suitable for children under 13.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app has transparent data practices with an explicit 'no sale' guarantee, but data deletion requires email contact rather than being self-serve in-app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_facebook_id_collection",
+        "title": "Facebook ID collected automatically",
+        "plain_english": "The app collects your Facebook ID as part of device data. This could be used to link your fitness activity to your social media profile, even if the app claims they don't sell data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_manual_deletion_only",
+        "title": "Data deletion requires email contact",
+        "plain_english": "To fully delete your account data, you must email support@musclemonster.fit. Simply uninstalling the app only removes local data from your device, not what's stored on their servers.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_usage_tracking_detailed",
+        "title": "Detailed interaction tracking",
+        "plain_english": "The app logs every tap, feature you use, and how long you spend in each section. This creates a detailed profile of your fitness habits and app behavior.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_sale",
+        "title": "Explicit 'no sale' guarantee",
+        "plain_english": "The privacy policy clearly states 'We guarantee that the information we collect will never be sold' and repeats this for CCPA compliance. This is a strong positive commitment.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_limited_third_party_sharing",
+        "title": "Limited third-party sharing",
+        "plain_english": "The app only shares aggregated, de-identified data that cannot reasonably identify you. No personal data is shared with advertisers or data brokers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_under_13_protected",
+        "title": "No data collection from children under 13",
+        "plain_english": "The app explicitly states they do not knowingly collect personal data from children under 13, which is a responsible practice for COPPA compliance.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_update_notifications",
+        "title": "Policy change notifications",
+        "plain_english": "You'll be notified of material privacy policy changes through the app and asked to review them, rather than changes happening silently.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your camera or microphone according to the privacy policy.",
+      "detail": "No mention of camera or microphone access in the privacy policy. This app functions as a workout planner without requiring audio or video capture.",
+      "policy_excerpt": "No camera or microphone access mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect your location or GPS data.",
+      "detail": "No location data collection is mentioned in the privacy policy. The app doesn't need location for core workout functionality.",
+      "policy_excerpt": "No location or GPS data collection mentioned.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No contact or phonebook access is mentioned in the privacy policy. The app is a solo fitness tracker without social features.",
+      "policy_excerpt": "No contact or phonebook access mentioned.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app likely accesses storage for app data and potentially photos, but this isn't explicitly detailed in the privacy policy.",
+      "detail": "While not explicitly stated, fitness apps typically need storage access for caching workout data. The policy mentions 'data you give us' which could include photos for progress tracking, but this is unclear.",
+      "policy_excerpt": "Data directly/indirectly relating to your practice including your practice schedule, how you feel after practice, areas for improving body type.",
+      "concerns": ["Unclear if photo access is requested for progress tracking"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app only shares aggregated, non-identifiable data. They explicitly promise your information will never be sold.",
+      "detail": "The app shares non-personal information that is aggregated or de-identified. They have an explicit guarantee that information will never be sold. Data may be disclosed only for legal compliance or safety reasons.",
+      "policy_excerpt": "We may share non-personal information that is aggregated or de-identified so that it cannot reasonably be used to identify an individual. We guarantee that the information we collect will never be sold.",
+      "concerns": ["Facebook ID is collected, which could enable third-party tracking"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects account and fitness-related data you provide, plus device information like your Facebook ID for identification.",
+      "detail": "The app collects data about your practice schedule, fitness preferences, and body improvement goals. It also automatically collects device data including Facebook ID, language settings, and device model.",
+      "policy_excerpt": "Data directly/indirectly relating to your practice (including your practice schedule, how you feel after practice, areas for improving body type). We collect data about your mobile device. Examples of such data include language settings, type and model of a device, device settings, operating system, and Facebook ID.",
+      "concerns": ["Facebook ID collection could link fitness data to social profile", "Device data collection is automatic"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks your taps, features used, time spent in app, and subscription orders. Facebook ID collection suggests potential ad tracking capabilities.",
+      "detail": "Detailed usage tracking including taps on interface areas, features interacted with, session duration, and subscription orders. Facebook ID collection indicates potential for cross-app tracking through Facebook's ecosystem.",
+      "policy_excerpt": "We log your taps on certain areas of the interface, the features, and content you interact with, how often you use the App, how long you are in the App, what sections you use, and your subscription orders.",
+      "concerns": ["Facebook ID collected enables potential ad targeting", "Detailed behavioral tracking of all app interactions", "No opt-out mentioned for usage analytics"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't knowingly collect data from children under 13 and requires users to be over 16 years old.",
+      "detail": "The app has a clear age requirement of 16+ and explicitly states they do not knowingly collect personal data from children under 13, complying with COPPA standards.",
+      "policy_excerpt": "We do not knowingly collect Personal Data from children under the age of 13. You promise us that... You are over 16 years old.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app requires internet connection and logs your usage activity, which includes network data.",
+      "detail": "The app logs how you interact with the service, which requires network connectivity. No specific mention of IP logging or network monitoring beyond standard app usage analytics.",
+      "policy_excerpt": "We record how you interact with our Service. For example, we log your taps on certain areas of the interface.",
+      "concerns": ["Usage logging implies network activity tracking"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects device information including your Facebook ID, device model, OS, and language settings.",
+      "detail": "Automatically collects device data including language settings, device type and model, device settings, operating system, and Facebook ID. This data is used for bug fixes and service improvement.",
+      "policy_excerpt": "We collect data about your mobile device. Examples of such data include language settings, type and model of a device, device settings, operating system, and Facebook ID. This information helps fix bugs when any issues are reported on your device.",
+      "concerns": ["Facebook ID is collected", "Device fingerprinting could enable cross-app tracking"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects fitness-related data including your workout schedule, how you feel after exercise, and body improvement goals.",
+      "detail": "Collects data about your practice schedule, post-workout feelings, body improvement areas, and fitness preferences. This is core to the app's functionality as a workout planner.",
+      "policy_excerpt": "Data directly/indirectly relating to your practice (including your practice schedule (i.e., time you practice), how you feel after practice, areas for improving body type, and your preferences relating to the ways of improving your body).",
+      "concerns": ["Health data stored on company servers", "No mention of Apple Health data handling"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app likely uses Apple's in-app purchase system for subscriptions. Your payment details are handled by Apple, not the app developer.",
+      "detail": "The app mentions 'subscription orders' in usage data but doesn't specify payment data collection. As an iOS app, it almost certainly uses Apple's In-App Purchase system where the developer never sees your payment card details.",
+      "policy_excerpt": "No specific mention of payment data collection. Subscription orders mentioned in usage logging.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can uninstall the app to remove local data, but to delete server data you must email support@musclemonster.fit. CCPA deletion rights are supported.",
+      "detail": "Uninstalling removes local device data, but server data deletion requires emailing support@musclemonster.fit. The app supports CCPA rights including knowing what information is collected and requesting deletion. No self-serve data export feature mentioned.",
+      "policy_excerpt": "You can simply uninstall the app to remove any stored data at any time. You can request the deletion of your data by contacting us at support@musclemonster.fit. You can request the details on the information we have collected from you by contacting us at support@musclemonster.fit.",
+      "concerns": ["No self-serve deletion in app", "No automated data export feature", "Deletion requires email contact"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You'll be notified of material policy changes through the app, and you'll be asked to review changes the next time you use the app.",
+      "detail": "Policy changes are posted through the mobile applications. Material changes trigger a notification and require users to review the changes on next app access. Continued use indicates consent.",
+      "policy_excerpt": "We will inform you of any changes by posting the updated Privacy Policy through the mobile applications. If we make any material changes to our Privacy Policy, we will post a notification through the mobile applications and/or by asking you to review the changes to the Privacy Policy the next time you access the Services.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {"category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
+      {"category": "location_gps", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
+      {"category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0},
+      {"category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3},
+      {"category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9},
+      {"category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25},
+      {"category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0},
+      {"category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5},
+      {"category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5},
+      {"category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0},
+      {"category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3},
+      {"category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0}
+    ],
+    "total_deductions": 46.25,
+    "final_score": 69,
+    "grade": "C"
+  }
+}

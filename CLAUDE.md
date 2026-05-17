@@ -70,6 +70,27 @@ These are the source of truth. Do not duplicate their contents here — link out
 
 **Execute every step below yourself using your Bash tool.** The user's only input is the URL.
 
+### Pre-Step — Detect URL type and expand if needed
+
+Inspect the URL before doing anything else:
+
+**If it's a Room URL** — matches the pattern `apps.apple.com/.*/room/\d+`:
+1. Use playwright (via a short inline Python script) to load the room page and extract all `<a href>` links matching `apps.apple.com/.*/app/.*/id\d+` or `apps.apple.com/.*/id\d+`.
+2. Deduplicate the list.
+3. For each app URL, call `https://itunes.apple.com/lookup?id={app_id}` to get the app name, derive the slug, and check if `data/apps/{slug}/app.json` already exists. **Silently skip any app that already exists** — do not ask the user, do not re-scan.
+4. Tell the user: "Found {N} apps in this room. {X} already exist and will be skipped. Spawning {Y} agents for new apps." Then **launch one Claude Code agent per new app in parallel** using:
+```bash
+echo "You are working in $(pwd). Process this App Store URL by following Steps 1–6 of CLAUDE.md (skip Step 7 — the build will run separately): <app_url>" \
+  | ollama launch claude --model kimi-k2.6:cloud -- --dangerously-skip-permissions &
+```
+Run all agent processes in the background (`&`), collect their PIDs, then `wait` for all of them to finish before continuing.
+5. After all agents complete, run a single `npm run build` to verify everything. **Note:** parallel agents writing to `data/index.json` simultaneously can cause conflicts — if the build fails with a JSON parse error, re-run the index update for any app whose entry is missing, then rebuild.
+
+**If it's a direct App URL** — matches `apps.apple.com/.*/id\d+` (with or without `/app/` segment):
+- Skip this Pre-Step entirely and go straight to Step 0.
+
+**If the URL matches neither pattern**, tell the user it doesn't look like a recognized App Store URL and ask them to check it.
+
 ### Step 0 — Check if the app already exists
 
 Use the iTunes API to derive the slug from the URL before scraping anything:

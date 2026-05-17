@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://strct.app/privacy_policy",
+    "terms_url": "https://structured.app/legal",
+    "policy_last_updated": "2024-05-14",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "structured-daily-planner-todo",
+    "name": "Structured: Daily Planner Todo",
+    "developer": "unorderly GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/id1499198946",
+    "app_store_id": "1499198946",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/68/4b/17/684b17ae-bc3d-d02b-51fa-0d0dad2e8326/AppIcon-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Daily Planner",
+    "description": "A visual daily planner that helps users organize tasks and calendar events on a timeline. Includes features like time blocking, Pomodoro timer, AI-powered scheduling, and cross-device synchronization."
+  },
+
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 83,
+    "grade": "A",
+    "one_liner": "A privacy-focused planner with strong GDPR protections, though data is shared with US-based AI and sync services.",
+    "summary": "Structured is a German productivity app with robust privacy protections. It collects minimal data by default and offers strong user rights under GDPR. The main concern is that cloud sync and AI features involve sharing data with US-based processors (Supabase, OpenAI), though standard contractual clauses are in place. Data donation for training is strictly opt-in.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Strong privacy practices with clear GDPR compliance, opt-in consent for optional features, and transparent data processor disclosures."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_us_data_transfers",
+        "title": "Data sent to US-based processors",
+        "plain_english": "Your data is processed by companies in the US (Supabase, OpenAI, iCloud) which may not have the same privacy protections as the EU. The developer uses standard contractual clauses to protect your data, but it's still stored outside the EU.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ai_data_processing",
+        "title": "AI features send your data to OpenAI",
+        "plain_english": "If you use the AI planning features, your task and calendar data is sent to OpenAI for processing. This happens under a data processing agreement, but your data still leaves the app's servers.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_compliant",
+        "title": "Full GDPR compliance",
+        "plain_english": "The app follows strict EU privacy laws and gives you strong rights including access, deletion, and data portability.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_in_donation",
+        "title": "Data donation is strictly optional",
+        "plain_english": "Any data sharing for training or research requires your explicit consent, which you can revoke anytime in settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads",
+        "title": "No advertising or tracking",
+        "plain_english": "The app doesn't show ads or track you for marketing purposes. Usage data is only collected if you explicitly opt in.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Data encrypted in transit",
+        "plain_english": "Your data is protected with TLS encryption when sent between your device and the app's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_transparent_processors",
+        "title": "Transparent about data processors",
+        "plain_english": "The developer clearly lists every company that processes your data, what they do, and where they're located.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't access your camera or microphone.",
+      "detail": "No camera or microphone permissions are requested or used.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't track your location.",
+      "detail": "Location data is only mentioned in the context of website visitors, not app users.",
+      "policy_excerpt": "Location data may be collected when visiting the website, not the app.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't access your contacts.",
+      "detail": "No mention of contact or phonebook access in the privacy policy.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app stores your tasks and calendar data. You can optionally attach photos or files to tasks.",
+      "detail": "User-entered data including tasks, notes, and optionally attached files are stored. The app needs storage access for core functionality.",
+      "policy_excerpt": "When using Structured, you can enter, manage and edit various information, notes, tasks and activities.",
+      "concerns": ["User may attach personal photos or documents to tasks"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Your data is shared with several companies for cloud sync (iCloud, Supabase) and AI features (OpenAI). Most are US-based.",
+      "detail": "Data is shared with Supabase (sync), iCloud (sync), OpenAI (AI features), Sendgrid (emails), and FrontApp (support). Standard contractual clauses are used for US transfers.",
+      "policy_excerpt": "We rely on external companies and external service providers (processors) to provide the services set out in Structured.",
+      "concerns": ["Multiple US-based processors", "AI data sent to OpenAI", "Data leaves EU for sync services"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use the app without an account, but email and password are required for cloud sync features.",
+      "detail": "Email and password are collected for Structured Cloud. The data is shared with Supabase for authentication and sync.",
+      "policy_excerpt": "When registering for the Structured Cloud, We use your e-mail address and password to enable you to synchronize your entries.",
+      "concerns": ["Account data stored by US-based Supabase"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't track you for ads or behavioral profiling. No ad networks are mentioned.",
+      "detail": "No advertising or behavioral tracking is performed. Optional data donation for improvement requires explicit consent.",
+      "policy_excerpt": "No mention of advertising or behavioral tracking in the privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't specifically address children under 13, though the app is rated 4+.",
+      "detail": "No specific safeguards for children's data are mentioned. The app is rated 4+ on the App Store.",
+      "policy_excerpt": "Not explicitly mentioned in privacy policy.",
+      "concerns": ["No COPPA/GDPR-K specific provisions mentioned"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app needs internet for cloud sync and AI features. Website visitors have their IP logged for security.",
+      "detail": "Internet connection required for core features. IP addresses may be logged for website security and statistical purposes.",
+      "policy_excerpt": "Your IP address is only analyzed in the event of attacks on our network infrastructure and for statistical purposes.",
+      "concerns": ["IP logging on website"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Minimal device info is collected for app functionality and troubleshooting.",
+      "detail": "Standard device information may be collected for compatibility and diagnostics, but not for fingerprinting or tracking.",
+      "policy_excerpt": "Not explicitly mentioned beyond standard app store data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't collect health or biometric data.",
+      "detail": "No health or biometric data is collected or processed.",
+      "policy_excerpt": "Not mentioned in privacy policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Payments are handled by Apple. The developer never sees your payment details.",
+      "detail": "All payments processed through Apple's App Store. The developer only receives transaction confirmations.",
+      "policy_excerpt": "When downloading Structured, certain required information is transmitted to the respective app store... This data is processed exclusively by the respective app store and is beyond our control.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have strong rights under GDPR including deletion, export, and access to your data.",
+      "detail": "Full GDPR rights provided: access, rectification, deletion, restriction, portability, and objection. Data retained for duration of use plus 30 days for backups.",
+      "policy_excerpt": "You have the right to obtain confirmation as to whether or not personal data concerning you is being processed... the right to demand that personal data concerning you be deleted immediately.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't clearly explain how you'll be notified of changes.",
+      "detail": "No specific notification method mentioned for policy updates.",
+      "policy_excerpt": "Not explicitly mentioned in privacy policy.",
+      "concerns": ["Unclear how users are notified of policy changes"],
+      "score_impact": 2.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.50, "deduction": 2.5 }
+    ],
+    "total_deductions": 34,
+    "final_score": 83,
+    "grade": "A"
+  }
+}

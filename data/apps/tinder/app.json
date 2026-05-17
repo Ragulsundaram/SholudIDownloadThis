@@ -1,8 +1,8 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://policies.tinder.com/privacy/",
     "terms_url": "https://gotinder.com/terms",
     "policy_last_updated": "2026-04-04",
@@ -15,7 +15,7 @@
     "developer": "Tinder LLC",
     "app_store_url": "https://apps.apple.com/us/app/tinder-dating-app-date-chat/id547702041",
     "app_store_id": "547702041",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/77/0e/a6770e13-7aaa-3bb9-1dfa-056ab81a3a9b/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-0-85-220.png/400x400bb.jpg",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/4b/0d/ab4b0db8-af34-d152-7082-c1d366b11186/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-0-85-220.png/512x512bb.jpg",
     "category": "Lifestyle",
     "sub_category": "Dating",
     "description": "The world's most popular dating app for meeting new people, with millions of users nearby and around the globe."

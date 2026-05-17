@@ -5,7 +5,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { IndexEntry } from "@/lib/types";
 import { AppCard } from "./AppCard";
 
-const ITEMS_PER_PAGE = 16;
+// xl breakpoint = 3 columns → 5 rows × 3 = 15; otherwise 16
+function useItemsPerPage() {
+  const [items, setItems] = useState(16);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1280px)");
+    const update = (e: MediaQueryListEvent | MediaQueryList) => {
+      setItems(e.matches ? 15 : 16);
+    };
+    update(mq);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return items;
+}
 
 function getPageFromUrl(): number {
   if (typeof window === "undefined") return 1;
@@ -26,7 +39,8 @@ function setUrlPage(page: number) {
 }
 
 export function PaginatedAppGrid({ apps }: { apps: IndexEntry[] }) {
-  const totalPages = Math.max(1, Math.ceil(apps.length / ITEMS_PER_PAGE));
+  const itemsPerPage = useItemsPerPage();
+  const totalPages = Math.max(1, Math.ceil(apps.length / itemsPerPage));
 
   const getValidPage = useCallback(
     () => Math.min(getPageFromUrl(), totalPages),
@@ -54,8 +68,8 @@ export function PaginatedAppGrid({ apps }: { apps: IndexEntry[] }) {
     }
   }, [currentPage, totalPages]);
 
-  const start = (currentPage - 1) * ITEMS_PER_PAGE;
-  const pageApps = apps.slice(start, start + ITEMS_PER_PAGE);
+  const start = (currentPage - 1) * itemsPerPage;
+  const pageApps = apps.slice(start, start + itemsPerPage);
 
   const goTo = useCallback(
     (page: number) => {
