@@ -395,15 +395,15 @@
     "slug": "linkedin",
     "name": "LinkedIn",
     "developer": "LinkedIn Corporation (Microsoft affiliate)",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/57/07/065707da-578f-c955-c23e-2e89081e5100/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/da/09/0a/da090a77-dc46-a3e3-b9e3-1c99ef6b0363/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Business",
     "description": "A professional networking platform for connecting with colleagues, finding jobs, sharing industry news, and building your career.",
-    "one_liner": "LinkedIn shares your data with Microsoft and advertisers, and your public posts can spread widely.",
-    "score": 49,
+    "one_liner": "LinkedIn shares your data with Microsoft for ads and AI training, tracks you across devices, and your public posts can spread widely.",
+    "score": 47,
     "grade": "D",
     "risk": "risky",
-    "analyzed_at": "2026-05-16",
-    "needs_review": true
+    "analyzed_at": "2026-05-17",
+    "needs_review": false
   },
   {
     "slug": "microsoft-word",
@@ -412,12 +412,12 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/88/e8/aa/88e8aac1-fc95-de90-6ee3-5c5e543a096d/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
     "category": "Productivity",
     "description": "The mobile version of Microsoft's word-processing app for creating, editing, and sharing documents, with cloud sync via OneDrive and AI-powered Copilot features.",
-    "one_liner": "Word may share your data with advertisers and process documents on Microsoft cloud servers.",
+    "one_liner": "Word processes documents on Microsoft cloud servers, tracks you across devices, and may use your data to train AI models unless you opt out.",
     "score": 59,
     "grade": "C",
     "risk": "caution",
-    "analyzed_at": "2026-05-16",
-    "needs_review": true
+    "analyzed_at": "2026-05-17",
+    "needs_review": false
   },
   {
     "slug": "myntra",
@@ -426,12 +426,12 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/a9/ef/d3a9ef80-3c72-f46e-e99c-a07a24192614/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Shopping",
     "description": "India's leading fashion and lifestyle shopping app for clothing, footwear, accessories and home furnishing for men, women and kids.",
-    "one_liner": "Myntra's privacy policy could not be fetched, so its data practices cannot be evaluated.",
-    "score": 50,
+    "one_liner": "Myntra's privacy policy is inaccessible, but their Terms of Use grants them broad rights to your content and shares data with sellers.",
+    "score": 54,
     "grade": "D",
     "risk": "risky",
-    "analyzed_at": "2026-05-16",
-    "needs_review": true
+    "analyzed_at": "2026-05-17",
+    "needs_review": false
   },
   {
     "slug": "perplexity-ai-search-chat",

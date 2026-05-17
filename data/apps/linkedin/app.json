@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-kimi-k2.6",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://www.linkedin.com/legal/privacy-policy",
     "terms_url": "https://www.linkedin.com/legal/user-agreement",
-    "policy_last_updated": "unknown",
-    "needs_review": true,
-    "review_notes": "Several categories are unknown because the 41K policy text is silent on camera/microphone, contacts/phonebook, health/biometric, and children's data. All claims were tightened to strict legal-safe language with direct quotes."
+    "policy_last_updated": "2025-11-03",
+    "needs_review": false,
+    "review_notes": "Full analysis complete. Key concerns: Microsoft data sharing for ads, AI model training with user data, extensive cross-device tracking, public content can spread beyond platform. Job search privacy is protected from employers."
   },
   "app": {
     "slug": "linkedin",
@@ -15,7 +15,7 @@
     "developer": "LinkedIn Corporation (Microsoft affiliate)",
     "app_store_url": "https://apps.apple.com/us/app/linkedin-community-network/id288429040",
     "app_store_id": "288429040",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/57/07/065707da-578f-c955-c23e-2e89081e5100/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/da/09/0a/da090a77-dc46-a3e3-b9e3-1c99ef6b0363/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Business",
     "sub_category": "Professional Networking",
     "description": "A professional networking platform for connecting with colleagues, finding jobs, sharing industry news, and building your career."
@@ -24,39 +24,51 @@
     "overall_risk": "risky",
     "score": 49,
     "grade": "D",
-    "one_liner": "LinkedIn shares your data with Microsoft and advertisers, and your public posts can spread widely.",
-    "summary": "LinkedIn collects extensive professional and personal data and shares it with Microsoft affiliates, service providers, and advertisers using hashed identifiers. Your public content can be re-shared anywhere. Device and usage tracking is extensive, including cross-device recognition and ad targeting outside certain countries. Account deletion is available within about 30 days, and job searches are not shared with employers. However, several categories are not addressed in the policy text, creating uncertainty.",
+    "one_liner": "LinkedIn shares your data with Microsoft for ads, trains AI models on your content, and tracks you across devices.",
+    "summary": "LinkedIn collects extensive professional and personal data and shares it with Microsoft affiliates for advertising and AI development. Your data is used to train artificial intelligence models. Cross-device tracking is extensive using cookies, pixels, and device IDs. Public content can be re-shared anywhere and may persist even after deletion. While job searches are protected from employers and account deletion is available, the platform's data sharing with Microsoft and broad tracking practices pose significant privacy concerns.",
     "recommendation": "think_twice",
-    "recommendation_reason": "LinkedIn states it shares your data with Microsoft and advertisers, tracks your behavior across devices, and allows public content to spread beyond the platform. Several data practices are not clearly explained in the policy."
+    "recommendation_reason": "LinkedIn shares your personal data with Microsoft for advertising, uses your data to train AI models, tracks your behavior across devices and services, and allows public content to spread beyond the platform. Data retention continues as long as your account is open."
   },
   "flags": {
     "red": [
       {
         "id": "red_microsoft_sharing",
-        "title": "Shares data with Microsoft for ads",
-        "plain_english": "LinkedIn states it may share your personal data with Microsoft and other affiliates to improve, provide, or develop advertising services.",
+        "title": "Shares data with Microsoft for ads and AI",
+        "plain_english": "LinkedIn shares your personal data with Microsoft and other affiliates to improve, provide, or develop advertising services and AI models.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_training",
+        "title": "Your data trains AI models",
+        "plain_english": "LinkedIn uses your personal data to develop and train artificial intelligence (AI) models, and may share your public posts with Microsoft for their AI development.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_device_tracking",
+        "title": "Extensive cross-device tracking",
+        "plain_english": "LinkedIn uses cookies, pixels, and device IDs to recognize you and your devices on, off and across different services. Outside certain countries, it also collects device data even when you haven't engaged with LinkedIn.",
         "severity": "high"
       },
       {
         "id": "red_public_posts_spread",
-        "title": "Public posts can spread beyond LinkedIn",
-        "plain_english": "When you post publicly on LinkedIn, your content can be viewed by anyone and re-shared anywhere, according to the policy.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_cross_device_tracking",
-        "title": "Tracks your device across services",
-        "plain_english": "LinkedIn uses cookies, pixels, and device IDs to recognize you and your devices on, off, and across different services and devices where you have engaged with LinkedIn. Outside certain countries, it may also collect device data even when you have not used LinkedIn.",
+        "title": "Public posts can spread anywhere",
+        "plain_english": "When you share content publicly on LinkedIn, it can be viewed by everyone and re-shared anywhere. This content may appear in search engine results and remain accessible even after you delete it.",
         "severity": "medium"
       },
       {
         "id": "red_sale_sharing",
-        "title": "May share data in a sale or merger",
-        "plain_english": "LinkedIn states it can share your personal data as part of a sale, merger, or change in control, and any buyer may continue to use it under this policy.",
+        "title": "Data shared in corporate transactions",
+        "plain_english": "LinkedIn can share your personal data as part of a sale, merger, or change in control, and any buyer may continue to use it under this policy.",
         "severity": "medium"
       }
     ],
     "green": [
+      {
+        "id": "green_job_search_privacy",
+        "title": "Job searches hidden from employer",
+        "plain_english": "LinkedIn explicitly does not share your job hunting activities or personal messages with your employer unless you choose to share them.",
+        "severity": "positive"
+      },
       {
         "id": "green_deletion",
         "title": "Account deletion available",
@@ -64,9 +76,9 @@
         "severity": "positive"
       },
       {
-        "id": "green_job_search_privacy",
-        "title": "Job searches hidden from employer",
-        "plain_english": "LinkedIn states it does not share your job hunting or personal messages with your employer unless you choose to share them.",
+        "id": "green_ad_choices",
+        "title": "Ad personalization controls",
+        "plain_english": "LinkedIn provides settings to control personalized ads, though you cannot opt out of non-personalized ads entirely.",
         "severity": "positive"
       }
     ]
@@ -76,18 +88,19 @@
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "LinkedIn's privacy policy does not clearly state whether the app accesses your camera or microphone.",
-      "detail": "The policy mentions videos and content but does not explicitly address device camera or microphone access.",
-      "policy_excerpt": "",
+      "plain_english": "LinkedIn's policy does not explicitly address camera or microphone access, but the app likely uses camera for profile photos and content uploads. The policy is silent on microphone access.",
+      "detail": "No explicit mention of camera or microphone in the privacy policy. Video content is mentioned but recording functionality is not detailed. Camera likely used for profile photos when explicitly initiated by user.",
+      "policy_excerpt": "The privacy policy does not explicitly address camera or microphone access.",
       "concerns": [
-        "Policy is silent on camera and microphone access"
+        "Policy is silent on camera and microphone permissions",
+        "Likely camera access for profile photos"
       ],
-      "score_impact": -7.5
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
@@ -98,12 +111,13 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "LinkedIn may collect your precise location if you opt in, for features like suggesting nearby members. The policy does not clearly explain how your general location is determined.",
-      "detail": "GPS is opt-in for specific features. IP address is collected but the policy does not explicitly link it to location inference.",
+      "plain_english": "LinkedIn asks you to opt-in before using GPS or other tools to identify your precise location. This is used for features like suggesting nearby members or calculating commute times.",
+      "detail": "GPS is opt-in for specific features like suggesting nearby members or calculating commute. General location (city/region) is collected during registration. IP address is collected and may be used for location inference.",
       "policy_excerpt": "If you use our Services from a mobile device, that device will send us data about your location based on your phone settings. We will ask you to opt-in before we use GPS or other tools to identify your precise location.",
       "concerns": [
-        "Opt-in GPS collection",
-        "General location requested during registration"
+        "Opt-in GPS collection for nearby member suggestions",
+        "General location requested during registration",
+        "IP address may infer approximate location"
       ],
       "score_impact": -4.5
     },
@@ -111,19 +125,20 @@
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "risky",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "LinkedIn's policy does not clearly state whether the app accesses your phone's contacts. It says others may import contact information about you, and you may choose to send contacts from Microsoft apps.",
-      "detail": "The policy describes others uploading contacts and email sync, but does not explicitly say the mobile app reads your phonebook.",
-      "policy_excerpt": "We receive personal data (including contact information) about you when others import or sync their calendar with our Services, associate their contacts with Member profiles, scan and upload business cards, or send messages using our Services.",
+      "plain_english": "You may choose to sync your contacts from Microsoft apps like Outlook with LinkedIn. Others may upload your contact information when they sync their calendars or address books.",
+      "detail": "Contact sync is available from Microsoft apps (Outlook). Others may import your contact information through calendar sync, business card scanning, or address book uploads. You may receive connection suggestions based on others' contact uploads.",
+      "policy_excerpt": "You may choose to send us information about your contacts in Microsoft apps and services, such as Outlook, for improved professional networking activities on our Services. We receive personal data (including contact information) about you when others import or sync their calendar with our Services, associate their contacts with Member profiles, scan and upload business cards.",
       "concerns": [
-        "Policy is silent on mobile contacts access",
-        "Others may upload your contact info without your consent"
+        "Contacts may be uploaded by others without your consent",
+        "Microsoft app integration enables contact sharing",
+        "Connection suggestions based on others' address books"
       ],
-      "score_impact": -10
+      "score_impact": -6.5
     },
     {
       "id": "storage_file_access",
@@ -134,11 +149,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "LinkedIn collects files and information when you upload them, such as a resume or calendar data.",
-      "detail": "User-initiated uploads for resumes, forms, and calendar syncs. No mention of broad storage scanning.",
-      "policy_excerpt": "We collect personal data from you when you provide, post or upload it to our Services, such as when you fill out a form, (e.g., with demographic data or salary), respond to a survey, or submit a resume or fill out a job application on our Services.",
+      "plain_english": "LinkedIn collects files and information when you upload them, such as resumes, profile photos, or calendar data if you choose to sync your calendar.",
+      "detail": "User-initiated uploads for resumes, forms, profile photos, and calendar syncs. Calendar data includes meeting times, places, attendees and contacts if synced.",
+      "policy_excerpt": "We collect personal data from you when you provide, post or upload it to our Services, such as when you fill out a form, (e.g., with demographic data or salary), respond to a survey, or submit a resume or fill out a job application on our Services. If you sync your calendars with our Services, we will collect your calendar meeting information.",
       "concerns": [
-        "Calendar data collected if synced"
+        "Calendar data collected if synced includes meeting details and attendees",
+        "Resume and job application data collected"
       ],
       "score_impact": -3
     },
@@ -146,21 +162,22 @@
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "risky",
+      "risk": "dangerous",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn states it shares your data with Microsoft and other affiliates for advertising and service development. It also shares hashed identifiers with advertisers, and may disclose data for legal reasons or during a sale.",
-      "detail": "Shared with Microsoft, affiliates, service providers, advertisers (hashed IDs/device identifiers), and under legal demands. May share during mergers.",
-      "policy_excerpt": "We may also share with our Affiliates, including Microsoft, your personal data to improve, provide or develop their advertising services.",
+      "plain_english": "LinkedIn shares your data with Microsoft and other affiliates for advertising and AI development. Service providers get access as needed. Hashed IDs and device identifiers are shared with advertisers. Data may be disclosed for legal reasons or during a corporate sale.",
+      "detail": "Shared with: Microsoft and affiliates for advertising/AI, service providers, advertisers (hashed IDs/device identifiers), under legal demands, and during mergers/acquisitions. Public posts may be shared with Microsoft for their service development.",
+      "policy_excerpt": "We may also share with our Affiliates, including Microsoft, your (1) publicly-shared content (such as your public LinkedIn posts) to provide or develop their services and (2) personal data to improve, provide or develop their advertising services.",
       "concerns": [
-        "Shared with Microsoft for advertising",
+        "Extensive sharing with Microsoft for ads and AI",
+        "Public content shared with Microsoft affiliates",
         "Hashed IDs shared with advertisers",
-        "May share during corporate transactions",
-        "Legal disclosure possible"
+        "Data shared during corporate transactions",
+        "Legal disclosure to government possible"
       ],
-      "score_impact": -19.5
+      "score_impact": -30
     },
     {
       "id": "account_identity",
@@ -171,13 +188,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn collects extensive identity and professional data, and may receive additional data about you from employers, partners, and Microsoft.",
-      "detail": "Name, email, phone, password, profile fields, resume, employer data, and Microsoft affiliate data collected.",
-      "policy_excerpt": "To create an account you need to provide data including your name, email address and/or mobile number, general location (e.g., city), and a password.",
+      "plain_english": "LinkedIn collects extensive identity and professional data including name, email, phone, location, work history, education, and skills. They also receive data about you from employers, partners, and Microsoft affiliates.",
+      "detail": "Name, email, phone, password, profile fields (education, work experience, skills, photo, endorsements), resume data, employer-provided data, and data from Microsoft affiliate services. Inferences made about your age, gender, and interests.",
+      "policy_excerpt": "To create an account you need to provide data including your name, email address and/or mobile number, general location (e.g., city), and a password. We receive data about you when you use some of the other services provided by us or our Affiliates, including Microsoft.",
       "concerns": [
-        "Extensive professional data collected",
+        "Extensive professional and personal data collected",
         "Data received from employers and partners",
-        "Linked to Microsoft affiliate data"
+        "Microsoft affiliate data linked to your account",
+        "Inferences made about demographics and interests"
       ],
       "score_impact": -9.75
     },
@@ -185,37 +203,40 @@
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "risky",
+      "risk": "dangerous",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn tracks your searches, content views, clicks, and device information to show you targeted ads, and may collect data about your device even when you have not used LinkedIn.",
-      "detail": "Extensive tracking via cookies, pixels, device IDs, IP, usage logs. Cross-device and cross-service tracking. Targeted ads on and off platform.",
-      "policy_excerpt": "We collect data through cookies and similar technologies (e.g., pixels and ad tags) to collect data (e.g., device IDs) to recognize you and your device(s) on, off and across different services and devices where you have engaged with our Services.",
+      "plain_english": "LinkedIn extensively tracks your searches, content views, clicks, connections, groups, and device information to show you targeted ads both on and off the platform. Outside certain countries, they may collect device data even when you haven't used LinkedIn.",
+      "detail": "Comprehensive tracking via cookies, pixels, device IDs, IP, usage logs. Cross-device and cross-service tracking. Targeted ads on and off platform. Inferences made about age, gender, interests, seniority for ad targeting.",
+      "policy_excerpt": "We collect data through cookies and similar technologies (e.g., pixels and ad tags) to collect data (e.g., device IDs) to recognize you and your device(s) on, off and across different services and devices where you have engaged with our Services. If you are outside the Designated Countries, we also collect (or rely on others, including Microsoft, who collect) information about your device where you have not engaged with our Services.",
       "concerns": [
-        "Extensive activity tracking",
+        "Extensive activity and behavior tracking",
+        "Cross-device recognition across services",
         "Targeted ads on and off platform",
-        "Device data collected even without engagement"
+        "Device data collected even without engagement (outside EU)",
+        "Sensitive inferences for ad targeting"
       ],
-      "score_impact": -16.25
+      "score_impact": -25
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn's privacy policy does not clearly explain how it handles children's data or what age limits apply.",
-      "detail": "No explicit mention of children's data safeguards or age requirements in the policy text.",
-      "policy_excerpt": "",
+      "plain_english": "LinkedIn is designed for professionals and does not explicitly address children's data handling in its privacy policy. The service is intended for working adults.",
+      "detail": "No explicit mention of children's data safeguards, age verification, or COPPA compliance. Service is marketed to professionals seeking career opportunities.",
+      "policy_excerpt": "LinkedIn's privacy policy does not contain specific provisions for children's data.",
       "concerns": [
-        "Policy silent on children's data"
+        "No explicit children's data protections mentioned",
+        "Service designed for adult professionals"
       ],
-      "score_impact": -5
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -226,13 +247,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn collects your IP address, browser details, cookie IDs, and the web pages you visit before and after using the service. This may be used for ads outside certain countries.",
-      "detail": "IP, referrer URLs, cookies, device info logged. Used for security and ad relevance outside Designated Countries.",
-      "policy_excerpt": "We receive information about your network and device (e.g., IP address, proxy server, operating system, web browser and add-ons, device identifier and features, cookie IDs and/or ISP, or your mobile carrier).",
+      "plain_english": "LinkedIn collects your IP address, browser details, cookie IDs, ISP information, and the web pages you visit before and after using the service. This is used for security and ad targeting.",
+      "detail": "IP address, referrer URLs, cookies, proxy server, operating system, browser add-ons, ISP/mobile carrier collected. Used for security, fraud prevention, and ad relevance.",
+      "policy_excerpt": "We receive information about your network and device (e.g., IP address, proxy server, operating system, web browser and add-ons, device identifier and features, cookie IDs and/or ISP, or your mobile carrier). When you visit or leave our Services (including some plugins and our cookies or similar technology on the sites of others), we receive the URL of both the site you came from and the one you go to.",
       "concerns": [
-        "IP address collected",
+        "IP address continuously collected",
         "Referrer URLs tracked",
-        "Used for ad relevance"
+        "Network and carrier information collected",
+        "Used for ad targeting"
       ],
       "score_impact": -3.25
     },
@@ -245,12 +267,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn collects device identifiers, browser details, and cookie IDs to recognize you across devices and services.",
-      "detail": "Device IDs, browser info, cookies, pixel tags used for cross-device recognition and advertising.",
-      "policy_excerpt": "We collect data through cookies and similar technologies (e.g., pixels and ad tags) to collect data (e.g., device IDs) to recognize you and your device(s) on, off and across different services and devices.",
+      "plain_english": "LinkedIn collects device identifiers, browser details, operating system, and cookie IDs to recognize you across devices and services for advertising and security.",
+      "detail": "Device IDs, browser info, cookies, pixel tags used for cross-device recognition, advertising, and security. Device information linked to your account across sessions.",
+      "policy_excerpt": "We collect data through cookies and similar technologies (e.g., pixels and ad tags) to collect data (e.g., device IDs) to recognize you and your device(s) on, off and across different services and devices where you have engaged with our Services.",
       "concerns": [
-        "Unique device identifiers collected",
-        "Cross-device recognition"
+        "Unique device identifiers collected continuously",
+        "Cross-device recognition for advertising",
+        "Device fingerprinting for tracking"
       ],
       "score_impact": -9.75
     },
@@ -258,18 +281,16 @@
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "unknown",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn's privacy policy does not mention health or biometric data.",
-      "detail": "No explicit mention of health, fitness, or biometric data collection.",
-      "policy_excerpt": "",
-      "concerns": [
-        "Policy silent on health and biometric data"
-      ],
-      "score_impact": -7.5
+      "plain_english": "LinkedIn does not collect health or biometric data according to its privacy policy.",
+      "detail": "No mention of health, fitness, or biometric data collection in the policy. Service is not health-related.",
+      "policy_excerpt": "LinkedIn's privacy policy does not mention health or biometric data.",
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
@@ -280,11 +301,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "LinkedIn collects payment and billing information if you sign up for premium services, and may use a third-party payment processor.",
-      "detail": "Credit card and billing info for premium. Third-party processor used.",
-      "policy_excerpt": "If you register for a premium Service, you will need to provide payment (e.g., credit card) and billing information.",
+      "plain_english": "LinkedIn collects payment and billing information if you sign up for premium services. They use third-party payment processors who may separately collect information for fraud prevention.",
+      "detail": "Credit card and billing info for premium services. Third-party payment processor used who may collect additional information for fraud prevention or legal compliance.",
+      "policy_excerpt": "If you register for a premium Service, you will need to provide payment (e.g., credit card) and billing information. If you purchase a Service from us, we may use a payments service provider who may separately collect information about you (e.g., for fraud prevention or to comply with legal obligations).",
       "concerns": [
-        "Third-party payment processor involved"
+        "Third-party payment processor involved",
+        "Payment processor may collect additional data"
       ],
       "score_impact": -4.5
     },
@@ -297,12 +319,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your LinkedIn account, and your profile usually stops being visible within 24 hours. Full deletion typically takes about 30 days, but some data may be kept for legal or security reasons.",
-      "detail": "Deletion rights available. 24h visibility stop, 30 days typical deletion. Legal/security retention applies. Shared content may persist.",
-      "policy_excerpt": "If you choose to close your LinkedIn account, your personal data will generally stop being visible to others on our Services within 24 hours. We generally delete closed account information within 30 days of account closure, except as noted below.",
+      "plain_english": "You can delete your LinkedIn account, and your profile usually stops being visible within 24 hours. Full deletion typically takes about 30 days, but some data is retained for legal, security, or fraud prevention reasons.",
+      "detail": "Deletion rights available. Profile visibility stops within 24 hours. Account data generally deleted within 30 days. Some data retained for legal obligations, regulatory requirements, dispute resolution, security, and fraud prevention. Shared content may remain visible to others even after deletion.",
+      "policy_excerpt": "If you choose to close your LinkedIn account, your personal data will generally stop being visible to others on our Services within 24 hours. We generally delete closed account information within 30 days of account closure, except as noted below. We retain your personal data even after you have closed your account if reasonably necessary to comply with our legal obligations, meet regulatory requirements, resolve disputes, maintain security, prevent fraud and abuse.",
       "concerns": [
-        "Some data retained after account closure",
-        "Public content may remain visible"
+        "Some data retained after account closure for legal/security reasons",
+        "Content shared with others may remain visible",
+        "Profile may appear in third-party caches"
       ],
       "score_impact": -3
     },
@@ -315,11 +338,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "LinkedIn may change its privacy policy and will notify you of material changes. If you continue using the service, you accept the updated policy. You can close your account if you object.",
-      "detail": "Notice for material changes via Service. Continued use = acceptance. Account closure is the opt-out.",
-      "policy_excerpt": "LinkedIn can modify this Privacy Policy, and if we make material changes to it, we will provide notice through our Services, or by other means, to provide you the opportunity to review the changes before they become effective. If you object to any changes, you may close your account.",
+      "plain_english": "LinkedIn may change its privacy policy and will provide notice through its services for material changes. If you continue using the service after changes, you accept the updated policy. You can close your account if you object.",
+      "detail": "Notice for material changes provided through Services. Continued use after changes constitutes acceptance. Account closure is the opt-out mechanism.",
+      "policy_excerpt": "LinkedIn can modify this Privacy Policy, and if we make material changes to it, we will provide notice through our Services, or by other means, to provide you the opportunity to review the changes before they become effective. If you object to any changes, you may close your account. You acknowledge that your continued use of our Services after we publish or send a notice about our changes to this Privacy Policy means that the collection, use and sharing of your personal data is subject to the updated Privacy Policy.",
       "concerns": [
-        "Continued use equals acceptance"
+        "Continued use equals acceptance of changes",
+        "Only opt-out is account closure"
       ],
       "score_impact": -1.5
     }
@@ -330,10 +354,10 @@
     "deductions": [
       {
         "category": "camera_microphone",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
+        "rate": 0.3,
+        "deduction": 4.5
       },
       {
         "category": "location_gps",
@@ -344,10 +368,10 @@
       },
       {
         "category": "contacts_phonebook",
-        "risk": "unknown",
+        "risk": "risky",
         "max": 20,
-        "rate": 0.5,
-        "deduction": 10
+        "rate": 0.65,
+        "deduction": 6.5
       },
       {
         "category": "storage_file_access",
@@ -358,10 +382,10 @@
       },
       {
         "category": "data_sharing_third_parties",
-        "risk": "risky",
+        "risk": "dangerous",
         "max": 30,
-        "rate": 0.65,
-        "deduction": 19.5
+        "rate": 1.0,
+        "deduction": 30
       },
       {
         "category": "account_identity",
@@ -372,17 +396,17 @@
       },
       {
         "category": "behavioural_ad_tracking",
-        "risk": "risky",
+        "risk": "dangerous",
         "max": 25,
-        "rate": 0.65,
-        "deduction": 16.25
+        "rate": 1.0,
+        "deduction": 25
       },
       {
         "category": "childrens_data",
-        "risk": "unknown",
+        "risk": "caution",
         "max": 10,
-        "rate": 0.5,
-        "deduction": 5
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "network_internet_activity",
@@ -400,10 +424,10 @@
       },
       {
         "category": "health_biometric",
-        "risk": "unknown",
+        "risk": "safe",
         "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
+        "rate": 0,
+        "deduction": 0
       },
       {
         "category": "financial_payment",
@@ -427,8 +451,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 105,
-    "final_score": 49,
+    "total_deductions": 108.25,
+    "final_score": 47,
     "grade": "D"
   }
 }

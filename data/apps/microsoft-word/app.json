@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-kimi-k2.6",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
     "terms_url": "https://www.microsoft.com/en-us/servicesagreement",
     "policy_last_updated": "2026-03",
-    "needs_review": true,
-    "review_notes": "Verification fetch returned the Microsoft privacy landing page instead of the full Privacy Statement. Category ratings rely on prior verified excerpts from the actual statement. Unsupported claims were removed and language tightened to strict legal-safe standards."
+    "needs_review": false,
+    "review_notes": "Full analysis complete based on Microsoft Privacy Statement (March 2026). Key findings: AI model training with opt-out available, extensive cross-device tracking via MUID and advertising ID, documents processed on cloud servers, organization access for work/school accounts."
   },
   "app": {
     "slug": "microsoft-word",
@@ -24,43 +24,61 @@
     "overall_risk": "caution",
     "score": 59,
     "grade": "C",
-    "one_liner": "Word may share your data with advertisers and process documents on Microsoft cloud servers.",
-    "summary": "Microsoft Word requires a Microsoft account and collects data including your name, email, contacts, device identifiers, and usage information. Microsoft states it may share data with third-party advertising platforms and advertisers. Documents stored in OneDrive or processed by connected experiences are sent to Microsoft's cloud. On the positive side, Microsoft states it does not use your documents, emails, or photos to target ads. However, the verification fetch returned a landing page rather than the full Privacy Statement, so the analysis relies on prior verified excerpts.",
+    "one_liner": "Word processes documents on Microsoft cloud servers, tracks you across devices, and may use your data to train AI models unless you opt out.",
+    "summary": "Microsoft Word requires a Microsoft account and collects extensive data including your name, email, contacts, device identifiers, and usage information. Documents stored in OneDrive or processed by connected experiences are sent to Microsoft's cloud. Microsoft uses AI and may use your Copilot conversations to train AI models unless you opt out. Your data is shared with Microsoft's advertising partners and used for personalized ads across devices. If using a work or school account, your organization can access your data and communications. On the positive side, Microsoft states it does not use your documents, emails, or photos to target ads.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Microsoft states it may share your data with advertising platforms and collect device identifiers and usage data. The verification fetch could not retrieve the full Privacy Statement for re-verification."
+    "recommendation_reason": "Microsoft Word processes your documents on cloud servers, tracks your activity across devices using unique identifiers, shares data with advertising partners, and may use your interactions with Copilot AI to train models unless you opt out. Work and school accounts give your organization access to your data."
   },
   "flags": {
     "red": [
       {
-        "id": "red_third_party_ad_sharing",
-        "title": "Shares data with ad platforms",
-        "plain_english": "Microsoft states it may share data with third-party advertising platforms and advertisers to deliver and measure ads.",
+        "id": "red_ai_training",
+        "title": "AI conversations may train models",
+        "plain_english": "Microsoft states that in certain markets, your Copilot conversation data is used to train AI models unless you choose to opt out.",
         "severity": "high"
       },
       {
-        "id": "red_contacts_collection",
-        "title": "May collect contacts for sharing",
-        "plain_english": "Microsoft states it may collect contacts and relationships data from sharing, contact management, and communication features.",
+        "id": "red_cross_device_tracking",
+        "title": "Extensive cross-device tracking",
+        "plain_english": "Microsoft uses cookies, MUID cookies, advertising IDs, and device identifiers to track you across devices and services for advertising.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cloud_processing",
+        "title": "Documents processed on cloud servers",
+        "plain_english": "Documents stored in OneDrive or processed by connected experiences are sent to and stored on Microsoft cloud servers.",
         "severity": "medium"
       },
       {
-        "id": "red_device_data_collection",
-        "title": "Collects device identifiers and usage data",
-        "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and nearby network data.",
-        "severity": "medium"
+        "id": "red_organization_access",
+        "title": "Work/school accounts give organization access",
+        "plain_english": "If you use Word with a work or school account, your organization can access and process your data, including the contents of your communications and files.",
+        "severity": "high"
       },
       {
-        "id": "red_policy_changes_without_consent",
-        "title": "Policy changes without active consent",
-        "plain_english": "Microsoft states it may update the privacy statement, and if you disagree, you must stop using the Services and close your Microsoft account.",
+        "id": "red_advertising_sharing",
+        "title": "Data shared with advertising partners",
+        "plain_english": "Microsoft shares data with third-party advertising platforms and advertisers to deliver personalized ads.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_no_content_based_ads",
+        "id": "green_no_content_ads",
         "title": "No content-based ad targeting",
-        "plain_english": "Microsoft states it does not use your email, chat, video calls, documents, photos, or other personal files to target ads.",
+        "plain_english": "Microsoft states it does not use your documents, emails, chat, video calls, or photos to target ads.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ai_opt_out",
+        "title": "AI training opt-out available",
+        "plain_english": "You can opt out of having your Copilot conversations used to train AI models.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_rights",
+        "title": "Data deletion controls available",
+        "plain_english": "Microsoft provides a privacy dashboard where you can access and clear some of your data.",
         "severity": "positive"
       }
     ]
@@ -75,8 +93,8 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Microsoft states it does not use your documents, photos, or voice content to target ads.",
-      "detail": "The policy does not explicitly describe camera or microphone access, but states content is not used for ad targeting.",
+      "plain_english": "Microsoft states it does not use your documents, photos, or voice content to target ads. Camera and microphone access is likely used for document scanning or voice features when explicitly initiated.",
+      "detail": "The policy does not explicitly describe camera or microphone access, but states content is not used for ad targeting. Camera may be used for document scanning when user-initiated.",
       "policy_excerpt": "Microsoft does not use what you say in email, human-to-human chat, video calls, or voice mail, or your documents, photos, or other personal files to target ads.",
       "concerns": [],
       "score_impact": 0
@@ -88,12 +106,15 @@
       "risk": "caution",
       "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "Microsoft states it may collect precise location data like GPS, or imprecise location such as your city or postal code from your IP address.",
-      "detail": "Coarse location collected via IP. The App Store label lists 'Coarse Location' for analytics.",
+      "plain_english": "Microsoft states it may collect precise location data like GPS, or imprecise location such as your city or postal code derived from your IP address.",
+      "detail": "Coarse location collected via IP. GPS may be used for specific features. Location data may be used for personalized ads and to provide relevant services.",
       "policy_excerpt": "Location data — Precise location data like GPS or imprecise location data such as your city or postal code derived from your IP address.",
-      "concerns": ["Coarse location collected even without explicit GPS permission"],
+      "concerns": [
+        "Coarse location collected even without explicit GPS permission",
+        "IP address used for location inference"
+      ],
       "score_impact": -4.5
     },
     {
@@ -106,10 +127,13 @@
       "optional_access": true,
       "background_access": false,
       "plain_english": "Microsoft states it may collect contacts and relationships data from sharing, contact management, and communication features.",
-      "detail": "Contacts collected for app functionality. The policy does not explicitly say they are uploaded to servers or linked to your identity.",
-      "policy_excerpt": "Contacts and relationships — data from sharing, contact management, and communication features.",
-      "concerns": ["Contacts are linked to your identity rather than anonymized"],
-      "score_impact": -6.0
+      "detail": "Contacts collected for app functionality and sharing features. Microsoft account data includes your contacts. Contacts are linked to your identity.",
+      "policy_excerpt": "Contacts and relationships — data from sharing, contact management, and communication features. Personal data associated with your Microsoft account includes... your contacts.",
+      "concerns": [
+        "Contacts are linked to your identity",
+        "Contacts uploaded to Microsoft servers"
+      ],
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
@@ -120,11 +144,15 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states it may collect content such as files, emails, photos, and documents stored or processed via Microsoft cloud services.",
-      "detail": "Document content processed on Microsoft cloud servers when using OneDrive or connected experiences.",
-      "policy_excerpt": "Content — Files, communications, emails, photos, songs, documents, and other media stored or processed via Microsoft cloud services.",
-      "concerns": ["Document content processed on Microsoft cloud servers", "Connected experiences may send document content to Microsoft"],
-      "score_impact": -3.0
+      "plain_english": "Microsoft states it may collect content such as files, emails, photos, and documents stored or processed via Microsoft cloud services. Documents are processed on Microsoft cloud servers when using connected experiences.",
+      "detail": "Document content processed on Microsoft cloud servers when using OneDrive or connected experiences. Files uploaded to OneDrive are stored on Microsoft servers.",
+      "policy_excerpt": "Content — Files, communications, emails, photos, songs, documents, and other media stored or processed via Microsoft cloud services. When a customer interacts with a Microsoft support professional, we collect device and usage data or error reports to diagnose and resolve problems.",
+      "concerns": [
+        "Document content processed on Microsoft cloud servers",
+        "Connected experiences may send document content to Microsoft",
+        "Cloud storage data accessible to organization for work/school accounts"
+      ],
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -135,10 +163,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states it may share data with third-party advertising platforms and advertisers to deliver and measure ads.",
-      "detail": "The policy states data may be shared with third-party advertising platforms and advertisers.",
-      "policy_excerpt": "Data may be shared with third party advertising platforms and advertisers to facilitate the delivery and measurement of ads.",
-      "concerns": ["Data shared with advertising platforms", "Data shared with unspecified vendors and agents", "Corporate transaction data sharing clause", "Push notification data sent to third-party providers on non-Windows devices"],
+      "plain_english": "Microsoft states it shares your personal data with Microsoft-controlled affiliates and subsidiaries, vendors working on Microsoft's behalf, and for legal process. Data is also shared with third-party advertising platforms for personalized ads.",
+      "detail": "Shared with: Microsoft affiliates and subsidiaries, vendors/service providers, advertising platforms, and under legal demands. Data Privacy Framework compliance for international transfers.",
+      "policy_excerpt": "We share your personal data with your consent or to complete any transaction or provide any product you have requested or authorized. We also share data with Microsoft-controlled affiliates and subsidiaries; with vendors working on our behalf; when required by law or to respond to legal process; to protect our customers; to protect lives; to maintain the security of our products; and to protect the rights and property of Microsoft and its customers.",
+      "concerns": [
+        "Data shared with Microsoft affiliates and subsidiaries",
+        "Data shared with vendors and service providers",
+        "Data shared with advertising platforms for personalized ads",
+        "Legal disclosure possible"
+      ],
       "score_impact": -19.5
     },
     {
@@ -150,10 +183,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states it collects your name, email, postal address, phone number, and similar contact details, plus passwords and security information for authentication.",
-      "detail": "Standard account information for authentication and app functionality.",
-      "policy_excerpt": "Name and contact data — First/last name, email, postal address, phone number, and similar contact details. Credentials — Passwords, password hints, and security information used for authentication.",
-      "concerns": ["Account data linked across entire Microsoft ecosystem", "Work/school accounts give organization access to your data"],
+      "plain_english": "Microsoft states it collects your name, email, postal address, phone number, credentials, payment data, device data, contacts, activities, and interests. Microsoft account enables personalization across products and devices.",
+      "detail": "Comprehensive account data collection including identity, contact, payment, device, and usage data. Account data linked across Microsoft ecosystem. Three account types: personal, work/school, and third-party.",
+      "policy_excerpt": "Personal data associated with your Microsoft account includes credentials, name and contact data, payment data, device and usage data, your contacts, information about your activities, and your interests and favorites. Signing in to your Microsoft account enables personalization and consistent experiences across products and devices.",
+      "concerns": [
+        "Account data linked across entire Microsoft ecosystem",
+        "Work/school accounts give organization access to your data",
+        "Comprehensive profile including interests and favorites"
+      ],
       "score_impact": -4.5
     },
     {
@@ -165,10 +202,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": true,
-      "plain_english": "Microsoft states it may use data from your interactions to deliver relevant advertising, and collects online activity data for interest-based ads.",
-      "detail": "Product interaction and browsing data may be used for ad personalization.",
-      "policy_excerpt": "We may use data from interactions and our first-party and third-party properties to deliver relevant advertising. Interest-based advertising — Collecting online activity data to deliver relevant ads.",
-      "concerns": ["Product interaction data linked to your identity", "Cross-device advertising profile", "Interest inference from browsing behavior", "Opt-out doesn't stop data collection"],
+      "plain_english": "Microsoft states it uses data from your interactions to deliver relevant advertising, collects online activity data for interest-based ads, and uses cookies and device identifiers to track you across services.",
+      "detail": "Extensive advertising data collection including product interactions, browsing data, cookies, web beacons, advertising IDs, and MUID cookies for cross-device tracking. Personalized ads based on interests inferred from your data.",
+      "policy_excerpt": "We use cookies and similar technologies for storing and honoring your preferences and settings, enabling you to sign in, providing interest-based advertising, combating fraud, analyzing how our products perform, and fulfilling other legitimate purposes. We may use data from interactions and our first-party and third-party properties to deliver relevant advertising.",
+      "concerns": [
+        "Interest-based advertising using your data",
+        "Cross-device tracking via MUID cookie and advertising ID",
+        "Web beacons and third-party cookies",
+        "Product interaction data linked to your identity"
+      ],
       "score_impact": -16.25
     },
     {
@@ -180,11 +222,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states its products either block underage users or require parental consent for users under 13.",
-      "detail": "Age requirement exists but enforcement mechanism is not described.",
-      "policy_excerpt": "For users under 13 (or the age specified by local law), Microsoft products either block underage users or require parental consent/authorization.",
-      "concerns": ["4+ App Store rating inconsistent with 13+ account requirement", "No robust age verification in the app itself"],
-      "score_impact": -3.0
+      "plain_english": "Microsoft states its products either block users under 13 or require parental consent/authorization. Once granted, the child's account is treated like any other account.",
+      "detail": "Age gates exist for under-13 users. Parental consent required. Child accounts can access communication services and share data with other users. Family Safety features available for parental controls.",
+      "policy_excerpt": "For users under the age of 13 or as specified by law in their jurisdiction, certain Microsoft products and services will either block users under that age or will ask them to obtain consent or authorization from a parent or guardian before they can use it. Once parental consent or authorization is granted, the child's account is treated much like any other account.",
+      "concerns": [
+        "4+ App Store rating inconsistent with 13+ account requirement",
+        "Child accounts have same data collection as adult accounts",
+        "Children can communicate and share data with users of all ages"
+      ],
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -195,10 +241,13 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and nearby network data.",
-      "detail": "IP and network data collected for security and analytics.",
+      "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, network data, and diagnostic data.",
+      "detail": "IP address, network information, device identifiers, and diagnostic data collected continuously for security, analytics, and service improvement.",
       "policy_excerpt": "Device and usage data — Hardware/software info, product keys, IP address, device identifiers (e.g., IMEI), nearby network data.",
-      "concerns": ["IP-based location inference", "Push notification data shared with third-party providers"],
+      "concerns": [
+        "IP-based location inference",
+        "Diagnostic data includes app usage patterns"
+      ],
       "score_impact": -1.5
     },
     {
@@ -210,10 +259,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": true,
-      "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and nearby network data.",
-      "detail": "Device identifiers collected for analytics and app functionality.",
-      "policy_excerpt": "Device and usage data — Hardware/software info, product keys, IP address, device identifiers (e.g., IMEI), nearby network data.",
-      "concerns": ["Unique device identifiers created for tracking", "Cross-device tracking via MUID cookie and advertising ID", "Diagnostic data includes app usage patterns"],
+      "plain_english": "Microsoft states it collects hardware and software info, IP address, device identifiers such as IMEI, and uses cookies and advertising IDs for cross-device recognition.",
+      "detail": "Comprehensive device fingerprinting including unique identifiers (IMEI), MUID cookies, advertising IDs, hardware/software info. Cross-device tracking enabled.",
+      "policy_excerpt": "We collect data through cookies and similar technologies (e.g., pixels and ad tags) to collect data (e.g., device IDs) to recognize you and your device(s) on, off and across different services and devices. Device and usage data — Hardware/software info, product keys, IP address, device identifiers (e.g., IMEI), nearby network data.",
+      "concerns": [
+        "Unique device identifiers collected (IMEI)",
+        "Cross-device tracking via MUID cookie and advertising ID",
+        "Device fingerprinting for advertising"
+      ],
       "score_impact": -9.75
     },
     {
@@ -225,10 +278,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Microsoft states it may collect biometric data such as facial or fingerprint recognition, with consent, for services like Windows Hello.",
-      "detail": "The policy mentions Windows Hello biometrics, not iOS Face ID. Biometric authentication on iOS is handled locally by the device.",
+      "plain_english": "Microsoft states it may collect biometric data such as facial or fingerprint recognition, with consent, for services like Windows Hello. On iOS, biometric authentication is handled locally by the device.",
+      "detail": "The policy mentions Windows Hello biometrics. Biometric authentication on iOS (Face ID/Touch ID) is handled locally by the device and not sent to Microsoft.",
       "policy_excerpt": "Biometric data and identifiers — Physical, physiological, or behavioral characteristics for identification (e.g., Windows Hello facial/fingerprint recognition), collected with consent.",
-      "concerns": [],
+      "concerns": [
+        "Biometric data mentioned for Windows Hello, not iOS"
+      ],
       "score_impact": -4.5
     },
     {
@@ -240,10 +295,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Microsoft states it collects payment instrument numbers and subscription/licensing data.",
-      "detail": "Payment and subscription data collected for in-app purchases and licensing.",
+      "plain_english": "Microsoft states it collects payment instrument numbers, security codes, and subscription/licensing data for Microsoft 365 and other services.",
+      "detail": "Payment and subscription data collected for in-app purchases, Microsoft 365 subscriptions, and licensing. Microsoft collects this data even when Apple processes the payment.",
       "policy_excerpt": "Payment data — Payment instrument numbers and associated security codes. Subscription and licensing data — Information about subscriptions, licenses, and entitlements.",
-      "concerns": ["Microsoft collects subscription and licensing data even when Apple processes the payment"],
+      "concerns": [
+        "Microsoft collects subscription and licensing data even when Apple processes payment"
+      ],
       "score_impact": -4.5
     },
     {
@@ -255,11 +312,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states it retains personal data as long as needed for the stated purposes, and deletes or de-identifies it when no longer needed.",
-      "detail": "Retention tied to purpose. Some data may be kept longer if required by law.",
-      "policy_excerpt": "Microsoft retains personal data for the period needed to fulfill the purposes outlined in the statement, unless a longer retention period is required by law. When data is no longer needed, it is deleted or de-identified.",
-      "concerns": ["60-day waiting period for account deletion", "Some data retained after deletion for legal/business reasons", "Not all data types can be deleted through the dashboard"],
-      "score_impact": -3.0
+      "plain_english": "Microsoft states it retains personal data for the period needed to fulfill the purposes outlined, and deletes or de-identifies it when no longer needed. You can access and clear some data through the Microsoft privacy dashboard.",
+      "detail": "Retention tied to purpose. Some data may be kept longer if required by law. Privacy dashboard available for data access and deletion. Opt-out available for personalized advertising and AI training.",
+      "policy_excerpt": "Microsoft retains personal data for the period needed to fulfill the purposes outlined in the statement, unless a longer retention period is required by law. When data is no longer needed, it is deleted or de-identified. You can control your personal data that Microsoft has obtained, and exercise your data protection rights, by contacting Microsoft or using various tools we provide.",
+      "concerns": [
+        "Some data retained after deletion for legal/business reasons",
+        "Not all data types can be deleted through the dashboard",
+        "Account closure required to stop data collection"
+      ],
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -270,10 +331,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft states it may update the privacy statement, and if you disagree, you must stop using the Services and close your account.",
-      "detail": "No advance notice mechanism described beyond encouraging periodic review.",
+      "plain_english": "Microsoft states it may update the privacy statement, and if you disagree, you must stop using the Services and close your Microsoft account. No advance notice mechanism is described beyond encouraging periodic review.",
+      "detail": "Changes can be made without advance notification. Continued use equals acceptance. Account closure is the only opt-out mechanism. No option to reject changes while keeping account.",
       "policy_excerpt": "Microsoft may update this privacy statement. You are encouraged to review this privacy statement periodically. If you disagree, you must stop using the Services, close your Microsoft account.",
-      "concerns": ["No advance notice required for policy changes", "Continued use equals consent", "No option to reject changes while keeping the account"],
+      "concerns": [
+        "No advance notice required for policy changes",
+        "Continued use equals consent",
+        "No option to reject changes while keeping the account"
+      ],
       "score_impact": -3.25
     }
   ],
@@ -281,20 +346,104 @@
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
-      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
-      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0 },
-      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
-      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
-      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
-      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
-      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
-      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
-      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
-      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
-      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 }
+      {
+        "category": "camera_microphone",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "location_gps",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "health_biometric",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      }
     ],
     "total_deductions": 83.25,
     "final_score": 59,

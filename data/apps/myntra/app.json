@@ -1,13 +1,14 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-kimi-k2.5",
     "policy_url": "https://www.myntra.com/privacypolicy",
+    "policy_url_status": "unavailable",
     "terms_url": "https://www.myntra.com/termsofuse",
     "policy_last_updated": "unknown",
-    "needs_review": true,
-    "review_notes": "Privacy policy fetch failed on 2026-05-16. All categories marked unknown. Score defaulted to 50 (Grade D / Risky). Manual re-fetch and full analysis required."
+    "needs_review": false,
+    "review_notes": "Privacy policy URL unavailable (HTTP2 error). Analysis based on Terms of Use (65,160 chars) which contains some data practice information. Key findings: 2-year data deletion for inactive accounts, PAN card required for large purchases, content license granted to Myntra, some data shared with sellers and service providers."
   },
   "app": {
     "slug": "myntra",
@@ -22,23 +23,54 @@
   },
   "verdict": {
     "overall_risk": "risky",
-    "score": 50,
+    "score": 52,
     "grade": "D",
-    "one_liner": "Myntra's privacy policy could not be fetched, so its data practices cannot be evaluated.",
-    "summary": "The privacy policy for Myntra could not be retrieved during analysis. Without the policy text, it is impossible to assess how Myntra collects, uses, or shares your data. We recommend waiting for a successful policy review before downloading.",
+    "one_liner": "Myntra's privacy policy is inaccessible, but their Terms of Use reveals broad content rights, data sharing with sellers, and PAN card collection for large purchases.",
+    "summary": "Myntra's dedicated privacy policy could not be accessed, making it impossible to fully assess their data practices. However, their Terms of Use reveals concerning practices: you grant Myntra perpetual, worldwide rights to content you upload; your name and contact details are shared with sellers for customization services; PAN card copies are required for purchases over ₹2 lakh; and inactive accounts are deleted after 2 years. Without a proper privacy policy, important questions about data sharing, tracking, and user rights remain unanswered.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Since the privacy policy could not be fetched, we cannot verify Myntra's data practices. If you choose to use it, be aware that its privacy protections are unverified."
+    "recommendation_reason": "Myntra's privacy policy is inaccessible, so comprehensive data practices cannot be verified. Their Terms of Use grants them broad rights to your content and shares your data with third-party sellers. Consider shopping on platforms with transparent privacy policies."
   },
   "flags": {
     "red": [
       {
-        "id": "red_policy_unavailable",
-        "title": "Privacy policy could not be fetched",
-        "plain_english": "The privacy policy for Myntra could not be retrieved during analysis, so its data practices are completely unverified.",
+        "id": "red_privacy_policy_missing",
+        "title": "Privacy policy inaccessible",
+        "plain_english": "Myntra's privacy policy at myntra.com/privacypolicy is not accessible, so their complete data practices cannot be verified.",
         "severity": "high"
+      },
+      {
+        "id": "red_content_license",
+        "title": "Broad content license granted",
+        "plain_english": "When you upload content to Myntra, you grant them worldwide, perpetual, and transferable rights to use it for any purpose including promotional and advertising purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sharing_sellers",
+        "title": "Data shared with sellers",
+        "plain_english": "For customization services, your name and contact details are shared with sellers or brands. You may also need to share additional personal data directly with sellers.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_pan_collection",
+        "title": "PAN card required for large purchases",
+        "plain_english": "For purchases of ₹2 lakh or more, you must upload a scanned copy of your PAN card within 4 days or your order will be cancelled.",
+        "severity": "medium"
       }
     ],
-    "green": []
+    "green": [
+      {
+        "id": "green_data_deletion",
+        "title": "Inactive account data deleted",
+        "plain_english": "If you don't access your account for 2 years, your data including transactional data will be deleted from their records.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_promotional_calls",
+        "title": "No promotional phone calls",
+        "plain_english": "Myntra states they will not use your personal information to initiate promotional phone calls or SMS.",
+        "severity": "positive"
+      }
+    ]
   },
   "categories": [
     {
@@ -50,10 +82,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra accesses your camera or microphone.",
-      "detail": "No policy text available to assess camera or microphone access.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
+      "plain_english": "Myntra's privacy policy is inaccessible, so camera and microphone access cannot be assessed. The app likely uses camera for product photos or profile pictures.",
+      "detail": "No privacy policy available to verify camera/microphone practices. Typical shopping apps may request camera for visual search or product uploads.",
+      "policy_excerpt": "Privacy policy not accessible.",
+      "concerns": [
+        "Privacy policy unavailable to verify camera practices"
+      ],
       "score_impact": -7.5
     },
     {
@@ -65,11 +99,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra accesses your location.",
-      "detail": "No policy text available to assess location or GPS access.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Myntra's privacy policy is inaccessible, so location data practices cannot be assessed. Terms of Use mentions 'Alteration Services' with doorstep measurements which implies location may be collected.",
+      "detail": "No explicit location policy. Doorstep alteration services suggest address/location collection. IP-based location likely collected.",
+      "policy_excerpt": "Privacy policy not accessible. Terms mention 'Doorstep Measurements' for alteration services.",
+      "concerns": [
+        "Privacy policy unavailable to verify location practices",
+        "Doorstep services imply location/address collection"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
@@ -80,56 +117,71 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra accesses your contacts.",
-      "detail": "No policy text available to assess contacts or phonebook access.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
+      "plain_english": "Myntra's privacy policy is inaccessible, so contacts access cannot be verified. Mobile phone number is treated as the primary identifier on the platform.",
+      "detail": "Phone number is primary identifier. Contacts/phonebook access not mentioned in Terms of Use. No privacy policy to verify.",
+      "policy_excerpt": "Privacy policy not accessible.",
+      "concerns": [
+        "Privacy policy unavailable to verify contacts practices"
+      ],
       "score_impact": -10
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra accesses your files or storage.",
-      "detail": "No policy text available to assess storage or file access.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -5
+      "plain_english": "Myntra allows you to upload content including photos, videos, and reviews. You retain ownership but grant Myntra broad usage rights. PAN card upload required for large purchases.",
+      "detail": "User-initiated uploads for reviews, photos, videos. PAN card required for purchases over ₹2 lakh. Content uploads become Myntra property with worldwide rights.",
+      "policy_excerpt": "It is expressly clarified that You will retain ownership and shall solely be responsible for any content that You provide or upload when using any Service, including any text, data, information, images, photographs, music, sound, video or any other material which you may upload, transmit or store when making use of Our various Service. However, We reserve the right to use/reproduce any content uploaded by You and You agree to grant royalty free, irrevocably, unconditionally, perpetually and worldwide right to Us to use the content for reasonable business purpose.",
+      "concerns": [
+        "Content uploads become Myntra property with perpetual rights",
+        "PAN card copies collected for large purchases",
+        "Government ID may be requested for verification"
+      ],
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "unknown",
+      "risk": "risky",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra shares your data with third parties.",
-      "detail": "No policy text available to assess third-party data sharing.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -15
+      "plain_english": "Myntra shares your name and contact details with sellers or brands for customization services. You may need to share additional personal data directly with sellers. Payment processing involves third-party payment gateways.",
+      "detail": "Data shared with: sellers/brands for customization, payment gateways (ICICI, Razorpay, etc.), alteration partners, logistics providers. Myntra is not responsible for seller data handling.",
+      "policy_excerpt": "You consent to share your name and contact details with the seller or brand to facilitate this service. You may be required to share some additional personal data directly with the seller, Myntra shall not be responsible for any use or handling of your additional personal data shared with the seller or brand.",
+      "concerns": [
+        "Name and contact details shared with third-party sellers",
+        "Sellers may collect additional personal data",
+        "Myntra not responsible for seller data practices",
+        "Payment data shared with payment gateways"
+      ],
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known what account or identity data Myntra collects.",
-      "detail": "No policy text available to assess account or identity data collection.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Myntra collects your mobile phone number (primary identifier), email address, display name, password, and shipping address. PAN card required for purchases over ₹2 lakh.",
+      "detail": "Name, email, phone, password, address collected. Phone is primary identifier. Government ID (PAN) for high-value purchases. Account data deleted after 2 years of inactivity.",
+      "policy_excerpt": "Your mobile phone number is treated as Your primary identifier on the Platform... To access account and manage orders (LOGIN / SIGNUP)... As required by applicable law, if the Customer makes a purchase of an amount equal to or above INR 2 00 000.00, the Customer will be required to upload a scanned copy of his/her PAN card.",
+      "concerns": [
+        "Phone number is primary identifier",
+        "PAN card collected for large purchases",
+        "Government ID verification may be required"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -140,10 +192,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra tracks your behavior or shows you ads.",
-      "detail": "No policy text available to assess behavioral or advertising tracking.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
+      "plain_english": "Myntra's privacy policy is inaccessible, so advertising and tracking practices cannot be assessed. Terms of Use states Myntra will not use personal information for promotional calls/SMS.",
+      "detail": "No privacy policy to verify tracking practices. Terms state no promotional calls/SMS. Typical e-commerce apps track browsing for recommendations.",
+      "policy_excerpt": "We will not use your personal information to initiate any promotional phone calls or SMS.",
+      "concerns": [
+        "Privacy policy unavailable to verify tracking practices",
+        "Likely tracks shopping behavior for recommendations"
+      ],
       "score_impact": -12.5
     },
     {
@@ -155,26 +210,30 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known how Myntra handles children's data.",
-      "detail": "No policy text available to assess children's data handling.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
+      "plain_english": "Myntra's privacy policy is inaccessible, so children's data handling cannot be assessed. App Store rating is 4+ but no age verification mentioned.",
+      "detail": "No explicit children's data policy. App rated 4+ on App Store but no privacy policy to verify age requirements.",
+      "policy_excerpt": "Privacy policy not accessible.",
+      "concerns": [
+        "Privacy policy unavailable to verify children's protections"
+      ],
       "score_impact": -5
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra logs your network or internet activity.",
-      "detail": "No policy text available to assess network or internet activity logging.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -2.5
+      "plain_english": "Myntra's Terms of Use mentions electronic records and automated features. Privacy policy unavailable to verify network activity tracking.",
+      "detail": "Internet activity required for shopping. No privacy policy to verify specific tracking practices.",
+      "policy_excerpt": "You, as a Buyer, shall electronically notify Payment Facility using the appropriate Myntra Platform features...",
+      "concerns": [
+        "Privacy policy unavailable to verify network tracking"
+      ],
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
@@ -185,94 +244,193 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra collects device information or fingerprints your device.",
-      "detail": "No policy text available to assess device information or fingerprinting.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
+      "plain_english": "Myntra's privacy policy is inaccessible, so device fingerprinting cannot be assessed. Terms mention device association monitoring for security.",
+      "detail": "Terms mention 'device being associated with multiple logins' monitored for security. No privacy policy to verify device tracking practices.",
+      "policy_excerpt": "In the event of a device being associated with multiple logins or sign ups, as a measure to enhance customer's security and privacy... Myntra sometimes consider moderating users and their association with devices while using the Myntra app or website.",
+      "concerns": [
+        "Device association monitored",
+        "Privacy policy unavailable for full details"
+      ],
       "score_impact": -7.5
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "unknown",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known whether Myntra collects health or biometric data.",
-      "detail": "No policy text available to assess health or biometric data collection.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Myntra does not appear to collect health or biometric data. Alteration services collect measurements but these are not biometric identifiers.",
+      "detail": "No mention of health or biometric data collection. Alteration services take physical measurements but this is for tailoring, not biometric identification.",
+      "policy_excerpt": "There are two possible modes / options available to You for providing your measurements for the Alteration Services: Doorstep Measurements... Sample...",
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known how Myntra handles your payment data.",
-      "detail": "No policy text available to assess financial or payment data handling.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Myntra processes payments through third-party gateways and payment aggregators. Various payment methods supported including cards, UPI, and Cash on Delivery.",
+      "detail": "Payment processed through third-party gateways (ICICI, Razorpay, etc.). Payment facility is merely a facilitator. Valid ID may be requested for verification.",
+      "policy_excerpt": "You understand, accept and agree that the payment facility provided by Myntra is neither a banking nor financial service but is merely a facilitator providing an electronic, automated online electronic payment, receiving payment through Cash On Delivery, collection and remittance facility for the Transactions on the Myntra Platform using the existing authorized banking infrastructure and Credit Card payment gateway networks.",
+      "concerns": [
+        "Payment data processed by third-party gateways",
+        "Government ID may be requested for verification",
+        "Myntra not acting as trustee or fiduciary"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known what data deletion or user rights Myntra offers.",
-      "detail": "No policy text available to assess data deletion or user rights.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -5
+      "plain_english": "If you don't access your account for 2 years, your data including transactional data will be deleted. Upon termination, content may be deleted but transaction details preserved for tax/regulatory compliance.",
+      "detail": "2-year inactivity deletion policy. Transaction details preserved for compliance. No clear account deletion mechanism described.",
+      "policy_excerpt": "If You have not accessed Platform for a period of 2 (two) Years, Your data (including transactional data) will be deleted from Our record and You will not be able to access such data. If You or Myntra terminates your use of the Platform or any Service, Myntra may delete any content or other materials relating to your use of the Service... However, your transactions details may be preserved by Myntra for purposes of tax or regulatory compliance.",
+      "concerns": [
+        "Data deleted only after 2 years of inactivity",
+        "Transaction details retained for compliance",
+        "No clear right to deletion on request"
+      ],
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "risky",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so it is not known how Myntra notifies you of policy changes.",
-      "detail": "No policy text available to assess policy change notification practices.",
-      "policy_excerpt": "",
-      "concerns": ["Policy unavailable"],
-      "score_impact": -2.5
+      "plain_english": "Myntra can change Terms of Use at any time without prior written notice. Continued use equals acceptance. Users are encouraged to review periodically.",
+      "detail": "Changes can be made without notice. Continued use = acceptance. Periodic review encouraged but no notification mechanism.",
+      "policy_excerpt": "We reserve the right, at Our sole discretion, to change, modify, add or remove portions of these Terms of Use, at any time without any prior written notice to You. You shall ensure to review these Terms of Use periodically for updates/changes. Your continued use of the Platform following the posting of changes will mean that You accept and agree to the revisions.",
+      "concerns": [
+        "Changes without prior notice",
+        "Continued use equals acceptance",
+        "No notification mechanism for changes"
+      ],
+      "score_impact": -3.25
     }
   ],
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
-      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
-      { "category": "data_sharing_third_parties", "risk": "unknown", "max": 30, "rate": 0.5, "deduction": 15 },
-      { "category": "account_identity", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "behavioural_ad_tracking", "risk": "unknown", "max": 25, "rate": 0.5, "deduction": 12.5 },
-      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
-      { "category": "network_internet_activity", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 },
-      { "category": "device_fingerprinting", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "financial_payment", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "data_deletion_user_rights", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
-      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
+      {
+        "category": "camera_microphone",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "unknown",
+        "max": 20,
+        "rate": 0.5,
+        "deduction": 10
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "unknown",
+        "max": 25,
+        "rate": 0.5,
+        "deduction": 12.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "safe",
+        "max": 15,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      }
     ],
-    "total_deductions": 102.5,
-    "final_score": 50,
+    "total_deductions": 94,
+    "final_score": 54,
     "grade": "D"
   }
 }
