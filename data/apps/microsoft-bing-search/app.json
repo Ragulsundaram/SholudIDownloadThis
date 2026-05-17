@@ -7,7 +7,7 @@
     "terms_url": "https://www.microsoft.com/en-us/servicesagreement",
     "policy_last_updated": "2026-03",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Scraper captured Bing homepage UI only; policy was fetched separately from Microsoft’s official privacy statement."
   },
 
   "app": {
@@ -23,10 +23,10 @@
   },
 
   "verdict": {
-    "overall_risk": "risky",
-    "score": 52,
-    "grade": "D",
-    "one_liner": "A powerful search app with extensive data collection and AI training practices that raises significant privacy concerns.",
+    "overall_risk": "caution",
+    "score": 59,
+    "grade": "C",
+    "one_liner": "A powerful search app with extensive data collection and AI training practices that warrant careful consideration.",
     "summary": "Microsoft Bing Search collects extensive personal data including location, search history, device info, and usage patterns. Data is used for personalized advertising and training AI models. While Microsoft provides some user controls, the breadth of data collection and sharing with third parties for advertising purposes is concerning.",
     "recommendation": "think_twice",
     "recommendation_reason": "Heavy data collection for advertising and AI training, though some opt-out controls are available."
@@ -203,7 +203,7 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "Microsoft states services are not intended for children under 13 without parental consent. Some data collection restrictions apply for child accounts.",
-      "detail": "Microsoft has a 'Privacy for young people' page and states they comply with COPPA. Parental consent required for accounts of children under 13.",
+      "detail": "Microsoft has a 'Privacy for young people' page and states they comply with COPPA. Parental consent required for Microsoft accounts of children under 13.",
       "policy_excerpt": "Young people may prefer starting with the Privacy for young people page. Parental consent required for Microsoft accounts of children under 13.",
       "concerns": ["App rated 17+ in App Store", "No specific child mode mentioned"],
       "score_impact": 3
@@ -320,7 +320,7 @@
       { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 }
     ],
     "total_deductions": 83.25,
-    "final_score": 52,
-    "grade": "D"
+    "final_score": 59,
+    "grade": "C"
   }
 }

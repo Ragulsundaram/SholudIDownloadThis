@@ -4,91 +4,95 @@
     "analyzed_at": "2026-05-18",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.sololearn.com/privacyPolicy",
-    "terms_url": "",
+    "terms_url": "https://www.sololearn.com/Terms",
     "policy_last_updated": "2024-04-04",
     "needs_review": false,
     "review_notes": ""
   },
+
   "app": {
     "slug": "sololearn-learn-to-code",
     "name": "Sololearn: Learn to Code",
     "developer": "SoloLearn Inc.",
-    "app_store_url": "https://apps.apple.com/in/app/id1210079064",
+    "app_store_url": "https://apps.apple.com/in/app/sololearn--learn-to-code/id1210079064",
     "app_store_id": "1210079064",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/37/c8/e4/37c8e446-c438-c43b-d2ca-ac36000cdccc/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
     "category": "Education",
     "sub_category": "",
-    "description": "Learn to code with interactive lessons in Python, JavaScript, SQL, Java, C#, and more. Features AI-powered coding help, bite-sized courses, and a community of 35M+ learners."
+    "description": "Learn to code with bite-sized lessons in Python, JavaScript, C++, and more. Includes an AI chatbot (Kodie) and interactive coding playground."
   },
+
   "verdict": {
     "overall_risk": "caution",
-    "score": 69,
+    "score": 65,
     "grade": "C",
-    "one_liner": "A popular coding education app that shares data with advertisers and tracks your activity across the web.",
-    "summary": "Sololearn provides a free coding education platform but monetizes through advertising and data sharing. While they don't sell your personal information directly, they share anonymized data with advertisers for targeted ads and use extensive third-party analytics tracking.",
+    "one_liner": "A solid coding app, but it shares data with advertisers and tracks your activity across websites.",
+    "summary": "Sololearn collects your name, email, age, device info, and online activity to run its coding courses. It shares anonymized demographic data with advertisers, uses analytics services that track you across sites, and sends anything you type in its AI chatbot to OpenAI. While it offers GDPR/CCPA rights and says it does not sell personal information, some data remains on its servers even after you delete your account.",
     "recommendation": "think_twice",
-    "recommendation_reason": "The app shares user data with advertising networks and employs cross-site tracking technologies. While it offers educational value, privacy-conscious users should be aware of the extensive data collection and tracking practices."
+    "recommendation_reason": "The app shares data with advertisers and analytics networks, tracks your activity across other websites, and sends AI chat inputs to OpenAI. Consider this if you are privacy-conscious, especially when using the AI features."
   },
+
   "flags": {
     "red": [
       {
+        "id": "red_ai_data_sent_to_openai",
+        "title": "AI chatbot sends your messages to OpenAI",
+        "plain_english": "Anything you type in the AI chatbot Kodie or the AI playground is sent to OpenAI to generate responses. If you include personal info in those messages, OpenAI receives it too.",
+        "severity": "high"
+      },
+      {
+        "id": "red_targeted_ads_cross_site_tracking",
+        "title": "Targeted ads and cross-site tracking",
+        "plain_english": "The app uses cookies and web beacons to show you targeted ads and can track your online activity even after you leave the app or website.",
+        "severity": "high"
+      },
+      {
         "id": "red_advertiser_data_sharing",
-        "title": "Shares data with advertisers",
-        "plain_english": "Sololearn shares your information with advertisers in 'non-personally identifiable' form. This includes your general location (like your city) and usage patterns. Advertisers use this to show you targeted ads, and if you click on an ad, they may be able to figure out you were part of their target audience.",
-        "severity": "high"
-      },
-      {
-        "id": "red_ai_chatbot_data_transmission",
-        "title": "AI chats sent to OpenAI",
-        "plain_english": "When you use the AI chatbot 'Kodie' or AI features in courses, everything you type is sent to OpenAI (the company behind ChatGPT). The app warns that if you include personal information in your messages, it will be transmitted to OpenAI and is governed by their privacy policy, not just Sololearn's.",
-        "severity": "high"
-      },
-      {
-        "id": "red_cross_site_tracking",
-        "title": "Cross-site tracking via web beacons",
-        "plain_english": "The app uses 'web beacons' which allow ad networks to track your activity even after you leave Sololearn. These can monitor what websites you visit and serve targeted ads to you on other sites across the internet.",
+        "title": "Demographic data shared with advertisers",
+        "plain_english": "Your general location and usage patterns are shared with advertisers in a non-personally identifiable form so they can pick who sees their ads.",
         "severity": "medium"
       },
       {
-        "id": "red_third_party_analytics",
-        "title": "Multiple analytics companies track you",
-        "plain_english": "Sololearn uses Google Analytics, Facebook analytics, and Fabric (also owned by Google) to track how you interact with the app. These services collect your IP address, browser info, pages viewed, time spent, and links clicked to build a profile of your behavior.",
+        "id": "red_data_retained_after_deletion",
+        "title": "Some data kept after you delete your account",
+        "plain_english": "Even if you ask Sololearn to delete your information or deactivate your account, some data may stay on their servers for legal, research, or business reasons.",
         "severity": "medium"
       },
       {
-        "id": "red_data_retention_after_deletion",
-        "title": "Data kept even after account deletion",
-        "plain_english": "When you delete your account or information, Sololearn admits they may still keep copies of your data in their records. They also keep unrevised versions of information when you update your profile, meaning old data isn't fully replaced.",
+        "id": "red_analytics_track_activity",
+        "title": "Analytics providers track you across websites",
+        "plain_english": "Google Analytics, Facebook, and other analytics services monitor how you use the app and other websites over time to build a profile of your interests.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_no_data_sales",
-        "title": "Does not sell personal information",
-        "plain_english": "Sololearn explicitly states they do not sell your personal information to third parties. This is a positive commitment compared to many apps that monetize by selling user data directly to data brokers.",
+        "id": "green_no_sale_of_personal_info",
+        "title": "Explicitly says it does not sell personal data",
+        "plain_english": "The company clearly states it does not sell your personal information to third parties, which is better than many free apps.",
         "severity": "positive"
       },
       {
-        "id": "green_user_rights_provided",
-        "title": "Strong user rights under GDPR/CCPA",
-        "plain_english": "Users have comprehensive rights including access, deletion, data portability, and the right to opt out of marketing. The app provides clear instructions for exercising these rights under GDPR (Europe), LGPD (Brazil), and CCPA (California).",
+        "id": "green_gdpr_ccpa_rights",
+        "title": "Offers GDPR and CCPA privacy rights",
+        "plain_english": "If you live in the EU, Brazil, or certain US states, you can request access, deletion, or export of your data, and the company provides a contact email and form to do so.",
         "severity": "positive"
       },
       {
-        "id": "green_privacy_controls",
-        "title": "Granular privacy settings available",
-        "plain_english": "You can control what profile information other users see through account privacy settings. You can also opt out of marketing emails and manage cookie preferences through the app's cookie banner.",
+        "id": "green_account_password_protected",
+        "title": "Accounts are password protected",
+        "plain_english": "Your account is secured with a password, and the company says it uses encryption and anonymization to help protect your information.",
         "severity": "positive"
       },
       {
-        "id": "green_security_measures",
-        "title": "Encryption and security measures used",
-        "plain_english": "The company states they use data encryption, anonymization, and restrict employee access to personal information. They also have strict confidentiality requirements for service providers who handle user data.",
+        "id": "green_user_controls_profile_visibility",
+        "title": "You can control what others see on your profile",
+        "plain_english": "Privacy settings let you limit which other users can see your profile details, giving you some control over your public information.",
         "severity": "positive"
       }
     ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
@@ -99,8 +103,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not mention accessing your camera or microphone in its privacy policy.",
-      "detail": "No camera or microphone access mentioned in the privacy policy.",
+      "plain_english": "The privacy policy does not mention any access to your camera or microphone.",
+      "detail": "No references to camera or microphone permissions, recordings, or uploads that would require these sensors.",
       "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
@@ -114,10 +118,13 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The app collects your general location (like your city) from your browser or device. This is used to show you location-based ads, such as ads for businesses near you.",
-      "detail": "General location is collected automatically from browser/device logs and used for targeted advertising. The policy gives an example of showing ads for San Francisco businesses to users in San Francisco.",
-      "policy_excerpt": "we automatically receive and record information on our server logs from your browser or device, which may include your IP address, general location... We might use the fact you are located in San Francisco to show you ads or offers for San Francisco businesses",
-      "concerns": ["Location used for ad targeting", "Collected automatically via IP address"],
+      "plain_english": "The app collects your general location automatically (likely from your IP address) and uses it to show you locally relevant ads.",
+      "detail": "IP address and general location are collected automatically. This information is shared with advertisers in non-personally identifiable form for location-based ad targeting.",
+      "policy_excerpt": "we automatically receive and record information on our server logs from your browser or device, which may include your IP address, general location",
+      "concerns": [
+        "Location inferred from IP address without explicit opt-in",
+        "Used for ad targeting even though it is not needed to learn to code"
+      ],
       "score_impact": 4.5
     },
     {
@@ -129,8 +136,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not access your contacts or phonebook according to the privacy policy.",
-      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "plain_english": "The privacy policy does not mention accessing your contacts or phonebook.",
+      "detail": "There is no reference to contact list access, phonebook uploads, or social graph syncing.",
       "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
@@ -139,16 +146,18 @@
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "safe",
+      "risk": "caution",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The app likely allows you to upload profile images and videos, but this appears to be user-initiated only for your profile.",
-      "detail": "Users can upload images and videos to their user profile. This appears to be optional and user-initiated.",
-      "policy_excerpt": "user profile information, including images and videos you have uploaded to the site",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "You can upload images and videos to your user profile, but this is optional and controlled by your privacy settings.",
+      "detail": "User-generated uploads (images, videos) are stored and may be displayed to other users depending on profile privacy settings.",
+      "policy_excerpt": "Certain user profile information, including your name, location, and any video or image content that such user has uploaded to the Services, may be displayed to other users",
+      "concerns": [
+        "Uploaded content may be publicly visible depending on settings"
+      ],
+      "score_impact": 3
     },
     {
       "id": "data_sharing_third_parties",
@@ -159,10 +168,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Your data is shared with advertisers, analytics companies (Google, Facebook), and service providers. While they claim it's 'anonymized,' advertisers can still use it to target you with ads based on your location and usage patterns.",
-      "detail": "Data is shared with advertisers for targeting, analytics providers (Google Analytics, Facebook, Fabric), and service providers. The policy states data is shared in 'non-personally identifiable form' but advertisers can still use it for audience selection.",
-      "policy_excerpt": "we may provide any of the information we have collected from you in non-personally identifiable form to an Advertiser, in order for that Advertiser to select the appropriate audience for those advertisements",
-      "concerns": ["Data shared with advertisers", "Multiple analytics providers", "Data may be de-anonymized by advertisers"],
+      "plain_english": "Your data is shared with advertisers, analytics companies (Google, Facebook), and other service providers to run the app and show you ads.",
+      "detail": "The policy describes sharing with advertisers (demographic info), analytics providers (Google, Facebook, Fabric), third-party businesses for transactions, and service providers for hosting and payments. While the company says it does not sell personal information, it discloses identifiers and internet activity for business purposes and uses web beacons for ad networks.",
+      "policy_excerpt": "we may provide any of the information we have collected from you in non-personally identifiable form to an Advertiser",
+      "concerns": [
+        "Demographic and usage data shared with advertisers",
+        "Analytics providers track activity across sites",
+        "Web beacons allow ad networks to track you elsewhere"
+      ],
       "score_impact": 19.5
     },
     {
@@ -174,10 +187,13 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You need to provide your name, email, and age to create an account. You can also sign in with Facebook or Google, which shares your name and email with Sololearn. Your profile information is visible to other users unless you change your privacy settings.",
-      "detail": "Account requires name, email, age. Third-party login (Facebook, Google) shares credentials. Profile info visible to other users by default but can be restricted in settings.",
-      "policy_excerpt": "we may collect information such as your name, age, email address, and third-party account credentials... when you log-in through your Google account, we automatically receive your name and email address",
-      "concerns": ["Profile visible to other users by default", "Social login shares data automatically"],
+      "plain_english": "You must provide your name, email, and age to sign up, and the app can link this to third-party accounts like Facebook or Google.",
+      "detail": "Account creation requires name, age, and email. Third-party login credentials (Facebook, Google) are collected. This data is used for account management, personalization, and is linked to advertising profiles indirectly through demographic sharing.",
+      "policy_excerpt": "we may collect information such as your name, age, email address, and third-party account credentials (for example, your log-in credentials for Facebook or Google)",
+      "concerns": [
+        "Identity data linked to advertising demographics",
+        "Third-party login data transmitted to Sololearn"
+      ],
       "score_impact": 4.5
     },
     {
@@ -189,10 +205,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app tracks your activity both within the app and across other websites using cookies and web beacons. This tracking is used to show you targeted ads and build a profile of your interests. Even after you leave Sololearn, ad networks can continue tracking you.",
-      "detail": "Extensive tracking via cookies, web beacons, and device identifiers. Tracks activity across Services and other websites. Uses data for targeted advertising and content customization.",
-      "policy_excerpt": "Through cookies we place on your browser or device, we may collect information about your online activity after you leave our Services... cookies placed by third parties may continue to track your activities online even after you have left our Services",
-      "concerns": ["Cross-site tracking via web beacons", "Third-party ad cookies", "Activity tracked across multiple websites", "Targeted ads based on behavior"],
+      "plain_english": "The app tracks how you use it and other websites to show you targeted ads and personalize content.",
+      "detail": "Cookies, web beacons, and analytics services are used to track activity on the Services and other websites. This data is used to deliver targeted advertisements and content based on interests. Users can manage some tracking via cookie banners and device settings.",
+      "policy_excerpt": "Our advertising partners may also transmit cookies to your browser or device... web beacons also enable ad networks to serve targeted advertisements to you when you visit other websites",
+      "concerns": [
+        "Cross-site tracking via cookies and web beacons",
+        "Targeted ads based on usage patterns",
+        "Activity tracked even after leaving the service"
+      ],
       "score_impact": 16.25
     },
     {
@@ -204,41 +224,51 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app says it's not for children under 13, but they only rely on users to say they're old enough during sign-up. There's no real way to verify someone's age.",
-      "detail": "Service not intended for users under 13. The app collects age during registration but has no enforcement mechanism to prevent underage sign-ups.",
-      "policy_excerpt": "The Services are not intended for use by anyone under the age of 13... we do not knowingly collect or solicit personal information from anyone under the age of 13",
-      "concerns": ["No age verification mechanism", "Relies on self-certification"],
+      "plain_english": "The app says it is not for kids under 13, but there is no mention of how it actually verifies age.",
+      "detail": "The policy states the services are not intended for anyone under 13 and that they do not knowingly collect personal information from children under 13. No age verification mechanism is described.",
+      "policy_excerpt": "The Services are not intended for use by anyone under the age of 13. As noted in the Terms of Use, we do not knowingly collect or solicit personal information from anyone under the age of 13.",
+      "concerns": [
+        "No age verification mechanism described",
+        "Coding education app may appeal to children under 13"
+      ],
       "score_impact": 3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
-      "required_for_core_function": true,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app logs your IP address, which websites you visit within the app, and how you interact with different features. This information is used to personalize content and show you targeted ads.",
-      "detail": "IP address, pages viewed, features used, and browsing history logged automatically. Used for personalization, analytics, and advertising.",
-      "policy_excerpt": "we automatically receive and record information on our server logs from your browser or device, which may include your IP address... the page or feature you requested",
-      "concerns": ["IP address logged continuously", "Activity used for profiling"],
-      "score_impact": 1.5
+      "plain_english": "The app logs your IP address, browser type, and pages you visit, and tracks your online activity even after you leave the app to personalize content.",
+      "detail": "Server logs collect IP address, browser type, device info, and requested pages. Cookies placed by Sololearn collect information about online activity after users leave the Services. This is used for content customization and service improvement.",
+      "policy_excerpt": "we automatically receive and record information on our server logs from your browser or device, which may include your IP address, general location, device identification, cookie information",
+      "concerns": [
+        "IP address and browsing activity logged continuously",
+        "Cookies track activity on other websites after leaving"
+      ],
+      "score_impact": 3.25
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app automatically collects your device ID, what type of device you're using, your browser type, and cookie information to recognize your device and track how you use the app.",
-      "detail": "Device ID, browser type, device type, and cookie identifiers collected automatically. Used to recognize device and track feature usage.",
-      "policy_excerpt": "we automatically receive and record information... which may include... device identification, 'cookie' information, the type of browser and/or device you're using to access our Services",
-      "concerns": ["Device ID collected for tracking", "Cookies used for device recognition"],
-      "score_impact": 4.5
+      "plain_english": "The app collects your device ID, browser type, and other device details automatically, and advertisers can use this to track you across different websites.",
+      "detail": "Device identification, browser type, and cookie data are collected automatically. Third-party advertisers and analytics services can view, edit, or set their own cookies, effectively building a device fingerprint for cross-site tracking.",
+      "policy_excerpt": "device identification, cookie information, the type of browser and/or device you're using",
+      "concerns": [
+        "Device ID collected automatically",
+        "Third-party advertisers can set their own cookies",
+        "Used for ad targeting and analytics profiling"
+      ],
+      "score_impact": 9.75
     },
     {
       "id": "health_biometric",
@@ -249,8 +279,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not collect health or biometric data. If you use Face ID or fingerprint to log in, that data stays on your device and is handled by your phone's system, not Sololearn.",
-      "detail": "No health or biometric data collection mentioned. Biometric authentication would be handled by device OS, not the app.",
+      "plain_english": "The privacy policy does not mention collecting any health or biometric data.",
+      "detail": "No references to health metrics, biometric authentication, or physiological data collection.",
       "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
@@ -264,10 +294,12 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "If you subscribe to the premium version, your payment is handled by third-party payment processors. The app mentions they share data with payment processors but doesn't specify what payment data they can see.",
-      "detail": "Payment processing handled by third-party providers. Policy mentions sharing information with 'payment processors' but doesn't detail what specific payment data is collected.",
+      "plain_english": "If you make a payment, a third-party processor handles it. The app says it does not store your raw card details.",
+      "detail": "Payment processing is handled by third-party service providers. The policy does not state that Sololearn stores raw payment card data.",
       "policy_excerpt": "We employ hosting providers, payment processors, and other service provider companies",
-      "concerns": ["Unclear what payment data is collected", "Shared with third-party processors"],
+      "concerns": [
+        "Payment data shared with third-party processors"
+      ],
       "score_impact": 4.5
     },
     {
@@ -279,10 +311,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can request to delete your account and data by emailing them, but they admit some information may still be kept in their records even after deletion. They also keep old versions of your data when you update your profile.",
-      "detail": "Account deactivation and data deletion available via email request. However, policy states some data may remain in records after deletion, and old versions of updated information are maintained.",
-      "policy_excerpt": "Some information may remain in our records after your deletion of such information from your account... When you update information, however, we may maintain a copy of the unrevised information in our records",
-      "concerns": ["Data not fully deleted", "Old versions retained", "Shared content remains visible to others"],
+      "plain_english": "You can request deletion or export of your data, but some information may be kept even after you delete your account.",
+      "detail": "Users can request update, deletion, stop processing, and data portability via email. However, the policy states that some information may remain after deletion for legal compliance, research, business records, and operations. Information shared with friends remains visible to them.",
+      "policy_excerpt": "some information may remain in our records after your deletion of such information from your account",
+      "concerns": [
+        "Data retained after deletion for multiple business purposes",
+        "Shared content remains visible to others after account deletion"
+      ],
       "score_impact": 3
     },
     {
@@ -294,30 +329,38 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "If the privacy policy changes, they'll post a notice on their website or app. If you keep using the app after changes, that means you automatically accept them. They don't require you to actively agree to the new terms.",
-      "detail": "Users notified of material changes via website/app notice. Continued use constitutes acceptance of changes. No requirement for active re-consent.",
-      "policy_excerpt": "We will notify you if we make any material changes to this Privacy Policy by posting a notice on our website and the Sololearn application... If you use the Services after any changes to the Privacy Policy have been posted, that means you agree to all of the changes",
-      "concerns": ["Passive acceptance of changes", "No active re-consent required"],
+      "plain_english": "If the privacy policy changes, they will post a notice, but simply continuing to use the app counts as agreeing to the new terms.",
+      "detail": "Material changes are notified by posting a notice on the website and app. Continued use after changes constitutes agreement. No requirement for active re-consent.",
+      "policy_excerpt": "We will notify you if we make any material changes to this Privacy Policy by posting a notice on our website and the Sololearn application... If you use the Services after any changes to the Privacy Policy have been posted, that means you agree to all of the changes.",
+      "concerns": [
+        "Continued use = automatic acceptance of changes",
+        "No active re-consent required"
+      ],
       "score_impact": 1.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
       { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
       { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
       { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
       { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
-      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
       { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 62.75,
-    "final_score": 69,
+    "total_deductions": 72.75,
+    "final_score": 65,
     "grade": "C"
   }
 }

@@ -2,9 +2,9 @@
   "meta": {
     "schema_version": "1.0",
     "analyzed_at": "2026-05-18",
-    "analyzed_by": "claude-sonnet-4",
-    "policy_url": "https://elsaspeak.com/en/privacy/",
-    "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "http://www.elsanow.io/privacy",
+    "terms_url": "",
     "policy_last_updated": "2025-03",
     "needs_review": false,
     "review_notes": ""
@@ -14,74 +14,80 @@
     "slug": "elsa-speak-english-learning",
     "name": "ELSA Speak - English Learning",
     "developer": "ELSA, Corp.",
-    "app_store_url": "https://apps.apple.com/in/app/id1083804886",
+    "app_store_url": "https://apps.apple.com/in/app/elsa-speak---english-learning/id1083804886",
     "app_store_id": "1083804886",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/60/ff/fd/60fffdde-b0b2-d10b-091b-22c560def6ea/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Education",
     "sub_category": "Language Learning",
-    "description": "AI-powered English pronunciation coach that uses speech recognition to help users improve their English speaking skills."
+    "description": "AI-powered English pronunciation coach that analyzes your voice to help you improve speaking skills."
   },
 
   "verdict": {
     "overall_risk": "caution",
-    "score": 48,
-    "grade": "D",
-    "one_liner": "AI English tutor with solid learning features, but shares your voice data and personal info with advertisers.",
-    "summary": "ELSA Speak is an AI-powered English pronunciation app that records your voice to provide feedback. While it offers genuine educational value, the privacy policy reveals extensive data sharing with advertising networks, marketing services, and social networks. Your voice recordings and personal data may be used for targeted advertising, and the app admits to 'selling' data under US privacy laws.",
+    "score": 61,
+    "grade": "C",
+    "one_liner": "English pronunciation coach that records your voice but also tracks you for ads and shares data widely.",
+    "summary": "ELSA Speak uses AI to analyze your pronunciation, which requires recording your voice. While the app provides genuine educational value, its privacy policy reveals extensive data collection and sharing practices. The company explicitly admits to 'selling' or 'sharing' personal information for targeted advertising under California privacy laws. Your identity data, device information, and online activity are shared with advertising networks and marketing partners. While you have GDPR and CCPA rights, and voice recording is core to the app's purpose, the broad data monetization should give privacy-conscious users pause.",
     "recommendation": "think_twice",
-    "recommendation_reason": "The app's core function requires recording your voice, which is necessary for pronunciation training. However, the extensive data sharing with advertisers and marketing networks goes beyond what's needed for the educational service. Users concerned about their voice data being used for profiling should consider this carefully."
+    "recommendation_reason": "If you need help with English pronunciation, ELSA works well, but be aware that your voice recordings are stored on external servers and your usage data is actively tracked and shared with advertisers. Consider whether the learning benefit is worth the privacy trade-off."
   },
 
   "flags": {
     "red": [
       {
-        "id": "red_voice_data_sharing",
-        "title": "Voice data shared with advertisers",
-        "plain_english": "ELSA records your voice to check your pronunciation, but they also share your personal information with advertising networks and marketing companies. This means data about how you use the app could be used to show you ads elsewhere.",
-        "severity": "high"
-      },
-      {
-        "id": "red_ccpa_selling",
-        "title": "Admits to 'selling' your data",
+        "id": "red_admits_selling_data",
+        "title": "Admits to 'selling' your data for ads",
         "plain_english": "The privacy policy explicitly states they have 'sold' or 'shared' personal information under California privacy laws for targeted advertising. You have to email them to opt out.",
         "severity": "high"
       },
       {
-        "id": "red_many_third_parties",
-        "title": "Shares data with many third parties",
-        "plain_english": "They share your data with a long list of companies including marketing services, social networks, content enrichment providers, and advertising networks—not just essential service providers.",
+        "id": "red_voice_data_stored",
+        "title": "Voice recordings stored on external servers",
+        "plain_english": "ELSA records your voice to check your pronunciation. These recordings are stored on AWS servers in multiple countries and may be shared with transcription and analysis service providers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_broad_third_party_sharing",
+        "title": "Shares data with many third parties including advertisers",
+        "plain_english": "They share your data with a long list of companies including marketing services, social networks, content enrichment providers, event sponsors, and advertising networks—not just essential service providers.",
         "severity": "medium"
       },
       {
-        "id": "red_international_storage",
-        "title": "Data stored worldwide",
-        "plain_english": "Your personal data is stored and processed in multiple countries including the US, Europe, Japan, India, Vietnam, and Singapore. This means your data is subject to different privacy laws depending on where it's stored.",
+        "id": "red_device_tracking_ads",
+        "title": "Tracks your device for targeted advertising",
+        "plain_english": "ELSA collects your device ID, browser type, and other technical details using cookies and SDKs. They use this to track you and share it with advertising partners.",
         "severity": "medium"
       },
       {
-        "id": "red_no_age_verification",
-        "title": "No real age verification",
-        "plain_english": "They say their service is for ages 16+ and will delete data if they find out a minor is using it, but there's no actual age check when you sign up. They only rely on you telling the truth.",
+        "id": "red_deletion_not_guaranteed",
+        "title": "Data deletion isn't guaranteed",
+        "plain_english": "If you ask them to delete your personal data, they may deny your request or keep some of it if they decide it's necessary for them or their service providers.",
         "severity": "medium"
       }
     ],
     "green": [
       {
         "id": "green_data_rights",
-        "title": "Provides data rights (GDPR/CCPA)",
+        "title": "Provides GDPR and CCPA data rights",
         "plain_english": "You can request to see, correct, delete, or export your personal data. They have a dedicated privacy email and a Data Protection Officer to handle these requests.",
         "severity": "positive"
       },
       {
-        "id": "green_clear_retention",
-        "title": "Clear data retention policy",
-        "plain_english": "They explain how long they keep your data and allow you to request deletion. They won't keep your data longer than necessary for their services and legal obligations.",
+        "id": "green_voice_core_feature",
+        "title": "Voice recording is needed for the app to work",
+        "plain_english": "Recording your voice is necessary for the app's main purpose—helping you improve your English pronunciation. This isn't data collection just for the sake of it.",
         "severity": "positive"
       },
       {
-        "id": "green_local_voice_processing",
-        "title": "Voice processing for core feature",
-        "plain_english": "Recording your voice is necessary for the app's main purpose—helping you improve your English pronunciation. This isn't data collection just for the sake of it.",
+        "id": "green_transparent_policy",
+        "title": "Transparent about data practices",
+        "plain_english": "The privacy policy clearly explains what data is collected, why it's collected, and with whom it's shared. They also disclose CCPA categories and provide contact details for their Data Protection Officer.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_children_targeting",
+        "title": "Doesn't target kids and deletes minor data",
+        "plain_english": "They say the app is for ages 16 and up, and if they find out a minor is using the service, they will try to block the account and delete the data.",
         "severity": "positive"
       }
     ]
@@ -97,26 +103,33 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "ELSA needs to record your voice to check your pronunciation—this is the app's main feature. They store these recordings and may share them with service providers.",
-      "detail": "Voice recordings are essential for the app's pronunciation coaching feature. The policy states they collect 'audio and video recordings' as user-generated content. While this is necessary for the core functionality, the data is stored and may be shared with third parties.",
+      "plain_english": "ELSA needs to record your voice to check your pronunciation—this is the app's main feature. They store these recordings and may share them with service providers for transcription and analysis.",
+      "detail": "Voice recordings are essential for the app's pronunciation coaching feature. The policy states they collect 'audio and video recordings' as user-generated content. While this is necessary for core functionality, the data is stored on external servers and may be shared with third-party transcription and analysis providers.",
       "policy_excerpt": "We may collect the following data about Organic Users: User-generated content: prompts, text input, pictures, audio and video recordings, feedback, scenarios.",
-      "concerns": ["Voice recordings stored on servers", "Audio data may be shared with service providers", "Video recordings also collected"],
-      "score_impact": 4.5
+      "concerns": [
+        "Voice recordings stored on external AWS servers",
+        "Audio data may be shared with transcription and analysis service providers",
+        "Video recordings also collected"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "caution",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "ELSA doesn't appear to collect your precise GPS location. They may see your general region from your IP address for basic service delivery.",
-      "detail": "No mention of GPS or precise location collection in the privacy policy. IP addresses are collected for connectivity purposes, which may reveal approximate location.",
-      "policy_excerpt": "IP addresses, device data (like type, OS, device id, browser version, locale and language settings used)",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "ELSA doesn't collect your precise GPS location, but they do record your IP address and explicitly list 'Geolocation Data' as collected and shared under California privacy laws.",
+      "detail": "No mention of GPS or precise location collection. However, IP addresses are collected and may reveal approximate location. The CCPA disclosure explicitly lists 'Geolocation Data' as a collected and shared category for targeted advertising.",
+      "policy_excerpt": "In the last 12 months, we have disclosed... Geolocation Data... In the last 12 months, we have 'sold' or 'shared'... Geolocation Data... for targeted advertising.",
+      "concerns": [
+        "Geolocation Data explicitly collected and shared under CCPA",
+        "IP addresses collected and used for marketing"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
@@ -145,8 +158,10 @@
       "plain_english": "The app may access your photos or files when you choose to upload them, like for a profile picture. This is optional and only happens when you specifically select something.",
       "detail": "The policy mentions collecting 'pictures' as user-generated content, suggesting users can upload images. This appears to be optional functionality.",
       "policy_excerpt": "User-generated content: prompts, text input, pictures, audio and video recordings",
-      "concerns": ["Photo uploads mentioned but context unclear"],
-      "score_impact": 3
+      "concerns": [
+        "Photo uploads mentioned but context is unclear"
+      ],
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -157,26 +172,35 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "ELSA shares your data with many third parties including advertising networks, marketing services, social networks, and content enrichment providers. They explicitly state they've 'sold' data under California privacy laws for targeted advertising.",
-      "detail": "Extensive data sharing is disclosed, including with marketing services, social and advertising networks, and content enrichment providers. The policy explicitly acknowledges 'selling' data under CCPA for targeted advertising.",
-      "policy_excerpt": "We engage selected third-party companies and individuals... including... marketing services, social and advertising networks, content and data enrichment providers... In the last 12 months, we have 'sold' or 'shared' Internet or other electronic network activity information, Geolocation Data, and Commercial Information... for targeted advertising.",
-      "concerns": ["Data sold/shared for targeted advertising", "Many third-party recipients including ad networks", "Hard to opt out—requires email"],
-      "score_impact": 19.5
+      "plain_english": "ELSA shares your data with many third parties including advertising networks, marketing services, social networks, content enrichment providers, event sponsors, and affiliates. They explicitly state they've 'sold' data under California privacy laws for targeted advertising.",
+      "detail": "Extensive data sharing is disclosed, including with marketing services, social and advertising networks, content enrichment providers, event sponsors, and affiliates. The policy explicitly acknowledges 'selling' or 'sharing' data under CCPA for targeted advertising.",
+      "policy_excerpt": "We engage selected third-party companies and individuals... including... marketing services, social and advertising networks, content and data enrichment providers... In the last 12 months, we have 'sold' or 'shared'... for targeted advertising.",
+      "concerns": [
+        "Data sold/shared for targeted advertising",
+        "Many third-party recipients including ad networks and event sponsors",
+        "Hard to opt out—requires emailing privacy@elsanow.io",
+        "Data shared with affiliates and in corporate transactions"
+      ],
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You need an account to use ELSA. They collect your name, email, and profile information. This data is linked to your learning progress and may be shared with service providers.",
-      "detail": "Account creation requires providing personal information including name, email, and possibly age range and professional information. This is standard for educational apps.",
-      "policy_excerpt": "Contact and business details: name, email, phone number, age range, position, workplace and professional information",
-      "concerns": ["Identity data shared with marketing partners", "Professional information collected"],
-      "score_impact": 4.5
+      "plain_english": "You need an account to use ELSA. They collect your name, email, phone, age, and workplace information, and they explicitly share these 'Identifiers' with advertising networks for targeted ads.",
+      "detail": "Account creation requires providing personal information including name, email, phone number, age range, position, and workplace. Under CCPA, 'Identifiers' are explicitly disclosed as being sold/shared for targeted advertising. Identity data is also used for marketing campaigns and shared with social and advertising networks.",
+      "policy_excerpt": "Contact and business details: name, email, phone number, age range, position, workplace and professional information... In the last 12 months, we have disclosed... Identifiers... In the last 12 months, we have 'sold' or 'shared'... Identifiers... for targeted advertising.",
+      "concerns": [
+        "Identity data linked to advertising profile",
+        "Identifiers sold/shared under CCPA for targeted ads",
+        "Professional information collected and shared"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -187,11 +211,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "ELSA uses cookies, device identifiers, and other tracking technologies to analyze your behavior and show you targeted ads. They share this tracking data with advertising partners.",
-      "detail": "The app uses cookies, pixels, SDKs, and device identifiers for marketing, analytics, and targeted advertising. They explicitly state this data is 'sold' or 'shared' under US privacy laws for targeted advertising purposes.",
+      "plain_english": "ELSA uses cookies, device identifiers, SDKs, and pixels to analyze your behavior and show you targeted ads. They share this tracking data with advertising partners and admit to selling it under US privacy laws.",
+      "detail": "The app uses cookies, pixels, SDKs, and device identifiers for marketing, analytics, and targeted advertising. They explicitly state this data is 'sold' or 'shared' under US privacy laws for targeted advertising purposes. They also infer needs and preferences from your usage.",
       "policy_excerpt": "We and our service providers utilize third-party software development kits (SDKs), cookies, pixels and similar technologies... to analyse our performance and marketing activities... In the last 12 months, we have 'sold' or 'shared'... for targeted advertising.",
-      "concerns": ["Cross-app tracking via advertising partners", "Device identifiers used for ad targeting", "Opt-out requires emailing privacy@elsanow.io"],
-      "score_impact": 16.25
+      "concerns": [
+        "Cross-app tracking via advertising partners",
+        "Device identifiers used for ad targeting",
+        "Opt-out requires emailing privacy@elsanow.io"
+      ],
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -203,10 +231,13 @@
       "optional_access": false,
       "background_access": false,
       "plain_english": "ELSA says their app isn't for kids under 16, but they don't actually check your age when you sign up. They just trust that users tell the truth.",
-      "detail": "The policy states the service is not designed for minors and requires users to be 16+. However, there's no actual age verification mechanism—reliance is solely on user self-declaration.",
+      "detail": "The policy states the service is not designed for minors and requires users to be 16+. However, there is no actual age verification mechanism—reliance is solely on user self-declaration. They say they will attempt to prohibit and block use if they learn a minor is using the service.",
       "policy_excerpt": "Any individual who provides their personal data to us through the Services represents that they are 16 years of age or older. If we learn that a person who is considered as a minor according to applicable law is interacting with our Services... we will attempt to prohibit and block such use.",
-      "concerns": ["No age verification mechanism", "Reactive rather than proactive protection"],
-      "score_impact": 3
+      "concerns": [
+        "No age verification mechanism",
+        "Reactive rather than proactive protection"
+      ],
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -217,11 +248,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "ELSA logs your IP address and activity on the app to deliver the service and for security. This is fairly standard, but this data may also be used for marketing purposes.",
-      "detail": "IP addresses and activity logs are collected for service delivery and security. However, this network data is also shared for marketing and advertising purposes.",
+      "plain_english": "ELSA logs your IP address and activity on the app to deliver the service and for security. This is fairly standard, but this data is also used for marketing and advertising purposes.",
+      "detail": "IP addresses and activity logs are collected for service delivery and security. However, this network data is also shared for marketing and advertising purposes, and explicitly listed as 'sold' or 'shared' under CCPA for targeted advertising.",
       "policy_excerpt": "Connectivity, technical and aggregated usage data: IP addresses, device data... activity logs, session recordings, inferred or presumed data generated from the Services",
-      "concerns": ["IP data used for marketing", "Activity logs shared with third parties"],
-      "score_impact": 1.5
+      "concerns": [
+        "IP data used for marketing and advertising",
+        "Activity logs shared with third parties"
+      ],
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
@@ -232,11 +266,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "ELSA collects your device ID, browser type, and other technical details. They use this to track you across sessions and share it with advertising partners.",
-      "detail": "Device identifiers and technical data are collected and used for marketing, advertising, and service improvement. This includes device unique identifiers which can be used for fingerprinting and tracking.",
+      "plain_english": "ELSA collects your device ID, browser type, operating system, and other technical details. They use this to track you across sessions and share it with advertising partners for targeted ads.",
+      "detail": "Device identifiers and technical data are collected and used for marketing, advertising, and service improvement. This includes device unique identifiers which can be used for fingerprinting and tracking across sessions and apps.",
       "policy_excerpt": "IP addresses, device data (like type, OS, device id, browser version, locale and language settings used)... We and our service providers utilize third-party software development kits (SDKs), cookies, pixels and similar technologies",
-      "concerns": ["Device ID used for tracking", "Shared with advertising networks", "Used for targeted advertising"],
-      "score_impact": 9.75
+      "concerns": [
+        "Device ID used for tracking",
+        "Shared with advertising networks",
+        "Used for targeted advertising"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -247,11 +285,14 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Your voice is technically a biometric. ELSA records and analyzes your voice to check pronunciation. While this is necessary for the app, your voice data is stored on their servers and may be shared.",
-      "detail": "Voice recordings are collected and analyzed for pronunciation coaching. While processed for the core feature, voice data is considered biometric information and is stored and potentially shared with third parties.",
+      "plain_english": "Your voice is technically a biometric. ELSA records and analyzes your voice to check pronunciation. While this is necessary for the app, your voice data is stored on their servers and may be shared with transcription providers.",
+      "detail": "Voice recordings are collected and analyzed for pronunciation coaching. While processed for the core feature, voice data is considered biometric information and is stored on external servers and potentially shared with third-party service providers for transcription and analysis.",
       "policy_excerpt": "User-generated content: prompts, text input, pictures, audio and video recordings, feedback, scenarios",
-      "concerns": ["Voice biometric data stored externally", "May be shared with service providers", "No clear retention period for voice data"],
-      "score_impact": 4.5
+      "concerns": [
+        "Voice biometric data stored externally",
+        "May be shared with service providers for transcription/analysis"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "financial_payment",
@@ -262,26 +303,31 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "When you pay for ELSA Premium, your payment is processed by Apple. ELSA doesn't directly handle your credit card information.",
+      "plain_english": "When you pay for ELSA Premium, your payment is processed by Apple through in-app purchases. ELSA doesn't directly handle your credit card information.",
       "detail": "Payment processing is handled through Apple's in-app purchase system. The app only shares limited purchase activity data with Apple for refund processing, not raw financial data.",
       "policy_excerpt": "If we receive a refund request for an in-app purchase, we may provide Apple with information about the user's in-app purchase activity... This could include details such as time since app installation, total app usage time, an anonymous account identifier",
-      "concerns": ["Limited purchase activity shared with Apple for refunds"],
+      "concerns": [
+        "Limited purchase activity shared with Apple for refunds"
+      ],
       "score_impact": 0
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "safe",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You have the right to request your data be deleted or exported. They have a dedicated privacy email and comply with GDPR and CCPA rights.",
-      "detail": "Clear data subject rights are provided including access, correction, deletion, and portability. A dedicated privacy contact (privacy@elsanow.io) and Data Protection Officer are designated.",
-      "policy_excerpt": "You may also have the right to restrict or object to the processing of your personal data, the right to direct us not to sell or share your personal data... please contact us by e-mail at: privacy@elsanow.io",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "You can ask ELSA to delete or export your data, but they may deny your request or keep some of your information if they decide they need it for legal or business reasons.",
+      "detail": "Data subject rights are provided including access, correction, deletion, and portability. However, the policy states deletion requests may be denied and certain elements of personal data may be retained if deemed necessary. A dedicated privacy contact and Data Protection Officer are designated.",
+      "policy_excerpt": "If you request deletion of your personal data, we may deny your request or may retain certain elements of your personal data if it is necessary for us or our service providers.",
+      "concerns": [
+        "Deletion requests may be denied",
+        "Some data may be retained after deletion request"
+      ],
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -295,8 +341,11 @@
       "plain_english": "ELSA can change their privacy policy and will post the updated version. They say they'll give notice for 'substantial changes' but continuing to use the app means you accept the changes.",
       "detail": "Policy updates are posted with an effective date. They claim to provide prior notice for substantial changes, but continued use constitutes acceptance of amendments.",
       "policy_excerpt": "We may update and amend this Privacy Notice from time to time by posting an amended version... We will provide prior notice if we believe any substantial changes are involved... After such notice period, all amendments shall be deemed accepted by you.",
-      "concerns": ["Opt-out by停止使用 rather than active consent for changes", "Substantial changes definition is vague"],
-      "score_impact": 1.5
+      "concerns": [
+        "Opt-out by stopping use rather than active consent for changes",
+        "Substantial changes definition is vague"
+      ],
+      "score_impact": -1.5
     }
   ],
 
@@ -305,18 +354,22 @@
     "max_possible_deductions": 205,
     "deductions": [
       { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
       { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
-      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
       { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
       { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
       { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
       { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
     ],
-    "total_deductions": 68,
-    "final_score": 48,
-    "grade": "D"
+    "total_deductions": 80.75,
+    "final_score": 61,
+    "grade": "C"
   }
 }

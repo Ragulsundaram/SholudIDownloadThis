@@ -11,9 +11,9 @@
 
 ## Summary Card
 
-### Microsoft Bing Search — Grade D (52/100) — Risky
+### Microsoft Bing Search — Grade C (59/100) — Caution
 
-**One-liner:** A powerful search app with extensive data collection and AI training practices that raises significant privacy concerns.
+**One-liner:** A powerful search app with extensive data collection and AI training practices that warrant careful consideration.
 
 **Red Flags:**
 - **Your data trains AI models** — Microsoft uses your search queries and interactions to train and improve their AI models, including Copilot. This means your questions and searches could be used to teach AI systems.
@@ -121,9 +121,9 @@ Policy changes are posted on the website with an updated date. Microsoft may not
 | Financial & Payment Data | Safe | 15 | 0% | 0 |
 | Contacts & Phonebook | Safe | 20 | 0% | 0 |
 
-**Total Deductions:** 83.25  
-**Final Score:** 52/100  
-**Grade:** D (Risky)
+**Total Deductions:** 83.25
+**Final Score:** 59/100
+**Grade:** C (Caution)
 
 ---
 

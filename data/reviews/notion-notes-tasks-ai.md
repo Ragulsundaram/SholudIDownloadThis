@@ -1,146 +1,126 @@
-# Privacy Review: Notion: Notes, Tasks, AI
+# Notion: Notes, Tasks, AI — Privacy Review
 
-**App:** Notion: Notes, Tasks, AI  
-**Developer:** Notion Labs, Incorporated  
-**Platform:** iOS  
-**Analyzed:** 2026-05-18  
+**Developer:** Notion Labs, Incorporated
+**Platform:** iOS
 **Policy URL:** https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac
+**Last Updated:** September 29, 2025
+**Analyzed:** 2026-05-18
 
 ---
 
 ## Summary Card
 
-**Overall Risk:** Caution  
-**Score:** 74/100 (Grade B)  
-**Recommendation:** Recommended with awareness
+### Notion: Notes, Tasks, AI
+**Overall Risk:** Caution | **Score:** 68/100 | **Grade:** C
 
-### Red Flags
-- **AI features send content to third parties** — When you use Notion AI, your content is sent to companies like OpenAI and Anthropic to generate responses. While they don't train models on your data, your information leaves Notion's servers.
-- **Usage data collected and linked to you** — Notion collects usage data that's linked to your identity, including how you interact with the app and workspace metadata.
-- **30-day recovery window for deleted content** — When you delete something, it stays recoverable for 30 days before being permanently removed.
+#### Red Flags
+- **Tracks your activity across devices and websites:** Notion uses technology partners to track your browsing activity across different websites, devices, and apps to match your behavior on your phone with your behavior on your computer.
+- **Collects advertising IDs and unique identifiers:** Notion collects mobile advertising identifiers, cookie IDs, MAC addresses, and other unique identifiers from your device to track and profile you.
+- **Your data may be sold or transferred in a corporate deal:** If Notion is involved in a merger, acquisition, or sale of assets, your personal information may be sold or transferred as part of that transaction.
+- **Shares your data with advertising partners:** Notion shares identifiers, internet activity, geolocation data, and profile inferences with advertising partners to market its own services to you.
+- **Continuing to use the app means accepting policy changes:** If Notion updates its privacy policy, you are automatically considered to have accepted the new policy just by continuing to use the app.
 
-### Green Flags
-- **You own your data** — Notion explicitly states that you own all content you create or upload. They act only as a processor, not an owner, of your data.
-- **Your data won't train AI models** — Notion contractually prohibits AI providers from using your content to train or improve their machine learning models.
-- **SOC 2 and ISO 27001 certified** — Notion has passed independent security audits and maintains industry-recognized security certifications.
-- **Easy data export available** — You can export your workspace data in multiple formats including PDF, Markdown, and HTML whenever you want.
-- **Strong encryption in transit** — Your data is protected with TLS 1.2 or higher when traveling between your device and Notion's servers.
+#### Green Flags
+- **You can opt out of targeted advertising and data sales:** Notion provides a "Do Not Sell or Share My Info" link on its website and honors browser-based opt-out signals like Global Privacy Control.
+- **Payment details handled by third-party processors:** Notion does not store your payment card details directly. Payments are processed and stored by third-party payment providers on Notion's behalf.
+- **You can access, correct, and delete your data:** You have the right to request access to your information, ask for corrections, request deletion, and restrict how your data is processed.
+- **Google Contacts data used only for email invitations:** If you use the Google Contacts feature, Notion only uses that data to auto-complete email addresses when sending invitations and promises not to use it for anything else.
 
-### Verdict
-Notion offers robust privacy protections including user data ownership, encryption, and compliance certifications. However, AI features require sending content to subprocessors (OpenAI, Anthropic), and some analytics data collection occurs. The app is recommended for most users, but be aware that AI features share your content with third parties. Consider whether you need AI features or can use Notion's core note-taking and organization tools without them.
-
----
-
-## Category Breakdown
-
-### Camera & Microphone — Safe
-- **Access:** On-demand only
-- **Usage:** Camera and microphone are only used when you actively choose to upload photos, scan documents, or record audio notes.
-- **Concerns:** None
-
-### Location & GPS — Safe
-- **Access:** Not collected
-- **Usage:** Notion does not appear to collect or use your precise location data.
-- **Concerns:** None
-
-### Contacts & Phonebook — Safe
-- **Access:** Not collected
-- **Usage:** Notion does not request access to your contacts or phonebook.
-- **Concerns:** None
-
-### Storage & File Access — Caution
-- **Access:** On-demand, user-initiated
-- **Usage:** You can choose to upload files to your workspace. Notion stores these files on their servers to sync across devices.
-- **Concerns:** Files stored on third-party servers
-
-### Data Sharing with 3rd Parties — Risky
-- **Access:** On-demand (for AI features)
-- **Usage:** When you use AI features, your content is sent to OpenAI and Anthropic. Regular data is shared with subprocessors under strict contracts.
-- **Concerns:** Content sent to AI providers, subprocessors involved in service delivery
-- **Policy Excerpt:** "Notion AI uses subprocessors including OpenAI and Anthropic. Data shared only when necessary for AI features."
-
-### Account & Identity Data — Caution
-- **Access:** Required for service
-- **Usage:** Notion collects your name, email, and account details to provide the service.
-- **Policy Excerpt:** "Account Information includes names, usernames, passwords, phone numbers, email addresses, billing information, and workspace metadata."
-- **Concerns:** Workspace metadata collected
-
-### Behavioural & Ad Tracking — Caution
-- **Access:** Continuous
-- **Usage:** Notion collects usage data and analytics to understand how people use the app. They don't show ads or sell data to advertisers.
-- **Policy Excerpt:** "Usage data collected and linked to identity. Used for analytics and product improvement, not advertising."
-- **Concerns:** Usage data linked to identity
-
-### Children's Data Handling — Caution
-- **Access:** N/A
-- **Usage:** Notion is intended for users 13 and older.
-- **Concerns:** No detailed COPPA compliance measures stated
-
-### Network & Internet Activity — Caution
-- **Access:** Continuous
-- **Usage:** Notion logs IP addresses and network activity for security and service operation.
-- **Policy Excerpt:** "IP addresses, browser type, device info, and log files collected for security and analytics."
-- **Concerns:** IP addresses logged
-
-### Device Info & Fingerprinting — Caution
-- **Access:** On-demand
-- **Usage:** Notion collects basic device information like browser type and device type for compatibility.
-- **Concerns:** None significant
-
-### Health & Biometric Data — Safe
-- **Access:** Not collected
-- **Usage:** Notion does not collect health or biometric data. Face ID/Touch ID handled locally by iOS.
-- **Concerns:** None
-
-### Financial & Payment Data — Caution
-- **Access:** On-demand (if purchasing)
-- **Usage:** Payment processing handled by third-party processors.
-- **Concerns:** Billing information stored
-
-### Data Deletion & User Rights — Caution
-- **Access:** User-controlled
-- **Usage:** You can export and delete your data. Deleted items recoverable for 30 days.
-- **Concerns:** 30-day recovery window before permanent deletion
-
-### Policy Change Notification — Caution
-- **Access:** N/A
-- **Usage:** Policy updates posted on website.
-- **Concerns:** No explicit advance notification method specified
+#### Verdict
+Notion gives you decent control over your data and lets you opt out of targeted ads, but it tracks you across devices, shares identifiers with advertisers, and your information could be transferred in a corporate sale. Use the opt-out settings and avoid storing highly sensitive personal information in your workspaces.
 
 ---
 
-## Scoring Calculation
+## Detailed Analysis
 
-| Category | Risk Level | Max Deduction | Rate | Deduction |
-|----------|------------|---------------|------|-----------|
-| Data Sharing with 3rd Parties | Risky | 30 | 65% | 19.5 |
-| Behavioural & Ad Tracking | Caution | 25 | 30% | 7.5 |
-| Account & Identity Data | Caution | 15 | 30% | 4.5 |
-| Device Info & Fingerprinting | Caution | 15 | 30% | 4.5 |
-| Financial & Payment Data | Caution | 15 | 30% | 4.5 |
-| Data Deletion & User Rights | Caution | 10 | 30% | 3.0 |
-| Children's Data Handling | Caution | 10 | 30% | 3.0 |
-| Storage & File Access | Caution | 10 | 30% | 3.0 |
-| Network & Internet Activity | Caution | 5 | 30% | 1.5 |
-| Policy Change Notification | Caution | 5 | 30% | 1.5 |
+### Information Collection
 
-**Total Deductions:** 52.5  
-**Final Score:** 74 (B Grade)  
-**Calculation:** `round((1 - 52.5/205) × 100) = 74`
+**Account Information:** Notion collects name, email address, password, role within team or enterprise, and an optional profile photo during account creation.
+
+**Automatic Data Collection:** When you visit and interact with Notion's website or services, they automatically collect IP address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser and OS details, location information (general location inferred from IP address), pages visited, links clicked, and interaction frequency/duration.
+
+**Cookies and Tracking Technologies:** Notion and third parties use cookies, pixel tags, local storage, and other technologies. Third-party advertising technology partners place these technologies to collect information for targeted marketing of Notion's own services.
+
+**Cross-Device Tracking:** Notion explicitly states that your browsing activity may be tracked across different websites and devices. Technology partners share data such as browsing patterns, geo-location, and device identifiers to match browser and devices used by the same person.
+
+**Third-Party Integrations:**
+- Google Contacts: Viewed via Google People API solely for auto-completing invitation emails
+- Notion Calendar: Stores calendar provider userID and authorization token
+- Notion Mail: Uses Gmail API, Directory API, Workspace API, and Calendar API
+
+### Data Use
+
+- Provide services and fulfill contracts
+- Administrative and communication purposes (including marketing)
+- Facilitate collaboration in workspaces
+- Manage organizational workspaces
+- Marketing of products and services via targeted advertising
+- Fraud prevention and user authentication
+
+### Data Sharing
+
+**Service Providers:** For IT, marketing, advertising, payment processing, customer service, and fraud prevention.
+
+**Advertising Partners:** Notion shares data with third-party advertising partners to market its own services. Under CCPA disclosures, identifiers, internet activity, geolocation data, and inferences are shared/sold to advertising partners.
+
+**Business Partners:** At user request or for joint product offerings.
+
+**Affiliates:** Under common ownership/control.
+
+**Corporate Transactions:** Data may be sold or transferred in mergers, acquisitions, or asset sales.
+
+### User Rights
+
+- Access personal information
+- Request correction
+- Request deletion (subject to legal exceptions)
+- Request restriction or object to processing
+- Opt out of targeted advertising via website settings
+- Browser-based opt-out signals (Global Privacy Control) honored
+
+### Data Retention
+
+Data is stored "for as long as you use our Services or as necessary to fulfill the purpose(s) for which it was collected, provide our Services, resolve disputes, establish legal defenses, conduct audits, pursue legitimate business purposes, enforce our agreements, and comply with applicable laws."
+
+### Children's Data
+
+Services are not directed at children. If data is collected from children without valid parental consent, Notion will take reasonable steps to delete it.
+
+### Policy Changes
+
+Material changes will be notified as required by law. Continued use after changes take effect constitutes acceptance.
+
+### CCPA Disclosures
+
+Notion has collected and disclosed the following categories in the last 12 months:
+- Identifiers: disclosed to affiliates, service providers, advertising partners, legal entities, business transaction entities
+- Internet/electronic network activity: same disclosures
+- Geolocation data: same disclosures
+- Inferences: disclosed to advertising partners
+
+Notion certifies adherence to the EU-U.S. Data Privacy Framework, UK Extension, and Swiss-U.S. Data Privacy Framework.
 
 ---
 
-## Sources
+## Scoring Breakdown
 
-- [Notion Help Center - Privacy Practices](https://www.notion.com/help/privacy)
-- [Notion AI Security & Privacy Practices](https://notion.com/help/notion-ai-security-practices)
-- [App Store Privacy Nutrition Labels](https://apps.apple.com/in/app/notion-notes-tasks-ai/id1232780281)
-- Notion Terms and Privacy Policy (notion.so)
+| Category | Risk | Max | Rate | Deduction |
+|----------|------|-----|------|-----------|
+| Camera & Microphone | unknown | 15 | 0.50 | 7.50 |
+| Location & GPS | caution | 15 | 0.30 | 4.50 |
+| Contacts & Phonebook | caution | 20 | 0.30 | 6.00 |
+| Storage & File Access | caution | 10 | 0.30 | 3.00 |
+| Data Sharing with 3rd Parties | caution | 30 | 0.30 | 9.00 |
+| Account & Identity Data | caution | 15 | 0.30 | 4.50 |
+| Behavioural & Ad Tracking | caution | 25 | 0.30 | 7.50 |
+| Children's Data Handling | caution | 10 | 0.30 | 3.00 |
+| Network & Internet Activity | caution | 5 | 0.30 | 1.50 |
+| Device Info & Fingerprinting | risky | 15 | 0.65 | 9.75 |
+| Health & Biometric Data | safe | 15 | 0.00 | 0.00 |
+| Financial & Payment Data | caution | 15 | 0.30 | 4.50 |
+| Data Deletion & User Rights | caution | 10 | 0.30 | 3.00 |
+| Policy Change Notification | caution | 5 | 0.30 | 1.50 |
 
----
-
-## Review Notes
-
-This review was compiled from Notion's Help Center documentation, public security disclosures, and App Store privacy labels. Notion maintains strong security practices and clearly states user data ownership. The primary privacy consideration is the AI feature integration, which requires sending content to third-party LLM providers (OpenAI, Anthropic). Users who do not use AI features will have less data exposure.
-
-Notion's enterprise plans offer additional privacy protections including zero-retention AI processing and advanced security features not available on personal/free plans.
+**Total Deductions:** 65.25
+**Final Score:** 68
+**Grade:** C

@@ -1,9 +1,9 @@
 # Craft: Notes, Documents, AI — Privacy Review
 
 **Review Date:** 2026-05-18  
-**Analyzed By:** Claude Sonnet 4  
+**Analyzed By:** claude-kimi-k2.6  
 **Policy URL:** https://www.craft.do/privacy  
-**Terms URL:** https://www.craft.do/terms  
+**Terms URL:**  
 **Policy Last Updated:** November 21, 2025
 
 ---
@@ -14,22 +14,21 @@
 **Developer:** Craft Docs Limited  
 **Overall Risk:** Safe  
 **Score:** 83/100  
-**Grade:** A  
+**Grade:** A
 
 ### Red Flags
-- **Usage data collected via cookies** — The app collects information about how you use it through cookies and similar technologies. This includes tracking which documents you visit and how you interact with the app.
-- **Third-party analytics providers** — Craft uses third-party services to collect and analyze how people use the app. While these providers have their own privacy policies, your usage data is still being processed by external companies.
-- **Data stored worldwide including US** — Your information may be transferred and stored in countries around the world, including the United States. These countries may have different data protection laws than where you live.
+- **Data shared with service providers.** Craft shares your personal information with third-party companies that help run the service, like customer support and analytics providers.
+- **Usage data collected for analytics.** Craft collects information about how you use the app through cookies and third-party analytics providers.
+- **Policy can change without clear notice.** Craft can change its privacy policy at any time and only asks you to check back from time to time.
 
 ### Green Flags
-- **Explicit no-selling promise** — Craft clearly states they do not sell your data to others or use it for advertising. This is a strong privacy commitment that many apps avoid making.
-- **Private notes stay private** — The company promises they will never read or access your private notes without your written or verbal consent. Your notes belong to you, period.
-- **Data deletion rights available** — You can request deletion of your personal information by contacting support. They also promptly remove cached Google data when you disconnect integrations.
-- **Third-party connections are optional** — Connections to services like Google Calendar are completely optional and only happen when you choose to enable them. You can disconnect anytime in settings.
-- **Not directed at children under 16** — The service is not intended for children under 16, and they will delete any data collected from children if discovered. This shows responsible data practices.
+- **No ads or data selling.** Craft explicitly promises it does not sell your data to others or use it for advertising.
+- **Users can request data deletion.** You can contact Craft to request deletion of your personal information.
+- **Third-party integrations are fully optional.** You can connect or disconnect third-party services at any time from your account settings.
+- **Google user data protected.** Your Google user data is never used for advertising or shared with data brokers.
 
 ### Verdict
-Craft takes a refreshingly strong stance on privacy. Unlike many productivity apps, they explicitly promise not to sell your data, not to use it for advertising, and never to read your private notes without your explicit permission. While some usage tracking occurs for analytics and your data may be stored internationally, the overall approach is transparent and user-focused. This is a solid choice for privacy-conscious users looking for a notes and documents app.
+Craft is a strong choice for privacy-conscious users. The company makes explicit commitments against advertising and data selling, gives users control over third-party integrations, and allows data deletion requests. The main caveats are standard sharing with service providers and vague policy change notifications.
 
 ---
 
@@ -83,21 +82,27 @@ Craft takes a refreshingly strong stance on privacy. Unlike many productivity ap
 
 | Category | Risk Level | Max Deduction | Rate | Deduction |
 |----------|-----------|---------------|------|-----------|
-| data_sharing_third_parties | caution | 30 | 0.3 | 9 |
-| behavioural_ad_tracking | caution | 25 | 0.3 | 7.5 |
-| account_identity | caution | 15 | 0.3 | 4.5 |
-| financial_payment | caution | 15 | 0.3 | 4.5 |
-| storage_file_access | caution | 10 | 0.3 | 3 |
-| data_deletion_user_rights | caution | 10 | 0.3 | 3 |
-| network_internet_activity | caution | 5 | 0.3 | 1.5 |
-| policy_change_notification | caution | 5 | 0.3 | 1.5 |
+| Camera & Microphone | unknown | 15 | 0% | 0 |
+| Location & GPS | unknown | 15 | 0% | 0 |
+| Contacts & Phonebook | safe | 20 | 0% | 0 |
+| Storage & File Access | caution | 10 | 30% | 3 |
+| Data Sharing with 3rd Parties | caution | 30 | 30% | 9 |
+| Account & Identity Data | caution | 15 | 30% | 4.5 |
+| Behavioural & Ad Tracking | safe | 25 | 0% | 0 |
+| Children's Data Handling | caution | 10 | 30% | 3 |
+| Network & Internet Activity | caution | 5 | 30% | 1.5 |
+| Device Info & Fingerprinting | caution | 15 | 30% | 4.5 |
+| Health & Biometric Data | unknown | 15 | 0% | 0 |
+| Financial & Payment Data | caution | 15 | 30% | 4.5 |
+| Data Deletion & User Rights | caution | 10 | 30% | 3 |
+| Policy Change Notification | caution | 5 | 30% | 1.5 |
 | **Total** | | | | **34.5** |
 
 **Final Calculation:**
 - Base Score: 100
 - Total Deductions: 34.5
 - Max Possible Deductions: 205
-- Final Score: round((1 - 34.5/205) × 100) = 83
+- Final Score: round((1 - 34.5/205) x 100) = 83
 - Grade: A
 - Overall Risk: Safe
 

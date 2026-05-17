@@ -1,7 +1,7 @@
-# Picsart AI Photo Editor, Video Privacy Policy Review
+# Picsart AI Photo Editor, Video — Privacy Review
 
-**Date:** 2026-05-17
-**Analyst:** claude-kimi-k2.5
+**Date:** 2026-05-18
+**Analyst:** claude-sonnet-4
 **Policy URL:** https://picsart.com/privacy-policy
 **Policy Date:** September 12, 2024
 
@@ -11,140 +11,90 @@
 
 **App:** Picsart AI Photo Editor, Video
 **Overall Risk:** Risky (Grade D)
-**Score:** 54/100
+**Score:** 52/100
 
 ### Red Flags
-- **Facial geometry stored for up to 3 years** - When you use face effects, Picsart collects and stores your biometric data (facial geometry) for up to 3 years after account inactivity
-- **Contacts uploaded to servers** - With permission, your entire contact list is accessed and stored on Picsart's servers to help find friends
-- **Cross-platform ad tracking** - Interest-based advertising tracks your activity across Picsart and non-affiliated platforms
-- **Do Not Track ignored** - Picsart's systems do not recognize browser Do Not Track signals
-- **Data shared with ad networks** - Information shared with Google Analytics, Facebook, Crashlytics, Firebase, and advertising networks
+- **Interest-based advertising tracks you across apps and websites** — Picsart uses your personal information to show targeted ads based on your activity both inside the app and on other platforms.
+- **Your contact list can be uploaded to their servers** — If you give permission, names, phone numbers, and emails from your contacts are uploaded to Picsart's servers to help find friends.
+- **Data shared with ad networks and subsidiaries** — Your information is shared with advertising networks, service providers, and Picsart's subsidiaries and affiliates.
+- **"Do Not Track" signals are ignored** — The policy explicitly states their systems do not recognize Do Not Track signals from browsers.
+- **Facial geometry data stored for up to 3 years** — When you use face effects, Picsart collects biometric data and stores it on their servers for years.
 
 ### Green Flags
-- **TrueDepth data stays local** - Face data from Apple's TrueDepth API never leaves your device and isn't stored
-- **GDPR rights available** - EU/UK users have access, deletion, correction, and portability rights
-- **Biometric data not sold** - Picsart does not sell, lease, or trade your facial geometry data
-- **Opt-out tools available** - DAA Webchoices and Appchoices programs for opting out of targeted advertising
+- **TrueDepth camera data never leaves your device** — Face tracking data from Apple's TrueDepth API is used only in real time and is never stored or shared.
+- **Biometric data is explicitly not sold** — Picsart promises not to sell, lease, trade, or profit from your facial geometry data.
+- **Opt-out tools for targeted advertising are provided** — You can opt out through DAA Webchoices and Appchoices programs.
+- **You can request deletion of your personal information** — A Privacy Request Form and email contact are available for data deletion requests.
 
 ### Verdict
-Picsart offers powerful editing features but collects extensive personal data including your facial geometry and contacts. The app engages in cross-platform behavioral tracking for advertising and ignores Do Not Track signals. While GDPR rights are available and biometric data has protections, the extensive data sharing and tracking warrant caution.
+Picsart offers powerful photo editing tools but collects extensive personal data and engages in aggressive cross-platform ad tracking. Your contacts, facial geometry, and activity data are all collected and shared with advertising networks. While TrueDepth data stays local and biometric data is not sold, the extensive tracking and data sharing practices make this app a poor choice for privacy-conscious users.
 
 ---
 
-## Analysis Notes
+## Category Analysis
 
-### Key Findings
+### Camera & Microphone — Caution
+Camera and microphone are used when you actively take photos or record videos for editing. TrueDepth data for face effects is processed locally and never leaves your device.
 
-**1. Biometric Data Collection and Storage**
-Picsart's most significant privacy concern is the collection and storage of facial geometry (biometric data) when you use face effects. This data is:
-- Used to provide effects and improve services
-- Stored for up to 3 years after account becomes inactive
-- Not used for identification or authentication
-- Protected with reasonable security standards
-- Not sold, leased, or traded
+### Location & GPS — Caution
+Picsart approximates your location from your IP address or device settings when you create an account. You may also add geotags to photos you choose to share publicly.
 
-**2. Contacts Upload**
-With user permission, Picsart accesses and stores the device's entire contact list on their servers. This is used for:
-- Finding friends on Picsart
-- Inviting contacts to the app
-- Sharing content with contacts
-Data also comes from linked social accounts (Facebook, Instagram).
+### Contacts & Phonebook — Risky
+If you give permission, Picsart accesses and stores your contact list on its servers to help you find friends and invite them to the app.
 
-**3. Extensive Ad Tracking**
-Picsart participates in interest-based advertising with:
-- Cross-platform behavioral tracking (Picsart + non-affiliated sites)
-- Data collection across devices and browsers
-- Inferences about user interests based on activity
-- Email addresses used for ad targeting
-- No recognition of Do Not Track signals
+### Storage & File Access — Caution
+Picsart needs access to your photos and videos so you can edit them. You choose which files to open or save.
 
-**4. Data Sharing with Third Parties**
-Data shared with:
-- Service providers (hosting, security, storage, analytics)
-- Ad networks and serving providers
-- Google Analytics, Facebook, Crashlytics, Firebase
-- Subsidiaries and affiliates
-- Government/law enforcement when required
-- Business transaction parties (mergers/acquisitions)
+### Data Sharing with 3rd Parties — Risky
+Picsart shares your data with service providers, advertising networks, government bodies when required, and its subsidiaries. Your data may also be used for interest-based advertising.
 
-**5. Strong GDPR Compliance**
-For EU/UK users:
-- Right of access, rectification, erasure
-- Right to restriction, portability, objection
-- Response within one month
-- Data Protection Officer available
-- Standard contractual clauses for international transfers
+### Account & Identity Data — Risky
+You must provide personal details like name, email, and username to create an account. Your profile and posts are public by default, and your data may be used to target ads to you.
 
-**6. User Rights and Deletion**
-- Privacy Request Form available for data requests
-- Account settings for managing preferences
-- Cookie preferences adjustable
-- Some data retained for legal/business reasons after deletion
-- Email verification required for requests
+### Behavioural & Ad Tracking — Risky
+Picsart tracks how you use the app to show you personalized ads. It uses cookies, tracking pixels, and works with ad networks to follow your activity across different apps and websites.
 
-### User Rights
-- **Access/Know** - Request information about data collected
-- **Delete** - Request deletion (with some exceptions)
-- **Correct** - Request correction of inaccurate data
-- **Portability** - Receive copy in machine-readable format
-- **Opt-out of targeted ads** - DAA Webchoices and Appchoices
-- **GDPR rights** - Full suite for EU/UK users
+### Children's Data Handling — Caution
+Picsart says you must be at least 13 years old to use the app. If they learn someone under 13 has an account, they will delete it.
 
-### Privacy Controls
-- App settings for notification preferences and contact syncing
-- iOS/Android system settings for permissions
-- Cookie preference management
-- Marketing email unsubscribe
-- DAA opt-out tools
+### Network & Internet Activity — Caution
+Picsart automatically logs your internet activity including IP address, browser type, what you click on, and when you visit, to run and improve the service.
+
+### Device Info & Fingerprinting — Risky
+Picsart collects detailed information about your devices and combines it to understand how you use the app. This data is also used for advertising and analytics.
+
+### Health & Biometric Data — Risky
+When you use face effects, Picsart collects facial geometry data to apply the effect. It is stored on their servers for up to 3 years after your account becomes inactive, but they promise not to sell it or use it to identify you.
+
+### Financial & Payment Data — Safe
+The privacy policy does not mention storing your payment or credit card details directly. Subscriptions are likely handled by Apple's payment system.
+
+### Data Deletion & User Rights — Caution
+You can request deletion of your personal information through a form or by email. However, some data may be kept for legal reasons, security, or to finish transactions.
+
+### Policy Change Notification — Caution
+Picsart may change its privacy policy at any time. If the changes are important, they might notify you by email, app notification, or on their website. If you keep using the app, you automatically agree to the new policy.
 
 ---
 
 ## Scoring Breakdown
 
-| Category | Risk | Deduction |
-|----------|------|-----------|
-| Camera & Microphone | Caution | 4.5 |
-| Location & GPS | Caution | 4.5 |
-| Contacts & Phonebook | Risky | 13 |
-| Storage & File Access | Caution | 3 |
-| Data Sharing with 3rd Parties | Risky | 19.5 |
-| Account & Identity Data | Caution | 4.5 |
-| Behavioural & Ad Tracking | Risky | 16.25 |
-| Children's Data Handling | Caution | 3 |
-| Network & Internet Activity | Caution | 1.5 |
-| Device Info & Fingerprinting | Risky | 9.75 |
-| Health & Biometric Data | Risky | 9.75 |
-| Financial & Payment Data | Safe | 0 |
-| Data Deletion & User Rights | Caution | 3 |
-| Policy Change Notification | Caution | 1.5 |
+| Category | Risk | Max | Rate | Deduction |
+|----------|------|-----|------|-----------|
+| Camera & Microphone | Caution | 15 | 0.30 | 4.5 |
+| Location & GPS | Caution | 15 | 0.30 | 4.5 |
+| Contacts & Phonebook | Risky | 20 | 0.65 | 13.0 |
+| Storage & File Access | Caution | 10 | 0.30 | 3.0 |
+| Data Sharing with 3rd Parties | Risky | 30 | 0.65 | 19.5 |
+| Account & Identity Data | Risky | 15 | 0.65 | 9.75 |
+| Behavioural & Ad Tracking | Risky | 25 | 0.65 | 16.25 |
+| Children's Data Handling | Caution | 10 | 0.30 | 3.0 |
+| Network & Internet Activity | Caution | 5 | 0.30 | 1.5 |
+| Device Info & Fingerprinting | Risky | 15 | 0.65 | 9.75 |
+| Health & Biometric Data | Risky | 15 | 0.65 | 9.75 |
+| Financial & Payment Data | Safe | 15 | 0.00 | 0.0 |
+| Data Deletion & User Rights | Caution | 10 | 0.30 | 3.0 |
+| Policy Change Notification | Caution | 5 | 0.30 | 1.5 |
 
-**Total Deductions:** 94
-**Final Score:** 54 (Grade D)
-
----
-
-## Verbatim Policy Excerpts
-
-**On Biometric Data:**
-> "When you use Picsart tools and apply effects to, or generate images of, your face, you understand and agree that Picsart may use facial geometry or other facial data to produce the image or effect you request. We refer to this as 'biometric data.'... We will destroy your biometric data upon the earliest of: (a) the date when our purpose for collecting or obtaining your biometric data has been satisfied, (b) termination of your Picsart account, or (c) within 3 years of the date your account becomes inactive."
-
-**On Contacts:**
-> "With your permission (on download or within one of our apps), we may access and store your device's contact list to help you find your friends on Picsart, invite them to Picsart, or to share your content with them."
-
-**On Ad Tracking:**
-> "Our Ad Network may also serve advertisements to you using personal information, such as your email address, that they may collect directly from you both on our platform and on non-affiliated platforms... This type of advertising is known as interest-based advertising."
-
-**On Do Not Track:**
-> "Our systems do not recognize 'Do Not Track' signals."
-
-**On TrueDepth API:**
-> "If you have an Apple iOS device and use the camera function with our services, we may automatically collect data about the spatial positioning of a person's head or face within an image frame using Apple's TrueDepth API... None of the data collected via TrueDepth API ever leaves your device, it isn't persistently stored on your device, and it isn't shared with third parties."
-
-**On GDPR Rights:**
-> "If you reside in the UK or another member state of the European Union, you have certain rights under applicable data protection legislation. You can ask us to: Confirm we process your personal data, and ask what personal data we have about you. Change or fix your data. Delete your data. Stop using some or all of your data if we have no legal right to keep using it. Give you a copy of personal data you provided to us, in machine readable format."
-
-**On Data Sharing:**
-> "We share your information with: Service providers we use to process information on our behalf... Ad networks and other ad serving providers... Government and law enforcement bodies... Our subsidiaries and affiliates."
-
-**On Policy Changes:**
-> "If we make material changes, we may notify you through other methods as required by law, such as at picsart.com, in our mobile applications, by sending email to the email address associated with your account, or by push notifications to your device if you've enabled them. If you continue to use Picsart after those changes are in effect, you agree to the new policy."
+**Total Deductions:** 99
+**Final Score:** 52 (Grade D)

@@ -2,14 +2,13 @@
   "meta": {
     "schema_version": "1.0",
     "analyzed_at": "2026-05-18",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_by": "claude-kimi",
     "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
-    "terms_url": "",
+    "terms_url": "https://www.microsoft.com/en-us/servicesagreement",
     "policy_last_updated": "2026-03",
     "needs_review": false,
     "review_notes": ""
   },
-
   "app": {
     "slug": "microsoft-copilot",
     "name": "Microsoft Copilot",
@@ -19,74 +18,77 @@
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/cb/5c/c0cb5c83-7be1-2bac-aa47-6b7617414d4c/AppIcon_Production-0-0-1x_U007epad-0-4-85-220.png/512x512bb.jpg",
     "category": "Productivity",
     "sub_category": "AI Assistant",
-    "description": "Microsoft Copilot is a personal AI assistant powered by OpenAI and Microsoft AI technology that helps with tasks from work projects to creative ideas. It offers AI chat conversations, image generation, voice interactions, document analysis, and personalized recommendations."
+    "description": "Microsoft Copilot is an AI-powered assistant that helps you search the web, create text and images, and get answers using generative AI."
   },
-
   "verdict": {
-    "overall_risk": "caution",
-    "score": 63,
-    "grade": "C",
-    "one_liner": "Microsoft's AI assistant collects extensive data for personalization and service improvement, with opt-outs available for AI training and personalized ads.",
-    "summary": "Microsoft Copilot is a feature-rich AI assistant that requires a Microsoft account and collects substantial personal data including conversations, location, device information, and usage patterns. While the company provides strong data protection measures, transparent privacy controls, and options to opt out of AI training and targeted advertising, the breadth of data collection and sharing with third-party advertising partners warrants caution. Children's data receives enhanced protections under COPPA/GDPR-K.",
+    "overall_risk": "risky",
+    "score": 54,
+    "grade": "D",
+    "one_liner": "Microsoft Copilot collects extensive data and may use your conversations to train AI models unless you opt out, while sharing behavioral data with a wide network of advertisers.",
+    "summary": "Microsoft Copilot collects your prompts, location, device data, and interactions to provide AI responses. In certain markets, your conversations may be used to train generative AI models unless you opt out. Microsoft also combines data from your use of Copilot with data from your other Microsoft products to personalize experiences and deliver targeted advertisements through a broad network of third-party advertising partners. You can manage your prompt history and opt out of personalized advertising, but extensive data collection and cross-product profiling remain central to the service.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Extensive data collection for AI training and advertising purposes, though opt-out options are available. Best suited for users already in the Microsoft ecosystem who are comfortable with data sharing."
+    "recommendation_reason": "Copilot is a capable AI assistant, but Microsoft collects a wide range of personal data and shares it with advertisers and partners. Your conversations may be used for AI training by default. If you use Copilot, review your privacy settings, opt out of model training, and avoid sharing sensitive personal or confidential information."
   },
-
   "flags": {
     "red": [
       {
-        "id": "red_ai_training_opt_out",
-        "title": "Conversations may train AI models",
-        "plain_english": "In certain markets, Microsoft uses your Copilot conversations to train its AI models unless you manually opt out. This means things you say to the AI could help improve the model for everyone.",
+        "id": "red_conversation_training",
+        "title": "Conversations may train AI models by default",
+        "plain_english": "In certain markets, Microsoft uses your Copilot conversations to train its generative AI models unless you actively opt out. This means the things you type or upload could help improve Microsoft's AI.",
+        "severity": "high"
+      },
+      {
+        "id": "red_advertiser_sharing",
+        "title": "Behavioral data shared with many advertisers",
+        "plain_english": "Microsoft shares your data with third-party advertising platforms like Facebook, Yahoo, Taboola, Outbrain, The Trade Desk, and Xandr to deliver personalized ads across the web.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_product_profiling",
+        "title": "Data combined across all Microsoft products",
+        "plain_english": "Microsoft combines data from your use of Copilot with data from Bing, Edge, Xbox, Windows, and other Microsoft services to build a detailed profile of your interests and activities.",
+        "severity": "high"
+      },
+      {
+        "id": "red_continuous_tracking",
+        "title": "Location and device data tracked continuously",
+        "plain_english": "Microsoft collects your location using GPS, cell towers, and Wi-Fi hotspots, along with your device identifiers and IP address, for both providing services and targeting ads.",
         "severity": "medium"
       },
       {
-        "id": "red_advertising_data_sharing",
-        "title": "Data shared for personalized ads",
-        "plain_english": "Microsoft shares your personal data (name, contact info, demographics, usage patterns) with third-party advertising platforms like Facebook, Yahoo, and The Trade Desk to show you targeted ads.",
+        "id": "red_conversation_review",
+        "title": "Conversations monitored for performance and safety",
+        "plain_english": "Microsoft uses your Copilot conversations to monitor performance, troubleshoot problems, diagnose bugs, and prevent abuse. Human reviewers may also review some AI outputs against underlying data.",
         "severity": "medium"
-      },
-      {
-        "id": "red_extensive_data_collection",
-        "title": "Extensive personal data collection",
-        "plain_english": "Microsoft collects a wide range of personal data including your conversations, voice data, location, device info, browsing history, contacts, and content you upload. This data is used across Microsoft services.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_conversation_history_personalization",
-        "title": "Conversation history used for personalization",
-        "plain_english": "In some markets, Microsoft uses your prior Copilot conversation history to personalize responses based on your interests and goals, unless you opt out.",
-        "severity": "low"
       }
     ],
     "green": [
       {
-        "id": "green_privacy_controls",
-        "title": "Comprehensive privacy controls",
-        "plain_english": "Microsoft provides a privacy dashboard where you can access, delete, and export your personal data. You can also opt out of personalized advertising and AI training.",
+        "id": "green_opt_out_training",
+        "title": "You can opt out of AI model training",
+        "plain_english": "In markets where conversation data is used for training, you can choose to opt out so your chats are not used to improve Microsoft's generative AI models.",
         "severity": "positive"
       },
       {
-        "id": "green_no_ads_from_content",
-        "title": "Conversations not used for ad targeting",
-        "plain_english": "Microsoft explicitly states they do not use what you say in Copilot chats, emails, or documents to target ads to you.",
+        "id": "green_prompt_history_control",
+        "title": "You can manage and delete prompt history",
+        "plain_english": "You can manage your Copilot prompt history in the app and on the Microsoft Privacy Dashboard, giving you some control over what is saved.",
         "severity": "positive"
       },
       {
-        "id": "green_children_protection",
-        "title": "Strong children's privacy protections",
-        "plain_english": "For users under 13, Microsoft requires parental consent and provides enhanced protections including data minimization and restrictions on advertising.",
+        "id": "green_no_content_ads",
+        "title": "Personal files and chats not used for ads",
+        "plain_english": "Microsoft explicitly states it does not use your emails, chats, voice calls, documents, photos, or other personal files to target advertisements to you.",
         "severity": "positive"
       },
       {
-        "id": "green_data_deletion_rights",
-        "title": "Data deletion and export rights",
-        "plain_english": "You can request deletion of your personal data and export your conversations and files. Microsoft provides tools to manage your data through the privacy dashboard.",
+        "id": "green_no_child_ads",
+        "title": "No personalized ads for children under 18",
+        "plain_english": "Microsoft does not deliver personalized advertising to users whose Microsoft account birthdate identifies them as under 18 years old.",
         "severity": "positive"
       }
     ]
   },
-
   "categories": [
     {
       "id": "camera_microphone",
@@ -97,26 +99,26 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Copilot can access your camera and microphone for features like voice chat and image analysis, but only when you actively use these features.",
-      "detail": "The app requests camera access for Copilot Vision (image analysis) and microphone access for voice chat features. These permissions are optional and only activated when you explicitly use these features.",
+      "plain_english": "Copilot only accesses your camera or microphone when you actively choose to upload an image, record audio, or use voice input.",
+      "detail": "The Copilot-specific section states that certain features require access to your device camera, microphone, photos, and videos. Voice data is collected when you use speech input. There is no mention of background access.",
       "policy_excerpt": "Certain Copilot features require access to your device capabilities, such as your device camera, microphone, photos, and videos.",
-      "concerns": ["Voice data may be collected during voice interactions", "Camera access for Vision feature"],
-      "score_impact": 4.5
+      "concerns": ["Uploaded images and voice data may be stored and used for model training unless opted out"],
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "risky",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Copilot uses your location to provide relevant local results (like nearby restaurants), but you can disable this in settings.",
-      "detail": "Location data is used to personalize responses, such as finding nearby restaurants or weather. Location can be inferred from GPS, IP address, or account profile. Users can manage location settings in the app.",
-      "policy_excerpt": "To provide a relevant response, Microsoft Copilot will use this prompt, along with your location, language, and similar settings...",
-      "concerns": ["Location used for personalization and recommendations", "IP address used for location inference"],
-      "score_impact": 4.5
+      "plain_english": "Microsoft collects your precise location using GPS, cell towers, and Wi-Fi hotspots to personalize Copilot responses and show relevant ads.",
+      "detail": "Copilot uses your location, language, and similar settings to formulate helpful responses. Microsoft also collects location data via GNSS, cell towers, and Wi-Fi hotspots, and infers location from IP addresses. Location data is used for both service provision and personalized advertising.",
+      "policy_excerpt": "Microsoft Copilot will use this prompt, along with your location, language, and similar settings, as well as other data you might input into the service... to formulate a helpful response. We collect location data using Global Navigation Satellite System (GNSS) (e.g., GPS) and data about nearby cell towers and Wi-Fi hotspots.",
+      "concerns": ["Location data used for personalized advertising", "IP address used for location inference even if GPS is off"],
+      "score_impact": -9.75
     },
     {
       "id": "contacts_phonebook",
@@ -127,11 +129,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "If you choose to share content from Copilot, the app may access your contacts, but this is optional and only for sharing features.",
-      "detail": "Contacts access is not required for core Copilot functionality. It may be requested if you choose to share Copilot-generated content with others from your address book.",
-      "policy_excerpt": "Data about your contacts and relationships if you use a product to share information with others...",
-      "concerns": ["Contact data may be accessed for sharing features"],
-      "score_impact": 6
+      "plain_english": "Contacts data may be accessed if you use Copilot features that interact with your Microsoft account contacts, but it is not a core requirement of the app.",
+      "detail": "Microsoft collects contacts and relationships data if you use a product to share information, manage contacts, or communicate with others. For Copilot specifically, contacts access is not highlighted as a core feature, but Microsoft account contacts are stored in Microsoft's ecosystem.",
+      "policy_excerpt": "Data about your contacts and relationships if you use a product to share information with others, manage contacts, communicate with others, or improve your productivity.",
+      "concerns": ["Microsoft account contacts stored in Microsoft's cloud may be accessible across services"],
+      "score_impact": -6.0
     },
     {
       "id": "storage_file_access",
@@ -142,11 +144,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "You can upload files, images, and documents to Copilot for analysis, but the app doesn't continuously scan your files.",
-      "detail": "Users can voluntarily upload files, images, and documents to Copilot for AI analysis and processing. This is user-initiated and not automatic file scanning.",
-      "policy_excerpt": "...other data you might input into the service (for example, files, images, and visual media) to formulate a helpful response.",
-      "concerns": ["Uploaded content is processed on Microsoft servers"],
-      "score_impact": 3
+      "plain_english": "Copilot only accesses your files, images, or videos when you actively choose to upload them into a conversation.",
+      "detail": "The Copilot section explicitly mentions that you might input files, images, and visual media into the service. File access is user-initiated for AI processing. There is no mention of background file scanning.",
+      "policy_excerpt": "other data you might input into the service (for example, files, images, and visual media) to formulate a helpful response.",
+      "concerns": ["Uploaded files may be stored and used for model training unless opted out"],
+      "score_impact": -3.0
     },
     {
       "id": "data_sharing_third_parties",
@@ -157,26 +159,26 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft shares your data with advertising partners, service providers, and analytics companies. You can opt out of personalized ad sharing.",
-      "detail": "Microsoft shares personal data with third-party advertising platforms (Facebook, Yahoo, The Trade Desk, Xandr), analytics providers, and service providers. While opt-outs exist for personalized advertising, some data sharing continues for operational purposes.",
-      "policy_excerpt": "We may 'share' your personal data, as defined under California and other applicable U.S. state laws, for personalized advertising purposes...",
-      "concerns": ["Data shared with multiple advertising partners", "Opt-out required to limit sharing", "Cross-site tracking via partners"],
-      "score_impact": 19.5
+      "plain_english": "Microsoft shares your personal data with a wide network of advertisers, data brokers, and partners to deliver personalized ads and improve services.",
+      "detail": "Microsoft shares data with Microsoft-controlled affiliates and subsidiaries, vendors working on Microsoft's behalf, and third-party advertising platforms including Facebook, Yahoo, Taboola, Outbrain, The Trade Desk, and Xandr. Data is also obtained from data brokers to supplement profiles.",
+      "policy_excerpt": "We may then share this information with third party advertising platforms and advertisers to facilitate the delivery and measurement of ads... We also share personal data among Microsoft-controlled affiliates and subsidiaries... We also obtain data about you from Microsoft affiliates, subsidiaries, and third parties... Data brokers from which we purchase demographic data to supplement the data we collect.",
+      "concerns": ["Data shared with multiple advertising networks", "Data brokers used to supplement profiles", "Cross-service data sharing among Microsoft entities"],
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You need a Microsoft account to use Copilot, which stores your name, email, and profile information.",
-      "detail": "A Microsoft account is required to use Copilot. The account stores credentials, name and contact data, payment data, device and usage data, interests, favorites, and activity data. This data is used across Microsoft products for personalization.",
-      "policy_excerpt": "With a Microsoft account, you can sign in to Microsoft products... Personal data associated with your Microsoft account includes credentials, name and contact data, payment data...",
-      "concerns": ["Microsoft account required for full functionality", "Data combined across Microsoft services"],
-      "score_impact": 4.5
+      "plain_english": "You need a Microsoft account to use Copilot, and Microsoft links your account data across all its products to personalize experiences and target ads.",
+      "detail": "A Microsoft account is required to sign in and use Copilot. Account data includes credentials, name, contact data, payment data, device and usage data, contacts, activities, interests, and favorites. This data is combined across Microsoft products for personalization and advertising.",
+      "policy_excerpt": "With a Microsoft account, you can sign in to Microsoft products... Personal data associated with your Microsoft account includes credentials, name and contact data, payment data, device and usage data, your contacts, information about your activities, and your interests and favorites... For these purposes, we combine data we collect from different contexts (for example, from your use of two Microsoft products).",
+      "concerns": ["Account data linked to advertising profile", "Cross-product data combination for profiling"],
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -187,11 +189,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft tracks your app usage, interests, and online activity to show you targeted ads. You can opt out of this tracking.",
-      "detail": "Microsoft collects interaction data, interests, favorites, browsing history, and content consumption data to deliver personalized advertising. This data is combined across Microsoft products and shared with advertising partners. Opt-out is available through privacy settings.",
-      "policy_excerpt": "Microsoft uses cookies to collect data about your online activity and identify your interests so that we can provide advertising that is most relevant to you.",
-      "concerns": ["Extensive behavioral tracking", "Cross-service profiling", "Data combined with third-party sources"],
-      "score_impact": 16.25
+      "plain_english": "Microsoft tracks your interests, searches, purchases, and app usage across its products to show you targeted ads on Microsoft and third-party websites.",
+      "detail": "Microsoft uses interests, favorites, location, transactions, search queries, and content viewed for personalized advertising. It combines cookies and device data to deliver ads. Third-party cookies and web beacons are used. Opt-out is available but data collection continues for other purposes.",
+      "policy_excerpt": "The ads that you see may be selected based on data we process about you, such as your interests and favorites, your location, your transactions, how you use our products, your search queries, or the content you view... We may share data we collect with internal and external partners, such as Xandr and other subsidiaries and affiliates, Yahoo, Facebook or The Trade Desk.",
+      "concerns": ["Extensive behavioral profiling for ads", "Cross-site tracking via cookies and web beacons", "Opt-out does not stop data collection for other purposes"],
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -202,9 +204,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft has strong protections for children under 13, requiring parental consent and limiting data collection and advertising.",
-      "detail": "For users under 13, Microsoft requires parental consent, does not collect more data than needed, does not sell or rent child data, and does not use child data for advertising. Parents can manage child accounts through Microsoft Family Safety.",
-      "policy_excerpt": "For users under the age of 13... certain Microsoft products and services will either block users under that age or will ask them to obtain consent or authorization from a parent or guardian...",
+      "plain_english": "Microsoft requires parental consent for users under 13 and does not show personalized ads to anyone under 18.",
+      "detail": "For users under 13, Microsoft products either block access or require parental consent. No personalized advertising is delivered to users whose Microsoft account birthdate identifies them as under 18. Family Safety controls allow parents to manage child accounts and data.",
+      "policy_excerpt": "For users under the age of 13 or as specified by law in their jurisdiction, certain Microsoft products and services will either block users under that age or will ask them to obtain consent or authorization from a parent or guardian... We do not deliver personalized advertising to children whose birthdate in their Microsoft account identifies them as under 18 years of age.",
       "concerns": [],
       "score_impact": 0
     },
@@ -212,16 +214,16 @@
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Copilot requires internet access to work, and Microsoft logs IP addresses and network activity for security and service delivery.",
-      "detail": "Network activity is logged for security, service delivery, and troubleshooting. IP addresses are collected and may be used for location inference. This is standard for cloud-based AI services.",
-      "policy_excerpt": "Data about your device and the product and features you use, including... IP address, device identifiers...",
-      "concerns": ["IP address used for approximate location"],
-      "score_impact": 1.5
+      "plain_english": "Microsoft logs your IP address, browsing history, and search queries, using this data to infer your location and profile your interests for advertising.",
+      "detail": "Microsoft collects browse history, search queries, IP address, and interaction data. This data is used for product improvement, personalization, and advertising. IP addresses are used for location inference even when GPS is off.",
+      "policy_excerpt": "Browse history. Data about the webpages you visit... Searches and commands. Search queries and commands when you use Microsoft products... Device, connectivity, and configuration data. For example... IP address... Location can also be inferred from a device's IP address.",
+      "concerns": ["Browse history logged", "Search queries retained", "IP address used for location inference and profiling"],
+      "score_impact": -3.25
     },
     {
       "id": "device_fingerprinting",
@@ -232,26 +234,26 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft collects detailed device information including unique identifiers, which are used for advertising and analytics.",
-      "detail": "Extensive device data is collected including device identifiers (IMEI, advertising ID), hardware and software info, configuration data, and nearby networks. This data is used for advertising targeting, personalization, and service improvement.",
-      "policy_excerpt": "Data about your device, your device configuration, and nearby networks. For example, data about the operating systems and other software installed on your device... IP address, device identifiers...",
-      "concerns": ["Device ID used for ad targeting", "Extensive device fingerprinting", "Data combined with usage patterns"],
-      "score_impact": 9.75
+      "plain_english": "Microsoft collects detailed device information including your device identifiers, operating system, and nearby Wi-Fi networks to identify your device and target ads.",
+      "detail": "Microsoft collects device and usage data including hardware and software details, device identifiers (such as IMEI for phones), IP address, regional and language settings, and information about WLAN access points near your device. The advertising ID is also used for personalized ads.",
+      "policy_excerpt": "Device, connectivity, and configuration data. Data about your device, your device configuration, and nearby networks. For example, data about the operating systems and other software installed on your device... IP address, device identifiers (such as the IMEI number for phones), regional and language settings, and information about WLAN access points near your device.",
+      "concerns": ["Device identifiers collected including IMEI", "Nearby Wi-Fi networks logged", "Advertising ID used for cross-app tracking"],
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Copilot does not collect health or biometric data. Any Face ID usage is handled locally by your device.",
-      "detail": "The app does not collect health or biometric data. Biometric authentication (Face ID/Touch ID) is handled locally by the device's operating system and not stored by Microsoft.",
-      "policy_excerpt": "Biometric data and identifiers... Our collection and use of biometric data depends on the products and features you use...",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "On iOS, any biometric authentication like Face ID happens only on your device and is not sent to Microsoft.",
+      "detail": "The general policy mentions biometric data collection for certain Microsoft products like Windows Hello, but for the iOS Copilot app, biometric authentication would be handled locally by iOS. Microsoft does not collect health data through Copilot.",
+      "policy_excerpt": "Our collection and use of biometric data depends on the products and features you use in certain Microsoft products, as well as your consent. For instance, you can use your fingerprint or facial recognition to sign in to your Windows device via Windows Hello.",
+      "concerns": ["Biometric data collection mentioned for other Microsoft products but not specifically for Copilot iOS app"],
+      "score_impact": -4.5
     },
     {
       "id": "financial_payment",
@@ -262,11 +264,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "If you make purchases through Microsoft, payment data is processed. Microsoft 365 Copilot requires a subscription.",
-      "detail": "Payment data is collected when you make purchases. For Microsoft 365 Copilot features, a subscription is required. Payment processing follows standard Microsoft payment practices.",
-      "policy_excerpt": "Payment data. Data to process payments, such as your payment instrument number...",
-      "concerns": ["Subscription required for premium features"],
-      "score_impact": 4.5
+      "plain_english": "Microsoft only collects payment information if you subscribe to a paid Copilot or Microsoft 365 plan, and payment is processed by third parties.",
+      "detail": "Payment data is collected only for optional paid subscriptions such as Microsoft 365 Copilot. Microsoft processes payment data through banks and payment processors. The app itself does not directly store raw card numbers.",
+      "policy_excerpt": "Payment data. Data to process payments, such as your payment instrument number (such as a credit card number) and the security code associated with your payment instrument... When you provide payment data to make a purchase, we will share payment data with banks and other entities that process payment transactions.",
+      "concerns": ["Payment data shared with financial institutions for processing"],
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -277,11 +279,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can delete your Copilot conversation history and request deletion of your account data, though some data may be retained for legal or operational reasons.",
-      "detail": "Users can access, update, and delete personal data through the Microsoft privacy dashboard. Conversation history can be managed in-app. Some data may be retained for legal compliance, security, or operational needs. Account closure has a 60-day waiting period.",
-      "policy_excerpt": "You can request access to, erasure of, and updates to your personal data... We also retain personal data for other legitimate purposes such as operating our business, meeting our contractual and legal obligations...",
-      "concerns": ["Some data retention required by law", "60-day waiting period for account deletion"],
-      "score_impact": 3
+      "plain_english": "You can delete some data and opt out of personalized ads, but not all personal data can be accessed or deleted through Microsoft's tools.",
+      "detail": "Microsoft provides a privacy dashboard to view and clear browsing, search, and location data. Users can request access, erasure, updates, and data portability. Prompt history can be managed in-product and on the privacy dashboard. However, Microsoft states that not all personal data can be accessed or controlled via these tools, and some data is retained for business operations and legal compliance.",
+      "policy_excerpt": "You can access and clear some of your data through the Microsoft privacy dashboard... Not all personal data processed by Microsoft can be accessed or controlled via the tools above. If you want to exercise your data protection rights... you can always contact Microsoft.",
+      "concerns": ["Not all data accessible via self-service tools", "Some data retained for business and legal purposes"],
+      "score_impact": -3.0
     },
     {
       "id": "policy_change_notification",
@@ -292,35 +294,34 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Microsoft notifies users of material privacy policy changes by posting notices or sending direct notifications.",
-      "detail": "Microsoft updates the 'last updated' date when changes are made. For material changes, they notify users by prominently posting notices or direct notification. Users are encouraged to periodically review the privacy statement.",
-      "policy_excerpt": "When we post changes to this statement, we will revise the 'last updated' date... If there are material changes... we will notify you either by prominently posting a notice... or by directly sending you a notification.",
-      "concerns": ["Continued use after changes constitutes acceptance"],
-      "score_impact": 1.5
+      "plain_english": "Microsoft updates its privacy policy periodically and will notify you of material changes, but continued use counts as acceptance.",
+      "detail": "Microsoft revises the 'last updated' date when changes are made. For material changes, it will notify users by prominently posting a notice or sending a direct notification. Users are encouraged to review the statement periodically.",
+      "policy_excerpt": "When we post changes to this statement, we will revise the 'last updated' date at the top of the statement... If there are material changes to the statement... we will notify you either by prominently posting a notice of such changes before they take effect or by directly sending you a notification.",
+      "concerns": ["Continued use after notification equals acceptance"],
+      "score_impact": -1.5
     }
   ],
-
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
-      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
       { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
-      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
-      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
-      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
-      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
-      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
     ],
-    "total_deductions": 76.5,
-    "final_score": 63,
-    "grade": "C"
+    "total_deductions": 95.25,
+    "final_score": 54,
+    "grade": "D"
   }
 }

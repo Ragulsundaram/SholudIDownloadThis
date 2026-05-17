@@ -11,20 +11,22 @@
 
 ## Summary Card
 
-### Overall Rating: Safe (Score: 83/100, Grade: A)
+### Overall Rating: Caution (Score: 69/100, Grade: C)
 
 **Red Flags:**
-- **Data sent to US-based processors** — Your data is processed by companies in the US (Supabase, OpenAI, iCloud) which may not have the same privacy protections as the EU. The developer uses standard contractual clauses to protect your data, but it's still stored outside the EU.
-- **AI features send your data to OpenAI** — If you use the AI planning features, your task and calendar data is sent to OpenAI for processing. This happens under a data processing agreement, but your data still leaves the app's servers.
+- **Data sent to US processors** — Your tasks and calendar data are processed by companies in the US (Supabase, OpenAI, iCloud, Sendgrid, FrontApp) which the developer admits lack adequate EU privacy protections. Standard contractual clauses are used, but your data still leaves the EU.
+- **AI sends data to OpenAI** — If you use the AI planning features, your task and calendar entries are sent to OpenAI for processing. The developer says there is no guarantee of data protection compliance for this transfer.
+- **Silent on app permissions** — The privacy policy doesn't say whether the app accesses your camera, microphone, contacts, location, or health data. You won't know from reading the policy alone what device features it can reach.
+- **Opt-in data donation for AI training** — If you turn on data donation, the app uses your tasks, reminders, settings, and usage data to train AI and do research. This is optional and requires your consent, but it's still your personal data being used for training.
 
 **Green Flags:**
-- **Full GDPR compliance** — The app follows strict EU privacy laws and gives you strong rights including access, deletion, and data portability.
-- **Data donation is strictly optional** — Any data sharing for training or research requires your explicit consent, which you can revoke anytime in settings.
-- **No advertising or tracking** — The app doesn't show ads or track you for marketing purposes. Usage data is only collected if you explicitly opt in.
-- **Data encrypted in transit** — Your data is protected with TLS encryption when sent between your device and the app's servers.
-- **Transparent about data processors** — The developer clearly lists every company that processes your data, what they do, and where they're located.
+- **Full GDPR rights included** — The app follows strict EU privacy laws and gives you strong rights including access to your data, correction, deletion, restriction, and data portability.
+- **Data donation is strictly optional** — Any data sharing for training or research requires your explicit consent, which you can revoke anytime by turning off a button in the app settings.
+- **No ads or tracking** — The app doesn't show ads or track you for marketing purposes. There are no advertising networks or behavioral tracking tools mentioned.
+- **Encrypted data in transit** — Your data is protected with TLS encryption when sent between your device and the app's servers, which helps prevent snooping.
+- **Lists all data processors** — The developer clearly lists every company that processes your data, what they do, and where they are located. This transparency is better than most apps.
 
-**Verdict:** Structured is a German productivity app with robust privacy protections. It collects minimal data by default and offers strong user rights under GDPR. The main concern is that cloud sync and AI features involve sharing data with US-based processors (Supabase, OpenAI), though standard contractual clauses are in place. Data donation for training is strictly opt-in. The app is recommended for users who want a privacy-focused planner but should be aware of the US data transfers when using cloud or AI features.
+**Verdict:** Structured is a German daily planner with solid privacy foundations. It offers comprehensive GDPR rights, encrypts data in transit, and doesn't show ads. However, cloud sync and AI features send your personal tasks to US-based companies like Supabase and OpenAI, and the privacy policy doesn't explain whether the app accesses your camera, contacts, location, or other sensitive device features.
 
 ---
 
@@ -78,13 +80,13 @@ Users have comprehensive rights under GDPR:
 
 ### Areas of Concern
 
-1. **US Data Transfers:** Multiple core features (sync, AI) require sending data to US-based companies. While standard contractual clauses are used, this may not provide the same protection as EU data processing.
+1. **US Data Transfers:** Multiple core features (sync, AI) require sending data to US-based companies. While standard contractual clauses are used, the developer explicitly states there is no adequate level of data protection for most of these transfers.
 
-2. **AI Data Processing:** Using the AI assistant sends your task and calendar data to OpenAI. Users should be aware that this data leaves the developer's control.
+2. **AI Data Processing:** Using the AI assistant sends your task and calendar data to OpenAI. Users should be aware that this data leaves the developer's control with no guarantee of data protection compliance.
 
-3. **Children's Data:** No specific provisions for users under 13 are mentioned, despite the app being rated 4+.
+3. **Silent Categories:** The policy does not address camera, microphone, contacts, location (for the app), health data, children's data, or policy change notifications. This leaves significant gaps in user understanding.
 
-4. **Policy Change Notification:** No clear mechanism for notifying users of policy updates is described.
+4. **Data Donation:** While opt-in, the feature processes personal tasks and usage data for training and research purposes.
 
 ### Positive Aspects
 
@@ -104,15 +106,22 @@ Users have comprehensive rights under GDPR:
 
 | Category | Risk Level | Deduction |
 |----------|------------|-----------|
-| Data Sharing with 3rd Parties | Risky | -19.5 |
+| Data Sharing with 3rd Parties | Caution | -9.0 |
+| Contacts & Phonebook | Unknown | -10.0 |
 | Account & Identity Data | Caution | -4.5 |
-| Storage & File Access | Caution | -3.0 |
-| Children's Data | Caution | -3.0 |
+| Device Info & Fingerprinting | Unknown | -7.5 |
+| Location & GPS | Unknown | -7.5 |
+| Camera & Microphone | Unknown | -7.5 |
+| Health & Biometric Data | Unknown | -7.5 |
+| Children's Data | Unknown | -5.0 |
 | Network & Internet Activity | Caution | -1.5 |
 | Policy Change Notification | Unknown | -2.5 |
-| All other categories | Safe | 0 |
-| **Total** | | **-34** |
-| **Final Score** | | **83/100 (Grade: A)** |
+| Storage & File Access | Safe | 0 |
+| Behavioural & Ad Tracking | Safe | 0 |
+| Financial & Payment Data | Safe | 0 |
+| Data Deletion & User Rights | Safe | 0 |
+| **Total** | | **-63.0** |
+| **Final Score** | | **69/100 (Grade: C)** |
 
 ---
 

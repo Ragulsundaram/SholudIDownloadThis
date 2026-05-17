@@ -4,158 +4,166 @@
     "analyzed_at": "2026-05-18",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://strct.app/privacy_policy",
-    "terms_url": "https://structured.app/legal",
+    "terms_url": "",
     "policy_last_updated": "2024-05-14",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Multiple categories (camera/microphone, contacts, location, device fingerprinting, health data, children's data, policy change notification) are not addressed in the privacy policy, resulting in 'unknown' risk ratings. The policy also conflates app and website data practices in some sections."
   },
-
   "app": {
     "slug": "structured-daily-planner-todo",
     "name": "Structured: Daily Planner Todo",
     "developer": "unorderly GmbH",
-    "app_store_url": "https://apps.apple.com/in/app/id1499198946",
+    "app_store_url": "https://apps.apple.com/in/app/structured--daily-planner-todo/id1499198946",
     "app_store_id": "1499198946",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/68/4b/17/684b17ae-bc3d-d02b-51fa-0d0dad2e8326/AppIcon-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/512x512bb.jpg",
     "category": "Productivity",
-    "sub_category": "Daily Planner",
-    "description": "A visual daily planner that helps users organize tasks and calendar events on a timeline. Includes features like time blocking, Pomodoro timer, AI-powered scheduling, and cross-device synchronization."
+    "sub_category": "",
+    "description": "A daily planner and todo app that simplifies task and event planning with optional cloud sync and AI assistance."
   },
-
   "verdict": {
-    "overall_risk": "safe",
-    "score": 83,
-    "grade": "A",
-    "one_liner": "A privacy-focused planner with strong GDPR protections, though data is shared with US-based AI and sync services.",
-    "summary": "Structured is a German productivity app with robust privacy protections. It collects minimal data by default and offers strong user rights under GDPR. The main concern is that cloud sync and AI features involve sharing data with US-based processors (Supabase, OpenAI), though standard contractual clauses are in place. Data donation for training is strictly opt-in.",
-    "recommendation": "recommended",
-    "recommendation_reason": "Strong privacy practices with clear GDPR compliance, opt-in consent for optional features, and transparent data processor disclosures."
+    "overall_risk": "caution",
+    "score": 69,
+    "grade": "C",
+    "one_liner": "A privacy-conscious planner with strong GDPR rights, but data goes to multiple US processors and the policy leaves many app permissions unexplained.",
+    "summary": "Structured is a German daily planner with solid privacy foundations. It offers comprehensive GDPR rights, encrypts data in transit, and doesn't show ads. However, cloud sync and AI features send your personal tasks to US-based companies like Supabase and OpenAI, and the privacy policy doesn't explain whether the app accesses your camera, contacts, location, or other sensitive device features.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While the app has strong GDPR protections and no ads, the high number of unaddressed permission categories and the fact that personal task data is sent to multiple US-based processors with acknowledged inadequate EU data protection levels warrant caution."
   },
-
   "flags": {
     "red": [
       {
         "id": "red_us_data_transfers",
-        "title": "Data sent to US-based processors",
-        "plain_english": "Your data is processed by companies in the US (Supabase, OpenAI, iCloud) which may not have the same privacy protections as the EU. The developer uses standard contractual clauses to protect your data, but it's still stored outside the EU.",
+        "title": "Data sent to US processors",
+        "plain_english": "Your tasks and calendar data are processed by companies in the US (Supabase, OpenAI, iCloud, Sendgrid, FrontApp) which the developer admits lack adequate EU privacy protections. Standard contractual clauses are used, but your data still leaves the EU.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_data_sharing",
+        "title": "AI sends data to OpenAI",
+        "plain_english": "If you use the AI planning features, your task and calendar entries are sent to OpenAI for processing. The developer says there is no guarantee of data protection compliance for this transfer.",
+        "severity": "high"
+      },
+      {
+        "id": "red_silent_permissions",
+        "title": "Silent on app permissions",
+        "plain_english": "The privacy policy doesn't say whether the app accesses your camera, microphone, contacts, location, or health data. You won't know from reading the policy alone what device features it can reach.",
         "severity": "medium"
       },
       {
-        "id": "red_ai_data_processing",
-        "title": "AI features send your data to OpenAI",
-        "plain_english": "If you use the AI planning features, your task and calendar data is sent to OpenAI for processing. This happens under a data processing agreement, but your data still leaves the app's servers.",
+        "id": "red_data_donation",
+        "title": "Opt-in data donation for AI training",
+        "plain_english": "If you turn on data donation, the app uses your tasks, reminders, settings, and usage data to train AI and do research. This is optional and requires your consent, but it's still your personal data being used for training.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_gdpr_compliant",
-        "title": "Full GDPR compliance",
-        "plain_english": "The app follows strict EU privacy laws and gives you strong rights including access, deletion, and data portability.",
+        "id": "green_gdpr_rights",
+        "title": "Full GDPR rights included",
+        "plain_english": "The app follows strict EU privacy laws and gives you strong rights including access to your data, correction, deletion, restriction, and data portability.",
         "severity": "positive"
       },
       {
         "id": "green_opt_in_donation",
         "title": "Data donation is strictly optional",
-        "plain_english": "Any data sharing for training or research requires your explicit consent, which you can revoke anytime in settings.",
+        "plain_english": "Any data sharing for training or research requires your explicit consent, which you can revoke anytime by turning off a button in the app settings.",
         "severity": "positive"
       },
       {
-        "id": "green_no_ads",
-        "title": "No advertising or tracking",
-        "plain_english": "The app doesn't show ads or track you for marketing purposes. Usage data is only collected if you explicitly opt in.",
+        "id": "green_no_ad_tracking",
+        "title": "No ads or tracking",
+        "plain_english": "The app doesn't show ads or track you for marketing purposes. There are no advertising networks or behavioral tracking tools mentioned.",
         "severity": "positive"
       },
       {
-        "id": "green_encryption",
-        "title": "Data encrypted in transit",
-        "plain_english": "Your data is protected with TLS encryption when sent between your device and the app's servers.",
+        "id": "green_encryption_transit",
+        "title": "Encrypted data in transit",
+        "plain_english": "Your data is protected with TLS encryption when sent between your device and the app's servers, which helps prevent snooping.",
         "severity": "positive"
       },
       {
         "id": "green_transparent_processors",
-        "title": "Transparent about data processors",
-        "plain_english": "The developer clearly lists every company that processes your data, what they do, and where they're located.",
+        "title": "Lists all data processors",
+        "plain_english": "The developer clearly lists every company that processes your data, what they do, and where they are located. This transparency is better than most apps.",
         "severity": "positive"
       }
     ]
   },
-
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app doesn't access your camera or microphone.",
-      "detail": "No camera or microphone permissions are requested or used.",
-      "policy_excerpt": "Not mentioned in privacy policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The privacy policy does not mention whether the app accesses your camera or microphone.",
+      "detail": "No references to camera or microphone access were found in the privacy policy. As a daily planner app, such access would likely be unnecessary, but the policy is silent on this category.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is completely silent on camera and microphone access."],
+      "score_impact": 7.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app doesn't track your location.",
-      "detail": "Location data is only mentioned in the context of website visitors, not app users.",
-      "policy_excerpt": "Location data may be collected when visiting the website, not the app.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy mentions location data collection for the website, but does not say whether the app itself accesses your location.",
+      "detail": "Section 2.6 states that location data including terminal device location is collected when visiting the website. It is unclear whether the app itself requests location permissions.",
+      "policy_excerpt": "your location data, including the location data of your terminal device",
+      "concerns": ["Website collects location data; unclear if app does too.", "Users can control location services in device settings, but app-level disclosure is missing."],
+      "score_impact": 7.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app doesn't access your contacts.",
-      "detail": "No mention of contact or phonebook access in the privacy policy.",
-      "policy_excerpt": "Not mentioned in privacy policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "No references to contacts, phonebook, or address book access were found in the privacy policy. Users may manually enter names and phone numbers into tasks, but this is not the same as contacts access.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is completely silent on contacts access."],
+      "score_impact": 10.0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "caution",
+      "risk": "safe",
       "access_type": "on_demand",
-      "required_for_core_function": false,
-      "optional_access": true,
+      "required_for_core_function": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "The app stores your tasks and calendar data. You can optionally attach photos or files to tasks.",
-      "detail": "User-entered data including tasks, notes, and optionally attached files are stored. The app needs storage access for core functionality.",
+      "plain_english": "The app stores tasks and calendar entries you create. This is the core function of the app, and the data is yours.",
+      "detail": "User-entered tasks, events, notes, and settings are stored locally and optionally synced via Structured Cloud. This is intentional data entry for core functionality.",
       "policy_excerpt": "When using Structured, you can enter, manage and edit various information, notes, tasks and activities.",
-      "concerns": ["User may attach personal photos or documents to tasks"],
-      "score_impact": 3
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "risky",
-      "access_type": "continuous",
+      "risk": "caution",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "Your data is shared with several companies for cloud sync (iCloud, Supabase) and AI features (OpenAI). Most are US-based.",
-      "detail": "Data is shared with Supabase (sync), iCloud (sync), OpenAI (AI features), Sendgrid (emails), and FrontApp (support). Standard contractual clauses are used for US transfers.",
-      "policy_excerpt": "We rely on external companies and external service providers (processors) to provide the services set out in Structured.",
-      "concerns": ["Multiple US-based processors", "AI data sent to OpenAI", "Data leaves EU for sync services"],
-      "score_impact": 19.5
+      "plain_english": "Your data is shared with several named companies like Supabase, OpenAI, and Apple iCloud to make the app work. Most of these companies are in the US and the developer admits their privacy protections may not match EU standards.",
+      "detail": "The developer lists seven processors: Supabase (sync, AI forwarding), iCloud/Apple (sync), OpenAI (AI tasks), Gmail/Google (emails), Sendgrid/Twilio (automated emails), FrontApp (support), and Tally (marketing/surveys). Most operate outside the EU/EEA and the policy states there is no adequate level of data protection for several of them.",
+      "policy_excerpt": "We rely on external companies and external service providers (processors) to provide the services set out in Structured in accordance with the contract.",
+      "concerns": ["Most processors are US-based with acknowledged inadequate EU data protection.", "OpenAI processing has no guarantee of data protection compliance.", "iCloud data protection compliance is currently not guaranteed."],
+      "score_impact": 9.0
     },
     {
       "id": "account_identity",
@@ -166,10 +174,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "You can use the app without an account, but email and password are required for cloud sync features.",
-      "detail": "Email and password are collected for Structured Cloud. The data is shared with Supabase for authentication and sync.",
-      "policy_excerpt": "When registering for the Structured Cloud, We use your e-mail address and password to enable you to synchronize your entries.",
-      "concerns": ["Account data stored by US-based Supabase"],
+      "plain_english": "If you sign up for cloud sync, the app collects your email and password. This is standard account information.",
+      "detail": "Email and password are collected for Structured Cloud registration. Credentials are used once per login for authentication. The app can be used without creating an account, making this optional.",
+      "policy_excerpt": "When registering for the Structured Cloud, We use your e-mail address and password to enable you to synchronize your entries in Structured between your terminal devices.",
+      "concerns": ["Account creation is optional but required for sync."],
       "score_impact": 4.5
     },
     {
@@ -177,13 +185,13 @@
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
       "risk": "safe",
-      "access_type": "never",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app doesn't track you for ads or behavioral profiling. No ad networks are mentioned.",
-      "detail": "No advertising or behavioral tracking is performed. Optional data donation for improvement requires explicit consent.",
-      "policy_excerpt": "No mention of advertising or behavioral tracking in the privacy policy.",
+      "plain_english": "The app does not show ads or track you for marketing purposes. Usage data is only collected if you explicitly opt in to data donation.",
+      "detail": "No advertising networks, behavioral tracking, or ad SDKs are mentioned. Data donation for training is strictly opt-in under Art. 6 para. 1 lit. a GDPR.",
+      "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
     },
@@ -191,16 +199,16 @@
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "caution",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't specifically address children under 13, though the app is rated 4+.",
-      "detail": "No specific safeguards for children's data are mentioned. The app is rated 4+ on the App Store.",
-      "policy_excerpt": "Not explicitly mentioned in privacy policy.",
-      "concerns": ["No COPPA/GDPR-K specific provisions mentioned"],
-      "score_impact": 3
+      "plain_english": "The privacy policy does not mention any age restrictions or special protections for children under 13.",
+      "detail": "No COPPA or GDPR-K compliance statements, age requirements, or child-specific safeguards are mentioned in the policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on children's data and age requirements."],
+      "score_impact": 5.0
     },
     {
       "id": "network_internet_activity",
@@ -211,41 +219,41 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app needs internet for cloud sync and AI features. Website visitors have their IP logged for security.",
-      "detail": "Internet connection required for core features. IP addresses may be logged for website security and statistical purposes.",
-      "policy_excerpt": "Your IP address is only analyzed in the event of attacks on our network infrastructure and for statistical purposes.",
-      "concerns": ["IP logging on website"],
+      "plain_english": "The app needs internet access to sync your data across devices and to use AI features. The developer's website also logs your IP address and browser info when you visit it.",
+      "detail": "Structured Cloud and AI features require internet connectivity. The website (strct.app/structured.app) collects IP addresses, device IDs, browser info, and location data for security, statistics, and marketing purposes.",
+      "policy_excerpt": "Each time you access our website, the Internet browser used on your terminal device automatically transmits information to the server of our website. This information is temporarily stored in a log file.",
+      "concerns": ["Website logs include IP, device ID, browser history, and location data.", "IP address is analyzed for attacks and statistical purposes."],
       "score_impact": 1.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "safe",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Minimal device info is collected for app functionality and troubleshooting.",
-      "detail": "Standard device information may be collected for compatibility and diagnostics, but not for fingerprinting or tracking.",
-      "policy_excerpt": "Not explicitly mentioned beyond standard app store data.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The policy does not clearly explain what device information the app itself collects. The developer's website does collect device IDs and browser data.",
+      "detail": "The website collects device ID, device type, browser type, OS, and access provider. The app store processes IMEI during download, which is beyond the developer's control. The app-level collection of device information is not addressed.",
+      "policy_excerpt": "the IP address of the requesting computer, as well as device ID or individual device identifier and device type",
+      "concerns": ["Policy conflates website and app practices.", "App-level device data collection is not explicitly addressed."],
+      "score_impact": 7.5
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app doesn't collect health or biometric data.",
-      "detail": "No health or biometric data is collected or processed.",
-      "policy_excerpt": "Not mentioned in privacy policy.",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "The privacy policy does not mention whether the app collects any health or biometric data.",
+      "detail": "No references to health data, fitness data, or biometric authentication (beyond standard iOS Face ID which would be local) were found.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data."],
+      "score_impact": 7.5
     },
     {
       "id": "financial_payment",
@@ -256,9 +264,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Payments are handled by Apple. The developer never sees your payment details.",
-      "detail": "All payments processed through Apple's App Store. The developer only receives transaction confirmations.",
-      "policy_excerpt": "When downloading Structured, certain required information is transmitted to the respective app store... This data is processed exclusively by the respective app store and is beyond our control.",
+      "plain_english": "The app itself does not handle payments. Any purchases go through the App Store, which processes your payment info separately.",
+      "detail": "Payment information is processed exclusively by the App Store during download and is beyond the developer's control. The app does not appear to have in-app purchases that would require direct payment processing.",
+      "policy_excerpt": "payment information and the individual device identification number (so-called IMEI) may be processed. This data is processed exclusively by the respective app store and is beyond our control.",
       "concerns": [],
       "score_impact": 0
     },
@@ -271,9 +279,9 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You have strong rights under GDPR including deletion, export, and access to your data.",
-      "detail": "Full GDPR rights provided: access, rectification, deletion, restriction, portability, and objection. Data retained for duration of use plus 30 days for backups.",
-      "policy_excerpt": "You have the right to obtain confirmation as to whether or not personal data concerning you is being processed... the right to demand that personal data concerning you be deleted immediately.",
+      "plain_english": "You have strong rights under EU law. You can request access to your data, correct mistakes, delete your data, and move it to another service. Data is kept only as long as you use the app plus 30 days for backups.",
+      "detail": "Section 5 comprehensively lists GDPR rights: access, rectification, deletion, restriction, portability, withdrawal of consent, and objection. Data is deleted or anonymized when no longer required, stored for the duration of use plus 30 days for backups.",
+      "policy_excerpt": "We delete or anonymize your personal data as soon as it is no longer required for the purposes for which We collected or used it.",
       "concerns": [],
       "score_impact": 0
     },
@@ -286,27 +294,30 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't clearly explain how you'll be notified of changes.",
-      "detail": "No specific notification method mentioned for policy updates.",
-      "policy_excerpt": "Not explicitly mentioned in privacy policy.",
-      "concerns": ["Unclear how users are notified of policy changes"],
+      "plain_english": "The privacy policy does not explain how you will be told if the policy changes.",
+      "detail": "No mechanism for notifying users of policy updates is described. There is no mention of advance notice, continued use constituting acceptance, or any other notification method.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is completely silent on how changes are communicated to users."],
       "score_impact": 2.5
     }
   ],
-
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
       { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
-      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "device_fingerprinting", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
       { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
       { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.50, "deduction": 2.5 }
     ],
-    "total_deductions": 34,
-    "final_score": 83,
-    "grade": "A"
+    "total_deductions": 63.0,
+    "final_score": 69,
+    "grade": "C"
   }
 }

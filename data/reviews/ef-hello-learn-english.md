@@ -11,22 +11,24 @@
 ## Summary Card
 
 ### EF Hello: Learn English
-**Overall Risk:** Risky (D Grade) — Score: 50/100  
+**Overall Risk:** Caution (C Grade) — Score: 61/100  
 **Recommendation:** Think Twice
 
 #### Red Flags
-- **Extensive marketing tracking:** The app uses cookies, device tracking, and services like Salesforce Marketing Cloud to monitor what you read, click, and forward in emails. This data is used to send you targeted ads and marketing messages.
-- **Shared with many third parties:** Your personal data is shared with advertising platforms, social media companies (Facebook, Instagram, Snapchat), marketing agencies, IT providers, and business partners. With your consent, it can also be shared with affiliates for their own marketing.
-- **Location data collected:** If you enable location services, the app collects your physical location to provide personalized services and redirect you to local websites. Location may also be collected during app crashes.
-- **Data kept for years:** Your personal data is kept for 2-5 years after you close your account. Marketing data is kept for up to 5 years after your last use of the service.
+- **Data shared with many third parties for marketing:** Your personal data is shared with advertising platforms, corporate affiliates, business partners, social media companies, and IT providers. With your consent, it can also be shared with affiliates for their own marketing.
+- **Extensive behavioral and marketing tracking:** The app uses cookies, pixel tags, and tools like Salesforce Marketing Cloud to track what you read, click, and forward. This data is used to send you targeted ads and tailor marketing messages based on your behavior.
+- **Data kept for up to 5 years after you leave:** Your personal data is kept for 2-5 years after you close your account. Marketing data can be kept for up to 5 years after your last use, unless you explicitly withdraw consent.
+- **Camera and microphone access not mentioned:** The privacy policy does not say whether the app accesses your camera or microphone. For a language learning app, this is a notable omission that makes it unclear what permissions the app requests.
+- **Physical location is collected when enabled:** If you turn on location services, the app collects your physical location to provide personalized content and redirect you to local websites. Your location may also be collected during app crashes via Instabug.
 
 #### Green Flags
-- **User rights provided:** You can request access to your data, correct inaccurate information, delete your account, and opt out of marketing communications. These rights are available under GDPR and CCPA.
-- **16+ age requirement:** The app requires users to be at least 16 years old and promises to delete data if they discover a user is under 16.
-- **No selling to data brokers:** The privacy policy explicitly states they do not sell your personal information to third parties as defined under California privacy law.
+- **Explicit no-sale policy under CCPA:** The privacy policy explicitly states that EF does not sell your personal information to third parties as defined under California privacy law.
+- **User rights under GDPR and CCPA:** You can request access to your data, correct inaccurate information, ask for deletion, restrict processing, and receive a portable copy of your data. You can also object to direct marketing.
+- **16+ age requirement with deletion promise:** The app requires users to be at least 16 years old. If EF discovers a user under 16, they promise to delete the data as soon as possible.
+- **Marketing unsubscribe option available:** You can opt out of marketing communications using unsubscribe links in emails or by contacting efhello@ef.com.
 
 #### Verdict
-EF Hello collects substantial personal information including identity data, location, device fingerprints, and payment details. The app shares this data broadly with advertising platforms, corporate affiliates, and numerous third-party service providers for marketing purposes. While they provide some user rights and data deletion options, the extensive tracking and data sharing practices make this a risky choice for privacy-conscious users. If you're looking for a language learning app with stronger privacy protections, consider alternatives that don't engage in extensive behavioral tracking and marketing data sharing.
+EF Hello collects extensive personal information including identity data, location, device fingerprints, and payment details. The app shares this data broadly with advertising platforms, corporate affiliates, and numerous third-party service providers for marketing purposes. While they provide some user rights and data deletion options, the extensive tracking and data sharing practices make this a concerning choice for privacy-conscious users. If you're looking for a language learning app with stronger privacy protections, consider alternatives that don't engage in extensive behavioral tracking and marketing data sharing.
 
 ---
 
@@ -192,7 +194,7 @@ The policy mentions using "appropriate organizational, technical and administrat
 
 > "The EF Hello or Clued mobile application is using a crash reporting tool, Instabug, to send us information about bugs and crashes that users experience... This information includes... the physical location of a device at the time of a crash"
 
-> "We will only keep your Personal Data for 2-5 years after the expiry of your account... We will keep limited parts of your Personal Data which are necessary for marketing purposes until you withdraw your consent, but in no event for longer than 5 years after your last completed service"
+> "We will only keep your Personal Data for 2-5 years after the expiry of your account... We will keep limited parts of your Personal Data which are necessary for marketing purposes until you withdraw your consent, but in no event for longer than 5 years after your last completed service or delivery of product"
 
 ---
 
@@ -208,4 +210,4 @@ The app does provide good user rights compliance and explicit consent requiremen
 
 ---
 
-*Review conducted by Claude Code (kimi-k2.5) on 2026-05-18*
+*Review conducted by Claude Code (kimi-k2.6) on 2026-05-18*

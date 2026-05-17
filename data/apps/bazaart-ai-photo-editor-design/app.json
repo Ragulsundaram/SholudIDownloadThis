@@ -9,78 +9,86 @@
     "needs_review": false,
     "review_notes": ""
   },
-
   "app": {
     "slug": "bazaart-ai-photo-editor-design",
     "name": "Bazaart AI Photo Editor Design",
     "developer": "Bazaart Ltd.",
-    "app_store_url": "https://apps.apple.com/in/app/id515094775",
+    "app_store_url": "https://apps.apple.com/in/app/bazaart-ai-photo-editor-design/id515094775",
     "app_store_id": "515094775",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/9b/37/2c9b379f-c18f-fe8f-becf-7d3e9f6a0f04/Bazaart_Icon_v3-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220-0.png/512x512bb.jpg",
     "category": "Photo & Video",
-    "sub_category": "Graphics & Design",
-    "description": "AI-powered photo and video editor for creating designs, removing backgrounds, and generating content."
+    "sub_category": "Photo Editing",
+    "description": "An AI-powered photo and video editing app for designing graphics, removing backgrounds, and creating collages."
   },
-
   "verdict": {
-    "overall_risk": "risky",
-    "score": 65,
+    "overall_risk": "caution",
+    "score": 64,
     "grade": "C",
-    "one_liner": "Powerful AI editing app that shares data with numerous third parties for analytics and AI processing.",
-    "summary": "Bazaart collects personal information and shares it with a wide network of third-party services including Facebook, Google Analytics, and multiple AI providers. While the app provides legitimate photo editing functions, the extensive data sharing and tracking practices raise privacy concerns. Server-side processing of photos and videos occurs, though data is deleted after a few days.",
+    "one_liner": "Bazaart shares your data with numerous third-party tracking and AI services, and your photos may be processed on external servers, but you can use the app without signing up and request data deletion.",
+    "summary": "Bazaart is a popular AI photo and video editor that allows use without mandatory signup. It deletes server copies of processed content after a few days and does not retain face detection data. However, it shares personal information with many third-party analytics and tracking services, sends your photos and videos to external AI providers for processing, uses your contact information for promotional emails, and claims a broad license to use your name and likeness for publicity.",
     "recommendation": "think_twice",
-    "recommendation_reason": "Extensive third-party data sharing with analytics and advertising services, plus AI processing of photos on external servers."
+    "recommendation_reason": "While Bazaart offers useful creative tools and allows anonymous use, the extensive data sharing with tracking and AI services, combined with promotional marketing and broad content licenses, creates meaningful privacy risks. Consider whether you are comfortable with your photos being processed by multiple external AI services and your activity being tracked by numerous analytics providers."
   },
-
   "flags": {
     "red": [
       {
-        "id": "red_extensive_third_party_sharing",
-        "title": "Data shared with 20+ third parties",
-        "plain_english": "Your information is shared with over 20 third-party services including Facebook, Google Analytics, AppsFlyer, and multiple AI companies. These services track your behavior and process your data.",
+        "id": "red_data_shared_with_many_third_parties",
+        "title": "Data shared with many tracking and analytics companies",
+        "plain_english": "Bazaart shares your information with more than ten third-party services including Facebook, AppsFlyer, Google Analytics, Hotjar, Amplitude, and Firebase for analytics, tracking, and notifications.",
         "severity": "high"
       },
       {
-        "id": "red_photos_processed_on_servers",
-        "title": "Photos processed on company servers",
-        "plain_english": "When you use certain features, copies of your photos and videos are uploaded to Bazaart's servers for processing. While they say this data is deleted after a few days, your content still leaves your device.",
+        "id": "red_photos_processed_on_external_servers",
+        "title": "Photos and videos sent to external AI services",
+        "plain_english": "Your photos and videos are processed on Bazaart's servers and may also be sent to external AI services including OpenAI, Google Gemini, and Replicate for editing and generation features.",
         "severity": "high"
       },
       {
-        "id": "red_promotional_contact",
-        "title": "Marketing contact allowed",
-        "plain_english": "The company can contact you with promotional offers and newsletters using your email address and phone number. You may receive marketing messages after signing up.",
+        "id": "red_promotional_emails_and_newsletters",
+        "title": "Personal information used for promotional offers",
+        "plain_english": "Bazaart uses your email address and phone number to send you promotional offers and newsletters, and may contact you about surveys.",
         "severity": "medium"
       },
       {
-        "id": "red_ai_processing_external",
-        "title": "AI features use external services",
-        "plain_english": "AI-generated content is created using external services like OpenAI, Google Gemini, and Replicate. Your prompts and images may be sent to these third-party AI providers.",
+        "id": "red_broad_publicity_license",
+        "title": "Broad license to use your likeness for promotion",
+        "plain_english": "By using Bazaart, you give them permission to use your name, image, and likeness to promote content you create on the platform.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_tracking_sdks_installed",
+        "title": "Multiple tracking and analytics tools installed",
+        "plain_english": "The app includes several analytics and tracking services such as Facebook, AppsFlyer, Google Analytics, Firebase, and Hotjar that monitor how you use the app.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_user_deletion_rights",
-        "title": "Users can delete their data",
-        "plain_english": "You can request deletion of your personal information through the app. The company provides a way to review and remove your data.",
-        "severity": "positive"
-      },
-      {
         "id": "green_no_mandatory_signup",
-        "title": "No required account creation",
-        "plain_english": "You can use basic features without creating an account. Signup is only required for cloud sync and premium features.",
+        "title": "No mandatory signup required",
+        "plain_english": "You can use Bazaart without creating an account. Signing up is only required if you want to use the app on multiple devices or subscribe to premium features.",
         "severity": "positive"
       },
       {
-        "id": "green_face_data_not_stored",
-        "title": "Face detection data not retained",
-        "plain_english": "When the app detects faces in photos using Apple's Vision Framework, your face data is not kept or stored by the company.",
+        "id": "green_server_data_deleted_quickly",
+        "title": "Server copies of content deleted after a few days",
+        "plain_english": "Photos and videos processed on Bazaart's servers are deleted periodically after a short period of time, usually a few days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_deletion_available",
+        "title": "Users can request deletion of their information",
+        "plain_english": "You can review your information in the app and request to delete all relevant information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_face_data_not_retained",
+        "title": "Face detection data is not saved",
+        "plain_english": "Bazaart uses Apple's built-in Vision Framework on your device to detect faces in photos, but they do not retain any face data from this process.",
         "severity": "positive"
       }
     ]
   },
-
   "categories": [
     {
       "id": "camera_microphone",
@@ -91,26 +99,31 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Camera and microphone access are requested for taking photos and transcribing videos. These permissions are needed for the app's core editing features.",
-      "detail": "App requests camera permission for taking photos and videos, microphone and speech recognition permissions to transcribe videos.",
-      "policy_excerpt": "We may require additional device permissions to provide you certain parts of the services. These include camera permission for taking photos and videos, microphone and speech recognition permissions to transcribe videos.",
-      "concerns": [],
+      "plain_english": "Bazaart needs your camera and microphone to take photos and record videos for editing. Your photos and videos are sent to their servers for processing and kept for a few days.",
+      "detail": "The app requests camera permission for taking photos and videos, and microphone and speech recognition permissions to transcribe videos. Photos and videos processed through server-side services are retained for a limited time, usually a few days.",
+      "policy_excerpt": "We may require additional device permissions to provide you certain parts of the services. These include camera permission for taking photos and videos, microphone and speech recognition permissions to transcribe videos, and storage permissions to access files on your device for processing.",
+      "concerns": [
+        "Photos and videos processed on external servers",
+        "Server-side copies retained for a few days"
+      ],
       "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not appear to collect or use your location or GPS data.",
-      "detail": "No explicit mention of GPS or location data collection in the privacy policy.",
+      "plain_english": "The privacy policy does not say whether Bazaart collects or uses your location.",
+      "detail": "The policy does not explicitly mention GPS location tracking or location-based services.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": [
+        "Policy is silent on location access"
+      ],
+      "score_impact": -7.5
     },
     {
       "id": "contacts_phonebook",
@@ -121,8 +134,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not access your contacts or phonebook.",
-      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "plain_english": "Bazaart does not ask for access to your contacts list.",
+      "detail": "The privacy policy and terms of service do not mention accessing or uploading contacts from your device.",
       "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
@@ -136,9 +149,9 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Storage permission is requested to access files on your device for processing and saving your designs.",
-      "detail": "App requires storage permissions to access files on the device for processing.",
-      "policy_excerpt": "We may require additional device permissions to provide you certain parts of the services. These include... storage permissions to access files on your device for processing.",
+      "plain_english": "Bazaart asks for storage permission so you can import photos and videos from your device to edit them.",
+      "detail": "The app requests storage permissions to access files on your device for processing. This is required for the core photo and video editing functionality.",
+      "policy_excerpt": "We may require additional device permissions to provide you certain parts of the services... and storage permissions to access files on your device for processing.",
       "concerns": [],
       "score_impact": -3
     },
@@ -151,10 +164,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Your data is shared with over 20 third-party companies including Facebook, Google Analytics, AppsFlyer, and AI service providers for analytics, advertising, and processing.",
-      "detail": "Extensive list of third parties including Apple Analytics, Facebook, AppsFlyer, Amplitude, OneSignal, Google Payments, Google Analytics, Firebase, Hotjar Analytics, Sentry.io, Unsplash, Noun Project, Pexels, Replicate Inc., Soundstripe, Google Gemini, OpenAI ChatGPT, Paddle, and Refiner.",
-      "policy_excerpt": "We may use your email address with third party services, including Amplitude for analytics and Paddle for payments. We use the following third party services: (i) Apple Analytics; (ii) Facebook; (iii) AppsFlyer; (iv) Amplitude; (v) OneSignal; (vi) Google Payments; (vii) Google Analytics; (viii) Firebase; (ix) Hotjar Analytics; (x) Sentry.io.",
-      "concerns": ["Extensive third-party ecosystem", "Multiple analytics and tracking services", "AI processing by external providers"],
+      "plain_english": "Bazaart shares your information with many third-party companies, including analytics trackers like Facebook and AppsFlyer, and sends your photos and videos to external AI services like OpenAI and Google for processing.",
+      "detail": "The policy lists over ten third-party services with access to personal data, including Apple Analytics, Facebook, AppsFlyer, Amplitude, OneSignal, Google Payments, Google Analytics, Firebase, Hotjar Analytics, and Sentry.io. Additionally, user content may be processed by external AI and media services including Unsplash, Noun Project, Pexels, Replicate Inc., Soundstripe, Google Gemini, Cloud Vertex AI Imagen, and OpenAI ChatGPT/GPT Image.",
+      "policy_excerpt": "We use the following third party services: (i) Apple Analytics; (ii) Facebook; (iii) AppsFlyer; (iv) Amplitude; (v) OneSignal; (vi) Google Payments; (vii) Google Analytics; (viii) Firebase; (ix) Hotjar Analytics; (x) Sentry.io.",
+      "concerns": [
+        "Extensive list of third-party analytics and tracking services",
+        "User photos and videos sent to multiple external AI processing services",
+        "Email shared with Amplitude for analytics"
+      ],
       "score_impact": -19.5
     },
     {
@@ -162,14 +179,17 @@
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "If you register, the app collects your name, photo, and email address. You can use basic features without an account.",
-      "detail": "Registration info includes name, photo, and email address. Account is optional for basic features but required for cloud backup and premium features.",
-      "policy_excerpt": "Moreover, when you register, we may retain the information you provided us at registration, including your name, photo and email address.",
-      "concerns": [],
+      "plain_english": "You can use Bazaart without creating an account, but if you sign up, they collect your name, photo, and email. They share your email with analytics and payment companies, and they can use your name and photos to promote content you create.",
+      "detail": "Sign-up is optional and can be done via Google, Meta, or Apple. Registered users provide name, photo, and email address. Email is shared with Amplitude (analytics) and Paddle (payments). The terms include a broad publicity license allowing Bazaart to use the user's name, image, and likeness to promote posted content.",
+      "policy_excerpt": "We may use your email address with third party services, including Amplitude for analytics and Paddle for payments. You hereby grant us permission to use your name, image, information and likeness in relation to the content you posted.",
+      "concerns": [
+        "Email shared with analytics provider",
+        "Broad publicity license for user content"
+      ],
       "score_impact": -4.5
     },
     {
@@ -181,10 +201,13 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app uses multiple tracking services including Facebook, Google Analytics, AppsFlyer, and others to monitor your behavior and usage patterns.",
-      "detail": "Uses Facebook, AppsFlyer, Google Analytics, Amplitude, Hotjar Analytics, and Firebase for tracking and analytics.",
-      "policy_excerpt": "We use the following third party services: (i) Apple Analytics; (ii) Facebook; (iii) AppsFlyer; (iv) Amplitude; (v) OneSignal; (vi) Google Payments; (vii) Google Analytics; (viii) Firebase; (ix) Hotjar Analytics; (x) Sentry.io.",
-      "concerns": ["Multiple advertising and analytics trackers", "Cross-service tracking through Facebook and Google"],
+      "plain_english": "Bazaart uses multiple tracking services including Facebook, Google Analytics, and AppsFlyer to monitor how you use the app. They also send promotional emails and newsletters using your personal information.",
+      "detail": "The app integrates numerous analytics and tracking services including Facebook, AppsFlyer, Google Analytics, Firebase, Hotjar Analytics, and Sentry.io. The policy explicitly states that personal information including email and phone numbers may be used for promotional offers and newsletters.",
+      "policy_excerpt": "We may use the information you provided us, including your email address and phone numbers to provide you with promotional offers and newsletters.",
+      "concerns": [
+        "Multiple tracking SDKs installed",
+        "Personal contact information used for promotional marketing"
+      ],
       "score_impact": -16.25
     },
     {
@@ -196,41 +219,49 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app requires users to be 13 or older, or have parental consent if under 18. However, there's no strong verification system mentioned.",
-      "detail": "Terms state users must be 13+ or have guardian consent if 13-18. No mention of COPPA compliance or specific child data protections.",
-      "policy_excerpt": "When enrolling into the service, you represent and warrant that: (i) you are either over 18 years of age, or if you're over 13 and under 18, you obtained your legal guardian's consent to these terms.",
-      "concerns": ["Self-certified age with no verification", "App may appeal to younger users with sticker creation features"],
+      "plain_english": "Bazaart says you must be at least 13 years old to use the app, and if you are between 13 and 18 you need a parent's permission. The app is a photo editor that may appeal to younger teens.",
+      "detail": "The terms require users to be over 18 or over 13 with legal guardian consent. There is no explicit enforcement mechanism mentioned, and photo editing apps are commonly used by teenagers.",
+      "policy_excerpt": "you are either over 18 years of age, or if you're over 13 and under 18, you obtained your legal guardian's consent to these terms",
+      "concerns": [
+        "Photo editing app likely appeals to teens",
+        "No strong age verification mechanism described"
+      ],
       "score_impact": -3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "safe",
-      "access_type": "on_demand",
+      "risk": "caution",
+      "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app requires internet access for AI features and cloud services. No concerning network monitoring practices mentioned.",
-      "detail": "Network access required for AI processing and cloud features. Standard IP logging likely occurs but not explicitly mentioned for profiling.",
-      "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "plain_english": "Bazaart collects your IP address and other technical information about your device and internet connection.",
+      "detail": "The policy states that technical information about the device is collected, including IP address and operating system. This is standard technical logging.",
+      "policy_excerpt": "We collect some raw information which may be considered as personally identifiable, which is technical information about your device, such as your IP address, your operating system and other technical information.",
+      "concerns": [
+        "IP address collected"
+      ],
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app collects technical device information like your IP address and operating system, and shares it with multiple analytics companies for tracking purposes.",
-      "detail": "Collects IP address, operating system, and technical device information. Shared with analytics providers including Google Analytics, Firebase, and AppsFlyer.",
-      "policy_excerpt": "We collect some raw information which may be considered as personally identifiable, which is technical information about your device, such as your IP address, your operating system and other technical information.",
-      "concerns": ["IP address collection", "Multiple device identifiers through analytics SDKs"],
-      "score_impact": -9.75
+      "plain_english": "Bazaart collects technical details about your device like your IP address and operating system, and uses several analytics services that may track your device.",
+      "detail": "The policy collects IP address, operating system, and other technical information. Multiple analytics services (Google Analytics, Firebase, Hotjar, Sentry, AppsFlyer) are used, which typically collect device-level identifiers.",
+      "policy_excerpt": "technical information about your device, such as your IP address, your operating system and other technical information",
+      "concerns": [
+        "Multiple analytics services with potential device tracking",
+        "IP address and technical data collected continuously"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "health_biometric",
@@ -241,8 +272,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app uses Apple's Vision Framework to detect faces in photos but explicitly states that face data is not retained.",
-      "detail": "Uses on-device face detection via Apple's Vision Framework. Face data is not retained according to the policy.",
+      "plain_english": "Bazaart uses Apple's built-in face detection tool on your device to check if photos contain faces, but they do not save or keep any face data.",
+      "detail": "The policy explicitly states that Apple's Vision Framework is used on-device to detect whether photos contain a person's face, and that face data is not retained.",
       "policy_excerpt": "We use Apple's Vision Framework on iOS to inspect whether photos contain a person's face or not. However, in such use, your face data is not retained if the photo is found to include face data.",
       "concerns": [],
       "score_impact": 0
@@ -252,13 +283,13 @@
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Payments are processed through Paddle and your Apple/Google account. The app itself doesn't store your payment card details.",
-      "detail": "Uses Paddle as payment processor and Apple/Google accounts for billing. No raw card data stored by Bazaart.",
-      "policy_excerpt": "We may charge our fees through your Apple or Google account or independently... We use Paddle to process payments.",
+      "plain_english": "Payments are handled by Apple, Google, or Paddle. Bazaart does not directly store your payment card information.",
+      "detail": "Payments are processed through Apple or Google accounts, or independently via Paddle. The app does not appear to store raw payment card details directly.",
+      "policy_excerpt": "We may charge our fees through your Apple or Google account or independently; Google and Apple may offer refunds solely according to their policies. We use Paddle to process payments.",
       "concerns": [],
       "score_impact": -4.5
     },
@@ -271,45 +302,51 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can request deletion of your information through the app, though specific details about what gets deleted and retention periods are limited.",
-      "detail": "Users can review and request deletion of information. However, specifics about data export formats or complete deletion timelines are not detailed.",
-      "policy_excerpt": "Can You Review or Remove Your Information? Yes. You can always review your information using our software and panel. You can also request to delete all relevant information.",
-      "concerns": ["Limited detail on deletion scope and timelines"],
+      "plain_english": "You can request to delete your information, and server copies of your photos are deleted after a few days. However, if you use their cloud backup service, your designs may be kept longer.",
+      "detail": "Users can review information in the app and request deletion of all relevant information. Server-side data is deleted periodically after a short time, usually a few days. However, designs are retained if the user uses cloud backup services.",
+      "policy_excerpt": "You can always review your information using our software and panel. You can also request to delete all relevant information. Server Side Data is deleted periodically after a short period of time, which is usually a few days. While we do not consider your designs and works as Personal Data, we do retain it if you use any of our cloud services.",
+      "concerns": [
+        "Cloud backup designs retained even if other data deleted"
+      ],
       "score_impact": -3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "safe",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You'll be notified of policy changes via electronic communication, and you have 30 days to terminate if you don't agree with the changes.",
-      "detail": "Users informed via electronic communication of amendments. Option to terminate with 30 days notice if terms are unacceptable.",
+      "plain_english": "Bazaart will tell you about policy changes through electronic messages, and you can stop using the service with 30 days notice if you do not agree.",
+      "detail": "The terms state that amendments will be communicated electronically, and users are granted the option to terminate agreements with 30 days prior written notice.",
       "policy_excerpt": "We may amend these terms from time to time, provided that you shall be informed through electronic communication on such amendment and shall be granted the option to terminate your agreements with us by providing a 30 days prior written notice.",
       "concerns": [],
-      "score_impact": 0
+      "score_impact": -1.5
     }
   ],
-
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
-      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
-      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
       { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
-      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 }
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 71.5,
-    "final_score": 65,
+    "total_deductions": 73.25,
+    "final_score": 64,
     "grade": "C"
   }
 }

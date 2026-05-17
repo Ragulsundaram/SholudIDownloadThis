@@ -1,84 +1,84 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-17",
-    "analyzed_by": "claude-kimi-k2.5",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
     "policy_url": "https://photoroom.com/legal/privacy/",
     "terms_url": "",
     "policy_last_updated": "2026-03",
     "needs_review": false,
-    "review_notes": "Full analysis complete based on 25,271 character privacy policy. Key findings: AI model training opt-out available but on by default, extensive GDPR rights, data shared with service providers (Apple, RevenueCat, Dub), cookie data retained up to 25 months, data transferred outside EEA."
+    "review_notes": "Policy silent on contacts/phonebook and location/GPS access, which is typical for a photo editing app. AI training opt-out is available but has no retroactive effect."
   },
   "app": {
     "slug": "photoroom-ai-photo-editor",
-    "name": "PhotoRoom: AI Photo Editor",
-    "developer": "Photoroom S.A.S",
-    "app_store_url": "https://apps.apple.com/in/app/photoroom-ai-photo-editor/id1455009060",
+    "name": "Photoroom: AI Photo Editor",
+    "developer": "Photoroom",
+    "app_store_url": "https://apps.apple.com/in/app/photoroom--ai-photo-editor/id1455009060",
     "app_store_id": "1455009060",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1d/3f/1e/1d3f1e39-07ae-654b-d04c-9eccf2312f82/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
     "category": "Photo & Video",
     "sub_category": "AI Photo Editor",
-    "description": "An AI-powered photo editor that removes backgrounds, enhances images, and generates professional-quality visuals for e-commerce and social media."
+    "description": "AI-powered photo editing tool for creating and editing images, including background removal, batch processing, and e-commerce integration."
   },
   "verdict": {
     "overall_risk": "caution",
     "score": 69,
     "grade": "C",
-    "one_liner": "PhotoRoom edits your photos with AI and may use uploaded images to train models unless you opt out, but offers strong GDPR rights and doesn't sell data.",
-    "summary": "PhotoRoom is a capable AI photo editor that processes your photos to remove backgrounds and enhance images. By default, your uploaded photos may be used to train AI models, though you can opt out at any time. The app collects device information and shares data with service providers including Apple and RevenueCat for refund validation, and Dub for referral programs. Cookie data may be retained for up to 25 months. On the positive side, PhotoRoom offers extensive GDPR rights, does not sell personal data under CCPA definitions, and provides clear opt-out options for AI training.",
+    "one_liner": "AI photo editor that uses your uploaded images to train its models, but offers an opt-out and does not sell your data.",
+    "summary": "Photoroom is an AI-powered photo editor that accesses your camera and photos with permission. While it explicitly states it does not sell personal data and uses third-party payment processors to avoid handling credit cards directly, it uses uploaded images for AI model training with only a forward-looking opt-out. Data is shared with service providers including Apple and RevenueCat for refund checks, and browsing data is tracked via cookies. Some personal data is retained for extended periods even after account deletion requests.",
     "recommendation": "think_twice",
-    "recommendation_reason": "PhotoRoom's AI model training uses your uploaded photos by default. While you can opt out and the app offers strong privacy rights, consider whether you want your photos potentially used for training AI models. Avoid uploading sensitive personal photos."
+    "recommendation_reason": "Photoroom uses your uploaded photos for AI training with no retroactive opt-out, and retains some data for years after deletion. Consider whether you are comfortable with your images being used to train commercial AI models before uploading sensitive photos."
   },
   "flags": {
     "red": [
       {
-        "id": "red_ai_training_default",
-        "title": "Your uploaded photos may train AI models by default",
-        "plain_english": "PhotoRoom states that by using the service, you acknowledge it processes and uses the images you upload to improve, train, and develop its products, services, and models. You can opt out at any time but this does not undo prior processing.",
+        "id": "red_ai_training_photos",
+        "title": "Your photos are used to train AI models",
+        "plain_english": "By default, Photoroom uses the images you upload to improve and train its AI products and models. You can opt out, but this only stops future use and does not undo any training that already happened.",
         "severity": "high"
       },
       {
-        "id": "red_long_cookie_retention",
-        "title": "Cookie data kept for up to 25 months",
-        "plain_english": "PhotoRoom states that social network and audience measurement cookies preserve your IP address and pages viewed for up to twenty-five months with your consent.",
+        "id": "red_refund_data_sharing",
+        "title": "Browsing data shared for refund checks",
+        "plain_english": "Photoroom sends your browsing and interaction data to Apple and RevenueCat to check if you qualify for refunds.",
         "severity": "medium"
       },
       {
-        "id": "red_data_transferred_outside_eea",
-        "title": "Data may be transferred outside Europe",
-        "plain_english": "PhotoRoom states that your personal data may be transferred outside the European Economic Area, in particular because of the use of service providers located outside the EEA.",
+        "id": "red_long_data_retention",
+        "title": "Data kept for years after you stop using the app",
+        "plain_english": "Even if you delete your account, Photoroom may keep some data for a long time. Your account info can be kept up to 2 years after your last login and then archived for 5 more years. Purchase records are kept for 10 years.",
         "severity": "medium"
       },
       {
-        "id": "red_long_retention_periods",
-        "title": "Long data retention periods",
-        "plain_english": "PhotoRoom retains purchase records for 10 years, archived account data for 5 years after 2 years of inactivity, and cookie data for up to 25 months.",
+        "id": "red_data_transfers_outside_eu",
+        "title": "Personal data may leave the European Union",
+        "plain_english": "Photoroom is based in France, but your data may be sent to countries outside Europe because some of their service providers are located there.",
         "severity": "medium"
       }
     ],
     "green": [
       {
         "id": "green_opt_out_ai_training",
-        "title": "You can opt out of AI model training",
-        "plain_english": "PhotoRoom states that you may opt out of having your uploaded photos used to train AI models at any time through your account settings.",
+        "title": "You can opt out of AI training",
+        "plain_english": "Photoroom lets you opt out of having your uploaded images used for AI model training by changing a setting in your account.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_credit_card_storage",
+        "title": "Photoroom never sees your credit card",
+        "plain_english": "When you make a purchase, your credit card details are handled only by the payment service provider. Photoroom does not store or process your card information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_data_sales",
+        "title": "Explicitly says it does not sell your data",
+        "plain_english": "Photoroom clearly states in its privacy policy that it does not sell or share personal data for advertising purposes as defined by California privacy law.",
         "severity": "positive"
       },
       {
         "id": "green_strong_gdpr_rights",
-        "title": "Extensive GDPR rights available",
-        "plain_english": "PhotoRoom provides comprehensive rights including access, rectification, erasure, data portability, restriction, objection, and post-mortem data choices, with responses within one month.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_no_selling_ccpa",
-        "title": "Does not sell or share data under CCPA meanings",
-        "plain_english": "PhotoRoom explicitly states that it does not 'sell' or 'share' personal data as those terms are defined by the CCPA.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_api_exempt",
-        "title": "API uploads exempt from AI training",
-        "plain_english": "PhotoRoom clarifies that its model improvement does not apply to images processed through its Application Programming Interface (API).",
+        "title": "Strong European privacy rights available",
+        "plain_english": "Because Photoroom is based in France, you have rights under European privacy law including the right to access, correct, delete, and move your data. They must respond within one month.",
         "severity": "positive"
       }
     ]
@@ -93,46 +93,45 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom accesses your phone's camera and photos stored on your phone with your permission. This access lasts until you withdraw permission.",
-      "detail": "Camera and photo access requires user permission. Data sent by phone camera and photos stored on phone are processed. Access only made with permission and lasts until withdrawn or for duration of service use.",
-      "policy_excerpt": "Data sent by your phone's camera and photos stored on your phone. Contractual performance of the Terms between you and Photoroom. Access to the photos is only made with your permission. Duration of use of services or until withdrawal of your permission.",
-      "concerns": [
-        "Uploaded photos may be used for AI model training by default"
-      ],
+      "plain_english": "Photoroom accesses your phone's camera and photos, but only with your permission and only while you're using the app.",
+      "detail": "The policy explicitly states that data sent by your phone's camera and photos stored on your phone are collected. Access is only made with your permission. Data is kept for the duration of use or until withdrawal of permission.",
+      "policy_excerpt": "Data sent by your phone's camera and photos stored on your phone. Access to the photos is only made with your permission.",
+      "concerns": [],
       "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "caution",
-      "access_type": "on_demand",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom does not explicitly collect GPS or precise location. IP address is collected via cookies which may reveal approximate location.",
-      "detail": "No explicit GPS collection mentioned. IP address collected via social network and audience measurement cookies (up to 25 months with consent), which may reveal approximate location. No location services mentioned for core functionality.",
-      "policy_excerpt": "Social network and audience measurement Cookies: Personal data collected (IP address, pages viewed, etc.) by the deposit of these Cookies. Consent. Up to 25 months.",
+      "plain_english": "The privacy policy does not mention whether Photoroom collects your location.",
+      "detail": "The privacy policy does not explicitly address location or GPS data collection.",
+      "policy_excerpt": "",
       "concerns": [
-        "IP address collected via cookies may reveal approximate location",
-        "Cookie data retained for up to 25 months"
+        "Policy silent on location and GPS access"
       ],
-      "score_impact": -4.5
+      "score_impact": -7.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom does not collect or access your contacts or phonebook.",
-      "detail": "The privacy policy does not mention contacts, address book, or phonebook access. No reference to contact data collection or processing.",
+      "plain_english": "The privacy policy does not mention whether Photoroom accesses your contacts.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": [
+        "Policy silent on contacts and phonebook access"
+      ],
+      "score_impact": -10
     },
     {
       "id": "storage_file_access",
@@ -143,14 +142,10 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom processes the images you upload to provide editing services. By using the service, you acknowledge that uploaded images may be used to train AI models unless you opt out.",
-      "detail": "User-uploaded photos processed for editing services. AI model training uses uploaded photos by default. Opt-out available at any time but does not undo prior processing. API uploads exempt from training.",
-      "policy_excerpt": "By using Photoroom, you acknowledge that Photoroom processes and uses the images you upload to improve, train and develop Photoroom's products, services and models. You can opt-out of this at any time by changing the settings on your account. This opt out shall not have retroactive effect on processing activities already carried out.",
-      "concerns": [
-        "Uploaded photos used for AI model training by default",
-        "Opt-out does not undo prior processing",
-        "Images selected and annotated without identity information for training"
-      ],
+      "plain_english": "Photoroom needs access to photos stored on your phone so you can edit them. This access only happens with your permission.",
+      "detail": "Photos stored on the phone are accessed with user permission for editing services. Data kept for duration of use or until permission is withdrawn.",
+      "policy_excerpt": "Data sent by your phone's camera and photos stored on your phone. Access to the photos is only made with your permission.",
+      "concerns": [],
       "score_impact": -3
     },
     {
@@ -162,14 +157,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom shares data with service providers including Apple and RevenueCat for refund validation, Dub for referral programs, and other technical providers. Data may be transferred outside the EEA with GDPR protections.",
-      "detail": "Third-party processors: technical/hosting, notifications, newsletters, user tracking, security. Apple and RevenueCat receive browsing/interaction data for refund validation (6 months). Dub receives email addresses for referral programs (with consent). Cookie providers receive data based on banner choices. Data transferred outside EEA with appropriate safeguards. Does not sell data under CCPA.",
-      "policy_excerpt": "Your Personal data may be transmitted to third-party processors involved in the provision of the Services... In particular, we transmit your browsing and interaction data on the Photoroom Application to Apple and RevenueCat... We use Dub as a service provider to operate and manage referral programs.",
+      "plain_english": "Photoroom shares some of your data with service providers like Apple and RevenueCat for refund checks, and with Dub for referral programs if you opt in. They say they do not sell your personal data.",
+      "detail": "Data shared with sub-processors for hosting, notifications, user tracking, and security. Browsing and interaction data shared with Apple and RevenueCat for refund eligibility. Email addresses shared with Dub for referral programs with consent. Explicit statement that Photoroom does not 'sell' or 'share' personal data under CCPA.",
+      "policy_excerpt": "Your Personal data may be transmitted to third-party processors involved in the provision of the Services... we transmit your browsing and interaction data on the Photoroom Application to Apple and RevenueCat... we use Dub as a service provider to operate and manage referral programs.",
       "concerns": [
-        "Multiple service providers receive user data",
         "Browsing data shared with Apple and RevenueCat",
-        "Email addresses shared with Dub for referrals",
-        "Data transferred outside EEA"
+        "User tracking mentioned as third-party processor service"
       ],
       "score_impact": -9
     },
@@ -182,12 +175,11 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom collects email address, full name, user ID, and optional profile photo. Account data retained until deletion or up to 2 years of inactivity, then archived for 5 years.",
-      "detail": "Account data: email (via GoogleAuth, FacebookAuth, AppleAuth), full name, user ID, optional profile photo. Login credentials retained until deletion or 2 years dormancy, then archived 5 years. Purchase records retained 10 years for accounting. Transaction data retained for legal periods.",
-      "policy_excerpt": "Management of your account: Email address via GoogleAuth, FacebookAuth or AppleAuth (optional), Full name, User ID. Duration of use of the services (=Until the account is deleted by you or up to a period of 2 years from your last connection to your account), and then archived for 5 years.",
+      "plain_english": "Photoroom collects your email, name, and user ID when you create an account. You can sign in with Google, Facebook, or Apple.",
+      "detail": "Account data includes email address (via GoogleAuth, FacebookAuth, or AppleAuth), full name, user ID, and optional profile photo. Retained until account deletion or up to 2 years from last connection, then archived for 5 years.",
+      "policy_excerpt": "Email address via GoogleAuth, FacebookAuth or AppleAuth (optional), Full name, User ID.",
       "concerns": [
-        "Purchase records retained for 10 years",
-        "Account data archived for 5 years after 2 years inactivity"
+        "Account data retained for extended periods after last use"
       ],
       "score_impact": -4.5
     },
@@ -200,13 +192,12 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom uses social network and audience measurement cookies that preserve IP address and pages viewed for up to 25 months with consent. User tracking mentioned as third-party processor purpose.",
-      "detail": "Social network and audience measurement cookies collect IP address, pages viewed, etc. Retained up to 25 months with consent. User tracking listed as purpose for third-party processors. Does not explicitly state behavioral advertising but tracking data collected.",
-      "policy_excerpt": "Social network and audience measurement Cookies: Personal data collected (IP address, pages viewed, etc.) by the deposit of these Cookies. Consent. Up to 25 months.",
+      "plain_english": "Photoroom uses cookies for social network and audience measurement, which track your IP address and pages you view. You must give consent for these.",
+      "detail": "Social network and audience measurement cookies collect IP address and pages viewed with consent, retained up to 25 months. User tracking mentioned as a third-party processor service. Photoroom explicitly states they do not 'sell' or 'share' personal data for cross-context behavioral advertising under CCPA.",
+      "policy_excerpt": "Social network and audience measurement Cookies. Personal data collected (IP address, pages viewed, etc.) by the deposit of these Cookies. Consent. Up to 25 months.",
       "concerns": [
-        "Cookie data retained for 25 months",
-        "IP address and page views tracked",
-        "User tracking mentioned as processor purpose"
+        "Audience measurement cookies track IP and pages viewed",
+        "User tracking performed by third-party processors"
       ],
       "score_impact": -7.5
     },
@@ -219,12 +210,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom states that its services are not intended for children under 13 and does not knowingly collect personal data from children under 13. Users under 18 must have parental permission.",
-      "detail": "Age restriction: not intended for children under 13. Does not knowingly collect data from children under 13. Users under 18 require parental permission. No detailed age verification mechanism described.",
+      "plain_english": "Photoroom says their app is not for kids under 13, but there is no strong system to check ages.",
+      "detail": "Applications not intended for children under 13. No knowingly collection from under 13. Users under 18 must have parental permission. No enforcement mechanism described.",
       "policy_excerpt": "Our Applications and Services are not intended for and should not be used by children under the age of 13. We do not knowingly collect personal data from children under 13. Users under 18 must have permission from their parent or guardian to use our Services.",
       "concerns": [
-        "No robust age verification mechanism",
-        "App Store rating may be 4+ while service is 13+"
+        "No age verification mechanism described"
       ],
       "score_impact": -3
     },
@@ -237,12 +227,12 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom collects navigation information for the duration of your session to ensure proper functioning and security. IP address collected via cookies.",
-      "detail": "Navigation information collected for proper functioning and security, retained for duration of navigation. IP address collected via cookies (up to 25 months with consent). Browsing and interaction data shared with Apple and RevenueCat for refund validation (6 months).",
-      "policy_excerpt": "Ensure the proper functioning and security of the Services: Navigation information. Legitimate interest in providing a functional Services. For the duration of the navigation.",
+      "plain_english": "Photoroom collects information about how you use the app, including your browsing and navigation data, to keep the app running smoothly.",
+      "detail": "Navigation information collected for proper functioning and security. Browsing and interaction data on the Photoroom Application collected. Retained for duration of navigation or until deletion request.",
+      "policy_excerpt": "Navigation information. Legitimate interest in providing a functional Services. For the duration of the navigation.",
       "concerns": [
-        "IP address collected via cookies",
-        "Browsing data shared with third parties"
+        "Browsing and interaction data collected",
+        "Data shared with Apple and RevenueCat for refund checks"
       ],
       "score_impact": -1.5
     },
@@ -255,11 +245,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom collects data relating to devices and equipment used to provide a functional application and improve services.",
-      "detail": "Device data collected under legitimate interest for providing functional Application and improving services. Retained for duration of use or 30 days after deletion request. No explicit mention of unique device identifiers for advertising.",
-      "policy_excerpt": "Proper operation of the Application and its Services: Data relating to your activity on Photoroom, Communications with Photoroom, Data relating to devices and equipment used. Legitimate interest in providing a functional Application/ improving our Application. Duration of use of the services, or 30 days after a request for deletion.",
+      "plain_english": "Photoroom collects information about the device you use, like your phone type, to make sure the app works properly.",
+      "detail": "Data relating to devices and equipment used collected for proper operation of the Application. Retained for duration of use or 30 days after deletion request. Not explicitly linked to advertising.",
+      "policy_excerpt": "Data relating to devices and equipment used. Legitimate interest in providing a functional Application/ improving our Application.",
       "concerns": [
-        "Device data collected continuously"
+        "Device data collected for service operation"
       ],
       "score_impact": -4.5
     },
@@ -272,8 +262,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom does not collect health or biometric data for the core photo editing service.",
-      "detail": "No health or biometric data collection mentioned for core app functionality. CCPA section lists categories but does not indicate actual collection of such data.",
+      "plain_english": "Photoroom does not collect any health or biometric data.",
+      "detail": "No mention of health or biometric data collection in the privacy policy.",
       "policy_excerpt": "",
       "concerns": [],
       "score_impact": 0
@@ -287,11 +277,11 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "PhotoRoom does not process or keep credit card data itself - payment information is handled by third-party payment services providers. Purchase records are retained for 10 years.",
-      "detail": "Credit card and payment methods data not processed or kept by PhotoRoom - only by Payment Services Provider. Transaction data (purchase history, transaction amount, user's first and last name) retained for 10 years for accounting purposes. Email, full name, user ID used for payment processing.",
-      "policy_excerpt": "Please note that credit card or other payment methods data are not processed and kept by Photoroom but only by the Payment Services Provider. Purchase of subscription or paid features: Transaction data transmitted by the Store or by the Payment Services Provider (purchase history, transaction amount, user's first and last name). Length of time required to complete the transaction plus legal retention period for accounting purposes (10 years).",
+      "plain_english": "When you buy something, Photoroom uses outside payment services and never sees your credit card number.",
+      "detail": "Transaction data transmitted by Store or Payment Services Provider. Photoroom does not process or keep credit card data. Purchase history, amount, and name retained for 10 years for accounting.",
+      "policy_excerpt": "Transaction data transmitted by the Store or by the Payment Services Provider... credit card or other payment methods data are not processed and kept by Photoroom but only by the Payment Services Provider.",
       "concerns": [
-        "Purchase records retained for 10 years"
+        "Purchase data retained for 10 years for accounting"
       ],
       "score_impact": -4.5
     },
@@ -299,19 +289,19 @@
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "safe",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom provides extensive GDPR rights including access, rectification, erasure, data portability, restriction, objection, and post-mortem choices. Responses within one month, or up to three months for complex requests.",
-      "detail": "Comprehensive GDPR rights: access, rectification, erasure (right to be forgotten), restriction, portability, objection, post-mortem data choices, consent withdrawal. Response time: one calendar month, up to three months for complex requests. Some data retained for legal periods after deletion. AI training opt-out available but doesn't undo prior processing.",
-      "policy_excerpt": "People may exercise extensive controls including Right of access, Right to rectification, Right to erasure/right to be forgotten, Right to restriction of processing, Right to data portability, Right to object, Right to determine what happens to your personal data after your death, Right to withdraw your consent. Photoroom undertakes to respond to your requests... within one calendar month... If your request is complex... up to three calendar months.",
+      "plain_english": "You can ask Photoroom to delete your data, but some information is kept for years for legal and accounting reasons even after you delete your account.",
+      "detail": "GDPR rights available including access, rectification, erasure, restriction, portability, objection. Account data deleted by user or kept up to 2 years from last connection, then archived 5 years. Accounting data kept 10 years. Response within one calendar month (up to three for complex requests).",
+      "policy_excerpt": "You can request the deletion of your personal data... Duration of use of the services (=Until the account is deleted by you or up to a period of 2 years from your last connection to your account), and then archived for 5 years.",
       "concerns": [
-        "Some data retained for legal limitation periods",
-        "Opt-out of AI training does not undo prior processing"
+        "Account data retained up to 2 years after last use and archived 5 years",
+        "Accounting data kept for 10 years"
       ],
-      "score_impact": 0
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -322,12 +312,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "PhotoRoom states that the privacy policy may be amended and that it will set up a way to inform you of changes, but does not specify exact notification methods or advance notice periods.",
-      "detail": "Policy may be amended to reflect changes in practices or regulations. PhotoRoom will set up a way to inform users of changes. No specific notification mechanism (email, in-app, posting) stated. No explicit advance notice period mentioned.",
-      "policy_excerpt": "The Privacy Policy may be amended and updated to reflect changes in Photoroom's data protection practices, or to ensure compliance with regulations when they are amended. In this case, we will set up a way to inform you of this change.",
+      "plain_english": "Photoroom says they will let you know if they change the privacy policy, but they don't explain how or give you advance notice.",
+      "detail": "Privacy policy may be amended and updated. The company states they will 'set up a way to inform you of this change' but does not specify the method, timing, or requirement for active re-consent.",
+      "policy_excerpt": "The Privacy Policy may be amended and updated... we will set up a way to inform you of this change.",
       "concerns": [
-        "Notification method not specified",
-        "No explicit advance notice period stated"
+        "Vague notification method with no specifics on advance notice or re-consent"
       ],
       "score_impact": -1.5
     }
@@ -345,17 +334,17 @@
       },
       {
         "category": "location_gps",
-        "risk": "caution",
+        "risk": "unknown",
         "max": 15,
-        "rate": 0.3,
-        "deduction": 4.5
+        "rate": 0.5,
+        "deduction": 7.5
       },
       {
         "category": "contacts_phonebook",
-        "risk": "safe",
+        "risk": "unknown",
         "max": 20,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.5,
+        "deduction": 10
       },
       {
         "category": "storage_file_access",
@@ -422,10 +411,10 @@
       },
       {
         "category": "data_deletion_user_rights",
-        "risk": "safe",
+        "risk": "caution",
         "max": 10,
-        "rate": 0,
-        "deduction": 0
+        "rate": 0.3,
+        "deduction": 3
       },
       {
         "category": "policy_change_notification",
@@ -435,8 +424,8 @@
         "deduction": 1.5
       }
     ],
-    "total_deductions": 48,
-    "final_score": 77,
-    "grade": "B"
+    "total_deductions": 64,
+    "final_score": 69,
+    "grade": "C"
   }
 }
