@@ -17,6 +17,7 @@ import { TabbedSections, type Tab } from "@/components/TabbedSections";
 import { FlagsList } from "@/components/FlagsList";
 import { CategoryCard } from "@/components/CategoryCard";
 import { MetaStrip } from "@/components/MetaStrip";
+import { SaferAlternatives } from "@/components/SaferAlternatives";
 
 type Params = { slug: string };
 
@@ -52,6 +53,16 @@ export default async function AppPage({
   const categoriesByRisk = [...data.categories].sort((a, b) =>
     compareRisk(a.risk, b.risk),
   );
+
+  const alternatives = allApps
+    .filter(
+      (a) =>
+        a.slug !== slug &&
+        a.category === data.app.category &&
+        a.score > data.verdict.score,
+    )
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
 
   const tabs: Tab[] = [
     {
@@ -117,6 +128,8 @@ export default async function AppPage({
           <div className="mt-10">
             <TabbedSections tabs={tabs} />
           </div>
+
+          <SaferAlternatives alternatives={alternatives} />
         </div>
       </main>
 
