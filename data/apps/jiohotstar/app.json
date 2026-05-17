@@ -1,94 +1,104 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
+    "analyzed_at": "2026-05-17",
     "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.hotstar.com/privacy-policy/in",
-    "terms_url": "",
+    "terms_url": "https://www.hotstar.com/tnc/in",
     "policy_last_updated": "2025-05-27",
     "needs_review": false,
     "review_notes": ""
   },
+
   "app": {
     "slug": "jiohotstar",
     "name": "JioHotstar",
     "developer": "JIOSTAR INDIA PRIVATE LIMITED",
     "app_store_url": "https://apps.apple.com/in/app/jiohotstar/id934459219",
     "app_store_id": "934459219",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c0/2a/6a/c02a6aa7-9cdf-f454-3f01-7d0ca28ee2f6/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cb/03/bc/cb03bcef-51f8-26b8-c45a-6651bef2528c/AppIcon-IN-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Entertainment",
     "sub_category": "Streaming",
-    "description": "JioHotstar is a video streaming platform offering movies, TV shows, live sports, and original content in India."
+    "description": "India's leading streaming platform for live sports, movies, TV shows, and exclusive Hotstar Specials."
   },
+
   "verdict": {
-    "overall_risk": "caution",
-    "score": 56,
-    "grade": "C",
-    "one_liner": "Tracks your viewing habits and shares advertising identifiers with third-party ad providers.",
-    "summary": "JioHotstar collects extensive personal and viewing data, including advertising identifiers, and shares this information with advertising and analytics partners. The policy states that your watch history and activity are linked across devices for personalized advertising. Some data may be retained after deletion requests for legal and fraud prevention purposes.",
+    "overall_risk": "risky",
+    "score": 47,
+    "grade": "D",
+    "one_liner": "Extensive data collection for ads and sharing with partners, though some opt-out controls exist.",
+    "summary": "JioHotstar collects detailed viewing behavior, device information, and location data to personalize content and advertisements. Data is shared with service providers, advertising partners, and group companies. Users have some controls for interest-based advertising and data deletion, but the default settings enable broad tracking.",
     "recommendation": "think_twice",
-    "recommendation_reason": "JioHotstar states it tracks your viewing habits and shares advertising identifiers with third-party ad providers. If you prefer not to have your watch history used for targeted ads, consider whether the content is worth the data collection."
+    "recommendation_reason": "The app collects extensive data for targeted advertising and shares it with numerous third parties. While some opt-out controls exist, the default settings enable broad tracking of your viewing habits and device activity. Consider if the content is worth the privacy trade-off."
   },
+
   "flags": {
     "red": [
       {
         "id": "red_ad_tracking",
-        "title": "Advertising identifiers shared with third-party ad exchanges",
-        "plain_english": "The policy states that your advertising identifiers may be shared with advertising exchanges and digital marketing providers to decide which ads you see on third-party sites and applications.",
+        "title": "Extensive behavioral tracking for targeted ads across devices",
+        "plain_english": "The policy states they track everything you watch, when you watch it, your device info, and use advertising identifiers (IDFA, GAID) to show you personalized ads. This data is linked across all your devices and shared with advertising exchanges.",
         "severity": "high"
       },
       {
         "id": "red_data_sharing",
-        "title": "Data shared with many service providers and partners",
-        "plain_english": "The policy states that your personal information may be made available to service providers including marketing, analytics, advertising, and technology companies, as well as affiliates and business partners.",
-        "severity": "high"
-      },
-      {
-        "id": "red_watch_history_ads",
-        "title": "Watch history linked to advertising identifiers",
-        "plain_english": "The policy states that your activity, including pages viewed, watch times, and watch history, is associated with advertising identifiers for interest-based advertising.",
+        "title": "Data shared with advertising partners and group companies",
+        "plain_english": "Your information is shared with service providers, business partners, advertising networks, analytics providers, and group companies for marketing and product improvement purposes.",
         "severity": "high"
       },
       {
         "id": "red_location_tracking",
-        "title": "Location collected automatically from IP and SIM",
-        "plain_english": "The policy states that your general location is collected from your IP address and SIM card, and precise GPS location is collected with your permission. This data is used for localized content and advertisements.",
+        "title": "Precise GPS location collected with permission",
+        "plain_english": "With your permission, the app collects your exact GPS location to provide localized content and advertisements based on where you are.",
         "severity": "medium"
       },
       {
-        "id": "red_partial_card_storage",
-        "title": "Partial credit card details retained",
-        "plain_english": "The policy states that payment processors provide JioHotstar with the first 6 and last 4 digits of your credit or debit card, plus the expiry date, for customer support and analytics.",
+        "id": "red_device_fingerprinting",
+        "title": "Unique device identifiers used for tracking",
+        "plain_english": "The policy states they collect device IDs, advertising identifiers (IDFA/GAID), and create unique customer identifiers to track your activity across devices and link your data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ip_location",
+        "title": "IP address used to determine your location",
+        "plain_english": "Your IP address is collected and used to determine your approximate location, even when you don't share precise GPS data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_retention",
+        "title": "Marketing data kept for maximum period allowed by law",
+        "plain_english": "The policy explicitly states that data used for marketing and advertising is retained for the maximum period allowed by law in your territory, which could be years.",
         "severity": "medium"
       }
     ],
     "green": [
       {
         "id": "green_opt_out_ads",
-        "title": "You can opt out of interest-based ads",
-        "plain_english": "The policy states you can opt out of interest-based advertising by adjusting your device privacy settings to reset or limit ad tracking identifiers.",
+        "title": "Users can opt out of interest-based advertising",
+        "plain_english": "The policy states you can opt out of interest-based ads by configuring settings on your device under 'privacy' or 'ads'.",
         "severity": "positive"
       },
       {
-        "id": "green_data_erasure",
-        "title": "You can request your data be erased",
-        "plain_english": "The policy states you can request erasure of your personal information and closing of your account, though this terminates your subscription without refund.",
+        "id": "green_account_deletion",
+        "title": "Account deletion and data erasure available",
+        "plain_english": "Users can request erasure of personal information and close their account, though some data may be retained for legal and fraud prevention purposes.",
         "severity": "positive"
       },
       {
-        "id": "green_push_control",
-        "title": "Push notifications are fully controllable",
-        "plain_english": "The policy states you can disable push notifications at any time through your device settings.",
+        "id": "green_data_portability",
+        "title": "Data access and portability rights provided",
+        "plain_english": "In some jurisdictions, users can request copies of their personal information in a machine-readable format and request transmission to another service provider.",
         "severity": "positive"
       },
       {
-        "id": "green_security_measures",
-        "title": "Claims to use security measures",
-        "plain_english": "The policy states it uses firewalls and data encryption to protect personal information from unauthorized access.",
+        "id": "green_kids_mode",
+        "title": "Kid's mode feature for child-friendly content",
+        "plain_english": "The app includes a Kid's mode that provides access exclusively to children-friendly content when activated.",
         "severity": "positive"
       }
     ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
@@ -99,10 +109,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy mentions microphone access that you may agree to provide, and refers to photos or videos you choose to upload.",
-      "detail": "Microphone access is explicitly mentioned as something you may agree to provide, and you may withdraw consent via device settings. The policy also mentions uploading photos or videos. Camera access is not explicitly addressed.",
-      "policy_excerpt": "microphone access, you may at any time withdraw such consent by disabling the... microphone permission from the setting menu on your device.",
-      "concerns": ["Camera access is not explicitly mentioned in the policy"],
+      "plain_english": "Camera and microphone are accessed only when you use features like uploading photos/videos or voice-enabled features.",
+      "detail": "The policy mentions accessing camera roll settings and voice-enabled features. Access is user-initiated and not continuous.",
+      "policy_excerpt": "voice-enabled features... camera roll settings",
+      "concerns": [],
       "score_impact": -4.5
     },
     {
@@ -110,14 +120,17 @@
       "label": "Location & GPS",
       "icon": "MapPin",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
-      "background_access": true,
-      "plain_english": "The policy states it collects your general location from your IP address and SIM card automatically, and your precise GPS location with your permission.",
-      "detail": "General location is collected continuously via IP address and SIM card. Precise GPS location requires explicit consent. Location data is used to serve localized content and advertisements, and may be shared with advertising partners.",
-      "policy_excerpt": "Information about your general location, including location based on your mobile phone SIM card and/or IP address and, with your permission your precise location based on GPS data.",
-      "concerns": ["IP and SIM-based location collected automatically", "Location data used for localized advertisements", "Precise GPS combined with other information for personalized ads"],
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Collects both approximate location from IP/SIM and precise GPS location if you give permission, used for localized content and ads.",
+      "detail": "The policy states they collect general location from IP address and SIM card, and precise GPS location with explicit permission. Location is used to provide localized content and advertisements.",
+      "policy_excerpt": "general location, including location based on your mobile phone SIM card and/or IP address and, with your permission, your precise location based on GPS data",
+      "concerns": [
+        "Precise GPS location collected",
+        "IP address used for location inference"
+      ],
       "score_impact": -9.75
     },
     {
@@ -129,41 +142,48 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy states that with your permission, it may collect your phone and social network contacts.",
-      "detail": "Contacts access is optional and requires explicit permission. The policy mentions collecting phone and social network contacts with user permission.",
-      "policy_excerpt": "(where feature is available) your phone and social network contacts, with your permission",
-      "concerns": [],
-      "score_impact": -6.0
+      "plain_english": "May access your phone and social network contacts with your permission to help identify connections.",
+      "detail": "The policy states that with permission, they may collect information from your phone and social network contacts. This is optional and user-initiated.",
+      "policy_excerpt": "your phone and social network contacts, with your permission",
+      "concerns": [
+        "Contacts uploaded to servers if permission granted"
+      ],
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy does not state that the app accesses your device's file storage or photo library.",
-      "detail": "As a streaming app, JioHotstar does not appear to need access to your device's files, photos, or storage beyond standard app caching. The policy mentions uploading content but does not describe device storage access.",
-      "policy_excerpt": "",
+      "plain_english": "Accesses your camera roll only when you choose to upload or share content.",
+      "detail": "The policy mentions camera roll settings, implying photos and videos may be accessed when you actively choose to share content. This is user-initiated.",
+      "policy_excerpt": "camera roll settings",
       "concerns": [],
-      "score_impact": 0.0
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "risky",
+      "risk": "dangerous",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "The policy states that your personal information may be shared with marketing, analytics, advertising, and technology service providers, as well as affiliates and business partners.",
-      "detail": "The policy explicitly lists sharing with service providers including marketing, analytics, research, communication, advertisements, infrastructure, IT, technology, software, and payment processing providers. It also mentions sharing with business partners, affiliates, and in business transfers.",
-      "policy_excerpt": "At times we may make your Personal Information available to our service providers (such as but not limited to: marketing, analytics, research, communication, advertisements, infrastructure and IT services, technology or software providers, payment processing and other service providers).",
-      "concerns": ["Extensive sharing with advertising and marketing partners", "Data may be shared with affiliates and group companies", "Business transfer disclosures without user control"],
-      "score_impact": -19.5
+      "background_access": false,
+      "plain_english": "Your data is shared with service providers, advertising partners, business partners, analytics providers, and group companies for marketing and product improvement.",
+      "detail": "The policy explicitly states they share personal information with service providers, business or promotional partners, advertising/data exchanges, and group companies. Advertising identifiers are shared with exchanges to decide which ads you see.",
+      "policy_excerpt": "We or our service providers may also share your advertisement identifiers such as IDFA, GAID etc. with advertising / data exchanges",
+      "concerns": [
+        "Data shared with advertising exchanges",
+        "Shared with business and promotional partners",
+        "Group companies can access your information",
+        "No opt-out from sharing with service providers"
+      ],
+      "score_impact": -30
     },
     {
       "id": "account_identity",
@@ -174,26 +194,34 @@
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy requires your name, email, phone number, age, gender, and password to create an account, and links this data to a unique platform identifier across your devices.",
-      "detail": "Collects extensive identity data including name, email, phone, age, gender, password, and location. All activity is linked to a unique platform-generated identifier for personalized advertising and recommendations across devices.",
-      "policy_excerpt": "To provide you with a personalised service and experience; we do this by linking some or all of your Personal Information with your activity on our Platform across all your streaming devices and associating and storing this information with a unique platform generated identifier.",
-      "concerns": ["Identity linked to advertising profile across devices", "Extensive personal data collection required for account"],
+      "plain_english": "Requires name, email, phone, age, gender to create account. Links with social media if you choose to login that way.",
+      "detail": "Account creation requires personal information including name, email, phone number, age, and gender. Users can also sign up/login using social media accounts like Facebook, which may share profile and friend information.",
+      "policy_excerpt": "Name, Email Address, Phone number, Age or date of birth, Gender... Allow you to Sign Up/ Log In using social media accounts like Facebook",
+      "concerns": [
+        "Social login shares friend list and profile data",
+        "Unique customer ID links activity across devices"
+      ],
       "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "risky",
+      "risk": "dangerous",
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "The policy states that your advertising identifiers may be shared with advertising exchanges and digital marketing providers to decide which ads you see on third-party sites and applications.",
-      "detail": "Tracks pages viewed, watch times, content selection, watch history, search queries, transactions, and interactions with ads. Uses IDFA, GAID, and device identifiers for interest-based advertising. Shares identifiers with ad exchanges and digital marketing providers.",
-      "policy_excerpt": "We or our service providers may also share your advertisement identifiers such as IDFA, GAID etc. with advertising / data exchanges, and marketing analytics and other digital advertising and marketing service providers.",
-      "concerns": ["Watch history and activity linked to advertising identifiers", "Advertising identifiers shared with ad exchanges", "Data used for interest-based advertising"],
-      "score_impact": -16.25
+      "background_access": false,
+      "plain_english": "Tracks everything you watch, your viewing time, search queries, and device activity to show personalized ads across all your devices.",
+      "detail": "The policy describes extensive tracking including pages viewed, watch times, content selection, watch history, search queries, transactions, device information, and advertising identifiers. This is used for 'interest-based advertising' across all your streaming devices.",
+      "policy_excerpt": "Your activity on the JioHotstar Service such as pages/titles viewed, load times, watch times, content selection and watch history... Display or target advertisements on the Platform based on your registration or profile information, location and/or your activity on the Platform across all your streaming devices",
+      "concerns": [
+        "Comprehensive viewing history tracked",
+        "Activity linked across all devices",
+        "Search queries logged and used for ads",
+        "Device advertising identifiers used for tracking"
+      ],
+      "score_impact": -25
     },
     {
       "id": "childrens_data",
@@ -204,11 +232,14 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy states users must be 18 or older to register, but the platform includes a Kids mode for child-friendly content with parental supervision.",
-      "detail": "The policy states they do not knowingly permit anyone under 18 to register. However, the platform offers a Kids mode feature for child-friendly content, requiring parental supervision for users under 18.",
-      "policy_excerpt": "We do not knowingly permit any person who is under 18 years of age to register or to provide any other personally identifying information. The Platform includes a Kid's mode feature, which when activated, provides access exclusively to children-friendly content.",
-      "concerns": ["Contradiction between 18+ requirement and Kids mode existence", "No robust age verification mechanism"],
-      "score_impact": -3.0
+      "plain_english": "States users must be 18+, but has a Kid's mode feature for child-friendly content when supervised by parents.",
+      "detail": "The policy states they do not knowingly permit anyone under 18 to register. However, the Platform includes a Kid's mode feature. Under-18s may use the service with parent/guardian involvement and approval.",
+      "policy_excerpt": "We do not knowingly permit any person who is under 18 years of age to register... The Platform includes a Kid's mode feature",
+      "concerns": [
+        "18+ requirement but Kid's mode available",
+        "No robust age verification mechanism"
+      ],
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -218,11 +249,14 @@
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "The policy states that your IP address, browsing activity, watch history, search queries, and interactions with content and ads are logged.",
-      "detail": "Extensive network logging including pages viewed, load times, watch times, content selection, search queries, platform features used, and interactions with emails and ads. Used for analytics, ad targeting, and security.",
-      "policy_excerpt": "Your activity on the JioHotstar Service such as pages/titles viewed, load times, watch times, content selection and watch history, transactions initiated and/or completed, search queries and platform features used.",
-      "concerns": ["Extensive activity logging for advertising", "IP address used for location inference", "Data shared with ad networks"],
+      "background_access": false,
+      "plain_english": "Logs your IP address continuously and uses it to determine your location and troubleshoot issues.",
+      "detail": "The policy states they collect information about the network you connect to, including your IP address. IP is used for location inference and to determine relevant services when traveling.",
+      "policy_excerpt": "Information about the network you connect your device to, including your IP address",
+      "concerns": [
+        "IP address logged continuously",
+        "IP used for location inference"
+      ],
       "score_impact": -3.25
     },
     {
@@ -233,11 +267,15 @@
       "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": true,
-      "plain_english": "The policy states it collects your device ID, model, operating system, screen resolution, carrier, and advertising identifiers such as IDFA and GAID.",
-      "detail": "Collects device id, device model, platform, OS, installed version, time zone, mobile carrier, screen resolution, and other unique identifiers. Advertising identifiers (IDFA, GAID) are explicitly mentioned and shared with advertising partners.",
-      "policy_excerpt": "Device and software information such as device id, device model, platform, type of operating system, installed version, time zone setting, mobile carrier, screen resolution etc. and other unique identifiers. Advertisement identifiers such as IDFA, GAID etc.",
-      "concerns": ["Unique device identifiers collected for ad tracking", "Advertising identifiers shared with third parties", "Cross-device tracking enabled via platform identifier"],
+      "background_access": false,
+      "plain_english": "Collects detailed device info including device ID, model, OS, carrier, screen resolution, and creates unique identifiers to track you across devices.",
+      "detail": "The policy collects device id, device model, platform, OS version, time zone, mobile carrier, screen resolution, and creates unique platform-generated identifiers. They also collect information about apps frequently used on your device.",
+      "policy_excerpt": "Device and software information such as device id, device model, platform, type of operating system, installed version, time zone setting, mobile carrier, screen resolution etc. and other unique identifiers",
+      "concerns": [
+        "Unique device identifiers collected",
+        "Information about other apps on your device collected",
+        "Persistent tracking across devices"
+      ],
       "score_impact": -9.75
     },
     {
@@ -249,11 +287,11 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy does not mention health or biometric data.",
-      "detail": "No mention of health, biometric, or fitness data collection in the privacy policy.",
+      "plain_english": "Does not collect health or biometric data.",
+      "detail": "No health or biometric data collection is mentioned in the privacy policy.",
       "policy_excerpt": "",
       "concerns": [],
-      "score_impact": 0.0
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
@@ -264,10 +302,13 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy states that payment processors provide JioHotstar with the first 6 and last 4 digits of your card, plus the expiry date, but never the full card number.",
-      "detail": "Full payment details are stored and processed by payment processors. JioHotstar receives the first 6 and last 4 digits of the card and expiry dates for accounting, customer support, and renewal reminders.",
-      "policy_excerpt": "Our payment processors give us access to the first 6 digits and last 4 digits of your credit/debit card (including any updates) so that we can perform the contract with you and provide you with a quick resolution of your queries.",
-      "concerns": ["Partial card digits retained by JioHotstar", "Expiry dates used for renewal reminders"],
+      "plain_english": "Payment data is handled by third-party processors. The app only sees first 6 and last 4 digits of your card for support purposes.",
+      "detail": "Full payment card details are never stored by JioHotstar. They use third-party payment processors. They can see first 6 and last 4 digits for support queries and analyzing popular card types.",
+      "policy_excerpt": "this payment information is never stored or processed by us... first 6 digits and last 4 digits of your credit/debit card",
+      "concerns": [
+        "Card digits visible for support purposes",
+        "Expiry date used for renewal reminders"
+      ],
       "score_impact": -4.5
     },
     {
@@ -279,11 +320,15 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy states you can request erasure of your personal information, but your subscription will be terminated without refund, and some data may be retained for fraud detection and legal compliance.",
-      "detail": "Users can request data erasure and account closure. However, some personal information may be retained for legitimate business interests (fraud detection, safety) and legal obligations (tax, legal reporting, auditing).",
-      "policy_excerpt": "We may retain some of your Personal Information as necessary for our legitimate business interests, such as fraud detection and prevention and enhancing safety. We may retain and use your Personal Information to the extent necessary to comply with our legal obligations.",
-      "concerns": ["Subscription terminated without refund upon erasure", "Some data retained for fraud and legal purposes"],
-      "score_impact": -3.0
+      "plain_english": "You can request data deletion and account closure, but some data is kept for fraud prevention, legal obligations, and tax purposes.",
+      "detail": "Users can request erasure of personal information and close accounts. However, some information is retained for fraud detection, legal obligations, tax, and auditing purposes. Marketing data is retained for maximum period allowed by law.",
+      "policy_excerpt": "We may retain some of your Personal Information as necessary for our legitimate business interests, such as fraud detection and prevention... We may retain and use your Personal Information to the extent necessary to comply with our legal obligations",
+      "concerns": [
+        "Some data retained for undefined legal purposes",
+        "Marketing data kept for maximum legal period",
+        "Fraud detection data may be kept indefinitely"
+      ],
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -294,34 +339,38 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy states it may change at any time, and continued use of the service counts as acceptance of updates.",
-      "detail": "Updated terms are effective immediately unless stated otherwise. Notice provided for significant changes or as required by law. Continued use constitutes acceptance of updated terms.",
-      "policy_excerpt": "The Updated Terms shall be effective immediately (unless we state otherwise) and shall supersede the terms of this Privacy Notice. We will notify you of any changes to this Privacy Notice if the changes significantly affect your rights or as may be required by law. Your continued use of the JioHotstar Service after any updates will mean you have accepted those changes.",
-      "concerns": ["Continued use = automatic acceptance"],
+      "plain_english": "Policy changes are effective immediately and continued use means you accept them. Users are notified only if changes significantly affect rights.",
+      "detail": "The policy states that updated terms are effective immediately unless stated otherwise. Users will be notified of changes only if they significantly affect rights or as required by law. Continued use constitutes acceptance.",
+      "policy_excerpt": "The Updated Terms shall be effective immediately (unless we state otherwise)... We will notify you of any changes to this Privacy Notice if the changes significantly affect your rights or as may be required by law",
+      "concerns": [
+        "Continued use = automatic acceptance",
+        "Only notified of significant changes"
+      ],
       "score_impact": -1.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
       { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6.0 },
-      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.0, "deduction": 0.0 },
-      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "dangerous", "max": 30, "rate": 1.0, "deduction": 30 },
       { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
+      { "category": "behavioural_ad_tracking", "risk": "dangerous", "max": 25, "rate": 1.0, "deduction": 25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
       { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
       { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0.0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
       { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
       { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 90.75,
-    "final_score": 56,
-    "grade": "C"
+    "total_deductions": 113,
+    "final_score": 45,
+    "grade": "D"
   }
 }

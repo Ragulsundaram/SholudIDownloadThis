@@ -65,12 +65,16 @@ ok "pip: $($PYTHON -m pip --version | awk '{print $2}')"
 # ── 4. scrapling ──────────────────────────────────────────────────────────────
 if ! $PYTHON -c "import scrapling" &>/dev/null; then
     warn "scrapling not installed. Installing..."
-    $PYTHON -m pip install scrapling
+    $PYTHON -m pip install --break-system-packages scrapling
 fi
 ok "scrapling: $($PYTHON -c "import scrapling; print(scrapling.__version__)" 2>/dev/null || echo 'installed')"
 
 # ── 5. Patchright Chromium browser ────────────────────────────────────────────
 # patchright is installed as a scrapling dependency; we just need the browser binary.
+if ! $PYTHON -c "import patchright" &>/dev/null; then
+    warn "patchright not installed. Installing..."
+    $PYTHON -m pip install --break-system-packages patchright
+fi
 if ! $PYTHON -c "
 from patchright.sync_api import sync_playwright
 with sync_playwright() as p:
