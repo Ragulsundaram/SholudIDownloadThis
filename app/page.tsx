@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SortableAppGrid } from "@/components/SortableAppGrid";
 import { BrowseByConcern } from "@/components/BrowseByConcern";
+import { BrowseByCategory } from "@/components/BrowseByCategory";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Sidebar } from "@/components/Sidebar";
 import { ALL_CATEGORIES } from "./categories/page";
@@ -10,6 +11,9 @@ import { ALL_CATEGORIES } from "./categories/page";
 export default async function HomePage() {
   const [allApps, recent] = await Promise.all([getAllApps(), getRecentlyAnalyzed()]);
   const sidebarCategories = ALL_CATEGORIES.map((c) => c.name);
+
+  const topSafest = [...allApps].sort((a, b) => b.score - a.score).slice(0, 5);
+  const topRiskiest = [...allApps].sort((a, b) => a.score - b.score).slice(0, 5);
 
   return (
     <>
@@ -34,6 +38,7 @@ export default async function HomePage() {
               </section>
             )}
             <BrowseByConcern />
+            <BrowseByCategory topSafest={topSafest} topRiskiest={topRiskiest} />
             <HowItWorks />
           </div>
         </div>

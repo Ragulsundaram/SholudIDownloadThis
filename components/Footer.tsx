@@ -20,6 +20,7 @@ export function Footer() {
               <li><Link href="/browse" className="hover:text-ink">Browse all apps</Link></li>
               <li><Link href="/request" className="hover:text-ink">Request an app</Link></li>
               <li><Link href="/compare" className="hover:text-ink">Compare apps</Link></li>
+              <li><Link href="/insights" className="hover:text-ink">Privacy Insights</Link></li>
               <li><Link href="/disclaimer" className="hover:text-ink">Disclaimer</Link></li>
             </ul>
           </div>
