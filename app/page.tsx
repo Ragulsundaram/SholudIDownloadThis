@@ -1,7 +1,7 @@
 import { getAllApps, getRecentlyAnalyzed } from "@/lib/getAllApps";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PaginatedAppGrid } from "@/components/PaginatedAppGrid";
+import { SortableAppGrid } from "@/components/SortableAppGrid";
 import { BrowseByConcern } from "@/components/BrowseByConcern";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Sidebar } from "@/components/Sidebar";
@@ -30,7 +30,7 @@ export default async function HomePage() {
                     </p>
                   </div>
                 </div>
-                <PaginatedAppGrid apps={recent} />
+                <SortableAppGrid apps={recent} />
               </section>
             )}
             <BrowseByConcern />
