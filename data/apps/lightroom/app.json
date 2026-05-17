@@ -1,390 +1,389 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
-    "analyzed_by": "claude-kimi-k2.6",
-    "policy_url": "https://www.adobe.com/privacy/policy-linkfree.html",
+    "analyzed_at": "2026-05-17",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.adobe.com/uk/privacy/policy-linkfree.html",
     "terms_url": "https://www.adobe.com/legal/terms.html",
     "policy_last_updated": "2025-10-24",
-    "needs_review": true,
-    "review_notes": "Full privacy policy could not be fetched during verification. All categories marked unknown pending successful policy retrieval."
+    "needs_review": false,
+    "review_notes": ""
   },
+
   "app": {
     "slug": "lightroom",
-    "name": "Lightroom Photo & Video Editor",
-    "developer": "ADOBE SYSTEMS SOFTWARE IRELAND LIMITED",
+    "name": "Lightroom: AI Photo Editor",
+    "developer": "Adobe Inc.",
     "app_store_url": "https://apps.apple.com/in/app/lightroom-photo-video-editor/id878783582",
     "app_store_id": "878783582",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/b4/d2/98b4d22c-147d-d017-9863-c7be31a6aac7/AppIcon-0-1x_U007ephone-0-1-0-0-85-220-0.png/400x400bb.jpg",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/b4/d2/98b4d22c-147d-d017-9863-c7be31a6aac7/AppIcon-0-1x_U007ephone-0-1-0-0-85-220-0.png/512x512bb.jpg",
     "category": "Photo & Video",
     "sub_category": "Photo Editor",
     "description": "A professional photo and video editing app with cloud sync, AI-powered features, and advanced editing tools from Adobe."
   },
+
   "verdict": {
     "overall_risk": "risky",
-    "score": 50,
+    "score": 48,
     "grade": "D",
-    "one_liner": "The privacy policy could not be retrieved, so a full assessment is not possible.",
-    "summary": "Adobe Lightroom's privacy policy text could not be fetched during verification. Without the full policy, we cannot verify how Adobe handles your photos and personal data. All categories are marked unknown and the app is flagged for review.",
+    "one_liner": "Powerful photo editor that analyzes your content using AI, with extensive data sharing and 10-year retention for business records.",
+    "summary": "Adobe Lightroom provides professional photo editing capabilities but collects extensive personal information including device data, usage patterns, and content analytics. Your photos may be analyzed using AI/machine learning for product improvement (opt-out available). Data is shared with Adobe affiliates, advertising partners, and third-party service providers. Biometric data (face/voice features) is collected only when you enable specific features. Account data is retained for 10 years after your last interaction.",
     "recommendation": "think_twice",
-    "recommendation_reason": "The privacy policy could not be retrieved, so we cannot verify how Adobe handles your photos and personal data. Consider this a significant uncertainty."
+    "recommendation_reason": "While Lightroom offers professional-grade editing, Adobe collects extensive data about you and your content. Your photos may be analyzed by AI systems, and your data is shared with numerous third parties. Consider whether you need the cloud sync features or if local-only editing apps would suffice for your privacy needs."
   },
+
   "flags": {
     "red": [
       {
-        "id": "red_policy_unavailable",
-        "title": "Privacy policy could not be retrieved",
-        "plain_english": "The full Adobe privacy policy text could not be fetched during verification, so we cannot assess how this app handles your data.",
+        "id": "red_content_analytics",
+        "title": "Your photos may be analyzed by AI for product improvement",
+        "plain_english": "Adobe states they may perform analytics on your cloud-stored photos using automated techniques to improve services and provide recommendations. This is enabled by default but you can opt out.",
         "severity": "high"
+      },
+      {
+        "id": "red_data_sharing",
+        "title": "Data shared with advertising partners and affiliates",
+        "plain_english": "The policy states your information is shared with Adobe family companies, advertising networks, resellers, data brokers, and third-party service providers for marketing and business purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_long_retention",
+        "title": "Account data retained for 10 years after last interaction",
+        "plain_english": "Adobe states they retain personal information related to contracts and business transactions for ten years after your last interaction with them.",
+        "severity": "high"
+      },
+      {
+        "id": "red_biometric_collection",
+        "title": "Biometric data collected when enabling face/voice features",
+        "plain_english": "The policy states that when you enable features that organize photos by face or voice characteristics, Adobe collects biometric identifiers like faceprints and voiceprints.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_public_content",
+        "title": "Content you share publicly may remain accessible even after deletion",
+        "plain_english": "The policy states that when you post content publicly or on community forums, it may remain accessible in search engines or other platforms even after Adobe fulfills a deletion request.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_social_login_data",
+        "title": "Social login exposes additional profile data",
+        "plain_english": "When you sign in using social media accounts, Adobe receives your name, country, basic demographic information, and potentially friend lists or connections.",
+        "severity": "medium"
       }
     ],
-    "green": []
+    "green": [
+      {
+        "id": "green_opt_out_content_analytics",
+        "title": "You can opt out of content analytics and machine learning",
+        "plain_english": "Adobe provides an opt-out for machine learning analysis of your content at http://www.adobe.com/go/machine_learning_opt_out",
+        "severity": "positive"
+      },
+      {
+        "id": "green_biometric_off_by_default",
+        "title": "Biometric features are off by default",
+        "plain_english": "Face and voice recognition features that collect biometric data are turned off by default. You must explicitly enable them, and you can disable them at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_content_deletion",
+        "title": "You can delete your content and account",
+        "plain_english": "Users can delete files, photos, and their Adobe account. Content stored locally on your device is under your control.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_transparency_controls",
+        "title": "Comprehensive privacy controls and opt-out options",
+        "plain_english": "Adobe provides detailed privacy settings, marketing opt-outs, cookie controls, and recognizes Global Privacy Control signals from browsers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_protection_framework",
+        "title": "Complies with Data Privacy Framework for international transfers",
+        "plain_english": "Adobe complies with EU-U.S., UK Extension to EU-U.S., and Swiss-U.S. Data Privacy Frameworks for international data transfers.",
+        "severity": "positive"
+      }
+    ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Camera access is available for taking photos within the app, but it's not required for core editing features. Microphone access not mentioned for core functionality.",
+      "detail": "The policy mentions accessing camera through device settings to provide certain functionality. This is optional and user-initiated - you can edit existing photos without granting camera access.",
+      "policy_excerpt": "Information which you allow us to receive through device-based settings (e.g., photos, location and camera) in order to provide certain functionality within our Services and Software",
       "concerns": [
-        "Policy text unavailable"
+        "Camera access requested for in-app photography"
       ],
-      "score_impact": -7.5
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Precise geolocation is collected only when you add location data to photos using your camera or phone's GPS feature. This is optional.",
+      "detail": "The policy states precise geolocation is collected when you choose to add location data about where a picture was taken using your camera or phone's GPS feature. This is considered sensitive personal information and requires permission where required by law.",
+      "policy_excerpt": "Precise geolocation (e.g., when you add location data about where a picture was taken using your camera or phone's GPS feature)",
       "concerns": [
-        "Policy text unavailable"
+        "Location data added to photos if enabled"
       ],
-      "score_impact": -7.5
+      "score_impact": -4.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "safe",
+      "access_type": "never",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
+      "plain_english": "Does not access your contacts or phonebook.",
+      "detail": "The privacy policy does not mention any collection of contacts or phonebook data. Address book contacts are only mentioned in the context of you sharing content with recipients you choose.",
       "policy_excerpt": "",
-      "concerns": [
-        "Policy text unavailable"
-      ],
-      "score_impact": -10
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
-      "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "background_access": true,
+      "plain_english": "Extensive access to photos, videos, documents, and other content is required for the app to function as a photo editor and sync to Adobe cloud.",
+      "detail": "The policy states Adobe collects content that includes personal information stored on their servers or created using their services, including documents, photos, videos, and metadata about your content. Cloud sync requires continuous access to your photo library.",
+      "policy_excerpt": "Content that includes personal information which is sent or received using an online feature of Adobe Services and Software or which is stored on Adobe servers, such as documents, photos, videos, activity logs",
       "concerns": [
-        "Policy text unavailable"
+        "All edited content synced to Adobe cloud",
+        "Metadata about content collected",
+        "Cannot use core features without cloud sync"
       ],
-      "score_impact": -5
+      "score_impact": -13
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "dangerous",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Your data is shared extensively with Adobe family companies, advertising partners, resellers, data brokers, service providers, and fraud prevention companies.",
+      "detail": "The policy discloses sharing with Adobe family companies, resellers, sales and advertising partners, advertisers, advertising networks, information service providers, fraud monitoring providers, and third-party integrations. Information about actions you take is shared with social media platforms for targeted ads.",
+      "policy_excerpt": "We will also disclose your personal information with other third-party data controllers with your consent (where necessary)... The types of third parties your information may be disclosed to include: our resellers and other sales and advertising partners, retailers, advertisers, advertising agencies, advertising networks and platforms, information service providers",
       "concerns": [
-        "Policy text unavailable"
+        "Extensive sharing with advertising ecosystem",
+        "Data shared with data brokers",
+        "Social media platforms receive activity data",
+        "Joint controllers for some processing"
       ],
-      "score_impact": -15
+      "score_impact": -30
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Requires extensive personal information including name, email, phone, address, date of birth, company info, and demographic details for Adobe ID.",
+      "detail": "Adobe collects identifiers, contact information, commercial information, professional and demographic data including name, email, phone, postal address, country, date of birth, company name, title, occupation, job function, and company details.",
+      "policy_excerpt": "Name; Email address; Telephone number; Postal or Physical Address; Country... Date of birth; Company or school name; Title; Occupation; Job function; Expertise; Company details",
       "concerns": [
-        "Policy text unavailable"
+        "Extensive personal data collection required",
+        "Professional information collected",
+        "Data combined with third-party sources"
       ],
-      "score_impact": -7.5
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "dangerous",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
-      "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "background_access": true,
+      "plain_english": "Comprehensive tracking of your usage, content interactions, and behavior across Adobe services for advertising and marketing purposes.",
+      "detail": "Adobe tracks use and navigation of services, interactions with communications, profile information, and analyzes content using automated techniques. This data is used to tailor and customize services, detect fraud, improve products, and for marketing communications. Information is also shared with social media platforms for targeted advertising.",
+      "policy_excerpt": "Analysing your use and navigation of our Services and Software, your profile information, your interaction with our communications... to: Detect and prevent fraudulent... activity... Tailor and customise the Services and Software through marketing communications",
       "concerns": [
-        "Policy text unavailable"
+        "Behavioral tracking across services",
+        "Content analysis for marketing",
+        "Activity data shared with social media",
+        "Difficult to fully opt out"
       ],
-      "score_impact": -12.5
+      "score_impact": -25
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Some Adobe products (Express, Creative Cloud for students) are available to children under adult supervision for educational purposes.",
+      "detail": "Adobe states that Adobe Express and Creative Cloud apps are available to students including children for educational purposes under school personnel supervision. Other Adobe services are not intended for children. A separate COPPA Notice applies for student services.",
+      "policy_excerpt": "Adobe Express, Creative Cloud and Document Cloud apps are available to students, including children, for educational purposes under the supervision of school personnel",
       "concerns": [
-        "Policy text unavailable"
+        "Some products available to children",
+        "Schools control student data collection"
       ],
-      "score_impact": -5
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
-      "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "background_access": true,
+      "plain_english": "Extensive logging of IP address, browser info, device information, usage patterns, and how you interact with Adobe services.",
+      "detail": "Adobe collects IP address, browser and device information including type, settings, unique identifiers, version, language, webpage that led you to Adobe, search terms, and use/navigation of services through cookies and similar technologies.",
+      "policy_excerpt": "IP address; Browser and device information, including browser and device type, settings, unique identifiers, version, language settings and configuration; Webpage that led you to an Adobe website; Search terms entered into a search engine which lead you to an Adobe website; Use and navigation of Services and Software",
       "concerns": [
-        "Policy text unavailable"
+        "IP address logged continuously",
+        "Search terms tracked",
+        "Referring pages logged"
       ],
-      "score_impact": -2.5
+      "score_impact": -3.25
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "risky",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Collects device information including mobile device ID, unique identifiers, hardware model, and browser extensions connected to your Adobe account.",
+      "detail": "Adobe collects browser and device information including browser/device type, settings, unique identifiers, version, language settings, configuration, mobile device ID, and browser extensions connected to Adobe accounts.",
+      "policy_excerpt": "Browser and device information, including browser and device type, settings, unique identifiers, version, language settings and configuration... Mobile Device ID; Browser extensions connected to your Adobe accounts",
       "concerns": [
-        "Policy text unavailable"
+        "Unique device identifiers collected",
+        "Browser extensions tracked",
+        "Cross-device tracking enabled"
       ],
-      "score_impact": -7.5
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Biometric identifiers like faceprints and voiceprints are collected ONLY when you enable optional features that organize photos by face or voice characteristics. These features are OFF by default.",
+      "detail": "Adobe offers optional features that let you edit and organize photos using characteristics like face and voice. These may be considered biometric identifiers under certain laws. These features are OFF by default and can be disabled at any time. Biometric data is deleted when you turn off the feature.",
+      "policy_excerpt": "Biometric identifiers or information defined under United States laws or other applicable laws (e.g., faceprints and voiceprints etc.)... These features are off by default and, should you choose to enable them, you can always disable these features",
       "concerns": [
-        "Policy text unavailable"
+        "Biometric data collected if features enabled",
+        "Face recognition data processed"
       ],
-      "score_impact": -7.5
+      "score_impact": -4.5
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Payment and billing information is collected when you purchase subscriptions or premium features.",
+      "detail": "Adobe collects payment/billing information where an app or website is paid for, licenses purchased, and checks card validity to prevent fraud. Payment data is processed by third-party payment processors.",
+      "policy_excerpt": "Payment/billing information (where an app or website is 'paid for'); Licences purchased... Checking the validity of the sort code, account number and card number you submit if you use a credit or debit card for payment",
       "concerns": [
-        "Policy text unavailable"
+        "Payment data shared with processors",
+        "Purchase history retained"
       ],
-      "score_impact": -7.5
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "You can delete your account and content, but some data is retained for 10 years for legal and business reasons.",
+      "detail": "Adobe deletes certain personal information when no longer needed for business purposes. However, personal information related to contracts and business transactions is retained for ten years after your last interaction. A permanent record is kept of opt-out requests to respect them in future.",
+      "policy_excerpt": "Additionally, there is some personal information we need to retain even after you close your account to comply with business and legal requirements, such as personal information related to our contract and business transactions with you, which we retain for ten years after your last interaction with us",
       "concerns": [
-        "Policy text unavailable"
+        "10-year retention for business records",
+        "Some data cannot be fully deleted",
+        "Permanent record kept of opt-outs"
       ],
-      "score_impact": -5
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy text could not be retrieved, so we cannot assess this category.",
-      "detail": "The privacy policy text was unavailable during verification.",
-      "policy_excerpt": "",
+      "plain_english": "Policy changes posted with updated date. Notice provided for material changes where required by law.",
+      "detail": "Adobe updates the 'last updated' date when policy changes. Users encouraged to periodically review the policy. Notice provided for material changes or where required by law, including by email or posting notice.",
+      "policy_excerpt": "we may update this privacy policy... If we do, we will change the 'last updated' date at the top of this policy... Under certain circumstances (for example with certain material changes or where it is required by applicable privacy laws) we will provide notice to you of these changes",
       "concerns": [
-        "Policy text unavailable"
+        "Users must proactively check for updates"
       ],
-      "score_impact": -2.5
+      "score_impact": -1.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      {
-        "category": "camera_microphone",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
-      },
-      {
-        "category": "location_gps",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
-      },
-      {
-        "category": "contacts_phonebook",
-        "risk": "unknown",
-        "max": 20,
-        "rate": 0.5,
-        "deduction": 10
-      },
-      {
-        "category": "storage_file_access",
-        "risk": "unknown",
-        "max": 10,
-        "rate": 0.5,
-        "deduction": 5
-      },
-      {
-        "category": "data_sharing_third_parties",
-        "risk": "unknown",
-        "max": 30,
-        "rate": 0.5,
-        "deduction": 15
-      },
-      {
-        "category": "account_identity",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
-      },
-      {
-        "category": "behavioural_ad_tracking",
-        "risk": "unknown",
-        "max": 25,
-        "rate": 0.5,
-        "deduction": 12.5
-      },
-      {
-        "category": "childrens_data",
-        "risk": "unknown",
-        "max": 10,
-        "rate": 0.5,
-        "deduction": 5
-      },
-      {
-        "category": "network_internet_activity",
-        "risk": "unknown",
-        "max": 5,
-        "rate": 0.5,
-        "deduction": 2.5
-      },
-      {
-        "category": "device_fingerprinting",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
-      },
-      {
-        "category": "health_biometric",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
-      },
-      {
-        "category": "financial_payment",
-        "risk": "unknown",
-        "max": 15,
-        "rate": 0.5,
-        "deduction": 7.5
-      },
-      {
-        "category": "data_deletion_user_rights",
-        "risk": "unknown",
-        "max": 10,
-        "rate": 0.5,
-        "deduction": 5
-      },
-      {
-        "category": "policy_change_notification",
-        "risk": "unknown",
-        "max": 5,
-        "rate": 0.5,
-        "deduction": 2.5
-      }
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "data_sharing_third_parties", "risk": "dangerous", "max": 30, "rate": 1.0, "deduction": 30 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "dangerous", "max": 25, "rate": 1.0, "deduction": 25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 102.5,
-    "final_score": 50,
+    "total_deductions": 109.25,
+    "final_score": 47,
     "grade": "D"
   }
 }

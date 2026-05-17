@@ -1,271 +1,375 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "analyzed_at": "2026-05-16",
+    "analyzed_at": "2026-05-17",
     "analyzed_by": "claude-sonnet-4",
-    "policy_url": "http://www.jiosaavn.com/corporate/privacy",
-    "terms_url": "",
+    "policy_url": "https://www.jiosaavn.com/corporate/privacy",
+    "terms_url": "https://www.jiosaavn.com/corporate/terms",
     "policy_last_updated": "2024-11-14",
-    "needs_review": true,
-    "review_notes": "Full privacy policy could not be fetched; analysis is based on a failed fetch response and fallback defaults."
+    "needs_review": false,
+    "review_notes": ""
   },
+
   "app": {
     "slug": "jiosaavn",
     "name": "JioSaavn – Music & Podcasts",
     "developer": "Saavn Media Limited",
     "app_store_url": "https://apps.apple.com/in/app/jiosaavn-music-podcasts/id441813332",
     "app_store_id": "441813332",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/45/26/9a/45269a65-d6e7-1917-09f4-04e9e1f1cfb2/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6c/dd/02/6cdd0253-8c30-117d-9733-cf3af474888b/appiconfree-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Music",
     "sub_category": "Streaming",
-    "description": "JioSaavn is an Indian music and podcast streaming app offering millions of songs, curated playlists, and podcasts in multiple languages."
+    "description": "India's leading music streaming app with 80 million songs, podcasts, and exclusive content across multiple languages."
   },
+
   "verdict": {
     "overall_risk": "risky",
-    "score": 50,
+    "score": 46,
     "grade": "D",
-    "one_liner": "The full privacy policy could not be retrieved, so this rating reflects high uncertainty.",
-    "summary": "The privacy policy fetch failed, returning only an access-denied message. Without the full policy text, a meaningful analysis is not possible. This rating is a default uncertainty score.",
+    "one_liner": "Extensive tracking and ad targeting across devices, with long-term data retention and broad third-party sharing.",
+    "summary": "JioSaavn collects detailed usage data, device identifiers, and location information to personalize content and advertisements. Data is shared with advertising networks, analytics providers, and business partners. Some cookies and device IDs are retained for up to 20 years. Users have limited opt-out options for interest-based advertising.",
     "recommendation": "think_twice",
-    "recommendation_reason": "We could not verify the privacy practices because the full policy could not be fetched. Consider this app risky until a proper review can be completed."
+    "recommendation_reason": "The app tracks your listening habits across devices using advertising identifiers and shares data with numerous third parties for targeted ads. Some tracking cookies persist for up to 20 years. Consider whether the music content is worth the extensive data collection."
   },
+
   "flags": {
-    "red": [],
-    "green": []
+    "red": [
+      {
+        "id": "red_ad_tracking",
+        "title": "Comprehensive behavioral tracking for targeted ads across devices",
+        "plain_english": "The policy states they track everything you listen to, your device info, browsing activity, and use advertising identifiers (IDFA/GAID) to show personalized ads across all your devices.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sharing",
+        "title": "Data shared with advertising networks and analytics companies",
+        "plain_english": "Your information is shared with advertisers, advertising networks, advertising servers, analytics companies, business partners, and rights holders.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cookie_duration",
+        "title": "Some tracking cookies last up to 20 years",
+        "plain_english": "The policy's cookie table shows some cookies (device_id, latlong, ssid) are set to expire after 20 years, enabling long-term tracking.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Location collected from multiple sources and shared",
+        "plain_english": "The policy collects approximate GPS location with consent, and also derives location from IP address and WiFi. This location data may be shared with third parties for analytics and advertising.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Unique device identifiers collected automatically",
+        "plain_english": "The policy collects IP addresses, device IDs, AD-IDs/IDFAs, hardware model, and mobile network information to create unique device IDs for tracking.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_retention",
+        "title": "Residual data remains after account deletion",
+        "plain_english": "The policy states it is not always possible to completely remove all information from databases due to backups and other reasons.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_opt_out_ads",
+        "title": "Some opt-out options for interest-based advertising",
+        "plain_english": "The policy provides links to opt out of interest-based advertising through DAA, NAI, and EDAA for users in different regions.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Account deletion available with 30-day grace period",
+        "plain_english": "Users can delete their account through app settings, with data scheduled for deletion within 30 days. You can cancel deletion if you log in during this period.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights",
+        "title": "GDPR rights provided for European users",
+        "plain_english": "European users have rights to access, rectify, erase, restrict processing, object to marketing, and data portability.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_age_restriction",
+        "title": "Platform not directed to children under 18",
+        "plain_english": "The policy states they do not knowingly collect personal information from anyone under 18 years of age.",
+        "severity": "positive"
+      }
+    ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "safe",
+      "access_type": "never",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "plain_english": "Does not access camera or microphone.",
+      "detail": "As a music streaming app, JioSaavn does not require camera or microphone access. The policy does not mention any collection of camera or microphone data.",
       "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -7.5
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "risky",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Collects approximate GPS location with your consent, and also derives location from IP address and WiFi for targeted content and ads.",
+      "detail": "The policy states they collect general location from GPS with express consent (approximate, not specific), and also from IP address and WiFi. Location may be shared with third parties for analytics and advertising purposes.",
+      "policy_excerpt": "If you choose to turn on your Wi-Fi or other geolocation functionality... the App may collect and use your geolocation information. The GPS location will not be specific but will be an approximate location... We may share your location with certain third-parties for analytics and advertising purposes.",
+      "concerns": [
+        "Location shared with third parties for advertising",
+        "IP-based location collected even without GPS consent"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -10.0
+      "plain_english": "May access your phone contacts and social media friends if you connect via social login or refer others.",
+      "detail": "If you create an account using social media credentials, they have access to certain information from that site including profile and account information. Social media connections may share friend lists.",
+      "policy_excerpt": "If you create an account using your credentials from a third-party social media site, we will have access to certain information from that site, such as your name, profile and account information.",
+      "concerns": [
+        "Social login may expose friend lists and profile data"
+      ],
+      "score_impact": -6
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -5.0
+      "plain_english": "Accesses storage for downloads and cached content. Photos may be collected if you choose to upload them.",
+      "detail": "The policy mentions collecting photos as part of personal information. The app allows downloads for offline play which requires storage access.",
+      "policy_excerpt": "personal information, such as your name, e-mail address, telephone number, mobile phone number, geographic location, date of birth, demographic information, photos",
+      "concerns": [
+        "Photos may be collected if uploaded"
+      ],
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "dangerous",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -15.0
+      "plain_english": "Data is extensively shared with advertisers, advertising networks, analytics companies, business partners, service providers, and rights holders.",
+      "detail": "The policy states information is shared with third parties that perform functions on their behalf, sponsors, partners, advertisers, advertising networks, advertising servers, analytics companies, and rights holders. Data may also be shared in business transfers.",
+      "policy_excerpt": "Your information may also be used by us or shared with our sponsors, partners, advertisers, advertising networks, advertising servers, and analytics companies or other third parties in connection with marketing, promotional, and other offers",
+      "concerns": [
+        "Extensive sharing with advertising ecosystem",
+        "Data shared with analytics vendors",
+        "Business transfer disclosures",
+        "No granular control over sharing"
+      ],
+      "score_impact": -30
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Requires name, email, phone, location, DOB, and demographic info. Social login exposes additional profile data.",
+      "detail": "Collects extensive identity data including name, email, phone, geographic location, date of birth, demographic information, and social media account details when connecting via social login.",
+      "policy_excerpt": "personal information, such as your name, e-mail address, telephone number, mobile phone number, geographic location, date of birth, demographic information, photos, and social media account details",
+      "concerns": [
+        "Extensive personal data collection",
+        "Social login exposes friend/connection data"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "dangerous",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -12.5
+      "plain_english": "Tracks all listening activity, browsing behavior, and device interactions to personalize ads across the internet.",
+      "detail": "Collects detailed usage information including browser type, OS, activations, purchases, content accessed, listening times, page views, and interactions. Uses IDFA/AD-IDs for cross-device tracking. Shares data with advertising networks for interest-based advertising across the internet.",
+      "policy_excerpt": "We may allow third parties to serve you ads across the Internet and use third party ad networks providers to help present ads on the Platform using Cookies and similar technologies",
+      "concerns": [
+        "Comprehensive activity tracking",
+        "Cross-device tracking via advertising identifiers",
+        "Ads served across the internet based on JioSaavn activity",
+        "Interest-based advertising using personal data"
+      ],
+      "score_impact": -25
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -5.0
+      "plain_english": "Platform is not directed to children under 18 and claims not to knowingly collect data from minors.",
+      "detail": "The policy explicitly states the platform is not directed to children under 18 and they do not knowingly collect personal information from anyone under 18. If discovered, they will not use or maintain the information.",
+      "policy_excerpt": "The Platform is not directed to children under 18. We do not knowingly collect personal information from anyone under 18 years of age.",
+      "concerns": [
+        "No robust age verification mechanism"
+      ],
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -2.5
+      "plain_english": "Logs all network activity including browser type, content accessed, listening times, page views, and interactions with songs and ads.",
+      "detail": "Extensive logging of all platform usage including browser type, OS, activations, purchases, content accessed, download listening times, page served, preceding page views, and interactions with content and ads.",
+      "policy_excerpt": "Information is logged about your use of the Platforms, including your browser type, operating system, activations, purchases, content you access, download listening times and the page served and the preceding page views",
+      "concerns": [
+        "Comprehensive activity logging",
+        "Data used for advertising and analytics"
+      ],
+      "score_impact": -3.25
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "risky",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Collects IP address, device IDs, advertising identifiers (IDFA/AD-IDs), hardware model, and mobile network info to create unique device IDs.",
+      "detail": "Automatically collects IP address, device identifiers including AD-IDs/IDFAs (with consent for iOS, automatic for Android), hardware model, and mobile network information. Creates unique device IDs using cookies, tracking GIFs, web beacons, pixel codes, and in-app IDs.",
+      "policy_excerpt": "JioSaavn may automatically collect your IP address or other unique identifier ('Device Identifier') for the computer, mobile device, tablet or other device... including AD-IDs or IDFAs",
+      "concerns": [
+        "Unique device IDs created for tracking",
+        "Advertising identifiers collected",
+        "Cross-device tracking enabled"
+      ],
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "unknown",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
+      "plain_english": "Does not collect health or biometric data.",
+      "detail": "No health, biometric, or fitness data collection is mentioned in the privacy policy.",
       "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -7.5
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Payment data is processed by third-party payment processors for subscriptions and purchases.",
+      "detail": "The policy mentions processing payments and transactions, but full payment details are handled by third-party processors. Payment-related information is collected when you subscribe or make purchases.",
+      "policy_excerpt": "process transactions and send you related information",
+      "concerns": [
+        "Payment activity logged and tracked"
+      ],
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -5.0
+      "plain_english": "Account deletion available with 30-day grace period, but some residual data may remain in backups.",
+      "detail": "Users can delete their account through settings, with deletion scheduled within 30 days. A 30-day grace period allows account recovery. However, the policy states it is not always possible to completely remove all information due to backups and other reasons.",
+      "policy_excerpt": "you should be aware that it is not always possible to completely remove or delete all of your information from our databases without some residual data because of backups and other reasons",
+      "concerns": [
+        "Residual data remains after deletion",
+        "30-day grace period may be confusing"
+      ],
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy could not be fetched, so this category could not be assessed.",
-      "detail": "The full privacy policy was not available for analysis due to an access-denied response from the server.",
-      "policy_excerpt": "",
-      "concerns": ["Full policy text unavailable"],
-      "score_impact": -2.5
+      "plain_english": "Changes posted on the page and substantive changes notified by email. Continued use after updates means acceptance.",
+      "detail": "Changes are posted on the privacy policy page. Substantive changes are notified by email. Users are expected to check back frequently for updates. If you do not agree with updates, you should not continue using the Platform.",
+      "policy_excerpt": "Any changes we may make to our Privacy Policy will be posted on this page and, in relation to substantive changes, will be notified to you by email. If you do not agree or consent to these updates or changes, do not continue to use the Platform.",
+      "concerns": [
+        "Continued use = acceptance of changes",
+        "Users must proactively check for updates"
+      ],
+      "score_impact": -1.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10.0 },
-      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
-      { "category": "data_sharing_third_parties", "risk": "unknown", "max": 30, "rate": 0.5, "deduction": 15.0 },
-      { "category": "account_identity", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "behavioural_ad_tracking", "risk": "unknown", "max": 25, "rate": 0.5, "deduction": 12.5 },
-      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
-      { "category": "network_internet_activity", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 },
-      { "category": "device_fingerprinting", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "financial_payment", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "data_deletion_user_rights", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5.0 },
-      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "dangerous", "max": 30, "rate": 1.0, "deduction": 30 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "dangerous", "max": 25, "rate": 1.0, "deduction": 25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 102.5,
-    "final_score": 50,
+    "total_deductions": 108.5,
+    "final_score": 47,
     "grade": "D"
   }
 }
