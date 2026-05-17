@@ -451,15 +451,15 @@
     "slug": "photoroom-ai-photo-editor",
     "name": "PhotoRoom: AI Photo Editor",
     "developer": "Photoroom S.A.S",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c3/74/b4/c374b451-babb-9cbc-0e2f-b674ebabf7db/Placeholder.mill/400x400bb-75.webp",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1d/3f/1e/1d3f1e39-07ae-654b-d04c-9eccf2312f82/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
     "category": "Photo & Video",
     "description": "An AI-powered photo editor that removes backgrounds, enhances images, and generates professional-quality visuals for e-commerce and social media.",
-    "one_liner": "PhotoRoom edits your photos with AI, but states it may use uploaded images to train models unless you opt out, and shares data with several service providers.",
-    "score": 69,
-    "grade": "C",
+    "one_liner": "PhotoRoom edits your photos with AI and may use uploaded images to train models unless you opt out, but offers strong GDPR rights and doesn't sell data.",
+    "score": 77,
+    "grade": "B",
     "risk": "caution",
-    "analyzed_at": "2026-05-16",
-    "needs_review": true
+    "analyzed_at": "2026-05-17",
+    "needs_review": false
   },
   {
     "slug": "picsart-ai-photo-editor-video",
