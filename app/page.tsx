@@ -20,7 +20,7 @@ export default async function HomePage() {
       <Navbar apps={allApps} categoryList={sidebarCategories} />
 
       <main className="flex-1">
-        <div className="flex gap-5 px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+        <div className="flex gap-5 px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
           <Sidebar apps={allApps} categoryList={sidebarCategories} />
 
           <div className="min-w-0 flex-1">
