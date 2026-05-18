@@ -1,0 +1,325 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://smartgymapp.com/privacy/",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "smartgym-gym-home-workouts",
+    "name": "SmartGym: Gym & Home Workouts",
+    "developer": "Mateus Abras",
+    "app_store_url": "https://apps.apple.com/in/app/smartgym-gym-home-workouts/id922744883",
+    "app_store_id": "922744883",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/16/f9/4a16f921-5139-7c4c-4773-2b18a4b27ccb/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Gym & Workout Tracker",
+    "description": "A gym and home workout tracker that lets you log routines, track progress, and optionally sync data across devices."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 87,
+    "grade": "A",
+    "one_liner": "A refreshingly privacy-respecting workout tracker that lets you keep all data on-device and promises never to sell or share your information.",
+    "summary": "SmartGym offers a rare privacy-positive experience for a fitness app. Users can choose to store all workout data solely on their device, and even with cloud sync the developer makes an explicit, unambiguous promise never to sell, share, or market user data. HealthKit data is collected only with explicit consent and only during manually-started workouts. The trade-off is a very short privacy policy that leaves some categories unaddressed.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "SmartGym offers strong default privacy protections, an explicit no-data-sharing promise, device-only storage as an option, and responsible HealthKit handling. It is an excellent choice for privacy-conscious fitness tracking."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_policy_silent_on_categories",
+        "title": "Several privacy categories are not addressed",
+        "plain_english": "The privacy policy is very short and does not mention whether the app accesses your camera, microphone, location, or contacts. We have to assume these are not used, but the app does not explicitly say so.",
+        "severity": "low"
+      },
+      {
+        "id": "red_data_may_be_transferred",
+        "title": "User data may be transferred in a business sale",
+        "plain_english": "If SmartGym is ever sold, merges with another company, or partners with another business, your user information could be handed over as part of the deal.",
+        "severity": "low"
+      },
+      {
+        "id": "red_policy_changes_anytime",
+        "title": "Privacy policy can change without notice",
+        "plain_english": "SmartGym says it can change the privacy policy at any time. It does not promise to tell you directly when this happens.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_explicit_no_sell",
+        "title": "Explicit promise: data is never sold or shared",
+        "plain_english": "SmartGym makes a clear promise that any information about you will never be provided, published, marketed, or sold under any circumstances. This is one of the strongest privacy commitments we have seen.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_device_only_storage",
+        "title": "You can keep all data on your device only",
+        "plain_english": "You have the option to store all your workout data only on your phone, without ever uploading it to the cloud. If you do use cloud sync, the developer still promises not to share that data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_manual_healthkit_only",
+        "title": "HealthKit data only collected manually with consent",
+        "plain_english": "The app only reads your Apple Watch health data (heart rate, calories, distance, activity rings) if you explicitly approve it and only after you manually start a workout. It never automatically begins tracking you.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_anonymous_analytics",
+        "title": "Analytics are completely anonymous",
+        "plain_english": "The app uses Mixpanel to understand how people use the app, but it only sends anonymous statistics. SmartGym says it never shares any of your personal data with Mixpanel.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_user_can_erase_data",
+        "title": "You can erase all data completely at any time",
+        "plain_english": "You can delete all your data from SmartGym whenever you want. The developer also promises they have never bought user databases and never will.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not mention accessing your camera or microphone.",
+      "detail": "The privacy policy is silent on camera and microphone access. There is no feature described that would require them.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your location or GPS.",
+      "detail": "No mention of location, GPS, or address access in the privacy policy. As a gym and home workout tracker, precise location is not a core feature.",
+      "policy_excerpt": "",
+      "concerns": ["Policy does not disclose location or GPS usage"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app stores your workout data either only on your device or optionally in the cloud for backup and sync. You choose.",
+      "detail": "Users can store all data only on their device or use the cloud service for backup and sync. Cloud data is kept in a restricted-access database.",
+      "policy_excerpt": "Users have the option to store all their data only on their device, or use our cloud service for backup and data synchronization between devices.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SmartGym makes an explicit promise to never provide, publish, market, or sell your information under any circumstances.",
+      "detail": "The privacy policy contains an unambiguous commitment that user information will not be provided, published, marketed, or sold. The only disclosures mentioned are for legal requirements (subpoenas, court orders) or business transfers (merger/acquisition).",
+      "policy_excerpt": "any information related to the user, will not be provided, published, marketed or sold in any circumstances, that is, your information is safe and will not be sent to third parties.",
+      "concerns": ["Business transfers may include user data"],
+      "score_impact": 0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "To use cloud sync, you provide your first name, last name, email, and password. This information is never shared or sold.",
+      "detail": "Account creation requires first name, last name, email, and password. Only needed for cloud sync and premium subscription. The developer explicitly states this information is never shared or sold.",
+      "policy_excerpt": "When creating an account with SmartGym, only the basic information is needed. Like First Name, Last Name, email and password... This information is never shared or sold to any third party companies.",
+      "concerns": ["Account data stored on external servers"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track you for advertising. It only uses completely anonymous analytics to understand how the app is used.",
+      "detail": "SmartGym uses Mixpanel for anonymous statistical analytics. They explicitly state that no personal information is shared with Mixpanel and the analytics data is completely anonymous.",
+      "policy_excerpt": "SmartGym uses Mixpanel to collect statistical and analytical information on how users use the application. All data is completely anonymous and don't expose any of the personal information regarding the user. SmartGym never shares with Mixpanel any data provided by the user.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect information from children under 13 and no part of it is designed to attract them.",
+      "detail": "Explicitly states they never collect or maintain information from anyone known to be under 13, and the app is not structured to attract children.",
+      "policy_excerpt": "We never collect or maintain information at our website from those we actually know are under 13, and no part of our website is structured to attract anyone under 13.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app sends anonymous usage statistics to Mixpanel to understand how people use the app. No personal information is included.",
+      "detail": "Mixpanel collects anonymous statistical and analytical information. No personal data is shared with Mixpanel. This is minimal network activity logging.",
+      "policy_excerpt": "SmartGym uses Mixpanel to collect statistical and analytical information on how users use the application. All data is completely anonymous and don't expose any of the personal information regarding the user.",
+      "concerns": ["Anonymous analytics sent to third party"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect detailed device information for fingerprinting or tracking.",
+      "detail": "No mention of device identifiers, fingerprinting, or device-specific tracking in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can read your Apple Watch health data like heart rate, calories burned, and distance, but only if you approve it and only after you manually start a workout. It never automatically tracks you.",
+      "detail": "HealthKit data (Active Energy, Heart Rate, Walking + Running Distance, Activity Rings) is collected only by the Apple Watch app. Tracking only starts after explicit user approval and manual workout initiation. SmartGym never automatically starts tracking.",
+      "policy_excerpt": "HealthKit Data is only collected by the Apple Watch app... It only tracks this data if approved by the user and after the user starts a workout session manually. SmartGym will never automatically start tracking the user's data.",
+      "concerns": ["Health data processed during workouts"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You need a premium subscription to create an account and use cloud sync. Payments are handled through Apple's subscription system.",
+      "detail": "Subscription required for premium features and account creation. Payment processing is likely handled through Apple's in-app purchase system, though the policy does not explicitly name the processor.",
+      "policy_excerpt": "An account can only be created after subscribing to one of our Premium Plans... Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period.",
+      "concerns": ["Subscription required for cloud features"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can erase all your data completely at any time. However, deleted data may stay in backups for up to 90 days, and if you stop paying, your data is permanently deleted after 60 days.",
+      "detail": "Users can erase all data completely at any time. Backups retain deleted data for up to 90 days (encrypted, disaster-recovery only). If subscription lapses, all data is permanently removed 60 days after expiration. SmartGym also reserves the right to delete data for technical, legal, or abuse-prevention reasons.",
+      "policy_excerpt": "All data can be erased completely by the user at any time... Deleted data may be kept in backups for up to 90 days... If the user stops paying for the subscription, all data will be automatically and permanently removed 60 days after the expiration date.",
+      "concerns": [
+        "Backups retain data for 90 days",
+        "Subscription lapse triggers automatic deletion",
+        "Developer may delete data for any reason"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SmartGym can change its privacy policy at any time. It does not promise to notify you directly when changes happen.",
+      "detail": "The policy states 'We reserve the right to change our policy at any time.' No advance notice or direct notification mechanism is described.",
+      "policy_excerpt": "We reserve the right to change our policy at any time.",
+      "concerns": ["No guaranteed notice of policy changes"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "safe", "max": 30, "rate": 0, "deduction": 0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "safe", "max": 25, "rate": 0, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 27,
+    "final_score": 87,
+    "grade": "A"
+  }
+}

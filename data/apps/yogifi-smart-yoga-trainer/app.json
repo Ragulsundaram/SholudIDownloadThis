@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://yogifismart.com/policies/privacy-policy",
+    "terms_url": "https://yogifismart.com/policies/terms-of-service",
+    "policy_last_updated": "2026-03-11",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "yogifi-smart-yoga-trainer",
+    "name": "YogiFi: Smart Yoga Trainer",
+    "developer": "Wellnesys Technologies Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/yogifi-smart-yoga-trainer/id1447600497",
+    "app_store_id": "1447600497",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/19/e0/21/19e021de-9717-6541-ae64-1e91012d99db/AppIcon_Liquid_glass-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Yoga",
+    "description": "YogiFi is your personal yoga trainer on the go, offering curated stretching, breathing, and meditation content by expert trainers. When paired with the YogiFi smart yoga mat, it measures your progress and provides real-time posture feedback. Integrates with Apple Watch and Apple HealthKit."
+  },
+
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 83,
+    "grade": "A",
+    "one_liner": "YogiFi collects health and fitness data including heart rate and pose data, but it is all kept unlinked to your identity, processed locally when possible, and never used for cross-app tracking or ads.",
+    "summary": "YogiFi's privacy profile is unusually strong for a health app. The App Store privacy label confirms that all collected data — including Health & Fitness, Contact Info, and Identifiers — is not linked to your identity. The app does not track you across other apps or websites. HealthKit data is used only for health and fitness services, not promotional mining. TrueDepth camera data for pose detection is processed momentarily on-device without remote storage. The privacy policy provides clear user rights including access, correction, erasure, and data portability. On the downside, data may be transferred to servers in the United States or India, and the policy can be changed with continued use counting as acceptance.",
+    "recommendation": "recommended",
+    "recommendation_reason": "YogiFi handles health data responsibly by not linking it to your identity, avoiding cross-app tracking, and processing sensitive camera data locally. The privacy policy offers genuine user rights and a clear commitment to not misuse HealthKit data."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_overseas_transfer",
+        "title": "Data may be stored in the US or India",
+        "plain_english": "YogiFi says your personal data may be transferred to servers located in the United States or India, which means different data protection laws could apply.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_policy_changes_no_notice",
+        "title": "Privacy policy can change without direct notice",
+        "plain_english": "YogiFi posts revised privacy policies with an updated date, and your continued use of the app counts as acceptance. There is no promise of advance notification.",
+        "severity": "low"
+      },
+      {
+        "id": "red_microsoft_clarity",
+        "title": "Microsoft Clarity tracks usage pathways",
+        "plain_english": "YogiFi uses Microsoft Clarity to capture how users navigate the platform, though it claims this data does not personally identify you.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_tracking",
+        "title": "No cross-app tracking",
+        "plain_english": "The App Store privacy label shows YogiFi does not use any data to track you across apps and websites owned by other companies.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_not_linked",
+        "title": "All collected data is unlinked to your identity",
+        "plain_english": "According to the App Store privacy label, all data YogiFi collects — including Health & Fitness, Contact Info, and Identifiers — is kept unlinked to your identity.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_healthkit_commitment",
+        "title": "Health data not used for advertising or mining",
+        "plain_english": "YogiFi explicitly states that HealthKit data is used only to provide health, motion, and fitness services, and not for promotional mining or advertising.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_truedepth_local",
+        "title": "Pose camera data processed locally and not stored",
+        "plain_english": "TrueDepth camera inputs used for yoga pose feedback are processed momentarily on your device without being stored remotely or linked to your identity.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_user_rights",
+        "title": "Strong user rights including erasure and portability",
+        "plain_english": "You can request access to, correction of, erasure of, portable copies of, or restrictions on your personal information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_timeline",
+        "title": "Deletion requests handled within 90 days",
+        "plain_english": "YogiFi promises to erase your data within 90 days of a deletion request when possible, unless records must be kept for legal or safety reasons.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app uses your device's TrueDepth camera momentarily to analyse yoga poses and provide real-time feedback. This data is processed on-device and is not stored remotely or linked to your identity.",
+      "detail": "The privacy policy states visual data such as TrueDepth camera inputs are processed momentarily without remote storage or user identification. This is used for pose detection and posture feedback, likely when paired with the smart yoga mat.",
+      "policy_excerpt": "Visual data (e.g. TrueDepth camera inputs) processed momentarily without remote storage or user identification",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "YogiFi may collect your geolocation data, but it is not linked to your identity according to the App Store privacy label.",
+      "detail": "The privacy policy mentions geolocation is collected. The purpose is not explicitly stated, but it is listed as 'Data Not Linked to You' on the App Store label.",
+      "policy_excerpt": "Geolocation",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There is no evidence that the YogiFi app accesses your contacts or phonebook.",
+      "detail": "Neither the privacy policy nor the App Store privacy label mentions contacts or address book access.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload user content such as photos or videos, but this data is not linked to your identity according to the App Store label.",
+      "detail": "The App Store privacy label lists 'User Content' as collected but not linked to identity. The privacy policy mentions visual data from TrueDepth camera, but that is processed locally.",
+      "policy_excerpt": "User Content — Data Not Linked to You",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi shares data with outside vendors and service providers, but explicitly states HealthKit data is used only for health and fitness services and not for promotional mining. It does not track you across other apps.",
+      "detail": "The policy states information goes to outside vendors and internal staff when essential. Data may move to servers in the US or India. However, the App Store label confirms no cross-app tracking, and the policy explicitly states 'HK data only used to provide health, motion or fitness services' and not for promotional mining.",
+      "policy_excerpt": "Information goes to outside vendors, authorities when compelled, successors in a merger, and internal staff only when essential... HK data only used to provide health, motion or fitness services and not for promotional mining",
+      "concerns": ["Data shared with outside vendors", "Data transferred to US or India"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You provide your name, contact details, and demographics to create an account, but YogiFi says this data is not linked to your identity.",
+      "detail": "The App Store privacy label lists 'Contact Info' and 'Identifiers' as collected but not linked to identity. The policy mentions names, contact details, demographics, and guardian information as personal data collected.",
+      "policy_excerpt": "Personal Data means and includes any Information that relates to a natural person (e.g., names, contact details, demographics, and guardian information)",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi does not use your data to track you across other apps or websites for advertising. Microsoft Clarity is used only for non-personal usage analytics.",
+      "detail": "The App Store privacy label shows no 'Data Used to Track You' section. The policy mentions Microsoft Clarity captures non-personal user pathways and explicitly states 'Usage Data collected through Analytics Tools does not personally identify you.' Third-party promotions are sent only with user approval.",
+      "policy_excerpt": "Usage Data collected through Analytics Tools does not personally identify you... Third-Party Promotions sent solely with user approval",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi says it will delete data if it is gathered from minors without verified guardian approval.",
+      "detail": "The policy states that if data is gathered from minors absent verified guardian approval, the company will delete it. The App Store age rating is 4+.",
+      "policy_excerpt": "If data is gathered from minors absent verified guardian approval, the Company will delete it",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi logs your network identifiers and software client information, and uses Microsoft Clarity to understand how users navigate the platform.",
+      "detail": "The policy mentions technical details including network identifiers and software client kinds are collected. Microsoft Clarity is used for behavioral analytics, but the policy claims this data does not personally identify you.",
+      "policy_excerpt": "Technical details including network identifiers and software client kinds... Microsoft Clarity captures non-personal user pathways",
+      "concerns": ["Network identifiers collected", "Microsoft Clarity analytics"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi collects device identifiers and software client information, but the App Store label confirms this data is not linked to your identity.",
+      "detail": "The App Store privacy label lists 'Identifiers' and 'Usage Data' as collected but not linked to identity. The policy mentions software client kinds and network identifiers are collected.",
+      "policy_excerpt": "Identifiers — Data Not Linked to You; Usage Data — Data Not Linked to You",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi collects fitness metrics like heart rate and exercise records from Apple Watch, and uses TrueDepth camera for pose detection. However, this health data is kept unlinked to your identity and is not used for advertising.",
+      "detail": "The App Store privacy label lists 'Health & Fitness' as collected but not linked to identity. The policy explicitly states fitness metrics such as cardiac activity and exercise records are collected, and HealthKit data is used only for health, motion, and fitness services — not for promotional mining. TrueDepth camera inputs are processed momentarily without remote storage.",
+      "policy_excerpt": "Fitness metrics such as cardiac activity and exercise records... HK data only used to provide health, motion or fitness services and not for promotional mining",
+      "concerns": ["Heart rate data collected via Apple Watch", "Exercise records stored"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app has in-app purchases, but the privacy policy does not mention direct collection of payment card details. It likely uses Apple's standard payment processing.",
+      "detail": "The App Store listing shows in-app purchases, but the privacy policy does not specifically mention financial or payment data collection beyond purchase records.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access to, correction of, erasure of, portable copies of, or restrictions on your personal information. Deletion requests are handled within 90 days when possible.",
+      "detail": "The policy explicitly lists six user rights: access, correction, erasure, portable copies, and restrictions. It promises to erase data within 90 days of a deletion request unless records must be retained for legal, regulatory, fraud prevention, safety, or anonymised purposes.",
+      "policy_excerpt": "Individuals may request access to, correction of, erasure of, portable copies of, or restrictions on their personal information... erased no later than ninety days of a deletion request when possible",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "YogiFi posts revised privacy policies with an updated date on its website, but does not promise advance notification. Your continued use counts as acceptance.",
+      "detail": "The policy states revisions are posted with updated revision dates and continued use after amendments subjects users to the revised terms. There is no mention of advance notification, email alerts, or requiring active re-agreement.",
+      "policy_excerpt": "Revisions are posted with updated revision dates. Continued use after amendments subjects users to the revised terms.",
+      "concerns": ["No advance notification of changes", "Continued use = acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "safe", "max": 25, "rate": 0, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 34.5,
+    "final_score": 83,
+    "grade": "A"
+  }
+}

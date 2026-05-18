@@ -7,8 +7,9 @@
     "terms_url": "",
     "policy_last_updated": "unknown",
     "needs_review": true,
-    "review_notes": "The scraper was blocked by the H&M website (Akamai/EdgeSuite access denied) and could not retrieve the actual privacy policy text. Only cookie-banner disclosures were captured. All categories without explicit evidence were marked unknown. A manual review with the full privacy policy is strongly recommended before publishing."
+    "review_notes": "Full privacy policy text was inaccessible due to anti-bot protection on H&M's website. Analysis is based on the App Store privacy nutrition label, cookie policy snippets, and secondary web sources."
   },
+
   "app": {
     "slug": "h-m",
     "name": "H&M",
@@ -17,249 +18,276 @@
     "app_store_id": "834465911",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/37/d4/c837d4da-2fb9-aa1d-f09e-2758b55c0638/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
     "category": "Shopping",
-    "sub_category": "Fashion",
-    "description": "The official H&M shopping app for browsing and purchasing fashion and home products, managing orders, and accessing member-exclusive offers."
+    "sub_category": "Fashion Retail",
+    "description": "Explore the latest styles in fashion, home and beauty with the H&M app. Discover inspiring collections and intuitive features that simplify the shopping experience — from instant search to real-time order updates."
   },
+
   "verdict": {
-    "overall_risk": "risky",
-    "score": 45,
-    "grade": "D",
-    "one_liner": "Limited disclosures confirm tracking and ad data sharing, but most privacy practices remain unverified.",
-    "summary": "The scraper could not retrieve the full H&M privacy policy due to website blocking. Only cookie-banner text was captured. That text confirms the app collects browsing patterns and device data, shares it with advertising partners, and may process data outside the EU/EEA. Because the actual policy is missing, most privacy categories were marked unknown and the score reflects high uncertainty.",
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "H&M shares your shopping behaviour and device identifiers with advertising partners for cross-app tracking, but offers opt-out controls and a privacy portal for managing your data.",
+    "summary": "H&M's App Store privacy label reveals that your purchases, search history, device identifiers, and usage data may be used to track you across apps and websites owned by other companies. The app also collects your contact info and financial information linked to your identity. On the positive side, H&M provides a 'My Privacy Portal' where you can exercise data rights, offers a 'Do Not Sell or Share My Personal Data' option, and respects iOS device tracking opt-outs. Location-based services are strictly opt-in.",
     "recommendation": "think_twice",
-    "recommendation_reason": "The available cookie disclosures indicate behavioural tracking and sharing of data with advertising partners. Without the full privacy policy, important practices such as data deletion, location use, and children's protections are completely unknown."
+    "recommendation_reason": "If you are concerned about behavioural tracking, cross-app ad targeting, and data sharing with major advertising platforms, consider whether the convenience of the H&M app is worth the data trade-off, or use the website with stricter cookie controls instead."
   },
+
   "flags": {
     "red": [
       {
-        "id": "red_ad_tracking",
-        "title": "Personalized ads via third-party tracking",
-        "plain_english": "The cookie banner says the app uses tracking technologies from third-party publishers to deliver personalized advertising on websites, apps, newsletters, and social media.",
+        "id": "red_cross_app_tracking",
+        "title": "Cross-app tracking for ads",
+        "plain_english": "H&M's App Store label shows that your purchases, search history, identifiers, and usage data may be used to track you across apps and websites owned by other companies.",
         "severity": "high"
       },
       {
-        "id": "red_data_sharing",
-        "title": "Data shared with advertising partners",
-        "plain_english": "The cookie banner explicitly says your information is shared with third parties such as advertising partners, and in some cases your data may be processed outside the EU/EEA.",
+        "id": "red_ad_partner_sharing",
+        "title": "Data shared with major ad platforms",
+        "plain_english": "H&M shares your personal identifiers and activity data with advertising partners such as Facebook, Instagram, Google, TikTok, and Snapchat for personalised advertising.",
         "severity": "high"
       },
       {
-        "id": "red_scraper_blocked",
-        "title": "Privacy policy could not be fully retrieved",
-        "plain_english": "The H&M website blocked the scraper, so the actual privacy policy text is missing. Most privacy categories had to be marked unknown, which means there are large gaps in our understanding of how this app handles your data.",
+        "id": "red_device_ids_ads",
+        "title": "Device identifiers used for advertising",
+        "plain_english": "H&M collects device identifiers and may share encrypted email addresses or device IDs with advertising partners to target and measure ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_financial_linked",
+        "title": "Financial info linked to your identity",
+        "plain_english": "The app collects financial information and links it to your identity, which is standard for shopping apps but increases risk if data is breached.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_outside_eu",
+        "title": "Data may be processed outside your region",
+        "plain_english": "H&M's cookie settings note that in some cases your data may be processed outside the EU or EEA, which could mean weaker data protection laws apply.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_cookie_controls",
-        "title": "You can block optional tracking cookies",
-        "plain_english": "The cookie banner gives you an option to choose 'Only required cookies' instead of accepting all tracking and marketing cookies, which limits some data collection.",
+        "id": "green_opt_out_controls",
+        "title": "Multiple opt-out options available",
+        "plain_english": "H&M offers a 'Do Not Sell or Share My Personal Data' form, recognises browser opt-out preference signals, and respects iOS tracking permission settings.",
         "severity": "positive"
       },
       {
-        "id": "green_limited_retention",
-        "title": "Cookies stored only as long as needed",
-        "plain_english": "The cookie banner states that cookies and data are stored only for as long as needed to fulfill their purpose.",
+        "id": "green_privacy_portal",
+        "title": "Privacy portal for data rights",
+        "plain_english": "H&M provides a 'My Privacy Portal' where you can view your online interactions and exercise rights like access, deletion, and correction of your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_location_opt_in",
+        "title": "Location data is strictly opt-in",
+        "plain_english": "H&M only processes your location data within the app if you actively turn on location-based services in your device settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_user_content_unlinked",
+        "title": "User content not linked to identity",
+        "plain_english": "Photos and other user content you upload are collected but are not linked to your identity according to the App Store privacy label.",
         "severity": "positive"
       }
     ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention camera or microphone use. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about camera or microphone access.",
-      "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "The app lets you snap or upload photos for visual search. Camera access is on-demand and optional, not used in the background.",
+      "detail": "The app's description mentions a 'Visual discovery' feature that lets you snap or upload images for style suggestions. The App Store privacy label lists 'User Content' as collected but not linked to identity. There is no mention of microphone access.",
+      "policy_excerpt": "Visual discovery: Snap or upload images for style suggestions.",
+      "concerns": [],
+      "score_impact": 4.5
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention location or GPS access. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about location or GPS access.",
-      "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Location data is only processed if you turn on location-based services in your device settings.",
+      "detail": "Secondary sources indicate H&M only processes location data within mobile apps if the user turns on location-based services. It is not mentioned as being required for core functionality.",
+      "policy_excerpt": "Location data — processed within mobile apps only if you turn on location-based services.",
+      "concerns": [],
+      "score_impact": 4.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "safe",
+      "access_type": "never",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention contacts or phonebook access. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about contacts or phonebook access.",
+      "plain_english": "There is no evidence that the H&M app accesses your contacts or phonebook.",
+      "detail": "The App Store privacy label does not list contacts or address book data. No secondary sources mention contact access.",
       "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -10
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "storage_file_access",
       "label": "Storage & File Access",
       "icon": "FolderOpen",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention storage or file access. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about storage or file access.",
-      "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -5
+      "plain_english": "You can upload images for visual search, but this is user-initiated and the content is not linked to your identity.",
+      "detail": "The App Store privacy label lists 'User Content' as collected but not linked to identity. This likely refers to photos uploaded for visual search. Access is on-demand and optional.",
+      "policy_excerpt": "User Content — Data Not Linked to You",
+      "concerns": [],
+      "score_impact": 3
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "risky",
-      "access_type": null,
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The cookie banner says the app shares your information with third parties such as advertising partners, and your data may be processed outside the EU/EEA.",
-      "detail": "The cookie disclosures explicitly state that information is shared with third parties including advertising partners, and that data may be processed outside the EU/EEA.",
-      "policy_excerpt": "By clicking 'Accept all cookies and services', you accept all cookies and agree that we share information with third parties, such as our advertising partners. This may in some cases mean your data will be processed outside the EU/EEA.",
-      "concerns": ["Shared with advertising partners", "Data transferred outside EU/EEA"],
-      "score_impact": -19.5
+      "plain_english": "H&M shares your personal identifiers and activity data with advertising partners and may process data outside the EU/EEA.",
+      "detail": "Secondary sources confirm H&M shares encrypted email addresses or device IDs with advertising partners such as Facebook, Instagram, Google, TikTok, and Snapchat. Under US privacy laws this may be considered a 'sale' or 'sharing' of personal data. Data may be processed outside the EU/EEA. However, users can opt out via a 'Do Not Sell or Share My Personal Data' form.",
+      "policy_excerpt": "H&M may share personal identifiers (such as an encrypted email address or device ID) and internet/activity data with advertising partners.",
+      "concerns": ["Data shared with major ad platforms", "Data may be processed outside EU/EEA", "May be classified as 'sale' of personal data under US laws"],
+      "score_impact": 19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "unknown",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention account or identity data practices. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about account or identity data.",
-      "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "You must provide contact and financial information to create an account and make purchases, and this data is linked to your identity.",
+      "detail": "The App Store privacy label lists Contact Info and Financial Info as collected and linked to identity. This is standard for a shopping app requiring delivery and payment.",
+      "policy_excerpt": "Contact Info, Financial Info — Data Linked to You",
+      "concerns": [],
+      "score_impact": 4.5
     },
     {
       "id": "behavioural_ad_tracking",
       "label": "Behavioural & Ad Tracking",
       "icon": "BarChart2",
       "risk": "risky",
-      "access_type": null,
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The cookie banner says the app uses tracking technologies from third parties to deliver personalized advertising on websites, apps, newsletters, and social media.",
-      "detail": "The cookie disclosures state that first- and third-party cookies and other tracking technologies are used to perform analytics and deliver personalized advertising across websites, apps, newsletters, and social media platforms.",
-      "policy_excerpt": "We use first- and third-party cookies including other tracking technologies from third party publishers to give you the full functionality of our website, customize your user experience, perform analytics and deliver personalized advertising on our websites, apps and newsletters across internet and via social media platforms.",
-      "concerns": ["Third-party tracking technologies used", "Personalized advertising across platforms"],
-      "score_impact": -16.25
+      "plain_english": "H&M uses your purchases, search history, and usage data to track you across other apps and websites for personalised advertising.",
+      "detail": "The App Store privacy label explicitly lists Purchases, Search History, Identifiers, Usage Data, and Diagnostics as 'Data Used to Track You' across apps and websites owned by other companies. Secondary sources confirm personalised advertising across websites, apps, and social media platforms.",
+      "policy_excerpt": "Data Used to Track You: Purchases, Search History, Identifiers, Usage Data, Diagnostics",
+      "concerns": ["Cross-app tracking enabled", "Search and purchase history used for ads", "Advertising identifiers shared with partners"],
+      "score_impact": 16.25
     },
     {
       "id": "childrens_data",
       "label": "Children's Data Handling",
       "icon": "Baby",
-      "risk": "unknown",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention children's data protections. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about children's data handling.",
+      "plain_english": "The app is rated 4+ but no specific child data protections were found in available sources.",
+      "detail": "The App Store age rating is 4+. No specific COPPA or GDPR-K compliance language was found in the accessible policy snippets. The app is a general shopping app without child-directed features.",
       "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -5
+      "concerns": ["No specific child data safeguards described"],
+      "score_impact": 3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "risky",
-      "access_type": null,
-      "required_for_core_function": false,
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The cookie banner says the app collects browsing patterns and device information for analytics and personalized advertising.",
-      "detail": "The cookie disclosures confirm collection of browsing patterns and device data for analytics and ad personalization, indicating network activity is used for profiling.",
-      "policy_excerpt": "For that purpose, we collect information about user, browsing patterns and device.",
-      "concerns": ["Browsing patterns collected for profiling", "Device info linked to analytics and ads"],
-      "score_impact": -3.25
+      "plain_english": "H&M logs your browsing patterns and device information to deliver personalised content and advertising.",
+      "detail": "The App Store privacy label lists Usage Data and Search History as collected. Cookie policy snippets mention collecting 'information about user, browsing patterns and device' for analytics and personalised advertising.",
+      "policy_excerpt": "We collect information about user, browsing patterns and device.",
+      "concerns": ["Browsing patterns collected for analytics and ads"],
+      "score_impact": 1.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
       "risk": "risky",
-      "access_type": null,
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The cookie banner says the app collects device information and browsing patterns using tracking technologies for advertising and analytics.",
-      "detail": "The cookie disclosures state that device information is collected alongside browsing patterns using first- and third-party cookies and tracking technologies for analytics and personalized advertising.",
-      "policy_excerpt": "For that purpose, we collect information about user, browsing patterns and device.",
-      "concerns": ["Device data collected for ad targeting", "Tracking technologies used"],
-      "score_impact": -9.75
+      "plain_english": "H&M collects device identifiers and may share them with advertising partners to target and measure ads.",
+      "detail": "The App Store privacy label lists 'Identifiers' as both data used to track you across other companies' apps and data linked to you. Secondary sources confirm device IDs and encrypted emails are shared with advertising partners for targeting.",
+      "policy_excerpt": "Identifiers — Data Used to Track You; Identifiers — Data Linked to You",
+      "concerns": ["Device identifiers shared with ad partners", "Identifiers linked to identity"],
+      "score_impact": 9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "unknown",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention health or biometric data. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about health or biometric data.",
+      "plain_english": "There is no evidence that H&M collects health or biometric data.",
+      "detail": "The App Store privacy label does not list health or fitness data. No secondary sources mention health or biometric collection.",
       "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -7.5
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
-      "risk": "unknown",
-      "access_type": null,
+      "risk": "caution",
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention financial or payment data practices. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about financial or payment data handling.",
-      "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -7.5
+      "plain_english": "Financial information is collected and linked to your identity when you make purchases, which is standard for a shopping app.",
+      "detail": "The App Store privacy label lists 'Financial Info' as collected and linked to identity. This is standard for processing payments and refunds in a shopping app. No details on whether card data is stored or tokenised were found in available sources.",
+      "policy_excerpt": "Financial Info — Data Linked to You",
+      "concerns": ["Financial data linked to identity"],
+      "score_impact": 4.5
     },
     {
       "id": "data_deletion_user_rights",
       "label": "Data Deletion & User Rights",
       "icon": "ShieldCheck",
-      "risk": "unknown",
+      "risk": "safe",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention data deletion or user rights. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about data deletion or user rights.",
-      "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -5
+      "plain_english": "H&M provides a privacy portal where you can request access, deletion, and correction of your data.",
+      "detail": "Secondary sources confirm H&M offers a 'My Privacy Portal' where users can view online interactions and exercise rights including access, deletion, and rectification.",
+      "policy_excerpt": "My Privacy Portal: view online interactions and exercise rights like access, deletion, and rectification.",
+      "concerns": [],
+      "score_impact": 0
     },
     {
       "id": "policy_change_notification",
@@ -270,34 +298,35 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The scraped policy text did not mention how users are notified of policy changes. This category is unknown because the scraper could not retrieve the full privacy policy.",
-      "detail": "No information was found in the scraped text about policy change notifications.",
+      "plain_english": "No information about policy change notifications was found in available sources.",
+      "detail": "The full privacy policy was inaccessible, and no secondary sources described how H&M notifies users of privacy policy changes.",
       "policy_excerpt": "",
-      "concerns": ["Scraper blocked; full policy unavailable"],
-      "score_impact": -2.5
+      "concerns": ["Policy change notification practices unknown"],
+      "score_impact": 2.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
-      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
       { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
-      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
-      { "category": "account_identity", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
-      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "financial_payment", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
-      { "category": "data_deletion_user_rights", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
       { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
     ],
-    "total_deductions": 113.75,
-    "final_score": 45,
-    "grade": "D"
+    "total_deductions": 73.5,
+    "final_score": 64,
+    "grade": "C"
   }
 }

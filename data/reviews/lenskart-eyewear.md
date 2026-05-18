@@ -3,7 +3,7 @@
 **Analyzed:** 2026-05-18
 **Policy URL:** https://www.lenskart.com/privacy-policy?rd=n
 **Policy Last Updated:** unknown
-**Analyst:** Claude Kimi K2.6
+**Analyst:** claude-kimi-k2.6
 **Status:** Complete
 
 ---
@@ -272,7 +272,7 @@ The company may change its privacy policy at any time and says your continued us
 
 ## Review Notes
 
-- Scraped App Store URL incorrectly pointed to Pepperfry — corrected to actual Lenskart URL via iTunes API verification.
+- Re-scanned on 2026-05-18. Policy content unchanged from prior analysis.
 - The financial data storage wording is ambiguous: the policy states card details "are stored on the Company's secure servers and/or in cookies on your computer." This may be a drafting error but warrants clarification.
 - Location and contacts access are not mentioned in the policy, leaving them as Unknown and adding uncertainty to the score.
 - The 5-year retention period for facial scans and health data is a significant concern given the sensitivity of biometric information.

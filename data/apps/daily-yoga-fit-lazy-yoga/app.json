@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.dailyyoga.com/privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "2024-01-25",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "daily-yoga-fit-lazy-yoga",
+    "name": "Daily Yoga: Fit & Lazy Yoga®",
+    "developer": "Xi'an Pengxiang Chuangda Technology Co., Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/daily-yoga-fit-lazy-yoga/id545849922",
+    "app_store_id": "545849922",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/05/88/7b/05887bd3-ac8d-90ba-f443-bacf37aab818/AppIcon-0-1x_U007emarketing-0-8-0-0-sRGB-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Yoga",
+    "description": "A comprehensive yoga app offering guided classes, community features, and fitness tracking for all skill levels with both energetic and relaxing routines."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 78,
+    "grade": "B",
+    "one_liner": "Daily Yoga does not sell your personal data today and offers in-app deletion, but it reserves the right to sell data in the future and uses third-party ad trackers.",
+    "summary": "Daily Yoga is a well-established yoga app with relatively restrained data practices. It does not currently sell personal information, offers a clear in-app 'Delete Account' option, and promises permanent anonymization upon request. However, it collects your device ID, IP address, and browsing behaviour through third-party ad companies. Most concerning is the explicit reservation of the right to sell personal data in the future and the ability to change the privacy policy without any advance notice.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app is transparent about its practices and does not currently sell personal data. The in-app deletion option and data encryption measures are positive. However, users should be aware of the future data-selling reservation and the no-notice policy-change clause."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_future_data_selling",
+        "title": "Reserves right to sell data in the future",
+        "plain_english": "Daily Yoga says it does not sell your personal information right now, but it explicitly reserves the right to start doing so in the future. If that happens, you would need to proactively opt out via email.",
+        "severity": "high"
+      },
+      {
+        "id": "red_policy_changes_without_notice",
+        "title": "Privacy policy can change without any notice",
+        "plain_english": "Daily Yoga can update its privacy policy at any time without telling you beforehand. Changes take effect immediately when posted on the website.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_id_collected",
+        "title": "Device ID collected for account binding",
+        "plain_english": "Daily Yoga reads your phone state and collects your device ID to link it with your account, which helps them recognise your device across sessions.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_ad_tracking",
+        "title": "Third-party ad companies track your visits",
+        "plain_english": "Advertising companies that work with Daily Yoga may track your visits to the app and website using cookies to show you ads based on your behaviour.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_current_selling",
+        "title": "Does not currently sell personal data",
+        "plain_english": "Daily Yoga explicitly states that it does not sell or rent your personal information to any third parties at this time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_in_app_deletion",
+        "title": "Delete Account available in Profile Settings",
+        "plain_english": "You can delete your account and request data removal directly inside the app through the Profile Settings, or by emailing support.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_permanent_anonymization",
+        "title": "Promises permanent anonymization on deletion",
+        "plain_english": "When you request deletion, Daily Yoga says it will permanently and irreversibly anonymize your data so it can never be used to identify you again.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_encryption",
+        "title": "Uses encryption and secure storage",
+        "plain_english": "Daily Yoga uses advanced encryption for data transmission and storage, and restricts access to sensitive data to authorized personnel only.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_googlefit_limited_use",
+        "title": "GoogleFit data adheres to limited-use policy",
+        "plain_english": "If you connect GoogleFit, Daily Yoga says it follows Google's strict limited-use policy for any health data received through that connection.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Daily Yoga asks for camera access only if you want to take and share photos in the community. It is not required for yoga classes.",
+      "detail": "Camera permission is explicitly for community photo sharing only. Users must have rights to share photos before posting.",
+      "policy_excerpt": "Daily Yoga will require permission to access your camera which is used to take photos when you voluntarily share your photos in the Daily Yoga Community.",
+      "concerns": ["Camera access requested for community photos", "Photos shared publicly in community"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Daily Yoga asks for location access only if you want to geotag your posts in the community. If enabled, others can see your location on your posts.",
+      "detail": "Location permission is for geotagging community posts only. Optional and not required for core yoga functionality.",
+      "policy_excerpt": "Location permission is required for geotagging of your posts. If enabled, your location will be shown to others when you make a post in the Daily Yoga Community.",
+      "concerns": ["Location shown to others in community posts", "Geotagging optional but visible"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any access to your contacts or phonebook.",
+      "detail": "No contact or phonebook access described.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any broad file or storage access beyond camera photos for community sharing.",
+      "detail": "No general storage scanning mentioned. Only camera photos for community posts.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga does not currently sell or rent your personal data, but it reserves the right to do so in the future. It also uses third-party advertising companies and may disclose data to law enforcement.",
+      "detail": "No current selling, but future selling reserved with opt-out. Third-party ad companies serve ads using non-PII. GoogleFit integration optional with limited-use policy. Law enforcement cooperation disclosed.",
+      "policy_excerpt": "DailyYoga.com does not sell or rent personal information about its customers to any third parties at this time. In the event DailyYoga.com does engage in such commerce in the future, you will have an opportunity to remove yourself from any such lists before your inclusion therein.",
+      "concerns": ["Future data selling reserved", "Third-party ad companies used", "Law enforcement disclosure", "GoogleFit data sharing if connected"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga collects your name, email, address, phone number, and specific location only when you voluntarily provide them, such as during registration.",
+      "detail": "Personal information collected only when voluntarily provided. Profile can be reviewed and updated in-app.",
+      "policy_excerpt": "DailyYoga.com does not collect personal information -- names, addresses, phone numbers, e-mail addresses, and specific locations -- about you except when you specifically provide such information voluntarily",
+      "concerns": ["Personal data collected on voluntary basis", "Profile info shared in community if user opts in"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga uses cookies and works with third-party advertising companies that track your visits to show you interest-based ads. You can opt out through the Network Advertising Initiative.",
+      "detail": "Session and persistent cookies used. Third-party ad companies track visits using non-PII for interest-based ads. Opt-out available via networkadvertising.org.",
+      "policy_excerpt": "DailyYoga.com uses third-party advertising companies to serve ads and the third-party advertising companies may use non-personally identifiable information about a user's visits to DailyYoga.com to provide advertisements about goods and services",
+      "concerns": ["Third-party ad tracking", "Cookies used for tracking", "Interest-based ads"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga says children are not eligible and minors should use the app only with parents or guardians. It promises to delete data if a child under 13 is discovered.",
+      "detail": "13+ requirement stated with parental guidance for minors. Data deletion promised for under-13 users.",
+      "policy_excerpt": "Children are not eligible to use our services and we ask that minors do not submit any personal information to us. If you are a minor, you can use this service only in conjunction with your parents or guardians. If we become aware that a child under 13 has provided us with personally identifiable Information, we will delete such information from our files.",
+      "concerns": ["No technical age verification described", "Minors can use with parents only"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga logs your IP address for server diagnostics, to gather broad demographic data, and to determine your country and region for activity rankings.",
+      "detail": "IP address used for server diagnostics, demographic profiling, and country/region determination for rankings. No personal info claimed.",
+      "policy_excerpt": "DailyYoga.com uses your Internet Protocol (IP) address to help diagnose problems with our computer server and to administer our website. Your IP address is used to help identify you and to gather broad demographic data.",
+      "concerns": ["IP address logged", "Used for demographic profiling", "Used for rankings region detection"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga reads your phone state to collect your device ID and network type. The device ID is used to bind your phone to your account, and the network type helps reduce unnecessary data usage.",
+      "detail": "Phone State permission used for Device ID (account binding) and Network Type (data optimization).",
+      "policy_excerpt": "Daily Yoga requires permission to read your Phone State, such as Device ID to bind your device with your Daily Yoga Account and Network Type to help avoid unnecessary data consumption.",
+      "concerns": ["Device ID collected", "Phone state accessed", "Network type tracked"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga does not explicitly collect health or biometric data like heart rate or body measurements. Optional GoogleFit connection follows limited-use policy.",
+      "detail": "No health metrics collected directly. GoogleFit is optional and adheres to Google API limited-use policy.",
+      "policy_excerpt": "DailyYoga's use and transfer of information received from Google APIs will adhere to Google API Services User Data Policy, including the requirements for limited use.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any collection or storage of payment or financial information.",
+      "detail": "No financial or payment data collection described in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account through Profile Settings in the app, or email support. Daily Yoga promises to permanently and irreversibly anonymize your data so it can never identify you again.",
+      "detail": "In-app 'Delete Account' available. Email support option. Promise of permanent anonymization upon deletion.",
+      "policy_excerpt": "To request the deletion of your personal data that we have in the Daily Yoga App, please find the 'Delete Account' in the Profile Settings. Or you can email us at support@dailyyoga.com to request the deletion, and we will respond to your request in a reasonable timeframe. Upon your request, Daily Yoga will permanently and irrevocably anonymize your data such that it can never be reconstructed to identify you as an individual.",
+      "concerns": ["Deletion is anonymization, not erasure", "No specific timeframe given"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Daily Yoga can change its privacy policy at any time without warning you. Changes take effect immediately when posted on the website.",
+      "detail": "No advance notice. No email notification. Changes effective immediately upon posting.",
+      "policy_excerpt": "We reserve the right, at any time and without notice, to add to, change, update, or modify this Privacy Policy, simply by posting such change, update, or modification on the Site. Any such change, update, or modification will be effective immediately upon posting on the Site.",
+      "concerns": ["No advance notice", "Changes effective immediately", "No explicit re-consent required"],
+      "score_impact": 3.25
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 }
+    ],
+    "total_deductions": 45.25,
+    "final_score": 78,
+    "grade": "B"
+  }
+}

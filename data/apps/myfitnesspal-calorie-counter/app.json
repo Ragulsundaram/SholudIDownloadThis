@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.myfitnesspal.com/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2025-03-18",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "myfitnesspal-calorie-counter",
+    "name": "MyFitnessPal: Calorie Counter",
+    "developer": "MyFitnessPal, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/myfitnesspal-calorie-counter/id341232718",
+    "app_store_id": "341232718",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d0/07/39/d0073927-128d-6c2a-04da-a3a75a7deedb/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Nutrition",
+    "description": "Track calories, log meals, monitor macros, and connect fitness devices to reach your health and weight goals."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 60,
+    "grade": "C",
+    "one_liner": "MyFitnessPal collects extensive health and dietary data, tracks you across devices for ads, and shares information with advertising and research partners.",
+    "summary": "MyFitnessPal is a popular calorie-counter and nutrition app that collects detailed health data including your food diary, body measurements, progress photos, and data from connected fitness devices. It uses this information for targeted advertising and cross-device tracking, and shares data with marketing partners, analytics providers, and academic researchers. While the app offers privacy controls and data-deletion rights, the combination of sensitive health data collection with advertising tracking is a significant privacy concern.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "A health app that collects your diet, weight, and body measurements while simultaneously using that data for targeted advertising and cross-device tracking creates a high privacy risk."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_data_for_ads",
+        "title": "Health data used for targeted advertising",
+        "plain_english": "MyFitnessPal collects your food diary, body measurements, and fitness habits, then uses this data to show you targeted ads and track you across different devices.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_device_tracking",
+        "title": "Tracks you across devices for ads",
+        "plain_english": "MyFitnessPal correlates your activity across different devices and uses cookies and mobile advertising IDs to track you for advertising purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_shared_with_partners",
+        "title": "Shares data with advertisers and researchers",
+        "plain_english": "Your personal information is shared with promotional networks, measurement specialists, academic collaborators, and business partners for advertising and research.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sensitive_health_collection",
+        "title": "Collects sensitive personal health information",
+        "plain_english": "MyFitnessPal collects food diary entries, body measurements, weight, progress photos, and connected health-device data, which may qualify as sensitive personal information.",
+        "severity": "high"
+      },
+      {
+        "id": "red_public_posts_no_privacy",
+        "title": "Public posts have no expectation of privacy",
+        "plain_english": "Content you post publicly in the MyFitnessPal community is visible to others and the company states there is no expectation of privacy for public posts.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_health_data_not_for_marketing",
+        "title": "Connected health data not used for marketing",
+        "plain_english": "Data pulled from Apple HealthKit, Google Health Connect, Samsung Health, and connected wearables is not used by MyFitnessPal for marketing purposes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_underage_technical_measures",
+        "title": "Technical measures to block under-18 users",
+        "plain_english": "MyFitnessPal implements technical measures to prevent individuals under 18 from creating accounts, and promises to delete data if an underage user is discovered.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_rights_center",
+        "title": "Privacy Request Center for data rights",
+        "plain_english": "You can exercise rights like access, deletion, correction, and portability through the MyFitnessPal Privacy Request Center, and you can email privacy@myfitnesspal.com.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_preferences_controls",
+        "title": "Marketing and ad preferences can be managed",
+        "plain_english": "You can opt out of newsletters, edit cookie selections, and withdraw from personalised ad delivery through browser or mobile settings and via NAI, DAA, and EDAA opt-out tools.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "MyFitnessPal allows you to upload progress photos from your camera or photo library to track your fitness journey visually.",
+      "detail": "Progress photos are collected as part of the Food and Activity Diary Data. No mention of microphone access.",
+      "policy_excerpt": "Food and Activity Diary Data, which may constitute sensitive personal information... progress photos",
+      "concerns": ["Progress photos uploaded", "Photo library access implied"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal does not explicitly collect GPS location, but it does infer general location from your IP address.",
+      "detail": "No explicit GPS collection mentioned. General location inferred from IP address for analytics and advertising.",
+      "policy_excerpt": "general location inferred from IP",
+      "concerns": ["IP-based location inference"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any collection or use of your contacts or phonebook.",
+      "detail": "No contact or phonebook access described in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "MyFitnessPal may access your photo library so you can upload progress photos to your fitness diary.",
+      "detail": "Progress photos are part of collected data, implying file/photo access for uploads.",
+      "policy_excerpt": "Food and Activity Diary Data... progress photos",
+      "concerns": ["Photo library access for progress photos"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal shares your personal information with service providers, advertising and marketing partners, analytics companies, academic researchers, and may transfer it in a business sale or merger.",
+      "detail": "Disclosures to vendors, promotional networks, measurement specialists, academic collaborators, peer members via community features, official bodies, and prospective buyers in mergers.",
+      "policy_excerpt": "Disclosures flow to vendors, promotional networks, measurement specialists, academic collaborators, peer members via community functions, official bodies when compelled, and prospective buyers in mergers.",
+      "concerns": ["Shared with advertising partners", "Shared with academic researchers", "Data may transfer in mergers", "Shared with analytics providers"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal collects your name, email, username, password, photo, date of birth, sex, and location (country/zip) when you create an account.",
+      "detail": "Standard account information collected including profile attributes. Some data (DOB, sex) is health-adjacent.",
+      "policy_excerpt": "Account/Profile: Name, email, location (country/zip), photo, username, password, date of birth, sex",
+      "concerns": ["Profile photo collected", "DOB and sex collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal tracks your app usage with cookies, mobile advertising IDs, and similar technologies to show you targeted ads and measure campaign performance across devices.",
+      "detail": "Targeted Advertising Cookies, mobile advertising ID, cookie identifiers, cross-device tracking, campaign performance measurement.",
+      "policy_excerpt": "Targeted Advertising Cookies and similar trackers... correlate activity across hardware... gauge campaign performance",
+      "concerns": ["Targeted advertising used", "Cross-device tracking", "Mobile advertising IDs collected", "Cookies and trackers used"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal requires users to be at least 18 and implements technical measures to block underage users. If an underage account is discovered, they promise to investigate and delete it.",
+      "detail": "18+ requirement with technical enforcement mechanism. Underage accounts will be removed if discovered.",
+      "policy_excerpt": "We implement technical measures to prevent individuals under 18 years of age from creating an account... If we become aware that an individual under 18 may have provided us with personal information, we will investigate and if applicable, take steps to remove the data and delete that individual's account.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal logs your IP address, browser type, device information, and usage data to run the service and for analytics.",
+      "detail": "Usage and Device Data including browser/device info, IP address, usage data collected automatically.",
+      "policy_excerpt": "Automatically harvested metrics encompass Usage and Device Data alongside identifiers set via Targeted Advertising Cookies",
+      "concerns": ["IP address logged", "Usage data tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal collects your device information, browser details, mobile advertising ID, and uses cookies to track and recognise your device across sessions for advertising.",
+      "detail": "Device info, browser info, mobile advertising ID, cookie identifiers collected. Cross-device tracking explicitly mentioned.",
+      "policy_excerpt": "browser/device info, IP address, mobile advertising ID, cookie identifiers... correlate activity across hardware",
+      "concerns": ["Mobile advertising ID tracked", "Cross-device tracking", "Device fingerprinting implied"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal collects extensive health data including your food diary, body measurements, weight, progress photos, fitness goals, and data from connected health devices like Apple HealthKit and Samsung Health.",
+      "detail": "Food and Activity Diary Data includes dietary habits, foods consumed, calorie counts, fitness goals, body measurements, lifestyle info, progress photos, notes. Connected devices include Apple HealthKit, Google Health Connect, Samsung Health, wearables. Data from wellness repos not used for marketing.",
+      "policy_excerpt": "Food and Activity Diary Data: Dietary habits, foods/drinks/medications consumed, calorie counts, fitness goals, body measurements, lifestyle info, progress photos, and notes... Connected health devices (Apple HealthKit, Google Health Connect, Samsung Health, wearables)",
+      "concerns": ["Extensive health data collected", "Body measurements stored", "Progress photos stored", "Connected health device data synced", "May qualify as sensitive personal information"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal collects payment information for Premium subscriptions and other paid services, though it is likely processed through a payment processor.",
+      "detail": "Premium subscription mentioned in the app description. Standard payment data collection for subscriptions.",
+      "policy_excerpt": "",
+      "concerns": ["Payment data collected for Premium"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access, deletion, correction, and portability of your data through the MyFitnessPal Privacy Request Center, but some data may be retained for legal or security purposes.",
+      "detail": "Data subject rights include Right to Access and Data Portability, Right to Deletion, Right to Correction, Right to Non-Discrimination, and restrictions on sales/profiling. Some data retained for legal/security purposes.",
+      "policy_excerpt": "One may invoke a Right to Access and Data Portability, Right to Deletion, Right to Correction, and Right to Non-Discrimination, plus restrictions on sales or profiling, via the MyFitnessPal Privacy Request Center.",
+      "concerns": ["Some data retained for legal purposes", "No guaranteed complete deletion"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "MyFitnessPal can update its privacy policy and will post changes with an effective date. The current policy is dated March 18, 2025.",
+      "detail": "Policy has an effective date and changelog (What's New section). Standard update mechanism.",
+      "policy_excerpt": "Effective Date: March 18, 2025... This Policy updates our previous version (dated 12/13/24)",
+      "concerns": ["Continued use implies acceptance of updates"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 82.25,
+    "final_score": 60,
+    "grade": "C"
+  }
+}

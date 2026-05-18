@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.zara.com/static/pdfs/US/privacy-policy/privacy-policy_en_US-20241209.html",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "zara",
+    "name": "ZARA",
+    "developer": "Industria de Diseno Textil, S.A.",
+    "app_store_url": "https://apps.apple.com/in/app/zara/id547951480",
+    "app_store_id": "547951480",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/c2/ae/36c2ae8c-ff38-17da-5b92-b1ef2e0b9086/AppIcon-0-0-1x_U007emarketing-0-0-0-8-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion",
+    "description": "ZARA is a leading fashion retail app offering the latest clothing, accessories, and home collections for men, women, and kids with fast delivery and easy returns."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "ZARA collects standard shopping data but shares it widely with its parent company and third-party marketers, while tracking your behaviour across platforms.",
+    "summary": "ZARA is a popular fast-fashion shopping app with typical e-commerce privacy practices. It collects contact details, payment information, device data, and browsing behaviour. The main concerns are its broad data-sharing practices with parent company Inditex, third-party marketing partners, and the use of cookies and web beacons for tracking. While you can opt out of marketing emails and control some tracking through browser settings, the default data-sharing footprint is wider than necessary for a shopping app.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "ZARA shares your data extensively with affiliates and advertisers, tracks your behaviour across sessions, and offers limited transparency about data deletion rights."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_data_sharing",
+        "title": "Shares data with parent company and marketers",
+        "plain_english": "ZARA shares your personal information with its parent company Inditex, affiliate organisations, and third-party companies for their own marketing purposes. These third parties can also share your data with others.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioural_tracking",
+        "title": "Tracks your behaviour across platforms",
+        "plain_english": "ZARA uses cookies and web beacons to track what you do on their websites and apps over time. They also let third parties collect information about you this way.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_marketing",
+        "title": "Data used for third-party interest-based ads",
+        "plain_english": "Your information is shared with third parties who may use it to show you interest-based advertising, and these companies may further share your data with others.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_deletion_rights",
+        "title": "No clear data deletion process mentioned",
+        "plain_english": "The privacy policy does not explain how you can delete your account or request that your data be removed. This makes it hard to take back your information.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_marketing_opt_out",
+        "title": "Marketing emails can be opted out",
+        "plain_english": "You can stop receiving promotional emails by following the unsubscribe instructions in any marketing message ZARA sends you.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_coppa_compliant",
+        "title": "States it is not for children under 13",
+        "plain_english": "ZARA says its platforms are meant for adults and that it does not knowingly collect personal data from children under 13.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_cookie_controls",
+        "title": "Browser cookie controls mentioned",
+        "plain_english": "ZARA notes that you can control cookies and tracking tools through your browser settings, though blocking cookies may break some features.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_mobile_controls",
+        "title": "Some mobile privacy controls suggested",
+        "plain_english": "ZARA suggests you can turn off Bluetooth, GPS, and push notifications in your phone settings to limit some tracking.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any collection or use of camera or microphone data.",
+      "detail": "No camera or microphone access is described in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "ZARA collects information about your device and location when you use their apps, though the exact use of GPS data is not clearly detailed.",
+      "detail": "The policy mentions collecting device and location information but does not specify whether GPS is used for store finding, delivery, or profiling.",
+      "policy_excerpt": "We collect information about your device and location. We collect the type of device you use to access our Platform.",
+      "concerns": ["Location data collected", "Purpose not clearly specified"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "ZARA may access your contacts if you use the 'email a friend' feature, but it is unclear whether contact data is uploaded to their servers.",
+      "detail": "The policy mentions receiving information from friends who use the 'email a friend' feature, implying potential contact access.",
+      "policy_excerpt": "This includes social media platforms and friends who use our 'email a friend' feature.",
+      "concerns": ["Possible contact access via 'email a friend'", "Unclear if contacts are uploaded"],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any access to your phone's files or storage beyond what is needed for standard app operation.",
+      "detail": "No explicit mention of storage or file access in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA shares your personal information with its parent company Inditex, affiliates, service providers, marketing partners, and potential business buyers.",
+      "detail": "Extensive data sharing with parent company, affiliates, payment processors, email service providers, third-party marketers, and business successors.",
+      "policy_excerpt": "We share information with our affiliated organizations and parent company. This includes our affiliates and Industria de Diseño Textil, S.A. (Inditex, S.A.)",
+      "concerns": ["Shared with parent company Inditex", "Shared with third-party marketers", "Shared with business successors", "Shared with service providers"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA collects your name, mailing address, email, phone number, password, age, and gender when you register or make a purchase.",
+      "detail": "Standard account data collection including contact details and demographic information for account management and personalisation.",
+      "policy_excerpt": "We collect contact information. For example, we collect your name and mailing address if you register with us. We also collect email addresses and phone numbers.",
+      "concerns": ["Demographic data collected", "Password creation required"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA tracks your browsing behaviour using cookies and web beacons across its websites and apps, and allows third parties to do the same for advertising.",
+      "detail": "Passive tracking via cookies, web beacons, and third-party tools. Data collected over time and used for interest-based advertising.",
+      "policy_excerpt": "We collect information passively. We use tracking tools like browser cookies and web beacons. We use these tools on our websites and in emails we send to you.",
+      "concerns": ["Cookies and web beacons used", "Third-party tracking", "Interest-based advertising", "Cross-platform tracking"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA says its platforms are meant for adults and it does not knowingly collect data from children under 13, but there is no active age verification.",
+      "detail": "COPPA-style statement with no enforcement mechanism described.",
+      "policy_excerpt": "Our Platforms are meant for adults. We do not knowingly collect personally identifiable data from children under 13.",
+      "concerns": ["No age verification mechanism", "13+ requirement stated but not enforced"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA collects your browser type, the sites you came from or go to after visiting, and device information about how you access their platforms.",
+      "detail": "Standard network logging including referrer URLs, browser type, and device information.",
+      "policy_excerpt": "We also collect information about the type of browser you are using. And, we may look at what site you came from or what site you go to when you leave us.",
+      "concerns": ["Referrer URLs tracked", "Browser info logged"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA collects your device type, browser, device identification number, app usage frequency, and where you downloaded the app from.",
+      "detail": "Device information collected to understand how users interact with platforms, including app download source and usage frequency.",
+      "policy_excerpt": "We collect the type of device you use to access our Platform... If you are using our apps, we may also collect your device identification number.",
+      "concerns": ["Device ID collected", "Usage frequency tracked", "Download source logged"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any collection of health or biometric data.",
+      "detail": "No health or biometric data collection described.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA collects your debit or credit card number when you make a purchase. It is unclear whether this is processed directly by ZARA or passed to a payment processor.",
+      "detail": "Payment card numbers are explicitly listed as collected data. No detail on whether the app stores them or uses a third-party processor.",
+      "policy_excerpt": "We collect payment information. If you buy product we will collect the relevant data as your debit or credit card number.",
+      "concerns": ["Card numbers collected", "Storage method unclear"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA's privacy policy does not explain how to delete your account or request your data. The only options mentioned are opting out of marketing emails and controlling cookies.",
+      "detail": "No account deletion process, data export, or subject rights mechanism described. Only marketing opt-out and cookie controls are mentioned.",
+      "policy_excerpt": "You can opt out of receiving our marketing emails... You can control cookies and tracking tools.",
+      "concerns": ["No account deletion process", "No data export option", "No subject rights mechanism"],
+      "score_impact": 6.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "ZARA may change its privacy policy at any time and will post updates on its platforms. Continued use means you accept the new terms.",
+      "detail": "Passive notification via posting on platforms. No explicit re-consent required. Users expected to check periodically.",
+      "policy_excerpt": "From time to time, we may change our privacy policy. We will notify you of any material changes to our Policy as required by law. We will also post an updated copy on our Platforms.",
+      "concerns": ["Continued use = acceptance", "Passive notification", "No explicit re-consent required"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 72.25,
+    "final_score": 65,
+    "grade": "C"
+  }
+}

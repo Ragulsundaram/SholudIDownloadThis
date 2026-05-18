@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.tirabeauty.com/page/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "tira-online-beauty-shopping",
+    "name": "Tira: Online Beauty Shopping",
+    "developer": "Reliance Retail Limited",
+    "app_store_url": "https://apps.apple.com/in/app/tira-online-beauty-shopping/id1619767136",
+    "app_store_id": "1619767136",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d4/ca/dd/d4cadd46-4ca7-51d8-e4ba-e5bebae118ee/FyndAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Beauty & Personal Care",
+    "description": "An e-commerce app for beauty and personal care products by Reliance Retail."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 67,
+    "grade": "C",
+    "one_liner": "A beauty shopping app that collects standard e-commerce data but shares it widely with advertisers and third parties.",
+    "summary": "Tira collects typical shopping app data like your name, address, phone, and payment info. It lets you upload photos and use voice search, which is optional. However, the policy allows broad sharing with advertising partners, data transfers outside India, and policy changes without direct notice.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While the app follows standard e-commerce practices, the broad data sharing with advertisers and third-party trackers, combined with unclear data deletion rights, warrants caution for privacy-conscious users."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_broad_third_party_sharing",
+        "title": "Data shared with advertisers and partners",
+        "plain_english": "The app shares your information with advertising companies, sponsors, and other business partners. They can also place cookies on your device to track you for targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_targeted_ad_tracking",
+        "title": "Browsing data used for targeted ads",
+        "plain_english": "The app collects your IP address, browser info, and where you came from to build a profile and show you targeted advertisements.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_transfer_abroad",
+        "title": "Data may be stored outside India",
+        "plain_english": "Your personal information can be transferred, stored, or processed in countries outside India, where data protection laws may be different.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_policy_changes_without_notice",
+        "title": "Policy can change without direct notice",
+        "plain_english": "The company can change this privacy policy at any time by posting a new version on the website. They do not promise to email or notify you directly when changes happen.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_uploaded_images_shared",
+        "title": "Uploaded photos may be processed by third parties",
+        "plain_english": "When you upload a photo for product search or your profile, that image may be processed by outside companies, and Tira says it is not responsible for how they handle it.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_secure_payments",
+        "title": "Payments handled by secure third parties",
+        "plain_english": "Your credit card and bank details are collected by trusted payment gateways using encryption. Tira does not store your raw payment info itself.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_kids_data",
+        "title": "Does not knowingly collect data from children",
+        "plain_english": "The app says it is not meant for users under 18, and if they learn a child signed up, they will delete that information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_available",
+        "title": "You can opt out of promotional emails",
+        "plain_english": "You can unsubscribe from marketing emails and newsletters using the unsubscribe link or by contacting their support team.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption_used",
+        "title": "Uses encryption and security measures",
+        "plain_english": "The company says it uses industry-standard security tools like firewalls and encryption to protect your personal information from unauthorized access.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your camera and microphone so you can search for products by taking a photo or using your voice, and to upload a profile picture. You must give permission first.",
+      "detail": "Camera and mic access are optional features for image search, voice search, and profile picture upload. The user must explicitly grant permission.",
+      "policy_excerpt": "Tira provides its Users with an option to search for Products by scanning or uploading images or by voice command... you provide explicit consent to us, to have access to your camera and gallery or the mic.",
+      "concerns": ["Images uploaded may be processed by third parties"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app asks for your device location when you install it, likely to help with delivery or show nearby stores.",
+      "detail": "Location permission is requested at install time. The policy mentions geo-location as part of collected information but does not specify background tracking.",
+      "policy_excerpt": "the App will require your permission to enable it to find the location of your Device.",
+      "concerns": ["Location is collected and may be shared with third parties"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your photo gallery so you can upload pictures for product searches or your profile.",
+      "detail": "Gallery access is requested for image uploads (product search and profile picture). No mention of broad file system scanning.",
+      "policy_excerpt": "have access to your camera and gallery or the mic, as the case may be, applications installed in your personal handheld phone or computer.",
+      "concerns": ["Uploaded images may be processed by third parties"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your information with payment gateways, advertisers, sponsors, and business partners. It also allows third-party advertisers to place tracking cookies on your device.",
+      "detail": "Broad sharing with third-party service providers, advertisers, sponsors, investors, strategic partners. Data may also be transferred outside India. Third-party cookies are allowed for ad targeting.",
+      "policy_excerpt": "We may, from time to time, be required to disclose the information collected from you to our trusted third-party service providers... We may allow other companies or entities to serve advertisements to you... Your information may also be transferred, stored, or processed in any country other than the one where you access Tira.",
+      "concerns": ["Broad third-party sharing", "Data transferred outside India", "Third-party ad cookies"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide personal details like your name, address, phone number, email, and date of birth to create an account and shop.",
+      "detail": "Standard e-commerce account data collection including name, password, mailing address, phone number, geo-location, email address, date of birth, and contact preferences.",
+      "policy_excerpt": "We may collect a variety of information from you, including your name, password, mailing address, phone number, geo-location, email address, date of birth and contact preferences.",
+      "concerns": ["Comprehensive personal data collection", "Data may be linked to advertising profile"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks your IP address, browser type, and browsing patterns to show you targeted ads and allows advertisers to follow you with cookies.",
+      "detail": "IP address, browser type, OS, email patterns, and ISP are collected for trend analysis. Third-party ad companies are allowed to place/recognize cookies for targeted advertising.",
+      "policy_excerpt": "we automatically receive the uniform resource locator of the site from which you visit... the internet protocol ('IP') address of each User's computer operating system; the type of web browser the User is using; email patterns... We may allow other companies or entities to serve advertisements to you... we may allow authorised third parties to place or recognise a unique cookie on the User's browser.",
+      "concerns": ["IP and browsing data used for profiling", "Third-party ad cookies for tracking"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app says it is not for kids under 18 and will delete their data if discovered.",
+      "detail": "Explicitly states the app is not directed at minors under 18 and commits to deleting data if a minor's information is collected without consent.",
+      "policy_excerpt": "Tira is not directed toward minors. We do not knowingly collect Personal Information from any User who is under 18... we will take steps to delete the information within a reasonable time frame.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browser type, and which websites you visited before and after using Tira to analyze trends.",
+      "detail": "Standard web logging including IP address, OS, browser type, referring URL, and exit URL. Used for trend analysis and service improvement.",
+      "policy_excerpt": "we automatically receive the uniform resource locator of the site from which you visit, access, or browse Tira; details of the website you visit on leaving Tira; the internet protocol ('IP') address of each User's computer operating system; the type of web browser the User is using.",
+      "concerns": ["IP address logged continuously", "Referrer and exit URLs tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device type, operating system, and browser info to understand user trends and improve the app.",
+      "detail": "Collects IP address, OS, browser type, and ISP. Claimed to be non-personally identifiable and used for trend analysis only.",
+      "policy_excerpt": "the internet protocol ('IP') address of each User's computer operating system; the type of web browser the User is using; email patterns; and the name of the User's internet service provider. This information is used solely to analyse overall User trends.",
+      "concerns": ["Device info linked to IP and browsing behavior"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric information.",
+      "detail": "No mention of health or biometric data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment details like your card number are handled by outside payment companies using encryption. Tira does not store your card info directly.",
+      "detail": "Financial information is collected by third-party payment gateways through encrypted channels. Tira does not handle raw card data directly.",
+      "policy_excerpt": "A third-party payment gateway provider may be required to collect certain financial information from you... All Financial Information collected from you by such third-party payment gateway providers will be used only for billing and payment processes... transacted through secure digital platforms of approved payment gateways, which are under encryption.",
+      "concerns": ["Third-party payment processors may collect financial data"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can contact them to update or delete your information, but they keep data as long as the law allows. Withdrawing consent only stops future collection, it does not erase past data.",
+      "detail": "Users can request deletion or correction by contacting help@tirabeauty.com. However, data is retained as long as necessary for business purposes or as required by law. Consent withdrawal is prospective only.",
+      "policy_excerpt": "You may, at any time, withdraw your consent for the collection and use of your information... your decision to withdraw your consent is prospective in nature and will not affect the processing of Personal Information based on your previous consent... We will retain your information and any data for the period necessary to fulfil the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted under the applicable law.",
+      "concerns": ["Deletion rights are vague", "Consent withdrawal does not erase historical data"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company can change this privacy policy anytime by posting a new version on the website. They encourage you to check it when you visit, but they do not promise to notify you directly.",
+      "detail": "Policy can be amended at any time and updates are posted on the website. No commitment to direct user notification (email/push) when changes occur.",
+      "policy_excerpt": "We reserve the right to amend this Privacy Policy at any time. The Privacy Policy, as and when modified, shall be updated on Tira. We encourage you to review this Privacy Policy whenever you visit Tira.",
+      "concerns": ["No guaranteed direct notification of policy changes"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 66.75,
+    "final_score": 67,
+    "grade": "C"
+  }
+}

@@ -99,7 +99,7 @@
       "concerns": [
         "Policy is silent on explicit camera or microphone access"
       ],
-      "score_impact": -7.5
+      "score_impact": 7.5
     },
     {
       "id": "location_gps",
@@ -117,7 +117,7 @@
         "Real-time location collected",
         "Location data used for advertising and shared with third parties"
       ],
-      "score_impact": -9.75
+      "score_impact": 9.75
     },
     {
       "id": "contacts_phonebook",
@@ -135,7 +135,7 @@
         "Address book and contacts accessed from device storage",
         "Contact information of order recipients collected"
       ],
-      "score_impact": -13
+      "score_impact": 13
     },
     {
       "id": "storage_file_access",
@@ -153,14 +153,14 @@
         "Broad file metadata access on device",
         "Photos, audio, and video clips potentially scanned"
       ],
-      "score_impact": -6.5
+      "score_impact": 6.5
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
@@ -173,15 +173,15 @@
         "De-identified data shared without limitation",
         "Data may transfer in a merger or sale"
       ],
-      "score_impact": -19.5
+      "score_impact": 19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
       "risk": "risky",
-      "access_type": "continuous",
-      "required_for_core_function": true,
+      "access_type": null,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
       "plain_english": "Meesho collects extensive personal information including your name, income, employer, and government IDs like Aadhaar and PAN, then uses it for advertising and recommendations.",
@@ -192,7 +192,7 @@
         "Identity data linked to advertising and marketing profiles",
         "Preferences shared with network followers for promotion"
       ],
-      "score_impact": -9.75
+      "score_impact": 9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -212,7 +212,7 @@
         "Third-party cookies used for marketing",
         "No clear opt-out mechanism described"
       ],
-      "score_impact": -16.25
+      "score_impact": 16.25
     },
     {
       "id": "childrens_data",
@@ -229,15 +229,15 @@
       "concerns": [
         "No technical age verification mechanism"
       ],
-      "score_impact": -3
+      "score_impact": 3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
       "risk": "risky",
-      "access_type": "continuous",
-      "required_for_core_function": true,
+      "access_type": null,
+      "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
       "plain_english": "Meesho logs your IP address, the last website you visited before opening Meesho, your clicks, searches, and pages viewed, and uses this data for advertising.",
@@ -248,7 +248,7 @@
         "Network data used for advertising and profiling",
         "Shared with service providers for analytics"
       ],
-      "score_impact": -3.25
+      "score_impact": 3.25
     },
     {
       "id": "device_fingerprinting",
@@ -267,7 +267,7 @@
         "List of other installed apps gathered",
         "Device signals used for profiling and ad targeting"
       ],
-      "score_impact": -9.75
+      "score_impact": 9.75
     },
     {
       "id": "health_biometric",
@@ -289,9 +289,9 @@
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": null,
       "required_for_core_function": false,
-      "optional_access": true,
+      "optional_access": false,
       "background_access": false,
       "plain_english": "Meesho collects your billing and payment card information and shares it with PCI compliant payment gateway processors to complete your purchases.",
       "detail": "The policy states that transactional information including billing and credit or payment card information is collected and shared with third-parties that assist in processing requests, including PCI compliant payment gateway processors. The company also uses scoring methods to assess credit risks.",
@@ -300,7 +300,7 @@
         "Payment data collected and shared with processors",
         "Credit risk scoring methods used"
       ],
-      "score_impact": -4.5
+      "score_impact": 4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -319,7 +319,7 @@
         "Data may be retained for legal or fraud purposes",
         "Anonymized data kept for research"
       ],
-      "score_impact": -3
+      "score_impact": 3
     },
     {
       "id": "policy_change_notification",
@@ -337,7 +337,7 @@
         "Continued use equals acceptance",
         "No advance notice period specified"
       ],
-      "score_impact": -1.5
+      "score_impact": 1.5
     }
   ],
   "scoring": {

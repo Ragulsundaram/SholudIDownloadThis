@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://faq-in.uniqlo.com/articles/en_US/FAQ/UQIN-Privacy-Policy/",
+    "terms_url": "",
+    "policy_last_updated": "2021-06-14",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "uniqlo-india-clothing-store",
+    "name": "UNIQLO India: Clothing Store",
+    "developer": "UNIQLO CO., LTD.",
+    "app_store_url": "https://apps.apple.com/in/app/uniqlo-india-clothing-store/id1468226358",
+    "app_store_id": "1468226358",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ce/8b/7f/ce8b7f05-edbd-3c90-ca78-0c7193087df8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion",
+    "description": "Japanese fashion retailer's India app offering minimalist, high-quality everyday clothing for men, women, and kids with in-store and online shopping features."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "UNIQLO India collects standard shopping data and uses cookies for personalized ads, but explicitly states it does not sell your personal information and limits sharing to affiliates and service providers.",
+    "summary": "UNIQLO India's privacy policy is a standard retail privacy policy. It collects personal information for order processing, marketing, and fraud prevention. It uses cookies and device identifiers for personalized ads and builds individual profiles for product recommendations. Data is shared with parent company Fast Retailing, affiliates, and service providers. Notably, the app does not sell personal information and promises not to materially weaken privacy protections without consent. The policy is silent on camera, contacts, storage, and health data.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about cookie-based tracking, personalized ads, and data sharing with a Japanese parent company, consider the trade-off before installing."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_third_party_cookies",
+        "title": "Third-party cookies for marketing",
+        "plain_english": "UNIQLO uses cookies from third-party partners for marketing and analytical purposes, which may track you across websites.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_profile_building",
+        "title": "Builds individual profile for recommendations",
+        "plain_english": "UNIQLO creates an individual profile for you to understand your preferences and offer products of your interest, using your browsing and purchase data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Collects precise GPS location",
+        "plain_english": "With your consent, UNIQLO collects your precise GPS location to show nearby stores and provide location-based services.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_id",
+        "title": "Collects unique device identifier",
+        "plain_english": "UNIQLO collects a unique identifier for your device to recognize your browser and provide personalized features.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Explicitly does not sell data",
+        "plain_english": "UNIQLO explicitly states it is not in the business of selling, renting, sharing, or otherwise disclosing personal information to third parties except as set out in the privacy policy.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_material_change_protection",
+        "title": "Material changes require consent",
+        "plain_english": "UNIQLO promises it will never materially change its policies to make them less protective of customer information collected in the past without the consent of affected customers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Uses SSL encryption",
+        "plain_english": "UNIQLO uses Secure Sockets Layer (SSL) software to encrypt information you input during transmission.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_unsubscribe",
+        "title": "Marketing emails can be unsubscribed",
+        "plain_english": "You can unsubscribe from UNIQLO's marketing emails by clicking the unsubscribe link at the bottom of their emails.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your camera or microphone.",
+      "detail": "No explicit mention of camera or microphone access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "UNIQLO collects your precise GPS location after obtaining your consent to show nearby stores and provide location-based services.",
+      "detail": "Location is collected with consent to enhance app use by providing information about nearby stores. Turning off location services may affect certain features.",
+      "policy_excerpt": "When you use the App, after obtaining your consent, we may collect and use your precise (or GPS) location information collected from the App to enhance your use of the App by providing you with information regarding nearby stores etc.",
+      "concerns": ["GPS location collected", "Used for store recommendations"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "No explicit mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses files or storage on your device.",
+      "detail": "No explicit mention of storage or file access permissions in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO shares your data with its parent company Fast Retailing Co., Ltd., affiliates, and service providers for functions like email, data analysis, and marketing. It explicitly states it does not sell personal information.",
+      "detail": "Data is shared with parent company, affiliates, and service providers on a limited basis. In case of acquisition, customer information may be disclosed. Information may also be shared with government authorities when required by law.",
+      "policy_excerpt": "We are not in the business of selling, renting, sharing or otherwise disclosing it to any third party except as set out in this privacy policy... We share information on a limited basis with our parent company and affiliates who provide services on our behalf. We also share it on a limited basis with service providers we use from time to time to provide services on our behalf.",
+      "concerns": ["Data shared with Japanese parent company", "Service providers receive data", "May be disclosed in acquisition"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO collects your name, address, email, phone, date of birth (if necessary), and payment card details when you create an account or make purchases.",
+      "detail": "Standard account information collected for order processing, delivery, and marketing. Payment card details are collected and encrypted during transmission.",
+      "policy_excerpt": "We may, for example, keep a secure record of your name, address, date of birth (if necessary), delivery address, email address, telephone number and payment card details and such other personal information including sensitive personal data that you provide.",
+      "concerns": ["Payment card details stored", "Date of birth collected if necessary"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO uses cookies to track your browsing behavior and build a profile of your interests to show you personalized advertisements and product recommendations.",
+      "detail": "Cookies and device identifiers are used for personalized ads, recommendations, and marketing. Third-party cookies are used for marketing and analytics. Email open tracking is used.",
+      "policy_excerpt": "We use 'cookies' and we obtain certain types of information when your Web browser accesses the Website or advertisements and other content served by or on behalf of the Website on other Web sites... To create an individual profile for you so that we can understand and respect your preferences and offer products of your interest.",
+      "concerns": ["Cookies used for personalized ads", "Third-party cookies for marketing", "Individual profile built for recommendations"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO says its platform is for adults who can legally contract (18+). If you are under 18, you must use the platform under adult supervision.",
+      "detail": "No explicit age verification mechanism. The policy states that use is available only to persons who can form a legally binding contract, and those under 18 must use under supervision.",
+      "policy_excerpt": "Use of our Platform is available only to persons who can form a legally binding contract under the Indian Contract Act, 1872. If you are under the age of 18 years then you must use the Platform, application or services under the supervision of your parent, legal guardian, or any responsible adult.",
+      "concerns": ["No technical age verification", "18+ requirement but not enforced"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO collects your IP address and uses cookies to track your browsing activity when you visit their website or interact with their ads on other sites.",
+      "detail": "IP address and cookie data are collected automatically during website/app usage. This information is used for internal analysis and personalized content.",
+      "policy_excerpt": "like many websites, we use 'cookies' and we obtain certain types of information when your Web browser accesses the Website or advertisements and other content served by or on behalf of the Website on other Web sites.",
+      "concerns": ["IP address collected", "Cross-site cookie tracking"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO collects a unique identifier for your device to recognize your browser and provide personalized features and advertisements.",
+      "detail": "Device unique identifier is collected automatically. Used for internal analysis and personalized content delivery.",
+      "policy_excerpt": "Uniqlo may also receive/store information about your location and your mobile device, including a unique identifier for your device.",
+      "concerns": ["Unique device identifier collected", "Used for personalization"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app collects health or biometric data.",
+      "detail": "No explicit mention of health or biometric data collection in the privacy policy. The policy defines health condition as sensitive personal data under Indian law but does not state it is collected.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "UNIQLO collects your payment card details to process orders and encrypts the information using SSL during transmission.",
+      "detail": "Payment card details are collected during order processing. Only the last four digits are shown in order confirmations. Full card number is transmitted to the credit card company during processing.",
+      "policy_excerpt": "We work to protect the security of your information during transmission by using Secure Sockets Layer (SSL) software, which encrypts information you input... We reveal only the last four digits of your credit card numbers when confirming an order. Of course, we transmit the entire credit card number to the appropriate credit card company during order processing.",
+      "concerns": ["Full card number transmitted during processing"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO mentions a 'right to be forgotten' but requires you to email their Privacy Officer at privacy@uniqlo.in to request deletion. There is no self-service deletion option mentioned.",
+      "detail": "Users can exercise 'right to be forgotten' by contacting the Privacy Officer. No explicit mention of self-service account deletion or data export features.",
+      "policy_excerpt": "Uniqlo has utmost regard for your privacy and in case you want to exercise 'right to be forgotten', please contact our Privacy Officer at privacy@uniqlo.in",
+      "concerns": ["No self-service deletion", "Deletion requires email request"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "UNIQLO promises it will never materially change its policies to make them less protective of customer information collected in the past without getting your consent first.",
+      "detail": "The policy states that users should check the website frequently for changes, but explicitly promises that material changes making policies less protective will not apply to past data without customer consent.",
+      "policy_excerpt": "We stand behind the promises we make and will never materially change our policies and practices to make them less protective of customer information collected in the past without the consent of affected customers.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 72,
+    "final_score": 65,
+    "grade": "C"
+  }
+}

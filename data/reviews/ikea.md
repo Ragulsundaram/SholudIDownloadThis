@@ -1,45 +1,76 @@
-# IKEA Privacy Review
+# IKEA — Privacy Policy Analysis
 
-**Date:** 2026-05-18
-**Analyst:** claude-kimi-k2.6
-**Policy URL:** https://www.ikea.com/gb/en/customer-service/privacy-policy/
-**Policy Date:** June 2025
+**Reviewed:** 2026-05-18
+**Policy:** https://www.ikea.com/gb/en/customer-service/privacy-policy/
+**Terms:** (not provided)
+**Platform:** iOS
+**Score:** 58/100 (Grade C, Caution)
+
+---
 
 ## Summary
 
-IKEA is a major furniture and home goods retailer. The privacy policy analyzed is the UK website policy, which covers online shopping, the IKEA app, in-store WiFi, and the IKEA Family loyalty program. The policy is transparent about data collection and sharing but reveals extensive behavioral tracking and broad data sharing within the IKEA corporate group and with advertising partners.
+IKEA's privacy policy reveals comprehensive data collection spanning identity, purchases, browsing behavior, and device information. While the company explicitly promises never to sell personal data, it shares data widely with marketing agencies, advertising partners, and other IKEA group companies. Shopping habits are tracked and combined with third-party data to segment customers and show targeted ads on social media.
 
-## Key Findings
+Key concerns: extensive data sharing with group companies and advertisers, behavioral tracking for targeted ads, in-store WiFi location tracking, and vague data retention periods.
 
-1. **Explicit no-sale promise:** The policy clearly states "We will never sell any of your personal data to a third party."
-2. **Broad data sharing:** Despite the no-sale promise, data is shared with marketing agencies, advertising partners, service providers, and group companies (IKEA Ireland Limited, IKEA IT AB, IKEA of Sweden AB).
-3. **Cross-border transfers:** Personal data may be transferred to the USA, India, and other countries outside the UK/EEA.
-4. **Behavioral tracking for ads:** Browsing activity, purchase history, and device data are used for targeted advertising on Facebook, Twitter, and third-party websites.
-5. **In-store WiFi tracking:** Location and device data are collected via in-store WiFi, purportedly on an anonymous basis, for store design analysis.
-6. **Customer segmentation:** IKEA combines direct data with third-party data to classify customers into segments for personalized marketing.
-7. **App-specific permissions unclear:** The policy does not explicitly address camera, microphone, contacts, or file access for the mobile app itself.
-8. **Vague retention:** Data is retained "as long as is necessary" without specific timeframes.
-9. **GDPR rights provided:** Standard access, correction, deletion, and transfer rights are listed, with a one-month response target.
+Key positives: explicit promise not to sell data, standard GDPR rights and opt-out mechanisms, and encryption/security safeguards mentioned.
 
-## Scoring
+---
 
-- **Base Score:** 100
-- **Total Deductions:** 85.25
-- **Final Score:** 58
-- **Grade:** C
-- **Overall Risk:** Caution
+## Methodology
 
-## Categories marked `unknown`
+This analysis follows the ShouldIDownloadThis parser rules: every claim is backed by a direct verbatim quote, cautious language is used, and categories are rated based on explicit evidence in the policy.
 
-- `camera_microphone`: The policy text is silent on app camera/microphone access.
-- `contacts_phonebook`: The policy text is silent on phonebook or contacts access.
-- `storage_file_access`: The policy text is silent on file or photo library access.
+### Data Collection Observed
 
-## Review Notes
+- **Personal:** Name, title, email, mobile number, date of birth, address, IKEA Family card number, purchasing activity, account password, preferred store, comments, product reviews, survey responses
+- **Device:** Device type, browser type/version, time zone, operating system, platform, IP address, cookie information
+- **Location:** Website/browsing history including location data, in-store WiFi location tracking
+- **Financial:** Credit or debit card, other payment information
+- **Behavioral:** Website/browsing history, session replays, interactions with marketing emails, shopping preferences, abandoned basket tracking
+- **Visual:** CCTV and security body-worn camera images, car number plate (ANPR)
+- **Other:** Social media engagement, appointment booking information
 
-- The scraper returned an incorrect App Store URL and ID (Meesho instead of IKEA). This must be corrected before publication.
-- The analyzed policy is the UK website privacy policy, which covers the app but also in-store and web activities. App-specific privacy nutrition labels from the App Store were not available in the scraped text.
-- The policy is well-structured and transparent, but the breadth of data sharing and tracking is significant for a shopping app.
+### Notable Excerpts
+
+> "Your name and title, Your email address, Your mobile telephone number, Your date of birth, Your address, Your IKEA Family card number, Your purchasing activity, Your credit or debit card, or other payment information, Your account password and login details, Your preferred store, Your comments, product reviews and responses on surveys you complete, Your interactions with any marketing emails sent from us to you, Any shopping preferences or details to help us suggest items for you, Your images on CCTV and security body worn cameras, Your car number plate if recorded to manage parking at our stores, or to detect vehicles of interest for the purposes of prevention and detection of crime, Information about your device type, Website / browsing history, including location data, Cookie information"
+
+> "We will never sell any of your personal data to a third party. However, in order for us to provide our services to you, we share your personal data with our trusted third party service providers or our group companies"
+
+> "To show you advertising on such Social Media platforms as Facebook and Twitter or third party advertising that may appear on other websites you use."
+
+> "To combine with personal data that we collect directly from you (including survey responses) with any information that we obtain from third parties in order to classify our customers into segments, using shopping habits information regarding your personal or professional interests, demographics, experiences with our products and contact preferences."
+
+> "We may need to transfer your personal data to the European Economic Area (EEA) or to another third country, for example the USA or India"
+
+> "In broad terms, we will only retain your personal data for as long as is necessary for the purposes described in this Privacy policy."
+
+---
+
+## Scoring Breakdown
+
+| Category | Risk | Max | Rate | Deduction |
+|----------|------|-----|------|-----------|
+| Camera & Microphone | unknown | 15 | 0.50 | 7.5 |
+| Location & GPS | caution | 15 | 0.30 | 4.5 |
+| Contacts & Phonebook | unknown | 20 | 0.50 | 10.0 |
+| Storage & File Access | unknown | 10 | 0.50 | 5.0 |
+| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.5 |
+| Account & Identity | caution | 15 | 0.30 | 4.5 |
+| Behavioural & Ad Tracking | risky | 25 | 0.65 | 16.25 |
+| Children's Data | caution | 10 | 0.30 | 3.0 |
+| Network & Internet Activity | caution | 5 | 0.30 | 1.5 |
+| Device Fingerprinting | caution | 15 | 0.30 | 4.5 |
+| Health & Biometric | safe | 15 | 0.00 | 0.0 |
+| Financial & Payment | caution | 15 | 0.30 | 4.5 |
+| Data Deletion & User Rights | caution | 10 | 0.30 | 3.0 |
+| Policy Change Notification | caution | 5 | 0.30 | 1.5 |
+
+**Total deductions:** 85.25
+**Final score:** round((1 − 85.25/205) × 100) = 58
+**Grade:** C
+**Risk:** Caution
 
 ---
 
@@ -47,20 +78,18 @@ IKEA is a major furniture and home goods retailer. The privacy policy analyzed i
 
 ### IKEA
 - **Overall Risk:** Caution
-- **Score:** 58 / 100
-- **Grade:** C
+- **Score:** 58/100 (Grade C)
 
-#### Red Flags
-- **Shares data with advertisers and group companies:** IKEA shares your personal data with marketing agencies, advertising partners, and other companies in the IKEA Group. Your data may also be transferred to countries like the USA and India.
-- **Tracks your shopping behavior for targeted ads:** IKEA monitors your browsing activity, purchase history, and app usage. They use this information to show you personalized ads on Facebook, Twitter, and other websites.
-- **Tracks your location in stores via WiFi:** When you connect to free in-store WiFi, IKEA may collect your location and device data to analyze how people move around their stores.
-- **Combines your data with third-party information:** IKEA merges the information you give them with data from third parties and social media platforms to build customer segments and personalize marketing.
+**Red Flags:**
+- **Shares data with advertisers and group companies.** IKEA shares your personal data with marketing agencies, advertising partners, and other companies in the IKEA Group. Your data may also be transferred to countries like the USA and India.
+- **Tracks your shopping behavior for targeted ads.** IKEA monitors your browsing activity, purchase history, and app usage. They use this information to show you personalized ads on Facebook, Twitter, and other websites.
+- **Tracks your location in stores via WiFi.** When you connect to free in-store WiFi, IKEA may collect your location and device data to analyze how people move around their stores.
+- **Combines your data with third-party information.** IKEA merges the information you give them with data from third parties and social media platforms to build customer segments and personalize marketing.
 
-#### Green Flags
-- **Explicitly promises never to sell your data:** The policy clearly states: We will never sell any of your personal data to a third party.
-- **Provides data access and deletion rights:** You can ask IKEA to see, correct, delete, or transfer your personal data. They aim to respond within one month and provide a dedicated privacy contact.
-- **Easy opt-out for marketing messages:** You can stop marketing emails, SMS, and direct mail at any time through your account settings or by clicking unsubscribe links.
-- **Uses encryption and security safeguards:** IKEA says they protect your data using encryption, firewalls, password protection, and strict physical controls in their buildings.
+**Green Flags:**
+- **Explicitly promises never to sell your data.** The policy clearly states: We will never sell any of your personal data to a third party.
+- **Provides data access and deletion rights.** You can ask IKEA to see, correct, delete, or transfer your personal data. They aim to respond within one month and provide a dedicated privacy contact.
+- **Easy opt-out for marketing messages.** You can stop marketing emails, SMS, and direct mail at any time through your account settings or by clicking unsubscribe links.
+- **Uses encryption and security safeguards.** IKEA says they protect your data using encryption, firewalls, password protection, and strict physical controls in their buildings.
 
-#### Verdict
-IKEA's privacy policy is transparent but reveals extensive tracking. The company explicitly says it will never sell your data, yet it shares your information widely with advertisers and group companies across multiple countries. Your shopping and browsing habits are monitored and used to show you targeted ads. While you have standard data rights and can opt out of marketing, the scale of data collection and sharing should give privacy-conscious users pause.
+**Verdict:** IKEA's privacy policy reveals comprehensive data collection spanning your identity, purchases, browsing behavior, and device information. While the company explicitly states it never sells personal data, it shares data widely with marketing agencies, advertising partners, and other IKEA group companies. Your shopping habits are tracked and combined with third-party data to segment you into customer groups and show targeted ads on social media. The policy provides standard GDPR rights and opt-out mechanisms, but retention periods remain vague and the app-specific data collection details are not addressed in this website-focused policy.

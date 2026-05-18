@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://finchcare.com/privacy",
+    "terms_url": "",
+    "policy_last_updated": "2025-10-27",
+    "needs_review": true,
+    "review_notes": "Camera & Microphone and Storage & File Access are rated Unknown because the privacy policy is silent on whether the app accesses the device camera, microphone, or local files. The Contact Sync feature uses privacy-preserving cryptographic hashing. Mental health content is encrypted server-side by default; Advanced Data Protection offers client-side encryption."
+  },
+  "app": {
+    "slug": "finch-self-care-pet",
+    "name": "Finch: Self-Care Pet",
+    "developer": "Finch Care Public Benefit Corporation",
+    "app_store_url": "https://apps.apple.com/in/app/finch-self-care-pet/id1528595748",
+    "app_store_id": "1528595748",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/77/b7/2877b7e3-a30b-f618-d340-3cc5ff02b66d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "",
+    "description": "A self-care app where you raise a digital pet to build healthy mental health habits."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "A mental health pet app with strong encryption options, but it tracks you for ads and stores sensitive reflections on company servers by default.",
+    "summary": "Finch: Self-Care Pet wraps mental wellness tracking in a cute digital pet experience. The developer explicitly refuses to sell personal data and offers end-to-end encryption for private journal entries through Advanced Data Protection. However, the app still collects advertising identifiers, monitors your behavior for its own marketing campaigns, and stores sensitive mental health reflections on its servers unless you opt into the stricter encryption. The privacy policy is also silent on camera and file access.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects sensitive mental health content and engages in behavioral tracking for advertising. While it offers strong privacy controls, users should carefully configure settings before trusting it with personal reflections."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_behavioural_ad_tracking",
+        "title": "Tracks your behavior for personalized marketing",
+        "plain_english": "Finch collects your device advertising ID and watches how you use the app, then shares that information with social media platforms and advertising partners to show you personalized ads for Finch on other websites and apps.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_on_servers",
+        "title": "Mental health journals stored on company servers",
+        "plain_english": "The private reflections, goals, and journal entries you write in the app are stored on Finch's servers. While encrypted, the company holds the encryption keys by default, meaning they could access this sensitive mental health data if required by law.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Device identifiers collected for ad targeting",
+        "plain_english": "The app collects your device's unique identifiers and advertising ID, which are used to recognize your device and target you with marketing campaigns.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_childrens_data",
+        "title": "Cute pet design appeals to kids despite 13+ policy",
+        "plain_english": "Finch is a colorful digital pet app, which naturally attracts children under 13, yet the privacy policy says it is not meant for kids and offers no real age verification.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale_of_data",
+        "title": "Explicitly promises not to sell your data",
+        "plain_english": "Finch clearly states it does not sell, rent, or lease your personal information to third parties, and it does not show advertisements from other companies inside the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption_options",
+        "title": "Strong encryption for private journal entries",
+        "plain_english": "Your private reflections and journal entries are encrypted on Finch's servers. You can also turn on Advanced Data Protection, which gives you a private recovery key that only you hold, meaning Finch cannot read your content at all.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_in_app_deletion",
+        "title": "Easy in-app data deletion",
+        "plain_english": "You can delete your account and all your data directly inside the app by going to Settings and tapping 'Delete Data', without needing to email customer support.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_hashed_contacts",
+        "title": "Contact numbers are hashed before upload",
+        "plain_english": "If you use the optional Contact Sync feature, your contacts' phone numbers are converted into irreversible cryptographic hashes on your device before anything is sent to Finch's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_secure_payments",
+        "title": "Payments handled by third-party processors",
+        "plain_english": "Your credit or debit card details are processed by Shopify and other external payment gateways; Finch does not store your raw payment card information on its own servers.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your camera or microphone.",
+      "detail": "The policy makes no mention of camera or microphone access. It is unclear if the app requests these permissions for features like profile photos or voice input.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch does not ask for your precise GPS location, but it may estimate your rough location from your internet address when you use the app.",
+      "detail": "The policy states that a rough location estimate may be derived from your IP address through third-party service providers by default. No precise GPS or background location tracking is mentioned.",
+      "policy_excerpt": "We may derive a rough estimate of your location from your IP address when you use the Services, as is provided by default by some of our third-party service providers.",
+      "concerns": ["Location inferred from IP address automatically"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you choose to use Contact Sync, the app reads your phone's contacts and uploads hashed phone numbers to find friends who also use Finch. The actual phone numbers are never stored.",
+      "detail": "Contact Sync is optional. The app hashes contacts' phone numbers cryptographically before uploading, so Finch cannot reverse the hashes to see the real numbers. Your own phone number, if submitted, may be matched by other users.",
+      "policy_excerpt": "If you use Contact Sync, you will give the Finch app permission to access the contacts stored on your phone... Finch will not store your contacts' phone numbers, but only an encrypted 'hash' of them.",
+      "concerns": ["Contacts accessed if optional feature is enabled", "User's own phone number may be discoverable by other users via Contact Sync"],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your photos or files stored on your device.",
+      "detail": "There is no mention of device storage, photo library, or file system access in the privacy policy. App content like reflections is stored on servers, not locally accessed files.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage and file access"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch shares some of your information with service providers, analytics companies, and social media platforms to run the app and promote its own services, but it promises not to sell your data.",
+      "detail": "The company shares data with hosting, email, advertising/marketing, payment, analytics, and customer support services. It also shares limited information with social media platforms for personalized advertising of Finch's own services. Third-party sponsors may receive account status and aggregated usage data. Finch explicitly states it does not sell personal information.",
+      "policy_excerpt": "We do not sell, rent, license, or lease your personal information to third parties. We may share personal information with: Service Providers... Third-Party Sponsors and Benefit Providers... We do not run ads for other companies on the Services.",
+      "concerns": ["Data shared with advertising and marketing service providers", "Identification and activity info shared with social media platforms for personalized ads", "Third-party sponsors receive aggregated engagement data"],
+      "score_impact": -9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use Finch without creating an account, but if you sign up, you give your name, email, and other details. Your phone number is hashed so Finch never sees the real number.",
+      "detail": "Account registration is optional; the app can store data locally. If you register, Finch collects name, email, hashed phone number, mailing/billing addresses, gender, age, and birthday. The phone number is securely hashed and masked.",
+      "policy_excerpt": "If you choose to do so, you may register for a Finch account that will be linked to a secure hash of your phone number... If you choose to provide it, we will store your name, email address, (hashed) phone number, mailing/billing addresses, gender, age, and birthday.",
+      "concerns": ["No anonymous cross-device sync possible", "Identity data may be shared with advertising partners for promotional campaigns"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch tracks how you use the app and collects your device's advertising identifier to show you personalized ads for Finch on social media and other websites.",
+      "detail": "The app logs usage information (content viewed, features used, actions, time and duration) and uses cookies, local storage, and web beacons. It shares identification and internet activity information with social media platforms and advertising partners for personalized ads. Users can opt out via device settings.",
+      "policy_excerpt": "We may share Identification Information and Internet Activity Information with social media platforms and other advertising partners for the purpose of serving you personalized advertisements from us on social media platforms and other third party websites.",
+      "concerns": ["Advertising identifiers collected", "Usage behavior tracked and shared with advertising partners", "Personalized ads served on external platforms"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch says it is not for children under 13 and will delete a child's data if discovered, but the cute pet design naturally attracts younger kids and there is no real age check.",
+      "detail": "The app's digital pet mechanics and colorful design are strongly appealing to children, yet the policy claims a 13+ age limit with no enforcement mechanism. The company acknowledges legal barriers to serving under-13 users.",
+      "policy_excerpt": "Our Services are not directed to children who are under the age of 13. We do not knowingly collect personal information from children under the age of 13. If we learn that we have collected personal information from a child under the age of 13 without the consent of the child's parent or guardian as required by law, we will delete that information.",
+      "concerns": ["App design strongly appeals to children under 13", "No age verification mechanism in place"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch automatically logs your internet address, device type, and how you use the app to study trends and fix problems.",
+      "detail": "The policy logs device information (manufacturer, model, OS, browser, IP, unique identifiers) and usage information automatically. Third-party analytics services are used. IP addresses may be used for rough location estimation.",
+      "policy_excerpt": "When you use the Services, we may automatically log the following information: Device Information: The manufacturer and model, operating system, browser type, IP address, and unique identifiers of the device... Usage Information: Information about how you use our Services...",
+      "concerns": ["Detailed usage patterns logged", "IP address used for location inference"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch collects your device's unique identifiers and advertising ID to recognize your device and target you with marketing.",
+      "detail": "The app collects manufacturer, model, operating system, browser type, IP address, and unique identifiers including advertising IDs. These are used for analytics and personalized advertising campaigns.",
+      "policy_excerpt": "Device Information: The manufacturer and model, operating system, browser type, IP address, and unique identifiers of the device you use to access the Services.",
+      "concerns": ["Advertising identifiers collected", "Unique device identifiers tracked"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Because Finch is a mental health app, the private reflections and goals you write are sensitive health information stored on the company's servers.",
+      "detail": "Journal entries, reflections, custom goals, and custom journeys are stored on servers encrypted by default. Advanced Data Protection offers client-side encryption with a user-held key. Without it, Finch holds the decryption keys.",
+      "policy_excerpt": "If you choose to enable a feature that lets you create an account... we may store the full content you write in reflections, custom goals, or custom journeys on our servers in an encrypted way.",
+      "concerns": ["Sensitive mental health content stored on external servers", "Company holds encryption keys by default"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your payment details are handled by Shopify and other external payment processors; Finch does not store your raw card information.",
+      "detail": "Payment card numbers and authentication details are collected by Shopify or other third-party processors. Finch stores only a tokenized version and does not maintain raw payment card data on its servers.",
+      "policy_excerpt": "Our payment processor(s) will collect the financial information necessary to process your payments, such as your payment card number and authentication details. Please note, however, that we store only a tokenized version of such information and do not maintain payment card information on our servers.",
+      "concerns": ["Payment data handled by third-party processors"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your data directly inside the app, and you can ask Finch to see, correct, or delete your personal information.",
+      "detail": "In-app deletion is available via Settings > Delete Data. The company promises deletion within 90 days. Users can also request access, correction, portability, restriction, and withdrawal of consent via email. Some legal retention limits may apply.",
+      "policy_excerpt": "You can delete your information at any time directly from the Services. In the Finch: Self Care Pet app, go to Settings... tap 'Delete Data', type 'DELETE', and tap 'Delete my data'. Completion of this flow will delete your information within 90 days of completion.",
+      "concerns": ["Deletion may take up to 90 days", "Legal obligations may limit complete erasure"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Finch can change its privacy policy at any time, and if you keep using the app after changes are posted, you automatically agree to them.",
+      "detail": "The policy states it may be changed at any time and continued use constitutes acceptance. Updates are posted on the policy page.",
+      "policy_excerpt": "We may change this Privacy Policy at any time. When we do, we will post an updated version on this page... By continuing to use our Services or providing us with personal information after we have posted an updated Privacy Policy... you consent to the revised Privacy Policy.",
+      "concerns": ["Continued use equals acceptance of changes", "No requirement for active re-consent"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 85.75,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

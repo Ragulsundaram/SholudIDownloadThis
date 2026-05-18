@@ -116,7 +116,7 @@ AJIO can change its privacy policy at any time and says that if you keep using t
 | Health & Biometric Data | Safe | 15 | 0% | 0.0 |
 | Financial & Payment Data | Caution | 15 | 30% | 4.5 |
 | Data Deletion & User Rights | Caution | 10 | 30% | 3.0 |
-| Policy Change Notification | Caution | 10 | 30% | 1.5 |
+| Policy Change Notification | Caution | 5 | 30% | 1.5 |
 | **Total** | | **205** | | **96.0** |
 
 **Formula:** `final_score = clamp(0, 100, round((1 - 96 / 205) * 100))` = **53**  

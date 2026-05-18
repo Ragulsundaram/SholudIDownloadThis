@@ -2,7 +2,7 @@
   "meta": {
     "schema_version": "1.0",
     "analyzed_at": "2026-05-18",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_by": "claude-kimi-k2.6",
     "policy_url": "https://www.ajio.com/privacypolicy",
     "terms_url": "",
     "policy_last_updated": "unknown",
@@ -103,7 +103,7 @@
       "detail": "The policy mentions camera and microphone access with user consent (Section 3.7) and states voice, image, and camera inputs are used to respond to user requests and improve services (Section 4.3). No background access is described.",
       "policy_excerpt": "When you use our voice, image and camera services, we use your voice input, images, videos, and other Information to respond to your requests, provide the requested Products to you, and improve our services or the Platform.",
       "concerns": [],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
@@ -118,7 +118,7 @@
       "detail": "Section 3.6 states the app may collect precise location data in the background with opt-in consent, even when closed or not in use, for nearby offline store updates, exclusive deals, and a smoother shopping experience. Users can disable this in device settings.",
       "policy_excerpt": "We may collect precise location data from your device in the background to provide relevant services, such as location-based notifications on offline stores related updates, exclusive deals, and a smoother shopping experience.",
       "concerns": ["Background tracking enabled by default after opt-in", "Used for marketing, not just delivery"],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "contacts_phonebook",
@@ -131,9 +131,9 @@
       "background_access": false,
       "plain_english": "The privacy policy does not say whether the app accesses your contacts or phonebook.",
       "detail": "No mention of contacts, phonebook, or address book access was found in the privacy policy.",
-      "policy_excerpt": "",
+      "policy_excerpt": "The policy does not mention contacts or phonebook access.",
       "concerns": ["Policy is silent on this category"],
-      "score_impact": 10
+      "score_impact": -10
     },
     {
       "id": "storage_file_access",
@@ -148,7 +148,7 @@
       "detail": "The policy mentions camera usage with consent (Section 3.7) and references images and videos in Section 4.3, implying user-initiated file access for product-related features. No broad library scanning is described.",
       "policy_excerpt": "The Platform also may collect other information about you in ways that the Platform describe to you or otherwise with your consent like the permission to access your location, camera usage, microphone access etc.",
       "concerns": [],
-      "score_impact": 3
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -163,7 +163,7 @@
       "detail": "Sections 5.1-5.4 and 5.7 describe sharing with third-party service providers (payment gateways, logistics), Reliance affiliates for cross-platform shopping experiences, and advertisers/sponsors. Data shared includes name, contact, email, gender, date of birth, purchase history, shopping preferences, saved addresses, payment information, and browsing behavior. Non-personal information is also shared with partners and developers (Section 5.8).",
       "policy_excerpt": "The Information collected from you may be shared with our affiliates for providing a seamless/smoother and integrated shopping experience on our Platforms and/or on other online platforms and/or offline stores managed and/or operated by us.",
       "concerns": ["Broad affiliate sharing for advertising and loyalty programs", "Aggregate personal info shared with advertisers and sponsors", "Potential transfer of data in a business sale"],
-      "score_impact": 19.5
+      "score_impact": -19.5
     },
     {
       "id": "account_identity",
@@ -171,14 +171,14 @@
       "icon": "UserCircle",
       "risk": "risky",
       "access_type": null,
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "AJIO requires your full name, phone number, email, gender, and date of birth, then links that identity to your shopping behavior and shares it across other platforms for ads and recommendations.",
       "detail": "Sections 3.2 and 3.3 state that Personal Information including full name, contact numbers, residential address, email, gender, and date of birth is collected. Section 5.7 confirms this is shared with affiliates and other platforms. The app uses this data to build a profile for personalized offers and recommendations (Sections 4.2.5, 4.2.8, 4.2.9).",
       "policy_excerpt": "We may collect a variety of Information from you, including your name, mailing address, phone number, email address and contact preferences... Personal Information shall include but is not limited to your full name, personal contact numbers, residential address, email address, gender, date of birth.",
       "concerns": ["Identity linked to advertising profile", "Shared across Reliance platforms without clear limits"],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "behavioural_ad_tracking",
@@ -193,7 +193,7 @@
       "detail": "Sections 4.2.5, 4.2.8, and 4.2.9 describe using browsing behavior for recommendations and marketing communications. Section 9.4 allows third-party ad servers and technology vendors to place cookies. Aggregate findings including personal info in unidentifiable form are shared with advertisers and sponsors (Section 9.1). Users can opt out of promotional emails (Section 10.1).",
       "policy_excerpt": "We may allow other companies or entities to serve advertisements that may be of interest to you. These companies or entities include third party advertisement servers, advertisement agencies, advertisement technology vendors and research firms. In the course of serving advertisements or optimizing the services to Users, we may allow authorised third parties to place or recognize a unique cookie on the User's browser.",
       "concerns": ["Third-party ad cookies allowed", "Browsing behavior used for targeted ads", "Limited opt-out only for promotional emails, not core tracking"],
-      "score_impact": 16.25
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -208,7 +208,7 @@
       "detail": "Section 3.5 states the Platforms are not directed towards minors, they do not knowingly collect data from users under 18, and will delete information within a reasonable time if discovered. No age verification mechanism is described.",
       "policy_excerpt": "The Platforms are not directed towards minors. We do not knowingly collect Personal Information from any User who is under 18 (Eighteen) years.",
       "concerns": ["No age verification mechanism described"],
-      "score_impact": 3
+      "score_impact": -3
     },
     {
       "id": "network_internet_activity",
@@ -216,21 +216,21 @@
       "icon": "Wifi",
       "risk": "caution",
       "access_type": "continuous",
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "The app automatically records your IP address, browser type, and internet provider to study overall user trends and improve its services.",
       "detail": "Section 9.1 states the app automatically receives the URL of the referring site, IP address, OS, browser type, email patterns, and ISP name. This is used for trend analysis and improving services. The link between IP and personally identifiable info is not shared with third parties without permission, except when required by law. Aggregate findings are shared with advertisers, sponsors, and partners.",
       "policy_excerpt": "When you visit, access or browse the Platforms, we automatically receive the uniform resource locator of the site from which such you visit... the internet protocol address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider.",
       "concerns": ["Aggregate network data shared with advertisers and sponsors"],
-      "score_impact": 1.5
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
       "risk": "risky",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
@@ -238,7 +238,7 @@
       "detail": "Section 3.2 mentions hardware identifiers and unique systems or application software as Non-Personal Information. Section 3.6 mentions Bluetooth and Wi-Fi signals for location collection. This data is combined with other information and used for platform improvement and cross-platform experiences.",
       "policy_excerpt": "Non-Personal Information includes data or information that doesn't personally identify you and may include hardware identifiers, unique systems or application software etc.",
       "concerns": ["Device signals used for location and profiling", "Combined with personal info to identify users"],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -251,7 +251,7 @@
       "background_access": false,
       "plain_english": "The app does not collect any health or biometric data.",
       "detail": "No mention of health, medical, or biometric data collection in the privacy policy.",
-      "policy_excerpt": "",
+      "policy_excerpt": "The policy does not mention health or biometric data.",
       "concerns": [],
       "score_impact": 0
     },
@@ -268,7 +268,7 @@
       "detail": "Section 3.3 lists financial information such as bank account, credit card, or debit card details as Sensitive Personal Data. Section 5.5 clarifies that third-party payment gateways collect and process this information under encryption for billing purposes only. The policy also disclaims liability for payment gateway actions. However, Section 5.7 mentions payment information is among data shared/stored, creating some ambiguity.",
       "policy_excerpt": "A third-party payment gateway provider may be required to collect certain financial information from you including, but not restricted to, your credit/debit card number or your bank account details... All Financial Information collected from the you by such third-party payment gateway providers will be used only for billing and payment processes.",
       "concerns": ["Policy ambiguous about whether AJIO itself retains payment info"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -283,7 +283,7 @@
       "detail": "Section 3.4 allows users to access, amend, alter, or require deletion by contacting customercare@ajio.com. No self-service deletion mechanism is described. The policy does not specify what data is fully deleted versus retained for legal or business purposes. Section 6 says information is retained as long as necessary for the purposes outlined or as required by law.",
       "policy_excerpt": "You may access, amend, alter or require deletion of your information partially or fully by contacting us at customercare@ajio.com.",
       "concerns": ["No in-app self-service deletion", "Retention for legal/business purposes not fully explained"],
-      "score_impact": 3
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -298,7 +298,7 @@
       "detail": "Section 11 states the Privacy Policy is subject to changes based on business, legal, or regulatory requirements. Significant changes are communicated on a best-effort basis. Continued use after changes is deemed acceptance.",
       "policy_excerpt": "While we make all reasonable efforts to communicate any significant changes to this Privacy Policy to you on best effort basis, we encourage you to review this Privacy Policy whenever you visit our Platforms to understand how your Information is used. Your continued use of the Platforms after any changes, modifications and amendments to this Privacy Policy will be deemed as your acceptance to such changes, modifications and amendments.",
       "concerns": ["Continued use equals acceptance", "Best-effort communication only for significant changes"],
-      "score_impact": 1.5
+      "score_impact": -1.5
     }
   ],
   "scoring": {

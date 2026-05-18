@@ -1,36 +1,96 @@
-# Urban Ladder — Privacy Review
+# Urban Ladder — Privacy Policy Analysis
 
-> **App:** Urban Ladder  
-> **Developer:** Urban Ladder Home Decor Solutions Private Limited  
-> **Platform:** iOS  
-> **Category:** Shopping  
-> **Policy URL:** https://www.urbanladder.com/privacy-policy  
-> **Analyzed:** 2026-05-18  
-> **Model:** kimi-k2.6-cloud  
-> **Needs Review:** Yes — scraped App Store URL appears incorrect (points to Lenskart Eyewear)
+**Reviewed:** 2026-05-18
+**Policy:** https://www.urbanladder.com/privacy-policy
+**Terms:**
+**Platform:** iOS
+**Score:** 59/100 (Grade C, Caution)
+
+---
+
+## Summary
+
+Urban Ladder's privacy policy reveals that the app records audio and video calls with customers for quality and training purposes, and these recordings may be shared with third parties when required by law. Your data may be transferred to a new owner if Urban Ladder is sold or reorganized. The app tracks your IP address, browser type, and the websites you visit before and after using the platform. On the positive side, Urban Ladder explicitly states it does not use personal information to target ads, provides a grievance officer, and allows opt-out of marketing communications.
+
+Key concerns: audio and video call recordings stored and potentially shared, data may be transferred in a corporate sale, browsing patterns tracked including referrer and exit URLs.
+
+Key positives: does not use personal information to target advertisements, has a dedicated grievance officer, allows opt-out of marketing, not directed at children.
+
+---
+
+## Methodology
+
+This analysis follows the ShouldIDownloadThis parser rules: every claim is backed by a direct verbatim quote, cautious language is used, and categories are rated based on the explicit evidence in the policy.
+
+### Data Collection Observed
+
+- **Personal:** Name, password, mailing address, phone number, email address, gender, date of birth
+- **Location:** IP address (no explicit GPS mention)
+- **Device:** IP address, operating system, browser type, internet service provider
+- **Behavioral:** Referrer URL, exit URL, browsing patterns, email patterns, cookies
+- **Financial:** Credit/debit card number, bank account details, payment instrument details (processed by third-party gateways)
+- **Other:** Audio and video recordings of calls, telephone records
+
+### Notable Excerpts
+
+> "We may also record video calls, audio calls carried out with you ('Audio, Video Recordings'), for the purpose of providing visual demonstration of our products, improving quality of service and assisting with any follow-up queries"
+
+> "We may also disclose or transfer your Information to any third party as a part of reorganization or a sale of the assets, division or transfer of a part or whole of us."
+
+> "We may share such telephone records or any other Audio, Video Recordings with third parties when required by law or when required to provide or facilitate the User with the services."
+
+> "We do not use Personal Information to target advertisements to you."
+
+> "when you visit, access or browse the Urban Ladder Platform, we automatically receive the uniform resource locator of the site from which such you visit, access or browse the Urban Ladder Platform, details of the website you visit on leaving the Urban Ladder Platform, the internet protocol ('IP') address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider."
+
+> "Urban Ladder Platform is not directed towards minors. We do not knowingly collect Personal Information from any User who is under 18 (Eighteen) years. If we are made aware that we have collected the Personal Information of a person below the age of 18 (Eighteen) years, we will take steps to delete the information within a reasonable time frame."
+
+> "The Financial Information collected from you is transacted through secure digital platforms of approved payment gateways which are under encryption, thereby complying with reasonably expected technology standards."
+
+---
+
+## Scoring Breakdown
+
+| Category | Risk | Max | Rate | Deduction |
+|----------|------|-----|------|-----------|
+| Camera & Microphone | risky | 15 | 0.65 | 9.75 |
+| Location & GPS | unknown | 15 | 0.50 | 7.5 |
+| Contacts & Phonebook | unknown | 20 | 0.50 | 10 |
+| Storage & File Access | unknown | 10 | 0.50 | 5 |
+| Data Sharing with 3rd Parties | risky | 30 | 0.65 | 19.5 |
+| Account & Identity | caution | 15 | 0.30 | 4.5 |
+| Behavioural & Ad Tracking | caution | 25 | 0.30 | 7.5 |
+| Children's Data | safe | 10 | 0.00 | 0 |
+| Network & Internet Activity | caution | 5 | 0.30 | 1.5 |
+| Device Fingerprinting | caution | 15 | 0.30 | 4.5 |
+| Health & Biometric | unknown | 15 | 0.50 | 7.5 |
+| Financial & Payment | caution | 15 | 0.30 | 4.5 |
+| Data Deletion & User Rights | caution | 10 | 0.30 | 3 |
+| Policy Change Notification | caution | 5 | 0.30 | 1.5 |
+
+**Total deductions:** 83.5
+**Final score:** round((1 − 83.5/205) × 100) = 59
+**Grade:** C
+**Risk:** Caution
 
 ---
 
 ## Summary Card
 
-**Overall Risk:** Caution  
-**Score:** 73 / 100  
-**Grade:** B
+### Urban Ladder
+- **Overall Risk:** Caution
+- **Score:** 59/100 (Grade C)
 
-### Red Flags
+**Red Flags:**
+- **Records audio and video calls.** Urban Ladder records your video calls and audio calls for product demonstrations, quality improvement, and follow-up queries. These recordings may be shared with third parties when required by law.
+- **Data may be transferred in corporate sale.** If Urban Ladder is sold, reorganized, or transfers its assets, your personal information may be disclosed or transferred to the new owner.
+- **Shares data with third-party service providers.** Urban Ladder shares your information with third-party service providers including payment gateways, and may share telephone records and audio/video recordings with third parties when required by law.
+- **Tracks your browsing before and after visiting.** Urban Ladder automatically collects the URL of the site you came from and the site you visit after leaving their platform, along with your IP address, operating system, browser type, and internet service provider.
 
-- **Audio and video calls are recorded.** When you speak with their team on a video or audio call, the app can record the conversation to help with service quality and follow-ups. These recordings might also be shared with others if required by law.
-- **Privacy policy can change without telling you.** The company can update its privacy rules at any time and will only post the new version on its website. They do not promise to email or notify you when changes happen, so you have to remember to check yourself.
-- **Third-party advertisers can track you.** Outside advertising companies are allowed to place tracking cookies on your device through the app. These cookies can help advertisers recognize your browser and show you ads based on a general profile.
-- **Your data may be sent outside your country.** Your information can be transferred to, stored, or processed in other countries by the company's affiliates, subsidiaries, and partners. They say these parties will protect your data the same way, but it means your data could leave India.
+**Green Flags:**
+- **Does not use personal info to target ads.** Urban Ladder explicitly states that it does not use your personal information to target advertisements to you.
+- **Has a dedicated grievance officer.** Urban Ladder has appointed a Grievance Officer (Sanjay Kawle) with a dedicated email address (grievanceofficer@urbanladder.com) for handling privacy complaints.
+- **Can opt out of marketing communications.** You can opt out of receiving promotional emails by clicking the unsubscribe link or contacting Urban Ladder directly.
+- **Not directed at children.** Urban Ladder states its platform is not directed towards minors under 18, and will delete information if discovered to have been collected from a child.
 
-### Green Flags
-
-- **Kids under 18 are protected.** The app is not meant for children, and if they accidentally collect data from someone under 18, they will delete it once they find out.
-- **You can request your data be deleted.** You can email the company to ask them to delete or change your personal information. You can also withdraw your permission for them to use your data.
-- **Payments handled by secure third parties.** When you pay for furniture, your card and bank details are processed by outside payment companies on encrypted, secure systems. The app says it does not handle the payment verification itself.
-- **Personal info not used for ad targeting.** The company says it does not use your personal details like your name or email to target advertisements directly to you. Ads are based on general, non-identifiable group profiles instead.
-
-### Verdict
-
-Urban Ladder is a typical furniture shopping app with average privacy practices. It collects the standard information needed to deliver products and manage your account, but it also records your customer service calls and allows third-party advertisers to track you with cookies. The biggest gap is that they can change their privacy policy at any time without sending you a notification, so you would have to keep checking the website to stay informed. Overall, it is reasonably safe to use if you are comfortable with these trade-offs.
+**Verdict:** Urban Ladder records your audio and video calls, may transfer your data in a corporate sale, and tracks your browsing patterns, but does not use personal information to target advertisements. If you are concerned about audio and video call recordings being stored and potentially shared, and the possibility of your data being transferred in a corporate sale, consider the trade-off before installing.

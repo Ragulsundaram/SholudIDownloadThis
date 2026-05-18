@@ -2,12 +2,12 @@
   "meta": {
     "schema_version": "1.0",
     "analyzed_at": "2026-05-18",
-    "analyzed_by": "claude-sonnet-4",
+    "analyzed_by": "claude-kimi-k2.6",
     "policy_url": "https://www.lenskart.com/privacy-policy?rd=n",
     "terms_url": "https://www.lenskart.com/terms-conditions",
     "policy_last_updated": "unknown",
     "needs_review": true,
-    "review_notes": "Scraped App Store URL incorrectly pointed to Pepperfry — corrected to actual Lenskart URL via iTunes API verification. Financial data storage wording is ambiguous ('stored on the Company's secure servers and/or in cookies'). Location and contacts access are not mentioned in the policy, leaving them as Unknown."
+    "review_notes": "Location and contacts access are not mentioned in the policy, leaving them as Unknown. Financial data storage wording is ambiguous ('stored on the Company's secure servers and/or in cookies')."
   },
   "app": {
     "slug": "lenskart-eyewear",
@@ -17,7 +17,7 @@
     "app_store_id": "970343205",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/75/9f/0c759fa6-7c63-f92f-c0d9-ccd7aaad5aaa/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg",
     "category": "Shopping",
-    "sub_category": "",
+    "sub_category": "Health & Beauty",
     "description": "Eyeglasses, sunglasses, and contact lenses shopping app with virtual 3D try-on features."
   },
   "verdict": {
@@ -103,7 +103,7 @@
       "detail": "The 3D Try On feature uses the camera to capture photos and facial scans. The app stores pupillary distance and face width measurements from the iPhone X TrueDepth camera. Facial data is not shared with third parties.",
       "policy_excerpt": "When you use our \"3D Try On\" services and submit your consent (or grant us permission to take), photo, facial scan, or other image of you. We don't share those photos, scans, or images, or any facial data captured in the facial scans, with any third parties.",
       "concerns": ["Facial scans retained for up to 5 years"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "location_gps",
@@ -116,9 +116,9 @@
       "background_access": false,
       "plain_english": "The privacy policy does not say whether the app collects or uses your location.",
       "detail": "No explicit mention of location or GPS access in the privacy policy.",
-      "policy_excerpt": "",
+      "policy_excerpt": "The policy does not mention location or GPS access.",
       "concerns": ["Policy is silent on location access"],
-      "score_impact": 7.5
+      "score_impact": -7.5
     },
     {
       "id": "contacts_phonebook",
@@ -131,9 +131,9 @@
       "background_access": false,
       "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
       "detail": "No explicit mention of contacts or phonebook access in the privacy policy.",
-      "policy_excerpt": "",
+      "policy_excerpt": "The policy does not mention contacts or phonebook access.",
       "concerns": ["Policy is silent on contacts access"],
-      "score_impact": 10
+      "score_impact": -10
     },
     {
       "id": "storage_file_access",
@@ -148,7 +148,7 @@
       "detail": "Users can upload photos for the 3D Try On service. The policy also mentions collecting information about installed applications.",
       "policy_excerpt": "When you use our \"3D Try On\" services and submit your consent... photo, facial scan, or other image of you.",
       "concerns": [],
-      "score_impact": 3
+      "score_impact": -3
     },
     {
       "id": "data_sharing_third_parties",
@@ -156,14 +156,14 @@
       "icon": "Share2",
       "risk": "caution",
       "access_type": null,
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "The company shares your information with affiliates, delivery partners, and other service providers to process your orders and run the business, but says it does not sell your data.",
       "detail": "Information is shared with affiliates, service providers, courier companies, and third-party platforms for order fulfillment and lead generation. The company claims to enter contractual arrangements for data protection and does not sell or rent personal information.",
       "policy_excerpt": "we may share your information with third parties such as affiliates of the company, service providers etc. We do not and will not sell or rent Your personal information to anyone, for any reason, at any time.",
       "concerns": ["Broad sharing with affiliates and third parties", "Data may be transferred outside India"],
-      "score_impact": 9
+      "score_impact": -9
     },
     {
       "id": "account_identity",
@@ -171,14 +171,14 @@
       "icon": "UserCircle",
       "risk": "caution",
       "access_type": null,
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "You must provide personal details like your name, email, phone number, and address to use the service, and you cannot use the app anonymously.",
       "detail": "The app collects name, email, login ID, password, phone numbers, gender, date of birth, and address. Anonymous use is not possible.",
       "policy_excerpt": "Once you register with Lenskart and sign in to our services, you are not anonymous to us.",
       "concerns": ["No anonymous usage possible"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "behavioural_ad_tracking",
@@ -193,7 +193,7 @@
       "detail": "The company collects advertising identifiers, unique device identifiers, and installed applications. It uses cookies to track user trends and Google Analytics for traffic measurement. Users may receive advertising messages and promotional offers.",
       "policy_excerpt": "We receive and store certain types of information whenever You interact with us including operating system version, hardware models, unique device identifiers, advertising identifiers, serial numbers, mobile network information and installed applications.",
       "concerns": ["Advertising identifiers collected", "Installed applications tracked", "No clear opt-out for behavioral tracking", "Cookies used for trend tracking"],
-      "score_impact": 16.25
+      "score_impact": -16.25
     },
     {
       "id": "childrens_data",
@@ -216,14 +216,14 @@
       "icon": "Wifi",
       "risk": "caution",
       "access_type": "continuous",
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "The company logs your internet activity and IP address on its servers for diagnostics and analytics.",
       "detail": "Server logs record user activities for diagnostic and analytical purposes. The IP address of the accessing machine is maintained in logs.",
       "policy_excerpt": "Our server logs Your activities for various diagnostic and analytical purposes. However, other than the IP address of Your machine from where You are accessing the Service, there are no other personal information maintained by the Company in the log.",
       "concerns": ["Activities logged for analytics"],
-      "score_impact": 1.5
+      "score_impact": -1.5
     },
     {
       "id": "device_fingerprinting",
@@ -238,7 +238,7 @@
       "detail": "Collects operating system version, hardware models, unique device identifiers, advertising identifiers, serial numbers, mobile network information, and installed applications.",
       "policy_excerpt": "We receive and store certain types of information whenever You interact with us including operating system version, hardware models, unique device identifiers, advertising identifiers, serial numbers, mobile network information and installed applications.",
       "concerns": ["Advertising identifiers collected", "Serial numbers collected", "Installed applications tracked"],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "health_biometric",
@@ -253,7 +253,7 @@
       "detail": "The app collects eye prescription, pupillary distance, face width measurements, and facial scans. This data is retained for 5 years from the last use. Prescription details may be shared with third parties for order fulfillment.",
       "policy_excerpt": "Any photo, facial data or other image that you may share with us, we retain for a period of 5 years from the date of your last use of our website or as long as we continue to provide the services to you or as required by law.",
       "concerns": ["Facial and health data retained for 5 years", "Prescription details shared with third parties", "Biometric measurements stored on servers"],
-      "score_impact": 9.75
+      "score_impact": -9.75
     },
     {
       "id": "financial_payment",
@@ -261,14 +261,14 @@
       "icon": "CreditCard",
       "risk": "caution",
       "access_type": null,
-      "required_for_core_function": false,
+      "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
       "plain_english": "The app handles your payment details during checkout and says it encrypts this information, but the policy wording about where card data is stored is unclear.",
       "detail": "The policy mentions that credit card, debit card, and net-banking details are stored on the company's secure servers and/or in cookies. SSL encryption is used during transmission. The company connects electronically to users' financial accounts to process orders.",
       "policy_excerpt": "We work to protect the security of your information during transmission by using Secure Sockets Layer (SSL) software during the part where you enter your credit card or net banking details, which encrypts information You input.",
       "concerns": ["Ambiguous wording about storing card details on company servers and in cookies"],
-      "score_impact": 4.5
+      "score_impact": -4.5
     },
     {
       "id": "data_deletion_user_rights",
@@ -283,7 +283,7 @@
       "detail": "Users have rights to access, correction, erasure, grievance redressal, nomination, and withdrawal of consent. The company states that when information is updated, a copy of the prior version is usually kept for records. Data is retained as long as necessary to provide services or as required by law.",
       "policy_excerpt": "You can request us to delete or erase your personal data that you have shared with us and to correct and rectify any inaccurate personal data that you have shared. When You update information, we usually keep a copy of the prior version for our records.",
       "concerns": ["Prior versions of data retained", "Deletion may be limited by legal retention requirements"],
-      "score_impact": 3
+      "score_impact": -3
     },
     {
       "id": "policy_change_notification",
@@ -298,7 +298,7 @@
       "detail": "The policy states it may change periodically and that use of information is subject to the policy in effect at the time of use. Users may receive email reminders of notices and conditions.",
       "policy_excerpt": "Our business changes constantly. This Notice and the Terms and Conditions of Website Use may also change, and use of information that we gather now is subject to the Privacy Policy in effect at the time of use. We may e-mail periodic reminders of our notices and conditions.",
       "concerns": ["Continued use equals acceptance of changes", "No requirement for active re-consent"],
-      "score_impact": 1.5
+      "score_impact": -1.5
     }
   ],
   "scoring": {

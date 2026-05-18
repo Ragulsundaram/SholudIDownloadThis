@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "http://www.fitness22.com/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2019-04-02",
+    "needs_review": true,
+    "review_notes": "The privacy policy contains a glaring contradiction: the 'Human Version' claims the developer collects 'Nothing. None. Nada.' and has 'no personal information in the first place,' while the 'Full Version' explicitly lists collection of IP addresses, unique device identifiers, cookies, usage data, and sharing with Google Analytics, Mixpanel, AdSense, AdMob, and Facebook Ads. This misleading summary should be flagged. Additionally, the policy is silent on Camera & Microphone, Contacts & Phonebook, and Storage & File Access."
+  },
+  "app": {
+    "slug": "gymverse-gym-workout-planner",
+    "name": "Gymverse: Gym Workout Planner",
+    "developer": "FITNESS22 LTD",
+    "app_store_url": "https://apps.apple.com/in/app/gymverse-gym-workout-planner/id1048454034",
+    "app_store_id": "1048454034",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a2/65/21/a26521cb-5157-a6e3-e774-13173b373409/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "",
+    "description": "A gym workout planner app with guided routines and exercise tracking."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 66,
+    "grade": "C",
+    "one_liner": "A workout planner whose friendly 'human-readable' privacy policy dramatically understates the device tracking and ad profiling that actually happens behind the scenes.",
+    "summary": "Gymverse starts its privacy policy with a bold claim: 'Nothing. None. Nada.' — asserting it collects no personal information at all. But scroll down to the full legal version and the picture changes completely: the app collects your IP address, unique device identifiers, usage patterns, and location (if permitted), then shares this data with Google Analytics, Mixpanel, AdSense, AdMob, and Facebook for advertising and analytics. The developer explicitly promises not to store Apple Health data on its servers, which is a genuine positive. However, the contradiction between the simplified and full policy versions is misleading, and the app engages in meaningful behavioral ad tracking through multiple third-party networks.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The privacy policy is actively misleading, dramatically understating tracking in its 'human version' while the full version reveals extensive ad profiling and device fingerprinting. Users should not trust the simplified summary."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_misleading_policy",
+        "title": "'Human' privacy summary contradicts the full legal policy",
+        "plain_english": "The top of the policy says 'Nothing. None. Nada' about data collection, but the full legal version below reveals the app actually tracks your device, internet address, and behavior through multiple ad and analytics companies.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioural_ad_tracking",
+        "title": "Multiple ad networks track your device for targeted ads",
+        "plain_english": "The app uses Google AdSense, AdMob, and Facebook Ads, which place tracking cookies on your device and use your browsing behavior to show you personalized ads both inside and outside the app.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Unique device identifiers collected and shared",
+        "plain_english": "The app collects your mobile device's unique ID, IP address, and other diagnostic data, then sends it to Google Analytics and advertising partners to recognize and track your device.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_silent_categories",
+        "title": "Policy silent on camera, contacts, and files",
+        "plain_english": "The privacy policy does not mention whether the app can access your camera, microphone, contacts, or the files on your phone.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_transfer_to_israel",
+        "title": "Data may be transferred to Israel",
+        "plain_english": "The company is based in Israel and the policy says your data may be transferred there, where data protection laws may be different from your home country.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_health_data_storage",
+        "title": "Explicitly promises not to store Apple Health data",
+        "plain_english": "If you connect the app to Apple Health or Google Fit, the developer promises they do not keep, store, or share that health information on their servers, and they do not use it for advertising.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_name_storage",
+        "title": "Name data stays only on your device",
+        "plain_english": "Although the policy says it may ask for your name, it explicitly states this information is only stored locally on your phone and is never sent to the company's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_third_party_payments",
+        "title": "Payments handled by Apple and Google",
+        "plain_english": "Any in-app purchases are processed through Apple or Google Play payment systems; the developer says it does not collect or store your credit card information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_change_notice",
+        "title": "Promises notice before privacy policy changes",
+        "plain_english": "The company says it will notify you by email or through a prominent notice in the app before any privacy policy changes take effect.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your camera or microphone.",
+      "detail": "Neither the human nor the full version of the policy mentions camera, microphone, or any media permissions.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may collect your location only if you give it permission, and you can turn this off in your phone settings at any time.",
+      "detail": "Location Data is collected only with explicit user permission. The policy states it is used to provide features and customize the service. Users can enable or disable location services through device settings.",
+      "policy_excerpt": "We may use and store information about your location if you give us permission to do so ('Location Data'). We use this data to provide features of our Service, to improve and customize our Service. You can enable or disable location services when you use our Service at any time, through your device settings.",
+      "concerns": ["Location stored when permitted", "Purpose described as 'improve and customize' which is broad"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "There is no mention of contacts, address book, or phonebook access in either version of the policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your photos or files stored on your device.",
+      "detail": "The policy does not mention storage, photo library, or file system access. As a workout planner app, it may not need these permissions, but the silence is notable.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage and file access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your usage data and device information with Google Analytics, Mixpanel, and several advertising companies to show you ads and analyze how people use the app.",
+      "detail": "The full policy lists Google Analytics, Mixpanel, Google AdSense, AdMob, and Facebook Ads as third-party service providers. Google Analytics data is shared with other Google services. Google may use collected data to contextualize and personalize ads. The DoubleClick cookie enables Google and partners to serve interest-based ads. The developer claims not to sell personal data.",
+      "policy_excerpt": "We may use third-party Service Providers to monitor and analyze the use of our Service. Google Analytics... This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network. We may use third-party Service Providers to show advertisements to you... Google AdSense & DoubleClick Cookie... AdMob by Google... Facebook Ads.",
+      "concerns": ["Data shared with Google for analytics and ad personalization", "Mixpanel receives usage data", "Facebook Ads receives data for targeting", "DoubleCookie enables interest-based advertising"],
+      "score_impact": -9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The developer claims it does not collect or store your name, email, or other personal identity information on its servers.",
+      "detail": "The full policy says it may ask for first and last name but explicitly states this data is 'only stored in the app on your mobile device and not transferred to us.' The human version claims no personal information is collected at all.",
+      "policy_excerpt": "First name and last name (However, we do not store your name data on our servers anywhere. It is only stored in the app on your mobile device and not transferred to us)",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses Google AdSense, AdMob, and Facebook Ads to track how you use the app and show you personalized ads based on your behavior, both inside and outside the app.",
+      "detail": "The app uses Google Analytics and Mixpanel to track usage patterns. It also uses Google AdSense with DoubleClick cookies, AdMob, and Facebook Ads. Google's use of the DoubleClick cookie enables it and its partners to serve ads based on visits to this service or other websites. Google may use collected data to personalize ads on its own advertising network.",
+      "policy_excerpt": "Google, as a third party vendor, uses cookies to serve ads on our Service. Google's use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our Service or other websites on the Internet. Google may use the collected data to contextualize and personalize the ads of its own advertising network.",
+      "concerns": ["DoubleClick cookie used for interest-based advertising", "Google uses data to personalize ads on its network", "Facebook Ads integration for behavioral targeting", "Usage patterns tracked by Google Analytics and Mixpanel"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app says it is not meant for anyone under 18 and will delete a child's data if a parent reports it, but there is no age verification.",
+      "detail": "The policy states the service does not address anyone under 18 and that they do not knowingly collect personal information from children. If a parent reports that a child provided personal data, they will remove it. No enforcement or verification mechanism is mentioned.",
+      "policy_excerpt": "Our Service does not address anyone under the age of 18 ('Children'). We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.",
+      "concerns": ["No age verification mechanism", "Workout apps can appeal to teenagers under 18"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app automatically records your internet address, browser type, and device information through analytics services to study how people use the app.",
+      "detail": "Usage Data is collected automatically including IP address, browser type, browser version, visited pages, time and date of visit, time spent on pages, unique device identifiers, and other diagnostic data. This is shared with Google Analytics and Mixpanel.",
+      "policy_excerpt": "This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.",
+      "concerns": ["IP address and browsing activity logged by analytics", "Detailed usage patterns tracked continuously"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device's unique ID, operating system, and internet address to recognize your device and share this information with Google and advertising partners.",
+      "detail": "The policy explicitly lists collection of mobile device unique ID, IP address, mobile operating system, mobile internet browser type, and unique device identifiers. This data is sent to Google Analytics, Mixpanel, and advertising providers for tracking and ad targeting.",
+      "policy_excerpt": "When you access the Service by or through a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.",
+      "concerns": ["Mobile device unique ID collected", "Unique device identifiers tracked continuously", "Data shared with Google for ad targeting"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can connect to Apple Health or Google Fit to read workout data like calories and heart rate, but only with your permission, and the developer promises not to store or share that health information.",
+      "detail": "Apple HealthKit and Google Fit integration requires explicit user consent. The developer explicitly states they do not keep, store, or share this data, and do not use it for advertising. This is a strong positive for a fitness app.",
+      "policy_excerpt": "Fitness22 Does not keep or store this data, nor do we share or sell any user data at all, for any purpose. Fitness22 does not use any information gained through the HealthKit framework for advertising or similar services.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Any payments for premium features are handled by Apple or Google Play; the developer does not collect or store your credit card details.",
+      "detail": "The policy states that payment card details are provided directly to third-party payment processors (Apple Store In-App Payments, Google Play In-App Payments) and are governed by their privacy policies. The developer does not store payment information.",
+      "policy_excerpt": "We will not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use of your personal information is governed by their Privacy Policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask the company to see, correct, or delete your information, but since they claim not to store personal data on their servers, there may be little to delete.",
+      "detail": "GDPR rights are listed including access, rectification, objection, restriction, portability, and deletion. The policy says deletion can be requested through account settings or by contacting the company. However, the developer claims not to hold personal data in the first place, creating some ambiguity about what can actually be deleted.",
+      "policy_excerpt": "If you wish to be informed if Personal Data about is held by us (which it is not) you and if you want it to be removed from our systems, please contact us... The right to access, update or to delete the information we have on you. Whenever made possible, you can access, update or request deletion of your Personal Data directly within your account settings section.",
+      "concerns": ["Ambiguity about what data actually exists to delete", "Deletion requires contacting company if not available in settings"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company says it will email you or post a prominent notice before privacy policy changes take effect, but if you keep using the app after changes, you automatically agree to them.",
+      "detail": "The policy promises notification via email and/or prominent notice prior to changes becoming effective, and updates the effective date. However, changes are effective when posted, and continued use constitutes acceptance. No active re-consent is required.",
+      "policy_excerpt": "We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the 'effective date' at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.",
+      "concerns": ["Continued use equals acceptance", "No requirement for active re-consent"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9 },
+      { "category": "account_identity", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 70.5,
+    "final_score": 66,
+    "grade": "C"
+  }
+}

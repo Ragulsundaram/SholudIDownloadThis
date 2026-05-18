@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.calm.com/privacy-policy",
+    "terms_url": "https://www.calm.com/terms",
+    "policy_last_updated": "2024-12-12",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "calm-sleep-meditation",
+    "name": "Calm",
+    "developer": "Calm.com, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/calm-sleep-meditation/id571800810",
+    "app_store_id": "571800810",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5d/f3/c3/5df3c3b4-431f-9b8d-7807-dd8259557bfb/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Mental Health",
+    "description": "A meditation, sleep, and relaxation app offering guided sessions, sleep stories, and mindfulness exercises."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 61,
+    "grade": "C",
+    "one_liner": "A meditation app that collects your sleep habits and mood data, then uses your personal information to show you targeted ads across the web.",
+    "summary": "Calm collects detailed usage data, sleep habits, mood reflections, and device identifiers. While it explicitly states it does not infer health characteristics from this wellness data, it still uses your personal information—including email and phone number converted to ad identifiers—to show you targeted advertisements on other platforms. Your employer may also be notified if you sign up through a workplace plan.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Despite strong opt-out mechanisms and transparent disclosures, Calm engages in extensive cross-platform behavioral ad tracking and collects sensitive wellness data (sleep, moods) that could feel invasive for a mental health app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_sleep_mood_for_ads",
+        "title": "Sleep and mood data fuel ad targeting",
+        "plain_english": "Calm asks about your sleep habits and moods during check-ins. While they say they don't diagnose you, this personal wellness data is collected alongside your browsing behavior and used to personalize ads you see on other apps and websites.",
+        "severity": "high"
+      },
+      {
+        "id": "red_email_phone_ad_ids",
+        "title": "Email and phone converted to ad identifiers",
+        "plain_english": "Calm's advertising partners can turn your email address or phone number into a unique tracking code. This lets them follow you across the internet and show you Calm ads based on your profile.",
+        "severity": "high"
+      },
+      {
+        "id": "red_employer_notified",
+        "title": "Employer told when you sign up",
+        "plain_english": "If your Calm subscription comes from your employer or a family member's plan, Calm informs them that you signed up or redeemed the offer. They know you are using a meditation app.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_cross_platform_tracking",
+        "title": "Tracked across websites and apps for ads",
+        "plain_english": "Third-party advertising companies use cookies, web beacons, and device identifiers to watch what you do on Calm and other websites. They use this to show you ads they think you will click.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_us_data_storage",
+        "title": "Data stored in the United States",
+        "plain_english": "Calm is a US company and processes your information there and in other countries. These places may not have the same privacy protections as your home country.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_opt_out_available",
+        "title": "Multiple ways to opt out of ad tracking",
+        "plain_english": "You can opt out of targeted ads and data sales by visiting calm.com/optout, using the Cookie Preferences Manager, enabling a universal privacy signal on your browser, or changing your mobile device settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_rights",
+        "title": "You can access, correct, or delete your data",
+        "plain_english": "No matter where you live, you can ask Calm to show you what data they have, fix mistakes, export your data, or delete it. They also won't treat you differently for exercising these rights.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_health_inference",
+        "title": "Claims not to infer health conditions",
+        "plain_english": "Calm explicitly says it does not use your sleep data, mood check-ins, or health app information to guess or diagnose any medical or mental health conditions.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_retention_limited",
+        "title": "Data kept only as long as needed",
+        "plain_english": "Calm says it keeps your personal data only for as long as necessary to run the service or meet legal requirements, and no longer.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Calm may record your voice or video during customer support calls, chat-bot conversations, or phone calls. This only happens when you contact them.",
+      "detail": "The policy states they may record communications including chat messages, phone, or video calls. No mention of background or always-on camera/mic access.",
+      "policy_excerpt": "we may record our communications including chat messages, phone, or video calls, such as when you utilize our chat-bot or provide us with feedback or market research.",
+      "concerns": ["Support calls and chats may be recorded"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm estimates your rough location from your IP address to understand where users are and to show relevant content.",
+      "detail": "Approximate geolocation is derived from the IP address. No mention of precise GPS tracking. Disclosed under CCPA categories.",
+      "policy_excerpt": "Approximate geolocation data... we use your IP address to derive the approximate location of your device.",
+      "concerns": ["IP-based approximate location collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your device storage or personal files.",
+      "detail": "No mention of storage or file system access. The app collects usage information about sessions and content but not local files.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm shares your information with advertising partners, analytics companies, payment processors, fraud prevention vendors, and your employer or promotion partner when relevant.",
+      "detail": "Discloses to service providers (email, payment, fraud, analytics, advertising), professional advisors, affiliates, employer/family member (if subscription provided by them), third-party promotion partners, and with consent. Aggregated data may also be shared. Advertising partners receive data for cross-platform targeted ads.",
+      "policy_excerpt": "With companies and contractors that perform services for us, including email service providers, payment processors, fraud prevention vendors, analytics providers, advertising partners, and other service providers... If your Calm subscription has been provided to you by someone else, like your employer... we may inform them that you have signed up.",
+      "concerns": [
+        "Broad sharing with advertising and analytics partners",
+        "Employer notified of sign-up for workplace plans",
+        "Third-party promotion partners informed of redemption"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name and email to sign up. Calm may also guess your age and gender from other data they collect, and they can turn your email or phone into an ad tracking identifier.",
+      "detail": "Collects name, email, social media details, street address. May derive approximate age/gender. Advertising partners can convert email or phone number into an identifier for targeted ads.",
+      "policy_excerpt": "Personal details: your name, email address, linked social media details, and street address... We may make educated guesses about your gender or age... Some of our advertising partners enable us to convert your email address or phone number into an identifier to show ads that are more relevant to you on other platforms.",
+      "concerns": [
+        "Email and phone can be converted to ad identifiers",
+        "Age and gender inferred from collected data"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm and its partners track your browsing, app usage, and clicks across the internet to show you targeted ads. Your email or phone can be turned into a tracking code for this.",
+      "detail": "Third-party advertising and analytics providers use cookies, web beacons, and device identifiers to track IP address, device info, pages viewed, time spent, links clicked, and conversion info. Used to deliver targeted ads and understand online activity. Explicitly considered 'sales' and 'sharing' under CCPA.",
+      "policy_excerpt": "These entities use cookies, web beacons, device identifiers, and other technologies to collect information about your use of the Services and other websites and online services... Calm and others may use this information to... deliver advertising and content targeted to your interests... Some of our advertising partners enable us to convert your email address or phone number into an identifier to show ads that are more relevant to you on other platforms.",
+      "concerns": [
+        "Extensive cross-platform behavioral tracking",
+        "Email/phone hashed into ad identifiers",
+        "Considered 'sale' of data under California law"
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm says it does not knowingly sell or share personal data about consumers under the age of 16.",
+      "detail": "The app is not specifically directed at children. Under CCPA disclosures, they state they do not knowingly sell or share personal data about consumers under 16. No mention of COPPA or child-specific protections.",
+      "policy_excerpt": "We do not knowingly 'sell' or 'share' personal data about consumers under the age of 16.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm logs your IP address, browser type, pages you view, links you click, and how long you spend in the app. This is used to understand trends and show you ads.",
+      "detail": "Log information includes web browser, app version, access times/dates, pages viewed, IP address, referring page. Internet/electronic network activity includes browsing behavior and usage interactions.",
+      "policy_excerpt": "Log information: the web browser you use, app version, access times and dates, pages viewed, your IP address, and the page you visited before navigating to our websites... Internet or other electronic network activity, such as browsing behavior and information about your usage and interactions with the Services.",
+      "concerns": [
+        "Browsing behavior tracked for ads and analytics",
+        "IP address logged continuously"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm collects detailed information about your device—model, operating system, unique device identifiers, and mobile network—to recognize you and help advertising partners follow you across apps.",
+      "detail": "Device information includes hardware model, OS/version, device identifiers set by the device operating system, and mobile network information. Advertising partners also use device identifiers for cross-app tracking.",
+      "policy_excerpt": "Device information: information about the computer or mobile device you use to access the Services, including the hardware model, operating system and version, device identifiers set by your device operating system, and mobile network information.",
+      "concerns": [
+        "Device identifiers used for cross-app ad tracking",
+        "Detailed hardware profile collected"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Calm collects your sleep habits, mood reflections during check-ins, and can import sleep data from Apple HealthKit or Google Health Connect. They say they don't diagnose you from this, but the data is still stored and used alongside your profile.",
+      "detail": "Collects sleep habits, moods/reflections during check-ins, and may receive sleep/sleep goals data from Apple HealthKit or Google Health Connect with permission. Explicitly states they do not infer health-related characteristics from this information. However, the data is still collected and stored.",
+      "policy_excerpt": "sleep habits, and moods and reflections you provide during check-ins... we do not infer any health-related characteristics from this information... with your permission, we may also receive data from your mobile device's health app (like Apple HealthKit or Google Health Connect), including hours of sleep and sleep goals. However, we do not infer any health-related characteristics from this information.",
+      "concerns": [
+        "Sleep and mood data collected",
+        "Health app integrations import sensitive data",
+        "Data stored alongside ad targeting profile"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment information is collected when you subscribe, but it is processed by third-party payment companies. Calm may see truncated or limited versions of your card details.",
+      "detail": "Payment details collected for purchases and subscriptions. Third-party payment processors handle the actual processing. Calm may receive truncated/anonymized versions of payment card information.",
+      "policy_excerpt": "Payment details: payment information... Headspace does not directly process payment card information, and instead relies upon third-party payment processors to do so on our behalf... certain anonymized, limited and/or truncated versions of this information may be provided to Calm.",
+      "concerns": ["Truncated payment info shared with Calm"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask Calm to show you your data, fix it, export it, or delete it. They won't punish you for asking. But some data may be kept if the law requires it.",
+      "detail": "Access, correction, deletion, portability, and opt-out of sales/targeted advertising available. Requests submitted via support@calm.com or calm.com/contact. Identity verification may be required. Authorized agents allowed. Appeals process available. Some data retained when required by law.",
+      "policy_excerpt": "you have the right to request to: know more about the information we have about you; access information we have about you (including in a portable format); correct information we have about you; opt out of 'sales', targeted advertising, or 'sharing'; and delete the information we have about you... we retain certain information when required or permitted by law.",
+      "concerns": [
+        "Some data retained for legal compliance",
+        "Verification required for some requests"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Calm can change the privacy policy at any time. They will update the date on the policy and may give you extra notice for big changes, but they don't promise to always tell you directly.",
+      "detail": "Changes are made from time to time. Date revised at top of policy. Additional notice provided 'in some cases' for significant changes. No commitment to always notify users directly.",
+      "policy_excerpt": "We may change this Privacy Policy from time to time. If we make changes, we will revise the date at the top of the policy and, in some cases, we may provide you with additional notice.",
+      "concerns": ["No guaranteed direct notification for all changes"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 79.25,
+    "final_score": 61,
+    "grade": "C"
+  }
+}

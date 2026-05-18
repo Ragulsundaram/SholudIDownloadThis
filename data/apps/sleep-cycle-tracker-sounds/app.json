@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.sleepcycle.com/privacy-policy/",
+    "terms_url": "",
+    "policy_last_updated": "2026-05-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "sleep-cycle-tracker-sounds",
+    "name": "Sleep Cycle - Tracker & Sounds",
+    "developer": "Sleep Cycle AB",
+    "app_store_url": "https://apps.apple.com/in/app/sleep-cycle-tracker-sounds/id320606217",
+    "app_store_id": "320606217",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e0/db/cd/e0dbcd04-e9f0-85b0-2299-2da1a04ecac5/AppIconSleepCycle-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Sleep",
+    "description": "Popular sleep tracker that uses sound analysis and accelerometer data to monitor sleep patterns, snoring, and wake you gently."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 74,
+    "grade": "B",
+    "one_liner": "A privacy-respecting sleep tracker that keeps health data local by default, but still collects sensitive sleep information and uses your microphone overnight.",
+    "summary": "Sleep Cycle is a popular sleep tracking app with strong privacy protections and GDPR compliance. By default, all health and sleep data stays on your device — nothing is sent to servers unless you explicitly opt in. The app provides comprehensive user rights including CSV export, deletion, and correction. It only shares data with named service providers and uses EU Model Clauses for international transfers. However, the app does collect sensitive health data (sleep patterns, snoring, movements), uses your microphone continuously during sleep, and can store this data on cloud servers if you enable backup. Camera is used for optional pulse measurement and location is collected for weather and sleep statistics.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Sleep Cycle is one of the more transparent and privacy-respecting health apps available. Its default local-only storage of health data, clear consent model, and strong GDPR compliance are significant positives. If you need sleep tracking and are comfortable with a health app using your microphone overnight, this is a solid choice."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_data_collected",
+        "title": "Collects sensitive sleep and health data",
+        "plain_english": "Sleep Cycle collects detailed health information including your sleep patterns, movements, snoring, sleep talking, height, weight, and pulse. This is sensitive health data that reveals a lot about your wellbeing.",
+        "severity": "high"
+      },
+      {
+        "id": "red_background_microphone",
+        "title": "Uses microphone in background overnight",
+        "plain_english": "The app listens through your phone's microphone while you sleep to detect snoring, coughing, and sleep talking. These recordings are stored locally by default but can be backed up to servers if you opt in.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_on_servers",
+        "title": "Sleep data stored on cloud servers if you enable backup",
+        "plain_english": "If you turn on online backup, all your sleep and health data is uploaded to Google Cloud servers. You can delete this data by withdrawing consent or ending your subscription.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_shared_research",
+        "title": "Health data may be shared with research partners",
+        "plain_english": "If you consent, your personal data may be shared with researchers for sleep studies. Your data may also be transferred to countries outside Europe. Once shared with a researcher, they become the data controller.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_local_by_default",
+        "title": "Health data stays on your device by default",
+        "plain_english": "Sleep Cycle stores all your sleep and health data locally on your phone by default. The app cannot access or control your health data unless you explicitly give consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_deletion",
+        "title": "Full deletion rights with CSV export",
+        "plain_english": "You can export your data to a CSV file directly in the app, delete specific sleep sessions, or request full account deletion. Most data is deleted within days, with backups cleared within 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_named_providers_only",
+        "title": "Only shares with named service providers",
+        "plain_english": "Sleep Cycle only shares data with specific named companies like Google Cloud, Amplitude, and Zendesk. They do not sell data to advertisers or data brokers, and they use EU Model Clauses for international transfers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_material_change_notice",
+        "title": "Notifies you of material policy changes",
+        "plain_english": "If Sleep Cycle makes important changes to its privacy policy, they will send you a push notification through the app or email you directly.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_compliant",
+        "title": "Strong GDPR compliance with data protection officer",
+        "plain_english": "Sleep Cycle is a Swedish company that follows GDPR rules closely. They list a data protection officer, explain all legal bases for processing, and provide detailed retention periods for each type of data.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Sleep Cycle uses your microphone all night to detect snoring, coughing, and sleep talking. The camera is used on-demand for optional pulse measurement. Recordings stay on your phone unless you enable cloud backup.",
+      "detail": "Section 'General information' states the app collects data through the device's accelerometer (movements), microphone (snoring or other noises), camera (pulse), and location. The microphone runs continuously during sleep. Recordings are stored locally by default.",
+      "policy_excerpt": "some personal data will be collected through your device's accelerometer (such as your movements), microphone (such as snoring or other noises), camera (pulse), or device location (for weather and sleep location statistics)",
+      "concerns": ["Microphone used continuously during sleep", "Snoring and sleep talk recordings stored", "Camera used for pulse measurement"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Sleep Cycle collects your location for weather information and sleep location statistics. Location data may also be used for internal analytics.",
+      "detail": "The policy mentions device location is collected for weather and sleep location statistics. Also used for internal analytics and product development.",
+      "policy_excerpt": "device location (for weather and sleep location statistics)... For this purpose we may also process your location data.",
+      "concerns": ["Location collected for weather and statistics", "Used for analytics"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle does not access your phone contacts.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle does not access your personal files or photos beyond its own app data.",
+      "detail": "The app stores sleep data locally within its own storage. No mention of accessing user files, photos, or external storage.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle only shares data with specific named service providers like Google Cloud, Amplitude, Amazon Web Services, Mailgun, Leanplum, and Zendesk. No data is sold to advertisers or data brokers.",
+      "detail": "The policy names all service providers. Health data only goes to Google Cloud (backup, with consent) and Amplitude/AWS (pseudonymised product development, with consent). Non-health data goes to Mailgun, Leanplum, Zendesk. Fivetran handles transfers (24h only). EU Model Clauses in place for all international transfers.",
+      "policy_excerpt": "The data we store and otherwise process about you will be stored on secure servers hosted by Google Cloud. In addition, data that we process for product development purposes will be transferred to our product development environment (separate from the backup environment) hosted by Amplitude Inc. and their service provider Amazon Web Services.",
+      "concerns": ["Health data stored on Google Cloud with consent", "Pseudonymised data on Amplitude/AWS with consent", "Email/technical data shared with Mailgun, Leanplum, Zendesk"],
+      "score_impact": -9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle collects your name, email, and password to create and manage your account. You can use the app without an account, but some features require one.",
+      "detail": "Name, email address, and password are collected for account creation. Kept for one year after last activity.",
+      "policy_excerpt": "Name, email address, password... If you do not provide the data, you will not be able to create an account.",
+      "concerns": ["Account data retained for one year after last activity"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle collects technical data like IP address, device type, and timestamps to troubleshoot errors and improve the app. They do not use your data for targeted advertising.",
+      "detail": "Technical data is processed for troubleshooting, data analysis, testing, research, and developing new features. Location data may also be used. No mention of ad tracking or advertising SDKs in the app.",
+      "policy_excerpt": "We may use your data to troubleshoot and protect against errors; perform data analysis and testing; conduct research and surveys; and develop new features and services.",
+      "concerns": ["Technical data collected continuously", "Used for analytics and product improvement"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle does not knowingly collect data from children under 16 and will delete it if discovered.",
+      "detail": "Section 'Our policies for children' explicitly states no collection from under 16. Will endeavor to delete if discovered.",
+      "policy_excerpt": "We do not knowingly collect personal data from children under the age of 16. If you have reason to believe that a child under the age of 16 uses the Sleep Cycle app please contact us and we will endeavor to delete that information from our databases",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle logs your IP address, timestamps, and device information when you use the app or contact support.",
+      "detail": "IP addresses, timestamps, log files, device type and operating system are collected. Used for support and product improvement.",
+      "policy_excerpt": "IP addresses, timestamps, log files, device type and operating system",
+      "concerns": ["IP and usage logged", "Used for analytics and support"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle collects your device type and operating system to help troubleshoot problems and improve the app.",
+      "detail": "Device type and OS are standard technical data collected. Not used for advertising or fingerprinting.",
+      "policy_excerpt": "IP addresses, timestamps, log files, device type and operating system",
+      "concerns": ["Device data collected for troubleshooting"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle collects detailed health data including your sleep patterns, movements, snoring, height, weight, and pulse. This is the core function of the app. The data stays on your phone by default but can be backed up to servers.",
+      "detail": "The app processes health data including sleep times, movements (accelerometer), snoring/noises (microphone), pulse (camera), sleep efficiency, and sleep quality. By default stored locally. Cloud backup requires explicit consent. Shared pseudonymously for product development and aggregated for community benchmarking with consent. Research studies require separate explicit consent.",
+      "policy_excerpt": "some personal data will be collected through your device's accelerometer (such as your movements), microphone (such as snoring or other noises), camera (pulse), or device location (for weather and sleep location statistics), and some personal data will be derived (such as sleep efficiency and sleep quality)",
+      "concerns": ["Sensitive health data is core to the app", "Data backed up to Google Cloud with consent", "Pseudonymised data shared with Amplitude/AWS", "Data shared with researchers with separate consent"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle never handles your payment information. All subscriptions and purchases are processed by Apple or Google directly.",
+      "detail": "Section 'Manage payments and returns' explicitly states payments are handled by iTunes and Google Play. Sleep Cycle only receives information on active subscription and returns for bookkeeping.",
+      "policy_excerpt": "Payments and returns are handled by iTunes and Google Play. If you have registered your email address in the app, we will receive information on your payments and returns.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle gives you strong control over your data. You can export everything to a CSV file, delete specific sleep sessions, or delete your entire account. Full deletion takes up to 30 days to clear from backups.",
+      "detail": "Comprehensive GDPR rights: access, correction, deletion, portability (CSV export), restriction, objection, withdraw consent. Deletion of specific data points possible in app. Account deletion: most data within days, backups up to 30 days. Data preserved only for legal reasons or to prevent harm.",
+      "policy_excerpt": "You can delete specific data points, for example sleep sessions or comments posted by yourself, directly in the app... it may take up to thirty (30) days to delete all of your information, like the data stored in our backup systems.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sleep Cycle will post policy updates in the app and on its website. For big changes, they will send you a push notification or email.",
+      "detail": "Material changes trigger push notifications and/or emails. Non-material changes are posted without active notification. Users encouraged to review periodically.",
+      "policy_excerpt": "If we make any material changes to our notice, we will push a notification through the Sleep Cycle app and/or by e-mail (if we have your e-mail address and you have not opted-out from such use).",
+      "concerns": ["Non-material changes may not be actively communicated"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 52.5,
+    "final_score": 74,
+    "grade": "B"
+  }
+}

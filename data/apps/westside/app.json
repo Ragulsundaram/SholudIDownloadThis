@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.westside.com/pages/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "westside",
+    "name": "Westside",
+    "developer": "Binary Web Solutions (I) Pvt. Ltd.",
+    "app_store_url": "https://apps.apple.com/in/app/westside/id1536381692",
+    "app_store_id": "1536381692",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b6/72/43/b6724379-c7c0-8696-8ad6-e2dea7502f1c/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion Retail",
+    "description": "Westside is a one-stop fashion destination for women, men, and kids, offering clothing, footwear, accessories, beauty, and home decor with easy browsing and quick checkout."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "Westside shares your shopping behaviour and personal data with the Tata Group and advertising partners for personalised ads, but explicitly commits to not selling your data and offers strong DPDP Act rights.",
+    "summary": "Westside's privacy policy reveals broad data collection including your purchase history, browsing habits, device information, and contact details. This data is shared with Tata Group Entities, marketing agencies, analytics providers, and advertising partners to show you personalised ads across the internet and social media. Data may also be processed outside India. On the positive side, Westside explicitly states it does not trade or sell personal data, provides clear rights under India's DPDP Act (access, correction, erasure, consent withdrawal), and implements encryption and access controls to protect your information.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about your shopping data being shared across the Tata ecosystem and used for cross-platform behavioural advertising, consider whether the convenience of the Westside app is worth the data trade-off."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_data_sharing_tata",
+        "title": "Data shared across Tata Group and ad partners",
+        "plain_english": "Westside shares your personal data with Tata Group Entities, marketing agencies, analytics providers, and advertising partners to show you personalised ads and offer products from other Tata companies.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioural_tracking",
+        "title": "Shopping habits power ads across the internet",
+        "plain_english": "Westside uses your purchase and browsing history to show you targeted ads on social media and other websites, and combines data from multiple sources to build a richer profile of you.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_border",
+        "title": "Data may be processed outside India",
+        "plain_english": "Westside says your personal data may be processed in countries other than India, which could mean different data protection standards apply.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_policy_changes_no_notice",
+        "title": "Privacy policy can change without warning",
+        "plain_english": "Westside reserves the right to change its privacy policy with or without notice, and your continued use of the app counts as acceptance of any changes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_broad_device_collection",
+        "title": "Broad device and browsing data collected",
+        "plain_english": "Westside collects your IP address, device connection information, browser type, the websites you come from and go to, and email patterns.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale_commitment",
+        "title": "Explicit no-sale commitment",
+        "plain_english": "Westside explicitly states that it does not trade or sell personal data in any manner, except as specified in the policy or with your express consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_dpdp_rights",
+        "title": "DPDP Act rights clearly listed",
+        "plain_english": "Westside explicitly lists your rights under India's DPDP Act, including access to your data, correction, erasure, consent withdrawal, and grievance redressal.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_on_request",
+        "title": "Deletion available on request",
+        "plain_english": "You can request deletion of your personal data, and Westside says it will delete it unless required to keep it by law.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security_measures",
+        "title": "Encryption and access controls mentioned",
+        "plain_english": "Westside mentions using encryption, access controls, and periodic audits to protect your personal data against unauthorized access.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app lets you take or upload photos for image search and contacting customer care. Camera access is on-demand and optional.",
+      "detail": "The privacy policy lists mobile app permissions that include accessing photos for image search and contacting customer care with images. There is no mention of microphone access.",
+      "policy_excerpt": "To provide image search and contact customer care with the images; To store or access photos captured by you at the time of contacting customer care or image search",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Location is used only to find nearby stores and return centers. It is not required for shopping.",
+      "detail": "The privacy policy explicitly states location data is used to locate nearby stores and return centers. This is an optional mobile app permission.",
+      "policy_excerpt": "To locate nearby stores and return centers, if any",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can read your contact card on your device for the invite and referral feature. It does not appear to access your full address book.",
+      "detail": "The policy mentions 'Read your contact card for invite/referral feature' as a mobile app permission. This refers to reading the user's own contact card (My Card), not the full phonebook. There is no mention of uploading contacts to servers.",
+      "policy_excerpt": "Read your contact card for invite/referral feature",
+      "concerns": ["Contact card data accessed for referral feature"],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos when contacting customer care or using image search. This is user-initiated and optional.",
+      "detail": "The policy states the app can store or access photos captured by the user for contacting customer care or image search. This is an on-demand, user-initiated permission.",
+      "policy_excerpt": "To store or access photos captured by you at the time of contacting customer care or image search",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Westside shares your data with Tata Group Entities, marketing agencies, analytics and advertising providers, payment processors, delivery partners, and other third-party service providers.",
+      "detail": "The policy explicitly states that Personal Data is shared with third-party vendors, payment processors, order management platforms, shipping partners, marketing agencies, customer support services, analytics and advertising providers, and Tata Group Entities. Data may also be shared on the Tata Consumer Platform with other participating entities.",
+      "policy_excerpt": "processing, disclosing, transmitting, and/or sharing the Data/information with Tata Group Entities, and other third parties which have business or contractual dealings with us",
+      "concerns": ["Data shared with Tata Group Entities and Partners", "Data shared with analytics and advertising providers", "Data shared on Tata Consumer Platform with other entities", "Data may be disclosed to government agencies without prior consent if required by law"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name, phone number, email, and address to create an account and make purchases.",
+      "detail": "Account creation requires name, phone number, email address, and mailing address. This is standard for a shopping app and is required for core functionality like order processing and delivery.",
+      "policy_excerpt": "To create and manage your registration as a User of the Platform, Trent shall collect/use User's phone number, name and email address.",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Westside uses your purchase and browsing history to show you personalised ads on the internet and social media, and enriches your profile by combining data from multiple sources.",
+      "detail": "The policy explicitly states that ads may be shown based on your preferences, purchase and browsing history, on the internet, platforms, and apps including social media. It also mentions 'Data Enrichment' where Personal Data from various sources is consolidated to improve understanding of user needs and preferences for marketing studies and quality surveys.",
+      "policy_excerpt": "show you ads on the Internet which you may see when visiting Platforms and apps, for example, on social media. The ads you see may be random, but on other occasions they may be ads related to your preferences or purchase and browsing history",
+      "concerns": ["Behavioural tracking for personalised ads", "Data enrichment from multiple sources", "Ads shown on social media and other platforms", "Usage data used to track across other companies' apps per App Store label"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 4+ but Westside says users under 18 should only use it with a parent or guardian. There is no technical age verification.",
+      "detail": "The policy states that Trent does not sell products for purchase by children, and users under 18 may use services only with the involvement of a parent or legal guardian. If child data below 18 is inadvertently obtained, it will be deleted upon verified request.",
+      "policy_excerpt": "Users under 18 years of age may use Trent Limited's services only with the involvement of a parent or legal guardian. If personal data of children below 18 years is inadvertently obtained, it will be deleted upon verified request of a parent or guardian.",
+      "concerns": ["No technical age verification mechanism", "App rated 4+ but policy says 18+ for independent use"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Westside logs the websites you come from and go to, your IP address, browser type, email patterns, and session details.",
+      "detail": "The policy explicitly states that Trent automatically receives the URL of the site from which a user enters and exits, the IP address, type of web browser, email patterns, and session date/time/duration.",
+      "policy_excerpt": "Trent automatically receives the URL of the site from which a User enters and the site to which the User exits, when the User leaves the Platform. The Platform receives the IP address of the User's computer and the type of web browser a User is using, email patterns, etc.",
+      "concerns": ["Referrer URLs logged", "IP address collected", "Email patterns tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Westside collects device connection information, your browser type, and identifiers to recognise your device and optimise performance.",
+      "detail": "The policy mentions collection of device connection information, browser type, and IP address. The App Store privacy label also lists 'Identifiers' as collected. This data is used for security, technical reasons, and performance optimisation on low-bandwidth networks.",
+      "policy_excerpt": "Trent receives, scrutinizes and stores Personal Data for security and technical reasons such as IP address, login id, email address, password, devise connection information, transaction history, date, time and duration of session on the Platform.",
+      "concerns": ["Device connection information collected", "Identifiers collected per App Store label"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There is no evidence that Westside collects health or biometric data.",
+      "detail": "The privacy policy does not mention health, fitness, or biometric data. The App Store privacy label does not list health data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Your credit or debit card details are collected when you make a purchase and processed by a payment gateway partner.",
+      "detail": "The policy states that credit or debit card numbers are collected, and by purchasing, you expressly consent and authorize the payment gateway partner to process your data for completing the transaction. No details on whether card data is stored or tokenised were found.",
+      "policy_excerpt": "By purchasing any product from us, you expressly consent and authorize our payment gateway partner to process your Data for the purpose of completing and facilitating the transaction.",
+      "concerns": ["Payment data processed by third-party gateway"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Westside provides clear rights under India's DPDP Act, including access, correction, erasure, consent withdrawal, and grievance redressal.",
+      "detail": "The policy explicitly lists six rights under the DPDP Act: Right to Access, Right to Correction and Erasure, Right to Withdraw Consent, Right to Nominate, and Right of Grievance Redressal. It provides a dedicated email (PrivacyOffice@trent-tata.com) for privacy queries and aims to respond within 90 days.",
+      "policy_excerpt": "Under the Digital Personal Data Protection Act, 2023 & related rules (DPDP Act), User (as the Data Principal) have the following rights regarding Personal Data: Right to Access, Right to Correction and Erasure, Right to Withdraw Consent, Right to Nominate, Right of Grievance Redressal",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Westside may change its privacy policy without notice, and your continued use counts as acceptance. However, it says updated versions will be posted on the site.",
+      "detail": "The policy reserves the right to change with or without notice, and continued use signifies acceptance. However, it also states that when updates are made, the current version will be posted on the site. There is no mention of advance notification or requiring active re-agreement.",
+      "policy_excerpt": "Trent reserves its right to change, edit, alter, amend, modify, review, revise or substitute this Policy with or without notice. By using the Platform, the User's signify they have carefully read, understood and agreed to be bound by this Policy... including any change, modification or substitution made to the Policy from time to time.",
+      "concerns": ["Changes can be made without notice", "Continued use = acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 73.25,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

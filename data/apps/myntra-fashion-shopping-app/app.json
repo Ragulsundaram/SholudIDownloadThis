@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.myntra.com/termsofuse",
+    "terms_url": "https://www.myntra.com/termsofuse",
+    "policy_last_updated": "2026-04-08",
+    "needs_review": true,
+    "review_notes": "The App Store links to Myntra's Terms of Use page as the privacy policy. The document contains very limited privacy disclosures and is primarily a Terms of Service agreement. Many privacy categories are not addressed at all."
+  },
+  "app": {
+    "slug": "myntra-fashion-shopping-app",
+    "name": "Myntra - Fashion Shopping App",
+    "developer": "Myntra Designs Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059",
+    "app_store_id": "907394059",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/a9/ef/d3a9ef80-3c72-f46e-e99c-a07a24192614/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion",
+    "description": "Fashion and lifestyle shopping app for clothing, footwear, and accessories."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "A major fashion shopping app with a sparse privacy policy that raises more questions than it answers.",
+    "summary": "Myntra links to its Terms of Use as its privacy policy, which contains very few privacy disclosures. While it does share some data with sellers and logistics partners, and requires government ID for high-value purchases, most privacy categories are not addressed at all. The policy can change without notice and your data is automatically deleted only after 2 years of inactivity.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The 'privacy policy' is actually a Terms of Use document with minimal privacy disclosures. Many standard privacy categories are not addressed, and the app can change its terms without notifying you directly."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_terms_as_privacy",
+        "title": "Terms of Use masquerades as privacy policy",
+        "plain_english": "Myntra links to its Terms of Use page as the privacy policy on the App Store. This document is mostly about shopping rules and seller terms, with very little information about how your personal data is actually collected, used, or protected.",
+        "severity": "high"
+      },
+      {
+        "id": "red_seller_data_sharing",
+        "title": "Personal data shared with sellers and partners",
+        "plain_english": "When you buy products or use customization services, Myntra shares your name and contact details directly with the sellers and brands. You may also need to share additional personal data with them directly.",
+        "severity": "high"
+      },
+      {
+        "id": "red_govt_id_for_purchases",
+        "title": "Government ID required for large purchases",
+        "plain_english": "If you make a purchase of INR 2,00,000 or more, you must upload a scanned copy of your PAN card. For some orders, sellers may also ask for government ID and address proof before delivery.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_policy_changes_without_notice",
+        "title": "Policy can change without any notice",
+        "plain_english": "Myntra can change, modify, add, or remove any part of its terms at any time without giving you any prior written notice. Your continued use means you automatically accept the changes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_content_ownership",
+        "title": "Content you upload becomes their property",
+        "plain_english": "Any photos, reviews, comments, or other content you post on Myntra becomes their property. They get a worldwide, perpetual, and transferable right to use it for any purpose including advertising, forever.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_auto_deletion",
+        "title": "Data auto-deleted after 2 years of inactivity",
+        "plain_english": "If you don't use the app for 2 years, Myntra will delete your data including transaction history from their active records.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_facilitator",
+        "title": "Payments handled by banks and gateways",
+        "plain_english": "Myntra says it is not a bank or financial service. Payments are processed through existing banking infrastructure and credit card payment gateways, not stored directly by Myntra.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sms_spam",
+        "title": "Phone calls and SMS limited to order updates",
+        "plain_english": "Myntra states it will not use your personal information to send promotional phone calls or SMS. Any contact is limited to order, shipment, or delivery updates.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your camera or microphone.",
+      "detail": "The Terms of Use document is silent on camera and microphone access. No disclosure about photo uploads, barcode scanning, or voice features.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about camera or microphone usage"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your location or GPS.",
+      "detail": "No mention of location access, address auto-detection, or delivery location tracking in the provided document.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about location or GPS usage"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "No mention of contacts, phonebook, or social features in the provided document.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about contacts or phonebook access"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your device storage or files.",
+      "detail": "No mention of file access, photo gallery access, or local data storage permissions.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about storage or file access"],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your name and contact details are shared with sellers and brands when you make a purchase or use customization services. Logistics partners (Transporters) also receive your delivery information.",
+      "detail": "The policy states that for customization services, you consent to share your name and contact details with the seller or brand. For delivery, Transporters receive your information. The policy also mentions that additional personal data may need to be shared directly with sellers.",
+      "policy_excerpt": "You consent to share your name and contact details with the seller or brand to facilitate this service. You may be required to share some additional personal data directly with the seller, Myntra shall not be responsible for any use or handling of your additional personal data shared with the seller or brand.",
+      "concerns": [
+        "Personal data shared with sellers and brands",
+        "Logistics partners receive delivery information",
+        "Myntra not responsible for how sellers handle your data"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your phone number as your main identifier, along with email and password. For large purchases above INR 2 lakhs, you must upload your PAN card.",
+      "detail": "Phone number is the primary identifier. Email and password are required for account creation. PAN card is mandatory for purchases above INR 2,00,000. Government ID and address proof may be requested by sellers before delivery.",
+      "policy_excerpt": "Your mobile phone number is treated as Your primary identifier on the Platform... As required by applicable law, if the Customer makes a purchase of an amount equal to or above INR 2 00 000.00, the Customer will be required to upload a scanned copy of his/her PAN card on the Platform.",
+      "concerns": [
+        "Phone number is mandatory primary identifier",
+        "PAN card required for high-value purchases",
+        "Government ID may be requested by sellers"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app tracks your behavior or shows you targeted ads.",
+      "detail": "The Terms of Use document contains no disclosure about cookies, tracking pixels, behavioral advertising, or personalized recommendations. As a major e-commerce platform, this is a significant omission.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about behavioral tracking or ad targeting"],
+      "score_impact": 12.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any age restrictions or protections for children.",
+      "detail": "No mention of age requirements, parental consent, or children's data protections in the provided document.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about children's data handling"],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app logs your network or internet activity.",
+      "detail": "No disclosure about IP address collection, browsing tracking, or network monitoring in the provided document.",
+      "policy_excerpt": "",
+      "concerns": ["No disclosure about network or internet activity logging"],
+      "score_impact": 2.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app collects device information or fingerprinting data.",
+      "detail": "The document mentions that Myntra may moderate users and their association with devices, suggesting some device tracking occurs, but provides no details about what device data is collected.",
+      "policy_excerpt": "Myntra sometimes consider moderating users and their association with devices while using the Myntra app or website.",
+      "concerns": ["Device association mentioned but not explained", "No disclosure about device fingerprinting"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric information.",
+      "detail": "No mention of health data, biometric authentication, or fitness tracking in the provided document.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payments are processed through banks and payment gateways, not stored directly by Myntra. But Myntra does facilitate and route all payment transactions.",
+      "detail": "Myntra states it is not a banking or financial service but a facilitator. Payments use existing banking infrastructure and credit card gateways. Myntra does not store raw card data but processes transactions through its platform. Cash on Delivery is also available.",
+      "policy_excerpt": "Myntra is neither a banking nor financial service but is merely a facilitator providing an electronic, automated online electronic payment, receiving payment through Cash On Delivery, collection and remittance facility for the Transactions on the Myntra Platform using the existing authorized banking infrastructure and Credit Card payment gateway networks.",
+      "concerns": [
+        "Myntra facilitates all payment transactions",
+        "Transaction details preserved for tax and regulatory compliance"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is automatically deleted after 2 years of not using the app. But there is no clear way to request deletion on demand, and transaction details may be kept for tax and legal reasons.",
+      "detail": "The policy states that if you have not accessed the platform for 2 years, your data including transactional data will be deleted. However, transaction details may be preserved for tax or regulatory compliance. No explicit right to request immediate deletion is described.",
+      "policy_excerpt": "If You have not accessed Platform for a period of 2 (two) Years, Your data (including transactional data) will be deleted from Our record and You will not be able to access such data... your transactions details may be preserved by Myntra for purposes of tax or regulatory compliance.",
+      "concerns": [
+        "No explicit on-demand deletion right",
+        "Transaction details kept for regulatory compliance",
+        "Deletion only after 2 years of inactivity"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Myntra can change its terms at any time without telling you directly. If you keep using the app, that means you agree to the new terms automatically.",
+      "detail": "The policy explicitly states that Myntra can change, modify, add, or remove portions of the Terms of Use at any time without any prior written notice. Continued use constitutes acceptance of changes.",
+      "policy_excerpt": "We reserve the right, at Our sole discretion, to change, modify, add or remove portions of these Terms of Use, at any time without any prior written notice to You... Your continued use of the Platform following the posting of changes will mean that You accept and agree to the revisions.",
+      "concerns": [
+        "Changes made without prior notice",
+        "Continued use equals automatic acceptance"
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "unknown", "max": 25, "rate": 0.50, "deduction": 12.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "network_internet_activity", "risk": "unknown", "max": 5, "rate": 0.50, "deduction": 2.5 },
+      { "category": "device_fingerprinting", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 90,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

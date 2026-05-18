@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://webhook.healthifyme.com/terms-of-use/",
+    "terms_url": "https://webhook.healthifyme.com/terms-of-use/",
+    "policy_last_updated": "2026-02-24",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "healthify-ai-calorie-tracker",
+    "name": "Healthify: AI Calorie Tracker",
+    "developer": "HealthifyMe Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/healthify-ai-calorie-tracker/id943712366",
+    "app_store_id": "943712366",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1b/50/fb/1b50fb8d-6d0e-4a46-9e8c-7f9c7f9c7f9c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Nutrition",
+    "description": "AI-powered calorie tracker and nutrition app that helps users track meals, monitor health metrics, and receive personalized diet and fitness recommendations."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 52,
+    "grade": "D",
+    "one_liner": "HealthifyMe collects extensive health data including genetics and sexual orientation, processes your food photos through AI, shares data with third-party AI providers, and records your customer service calls stored on AWS.",
+    "summary": "HealthifyMe's privacy policy reveals extensive collection of sensitive health data including special categories like ethnicity, genetics, health conditions, and sexual orientation with explicit consent. The app uses your camera to take food photos, which are analyzed on-device but stored on their servers, and may misclassify non-food photos. Your health data from Google Health Connect is integrated. Third-party AI providers process your meal photos, chat messages, and health data for nutrition analysis and coaching. Customer service calls are recorded and stored on AWS. Targeted advertisements are delivered via Facebook and Google with your consent. The app explicitly states it does not sell your personal or health data and uses industry-standard encryption.",
+    "recommendation": "avoid",
+    "recommendation_reason": "If you are concerned about extensive health data collection including sensitive categories, third-party AI processing of your food photos and health metrics, and call recordings stored on AWS, consider whether the nutrition tracking convenience is worth the privacy trade-off."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_special_categories",
+        "title": "Collects sensitive health categories",
+        "plain_english": "HealthifyMe collects special categories of personal data including your ethnicity, genetics, health conditions, and sexual orientation with your explicit consent to provide specialized diet and exercise plans.",
+        "severity": "high"
+      },
+      {
+        "id": "red_food_photos",
+        "title": "Food photos analyzed and stored on servers",
+        "plain_english": "With your consent, HealthifyMe uses your camera to take food photos. The photos are analyzed on your device but then stored on their servers to track nutrition. The algorithm can occasionally misclassify non-food photos and upload them.",
+        "severity": "high"
+      },
+      {
+        "id": "red_google_health_connect",
+        "title": "Integrates with Google Health Connect",
+        "plain_english": "HealthifyMe integrates with Google Health Connect to collect your health data including heart rate, number of steps taken, and other health metrics.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_ai",
+        "title": "Third-party AI providers process your data",
+        "plain_english": "HealthifyMe sends your meal photos, chat messages, health data (weight, goals, CGM data), and device metadata to third-party AI providers for nutrition analysis, meal recognition, and coaching assistance.",
+        "severity": "high"
+      },
+      {
+        "id": "red_call_recording",
+        "title": "Customer service calls recorded and stored on AWS",
+        "plain_english": "If you have telephonic interactions with HealthifyMe customer representatives, the call data is recorded and stored on Amazon Web Services (AWS) for training and quality purposes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_targeted_ads",
+        "title": "Targeted advertisements via Facebook and Google",
+        "plain_english": "With your specific consent, HealthifyMe shares cookie and web beacon data with advertisement partners to track your visits and present you with targeted advertisements about their Services via Facebook and Google.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Explicitly does not sell your data",
+        "plain_english": "HealthifyMe explicitly states that it does not sell your personal or health data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_explicit_consent",
+        "title": "Requires explicit consent for sensitive data",
+        "plain_english": "HealthifyMe requires your explicit consent to collect and process special categories of personal data including ethnicity, genetics, health, and sexual orientation. You may refuse or revoke consent at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_on_device_analysis",
+        "title": "Food photo analysis happens on-device",
+        "plain_english": "Food photos are analyzed on your device (not on servers) to check if they contain food. No photo is transferred to their servers unless the on-device algorithm determines it is a food photo.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Uses industry-standard encryption",
+        "plain_english": "HealthifyMe encrypts sensitive data using industry-standard cryptographic techniques including PBKDF2, AES256, TLS1.2, and SHA256.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights",
+        "title": "Provides GDPR rights for EU users",
+        "plain_english": "If you are an EU data subject, HealthifyMe outlines your rights including access, rectification, erasure, restriction, objection, data portability, and protection from automated decision-making.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_grievance_officer",
+        "title": "Has a dedicated grievance officer",
+        "plain_english": "HealthifyMe has appointed Surabhi Srivastava as Grievance Officer with contact details including phone (+91 63664 40989) and address in Bangalore.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "HealthifyMe uses your camera with consent to take food photos. Photos are analyzed on-device but stored on servers for nutrition tracking. The algorithm can occasionally misclassify and upload non-food photos.",
+      "detail": "The 'Snap' feature collects food photos with prior consent. Photos are analyzed on-device to filter for food items. Food photos are then stored on secure servers to track nutrition. The classification algorithm runs on-device and no photo is transferred unless classified as food, but occasional misclassifications can occur.",
+      "policy_excerpt": "With your prior consent, the following activities may be undertaken with respect to your Food Photos: FILTERING: The Food Photos will be analyzed on your device... STORAGE: Thereafter, such Food Photos will be stored in our servers to help you track your nutrition and achieve your health goals... It is important to understand that the algorithm may occasionally misclassify non-food photos as food photos.",
+      "concerns": ["Food photos stored on servers", "Algorithm may misclassify non-food photos", "Camera access required for Snap feature"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "HealthifyMe collects your location unless you deactivate location services in the relevant section of the Website/App.",
+      "detail": "Location is collected for registered users unless explicitly deactivated. The policy does not specify what location is used for.",
+      "policy_excerpt": "Your location unless you deactivate location services in the relevant section of the Website/App",
+      "concerns": ["Location collected unless manually deactivated"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "No explicit mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "With your consent, HealthifyMe accesses your photo gallery for the auto-snap feature to collect food photos. Only food photos are uploaded, but the algorithm can occasionally misclassify.",
+      "detail": "The app accesses your photo gallery with permission to collect and store food photos you choose to track. The algorithm classifies photos on-device and only uploads food photos, but occasional misclassifications can occur.",
+      "policy_excerpt": "When you give us permission to access your photo gallery, we will only collect and store the Food Photos you choose to track on our App. We will not upload any other photos or data from your device... the algorithm may occasionally misclassify non-food photos as food photos.",
+      "concerns": ["Photo gallery accessed", "Algorithm misclassification risk", "Non-food photos may be uploaded"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe shares your data with third-party AI providers for nutrition analysis and coaching, advertisement partners for targeted ads, service providers for payments and customer service, and may share it in a merger or acquisition.",
+      "detail": "Data is shared with third-party AI providers (meal photos, chat messages, health data), advertisement partners (with specific consent), and service providers (payment processing, customer service, data analysis). Data may also be shared in a business deal, merger, or acquisition. HealthifyMe explicitly states it does not sell personal or health data.",
+      "policy_excerpt": "HealthifyMe uses artificial intelligence ('AI') technologies, including third-party AI service providers... When you use AI-powered features, the following categories of data may be transmitted securely to our third-party AI processing providers: Text inputs you submit, Meal photos, Selected health and fitness data... We share data with trusted third-party AI service providers that act as our data processors... HealthifyMe does not sell your personal or health data... When we do a business deal or negotiate a business deal, or our assets are merged or acquired by the other business entity, or during restructuring of business or re-organization, we may have to share information provided by you with the other business entities.",
+      "concerns": ["Third-party AI providers process health and photo data", "Advertisement partners receive data for targeted ads", "Data may be shared in merger/acquisition", "Call data stored on AWS"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe collects your name, age, gender, phone number, email address, mailing address, height, weight, lifestyle, food preferences, medical conditions, and health goals.",
+      "detail": "Standard account and health profile information is collected to facilitate services, prepare diet plans, and track fitness. Special categories (ethnicity, genetics, health, sexual orientation) require explicit consent.",
+      "policy_excerpt": "Your name, age, gender, phone number, e-mail address, mailing address; Your height, weight; Your lifestyle, food preferences, medical conditions (if any), health goals or other fitness regimes; Your ethnicity, genetics, health or sexual orientation",
+      "concerns": ["Extensive personal and health profile data collected", "Special categories require explicit consent"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe uses cookies and web beacons to track your behavior. With your specific consent, they share this data with advertisement partners to track visits and present targeted ads via Facebook and Google.",
+      "detail": "Cookies track which parts of the Website are used and record visits. Web beacons track behavior, navigation, email opening rates, and link clicks. With specific consent, cookie/web beacon data is shared with advertisement partners for targeted ads.",
+      "policy_excerpt": "Upon receiving your specific consent, we may share the data we collect from cookies or web beacons with our advertisement partners to track your visits, establish your non-personal identity and present you with targeted advertisements about our Services... If you submit your details and give us your consent, we may use your data to send you e-mails/newsletters, re-target HealthifyMe advertisements or re-market our Services using services from third-parties like Facebook and Google.",
+      "concerns": ["Cookies and web beacons track behavior", "Targeted ads via Facebook and Google with consent", "Advertisement partners receive tracking data"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe states it does not knowingly collect personal data from children under 18, and children should seek parental consent before providing any information.",
+      "detail": "The policy states they do not knowingly collect or store personal data of children. Users must be over 18. Children under 18 should seek parental consent.",
+      "policy_excerpt": "As a business service, we neither knowingly collect or store nor use any personal data of any child. Children under the age of 18 (or such other minimum age prescribed under law of the relevant territory) should seek the consent of their parents before providing any information about themselves, their parents, or other family members on our Website/App.",
+      "concerns": ["No technical age verification mentioned"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe collects your IP address and tracks how you behave on the Website (what pages you land on, how much time you spend).",
+      "detail": "IP address and browsing behavior (pages visited, time spent) are collected automatically for analysis and service improvement.",
+      "policy_excerpt": "Your IP Address; How you behave on the Website, (what pages you land on, how much time you spend, etc.)",
+      "concerns": ["IP address collected", "Browsing behavior tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe collects details about the device you use to access the Website/App including model and operating system, and uses this data to identify multiple users from the same device.",
+      "detail": "Device model and operating system are collected to identify login information of multiple users from the same device.",
+      "policy_excerpt": "What device you use to access the Website and its details (model, operating system, etc.)... We use the data from the device you access our Website/App to identify the login information of multiple users from the same device.",
+      "concerns": ["Device model and OS collected", "Used to identify multiple users from same device"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe collects extensive health data including your height, weight, medical conditions, health goals, ethnicity, genetics, health, sexual orientation, and health data from Google Health Connect (heart rate, steps, etc.).",
+      "detail": "Health data collected includes height, weight, medical conditions, health goals, fitness regimes. Special categories (ethnicity, genetics, health, sexual orientation) are collected with explicit consent. Google Health Connect integration provides heart rate, steps, and other health metrics. Third-party AI providers process selected health data for insights.",
+      "policy_excerpt": "Your height, weight; Your lifestyle, food preferences, medical conditions (if any), health goals or other fitness regimes; Your ethnicity, genetics, health or sexual orientation; All health data through the integration with Google Health Connect, including your heart rate, number of steps taken,etc.",
+      "concerns": ["Extensive health data collected", "Special categories (ethnicity, genetics, sexual orientation) collected", "Google Health Connect integration", "Third-party AI processes health data"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "HealthifyMe collects credit card, debit card, or other payment mode information to facilitate payments for Services. A third-party service provider processes payments and is not permitted to retain or use the information beyond payment processing.",
+      "detail": "Payment information is collected and processed by a third-party service provider. The provider is not permitted to store, retain, or use the information except for payment processing on HealthifyMe's behalf.",
+      "policy_excerpt": "Credit card/debit card/other payment mode information to facilitate payments for our Services. We use a third-party service provider to manage payment processing. This service provider is not permitted to store, retain, or use information you provide except for the sole purpose of payment processing on our behalf",
+      "concerns": ["Payment data collected", "Third-party payment processor"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access, correction, or deletion of your data by contacting support@healthifyme.com. HealthifyMe may retain data for legal obligations, disputes, and enforcing agreements even after deletion request.",
+      "detail": "Users can exercise data rights by emailing support@healthifyme.com. Verification is performed before providing access. Data may be retained for legal obligations, disputes, and enforcing agreements. GDPR rights are outlined for EU users.",
+      "policy_excerpt": "You may request access, correction or updation, and deletion of the data by contacting support@healthifyme.com... We may need to retain your personal data even if you seek deletion thereof, if it is needed to comply with our legal obligations, resolve disputes and enforce our agreements.",
+      "concerns": ["No self-service deletion portal", "Data may be retained after deletion request", "Requires email request"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "HealthifyMe will notify you of policy changes by email or through the mobile app, but does not explicitly require consent for material changes.",
+      "detail": "The policy states that changes will be notified by email or app notification. Users are encouraged to read such notices carefully. No explicit requirement for consent on material changes.",
+      "policy_excerpt": "We may occasionally make changes to the Policy. If we do, we shall notify either by sending you an e-mail or sending you a notification through our mobile application ('App'). Please make sure to read such notices carefully.",
+      "concerns": ["No explicit consent required for material changes"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 98,
+    "final_score": 52,
+    "grade": "D"
+  }
+}

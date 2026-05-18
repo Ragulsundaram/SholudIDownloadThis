@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.parjanya.org/privacy-policy",
+    "terms_url": "https://www.parjanya.org/terms-of-service",
+    "policy_last_updated": "2022-06-21",
+    "needs_review": false,
+    "review_notes": "Re-scanned with full privacy policy text provided by user. Policy is a Termly-generated template."
+  },
+
+  "app": {
+    "slug": "yoga-for-beginners-prayoga",
+    "name": "Yoga for beginners | Prayoga",
+    "developer": "Parjanya Creative Solutions LLP",
+    "app_store_url": "https://apps.apple.com/in/app/yoga-for-beginners-prayoga/id1474448636",
+    "app_store_id": "1474448636",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/02/48/78/0248789a-3272-792d-0692-788f582d7750/AppIcon-0-1x_U007emarketing-0-10-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Yoga",
+    "description": "A yoga app for beginners that uses on-device body tracking technology to give real-time feedback as you perform asanas and poses."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 69,
+    "grade": "C",
+    "one_liner": "Prayoga does not sell your data and offers a 30-day retention limit, but it allows third-party advertisers to track your app activity with cookies and may transfer your data in a business sale.",
+    "summary": "Prayoga's actual privacy policy (a Termly-generated template) reveals data practices that go beyond the App Store's 'Data Not Collected' label. The app requests camera and storage permissions, shares data with third-party vendors and advertisers who use tracking cookies, and reserves the right to transfer data in a merger or acquisition. On the positive side, the developer caps data retention at 30 days, promises Apple Health data is never used for marketing, offers a data-deletion request form, and says it will notify users of material policy changes.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The 30-day data retention cap and explicit promise not to use Apple Health data for marketing are strong positives. However, the presence of third-party advertising trackers and business-transfer clauses means privacy-conscious users should review their settings."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_third_party_ad_trackers",
+        "title": "Third-party advertisers track you with cookies",
+        "plain_english": "Prayoga allows selected third-party advertising companies to place tracking technology on the app so they can collect data about how you interact with it and show you targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_business_transfers",
+        "title": "Data may transfer in a sale or merger",
+        "plain_english": "If Prayoga is sold, merges with another company, or is acquired, your personal information may be transferred to the new owner as part of the deal.",
+        "severity": "high"
+      },
+      {
+        "id": "red_dnt_not_respected",
+        "title": "Do-Not-Track signals are ignored",
+        "plain_english": "Prayoga explicitly says it does not respond to Do-Not-Track browser signals, meaning your request not to be tracked online is not honoured.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_camera_storage_access",
+        "title": "Camera and storage permissions requested",
+        "plain_english": "The app asks for access to your camera and device storage. While this may be for body tracking, the policy does not clearly limit what data is accessed beyond these permissions.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_30_day_retention",
+        "title": "Data kept for maximum 30 days only",
+        "plain_english": "Prayoga promises to keep your personal information for no longer than 30 days, which is one of the shortest retention periods we have seen in any app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_healthkit_not_for_marketing",
+        "title": "Apple Health data never used for ads",
+        "plain_english": "Prayoga explicitly promises that Apple HealthKit data is used only for health and fitness services, and never for marketing, advertising, or data mining — even by third parties.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_deletion_form",
+        "title": "Data deletion request form available",
+        "plain_english": "You can submit a request form to review, update, or delete your personal information, and Prayoga promises to respond within 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_material_changes_notified",
+        "title": "Material policy changes are notified",
+        "plain_english": "If Prayoga makes important changes to its privacy policy, it says it will either post a prominent notice or send you a direct notification.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_selling_data",
+        "title": "Does not sell or rent your information",
+        "plain_english": "Prayoga states it does not share, sell, rent, or trade your information with third parties for their promotional purposes.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga requests camera access for body tracking during yoga sessions. The policy confirms camera is part of mobile device permissions requested by the app.",
+      "detail": "Camera permission explicitly listed as requested mobile device access. Used for real-time body tracking and pose feedback.",
+      "policy_excerpt": "We may request access or permission to certain features from your mobile device, including your mobile device's camera",
+      "concerns": ["Camera access requested", "Used for body tracking"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any collection or use of your location or GPS data.",
+      "detail": "No location access mentioned in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any access to your contacts or phonebook.",
+      "detail": "No contact or phonebook access described.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Prayoga requests storage access on your mobile device. The exact scope of storage access is not clearly limited in the policy.",
+      "detail": "Storage permission explicitly listed as requested mobile device access. Scope not detailed beyond 'storage'.",
+      "policy_excerpt": "We may request access or permission to certain features from your mobile device, including your mobile device's... storage",
+      "concerns": ["Storage access requested", "Scope not clearly limited"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga shares your data with third-party vendors, service providers, and advertising companies. It also reserves the right to transfer your information in a business sale or merger.",
+      "detail": "Sharing with vendors, contractors, service providers, third-party advertisers. Business transfers in mergers/acquisitions. No selling for promotional purposes stated, but ad tracking is used.",
+      "policy_excerpt": "We may share your data with third party vendors, service providers, contractors or agents who perform services for us... We may allow selected third parties to use tracking technology on the Apps... Business Transfers. We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition",
+      "concerns": ["Third-party tracking technology allowed", "Business transfers possible", "Ad companies receive data", "Vendors have access"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga collects personal information you provide when using the app or services, though the policy does not list specific identity fields collected.",
+      "detail": "Generic personal information collection described. No specific PII fields listed beyond standard service usage.",
+      "policy_excerpt": "When you visit our mobile application, and use our services, you trust us with your personal information",
+      "concerns": ["Personal information collected", "Specific fields not disclosed"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Third-party advertising companies place tracking technology on the app to collect data about how you interact with it, analyse activity, and show you targeted ads based on your visits.",
+      "detail": "Selected third parties use tracking technology on the Apps to collect interaction data over time for analysis, popularity tracking, and targeted advertising. DNT signals not respected.",
+      "policy_excerpt": "We may allow selected third parties to use tracking technology on the Apps, which will enable them to collect data about how you interact with the Apps over time... Third-Party Advertisers. We may use third-party advertising companies to serve ads when you visit the Apps. These companies may use information about your visits to our Website(s) and other websites that are contained in web cookies and other tracking technologies",
+      "concerns": ["Third-party tracking technology on app", "Cookie-based ad targeting", "Cross-site visit tracking", "DNT signals ignored"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga says it does not knowingly collect data from children under 18. If discovered, the account will be deactivated and data deleted.",
+      "detail": "18+ requirement. Parental consent for minors. Account deactivation and data deletion promised for under-18 users.",
+      "policy_excerpt": "We do not knowingly solicit data from or market to children under 18 years of age... If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to promptly delete such data",
+      "concerns": ["No technical age verification described"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any specific logging of your network activity, IP address, or browsing behaviour beyond what third-party trackers collect.",
+      "detail": "No explicit network or IP logging described by the company itself. Third-party trackers may collect this.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga says it may collect information regarding your mobile device when you use the app, and third-party trackers may collect interaction data over time.",
+      "detail": "Mobile device information collected. Third-party tracking technology enables data collection about app interactions over time, which implies device identification.",
+      "policy_excerpt": "We may collect information regarding your mobile device, when you use our apps... selected third parties to use tracking technology on the Apps, which will enable them to collect data about how you interact with the Apps over time",
+      "concerns": ["Mobile device info collected", "Third-party trackers may fingerprint device"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga uses Apple HealthKit and motion/fitness tracking for yoga and health services. It explicitly promises this data is never used for marketing, advertising, or data mining.",
+      "detail": "Apple HealthKit, Motion and Fitness tracking used. Heart rate samples during workouts collected. Explicit promise: never used for marketing, advertising, or data mining — including by third parties. Data only used for smart routines and personal charts.",
+      "policy_excerpt": "We use Apple HealthKit framework to only provide health, motion or fitness services with connection to the app. It is never used for marketing, advertising or use based data mining, including by third parties... Activity, performance and workout data, such as heart rate samples during a workout, are also collected by the Application. This data is only used to create smart routines for you, provide charts and summaries for you to understand your health and fitness journey better and never shared with anybody outside the application.",
+      "concerns": ["Health data collected via HealthKit", "Motion and fitness tracking used"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any collection of payment or financial data by Prayoga itself. Payment processing is handled by third-party providers.",
+      "detail": "Payment processing mentioned as an example of third-party vendor service, implying Prayoga does not handle payments directly.",
+      "policy_excerpt": "Examples include: payment processing",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can submit a request form to review, update, or delete your personal information, and Prayoga promises to respond within 30 days. Data is kept for no longer than 30 days unless required by law.",
+      "detail": "Data request form available. 30-day retention cap. 30-day response promise. Data deleted or anonymized when no longer needed.",
+      "policy_excerpt": "No purpose in this policy will require us keeping your personal information for longer than 30 days... To request to review, update, or delete your personal information, please submit a request form by clicking here. We will respond to your request within 30 days.",
+      "concerns": ["Deletion mechanism not clearly described", "Anonymization fallback if deletion not possible"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Prayoga may update its privacy notice from time to time. For material changes, it says it will either post a prominent notice or send a direct notification.",
+      "detail": "Updates indicated by 'Revised' date. Material changes notified by prominent posting or direct notification. Users encouraged to review frequently.",
+      "policy_excerpt": "If we make material changes to this privacy notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification.",
+      "concerns": ["Non-material changes may not be notified", "Users expected to check periodically"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 64.25,
+    "final_score": 69,
+    "grade": "C"
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://7minuteworkoutapp.com/privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "7-minute-workout",
+    "name": "7 Minute Workout",
+    "developer": "Bytesize Systems Pty Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/7-minute-workout/id650762525",
+    "app_store_id": "650762525",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/1f/45/231f4577-53cb-d86e-91af-3e4e94ab06cb/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Workout",
+    "description": "Popular HIIT workout app with bodyweight exercises, workout tracking, and Apple HealthKit integration."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 67,
+    "grade": "C",
+    "one_liner": "A simple workout app that collects location and device data, integrates with HealthKit, but promises not to sell your health data to advertisers or data brokers.",
+    "summary": "7 Minute Workout is a straightforward HIIT fitness app with a refreshingly short and transparent privacy policy. The app collects your location while open, device information, and basic account details. It integrates with Apple HealthKit to track workouts. The developer explicitly promises not to share health data with advertising platforms, data brokers, or information resellers — a significant positive. However, the policy is vague about what other device permissions may be accessed, and continued use counts as accepting policy changes automatically.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "7 Minute Workout is a legitimate fitness app with better-than-average protections for health data. However, it does collect location data and device identifiers, and its privacy policy is vague about camera, microphone, and file access. If you need a simple at-home workout app and value the explicit health data promise, it's reasonable to use."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_location_tracking",
+        "title": "Tracks your location while the app is open",
+        "plain_english": "7 Minute Workout collects your location from GPS, WiFi, and cell towers whenever the app is running. You can stop this only by deleting the app entirely.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_vague_device_permissions",
+        "title": "Vague about what device data is accessed",
+        "plain_english": "The policy says the app may access 'other data that you permit the App to access on your device including through permissions on your device' but doesn't say exactly what that means.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_auto_policy_acceptance",
+        "title": "Policy changes accepted automatically",
+        "plain_english": "If the developer updates its privacy policy, your continued use of the app counts as agreeing to the new terms. They won't ask you to confirm or re-accept.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_health_data_sale",
+        "title": "Explicitly promises not to sell health data",
+        "plain_english": "The policy clearly states they will not use or share health data collected through HealthKit with advertising platforms, data brokers, or information resellers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_processor_safe",
+        "title": "Payment details handled by third-party providers",
+        "plain_english": "When you pay for premium features, your payment information goes directly to the payment service provider. The app developer never sees or stores your card details.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_access_and_correction",
+        "title": "You can access and correct your data",
+        "plain_english": "You can request access to your personal information and ask for corrections. The developer says they will tell you if access is denied and why.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_simple_policy",
+        "title": "Short and readable privacy policy",
+        "plain_english": "Unlike many apps with pages of dense legal text, 7 Minute Workout has a brief, easy-to-understand privacy policy written in plain language.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't say whether the app can access your camera or microphone. The app shows video workout instructions, so camera access seems unlikely, but it's not explicitly ruled out.",
+      "detail": "No mention of camera or microphone access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "7 Minute Workout collects your location from GPS, WiFi, and cell towers whenever the app is open. It does not track you when the app is closed. The only way to stop location collection is to remove the app.",
+      "detail": "Section 'Location' explicitly states location data is collected from GPS, WiFi, and cell towers after install and consent. Not collected when app is closed. Can only stop by removing app.",
+      "policy_excerpt": "Bytesize Apps collects and stores location data from sources such as GPS, Wi-Fi and cell towers after you install and consent to the App tracking your location. Bytesize Apps does not collect location data when the App is closed. You may choose to stop our collection of location data by removing the App from your phone.",
+      "concerns": ["Location tracked while app is open", "No in-app toggle to disable", "Must delete app to fully stop"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app can access your phone contacts.",
+      "detail": "No mention of contacts or phonebook access.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app accesses your photos, files, or other storage on your phone.",
+      "detail": "No explicit mention of storage, file access, or photo library access. The vague mention of 'other data that you permit the App to access on your device' could include storage.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on file storage access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "7 Minute Workout shares your data with payment providers when you buy premium features, and with IT contractors who maintain their systems. They promise not to share health data with advertisers or data brokers.",
+      "detail": "Data shared with: (1) online payment facility providers (financial info passed through), (2) third-party contractors for IT services. HealthKit data explicitly NOT shared with advertising platforms, data brokers, or resellers. No other broad sharing mentioned.",
+      "policy_excerpt": "Bytesize Apps will disclose Your Personal Information to third parties in order to facilitate providing goods and services to You. Bytesize Apps will not use or share health data collected through HealthKit with advertising platforms, data brokers or information resellers.",
+      "concerns": ["Financial info passed to payment providers", "IT contractors have access to systems", "Vague 'third party service providers' mentioned"],
+      "score_impact": -9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "7 Minute Workout collects your first name, last name, email, and password if you create an account. Facebook login also gives them your name and email. You can use the app without creating an account.",
+      "detail": "Account creation collects first name, last name, email, password. Facebook login gives first name, last name, email. Basic identity data.",
+      "policy_excerpt": "If you choose to create an account using email, you provide us your first name, last name, email and a password. If you choose to login using Facebook, you provide us with your first name, last name and email.",
+      "concerns": ["Facebook login shares profile data"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "7 Minute Workout tracks how you use the app and website in aggregate form to understand usage patterns. They use cookies and applets. They do not use your health data for ads.",
+      "detail": "Aggregate data collected: total visits, visits to specific areas, ISP domains, page views, unique browsers, time spent, entry/exit points. Independent persons may measure internet usage. Cookies and applets used. No mention of targeted advertising or ad SDKs.",
+      "policy_excerpt": "Bytesize Apps also collects non-Personal Information in aggregate form to track data such as the total number of visits to Our App or Website... Bytesize Apps may use independent persons to measure and analyse the internet usage across Our App or Website.",
+      "concerns": ["Aggregate usage tracking", "Cookies and applets used", "Independent analytics providers"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention children or age restrictions. It's unclear how they handle data from users under 18.",
+      "detail": "No mention of children's data, age requirements, or COPPA/GDPR-K compliance.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on children's data protections"],
+      "score_impact": -5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "7 Minute Workout logs your IP address when you use the app or website. This helps them diagnose problems and support issues.",
+      "detail": "IP address collected by web servers for diagnosis and support. Standard network logging.",
+      "policy_excerpt": "Bytesize Apps's web servers provide Us with Your IP address. This assists Us in the diagnosis of problems and or support issues with Our services.",
+      "concerns": ["IP address logged", "Used for diagnostics"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "7 Minute Workout collects information about your phone including operating system, device identifier, carrier, language, battery, and network connections.",
+      "detail": "Device info collected: operating system, device identifier, carrier, language, battery performance, WiFi or other network connections, other permitted device data.",
+      "policy_excerpt": "Information from your device. This includes information about your operating system, device identifier, carrier, language, battery performance, wi-fi or other network connections, or other data that you permit the App to access on your device including through permissions on your device.",
+      "concerns": ["Device identifier collected", "Network connections tracked", "Battery performance logged", "Vague 'other data' clause"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "7 Minute Workout connects to Apple HealthKit to send and receive your workout activity data. They explicitly promise not to share this health data with advertisers or data brokers.",
+      "detail": "HealthKit integration for workout tracking. Explicit commitment not to share health data with advertising platforms, data brokers, or information resellers. This is a significant positive for a fitness app.",
+      "policy_excerpt": "To help improve recommendations and track your workout activity, Bytesize Apps sends and receives data to and from Apples HealhKit Application... Bytesize Apps will not use or share health data collected through HealthKit with advertising platforms, data brokers or information resellers.",
+      "concerns": ["HealthKit data accessed for workout tracking"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "7 Minute Workout never handles your payment details. If you buy premium features, your payment information goes straight to the payment service provider.",
+      "detail": "Policy explicitly states that when using online payment facilities, personal information including financial and credit information is passed to providers of those payment services. App does not store or process payment details.",
+      "policy_excerpt": "When You use any online payment facility on Our App or Website, We will pass Your Personal Information (including financial and credit information) to providers of those payment services and facilities.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask to see your personal data or have it corrected by contacting support. You can also request removal from their records. They may charge a reasonable fee for providing access.",
+      "detail": "Access and correction available upon request. May recover reasonable costs. Destruction/de-identification promised when no longer needed. No specific self-service portal mentioned.",
+      "policy_excerpt": "Upon Your request, Bytesize Apps will provide You with access to Your Personal Information... Bytesize Apps may recover any reasonable costs incurred in providing You access to the requested information. If the Personal Information We hold about You is inaccurate, incomplete, or no longer up-to-date, or You wish for Your details to be removed from Our records, please contact Us",
+      "concerns": ["May charge for access", "No self-service portal mentioned", "Vague retention periods"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If 7 Minute Workout updates its privacy rules, your continued use of the app counts as agreeing to the new terms. They encourage you to check the policy periodically.",
+      "detail": "Policy changes accepted automatically via continued use. Users encouraged to review periodically. No active notification mechanism specified for changes.",
+      "policy_excerpt": "From time to time, Bytesize Apps may make changes to this Privacy Policy. Accordingly, We encourage You to periodically review this Policy to remain informed about how We collect and protect Your Personal Information. Your continued use of the Bytesize Apps Website constitutes Your acceptance of the collection, use and disclosure of Your Personal Information to the extent outlined in this Privacy Policy as amended from time to time.",
+      "concerns": ["No active re-agreement required", "Changes apply retroactively via continued use"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 68,
+    "final_score": 67,
+    "grade": "C"
+  }
+}

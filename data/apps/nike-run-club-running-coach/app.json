@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://agreementservice.svs.nike.com/in/en_gb/rest/agreement?agreementType=privacyPolicy&country=IN&language=en&requestType=redirect&uxId=com.nike.unite",
+    "terms_url": "https://agreementservice.svs.nike.com/in/en_gb/rest/agreement?agreementType=termsOfUse&country=IN&language=en&requestType=redirect&uxId=com.nike",
+    "policy_last_updated": "2026-01-30",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "nike-run-club-running-coach",
+    "name": "Nike Run Club: Running Coach",
+    "developer": "Nike, Inc",
+    "app_store_url": "https://apps.apple.com/in/app/nike-run-club-running-coach/id387771637",
+    "app_store_id": "387771637",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2e/60/d3/2e60d3b3-3bc4-4f8e-5df9-07d00ebfd3ca/AppIconProd-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Running & Fitness",
+    "description": "Popular running app with GPS tracking, guided runs, training plans, and social features to help runners of all levels achieve their goals."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "Nike Run Club collects extensive workout and health data including GPS, heart rate, and body measurements, shares data with advertising partners using your email and phone, and transfers data internationally, but offers strong privacy controls and deletes inactive accounts after five years.",
+    "summary": "Nike Run Club's privacy policy reveals extensive collection of Workout Info including GPS location, heart rate, weight, height, body measurements, and fitness activity data. Location data is required for core features like run route logging. The app shares personal data with Nike entities, service providers, and third-party advertising providers — including sharing your email address or phone number with advertising partners to create custom audiences for personalized ads across the internet and social media. Data is stored in the USA and other countries. On the positive side, Nike uses encryption and authentication tools, provides a dedicated 'My Workout Info' setting to opt out of personalization, deletes inactive member profiles permanently after five years, and obtains express consent for Workout Info processing in certain jurisdictions. The app also allows using default height and weight values instead of real ones.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about extensive health and fitness data collection, sharing of personal identifiers with advertising partners, and international data transfers to the US, review your privacy settings before using the app."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_workout_data",
+        "title": "Extensive workout and health data collected",
+        "plain_english": "Nike Run Club collects your Workout Info including heart rate, GPS location, weight, height, body measurements, accelerometer data, calories burned, pace, stride, and fitness activity data. This data is stored on Nike's servers and may be used for personalization and aggregate research.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_required",
+        "title": "Precise GPS location required for core features",
+        "plain_english": "The app requests access to your phone's location data to log your run route, which is a core feature of the running experience. You cannot fully use the app without granting location access.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_sharing_identifiers",
+        "title": "Email and phone shared with advertising partners",
+        "plain_english": "Nike shares certain personal identifiers such as your email address or phone number with advertising partners to create custom audiences and personalize advertising based on your interests across the internet and social media.",
+        "severity": "high"
+      },
+      {
+        "id": "red_international_transfer",
+        "title": "Data transferred to the USA and other countries",
+        "plain_english": "The personal data Nike collects is stored in the USA and other countries. Some data recipients may be located in countries that do not provide the same level of data protection as your home country.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_business_transfer",
+        "title": "Data may be transferred in a business sale",
+        "plain_english": "Nike may transfer your personal data in the event it sells or transfers all or a portion of its business or assets, including in a reorganization, spin-off, dissolution, or liquidation.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_workout_info_control",
+        "title": "My Workout Info setting to opt out of personalization",
+        "plain_english": "Nike provides a 'My Workout Info' setting that lets you control whether your workout data is analyzed to personalize content, training programs, offers, and recommendations.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_default_values",
+        "title": "Can use default height and weight instead of real ones",
+        "plain_english": "If you do not want to provide your actual height and weight, Nike allows you to use default values instead. This lets you use core features like calorie calculations while keeping your real measurements private.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Inactive profiles deleted after five years",
+        "plain_english": "Nike permanently deletes inactive member profiles and personal data after five years. Your profile is considered active if you have logged in within the last two years.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Encryption and authentication tools used",
+        "plain_english": "Nike states it uses a variety of technical and organizational security measures, including encryption and authentication tools, to maintain the safety of your personal data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_changes_notice",
+        "title": "Material policy changes get prior notice",
+        "plain_english": "If Nike materially changes the way it processes your personal data, it will provide prior notice, or request your consent where legally required, before implementing such changes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_direct_marketing_opt_out",
+        "title": "Direct marketing opt-out available",
+        "plain_english": "You can opt out of Nike's marketing communications by modifying preferences in your account settings, clicking unsubscribe links in messages, or contacting Nike directly.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Nike Run Club collects images, photos, videos, and audio that you choose to upload or share through the app.",
+      "detail": "The app may request access to your photos and audio. You can choose to upload images and videos. Photos may be part of your public profile if you use social features.",
+      "policy_excerpt": "This personal data includes your: images, photos and videos; photos, audio, contacts and calendar information",
+      "concerns": ["Photos and videos collected", "Audio may be collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike Run Club requires access to your phone's precise GPS location to log your run route, measure distance, and pace — core features of the app.",
+      "detail": "Location data is required for core features. The app uses GPS to log run routes and measure distance. Location is part of Workout Info. Consent is obtained where required by law.",
+      "policy_excerpt": "we request access to your phone's location data to log your run route... sensor data, including heart rate and (GPS) location data",
+      "concerns": ["GPS location required for core features", "Location stored as Workout Info", "Used for run route logging"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Nike Run Club may request access to your contacts to allow you to interact with friends through the app. This is optional.",
+      "detail": "Contacts access is requested to enable social interaction features. You can choose whether to grant this permission. It is not required for core running features.",
+      "policy_excerpt": "we request access to your phone's... contacts to allow you to interact with your friends",
+      "concerns": ["Contacts accessed for social features"],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Nike Run Club collects photos, videos, and other content you choose to upload. It also accesses storage information from your device.",
+      "detail": "File access is user-initiated for uploading content. Storage information is collected automatically from the device. User-generated content may be shared publicly if you use social features.",
+      "policy_excerpt": "This personal data includes your: images, photos and videos... Device IDs, call state, network access, storage information and battery information",
+      "concerns": ["Storage information collected", "User content may be public"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike shares your personal data with Nike entities, service providers, third-party advertising providers, and may transfer it in a business sale. Your email or phone number may be shared with ad partners for custom audiences.",
+      "detail": "Extensive sharing: Nike entities, service providers (payments, hosting, email, research), third-party targeted advertising providers (custom audiences, sharing email/phone for profile-based ads), other third parties for legal compliance or fraud prevention, and any third party with your consent. Business transfers include reorganization, spin-off, dissolution, or liquidation.",
+      "policy_excerpt": "Nike shares your personal data with: Nike entities... Service providers processing personal data on Nike's behalf... Third-party targeted advertising providers provide personalization ad tailored advertising services to us... We may also transfer personal data we have about you in the event we sell or transfer all or a portion of our business or assets",
+      "concerns": ["Shared with advertising providers including email/phone", "Shared with Nike entities", "Transferred in business sale", "Shared with service providers"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike Run Club collects your name, email, phone number, date of birth, gender, hometown, screen name, password, and purchase history.",
+      "detail": "Standard account information collected. Purchase history is linked to your account. Social profile may include screen name, profile picture, and hometown if you use social features.",
+      "policy_excerpt": "contact details including name, email, telephone number... login and account information, including screen name, password and unique user ID... personal details including gender, hometown, date of birth and purchase history",
+      "concerns": ["Purchase history stored", "Social profile may be public"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike uses cookies, pixel tags, web beacons, Google Analytics, Google Ads, and third-party advertising partners to track your activity and serve personalized ads across the internet and social media.",
+      "detail": "Extensive tracking: cookies, pixel tags, unique device identifiers, Google Analytics, Google Signals, Google Ads, reCAPTCHA. Information shared with advertising partners to track activity over time and across platforms for interest-based advertising. Profile-based personalized advertising uses email/phone. Opt-out available in Platform settings.",
+      "policy_excerpt": "We use a variety of methods, such as cookies, pixel tags, identifiers for mobile devices and other similar technologies... We use third-party services such as Google Analytics, Google Signals, Google Ads, and reCAPTCHA... We may share data about how you use our Platform and apps with advertising partners... Profile-Based Personalized Advertising: We may also share certain personal identifiers—such as your email address or phone number—with advertising partners",
+      "concerns": ["Google Analytics and Google Ads used", "Profile-based ads using email/phone", "Cross-platform tracking by partners", "Cookies and pixel tags"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike complies with local laws and does not allow children under the legal age limit to register on its platform. Parental consent is required for children participating in Nike experiences and events.",
+      "detail": "Age compliance is based on local laws. Parental consent is obtained for children's participation in events. No specific child-directed features or data selling mentioned.",
+      "policy_excerpt": "We comply with local laws and do not allow children to register on our Platform when they are under the legal age limit of the country in which they reside. We will ask for parental consent for children participating in Nike experiences and events.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike collects IP addresses, referrer headers, network access information, and cookie data from your browser and device.",
+      "detail": "Network data collected automatically includes IP addresses, referrer headers, browser info, access times, referring URLs, and network access status. Used for analytics, security, and advertising.",
+      "policy_excerpt": "Cookies, IP addresses, referrer headers, data identifying your web browser and version, and web beacons, tags and interactions with our Platform... network access",
+      "concerns": ["IP addresses collected", "Network access tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Nike collects device IDs, unique device identifiers, device type, browser type, operating system, call state, storage information, and battery information.",
+      "detail": "Device information collected automatically. Includes device IDs, call state, storage, battery, unique device identifier, browser type, OS, and system settings. Used for analytics, security, and performance.",
+      "policy_excerpt": "Device IDs, call state, network access, storage information and battery information... unique device identifier and device type; domain, browser type and language, operating system and system settings",
+      "concerns": ["Device IDs collected", "Battery and storage info collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Nike Run Club collects extensive Workout Info including heart rate, weight, height, body measurements, GPS location, accelerometer data, calories, pace, stride, and fitness activity data.",
+      "detail": "Extensive health and fitness data collected as Workout Info. Includes heart rate from sensors, weight, height, body measurements, estimated stride, shoe/foot measurements, fitness activity (time, duration, distance, location, calories, pace/stride). Used for core features, personalization, and aggregate research. Consent obtained where required. Default values can be used instead of real height/weight.",
+      "policy_excerpt": "data on physical characteristics, including weight, height, and body measurements... fitness activity data provided by you or generated through our Platform (time, duration, distance, location, calorie count, pace/stride)... sensor data, including heart rate and (GPS) location data",
+      "concerns": ["Extensive health and body measurements collected", "Heart rate collected from sensors", "Used for personalization and aggregate research"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Nike Run Club collects payment or credit card information when you make purchases. Third-party payment processors are used.",
+      "detail": "Payment information collected for purchases. Third-party services process credit cards and payments on Nike's behalf. Service provider agreements require protection of personal data.",
+      "policy_excerpt": "payment or credit card information... Service providers processing personal data on Nike's behalf, for example to process credit cards and payments",
+      "concerns": ["Credit card information collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access, correction, deletion, or restriction of your personal data through a Privacy Web Form. Inactive member profiles are permanently deleted after five years. Purchase history is kept for legal obligations.",
+      "detail": "Data subject rights available: access, electronic copy, correction, deletion, restriction. Requests made via Privacy Web Form or email. Authorized nominees can act on your behalf with verification. Inactive profiles deleted after 5 years (dormant after 2 years). Purchase history retained for tax, sales, and warranty legal obligations.",
+      "policy_excerpt": "You have the right to request: (i) access to your personal data; (ii) an electronic copy of your personal data ; (iii) correction of your personal data if it is incomplete or inaccurate; or (iv) deletion or restriction of your personal data... After five years, we permanently delete Nike Member profiles and personal data. Purchase history be retained by Nike in line to comply with legal obligations",
+      "concerns": ["Purchase history retained for legal obligations", "Up to 5 years for profile deletion"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If Nike makes material changes to how it processes your personal data, it will give you prior notice or request your consent where legally required before implementing those changes.",
+      "detail": "Policy changes posted on Platform. Material changes get prior notice or consent where legally required. Users encouraged to read policy and stay informed.",
+      "policy_excerpt": "If we materially change the way in which we process your personal data, we will provide you with prior notice, or where legally required, request your consent prior to implementing such changes.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 86.75,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

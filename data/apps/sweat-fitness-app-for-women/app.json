@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.sweat.com/pages/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2025-08-21",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "sweat-fitness-app-for-women",
+    "name": "Sweat: Fitness App For Women",
+    "developer": "The Bikini Body Training Company Pty Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/sweat-fitness-app-for-women/id1049234587",
+    "app_store_id": "1049234587",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9c/25/a9/9c25a9bf-ad50-9506-aac9-44bc10830624/AppIcon-0-0-1x_U007emarketing-0-11-0-P3-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "",
+    "description": "Sweat is a fitness app for women offering workout programs, training, and community features."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 62,
+    "grade": "C",
+    "one_liner": "A popular fitness app with strong user rights and transparent GDPR compliance, but heavy ad tracking and broad third-party data sharing raise real concerns.",
+    "summary": "Sweat collects detailed health data including height, weight, pregnancy status, and workout activity. It shares user data extensively with Meta (as a joint controller), Google, TikTok, and Snap for targeted advertising, and explicitly acknowledges that this may constitute a 'sale' under US state privacy laws. On the positive side, Sweat offers a full suite of user rights (access, deletion, export, consent withdrawal), does not store payment details, and maintains GDPR compliance with an EU representative.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The combination of sensitive health data collection with broad advertising partnerships and 'sale' of personal data under CCPA makes this a cautious choice despite strong user rights."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_meta_joint_controller",
+        "title": "Shares data with Meta for ads",
+        "plain_english": "Sweat and Meta are 'joint controllers' of your data, meaning Meta receives your information to help deliver targeted ads to you across the internet.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking_networks",
+        "title": "Tracks you for targeted ads",
+        "plain_english": "Sweat uses cookies, pixels, and tracking tools from Meta, Google, TikTok, and Snap to show you personalized ads and measure marketing campaigns.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sensitive_health_data",
+        "title": "Collects sensitive health data",
+        "plain_english": "The app collects your height, weight, pregnancy status, and workout history. It may even infer medical conditions or requirements from the information you provide.",
+        "severity": "high"
+      },
+      {
+        "id": "red_forum_public_forever",
+        "title": "Forum posts are public forever",
+        "plain_english": "Anything you post in the Sweat forum becomes public information that can be viewed by anyone, even people outside the app. Search engines like Google can index these posts, and they may remain visible even after you delete your account.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_law_enforcement_sharing",
+        "title": "Shares data with authorities",
+        "plain_english": "Sweat may share your personal data with government authorities, law enforcement bodies, and regulators when required by law or to enforce their legal rights.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_do_not_sell_opt_out",
+        "title": "Offers 'Do Not Sell' opt-out",
+        "plain_english": "Sweat provides a dedicated webpage and cookie settings that let you opt out of the 'sale' or 'sharing' of your personal data for advertising purposes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_user_rights",
+        "title": "Strong user rights and GDPR compliance",
+        "plain_english": "You can request access to your data, correct it, delete it, export it, or restrict how it is used. European users benefit from GDPR protections and a local EU representative.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_payment_storage",
+        "title": "Never stores your payment details",
+        "plain_english": "Sweat does not receive or store your credit card or payment information. All membership payments are handled entirely by third-party payment providers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_health_consent_withdrawal",
+        "title": "Can withdraw health data consent",
+        "plain_english": "You can withdraw your consent for health data processing at any time within the app's Profile Menu. This won't stop you from using the app, though some features may not work properly.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your photos and audio only when you choose to use specific features, like sharing fitness activities with friends.",
+      "detail": "Photos and audio are accessed only when the user selects particular services or features on the Platform, such as sharing fitness activities through social media. The CCPA section confirms 'sensory data' (photos, audio) is collected only where the user has selected particular services or features.",
+      "policy_excerpt": "Where you have selected particular services or features on the Platform (e.g. scheduling your workouts, sharing your fitness activities with friends through social media platforms), your photos, audio, contacts and calendar information...",
+      "concerns": [
+        "Sensory data shared with Sweat group companies and third-party ancillary partners",
+        "No clear mention of whether microphone access is continuous or only on-demand"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sweat uses your IP address to figure out your general region (like which country you are in) to customize your experience, such as language settings.",
+      "detail": "Location is determined via IP address rather than GPS. It is used to customize the platform experience (e.g., language settings) and is shared with Sweat group companies and third-party partners.",
+      "policy_excerpt": "Your location where the IP address of your computer or device is used to determine your region (e.g., USA, Australia, UK) so that we can customise your experience on the Platform.",
+      "concerns": [
+        "IP-based geolocation is inferred on every connection",
+        "Location data shared with third-party social media platforms and partners"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your contacts if you choose features like referring a friend or sharing your fitness activities through social media.",
+      "detail": "Contacts and calendar information are accessed only when the user selects particular services or features. Referral links allow Sweat to identify who referred whom.",
+      "policy_excerpt": "Where you have selected particular services or features on the Platform... your photos, audio, contacts and calendar information, as well as your social network information.",
+      "concerns": [
+        "Contacts may be used for referral tracking",
+        "Social network information is collected when connecting accounts"
+      ],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Sweat can access your photos and audio files only when you actively choose to share them through specific app features.",
+      "detail": "Storage access is limited to user-initiated photo and audio sharing. No broad library scanning or continuous file access is described.",
+      "policy_excerpt": "Where you have selected particular services or features on the Platform... your photos, audio, contacts and calendar information...",
+      "concerns": [
+        "Photos and audio are shared with Sweat group companies and third-party partners when uploaded"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sweat shares your data with Meta, Google, TikTok, and Snap for advertising, and with service providers like Zendesk. It even admits this may count as a 'sale' under California privacy law.",
+      "detail": "Sweat has a joint controller arrangement with Meta for advertising. Data is shared with social media platforms, service providers, and potential business buyers. The CCPA section explicitly acknowledges that transferring data to ad partners may constitute a 'sale'.",
+      "policy_excerpt": "Sweat and Meta are joint controllers of the joint processing... Sweat generally does not sell your Personal Data in the conventional sense... however, we use the services of third-party vendors and partners that help deliver interest-based ads to you. As part of this process, we may transfer your Personal Data to those vendor partners (like Meta) for their use.",
+      "concerns": [
+        "Joint controller arrangement with Meta for ad targeting",
+        "Explicit admission of CCPA 'sale' of data for interest-based ads",
+        "Data shared with TikTok, Snap, Google, and unnamed 'ancillary partners'",
+        "Data may be transferred to potential buyers in a business sale"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name, email, and date of birth to create an account. You can also sign in with Facebook, Apple, or Google.",
+      "detail": "Account creation requires first name, last name, email, and date of birth. Third-party login (Facebook, Apple, Google) shares profile info based on user privacy controls. A unique member ID is generated.",
+      "policy_excerpt": "Account Information: First and last names, email address, and date of birth. This is mandatory information which we require when you open a user account on the Platform.",
+      "concerns": [
+        "Date of birth is mandatory for age verification",
+        "Third-party login shares name, email, app ID, and profile info"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sweat uses cookies, tracking pixels, and ad tools from Meta, Google, TikTok, and Snap to follow your activity and show you personalized ads.",
+      "detail": "The app and website use cookies, pixels, and similar tracing technologies for analytics, measurement, and ad targeting. Third-party partners like TikTok, Meta, Google, and Snap set tracking technologies. Sweat uses personal info (preferences, profile data, fitness activity) for tailored promotional materials.",
+      "policy_excerpt": "We use cookies, pixels and other similar tracing technologies to provide us with analytics, provide measurement, and for ad targeting. These tracking technologies may be set by us or our third party partners such as TikTok, Meta, Google, Snap.",
+      "concerns": [
+        "Interest-based ad targeting using personal and fitness data",
+        "Cross-site tracking via cookies and pixels from multiple ad networks",
+        "Marketing uses fitness activity data and user preferences for profiling"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must be of legal age in your country to use Sweat. The app collects your date of birth to check this, but there is no specific mention of special protections for younger users beyond age gating.",
+      "detail": "Date of birth is used to verify legal age. The Terms of Use require individuals to be of legal age. No specific COPPA or child-directed safeguards are mentioned beyond this age verification.",
+      "policy_excerpt": "We use your date of birth to check that you are legal age in your country. Please note that individuals must be of legal age in their respective countries to use the Platform.",
+      "concerns": [
+        "No mention of COPPA compliance or special protections for minors",
+        "App collects extensive health and activity data from all users"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sweat logs your IP address, device network information, and how you use the app for security, analytics, and troubleshooting.",
+      "detail": "Technical information and log files include device data, network information, and online tracking technologies. IP address is used for region determination and shared with partners.",
+      "policy_excerpt": "Technical information and log files, such as data about your device, network information, data collected through online tracking technologies which are described in our Cookie Policy.",
+      "concerns": [
+        "IP address used for location inference",
+        "Network activity shared with advertising and analytics partners"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects technical details about your device and browser to help run the platform, diagnose problems, and deliver targeted ads.",
+      "detail": "Device and technical information is collected for platform functionality, security, diagnostics, and advertising purposes. Shared with service providers and ad partners.",
+      "policy_excerpt": "Technical information and log files, such as data about your device, network information, data collected through online tracking technologies...",
+      "concerns": [
+        "Device data used for ad targeting in addition to diagnostics",
+        "Shared with multiple third-party advertising and analytics vendors"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Sweat collects sensitive health information like your height, weight, pregnancy status, and workout history. It may also guess medical conditions from what you share, and sends fitness data back to Apple or Google if you connect a wearable device.",
+      "detail": "Health data includes height, weight, pregnancy status, workout completion, fitness goals, and training preferences. Sweat may infer medical conditions or requirements. Data is shared back to Apple/Google for linked wearables. Health data is optional and can be deleted by withdrawing consent.",
+      "policy_excerpt": "Health information including height, weight, and pregnancy status... Sweat may infer information about your health, including information about your medical conditions or requirements, as well as data on your physical characteristics from this information about your preferences or data submitted to it.",
+      "concerns": [
+        "Infers medical conditions from user preferences and submitted data",
+        "Health data shared with Apple and Google when linking wearable devices",
+        "Pregnancy-related data is considered sensitive under data protection laws",
+        "Health data stored on Sweat servers (not local-only by default)"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sweat never receives or stores your payment card details. All payments for memberships are handled entirely by third-party payment providers.",
+      "detail": "Transaction details for product purchases may be collected, but membership payment information is explicitly handled by payment providers and never received or stored by Sweat.",
+      "policy_excerpt": "Note we do not receive or store payment information for your Sweat membership itself as this is handled by our payment providers.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have strong rights over your data. You can view, correct, delete, export, or restrict how Sweat uses your information. European users also benefit from GDPR protections.",
+      "detail": "Comprehensive user rights include transparency, access, correction, erasure, objection, restriction, data portability, and withdrawal of consent. GDPR compliance with VeraSafe as EU/UK representative. Requests are answered within 30 days. Note that a limited portion of data may be retained post-deletion for legal obligations and relationship continuity.",
+      "policy_excerpt": "You may have the right to: Transparency, Access, Correction, Erasure, Object, Automated Decision Making and Profiling, Restriction of Processing, Transfer, Withdraw Consent, Complain.",
+      "concerns": [
+        "Limited data may be retained after account deletion for legal and internal purposes"
+      ],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Sweat can change its privacy policy at any time by posting a new version on its website. The changes take effect immediately, and there is no mention of emailing users to let them know.",
+      "detail": "Policy updates are posted on the Platform and effective immediately. No proactive notification mechanism (email, push) is described. Users are expected to check the posted notice.",
+      "policy_excerpt": "Sweat may revise and update this Privacy Notice at any time by posting an updated Privacy Notice on the Platform. All changes to the Privacy Notice are effective immediately when posted to the Platform and apply to all access to and use of the Platform thereafter.",
+      "concerns": [
+        "No proactive user notification described for material policy changes",
+        "Changes apply immediately upon posting"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0.0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 78.5,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

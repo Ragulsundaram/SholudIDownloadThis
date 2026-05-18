@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://static.cure.fit/privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "2021-08-03",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "cult-fit-gym-workout-fitness",
+    "name": "cult.fit Gym Workout & Fitness",
+    "developer": "CureFit Healthcare Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/cult-fit-gym-workout-fitness/id1217794588",
+    "app_store_id": "1217794588",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3d/10/2a/3d102abc-5e52-61c0-fd8a-65368ecd3c96/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Gym & Fitness",
+    "description": "India's leading fitness app offering gym workouts, yoga, meditation, sports nutrition, and mental health coaching with both online and in-center experiences."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 59,
+    "grade": "C",
+    "one_liner": "Cult.fit collects extensive health and biometric data including medical history and vaccination status, uses your camera for live workout tracking, accesses your address book, and shares data with affiliates and third parties with your consent.",
+    "summary": "Cult.fit's privacy policy reveals extensive collection of sensitive health data for a fitness app. It gathers biometric information, workout data, nutrition logs, sleep habits, mental wellbeing information, and even vaccination status and past medical history. The app uses your device camera for 'live energy' tracking during workouts, accesses your mobile address book for the 'squads' social feature, and collects CCTV footage at physical premises. Data is shared with affiliates, service providers, and may be transferred in a business acquisition. The policy is notably dated (August 2021) and does not detail encryption standards.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about extensive health and biometric data collection, camera access during workouts, address book access, and broad data sharing with affiliates and third parties, consider the trade-off before installing."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_biometric_health_data",
+        "title": "Collects biometric and medical history",
+        "plain_english": "Cult.fit collects biometric information, vaccination status, past medical history, mental wellbeing, disabilities, and other health-related data for safety and service provision.",
+        "severity": "high"
+      },
+      {
+        "id": "red_camera_live_tracking",
+        "title": "Camera used for live workout tracking",
+        "plain_english": "Cult.fit uses your device camera to capture outputs for 'live energy' tracking and conducting live workout sessions.",
+        "severity": "high"
+      },
+      {
+        "id": "red_address_book_access",
+        "title": "Accesses your mobile address book",
+        "plain_english": "Cult.fit accesses data in your mobile address book to help users find other users who have enabled 'squads' and set their profiles as public.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cctv_footage",
+        "title": "CCTV footage collected at physical premises",
+        "plain_english": "Cult.fit collects CCTV footage of common areas at their physical premises including fitness centres and gyms.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_transfer_acquisition",
+        "title": "Data may be transferred in business acquisition",
+        "plain_english": "If Cult.fit is acquired, goes out of business, or enters bankruptcy, your personal information would be one of the assets transferred to or acquired by a third party.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_spdi_outside_india",
+        "title": "Sensitive data may be transferred outside India",
+        "plain_english": "Cult.fit may transfer your sensitive personal data (SPDI) to body corporates located outside India, subject to applicable law.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Does not sell personal information",
+        "plain_english": "Cult.fit explicitly states they neither rent nor sell your personal information in personally identifiable form to anyone.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_express_consent",
+        "title": "Express consent required for third-party sharing",
+        "plain_english": "For Diverse Services, Cult.fit shares information with third parties only in relation to whom you provide express consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_grievance_officer",
+        "title": "Has a dedicated grievance officer",
+        "plain_english": "Cult.fit has appointed Mr. Srinivas Reddy as Grievance Officer with email (grievance@diverseretails.com) and physical address in Bangalore.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protection",
+        "title": "Not directed at children under 18",
+        "plain_english": "Cult.fit does not knowingly collect personal information from anyone under age 18 and will delete such information if discovered.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_editing",
+        "title": "Some information editable in account settings",
+        "plain_english": "Through your account settings, you may access, and in some cases edit or delete, your name, password, email address, and profile information.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Cult.fit uses your device camera for 'live energy' tracking and conducting live workout sessions. The camera outputs are used as part of your workout data.",
+      "detail": "The privacy policy explicitly states that workout related data includes outputs from your device camera for 'live energy' tracking or conducting live workout sessions.",
+      "policy_excerpt": "personal information and SPDI (where necessary) collected for provision of the Services on the Mobile App/website, including your nutrition data, passwords, workout related data (including outputs from your device camera for 'live energy' tracking or conducting live workout sessions), physical activity, photographs, biometric information, sleep habits",
+      "concerns": ["Camera used during workouts for live energy tracking", "Camera outputs stored as workout data"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit collects your location information at the time of registration and for user profile information.",
+      "detail": "Location is collected during registration and stored as part of user profile information. It can be edited through account settings.",
+      "policy_excerpt": "personal information collected at the time of your registration on the Mobile App/website, including your name, username, email address, gender, birth date, height, location",
+      "concerns": ["Location collected at registration", "Stored in user profile"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Cult.fit accesses data in your mobile address book to help users find other users who have enabled 'squads' and set their profiles as public. They state they do not otherwise process address book information.",
+      "detail": "Mobile address book is accessed for the 'squads' social feature to help users find other public users. Cult.fit states they do not process address book data for any other purpose.",
+      "policy_excerpt": "data in your mobile address book to help users find other users who have enabled 'squads' and set their profiles as public. We do not otherwise process information from the address book for any other purpose",
+      "concerns": ["Address book accessed for squads feature", "Used to find other users"],
+      "score_impact": 13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Cult.fit collects photographs and other content you voluntarily upload or disclose online. User submissions in discussion boards and messages become publicly available.",
+      "detail": "Photographs are collected as part of personal information and SPDI. Any content voluntarily disclosed online in public areas becomes publicly available and can be collected and used by others.",
+      "policy_excerpt": "physical activity, photographs, biometric information... Any content or personal information that you voluntarily disclose online in a manner other users can view (on discussion boards, in messages and chat areas, etc.) becomes publicly available, and can be collected and used by others.",
+      "concerns": ["Photographs collected", "User content publicly available"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit shares your data with affiliated businesses, agents/service providers, and may transfer it in a business acquisition or bankruptcy. Data may also be shared for offers, programs, and benefits with partners and third parties.",
+      "detail": "Data is shared with affiliated businesses for transactions, agents for service provision, and may be transferred in business acquisitions or bankruptcy. Data may be shared for offers, programs, and benefits with affiliates, partners, or third parties. For Diverse Services, third-party sharing requires express consent.",
+      "policy_excerpt": "We neither rent nor sell your personal information in personally identifiable form to anyone... We share your personal information in personally identifiable form with third parties only as described below... In certain situations, businesses or third party websites we're affiliated with may sell items or provide services to you through the Mobile App... We employ other companies and people to perform tasks on our behalf and need to share your information with them... if we (or substantially all of our assets) are acquired, or if we go out of business or enter bankruptcy, personal information would be one of the assets transferred",
+      "concerns": ["Data shared with affiliated businesses", "Agents/service providers receive data", "Data transferred in acquisition/bankruptcy", "Shared for offers and benefits with partners", "SPDI may be transferred outside India"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit collects your name, username, email address, gender, birth date, height, and location at registration. Bank details are collected for payment processing.",
+      "detail": "Standard account registration data is collected. Some information can be accessed and edited through account settings. Bank details are collected for payments.",
+      "policy_excerpt": "personal information collected at the time of your registration on the Mobile App/website, including your name, username, email address, gender, birth date, height, location... bank details for payment processing",
+      "concerns": ["Bank details collected for payments", "Extensive profile data collected at registration"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit uses cookies to track how and when pages are visited and by how many people. Aggregate usage data may be shared with partners. Your interest profile can be removed by deleting browser cookies.",
+      "detail": "Cookies track page visits and visitor counts. Aggregate usage data is shared with partners to understand how often people use the app. No segments are created for sensitive topics or children. Cookie profile data is removed if cookies are deleted.",
+      "policy_excerpt": "Cookies are identifiers we transfer to your computer or mobile device that allow us to recognize your browser or mobile device and tell us how and when pages in our Mobile App are visited and by how many people... We may also provide this aggregate information to our partners... no segments relating to information which we consider sensitive have been or will be created, such as segments relating to political opinions, religious beliefs, physical or mental health conditions or sexual life.",
+      "concerns": ["Cookies track page visits", "Aggregate data shared with partners", "Interest profile stored in cookies"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit does not knowingly collect personal information from anyone under age 18. If discovered, such information will be deleted as quickly as possible.",
+      "detail": "Explicit statement that services are not for children under 18, and data will be deleted if collected from a child without parental consent.",
+      "policy_excerpt": "We do not knowingly collect or solicit personal information from anyone under the age of 18 or knowingly allow such persons to register for the Products or Services... In the event that we learn that we have collected personal information from a child under age 18 without verification of parental consent, we will delete that information as quickly as possible.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit automatically receives and records your IP address, cookie information, and the page you request from your browser.",
+      "detail": "Server logs collect IP address, cookie information, and requested pages automatically when you interact with the mobile app.",
+      "policy_excerpt": "Whenever you interact with our Mobile App, we automatically receive and record information on our server logs from your browser including your IP address, 'cookie' information, and the page you requested.",
+      "concerns": ["IP address logged", "Cookies tracked", "Pages requested recorded"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit uses cookies to recognize your browser or mobile device and track how and when pages are visited.",
+      "detail": "Cookies are transferred to your device to recognize your browser/mobile device and track page visits. You can change browser preferences to limit cookies.",
+      "policy_excerpt": "Cookies are identifiers we transfer to your computer or mobile device that allow us to recognize your browser or mobile device and tell us how and when pages in our Mobile App are visited and by how many people.",
+      "concerns": ["Cookies recognize browser/device", "Device identification via cookies"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit collects extensive health data including biometric information, nutrition data, workout data, physical activity, sleep habits, mental wellbeing, disabilities, vaccination status, and past medical history. It also integrates with iOS HealthKit, Health app, and Google Fit.",
+      "detail": "Extensive health data collected including biometric information, nutrition data, workout data, physical activity, photographs, sleep habits, and other health-related information. Also collects health, mental wellbeing, disabilities, vaccination status, and past medical history for safety and employer duties. Integrates with iOS Health app, HealthKit, and Google Fit.",
+      "policy_excerpt": "personal information and SPDI (where necessary) collected for provision of the Services on the Mobile App/website, including your nutrition data, passwords, workout related data (including outputs from your device camera for 'live energy' tracking or conducting live workout sessions), physical activity, photographs, biometric information, sleep habits; and other sleep, activity, or health-related information and insights... details about your health, mental wellbeing, disabilities or other health related information such as vaccination status, past medical history, all collected for the safety of our other users and premises",
+      "concerns": ["Biometric information collected", "Vaccination status collected", "Past medical history collected", "Mental wellbeing and disabilities collected", "HealthKit/Health app/Google Fit integration"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Cult.fit collects bank details for payment processing. The policy does not mention specific encryption standards for financial data.",
+      "detail": "Bank details are collected as part of personal information for payment, billing, and invoicing purposes. No mention of PCI DSS compliance or specific encryption for financial data.",
+      "policy_excerpt": "bank details for payment processing... For payment, billing and invoicing related purposes",
+      "concerns": ["Bank details collected", "No mention of specific financial data encryption"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can access and edit some information through account settings. For deletion or modification of other data, you must contact Cult.fit at hello@cult.fit or the Grievance Officer. Some information may remain in private records after deletion.",
+      "detail": "Account settings allow editing name, password, email, and profile info. For broader deletion requests, email contact is required. Cult.fit states that some information may remain in private records after account deletion, and aggregate data derived from your information may still be used.",
+      "policy_excerpt": "Through your account settings, you may access, and, in some cases, edit or delete the following information you've provided to us... If you'd like us to delete/modify Information that you have provided via the Mobile App or otherwise to us, please contact us at hello@cult.fit or contact our Grievance Officer... When you update information, however, we may maintain a copy of the unrevised information in our records. Please note that some information may remain in our private records after your deletion of such information from your account.",
+      "concerns": ["Some data remains after deletion", "Aggregate data may still be used", "Requires email for full deletion", "No self-service complete deletion"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Cult.fit will notify you of privacy policy changes by posting an announcement on the mobile app or sending you an email. You are bound by changes when you use the service after such changes have been posted.",
+      "detail": "Changes are notified via app announcement or email. Continued use constitutes acceptance of changes. No explicit requirement for affirmative consent to material changes.",
+      "policy_excerpt": "If we make changes in the way we use personal information, we will notify you by posting an announcement on our Mobile App or sending you an email. You are bound by any changes to the privacy policy when you use the Mobile App, Product or Service after such changes have been first posted.",
+      "concerns": ["No explicit consent required for changes", "Continued use constitutes acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 83.5,
+    "final_score": 59,
+    "grade": "C"
+  }
+}

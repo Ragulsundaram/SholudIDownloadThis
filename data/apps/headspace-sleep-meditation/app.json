@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.headspace.com/privacy-policy",
+    "terms_url": "https://www.headspace.com/terms-conditions",
+    "policy_last_updated": "2026-03-30",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "headspace-sleep-meditation",
+    "name": "Headspace: Sleep & Meditation",
+    "developer": "Headspace Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/headspace-sleep-meditation/id493145008",
+    "app_store_id": "493145008",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0a/5a/96/0a5a96fb-a760-159a-30aa-bb02e906beef/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Mental Health",
+    "description": "A meditation, sleep, and mental wellness app offering guided sessions, sleep music, and mindfulness exercises."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 61,
+    "grade": "C",
+    "one_liner": "A well-intentioned mental health app that collects sensitive health data and shares some information for targeted advertising.",
+    "summary": "Headspace collects detailed health and wellness data including mental health status, therapy session content, and sleep/exercise information. While it treats this data as protected health information under HIPAA and provides strong privacy rights, it also shares personal information with third-party advertising platforms for targeted ads and with your employer or benefit sponsor if you access the app through them. Data is stored in the US.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects highly sensitive mental health and therapy data. While protections are strong (HIPAA, GDPR, CCPA rights), the sharing with advertising platforms and potential employer access through benefit sponsors creates meaningful privacy risks for a mental health app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_data_for_ads",
+        "title": "Sensitive health data collected and used for advertising",
+        "plain_english": "Headspace collects your mental health status, therapy discussions, sleep data, and wellness goals. While they don't use your actual therapy content for ads, they do use other personal information to show you targeted ads on other websites and apps through third-party advertising platforms.",
+        "severity": "high"
+      },
+      {
+        "id": "red_employer_data_sharing",
+        "title": "Your employer may see your usage data",
+        "plain_english": "If you access Headspace through your employer or health plan, they may receive your name, email, registration date, and last use date. In some cases, they may also see details about your in-app activity or therapy use.",
+        "severity": "high"
+      },
+      {
+        "red_ai_therapy",
+        "title": "AI features may process your reflections",
+        "plain_english": "Headspace uses artificial intelligence for content recommendations, security monitoring, and quality assurance. Some features let you directly interact with AI (like \"Ebb\" for reflections). You get a choice before using these features, but your interactions may still be processed.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_stored_in_us",
+        "title": "Data is stored and processed in the United States",
+        "plain_english": "Headspace is a US company and your personal information, including sensitive health data, is primarily processed and stored in the United States. This means it is subject to US laws, which may have weaker privacy protections than laws in your country.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_targeted_advertising",
+        "title": "Third-party platforms track you for ads",
+        "plain_english": "Headspace works with third-party advertising platforms to show you personalized ads. Under California privacy law, this counts as \"selling\" or \"sharing\" your personal information. You can opt out, but it is enabled by default.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_hipaa_protection",
+        "title": "Health information protected under HIPAA",
+        "plain_english": "Headspace treats your health and wellness information as protected health information under HIPAA, the US medical privacy law. This means your therapy and health data gets extra legal protections.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_privacy_rights",
+        "title": "You can access, correct, or delete your data",
+        "plain_english": "You have the right to request a copy of your data, correct inaccurate information, export your data, and request deletion. Headspace says they will honor these requests regardless of where you live.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protected",
+        "title": "Not designed for children under 13",
+        "plain_english": "Headspace explicitly states it is not for children under 13 and does not intentionally collect data from them. They will delete a child's data if discovered.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_transparent_disclosures",
+        "title": "Detailed and transparent privacy policy",
+        "plain_english": "Headspace provides a comprehensive privacy policy with clear explanations, a table of contents, and supplemental notices for specific regions like the EU, UK, and California. They also disclose their AI use practices.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may collect audio recordings, voicemails, and photographs you choose to provide. Therapy or coaching sessions may involve audio or video communication.",
+      "detail": "Under CCPA disclosures, Headspace collects 'sensory data' including audio recordings, voicemails, and photographs. Therapy/coaching sessions may involve audio/video. No mention of background camera or microphone access.",
+      "policy_excerpt": "Sensory data. Audio recordings, voicemails, photographs",
+      "concerns": ["Audio and photographic content collected", "Therapy sessions may be recorded"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your approximate location based on your IP address for analytics and understanding user trends.",
+      "detail": "Approximate location is derived from IP address and disclosed under CCPA as collected geolocation data. No mention of precise GPS tracking.",
+      "policy_excerpt": "Geolocation data. Approximate location based on information like IP address",
+      "concerns": ["IP-based approximate location collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts, phonebook, or address book access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your device storage or files beyond standard app data.",
+      "detail": "No mention of broad storage or file system access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headspace shares your personal information with service providers, advertising platforms, benefit sponsors, and business partners. They explicitly acknowledge that this counts as 'selling' or 'sharing' under California privacy law.",
+      "detail": "Shared with service providers (analytics, payment, advertising, hosting, support), third-party advertising platforms for targeted ads, benefit sponsors (name, email, registration date, last use date), business partners for joint promotions, and affiliates including Headspace Medical. Users can opt out of 'sales/sharing' for targeted advertising.",
+      "policy_excerpt": "We work with third party platforms who provide us with analytics and advertising services. This includes helping us understand how users interact with our Platform serving advertisements on our behalf to those who may be interested... Headspace 'sells' and 'shares' personal information under the CCPA's broader definition of 'sale' or 'share.'",
+      "concerns": [
+        "Data shared with third-party advertising platforms for targeted ads",
+        "Benefit sponsors (employers) may receive usage information",
+        "Business partners receive data for joint promotions",
+        "Affiliates including medical providers receive data"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name, email, and password to create an account. You can also optionally share your age, race, sexual orientation, gender identity, and health history.",
+      "detail": "Required: name, email, password. Optional: age, race, ethnicity, sexual orientation, pronouns, gender identity, sex at birth, marital status, health and medical history. For identity verification, government ID may be requested. Account information retained for as long as the account exists.",
+      "policy_excerpt": "Contact information and identifiers... first and last name and email address... Profile and demographic information... age, race and ethnicity, sexual orientation, preferred pronouns, gender or gender identity, sex at birth, marital status, and details about your health and medical history.",
+      "concerns": [
+        "Optional but encouraged collection of sensitive demographic data",
+        "Government ID may be requested for verification"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headspace tracks your browsing and app usage to show you personalized ads on other websites and apps through third-party advertising platforms.",
+      "detail": "Headspace uses third-party platforms for analytics and advertising services, including cross-context behavioral and targeted advertising. Under CCPA, they explicitly acknowledge 'selling' and 'sharing' personal information for this purpose. Users can opt out through the My Data page or global privacy control signals.",
+      "policy_excerpt": "To personalize the advertisements you receive about our Platform through third-party platforms, on other websites and apps... Headspace partners with third parties to manage our advertising on other platforms... We may disclose limited personal information to third parties for our cross-context behavioral and targeted advertising purposes.",
+      "concerns": [
+        "Behavioral tracking for targeted advertising",
+        "Cross-context ad personalization enabled by default",
+        "IP address and browsing history shared with ad platforms"
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not for children under 13 and does not intentionally collect their data. Parents can refer children aged 6-17 for in-person care through some employer programs, but cannot create app accounts for them.",
+      "detail": "Platform not intended for individuals under 13. No intentional collection from children under 13. Limited exception for EAP parents referring children 6+ for in-person care. Child data will be removed if discovered.",
+      "policy_excerpt": "Our Platform is not intended for individuals below 13 years old or the equivalent age in your jurisdiction. We do not intentionally collect personal information from individuals under that age.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, pages visited, links clicked, time spent, and browsing patterns for analytics and to understand user trends.",
+      "detail": "Collects IP address, pages visited, links clicked, time spent on Products/Websites, patterns of use, and pages that led/referred users to the Platform. Used for analytics, product improvement, and advertising personalization.",
+      "policy_excerpt": "Usage data, such as time spent on the Products and Websites including pages visited, links clicked, approximate location, language preferences, performance of features, patterns of use, and the pages that led or referred you to our Products and Websites.",
+      "concerns": ["Browsing history tracked and used for profiling", "IP address logged continuously"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects detailed device information including device ID, IP address, operating system, browser type, and screen resolution to recognize your device and show you targeted ads.",
+      "detail": "Collects IP address, device identifier, device type, operating system, browser type, screen resolution, OS version, device manufacturer and model, language, plugins, and add-ons. Explicitly used for advertising personalization and analytics.",
+      "policy_excerpt": "Browser and device data, such as IP address, device identifier, device type, operating system and Internet browser type, screen resolution, operating system name and version, device manufacturer and model, language, plug-ins, add-ons",
+      "concerns": [
+        "Device identifier used for cross-platform tracking",
+        "Detailed device fingerprint collected for ads"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Headspace collects sensitive health and wellness data including your mental health status, therapy session content, sleep data, and exercise information. This data is treated as protected health information under HIPAA.",
+      "detail": "Collects health and wellness information through surveys, health goals, therapy/coaching sessions, and user inputs. Includes sleep, health, and exercise data (CCPA biometric category). Treated as PHI under HIPAA where applicable. Not used for personalizing ads.",
+      "policy_excerpt": "We will collect the information you provide about your health and wellness as you use our Products or engage with the Services... We understand that this information is very sensitive so we handle it with care, including treating this health information as protected health information under HIPAA where applicable.",
+      "concerns": [
+        "Highly sensitive mental health data collected",
+        "Therapy session content stored on servers",
+        "Sleep and exercise data tracked",
+        "Health data stored in the US"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment card information is processed by third-party payment processors. Headspace does not directly process or store your full card number.",
+      "detail": "Headspace relies on third-party payment processors. Collected data includes card number, type, expiration date, billing address. Anonymized/truncated versions may be provided to Headspace. Third-party terms apply.",
+      "policy_excerpt": "Headspace does not directly process payment card information, and instead relies upon third-party payment processors to do so on our behalf... Personal information collected for these purposes includes card number, type, expiration date, and billing address, and certain anonymized, limited and/or truncated versions of this information may be provided to Headspace.",
+      "concerns": ["Third-party payment processors handle card data", "Truncated payment info shared with Headspace"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access, correction, deletion, or export of your data. However, Headspace may keep some information for legal reasons or to defend against legal claims.",
+      "detail": "Provides access, correction, portability (CSV/PDF export), deletion, and restriction rights. Response within a month (extendable). Account info kept for as long as account exists. Retention based on ongoing relationship, legal obligations, and legal position (litigation, statutes of limitations).",
+      "policy_excerpt": "We will keep your personal information for as long as needed to perform our obligations to you, or for as long as legally permitted. The criteria used to determine our retention periods include: (i) the length of time we have an ongoing relationship with you; (ii) whether there is a legal obligation to which we are subject; and (iii) whether retention is advisable in light of our legal position.",
+      "concerns": [
+        "Retention exceptions for legal position",
+        "Account information kept while account exists",
+        "May require fee for excessive requests"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Headspace will notify you about significant changes through the app or email, but minor changes may be posted on the website without direct notice.",
+      "detail": "Significant changes (how personal information is used or rights changes) are notified within the Platform or through email. Revised version posted on Website. Users encouraged to periodically check the policy.",
+      "policy_excerpt": "When we may make a significant change, such as on how we use your personal information or your rights, we will notify you within the Platform or through another channel such as the email you supplied during account registration, in addition to posting the revised version on our Website.",
+      "concerns": ["Minor changes may not trigger direct notification"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 79.25,
+    "final_score": 61,
+    "grade": "C"
+  }
+}

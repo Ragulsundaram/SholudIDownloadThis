@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.asanarebel.com/privacy-policy",
+    "terms_url": null,
+    "policy_last_updated": "2022-01-01",
+    "needs_review": true,
+    "review_notes": "Privacy policy is dated January 2022 and may be outdated. No mention of HealthKit or Apple Health integration, but the app is a fitness app and may have added health data features since 2022."
+  },
+  "app": {
+    "slug": "asana-rebel-get-in-shape",
+    "name": "Asana Rebel: Get in Shape",
+    "developer": "Asana Rebel GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/asana-rebel-get-in-shape/id1067860796",
+    "app_store_id": "1067860796",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/eb/78/41/eb784160-e43a-d1fe-443e-5b51d1f5edb2/AppIcon-0-0-1x_U007emarketing-0-0-0-11-0-0-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "Yoga & Fitness",
+    "description": "A yoga and fitness app offering personalized workout plans, yoga routines, and fitness tracking to help users get in shape."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 69,
+    "grade": "C",
+    "one_liner": "A yoga and fitness app that tracks your workouts extensively and shares your data with a wide network of advertising and analytics partners.",
+    "summary": "Asana Rebel collects detailed workout schedules, fitness goals, device information, and browsing behavior. It shares data with numerous third parties including Google (Analytics, Ads, Firebase, Crashlytics), Facebook, Adjust, Amplitude, and Pinterest for advertising, analytics, and marketing purposes. The app uses cookies, tracking pixels, and advertising IDs to deliver personalized ads. While it provides strong GDPR rights and limits data transfers to the minimum necessary, the extensive behavioral tracking and an outdated privacy policy from 2022 are concerning.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app engages in extensive behavioral advertising and shares data with a broad ecosystem of third-party partners. The privacy policy has not been updated since 2022 and may not reflect current data practices."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_ad_sharing",
+        "title": "Data shared with extensive third-party ecosystem",
+        "plain_english": "Asana Rebel shares your data with Google (Analytics, Ads, Firebase, Crashlytics), Facebook, Adjust, Amplitude, and Pinterest. This includes your device info, usage patterns, and browsing behavior.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioral_tracking",
+        "title": "Extensive behavioral advertising and tracking",
+        "plain_english": "The app uses cookies, tracking pixels, DoubleClick, Google AdWords, Dynamic Remarketing, Firebase advertising IDs, Facebook Custom Audiences, and Adjust to track your behavior across apps and show you personalized ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_camera_access",
+        "title": "Camera access requested for profile photos",
+        "plain_english": "The app asks for access to your camera or photos so you can upload or change a profile photo. This is optional but means the app can access your photo library.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_outdated_policy",
+        "title": "Privacy policy is outdated",
+        "plain_english": "The privacy policy was last revised in January 2022 and may not accurately reflect the app's current data collection practices, especially if new features have been added since then.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_outside_eu",
+        "title": "Data may be stored outside your country",
+        "plain_english": "The company uses cloud services and stores data on servers that may be located outside the European Union or European Economic Area, including in the United States.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_rights",
+        "title": "Strong GDPR rights listed",
+        "plain_english": "You have the right to access, correct, delete, restrict, and export your data. You can also object to processing and revoke consent at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_limited_sharing",
+        "title": "Data sharing limited to necessary purposes",
+        "plain_english": "The company states that your personal data is only transferred to third parties with your consent or when necessary for the service, and the extent is kept to a minimum.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_change_notice",
+        "title": "Policy changes require notification and acceptance",
+        "plain_english": "The company says they will notify you of privacy policy changes and ask you to read and accept them before they take effect, rather than making changes silently.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_selling",
+        "title": "No explicit mention of selling data",
+        "plain_english": "The privacy policy does not state that the company sells your personal data to third parties for profit.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app asks for access to your camera or photos so you can upload or change a profile photo. This is optional and you can revoke the permission at any time in your device settings.",
+      "detail": "Camera/photo access is requested for uploading or changing profile photos. The policy states users can revoke such access rights at any time by changing device settings. No mention of microphone access.",
+      "policy_excerpt": "we need access to your camera or your photos if you upload or want to change a profile photo... Generally, you may revoke such access rights at any time by changing the appropriate settings.",
+      "concerns": ["Camera/photo access requested", "Profile photos stored on servers"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect or use your precise GPS location.",
+      "detail": "No mention of GPS or location data collection in the privacy policy. IP address is collected for statistical purposes but not used to identify user location.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload profile photos and workout information to the app. The app also stores your workout schedule and fitness goals.",
+      "detail": "User-generated content including profile photos, workout schedules, and fitness goals are stored. Users can upload or download workout information.",
+      "policy_excerpt": "information about workouts you upload or download using an Asana Rebel application... any other information input or uploaded by you through the website or an Asana Rebel application (e.g., information you provide when completing an online form, photos you upload)",
+      "concerns": ["Profile photos stored on servers", "Workout data uploaded"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with Google (Analytics, Ads, Firebase, Crashlytics), Facebook, Adjust, Amplitude, and Pinterest for advertising, analytics, marketing, and application stability monitoring.",
+      "detail": "Third-party services include: Google Analytics, DoubleClick, Google AdWords, Google Dynamic Remarketing, Firebase SDK, Google Analytics for Firebase, Crashlytics, Facebook Connect, Facebook Custom Audiences, Adjust, Amplitude, Pinterest. Data may be stored on cloud servers outside EU/EEA.",
+      "policy_excerpt": "We use a number of different Google services... for analysis and marketing purposes... We use the remarketing function Custom Audiences of Facebook Inc... Asana Rebel application(s) and our website use the Adjust service... Amplitude is an analysis service... We use cloud services. This means we will transfer your data to a third party and store data on the servers of that provider. In some cases, your data may also be stored on servers outside the European Union (EU) or European Economic Area (EEA).",
+      "concerns": [
+        "Extensive sharing with advertising and analytics partners",
+        "Data stored outside EU/EEA",
+        "Facebook Custom Audiences for remarketing"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your first and last name, email address, and password to create an account. You can also add optional information like gender, fitness level, workout goals, and a profile photo.",
+      "detail": "Required: first and last name, email address, password. Optional: gender, fitness level, workout goals, profile photo. Facebook Connect login shares Facebook profile data and email address.",
+      "policy_excerpt": "To register, you must provide us with at least the following information: first and last name, e-mail address, and password... additional information, such as your gender, fitness level, and workout goals... If you create a workout schedule, we will receive information about which and how many workouts you have completed.",
+      "concerns": [
+        "Facebook login shares profile data",
+        "Workout completion data collected"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses cookies, tracking pixels, advertising IDs, and multiple advertising services to track your behavior and show you personalized ads across apps and websites.",
+      "detail": "Uses cookies, tracking pixels, DoubleClick, Google AdWords, Google Dynamic Remarketing, Firebase SDK with advertising IDs, Facebook Custom Audiences/pixel, Adjust. Tracks ad interactions, app usage, and engagement for personalized advertising.",
+      "policy_excerpt": "We use a number of different Google services... for analysis and marketing purposes... We also use your data to show you personalized ads with the help of Google services... We use the remarketing function Custom Audiences of Facebook Inc... Asana Rebel application(s) and our website use the Adjust service... This service allows us to monitor our marketing performance... Firebase uses technologies that work similar to cookies, in particular advertising IDs.",
+      "concerns": [
+        "Multiple advertising and remarketing services",
+        "Advertising IDs collected and shared",
+        "Cross-app behavioral tracking"
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not intended for users under 16 years of age. If you are under 16, you are not permitted to use the service.",
+      "detail": "Explicitly states users must be over 16 years of age. Underage users are not permitted to use the service.",
+      "policy_excerpt": "you are over 16 years of age (or are a parent or guardian with such authority to agree to this Privacy Policy for the benefit of an individual who is under 16 years of age). If you do not accept the terms set forth in this Privacy Policy... please do not use our Services.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browser type, pages you visit, links you click, and your entire clickstream history for statistical analysis and service improvement.",
+      "detail": "Log and technical information includes IP address, browser type, browser version, browser configuration, ISP, referrer URL, pages clicked, clickstream, access dates/times, data volume. Log files store address, authentication, date/time, access method, HTML content, status code.",
+      "policy_excerpt": "your IP address, operating system, browser type, browser version, browser configuration, name of Internet provider... the URL and IP address of the website from which you access our website... any pages of our website on which you click during your visit... the entire Uniform Resource Locator (URL) clickstream regarding, through, and from the website... Log files... the address of the accessing computer, authentication fields, date and time of access, access method, content of HTML access, status code of the web server",
+      "concerns": [
+        "Extensive browsing and clickstream tracking",
+        "IP address logged continuously"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device model, operating system, browser details, ISP, and advertising identifiers. This information is shared with analytics and advertising partners.",
+      "detail": "Device-related information includes device model, type, OS version, browser, ISP, mobile carrier. Advertising identifiers collected via Firebase. Shared with Google, Adjust, Amplitude, and Facebook for analytics and advertising.",
+      "policy_excerpt": "your IP address, operating system, browser type, browser version, browser configuration, name of Internet provider, and any other relevant information regarding your computer and Internet connection in order to identify the type of your device... Firebase uses technologies that work similar to cookies, in particular advertising IDs.",
+      "concerns": [
+        "Advertising IDs collected via Firebase",
+        "Device info shared with multiple partners"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data such as heart rate, blood pressure, or step count from your phone's health sensors. It only collects self-reported fitness preferences and workout schedules.",
+      "detail": "No mention of HealthKit, Apple Health, Google Health Connect, or biometric data collection. The app collects self-reported fitness level, workout goals, and workout completion data, which are user-generated preferences rather than health sensor data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects your transaction history and payment information when you place orders or subscribe to services. Data transfers use SSL/TLS encryption.",
+      "detail": "Transaction history including open and completed transactions is stored. Information regarding orders and payments is collected. SSL/TLS encryption used for data transfers. No specific mention of payment processors.",
+      "policy_excerpt": "your transaction history, including open and completed transactions... information regarding your orders and payments... We therefore maintain state-of-the-art measures to guarantee data security and to protect your data from access by third parties. In addition, we use strong SSL or TLS encryption for all data transfers.",
+      "concerns": ["Transaction history stored"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access, correction, deletion, or export of your data. If you cancel your account, your data will be erased within a reasonable time or archived.",
+      "detail": "GDPR rights listed: information (Art. 15), correction (Art. 16), erasure (Art. 17), restriction (Art. 18), portability (Art. 20), revocation of consent (Art. 7(3)), objection (Art. 21), complaint to supervisory authority (Art. 77). Account cancellation leads to erasure 'within reasonable time' or archival.",
+      "policy_excerpt": "If you cancel your user account, we will also erase within reasonable time or archive your personal data, i.e. restrict processing... you have the right to: request information on personal data processed by us about you... demand the correction of incorrect data... request deletion of your personal data... request the restriction of the processing... receive your personal data provided to us in a structured, standard and machine-readable format... revoke at any time your consent previously granted to us",
+      "concerns": [
+        "'Within reasonable time' is vague for deletion",
+        "Data may be archived instead of deleted"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company says they will notify you of privacy policy changes and ask you to read and accept them before they take effect. However, the policy is from 2022 and does not specify how they will notify you.",
+      "detail": "Material changes will be notified and users asked to read and accept before implementation. No specific notification method mentioned (e.g., email vs. in-app notice).",
+      "policy_excerpt": "We may need to make changes to this Privacy Policy, for example if we add new functions or services to the application. We will however notify you of any changes and ask that you read and accept such changes before they are implemented by us.",
+      "concerns": [
+        "No specific notification method stated",
+        "Policy is outdated (2022)"
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 62.75,
+    "final_score": 69,
+    "grade": "C"
+  }
+}

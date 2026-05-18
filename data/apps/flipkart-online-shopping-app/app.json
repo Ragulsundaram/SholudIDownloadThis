@@ -2,117 +2,139 @@
   "meta": {
     "schema_version": "1.0",
     "analyzed_at": "2026-05-18",
-    "analyzed_by": "claude-kimi-k2.6",
+    "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.flipkart.com/pages/privacypolicy",
-    "terms_url": "",
+    "terms_url": "https://www.flipkart.com/pages/terms",
     "policy_last_updated": "April 2026",
     "needs_review": false,
     "review_notes": ""
   },
+
   "app": {
     "slug": "flipkart-online-shopping-app",
     "name": "Flipkart - Online Shopping App",
     "developer": "Flipkart Internet Private Limited",
-    "app_store_url": "https://apps.apple.com/in/app/flipkart---online-shopping-app/id742044692",
+    "app_store_url": "https://apps.apple.com/in/app/flipkart-online-shopping-app/id742044692",
     "app_store_id": "742044692",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/16/a0/fe16a076-2175-915f-f3cc-6cac77cfb5e3/AppIcon-fk-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     "category": "Shopping",
-    "sub_category": "",
-    "description": ""
+    "sub_category": "E-commerce",
+    "description": "India's largest online marketplace for electronics, fashion, home essentials and more, offering fast delivery, easy returns, and secure payments."
   },
+
   "verdict": {
     "overall_risk": "risky",
-    "score": 46,
+    "score": 41,
     "grade": "D",
-    "one_liner": "Flipkart collects extensive personal and financial data and shares it broadly with affiliates, advertisers, and business partners.",
-    "summary": "A major Indian e-commerce app that gathers buying behavior, device info, location, and even government IDs, then shares insights across a wide network of group companies and third parties for advertising and credit services.",
-    "recommendation": "think_twice",
-    "recommendation_reason": "The app engages in extensive data sharing and behavioral tracking, collects sensitive documents like PAN and KYC details, and uses financial data for credit profiling. While it offers some opt-out controls, the overall privacy posture is weak for a shopping app."
+    "one_liner": "Flipkart collects extensive personal data including government IDs and financial details, shares it broadly across its corporate group and with advertisers, and uses it for behavioural profiling and targeted marketing.",
+    "summary": "Flipkart is India's dominant shopping platform, but its privacy practices are invasive. It collects government IDs (PAN, Aadhaar), credit reports, health data for prescriptions, and facial images for virtual try-on. This data is shared widely with Flipkart group companies, lending partners, advertisers, credit bureaus, and potential business acquirers. While it offers opt-outs for marketing emails and personalised ads, the default data-sharing footprint is extensive and hard to fully control.",
+    "recommendation": "avoid",
+    "recommendation_reason": "The sheer breadth of data collection (government IDs, health records, facial images, financial details) combined with extensive third-party sharing makes this a high-risk app for privacy-conscious users."
   },
+
   "flags": {
     "red": [
       {
+        "id": "red_govt_id_collection",
+        "title": "Collects government ID numbers",
+        "plain_english": "Flipkart asks for your PAN card, Aadhaar, or other government-issued ID numbers. These are highly sensitive documents that can be used for identity theft if leaked.",
+        "severity": "high"
+      },
+      {
+        "id": "red_credit_report_access",
+        "title": "Accesses your credit report",
+        "plain_english": "To offer loans and PayLater services, Flipkart pulls your credit information report from credit agencies. This creates a financial profile about your borrowing habits.",
+        "severity": "high"
+      },
+      {
         "id": "red_broad_data_sharing",
-        "title": "Shares data widely with affiliates and advertisers",
-        "plain_english": "Flipkart may share your personal data with group companies, affiliates, business partners, and third-party advertisers. These partners can use your data for their own marketing, product development, and to personalize your experience on their platforms too.",
+        "title": "Shares data across corporate group and partners",
+        "plain_english": "Your shopping history, contact details, and financial data are shared with Flipkart's sister companies (Myntra, Cleartrip), lending partners, credit bureaus, advertisers, and even potential buyers if Flipkart is ever sold.",
         "severity": "high"
       },
       {
-        "id": "red_government_id_collection",
-        "title": "Collects government IDs and KYC details",
-        "plain_english": "The app asks for sensitive documents like your PAN card, GST number, and government-issued ID for credit checks and KYC verification. This creates a detailed identity profile tied to your shopping activity.",
+        "id": "red_health_data_prescriptions",
+        "title": "Collects health data for prescriptions",
+        "plain_english": "When buying prescription medicines, Flipkart collects your medical information and may connect you with third-party doctors. Your health data could be shared with these teleconsultation providers.",
         "severity": "high"
       },
       {
-        "id": "red_behavioral_tracking",
-        "title": "Tracks your behavior across websites",
-        "plain_english": "Flipkart records the websites you visit before and after using the app, your IP address, and your browsing patterns. They also use third-party advertising companies that may track you across other apps and sites to show personalized ads.",
+        "id": "red_facial_images_tryon",
+        "title": "Stores facial images for virtual try-on",
+        "plain_english": "The 'virtual try and buy' feature uploads photos of your face to Flipkart's servers. These images could be retained and used for purposes beyond just the try-on feature.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Tracks you across websites for ads",
+        "plain_english": "Flipkart uses Google Analytics and third-party ad companies to track which websites you visit before and after Flipkart, building a detailed advertising profile about you.",
         "severity": "medium"
       },
       {
-        "id": "red_health_data_sharing",
-        "title": "Shares health data with third-party doctors",
-        "plain_english": "If you buy medicines, Flipkart may share your prescription and health information with third-party teleconsultants and medical practitioners to validate or reissue your prescription.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_financial_profiling",
-        "title": "Uses payment data for credit profiling",
-        "plain_english": "Your payment details and transaction history may be used to check your eligibility for loans, insurance, and credit products offered by Flipkart's lending partners and affiliates.",
+        "id": "red_merger_data_transfer",
+        "title": "Data sold in mergers or acquisitions",
+        "plain_english": "If Flipkart merges with or is bought by another company, your personal data can be transferred to the new owner without requiring your fresh consent.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_opt_out_ads",
-        "title": "You can opt out of personalized ads",
-        "plain_english": "You can opt out of personalized ad tracking through your device's settings, which limits how third-party advertising companies use your data for targeting.",
-        "severity": "positive"
-      },
-      {
         "id": "green_grievance_officer",
-        "title": "Has a dedicated privacy grievance officer",
-        "plain_english": "Flipkart lists a specific grievance officer with a real email address and physical office location, making it easier to raise privacy complaints.",
+        "title": "Has a dedicated grievance officer",
+        "plain_english": "Flipkart has appointed a Grievance Officer with a physical address and email (privacy.grievance@flipkart.com) for handling privacy complaints, which is a legal requirement in India.",
         "severity": "positive"
       },
       {
-        "id": "green_consent_required",
-        "title": "Sensitive permissions require your consent",
-        "plain_english": "Access to your camera, contacts, location, and photo gallery is only granted if you explicitly give permission, rather than being forced on you automatically.",
+        "id": "green_marketing_opt_out",
+        "title": "Marketing emails can be opted out",
+        "plain_english": "You can unsubscribe from promotional emails and SMS through the Notification Preference page in the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_personalization_opt_out",
+        "title": "Personalised ad tracking can be disabled",
+        "plain_english": "You can turn off personalised ad tracking through your phone's device settings using the 'Opt out of Ads Personalization' feature.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_secure_server",
+        "title": "Uses secure servers for transactions",
+        "plain_english": "Flipkart claims to use secure servers and encryption when you access account information and make payments.",
         "severity": "positive"
       }
     ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Flipkart can access your camera if you allow it, mainly for features like virtual try-on. It is not required for normal shopping.",
-      "detail": "The policy states that with consent, Flipkart may access your camera to enhance your experience and provide access to products and services. Voice commands and virtual try-and-buy features are mentioned.",
-      "policy_excerpt": "With your consent, we may have access to your ... camera ... to ... enhance your experience on the Platform and provide you access to the products and services being offered by us.",
-      "concerns": ["Camera access requested for non-core features", "Voice data collected through voice commands"],
-      "score_impact": 4.5
+      "plain_english": "Flipkart accesses your camera and photo gallery for virtual try-on features and voice commands. Images you upload are stored on their servers.",
+      "detail": "The policy explicitly mentions camera, photo gallery, and voice command access. Virtual try-and-buy features upload facial images to servers.",
+      "policy_excerpt": "If you use voice commands or virtual try and buy or similar features to shop on the Platform, we will collect that information you provide to us.",
+      "concerns": ["Facial images stored on servers", "Voice data collected", "Photo gallery access"],
+      "score_impact": 9.75
     },
     {
       "id": "location_gps",
       "label": "Location & GPS",
       "icon": "MapPin",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The app can access your location if you give permission, mainly for delivery recommendations. It is optional.",
-      "detail": "Location access is requested with user consent to enhance experience and provide access to products and services.",
-      "policy_excerpt": "With your consent, we may have access to your ... location ... to ... enhance your experience on the Platform.",
-      "concerns": ["Location data may be used for profiling and delivery optimization"],
-      "score_impact": 4.5
+      "plain_english": "Flipkart collects your location to personalise delivery recommendations and your shopping experience. This data is shared with business partners.",
+      "detail": "Location is explicitly listed as data collected with consent, used for personalising the user journey including delivery recommendations.",
+      "policy_excerpt": "With your consent, we may have access to your... location... to enhance your experience on the Platform.",
+      "concerns": ["Location collected with consent", "Used for profiling and personalisation", "Shared with partners"],
+      "score_impact": 9.75
     },
     {
       "id": "contacts_phonebook",
@@ -123,10 +145,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "Flipkart may read your contacts if you allow it. Since the app broadly shares personal data with business partners and affiliates, contact information could end up on company servers.",
-      "detail": "The policy explicitly mentions access to contacts in your directory with consent. Given the broad data sharing provisions with group companies, affiliates, and third parties, any contacts accessed may be subject to sharing.",
-      "policy_excerpt": "With your consent, we may have access to your SMS, instant messages, contacts in your directory, location, camera, photo gallery and device information.",
-      "concerns": ["Contacts access is not core to shopping", "Broad sharing provisions apply to all personal data", "No explicit commitment to not share contacts"],
+      "plain_english": "Flipkart accesses your contacts and SMS messages with your consent. This data is used for KYC verification and shared with lending partners and other third parties.",
+      "detail": "Contacts and SMS are explicitly listed as collected data, used for eligibility checks, KYC, and shared with affiliates and lending partners.",
+      "policy_excerpt": "With your consent, we may have access to your SMS, instant messages, contacts in your directory... to check your eligibility for certain products and services like insurance, credit and payment products.",
+      "concerns": ["Contacts uploaded to servers", "Used for credit eligibility", "Shared with lending partners"],
       "score_impact": 13
     },
     {
@@ -138,10 +160,10 @@
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "You may upload files like prescription photos when needed for medicine orders. This is user-initiated and optional.",
-      "detail": "The app allows uploading prescriptions and accessing the photo gallery with consent for features like virtual try-on or prescription validation.",
-      "policy_excerpt": "With your consent, we may have access to your ... photo gallery...",
-      "concerns": ["Photo gallery access requested for non-core features", "Prescription uploads involve sensitive health documents"],
+      "plain_english": "Flipkart accesses your photo gallery for uploading prescription images and virtual try-on photos. The scope of access is not clearly limited.",
+      "detail": "Photo gallery access is mentioned but no details on whether the app scans the entire gallery or only the selected photo.",
+      "policy_excerpt": "With your consent, we may have access to your... camera, photo gallery...",
+      "concerns": ["Photo gallery access", "Prescription photos uploaded"],
       "score_impact": 3
     },
     {
@@ -153,10 +175,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart shares your data with a large network of group companies, affiliates, business partners, sellers, and advertisers. Some of this sharing is for marketing and to personalize ads.",
-      "detail": "The policy permits sharing personal data with Flipkart group companies, affiliates, related companies, business partners, third-parties, sellers, and advertising companies. Insights derived from user behavior may be shared for promotions, advertisements, marketing, and product development. Plus membership benefits require sharing name, email, and phone number with partners like Netflix. In the event of a merger or acquisition, personal data may be sold or shared with the acquiring entity.",
-      "policy_excerpt": "The insights derived from this analysis may be shared with our group companies, affiliates, related companies, business partners, and third-parties... We and our affiliates will share / sell some or all of your personal data with another business entity should we plan to merge with, or be acquired by that business entity.",
-      "concerns": ["Broad sharing with unspecified third parties", "Data may be sold in M&A transactions", "Plus benefits require sharing personal info with streaming partners", "No clear list of all data recipients"],
+      "plain_english": "Your data is shared extensively with Flipkart group companies, sellers, advertisers, lending partners, credit bureaus, and potential business acquirers.",
+      "detail": "The policy lists numerous categories of third parties that receive data, including for marketing, credit underwriting, and merger/acquisition scenarios.",
+      "policy_excerpt": "The insights derived from this analysis may be shared with our group companies... and third-parties who offer services to us... for promotions, advertisements and marketing.",
+      "concerns": ["Group companies receive data", "Credit bureaus receive data", "Sold in mergers", "Advertisers receive data", "Sellers receive data"],
       "score_impact": 19.5
     },
     {
@@ -168,10 +190,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart collects your name, email, phone, address, and sensitive government IDs like PAN and KYC documents. This identity data is linked to your shopping behavior and shared with credit bureaus and lending partners.",
-      "detail": "Account creation requires standard personal data. For certain services, Flipkart collects PAN, GST number, government-issued ID, and KYC details to check eligibility for insurance, credit, and payment products. This data is shared with credit bureaus, lending partners, and group companies.",
-      "policy_excerpt": "We may collect personal data (such as email address, delivery address, name, phone number, credit card/debit card and other payment instrument details or medical or health related information) from you when you set up an account or transact with us... we may also request you to provide your PAN, credit information report, GST Number, Government issued ID cards/number and Know-Your-Customer (KYC) details.",
-      "concerns": ["Government ID collection creates high-risk identity profile", "Identity data shared with credit bureaus and lending partners", "Account data linked to advertising and marketing profiles"],
+      "plain_english": "Flipkart collects your name, email, phone, address, PAN, Aadhaar, government ID, KYC details, and credit report. This identity data is used for profiling and shared broadly.",
+      "detail": "Extensive identity data collection including sensitive government IDs and financial identity documents.",
+      "policy_excerpt": "We may collect personal data (such as email address, delivery address, name, phone number, credit card/debit card... PAN, credit information report, GST Number, Government issued ID cards/number and Know-Your-Customer (KYC) details...",
+      "concerns": ["Government ID collected", "PAN collected", "Credit report accessed", "KYC details collected"],
       "score_impact": 9.75
     },
     {
@@ -183,10 +205,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart constantly tracks what you browse, buy, and click. They use this behavior profile to show you targeted ads, and third-party ad companies may also track you across other apps and websites.",
-      "detail": "The app collects and analyzes buying behavior, browsing patterns, preferences, URLs visited before and after the platform, browser information, and IP address. Cookies and third-party advertising companies are used for personalized ads. Google Analytics is used for marketing and analytical purposes. Users can opt out of personalized ad tracking via device settings.",
-      "policy_excerpt": "We collect and analyse your personal data relating to your buying behavior, browsing patterns, preferences, and other information... The insights derived from this analysis may be shared with our group companies, affiliates, related companies, business partners, and third-parties... for promotions, advertisements and marketing.",
-      "concerns": ["Extensive behavioral profiling for marketing", "Third-party ad networks track users across platforms", "Cross-site URL tracking", "IP address used for demographic profiling"],
+      "plain_english": "Flipkart tracks your browsing behaviour, buying patterns, and website visits using cookies, web beacons, and Google Analytics. This data is used for personalised ads and shared with ad companies.",
+      "detail": "Extensive behavioural tracking including URL history, browsing patterns, IP-based identification, and third-party ad tracking.",
+      "policy_excerpt": "We collect and analyse your personal data relating to your buying behavior, browsing patterns, preferences... The insights derived from this analysis may be shared with our group companies... and third-parties... for promotions, advertisements and marketing.",
+      "concerns": ["Buying behaviour tracked", "Browsing patterns analysed", "Third-party ad tracking", "IP address used for identification"],
       "score_impact": 16.25
     },
     {
@@ -198,10 +220,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart says its app is only for adults who can legally contract (18+). However, there is no real system to block younger users from signing up.",
-      "detail": "The policy states the platform is available only to persons who can form a legally binding contract under the Indian Contract Act, 1872, and claims they do not knowingly collect data from children under 18. No technical enforcement mechanism is described.",
+      "plain_english": "Flipkart says its platform is only for adults who can legally contract (18+). However, there is no active age verification system mentioned.",
+      "detail": "Age requirement stated but no technical enforcement mechanism described.",
       "policy_excerpt": "Use of our Platform is available only to persons who can form a legally binding contract under the Indian Contract Act, 1872. We do not knowingly solicit or collect personal data from children under the age of 18 years.",
-      "concerns": ["No enforcement mechanism for age restriction", "Shopping app may appeal to teenagers", "18-year threshold is higher than typical 13-year COPPA standard but not enforced"],
+      "concerns": ["No age verification mechanism", "18+ requirement stated but not enforced"],
       "score_impact": 3
     },
     {
@@ -209,14 +231,14 @@
       "label": "Network & Internet Activity",
       "icon": "Wifi",
       "risk": "risky",
-      "access_type": "continuous",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart logs your IP address and the websites you visit before and after using the app. They use this to figure out your general location and interests.",
-      "detail": "The policy records URLs visited before and after the platform, browser information, and IP addresses. The IP address is used to diagnose server problems, identify users, and gather broad demographic information.",
-      "policy_excerpt": "This information may include the URL that you just came from... which URL you next go to... your computer browser information, and your IP address... Your IP address is also used to help identify you and to gather broad demographic information.",
-      "concerns": ["IP address used for user identification and profiling", "Cross-site URL tracking enables behavioral surveillance", "Demographic inference from network activity"],
+      "plain_english": "Flipkart logs your IP address, the websites you visited before and after Flipkart, and your browser information. This is used to identify you and build advertising profiles.",
+      "detail": "IP address is used for both server diagnostics and user identification. URLs visited before and after Flipkart are tracked.",
+      "policy_excerpt": "This information may include the URL that you just came from (whether this URL is on our Platform or not), which URL you next go to... your computer browser information, and your IP address.",
+      "concerns": ["URLs tracked across websites", "IP address used for identification", "Browsing info logged"],
       "score_impact": 3.25
     },
     {
@@ -228,10 +250,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app collects device information and uses it along with cookies to target ads and build a profile of your interests. Third-party partners like Google Analytics also receive device-level data.",
-      "detail": "Device information is collected with consent and used to enhance experience. Cookies and third-party tools like Google Analytics are used for marketing and analytics. Third-party advertising companies may use device and visit information to serve personalized ads.",
-      "policy_excerpt": "With your consent, we may have access to your ... device information... We use data collection devices such as 'cookies' on certain pages of the Platform to help analyze our web page flow, measure promotional effectiveness... We use cookies from third-party partners such as Google Analytics for marketing and analytical purposes.",
-      "concerns": ["Device info used for ad targeting", "Third-party cookies and analytics track users", "Advertising companies receive device-level data for personalization"],
+      "plain_english": "Flipkart collects your device information and uses your IP address to identify you and gather demographic data. This helps build a detailed profile about you.",
+      "detail": "Device info and IP address are collected continuously and used for identification and demographic profiling.",
+      "policy_excerpt": "With your consent, we may have access to your... device information... Your IP address is also used to help identify you and to gather broad demographic information.",
+      "concerns": ["Device info collected", "IP used for identification", "Demographic profiling"],
       "score_impact": 9.75
     },
     {
@@ -239,14 +261,14 @@
       "label": "Health & Biometric Data",
       "icon": "Heart",
       "risk": "risky",
-      "access_type": null,
+      "access_type": "on_demand",
       "required_for_core_function": false,
-      "optional_access": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "If you buy medicines, Flipkart collects your prescription and health information. They may share this with third-party doctors and teleconsultants to validate or reissue your prescription.",
-      "detail": "The policy states that medical or health-related information may be collected during account setup or transactions. For prescription products, third-party vendors may connect users with medical practitioners or teleconsultants to validate or issue prescriptions based on provided information.",
-      "policy_excerpt": "We may collect personal data (such as ... medical or health related information) from you when you set up an account or transact with us... we may, through third-party vendors connect You with medical practitioners, teleconsultants or third-party professionals where required to rectify the prescription.",
-      "concerns": ["Health data collected for prescription orders", "Shared with third-party medical practitioners and teleconsultants", "No specific mention of HIPAA or equivalent health data safeguards"],
+      "plain_english": "For prescription medicines, Flipkart collects your medical information and may share it with third-party doctors. Facial images for virtual try-on are also stored.",
+      "detail": "Health data is collected for prescription processing and shared with teleconsultants. Facial data collected for virtual try-and-buy.",
+      "policy_excerpt": "In cases where the prescriptions uploaded by you are invalid... we may, through third-party vendors connect You with medical practitioners, teleconsultants or third-party professionals...",
+      "concerns": ["Medical info collected for prescriptions", "Shared with teleconsultants", "Facial images stored"],
       "score_impact": 9.75
     },
     {
@@ -258,10 +280,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart stores your card details and UPI ID to process orders. They also use this financial information to check if you qualify for loans and credit products from their lending partners.",
-      "detail": "Payment instrument details including credit/debit cards and UPI ID are collected during transactions. This financial data is also used to check eligibility for insurance, credit, and payment products offered by affiliates and lending partners. Data may be shared with credit bureaus for underwriting.",
-      "policy_excerpt": "We may collect personal data (such as ... credit card/debit card and other payment instrument details) from you when you set up an account or transact with us... we may also request you to provide your PAN, credit information report... to: (i) check your eligibility for certain products and services like insurance, credit and payment products.",
-      "concerns": ["Financial data stored and used for credit profiling", "Shared with lending partners and credit bureaus", "UPI ID collected for Flipkart's own payment platform", "No explicit mention of tokenization or limited card storage"],
+      "plain_english": "Flipkart stores your credit/debit card details, UPI ID, and credit report. It also offers loans and PayLater through partners, creating a financial profile about your spending habits.",
+      "detail": "Direct collection of payment instrument details, UPI ID, credit reports, and use of financial data for lending products.",
+      "policy_excerpt": "We may collect personal data (such as... credit card/debit card and other payment instrument details... UPI ID if you choose to pay via our Flipkart UPI platform.",
+      "concerns": ["Card details collected directly", "UPI ID stored", "Credit report accessed", "Lending products offered"],
       "score_impact": 9.75
     },
     {
@@ -273,10 +295,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can update or delete some of your profile information through the app settings. However, Flipkart keeps certain data for fraud prevention and legal reasons, and withdrawing consent may lock you out of services.",
-      "detail": "Users can access, correct, and update personal data through platform functionalities. Certain non-mandatory information can be deleted via Profile and Settings. Users can withdraw consent by writing to the grievance officer, but this is not retroactive and may restrict platform access. Data is retained for fraud prevention, legal rights, and legal claims, and may be kept in anonymized form for research.",
-      "policy_excerpt": "You may access, correct, and update your personal data directly through the functionalities provided on the Platform. You may delete certain non-mandatory information by logging into our website and visiting Profile and Settings sections... we may retain data related to you if we believe it may be necessary to prevent fraud or future abuse, to enable Flipkart to exercise its legal rights and/or defend against legal claims.",
-      "concerns": ["Only 'certain non-mandatory' information can be self-deleted", "Withdrawal of consent may block platform access", "Data retained indefinitely for fraud and legal purposes", "No explicit right to full data export"],
+      "plain_english": "You can update some information in your profile, but deleting your account requires emailing Flipkart. Even then, some data is kept for fraud prevention and legal requirements.",
+      "detail": "Limited self-service deletion. Account data retained for fraud/legal purposes. Withdrawal of consent may restrict platform access.",
+      "policy_excerpt": "You may delete certain non-mandatory information by logging into our website and visiting Profile and Settings sections. You can also write to us... withdrawal of consent will not be retroactive... In the event you withdraw consent... such withdrawal may hamper your access to the Platform.",
+      "concerns": ["Full deletion requires email", "Data retained for fraud prevention", "Withdrawal may restrict access"],
       "score_impact": 3
     },
     {
@@ -288,19 +310,20 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Flipkart may change its privacy policy at any time. They say they will alert you to big changes by posting a notice or sending an email if required by law, but you have to check the policy yourself to stay updated.",
-      "detail": "The policy states users should check it periodically for changes. Significant changes will be alerted by posting the update date, placing a notice on the platform, or sending an email when required by law. There is no requirement for users to actively re-agree.",
+      "plain_english": "Flipkart updates its privacy policy periodically and says it will post a notice on the platform or email you when legally required. Continued use means you accept the new terms.",
+      "detail": "Passive notification method. Continued use constitutes acceptance.",
       "policy_excerpt": "Please check our Privacy Policy periodically for changes... We will alert you to significant changes by posting the date our policy got last updated, placing a notice on our Platform, or by sending you an email when we are required to do so by applicable law.",
-      "concerns": ["No proactive email guarantee for all changes", "No requirement for active user re-consent", "Continued use likely constitutes acceptance of changes"],
+      "concerns": ["Continued use = acceptance", "Passive notification", "No explicit re-consent required"],
       "score_impact": 1.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
-      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
       { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
@@ -314,8 +337,8 @@
       { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
       { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 110.5,
-    "final_score": 46,
+    "total_deductions": 121,
+    "final_score": 41,
     "grade": "D"
   }
 }

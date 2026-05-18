@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://fitbod.me/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2024-04-18",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "fitbod-workout-gym-planner",
+    "name": "Fitbod Workout & Gym Planner",
+    "developer": "Fitbod Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/fitbod-workout-gym-planner/id1041517543",
+    "app_store_id": "1041517543",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4e/1a/b2/4e1ab210-ea5c-0887-4901-40a262484477/AppIcon-0-0-1x_U007ephone-0-1-0-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "",
+    "description": "A gym workout planner that creates personalized strength-training routines based on your goals and available equipment."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "A popular workout planner that stores your sensitive fitness data on its servers and aggressively tracks your device for personalized advertising.",
+    "summary": "Fitbod is a well-known gym workout planner that collects detailed health and fitness information—including heart rate, weight, body measurements, and workout history—and stores it on its servers to generate personalized workout plans. While the developer explicitly promises not to use this health data for advertising, the app still engages in significant behavioral ad tracking through advertising partners, cross-device tracking, and collection of unique device identifiers. The privacy policy is also silent on whether the app accesses your camera, contacts, or local files.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app stores sensitive health data on external servers and engages in extensive behavioral tracking and ad profiling through multiple third-party partners."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_ad_tracking",
+        "title": "Tracks behavior for personalized ads and cross-device targeting",
+        "plain_english": "Fitbod collects your advertising ID and monitors how you use the app, then shares this information with advertising partners to show you personalized ads on other websites and apps, even tracking you across multiple devices.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_on_servers",
+        "title": "Sensitive health and fitness data stored on servers",
+        "plain_english": "The app stores your heart rate, weight, body measurements, sex, date of birth, and detailed workout history on its servers to generate personalized plans. This is sensitive health information that could be damaging if exposed in a data breach.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Aggressive device fingerprinting and ad identifiers",
+        "plain_english": "Fitbod collects your MAC address, mobile advertising ID, unique device identifiers, cookie IDs, and your internet address to recognize and track your device across the web.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_sharing_with_ad_networks",
+        "title": "Data shared with advertising and analytics networks",
+        "plain_english": "According to the California privacy disclosure, Fitbod shares your identifiers, internet activity, geolocation, and behavioral inferences with advertising networks, data analytics providers, and social networks.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_silent_permissions",
+        "title": "Policy silent on camera, contacts, and file access",
+        "plain_english": "The privacy policy does not say whether the app can access your camera, microphone, contacts, or the files stored on your phone.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_health_data_for_ads",
+        "title": "Explicitly promises not to use health data for advertising",
+        "plain_english": "Fitbod states it does not use or share any data gathered in a health or fitness context for advertising, marketing, or data-mining purposes. This is a genuine positive for a fitness app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_optional_healthkit",
+        "title": "Apple Health and Google Fit integration is optional",
+        "plain_english": "You can choose whether or not to connect the app to Apple Health or Google Fit to import workout and body data. The app works without this connection.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_third_party_payments",
+        "title": "Payments handled by third-party processors",
+        "plain_english": "Your payment card information is processed by external payment processors. Fitbod says it does not directly collect or store your raw card details.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_deletion_available",
+        "title": "Account deletion available via email request",
+        "plain_english": "You can request to delete your account and personal data by emailing Fitbod support with 'Account Deletion' in the subject line.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sale_of_data",
+        "title": "Explicitly states it does not sell personal information",
+        "plain_english": "Under the California Consumer Privacy Act section, Fitbod explicitly says it does not 'sell' personal information and has no knowledge of selling data from minors.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your camera or microphone.",
+      "detail": "Neither the summary nor the full policy mentions camera, microphone, or any media permissions.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may collect your precise location only if you give it permission, and you can turn this off in your phone settings.",
+      "detail": "Precise location-based information is collected only with user consent via the mobile app. Users can opt out by changing device settings. The policy also notes collection of general location information derived from IP address automatically.",
+      "policy_excerpt": "With your consent, we may also collect precise location-based information if you use our mobile application. You may opt out of this collection by changing the settings on your mobile device.",
+      "concerns": ["General location inferred from IP address automatically", "Precise location collected with consent"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "There is no mention of contacts, address book, or phonebook access anywhere in the policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your photos or files stored on your device.",
+      "detail": "The policy does not mention storage, photo library, or file system access. As a workout planner app, it may not need these permissions, but the silence is notable.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage and file access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Fitbod shares your information with service providers, business partners, advertising partners, and social media platforms to run the app and show you ads.",
+      "detail": "The policy lists service providers (IT, hosting, payment, customer service), business partners (joint products), advertising partners (for personalized/interest-based advertising), and APIs/SDKs. The CCPA section confirms sharing with advertising networks, data analytics providers, and social networks. However, Fitbod explicitly states health/fitness context data is not used for advertising or shared with third parties for marketing.",
+      "policy_excerpt": "We may share your personal information with our third-party service providers... Business Partners... Advertising Partners... We do not use or disclose to third parties data gathered in the health and fitness context for advertising, marketing, or other use-based data mining purposes.",
+      "concerns": ["Data shared with advertising partners for personalized ads", "Behavioral data shared with social networks", "Inferences and profiles shared with data analytics providers"],
+      "score_impact": -9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must create an account to use the app, providing your name, email, and other personal details, which are then linked to your fitness activity.",
+      "detail": "Users must sign up for an account. The app collects name, email, account information, and links it to workout information, health data, and fitness/body data. Profile information is voluntarily provided during sign-up and account use.",
+      "policy_excerpt": "We may collect Personal Data you voluntarily provide directly to us, such as when you sign up for an account; enter personal information, workout information, your health, fitness and/or body data...",
+      "concerns": ["Account required to use the app", "Identity linked to workout and health data"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Fitbod tracks how you use the app and works with advertising partners to show you personalized ads based on your behavior, even tracking you across different devices.",
+      "detail": "The app uses personal information to tailor content and advertisements, including email campaigns, custom audiences, and interest-based/personalized advertising through cross-device tracking. Advertising partners set tracking technologies to collect IP address, cookie IDs, visited pages, location, and time of day. Google Analytics is also used. The policy provides opt-out instructions.",
+      "policy_excerpt": "We may use personal information to tailor and provide you with content and advertisements... including through cross-device tracking. These third-party advertising partners may set Technologies and other tracking tools on our Services to collect information regarding your activities and your device... for purposes of delivering personalized advertisements to you when you visit digital properties within their networks.",
+      "concerns": ["Cross-device tracking for personalized advertising", "Advertising partners collect detailed activity and device data", "Interest-based advertising enabled by default", "Google Analytics tracks usage patterns"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app says it is not meant for children under 13 and will delete a child's data if discovered, but there is no real age check.",
+      "detail": "The policy states the service is not directed to children under 13 and they do not knowingly collect personal information from children. Parents can contact them to review, modify, or delete child's information. If a violation is discovered, the data will be deleted and the account terminated. No age verification mechanism is mentioned.",
+      "policy_excerpt": "The Services are not directed to children under 13 (or other age as required by local law), and we do not knowingly collect personal information from children. If we become aware that a child has provided us with personal information in violation of applicable law, we will delete any personal information we have collected, unless we have a legal obligation to keep it, and terminate the child's account.",
+      "concerns": ["No age verification mechanism"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app automatically logs your internet address, the pages you visit, and how you interact with content to study trends and improve the service.",
+      "detail": "Automatic data collection includes IP address, pages visited before/during/after use, links clicked, content interacted with, frequency and duration of activities. Google Analytics is used to process analytics information. The CCPA section confirms browsing history and search history are collected.",
+      "policy_excerpt": "We may also automatically collect information regarding your use of our Services, such as pages that you visit before, during and after using our Services, information about the links you click, the types of content you interact with, the frequency and duration of your activities, and other information about how you use our Services.",
+      "concerns": ["Detailed browsing and activity patterns logged", "IP address collected automatically"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Fitbod collects your MAC address, advertising ID, unique device identifiers, and cookie IDs to recognize your device and share this information with advertising and analytics partners.",
+      "detail": "The policy explicitly lists IP address, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser/device information, and ISP. This data is shared with advertising partners and used for cross-device tracking. The CCPA disclosure confirms identifiers and internet activity are shared with advertising networks and data analytics providers.",
+      "policy_excerpt": "We may collect certain information automatically when you use our Services, such as your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, browser or device information, general location information...",
+      "concerns": ["MAC address collected", "Mobile advertising ID tracked", "Unique identifiers used for ad targeting", "Device fingerprint shared with advertising partners"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects sensitive health information such as your heart rate, weight, body measurements, sex, and workout history, and stores it on company servers to build your personalized workout plan.",
+      "detail": "HealthKit data (date of birth, heart rate, height, sex, weight, workouts) is collected if the user chooses to provide it. Health Connect data (active energy, body temperature, body fat, exercise data, height, lean mass, weight) is also collected optionally. Even without HealthKit, users manually enter workout information, health, fitness, and body data. This sensitive data is stored on Fitbod's servers. The developer promises not to use health data for marketing or share it with third parties for advertising.",
+      "policy_excerpt": "We may collect iOS Health app and/or Healthkit data (including date of birth, heart rate, height, sex, weight and workouts)... Users are not required to share this information and can choose not to provide this additional information by not entering it when asked.",
+      "concerns": ["Sensitive health and biometric data stored on external servers", "Workout history linked to personal identity", "Health data retention tied to account lifetime"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your payment card details are handled by external payment processors; Fitbod says it does not directly collect or store your raw card information.",
+      "detail": "Payments are processed by third-party payment processors. Fitbod does not directly collect or store payment card information entered through the app. However, it may receive billing details associated with the payment.",
+      "policy_excerpt": "Any payments made via our Services are processed by third-party payment processors. We do not directly collect or store any payment card information entered through our Services, but it may receive information associated with your payment card information (e.g., your billing details).",
+      "concerns": ["Billing details may still be received by Fitbod"],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request to delete your account by emailing Fitbod support, but there is no simple one-click delete button inside the app.",
+      "detail": "Account holders can manage and delete personal information by visiting the website or emailing support@fitbod.me with 'Account Deletion' in the subject line. Users have GDPR/CCPA rights including access, correction, deletion, restriction, and portability. Deletion requires proactive user action (email or website visit).",
+      "policy_excerpt": "Account holders can manage and delete their personal information processed by Fitbod by either visiting this website or by sending an email to support@fitbod.me with 'Account Deletion' in the subject line.",
+      "concerns": ["No in-app self-service deletion button", "Deletion requires email or website visit"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Fitbod can change its privacy policy at any time, and if you keep using the app after changes take effect, you automatically agree to them.",
+      "detail": "The policy states it may be revised at any time in Fitbod's sole discretion. Material changes will be notified as required by law. Continued use after updates constitutes acceptance. No requirement for active re-consent.",
+      "policy_excerpt": "We may revise this Privacy Policy from time to time in our sole discretion. If there are any material changes to this Privacy Policy, we will notify you as required by applicable law. You understand and agree that you will be deemed to have accepted the updated Privacy Policy if you continue to use our Services after the new Privacy Policy takes effect.",
+      "concerns": ["Continued use equals acceptance of changes", "No requirement for active re-consent"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 85.25,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

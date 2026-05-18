@@ -6,8 +6,8 @@
     "policy_url": "https://www.nykaafashion.com/lp/privacy-policy",
     "terms_url": "",
     "policy_last_updated": "2026-01-29",
-    "needs_review": true,
-    "review_notes": "Camera, contacts, and storage categories are not addressed in the privacy policy and were rated Unknown. App Store URL in scraped metadata was incorrect (listed IKEA) and corrected manually."
+    "needs_review": false,
+    "review_notes": ""
   },
 
   "app": {

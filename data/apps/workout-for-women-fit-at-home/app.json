@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://womenworkout.leaphealth.fitness/privacypolicy.html",
+    "terms_url": "https://womenworkout.leaphealth.fitness/terms.html",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "workout-for-women-fit-at-home",
+    "name": "Workout for Women: Fit at Home",
+    "developer": "Leap Health Fitness Limited",
+    "app_store_url": "https://apps.apple.com/in/app/workout-for-women-fit-at-home/id1357527742",
+    "app_store_id": "1357527742",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/0f/ee/630feeaf-3e2c-55cc-fe1d-193960f045cc/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-85-220.jpeg/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Home Workout",
+    "description": "Tone your body and lose weight with the #1 home workout for women. Quick and effective 7-minute bodyweight workouts with animation and video guidance, music, and Apple Health sync."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 67,
+    "grade": "C",
+    "one_liner": "This workout app tracks you across other apps for advertising, shares your data with Google and Facebook for remarketing, and collects detailed health data including menstrual cycle and sexual activity.",
+    "summary": "Workout for Women collects extensive personal and health data including weight, height, body temperature, menstrual cycle, symptoms, and even sexual activity information. Your device identifiers are used to track you across other apps and websites for advertising. The app shares data with Google Analytics, Google AdSense, AdMob, and remarketing partners including Facebook and Twitter. On the positive side, the app explicitly states it does not sell personal data, does not share your tracked workout data with advertisers, provides GDPR and CCPA rights, and promises advance notice of privacy policy changes via email.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about cross-app tracking, detailed health data collection including sexual activity, and extensive ad remarketing partnerships with Google and Facebook, consider whether this workout app is worth the data trade-off."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_cross_app_tracking",
+        "title": "Identifiers used to track you across apps and websites",
+        "plain_english": "The App Store label shows your device identifiers may be used to track you across apps and websites owned by other companies. The privacy policy explicitly mentions collecting your IDFA (advertising identifier).",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_remarketing",
+        "title": "Your activity is used to show you ads across the internet",
+        "plain_english": "The app uses Google Ads, Facebook, and Twitter remarketing to show you ads on third-party websites after you visit the app, based on your past visits.",
+        "severity": "high"
+      },
+      {
+        "id": "red_intimate_health_data",
+        "title": "Detailed health and intimate data collected",
+        "plain_english": "The app asks for health information including your weight, height, body temperature, menstrual cycle, symptoms, and even sexual activity details. This data is stored on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_google_ad_partners",
+        "title": "Data shared with multiple Google ad services",
+        "plain_english": "The app shares data with Google Analytics, Google AdSense, DoubleClick, and AdMob. Google may use this data to personalise ads on its own advertising network.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_dnt_ignored",
+        "title": "Do Not Track signals are ignored",
+        "plain_english": "The app explicitly states that its service does not respond to Do Not Track signals from your browser or device.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Explicit no-sale commitment",
+        "plain_english": "The app explicitly states it does not sell personal information. It also specifically says it never shares your tracked workout data with third-party advertisers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_advance_policy_notice",
+        "title": "Privacy policy changes notified in advance",
+        "plain_english": "The app promises to notify you via email and/or a prominent notice on the service before any privacy policy change becomes effective.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_rights",
+        "title": "GDPR and CCPA deletion rights available",
+        "plain_english": "You can request access to, correction of, or deletion of your personal data. The app provides clear rights under both GDPR and CCPA.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_safe",
+        "title": "Payment data handled by third-party processors",
+        "plain_english": "The app does not store your payment card details directly. All payment processing is handled by PCI-DSS compliant third-party processors like Apple, Google, and PayPal.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There is no evidence that this app accesses your camera or microphone.",
+      "detail": "The privacy policy and App Store privacy label do not mention camera or microphone access.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There is no evidence that this app collects your location data.",
+      "detail": "The App Store privacy label does not list location data. The privacy policy does not mention location or GPS collection.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you choose to sign in using Facebook, the app may collect your contact list associated with your Facebook account.",
+      "detail": "The policy states that when registering through a Third-Party Social Media Service like Facebook, the app may collect your contact list associated with that account. This only happens if you choose social login; the App Store label does not list contacts as directly collected.",
+      "policy_excerpt": "We may collect Personal data that is already associated with Your Third-Party Social Media Service's account, such as... Your contact list associated with that account.",
+      "concerns": ["Contact list collected via Facebook login"],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload user content, but the App Store label confirms this data is not linked to your identity.",
+      "detail": "The App Store privacy label lists 'User Content' as collected but not linked to identity. The privacy policy does not describe broad file access.",
+      "policy_excerpt": "User Content — Data Not Linked to You",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your data with Google Analytics, Google AdSense, AdMob, payment processors, and remarketing partners including Facebook and Twitter. However, it explicitly says it does not sell personal data and does not share your tracked workout data with advertisers.",
+      "detail": "The policy lists extensive third-party sharing: Google Analytics for traffic analysis, Google AdSense/DoubleClick and AdMob for ads, remarketing via Google Ads, Twitter, and Facebook. Payment processing is handled by Apple, Google, PayPal, and others. The app explicitly states 'We NEVER shares any data you are tracking in the app with third-Party Advertisers.'",
+      "policy_excerpt": "We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to show advertisements to You... to advertise on third party websites to You after You visited our Service... We NEVER shares any data you are tracking in the app with third-Party Advertisers.",
+      "concerns": ["Data shared with Google ad services", "Remarketing via Facebook and Twitter", "Data shared with business partners and affiliates", "Business transfer clause allows data transfer in mergers"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your email, name, phone number, gender, and password to create an account. The App Store label confirms identifiers are linked to your identity.",
+      "detail": "Account creation requires email, first and last name, phone number, gender, and password. The App Store privacy label lists 'Identifiers' and 'Contact Info' as data linked to your identity.",
+      "policy_excerpt": "Email address; First name and last name; Phone number; Gender; Password or passcode",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses your device identifiers to track you across other apps and websites, and shows you personalised ads via Google, Facebook, and Twitter remarketing based on your visits.",
+      "detail": "The App Store label explicitly lists 'Identifiers' as 'Data Used to Track You' across apps and websites owned by other companies. The policy describes remarketing services from Google Ads, Twitter, and Facebook that show ads on third-party websites based on past visits. Google Analytics is used to personalise app experience, and Google AdSense/DoubleCookie serves interest-based ads.",
+      "policy_excerpt": "Identifiers — Data Used to Track You... The Company uses remarketing services to advertise on third party websites to You after You visited our Service. We and Our third-party vendors use cookies to inform, optimize and serve ads based on Your past visits to our Service.",
+      "concerns": ["Cross-app tracking via identifiers", "Google remarketing", "Facebook remarketing", "Twitter remarketing", "Interest-based ads via DoubleClick"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 4+ but explicitly states it does not knowingly collect data from anyone under 13 and will remove such data if discovered.",
+      "detail": "The policy states the service does not address anyone under 13, and they do not knowingly collect personal data from children under 13. The App Store age rating is 4+ which contradicts this policy statement.",
+      "policy_excerpt": "Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.",
+      "concerns": ["App Store rating 4+ but policy says 13+"],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browser type, pages visited, time and date of visits, and how long you spend on each page. It also uses Google Analytics for traffic measurement.",
+      "detail": "The policy explicitly collects IP address, browser type, pages visited, time/date, duration, and uses Google Analytics to measure traffic and usage trends. The app does not respond to Do Not Track signals.",
+      "policy_excerpt": "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages",
+      "concerns": ["IP address logged", "Page visit tracking", "Do Not Track signals ignored"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device unique ID, IDFA (advertising identifier), hardware model, operating system, screen size, and other device details to track you across apps and for analytics.",
+      "detail": "The policy explicitly lists collection of unique device identifiers (e.g. IDFA), hardware model, OS version, screen size and density, device mute status, and other diagnostic data. The App Store label confirms 'Identifiers' are used to track you across other companies' apps.",
+      "policy_excerpt": "Unique device identifiers (e.g. IDFA); Hardware model; Information about operating system and its version; Screen size and density; Device mute status (related to reminder function)",
+      "concerns": ["IDFA (advertising identifier) explicitly collected", "Device unique ID collected", "Cross-app tracking enabled"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects detailed health data including your weight, height, body temperature, menstrual cycle, symptoms, and even sexual activity information. It can also sync with Apple HealthKit and Google Fit.",
+      "detail": "The policy explicitly collects weight, height, body temperature, menstrual cycle, symptoms, and 'other information about your health (including sexual activities)'. The app can import/export health data with Apple HealthKit and Google Fit. The App Store label says Health & Fitness data is 'Not Linked to You' but the policy clearly links it to user accounts for profile creation.",
+      "policy_excerpt": "Weight; Height; Body temperature; Menstrual cycle; Symptoms; Other information about your health (including sexual activities), and related activities... import into the App Personal data about your health and activities from third-party services such as Apple HealthKit and Google Fit",
+      "concerns": ["Sexual activity information collected", "Menstrual cycle data collected", "Body temperature collected", "HealthKit data import/export"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment card details are handled directly by PCI-DSS compliant third-party processors like Apple, Google, and PayPal. The app does not store them.",
+      "detail": "The policy explicitly states it does not store or collect payment card details. Payment processing is handled by third-party processors (Apple, Google, PayPal, Braintree, WeChat, Alipay) that adhere to PCI-DSS standards.",
+      "policy_excerpt": "We will not store or collect Your payment card details. That information is provided directly to Our third-party payment processors whose use of Your personal information is governed by their Privacy Policy.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access to, correction of, or deletion of your personal data under GDPR and CCPA. The app promises to respond to GDPR requests as soon as possible and CCPA requests within 45 days.",
+      "detail": "The policy lists comprehensive rights under GDPR (access, correction, erasure, portability, objection, withdrawal of consent) and CCPA (notice, access, deletion, non-discrimination, opt-out of sale). The app promises to respond to CCPA requests within 45 days (extendable by 45 more with notice).",
+      "policy_excerpt": "You have the right to access, update or delete the information We have on You... You have the right to ask Us to delete or remove Personal Data when there is no good reason for Us to continue processing it.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app promises to notify you via email and/or a prominent notice before any privacy policy change becomes effective.",
+      "detail": "The policy explicitly states changes will be notified via email and/or a prominent notice on the service prior to the change becoming effective, with the 'Last updated' date updated at the top.",
+      "policy_excerpt": "We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the 'Last updated' date at the top of this Privacy Policy.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 67.25,
+    "final_score": 67,
+    "grade": "C"
+  }
+}

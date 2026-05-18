@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://teams.joinladder.com/privacy",
+    "terms_url": "https://ladder-terms-and-conditions.s3.amazonaws.com/terms.html",
+    "policy_last_updated": "2025-10",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "ladder-strength-training-plans",
+    "name": "LADDER Strength Training Plans",
+    "developer": "Ladder Technologies, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/ladder-strength-training-plans/id1502936453",
+    "app_store_id": "1502936453",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/c5/25/82c525f5-4467-7baf-c649-6b67cb042a21/AppIcon-0-1x_U007ephone-0-0-0-1-0-0-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Strength Training",
+    "description": "Personalized strength training app that pairs you with a certified coach to create custom workout programs, offer nutrition guidance, and track your fitness progress."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "Ladder collects extensive workout and health data, tracks your browsing behavior down to mouse movements and keystrokes, and shares data with advertising networks for targeted ads, but provides detailed opt-out controls.",
+    "summary": "Ladder's privacy policy reveals extensive data collection typical of a fitness coaching app. It gathers your workout metrics, nutrition logs, and health data from Apple Health, along with granular browsing behavior including mouse movements, scrolling, clicks, and keystrokes. The app shares data with advertising networks and social networks for targeted advertising, which may qualify as a 'sale' under U.S. state privacy laws. User-generated content like workout selfies can be reshared by other users. On the positive side, Ladder does not retain payment card numbers directly, provides multiple opt-out mechanisms for targeted ads, and outlines detailed privacy rights for U.S. state residents.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about granular behavioral tracking, health data sharing with advertisers, and the possibility of your workout content being redistributed by other users, consider the trade-off before installing."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_granular_tracking",
+        "title": "Tracks mouse movements, clicks, and keystrokes",
+        "plain_english": "Ladder uses third-party technologies that record your mouse movements, scrolling, clicks, and keystroke activity on their services to analyze your browsing behavior.",
+        "severity": "high"
+      },
+      {
+        "id": "red_targeted_advertising",
+        "title": "Shares data for targeted advertising",
+        "plain_english": "Ladder shares your personal data with advertising networks and social networks to deliver targeted advertisements. Under U.S. state privacy laws, this may qualify as a 'sale' of personal data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_content_resharing",
+        "title": "User content can be reshared by others",
+        "plain_english": "When you post content on Ladder's services, other users who view it can reshare or redistribute it both on and off the platform, and may save or copy it outside the service.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_health_data_sharing",
+        "title": "Health data shared with integrated apps and advertisers",
+        "plain_english": "Ladder collects workout and health data including heart rate, calories burned, and weight, and shares data with integrated third-party apps and advertising partners.",
+        "severity": "high"
+      },
+      {
+        "id": "red_call_recordings",
+        "title": "Call recordings stored",
+        "plain_english": "If you contact Ladder support by phone, your calls may be recorded and stored for training and quality purposes where permitted by law.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_payment_processing",
+        "title": "Does not retain payment card numbers",
+        "plain_english": "Ladder uses third-party payment providers to process payments and does not retain any personally identifiable financial information such as payment card numbers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_ads",
+        "title": "Multiple opt-out options for targeted ads",
+        "plain_english": "Ladder provides multiple ways to opt out of targeted advertising, including device-specific settings, Digital Advertising Alliance, and platform-specific opt-outs.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_state_rights",
+        "title": "Detailed U.S. state privacy rights",
+        "plain_english": "Ladder outlines detailed privacy rights for residents of various U.S. states including California, Nevada, and others, with instructions on how to exercise them.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_children",
+        "title": "Not directed at children under 18",
+        "plain_english": "Ladder states its services are not directed to children under 18 and will promptly delete personal data if learned to have been provided by a child.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_email_unsubscribe",
+        "title": "Can unsubscribe from marketing emails",
+        "plain_english": "You can stop receiving promotional emails by clicking the unsubscribe link in any email communication.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Ladder may collect images and videos you choose to upload, including selfies at the end of workouts. The policy does not explicitly mention microphone access.",
+      "detail": "Customer content includes files, images, and videos you upload, such as workout selfies. Camera access is implied for taking selfies, but appears to be user-initiated.",
+      "policy_excerpt": "Customer Content, including any files, documents, audio, videos, images, data, or communications you choose to input, upload, or transmit to our products and services, including selfies at the end of workouts.",
+      "concerns": ["Workout selfies collected", "Images and videos uploaded by users"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder collects your general geographic location derived from your IP address.",
+      "detail": "General geographic location is collected automatically from IP address, not precise GPS coordinates.",
+      "policy_excerpt": "Information About Your Location, including general geographic location that we or our third-party providers may derive from your IP address.",
+      "concerns": ["General location derived from IP address"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explicitly mention accessing your contacts or phonebook.",
+      "detail": "No explicit mention of contacts or phonebook access in the privacy policy, though device permissions may prevent access to contact lists.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Ladder collects files, documents, audio, videos, images, and other data you choose to upload or transmit to their services.",
+      "detail": "Customer content including files, documents, audio, videos, images, and data is collected when you choose to upload or transmit it.",
+      "policy_excerpt": "Customer Content, including any files, documents, audio, videos, images, data, or communications you choose to input, upload, or transmit to our products and services",
+      "concerns": ["User-uploaded files and media collected"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder shares your data with affiliates, advertising networks, social networks, marketing providers, integrated apps, service providers, and may transfer it in a business transaction or reorganization.",
+      "detail": "Data is shared extensively with affiliates, advertising partners for targeted ads, integrated third-party apps, service providers, and may be disclosed in mergers, acquisitions, or sales of assets. Under U.S. state laws, sharing with advertising networks may qualify as a 'sale' of personal data.",
+      "policy_excerpt": "To Ad Networks and Advertising Partners: We work with third-party ad networks and advertising partners to deliver advertising and personalized content on our services, on other websites and services, and across other devices... In Connection with a Business Transaction or Reorganization: We may take part in or be involved with a business transaction or reorganization, such as a merger, acquisition, joint venture, or financing or sale of company assets.",
+      "concerns": ["Data shared with advertising networks for targeted ads", "Data shared with affiliates", "Data may be transferred in merger/acquisition", "User content can be reshared by other users"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder collects your name, email address, account credentials, profile picture, subscription details, and quiz answers.",
+      "detail": "Standard account information is collected for account administration, service provision, and customer support.",
+      "policy_excerpt": "Account Information, including first and last name, email address, account credentials or one-time passcodes, quiz answers, subscription details, profile picture, any user details you choose to provide in connection with your profile",
+      "concerns": ["Profile picture collected", "Quiz answers stored"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder uses cookies, web beacons, pixels, and mobile SDKs to track your browsing behavior including mouse movements, scrolling, clicks, and keystrokes, and shares data with advertising partners for targeted ads across devices.",
+      "detail": "Extensive tracking technologies are used including cookies, web beacons, pixels, embedded scripts, mobile SDKs, and logging technologies. Third-party technologies record mouse movements, scrolling, clicks, and keystrokes. Data is shared with advertising partners and may be linked across devices using common account identifiers.",
+      "policy_excerpt": "We employ third-party technologies designed to allow us to collect detailed information about browsing behavior and actions that you take on our services, which may record your mouse movements, scrolling, clicks, and keystroke activity on our services... We may share a common account identifier (such as a hashed email address or user ID) with our third-party advertising partners to help link the personal data we and our third-party partners collect to the same person, or otherwise target advertising to an individual on a third-party website or platform.",
+      "concerns": ["Mouse movements and keystrokes recorded", "Targeted advertising across devices", "Data linked across devices using hashed identifiers", "Third-party cookies and web beacons"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder states its services are not directed to children under 18 and will promptly delete personal data if learned to have been provided by a child.",
+      "detail": "Explicit statement that services are not directed at children under 18, and data will be deleted if discovered to have been provided by a child.",
+      "policy_excerpt": "Our services are not directed to, and we do not intend to, or knowingly, collect or solicit personal data from children under the age of 18... If we learn that any personal data we collect has been provided by a child under the age of 18, we will promptly delete that personal data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder collects your IP address, browser type, internet service provider, and tracks the sites you came from and go to when leaving their services.",
+      "detail": "Network and browsing information collected automatically includes IP address, browser type, ISP, referrer site, and exit site.",
+      "policy_excerpt": "Information About Your Device and Network, including the device type, manufacturer, and model, operating system, IP address, browser type, Internet service provider... including the site from which you came, the site to which you are going when you leave our services",
+      "concerns": ["IP address collected", "Referrer and exit sites tracked"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder collects device type, manufacturer, model, operating system, unique identifiers, advertising IDs, and uses third-party technologies to recognize when multiple devices are used by the same individual.",
+      "detail": "Device information collected includes type, manufacturer, model, OS, IP address, browser type, ISP, unique identifiers, persistent device identifier, and advertising ID. Third-party technologies link information across devices.",
+      "policy_excerpt": "Information About Your Device and Network, including the device type, manufacturer, and model, operating system, IP address, browser type, Internet service provider, and unique identifiers associated with you, your device, or your network (including, for example, a persistent device identifier or advertising ID). We employ third-party technologies designed to allow us to recognize when two or more devices are likely being used by the same individual and may leverage these technologies (where permitted) to link information collected from different devices.",
+      "concerns": ["Unique identifiers and advertising ID collected", "Cross-device linking used to identify same individual"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Ladder collects workout details, heart rate, calories burned, sets logged, weight used, weight, nutrition logs, sex, gender, age, and may receive health data from Apple Health. Biometric login (facial/fingerprint) is handled by your device, not stored by Ladder.",
+      "detail": "Extensive health and fitness data collected including workout details, heart rate, workout time, calories, sets, weight, nutrition info, sex, gender, age, weight. Apple Health integration available if opted in. Biometric login uses device authentication; Ladder does not store biometric data.",
+      "policy_excerpt": "Workout and Health Information, including details about your workouts, in-app workout preferences. In addition, we may collect heart rate, in workout time, calories burned, sets logged, weight used, weight, and saved workouts, as provided by Apple, if you have opted into sharing such data with us. Nutrition and Diet Information, including information about the meals and food you log, your dietary habits and preferences, and your weight and fitness goals. Such information may include your sex, gender, age, and weight.",
+      "concerns": ["Extensive health and fitness data collected", "Apple Health integration", "Sensitive health data classified under US state laws"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Ladder collects payment card information, billing address, and financial information, but uses third-party payment providers to process payments and does not retain payment card numbers.",
+      "detail": "Payment information is processed by third-party providers. Ladder does not retain personally identifiable financial information such as payment card numbers.",
+      "policy_excerpt": "Payment Information, including payment card information, billing address, and other financial information... Please note that we use third-party payment providers, to process payments made to us. We do not retain any personally identifiable financial information, such as payment card number, you provide these third-party payment providers in connection with payments.",
+      "concerns": ["Payment data processed by third parties"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can contact Ladder at support@joinladder.com to request review, modification, or deletion of your personal data, but they may not be able to modify or delete it in all circumstances.",
+      "detail": "Users can exercise data rights by contacting support. Ladder states they may not be able to modify or delete personal data in all circumstances. Detailed U.S. state privacy rights are outlined including right to know, access, correction, deletion, and opt-out.",
+      "policy_excerpt": "If you have any questions about reviewing, modifying, or deleting your personal data, you can contact us directly at support@joinladder.com. We may not be able to modify or delete your personal data in all circumstances.",
+      "concerns": ["No self-service deletion portal mentioned", "Deletion not guaranteed in all circumstances"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ladder will notify you of material changes to the privacy policy by email to your registered address, prominent posting on their website, or through other appropriate communication channels.",
+      "detail": "Material changes are notified by email, prominent posting, or other communication channels. Changes are effective from the date of publication.",
+      "policy_excerpt": "If we make material changes to this Privacy Notice, we will notify individuals by email to their registered email address, by prominent posting on this website or our other platforms, or through other appropriate communication channels. All changes shall be effective from the date of publication unless otherwise provided.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 90.25,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

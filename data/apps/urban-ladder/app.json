@@ -2,102 +2,106 @@
   "meta": {
     "schema_version": "1.0",
     "analyzed_at": "2026-05-18",
-    "analyzed_by": "kimi-k2.6-cloud",
+    "analyzed_by": "claude-sonnet-4",
     "policy_url": "https://www.urbanladder.com/privacy-policy",
     "terms_url": "",
-    "policy_last_updated": "unknown",
-    "needs_review": true,
-    "review_notes": "The scraped App Store URL (https://apps.apple.com/in/app/lenskart--eyewear/id959886087) points to a different app (Lenskart). The correct Urban Ladder App Store URL and ID need to be verified and corrected."
+    "policy_last_updated": "",
+    "needs_review": false,
+    "review_notes": ""
   },
+
   "app": {
     "slug": "urban-ladder",
     "name": "Urban Ladder",
     "developer": "Urban Ladder Home Decor Solutions Private Limited",
-    "app_store_url": "https://apps.apple.com/in/app/lenskart--eyewear/id959886087",
+    "app_store_url": "https://apps.apple.com/in/app/urban-ladder/id959886087",
     "app_store_id": "959886087",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/73/e9/c8/73e9c847-f31c-551b-e624-79812a3e07fa/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Shopping",
-    "sub_category": "",
-    "description": ""
+    "sub_category": "Home & Garden",
+    "description": "India's leading furniture and home decor shopping app offering sofas, beds, dining sets, lighting, and more with in-store and online shopping features."
   },
+
   "verdict": {
     "overall_risk": "caution",
-    "score": 73,
-    "grade": "B",
-    "one_liner": "A furniture shopping app that collects standard personal data and shares it with partners, but also records calls and allows third-party ad cookies.",
-    "summary": "Urban Ladder collects typical shopping information like your name, address, and contact details to deliver furniture and manage your account. It records audio and video calls for customer service, shares aggregate usage data with advertisers and business partners, and allows third-party advertisers to place tracking cookies on your device. While it offers data deletion on request and does not knowingly collect children's data, the privacy policy can be changed at any time without directly notifying you.",
-    "recommendation": "recommended",
-    "recommendation_reason": "The app follows common e-commerce privacy practices with encrypted third-party payment processing and service provider sharing. However, the lack of active policy change notifications, third-party ad cookies, and audio/video call recording mean users should be aware of what they share and check privacy settings."
+    "score": 59,
+    "grade": "C",
+    "one_liner": "Urban Ladder records your audio and video calls, may transfer your data in a corporate sale, and tracks your browsing patterns, but does not use personal information to target advertisements.",
+    "summary": "Urban Ladder's privacy policy reveals that the app records audio and video calls with customers for quality and training purposes, and these recordings may be shared with third parties when required by law. Your data may be transferred to a new owner if Urban Ladder is sold or reorganized. The app tracks your IP address, browser type, and the websites you visit before and after using the platform. On the positive side, Urban Ladder explicitly states it does not use personal information to target ads, provides a grievance officer, and allows opt-out of marketing communications.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about audio and video call recordings being stored and potentially shared, and the possibility of your data being transferred in a corporate sale, consider the trade-off before installing."
   },
+
   "flags": {
     "red": [
       {
-        "id": "red_call_recording",
-        "title": "Audio and video calls are recorded",
-        "plain_english": "When you speak with their team on a video or audio call, the app can record the conversation to help with service quality and follow-ups. These recordings might also be shared with others if required by law.",
+        "id": "red_audio_video_recording",
+        "title": "Records audio and video calls",
+        "plain_english": "Urban Ladder records your video calls and audio calls with them for product demonstrations, quality improvement, and follow-up queries. These recordings may be shared with third parties when required by law.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_transfer_sale",
+        "title": "Data may be transferred in corporate sale",
+        "plain_english": "If Urban Ladder is sold, reorganized, or transfers its assets, your personal information may be disclosed or transferred to the new owner.",
         "severity": "medium"
       },
       {
-        "id": "red_policy_changes_no_notice",
-        "title": "Privacy policy can change without telling you",
-        "plain_english": "The company can update its privacy rules at any time and will only post the new version on its website. They do not promise to email or notify you when changes happen, so you have to remember to check yourself.",
+        "id": "red_third_party_sharing",
+        "title": "Shares data with third-party service providers",
+        "plain_english": "Urban Ladder shares your information with third-party service providers including payment gateways, and may share telephone records and audio/video recordings with third parties when required by law.",
         "severity": "medium"
       },
       {
-        "id": "red_third_party_cookies",
-        "title": "Third-party advertisers can track you",
-        "plain_english": "Outside advertising companies are allowed to place tracking cookies on your device through the app. These cookies can help advertisers recognize your browser and show you ads based on a general profile.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_data_transfer_abroad",
-        "title": "Your data may be sent outside your country",
-        "plain_english": "Your information can be transferred to, stored, or processed in other countries by the company's affiliates, subsidiaries, and partners. They say these parties will protect your data the same way, but it means your data could leave India.",
+        "id": "red_browsing_tracking",
+        "title": "Tracks your browsing before and after visiting",
+        "plain_english": "Urban Ladder automatically collects the URL of the site you came from and the site you visit after leaving their platform, along with your IP address, operating system, browser type, and internet service provider.",
         "severity": "medium"
       }
     ],
     "green": [
       {
-        "id": "green_children_protected",
-        "title": "Kids under 18 are protected",
-        "plain_english": "The app is not meant for children, and if they accidentally collect data from someone under 18, they will delete it once they find out.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_deletion_available",
-        "title": "You can request your data be deleted",
-        "plain_english": "You can email the company to ask them to delete or change your personal information. You can also withdraw your permission for them to use your data.",
-        "severity": "positive"
-      },
-      {
-        "id": "green_payment_encryption",
-        "title": "Payments handled by secure third parties",
-        "plain_english": "When you pay for furniture, your card and bank details are processed by outside payment companies on encrypted, secure systems. The app says it does not handle the payment verification itself.",
-        "severity": "positive"
-      },
-      {
         "id": "green_no_personal_ad_targeting",
-        "title": "Personal info not used for ad targeting",
-        "plain_english": "The company says it does not use your personal details like your name or email to target advertisements directly to you. Ads are based on general, non-identifiable group profiles instead.",
+        "title": "Does not use personal info to target ads",
+        "plain_english": "Urban Ladder explicitly states that it does not use your personal information to target advertisements to you.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_grievance_officer",
+        "title": "Has a dedicated grievance officer",
+        "plain_english": "Urban Ladder has appointed a Grievance Officer (Sanjay Kawle) with a dedicated email address (grievanceofficer@urbanladder.com) for handling privacy complaints.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_marketing",
+        "title": "Can opt out of marketing communications",
+        "plain_english": "You can opt out of receiving promotional emails by clicking the unsubscribe link or contacting Urban Ladder directly.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protection",
+        "title": "Not directed at children",
+        "plain_english": "Urban Ladder states its platform is not directed towards minors under 18, and will delete information if discovered to have been collected from a child.",
         "severity": "positive"
       }
     ]
   },
+
   "categories": [
     {
       "id": "camera_microphone",
       "label": "Camera & Microphone",
       "icon": "Camera",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "on_demand",
       "required_for_core_function": false,
       "optional_access": true,
       "background_access": false,
-      "plain_english": "The app can record audio and video calls when you speak with their team for product demos or customer service. It only happens during calls you choose to make.",
-      "detail": "Section 2.4 states they may record video calls and audio calls carried out with users for the purpose of providing visual demonstration of products, improving quality of service, and assisting with follow-up queries. Section 6.6 also mentions keeping records of telephone calls or audio/video recordings for administration, R&D, training, business intelligence, and user administration, and sharing them with third parties when required by law.",
-      "policy_excerpt": "We may also record video calls, audio calls carried out with you, for the purpose of providing visual demonstration of our products, improving quality of service and assisting with any follow-up queries.",
-      "concerns": ["Call recordings are stored and may be shared with third parties under legal or service requirements.", "Users are not explicitly asked for consent before recording."],
-      "score_impact": 4.5
+      "plain_english": "Urban Ladder records your video calls and audio calls for product demonstrations, improving service quality, and assisting with follow-up queries.",
+      "detail": "The privacy policy explicitly states that Urban Ladder may record video calls and audio calls carried out with you for the purpose of providing visual demonstrations of products, improving quality of service, and assisting with follow-up queries.",
+      "policy_excerpt": "We may also record video calls, audio calls carried out with you ('Audio, Video Recordings'), for the purpose of providing visual demonstration of our products, improving quality of service and assisting with any follow-up queries",
+      "concerns": ["Audio and video calls are recorded", "Recordings may be shared with third parties when required by law"],
+      "score_impact": 9.75
     },
     {
       "id": "location_gps",
@@ -108,26 +112,26 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy does not say whether the app accesses your phone's GPS or location. Since it's a furniture delivery app, location might be used, but it isn't explained.",
-      "detail": "The policy does not explicitly mention GPS or location data collection. IP address is collected (section 6.1) which can infer approximate location, but this falls under network activity rather than GPS.",
+      "plain_english": "The privacy policy does not explicitly mention GPS location tracking, though your IP address is collected automatically.",
+      "detail": "No explicit mention of GPS or precise location access. IP address is collected for trend analysis.",
       "policy_excerpt": "",
-      "concerns": ["Lack of transparency about location data usage for a shopping/delivery app."],
+      "concerns": ["Policy is silent on GPS location access"],
       "score_impact": 7.5
     },
     {
       "id": "contacts_phonebook",
       "label": "Contacts & Phonebook",
       "icon": "BookUser",
-      "risk": "safe",
-      "access_type": "never",
+      "risk": "unknown",
+      "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not access or collect information from your phone's contact list.",
-      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "No explicit mention of contacts or phonebook access in the privacy policy.",
       "policy_excerpt": "",
-      "concerns": [],
-      "score_impact": 0
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": 10
     },
     {
       "id": "storage_file_access",
@@ -138,26 +142,26 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The policy doesn't say if the app can access files or photos stored on your phone.",
-      "detail": "No explicit mention of storage, file access, or photo library permissions in the privacy policy.",
+      "plain_english": "The privacy policy does not mention whether the app accesses files or storage on your device.",
+      "detail": "No explicit mention of storage or file access permissions in the privacy policy.",
       "policy_excerpt": "",
-      "concerns": ["Lack of transparency about storage access for a shopping app that might need photo uploads."],
+      "concerns": ["Policy is silent on storage access"],
       "score_impact": 5
     },
     {
       "id": "data_sharing_third_parties",
       "label": "Data Sharing with 3rd Parties",
       "icon": "Share2",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "Your information is shared with payment gateways and other service providers who help run the app. They also share general, non-identifiable statistics with advertisers and business partners.",
-      "detail": "Section 4.1 allows sharing with trusted third-party service providers under confidentiality. Section 4.6 permits transfer to affiliates, subsidiaries, and partners with same data protection standards. Section 6.1 allows sharing aggregate findings in unidentifiable form with advertisers, sponsors, investors, strategic partners. Section 6.4 allows third-party ad servers to place unique cookies.",
-      "policy_excerpt": "We may from time to time be required to disclose the Information collected from you to our trusted third-party service providers who assist us in order to facilitate the provision of services and purchase of Products on the Urban Ladder Platform.",
-      "concerns": ["Broad affiliate and partner sharing internationally.", "Aggregate data shared with advertisers and investors.", "Third-party cookies for advertising."],
-      "score_impact": 9
+      "plain_english": "Urban Ladder shares your data with third-party service providers like payment gateways, may transfer it to a new owner in a corporate sale, and may share audio/video recordings with third parties when required by law.",
+      "detail": "Data is shared with trusted third-party service providers for facilitating services. Information may be disclosed or transferred to any third party as part of reorganization or sale of assets. Telephone records and audio/video recordings may be shared with third parties when required by law.",
+      "policy_excerpt": "We may from time to time be required to disclose the Information collected from you to our trusted third-party service providers who assist us in order to facilitate the provision of services... We may also disclose or transfer your Information to any third party as a part of reorganization or a sale of the assets, division or transfer of a part or whole of us... We may share such telephone records or any other Audio, Video Recordings with third parties when required by law or when required to provide or facilitate the User with the services.",
+      "concerns": ["Data shared with third-party service providers", "All data may be transferred in merger/sale", "Audio/video recordings shared with third parties when required by law"],
+      "score_impact": 19.5
     },
     {
       "id": "account_identity",
@@ -168,10 +172,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app collects your name, address, phone number, email, and birth details to create your account and deliver furniture.",
-      "detail": "Section 2.4 and 2.5 collect full name, personal contact numbers, residential address, email address, gender, date of birth, password, IP address, and contact preferences. Used for account creation, product delivery, customer service, personalization, and internal analytics.",
-      "policy_excerpt": "We may collect a variety of information from you, including your name, password, mailing address, phone number, email address, IP address, contact preferences, including any other usage and interaction details with us or our affiliates.",
-      "concerns": ["Collection of gender and date of birth is not clearly justified for core furniture shopping.", "Data combined with affiliate information could enable broader profiling."],
+      "plain_english": "Urban Ladder collects your name, password, mailing address, phone number, email address, gender, and date of birth when you create an account or interact with the platform.",
+      "detail": "Standard account information collected for order processing, delivery, and customer service. Passwords are stored as sensitive personal data.",
+      "policy_excerpt": "We may collect a variety of information from you, including your name, password, mailing address, phone number, email address, IP address, contact preferences... Personal Information shall include but is not limited to your full name, personal contact numbers, residential address, email address, gender or date of birth.",
+      "concerns": ["Password collected and stored", "Gender and date of birth collected"],
       "score_impact": 4.5
     },
     {
@@ -183,10 +187,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app tracks your browsing habits and device details to understand trends, and allows advertisers to place cookies to show you general ads. They say they don't use your personal details for ad targeting.",
-      "detail": "Section 6.1 collects IP address, browser type, OS, email patterns, ISP for trend analysis. Section 6.4 allows third-party ad servers to place unique cookies and target ads based on general profile. Section 6.2 states usage patterns may be used by third-party service providers for technical administration, research, and development.",
-      "policy_excerpt": "We may allow other companies or entities to serve advertisements to you... We may target some advertisements to you that fit a certain general profile. We do not use Personal Information to target advertisements to you.",
-      "concerns": ["Third-party cookies enable tracking across sessions.", "General profile targeting still involves some behavioral categorization.", "Usage patterns shared with third-party service providers for R&D."],
+      "plain_english": "Urban Ladder uses cookies and collects your browsing patterns, but explicitly states it does not use your personal information to target advertisements to you.",
+      "detail": "Temporary cookies are used to store data. Aggregate findings (not specific data) may be shared with advertisers, sponsors, and partners. Third parties may place cookies on your browser for ads. However, Urban Ladder explicitly states it does not use personal information to target advertisements.",
+      "policy_excerpt": "We do not use Personal Information to target advertisements to you... We may allow other companies or entities to serve advertisements to you... In the course of serving advertisements or optimizing the services to its Users, we may allow authorised third parties to place or recognize a unique cookie on the User's browser.",
+      "concerns": ["Third-party cookies for advertisements", "Aggregate data shared with advertisers"],
       "score_impact": 7.5
     },
     {
@@ -198,8 +202,8 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app is not meant for children under 18, and if they accidentally collect a child's data, they will delete it.",
-      "detail": "Section 2.3 states the platform is not directed towards minors, they do not knowingly collect personal information from users under 18, and will delete such information within a reasonable timeframe if discovered.",
+      "plain_english": "Urban Ladder states its platform is not directed towards minors under 18, and will take steps to delete information if discovered to have been collected from a child.",
+      "detail": "Explicit statement that the platform is not directed towards minors and that they do not knowingly collect personal information from users under 18.",
       "policy_excerpt": "Urban Ladder Platform is not directed towards minors. We do not knowingly collect Personal Information from any User who is under 18 (Eighteen) years. If we are made aware that we have collected the Personal Information of a person below the age of 18 (Eighteen) years, we will take steps to delete the information within a reasonable time frame.",
       "concerns": [],
       "score_impact": 0
@@ -213,10 +217,10 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app records your internet address, browser type, and internet provider to study how people use the app and improve services.",
-      "detail": "Section 6.1 automatically receives URL of referring site, details of website visited on leaving, IP address, operating system, browser type, email patterns, and ISP name. Used solely to analyze overall user trends and improve services. Aggregate findings may be shared with advertisers and partners.",
-      "policy_excerpt": "When you visit, access or browse the Urban Ladder Platform, we automatically receive the uniform resource locator of the site from which such you visit... the internet protocol ('IP') address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider.",
-      "concerns": ["Email patterns are collected as part of network logging, which is unusual and potentially privacy-invasive.", "Aggregate network data shared with advertisers and partners."],
+      "plain_english": "Urban Ladder collects the URL of the site you came from, the site you visit after leaving, your IP address, operating system, browser type, email patterns, and internet service provider.",
+      "detail": "Automatic collection of referrer URL, exit URL, IP address, OS, browser type, email patterns, and ISP name for trend analysis. Aggregate findings may be shared with advertisers and partners.",
+      "policy_excerpt": "when you visit, access or browse the Urban Ladder Platform, we automatically receive the uniform resource locator of the site from which such you visit... details of the website you visit on leaving the Urban Ladder Platform, the internet protocol ('IP') address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider.",
+      "concerns": ["Referrer and exit URLs tracked", "Email patterns collected", "Aggregate data shared with advertisers"],
       "score_impact": 1.5
     },
     {
@@ -224,44 +228,44 @@
       "label": "Device Info & Fingerprinting",
       "icon": "Smartphone",
       "risk": "caution",
-      "access_type": "on_demand",
+      "access_type": "continuous",
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app notes what type of device and browser you use so they can make the app work properly and study usage trends.",
-      "detail": "Section 6.1 collects operating system type and web browser type. Used for analyzing overall user trends and improving services. Not explicitly used for advertising fingerprinting.",
-      "policy_excerpt": "the internet protocol ('IP') address of each User's computer operating system, type of web browser the User is using...",
-      "concerns": ["Basic device info collected is standard but combined with other data could contribute to profiling."],
+      "plain_english": "Urban Ladder collects your IP address, operating system type, browser type, and internet service provider name.",
+      "detail": "Device-level information collected automatically for trend analysis and service improvement.",
+      "policy_excerpt": "the internet protocol ('IP') address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider",
+      "concerns": ["IP address collected", "OS and browser type collected"],
       "score_impact": 4.5
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "safe",
+      "risk": "unknown",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app does not collect health or fingerprint information from you.",
-      "detail": "While the policy defines 'Sensitive Personal Data' to include physical, physiological and mental health condition (section 2.5.3), there is no indication that such data is actually collected for a furniture shopping app. The inclusion appears to be a legal boilerplate definition under Indian IT law.",
-      "policy_excerpt": "We may also collect, receive, process or store certain sensitive personal data or information consisting of, but not limited to: ... Physical, physiological and mental health condition;",
-      "concerns": ["Boilerplate definition could cause confusion, but no evidence of actual collection."],
-      "score_impact": 0
+      "plain_english": "The privacy policy lists physical, physiological and mental health condition as a category of sensitive personal data, but does not explicitly state that such data is collected.",
+      "detail": "Health condition is listed as a category of sensitive personal data under Indian law, but there is no explicit statement that Urban Ladder actively collects this information.",
+      "policy_excerpt": "Physical, physiological and mental health condition",
+      "concerns": ["Policy lists health as sensitive data category but does not confirm collection"],
+      "score_impact": 7.5
     },
     {
       "id": "financial_payment",
       "label": "Financial & Payment Data",
       "icon": "CreditCard",
       "risk": "caution",
-      "access_type": null,
-      "required_for_core_function": true,
-      "optional_access": false,
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
       "background_access": false,
-      "plain_english": "When you buy furniture, your payment details are handled by secure outside payment companies. The app says it doesn't store or handle your card details directly.",
-      "detail": "Section 2.5.2 lists financial information as sensitive data that may be collected. Section 4.4 clarifies that third-party payment gateway providers collect financial information for billing, and it is encrypted through secure digital platforms. The app disclaims liability for payment gateway actions.",
-      "policy_excerpt": "A third-party payment gateway provider may be required to collect certain Financial Information from you. All Financial Information collected from you by such third-party payment gateway providers will be used only for billing and payment processes. The Financial Information collected from you is transacted through secure digital platforms of approved payment gateways which are under encryption.",
-      "concerns": ["Policy ambiguously states they 'may' collect financial information directly while also saying payment gateways handle it.", "No explicit mention of whether card numbers are stored by Urban Ladder itself."],
+      "plain_english": "Urban Ladder collects your financial information including credit/debit card numbers and bank account details, but these are processed by third-party payment gateways under encryption. Urban Ladder does not handle the verification directly.",
+      "detail": "Financial information is collected but processed through secure third-party payment gateways under encryption. Urban Ladder explicitly states it has no role in the verification process and bears no liability for payment gateway actions.",
+      "policy_excerpt": "Financial information including, but not restricted to, your credit/debit card number or your bank account details or other payment instrument details... The Financial Information collected from you is transacted through secure digital platforms of approved payment gateways which are under encryption... The verification of the Financial Information shall be accomplished only by you through a process of authentication in which we shall have no role to play",
+      "concerns": ["Financial information collected", "Third-party payment gateways handle transactions"],
       "score_impact": 4.5
     },
     {
@@ -273,46 +277,50 @@
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "You can ask them to delete or change your information by sending an email, but they might keep some of it if the law requires it.",
-      "detail": "Section 2.2 and 7.3 allow users to access, amend, alter, or require deletion of information by contacting hello@urbanladder.com or grievanceofficer@urbanladder.com. Section 1.4 allows withdrawal of consent. Section 8.1 permits retention for periods necessary to fulfil purposes or as required by law.",
-      "policy_excerpt": "You may access, amend, alter or require deletion of your Information partially or fully by contacting us at hello@urbanladder.com.",
-      "concerns": ["No automated self-service deletion option mentioned.", "Retention period is vague ('period necessary to fulfil purposes').", "Data may be retained longer if 'permitted under applicable law'."],
+      "plain_english": "You can request access, amendment, alteration, or deletion of your information by contacting Urban Ladder at hello@urbanladder.com or grievanceofficer@urbanladder.com.",
+      "detail": "Users can exercise data rights by contacting Urban Ladder via email. No self-service portal is explicitly mentioned.",
+      "policy_excerpt": "You may access, amend, alter or require deletion of your Information partially or fully by contacting us at hello@urbanladder.com... If you wish to remove your contact information from all our mailing lists and newsletters, you can click on the 'unsubscribe' link or follow the instructions in each e-mail message. Alternatively, you can contact us at grievanceofficer@urbanladder.com.",
+      "concerns": ["No self-service deletion portal", "Requires email request"],
       "score_impact": 3
     },
     {
       "id": "policy_change_notification",
       "label": "Policy Change Notification",
       "icon": "Bell",
-      "risk": "risky",
+      "risk": "caution",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "They can change the privacy rules at any time and will only post the new version on their website. They won't send you an email or message to let you know.",
-      "detail": "Section 9.1 reserves the right to amend the policy at any time. Modified policies are updated on the platform. Users are 'encouraged to review' the policy whenever they visit. No commitment to active notification (email, push, or in-app) is made.",
-      "policy_excerpt": "We reserve the right to amend this Privacy Policy at any time. The Privacy Policy, as and when modified, shall be updated on the Urban Ladder Platform. We encourage you to review this Privacy Policy whenever you visit our Urban Ladder Platform to understand how your Personal Information is used.",
-      "concerns": ["No active notification mechanism for policy changes.", "Users must proactively check the website for updates.", "Changes can happen at any time without advance warning."],
-      "score_impact": 3.25
+      "plain_english": "Urban Ladder reserves the right to amend the privacy policy at any time and encourages users to review it periodically, but does not explicitly promise to notify you of material changes.",
+      "detail": "The policy states it may be amended at any time and will be updated on the platform. Users are encouraged to review it periodically. No explicit notification mechanism or consent requirement for material changes.",
+      "policy_excerpt": "We reserve the right to amend this Privacy Policy at any time. The Privacy Policy, as and when modified, shall be updated on the Urban Ladder Platform. We encourage you to review this Privacy Policy whenever you visit our Urban Ladder Platform",
+      "concerns": ["No explicit notification of material changes", "No consent required for policy changes"],
+      "score_impact": 1.5
     }
   ],
+
   "scoring": {
     "base_score": 100,
     "max_possible_deductions": 205,
     "deductions": [
-      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
       { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
       { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
-      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
       { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
       { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
       { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
       { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
       { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
-      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 }
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
     ],
-    "total_deductions": 54.75,
-    "final_score": 73,
-    "grade": "B"
+    "total_deductions": 83.5,
+    "final_score": 59,
+    "grade": "C"
   }
 }

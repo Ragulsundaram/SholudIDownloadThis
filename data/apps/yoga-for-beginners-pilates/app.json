@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://leaphealth.fitness/privacypolicy.html?pkg=com.abishkking.yogaworkout",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "The privacy policy is extremely short, generic, and appears copy-pasted from an Android app template (references Google Play and 'Android applications' despite this being an iOS app). It claims the developer does not collect PII and does not have a server, yet admits ad providers and Google Analytics identify the device and track usage. The policy is silent on camera, microphone, contacts, and file access. The 'Verified by BBC & Privacy International' claim cannot be independently verified from the policy text."
+  },
+  "app": {
+    "slug": "yoga-for-beginners-pilates",
+    "name": "Yoga for Beginners, Pilates+",
+    "developer": "Leap Health",
+    "app_store_url": "https://apps.apple.com/in/app/yoga-for-beginners-pilates/id1575206600",
+    "app_store_id": "1575206600",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/30/c5/1430c55c-2ec5-62ce-0033-f136b641e841/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "",
+    "description": "A yoga and pilates workout app for beginners with guided routines."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 73,
+    "grade": "B",
+    "one_liner": "A basic yoga app that claims not to collect personal data, but its short, copy-pasted privacy policy leaves many important questions unanswered.",
+    "summary": "Yoga for Beginners, Pilates+ is a simple workout app whose privacy policy is remarkably brief and appears copied from an Android template. The developer claims they do not collect personal information, do not require registration, and do not have a server to store data. However, the app does use advertising providers and Google Analytics, which can identify your device and track usage. The policy is silent on camera, microphone, contacts, and file access, and makes an unverified claim of being audited by BBC and Privacy International. While the data collection footprint appears small, the vague and generic policy makes it hard to be certain.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app seems to collect very little personal data by design, but the privacy policy is too vague and generic to give full confidence. Suitable for users who want a simple offline workout app and do not create accounts or enable optional health integrations."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_generic_policy",
+        "title": "Privacy policy appears copy-pasted from an Android app",
+        "plain_english": "The privacy policy repeatedly mentions 'Android applications' and the 'Google Play Platform' even though this is an iOS app, suggesting it is a generic template that was not properly reviewed or customized.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Ads and analytics track your device",
+        "plain_english": "Although the developer says they do not collect your personal information, the app uses advertising providers and Google Analytics that can identify your device and monitor how you use the app.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_silent_categories",
+        "title": "Policy silent on camera, contacts, and files",
+        "plain_english": "The privacy policy does not say whether the app can access your camera, microphone, contacts, or the files on your phone, leaving you to guess what permissions it actually requests.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_unverified_claim",
+        "title": "Unverified audit claim in privacy policy",
+        "plain_english": "The policy claims its no-sharing practices were 'Verified by BBC & Privacy International,' but provides no proof, link, or date for this supposed verification.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_registration",
+        "title": "No account or registration required",
+        "plain_english": "You can use the app without creating an account or providing your name, email, or phone number.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_server_storage",
+        "title": "Claims not to store personal data on servers",
+        "plain_english": "The developer states they do not have a server to store your personal information, meaning most of your data stays on your device.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_optional_health_kit",
+        "title": "Health data import is optional",
+        "plain_english": "If you want to connect the app to Apple Health or Google Fit to import workout data, you must explicitly give permission first.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your camera or microphone.",
+      "detail": "The policy is completely silent on camera and microphone permissions. It is unclear if the app requests these for features like video workouts, progress photos, or voice commands.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect your location unless you voluntarily include it in a feedback email.",
+      "detail": "The policy states the only way location information might be received is if a user personally decides to email a bug report or feedback and includes it. There is no indication the app actively requests or tracks GPS.",
+      "policy_excerpt": "The only situation we may get access to your PII is when you personally decide to email us your feedback... The PII we may get from you in that situation are strictly limited to your name, email address, device information, location Information and your survey response only.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention whether the app accesses your contacts or phonebook.",
+      "detail": "There is no mention of contacts, address book, or phonebook access anywhere in the policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your photos or files stored on your device.",
+      "detail": "The policy does not mention storage, photo library, or file system access. As a yoga workout app, it may not need these permissions, but the silence is notable.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage and file access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses advertising providers and Google Analytics, which can identify your device and track how you use the app, but the developer claims they do not directly sell or share your personal data.",
+      "detail": "The policy states ad providers use cookies to identify your device for showing relevant ads. Google Analytics is used to measure traffic and usage trends. The developer explicitly claims they do not share user data with Facebook or other parties, though the ad/analytics integrations technically involve data sharing with those vendors.",
+      "policy_excerpt": "Ads - Our app may use some providers to show ads. These Ads providers can uses cookies only to identifies your device... We don't share any user's data with Facebook or other parties (Verified by BBC & Privacy International). Analytics - We use third party analytics tool, Google Analytics, to help us measure traffic and usage trends for the service.",
+      "concerns": ["Ad providers identify your device via cookies", "Google Analytics collects usage data", "Claim of no data sharing contradicts ad/analytics integration"],
+      "score_impact": -9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You do not need to create an account or give your name, email, or phone number to use the app.",
+      "detail": "The policy explicitly states no registration is required before downloading and the app does not keep track of consumers. The only identity information collected is voluntarily submitted through feedback emails.",
+      "policy_excerpt": "Generally, we do not collect any PII from you when you download our Android applications. To be specific, we do not require the consumers to get registered before downloading the application, nor do we keep track of the consumers' visits of our application...",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses advertising providers and Google Analytics to identify your device and track how often you use the app and what you do in it.",
+      "detail": "Advertising providers use cookies to identify the device and serve relevant ads. Google Analytics collects how often users visit, what pages they visit, and what other pages they use prior to coming to the service. This is used to improve services.",
+      "policy_excerpt": "These Ads providers can uses cookies only to identifies your device (as described above), then show ads that are relevant to our app's kind... Google Analytics collects information such as how often users visit our services, what pages they visit when they do so, and what other pages they use prior to coming to our services.",
+      "concerns": ["Device identified for ad targeting", "Usage patterns tracked by Google Analytics"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app is meant for children or what protections are in place for kids under 13.",
+      "detail": "There is no mention of age requirements, COPPA compliance, or any child-specific data handling practices in the policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on children's data"],
+      "score_impact": -5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app automatically logs your internet address and how you use the app through Google Analytics.",
+      "detail": "Google Analytics automatically collects visit frequency, page views, and prior page visits. The policy does not mention whether the developer logs IP addresses themselves.",
+      "policy_excerpt": "Google Analytics collects information such as how often users visit our services, what pages they visit when they do so, and what other pages they use prior to coming to our services.",
+      "concerns": ["Usage activity logged by third-party analytics"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Advertising providers and Google Analytics use cookies and other identifiers to recognize your device when you use the app.",
+      "detail": "The policy states ad providers use cookies to uniquely identify the device. Google Analytics also collects device-related information as part of its standard analytics implementation.",
+      "policy_excerpt": "These Ads providers can uses cookies only to identifies your device... that uniquely identifies your device and allows the application to help you log in faster and enhance your navigation through the Forum.",
+      "concerns": ["Device uniquely identified by ad cookies", "Analytics service collects device identifiers"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app lets you optionally connect to Apple Health or Google Fit to import workout data, but this is entirely your choice.",
+      "detail": "Health data import from third-party services is optional and requires explicit permission. The developer claims not to have a server to store PII, suggesting health data (if imported) remains local or is handled by the third-party service.",
+      "policy_excerpt": "You will also have an option to permit us to import health data into the App from third-party services such as Google Fit. Permitting us to access third party information can help you to maximize your App experience...",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not appear to collect or store any payment or financial information.",
+      "detail": "There is no mention of in-app purchases, subscriptions, or payment processing in the privacy policy. The app appears to be free with ads.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explain how to delete your data or exercise your privacy rights.",
+      "detail": "There is no mention of data deletion procedures, account deletion, data portability, or correction rights. Since the developer claims not to store PII on a server, this may be moot for most users, but it is still not addressed.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of deletion rights or procedures"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say how you will be notified if it changes.",
+      "detail": "There is no mention of how policy updates are communicated, whether users are notified, or whether continued use equals acceptance. This is notable given the policy is generic and may change without notice.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of change notification mechanism"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9 },
+      { "category": "account_identity", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 54.5,
+    "final_score": 73,
+    "grade": "B"
+  }
+}

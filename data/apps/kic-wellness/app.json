@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://kicwellness.com/policies/privacy-policy",
+    "terms_url": "https://kicwellness.com/policies/terms-of-service",
+    "policy_last_updated": "2026-04-30",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "kic-wellness",
+    "name": "KIC Wellness",
+    "developer": "Kic App Pty Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/kic-wellness/id1438803205",
+    "app_store_id": "1438803205",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/6a/ce/7c6aced3-0995-fa64-28e3-2f7b4a43f05f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Wellness",
+    "description": "KIC unites movement, mindset and rituals to help you build confidence, find calm, and move through life with purpose. Features guided meditations, expert-led fitness programs, dietitian-approved recipes, and pregnancy support."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 60,
+    "grade": "C",
+    "one_liner": "KIC Wellness collects sensitive health data, uses background location tracking, and shares your purchases and usage data for cross-app tracking, but pledges not to use AI inputs to train models and provides deletion rights.",
+    "summary": "KIC Wellness's privacy policy reveals extensive data collection including sensitive health and fitness information, biometric data for studio access, and your image/voice captured during classes for commercial purposes. The app may track your location in the background, uses third-party cookies from Facebook and Google for targeted ads, and shares data with AI infrastructure and cloud providers across multiple countries including Australia, the US, and the EU. On the positive side, KIC explicitly states it does not sell personal data, does not use AI inputs to train its own models, and allows you to request deletion of your data. It also provides GDPR-aligned disclosures for EEA/UK residents.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are uncomfortable with sensitive health data being collected, your image and voice being captured in studios for commercial use, background location tracking, and cross-app ad tracking, consider carefully whether this wellness app aligns with your privacy expectations."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_biometric_collection",
+        "title": "Sensitive health and biometric data collected",
+        "plain_english": "KIC collects information about your physical and mental health, fitness assessments, medical clearances, and biometric data like fingerprints for studio access. Your image and voice may also be captured during classes for commercial use.",
+        "severity": "high"
+      },
+      {
+        "id": "red_background_location",
+        "title": "Location tracked even when app is closed",
+        "plain_english": "The KIC app can access your location while it runs in the background on your device, which can drain your battery and continuously track your movements.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_app_tracking",
+        "title": "Purchases and usage data used to track you across apps",
+        "plain_english": "KIC's App Store label shows that your purchases, device identifiers, usage data, and diagnostics may be used to track you across apps and websites owned by other companies.",
+        "severity": "high"
+      },
+      {
+        "id": "red_studio_commercial_footage",
+        "title": "Your image and voice may be used for commercial content",
+        "plain_english": "If you attend studio classes, your image, voice, and likeness may be filmed or photographed for commercial purposes, such as promotional videos or social media content.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_cctv_studios",
+        "title": "Studio CCTV captures your image for security",
+        "plain_english": "KIC uses CCTV systems at studio premises that record images and footage for security and safety purposes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_overseas",
+        "title": "Data stored and processed overseas",
+        "plain_english": "Your personal data may be transferred to and stored in Australia, the United States, New Zealand, and the EU, which means different privacy laws may apply.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Explicit no-sale commitment",
+        "plain_english": "KIC explicitly states that it does not sell personal information in any manner.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ai_not_trained",
+        "title": "AI inputs not used to train models",
+        "plain_english": "KIC states it does not use data or inputs submitted through AI Features to train its own AI models, and configures AI features so third-party providers do not use them to train underlying models either.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_rights",
+        "title": "Deletion rights available on request",
+        "plain_english": "You can request access to, correction of, or deletion of your personal information by emailing hello@kicwellness.com.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_disclosures",
+        "title": "GDPR-aligned disclosures for EEA/UK residents",
+        "plain_english": "KIC provides detailed Schedule 1 disclosures for EEA and UK residents, including lawful bases for processing, data subject rights, and information about Standard Contractual Clauses for international transfers.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Your image and voice may be filmed or photographed during studio classes for commercial purposes, and studio CCTV records footage for security. You can also upload photos to the app.",
+      "detail": "The policy explicitly states that during studio classes, your image, voice, and likeness may be captured for commercial purposes. Studio CCTV systems also capture images and recordings for security and safety. Users can also upload photos when using the Services.",
+      "policy_excerpt": "your image, voice, and likeness captured during studio classes that may be filmed or photographed for commercial purposes; images and recordings captured by studio CCTV systems for security and safety purposes",
+      "concerns": ["Commercial use of likeness without clear opt-out", "Studio CCTV recording"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": true,
+      "plain_english": "The app can access and use your location data both when open and when running in the background on your device. Location data is also collected when you visit studio premises.",
+      "detail": "The policy states the app may access and use location data while in use or continuing to operate in the background, with explicit consent. Location data is also collected at studio premises for safety, security, and operational purposes.",
+      "policy_excerpt": "Our app, with your explicit consent, may access and use your location data while the app is in use or is continuing to operate in the background on your device.",
+      "concerns": ["Background location access enabled", "Location collected at studio premises"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "There is no evidence that the KIC Wellness app accesses your contacts or phonebook.",
+      "detail": "The privacy policy does not mention contacts or address book access. The App Store privacy label does not list contacts data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos of yourself and other content when using the app. This is user-initiated and optional.",
+      "detail": "The policy mentions collecting photos of you and any other content you or third parties upload when using the Services. This is user-initiated.",
+      "policy_excerpt": "photos of you and any other content you or third parties on your behalf upload when using our Services",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "KIC shares your data with service providers, IT and cloud hosting providers, AI infrastructure partners, payment processors, marketing providers, and professional advisors. It explicitly says it does not sell personal data.",
+      "detail": "The policy states data may be disclosed to personnel, service providers, cloud hosts, AI infrastructure partners, payment gateways, professional advisors, insurers, and law enforcement when required. Third-party cookies from Facebook and Google are used for targeted advertising. KIC explicitly states it does not sell personal information.",
+      "policy_excerpt": "Information may be relayed to personnel, software vendors, cloud hosts, AI infrastructure partners, payment gateways, consultants, and authorities. No commercial sale occurs.",
+      "concerns": ["Data shared with AI infrastructure partners", "Third-party cookies from Facebook and Google", "Data shared with marketing providers"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name, email, address, age, gender, and emergency contact to create an account and use studio services.",
+      "detail": "Account creation requires name, email, address, age/DOB, gender, and emergency contact for studio class participation. This is standard for a wellness app with studio services.",
+      "policy_excerpt": "your name; your email address; your address; your age and date of birth; your gender; emergency contact information for studio class participation",
+      "concerns": ["Emergency contact collected for studio participation"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "KIC uses targeting cookies and third-party cookies from Facebook and Google to show you personalised ads and track your user journey across the internet.",
+      "detail": "The policy describes using targeting cookies to see user journeys and customise marketing. Third-party cookies from Facebook and Google are used to bring offers and content of interest. The App Store privacy label explicitly lists Purchases, Identifiers, Usage Data, and Diagnostics as 'Data Used to Track You' across other companies' apps and websites.",
+      "policy_excerpt": "Targeting cookies: These cookies allow us to see your user journey... Third party cookies from companies such as Facebook and Google, which allow us to bring you offers and content that might be of interest to you through those sites.",
+      "concerns": ["Cross-app tracking via App Store label", "Facebook and Google cookies for targeted ads", "Purchase data used for tracking"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 9+ but KIC says it is intended for users aged 18 and over, with limited use for 16–17 year olds with parental consent. It does not intentionally collect data from children under 16.",
+      "detail": "There is a mismatch between the App Store age rating (9+) and the privacy policy (18+, limited 16+ with consent). The policy states they do not intentionally collect data from users under 16.",
+      "policy_excerpt": "Our Services are intended for individuals aged 18 years or over, although limited use by certain younger users (aged 16 years or over) may be permitted... We do not intentionally collect Personal Information about users under the age of 16.",
+      "concerns": ["App Store rating 9+ but policy says 18+", "No technical age verification described"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "KIC logs which pages you visit, when you visit them, your IP address, traffic data, and ad data to understand how you use the app.",
+      "detail": "The policy states that pages visited, time and date of visits, internet protocol address, traffic to and from sites, and ad data are recorded automatically.",
+      "policy_excerpt": "we may record certain information about your use of our website, such as which pages you visit, the time and date of your visit and the internet protocol address assigned to your computer",
+      "concerns": ["Page visit logging", "Ad data collected"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "KIC collects your device ID, device type, computer and connection information, and uses identifiers to track you across other apps and websites.",
+      "detail": "The policy collects device ID, device type, computer and connection information, statistics on page views, traffic, ad data, and IP address. The App Store privacy label explicitly lists 'Identifiers' as data used to track you across other companies' apps.",
+      "policy_excerpt": "your device ID, device type, computer and connection information, statistics on page views, traffic to and from the sites, ad data, IP address and standard web log information",
+      "concerns": ["Device ID collected", "Identifiers used for cross-app tracking"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "KIC collects sensitive health information including physical and mental health data, fitness assessments, medical clearances, and biometric data like fingerprints for studio access.",
+      "detail": "The policy explicitly collects Sensitive Information about physical, mental or psychological health. Studio-specific data includes biometric data for facility access, health screening, temperature checks, fitness assessments, and medical clearances. AI features may also process health-related sensitive information depending on what you enter.",
+      "policy_excerpt": "we may collect Sensitive Information such as information about your physical, mental or psychological health... biometric data for secure facility access; health screening information and temperature checks; fitness assessments, medical clearances, and physical limitations",
+      "concerns": ["Health data collected for wellness services", "Biometric data for studio access", "AI features may process sensitive health data"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment and transaction data is collected when you subscribe or make purchases, but KIC does not directly store your credit card details — these are handled by third-party payment providers.",
+      "detail": "The policy states payment and transaction data is collected, but credit card and bank details are collected by third-party payment service providers on KIC's behalf, not directly by KIC.",
+      "policy_excerpt": "payment and transaction data including details about payments from you... however, we do not directly collect and hold credit card and bank details, but these may be collected on our behalf via our third-party payment service providers",
+      "concerns": ["Payment data processed by third-party providers"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access to, correction of, or deletion of your personal information by emailing hello@kicwellness.com. Privacy complaints can be sent to privacy@kicwellness.com.",
+      "detail": "The policy explicitly provides rights to access, correct, and delete personal information. Complaints can be sent to privacy@kicwellness.com. EEA/UK residents have additional GDPR-aligned rights in Schedule 1.",
+      "policy_excerpt": "You can request access to or correction of your personal information... You can request deletion by contacting the same address. Privacy complaints can be sent to privacy@kicwellness.com.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "KIC may change its privacy policy at any time by publishing changes on its website. It encourages you to check periodically, but does not promise advance notice or require you to re-agree.",
+      "detail": "The policy states changes are published on the website and encourages periodic checking. There is no mention of advance notification, email alerts, or requiring active re-agreement for changes.",
+      "policy_excerpt": "We may change our Privacy Policy from time to time by publishing changes to it on our website. We encourage you to check our website periodically to ensure that you are aware of our current Privacy Policy.",
+      "concerns": ["No advance notification of changes", "Continued use = acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 82.5,
+    "final_score": 60,
+    "grade": "C"
+  }
+}

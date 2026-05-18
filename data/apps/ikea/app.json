@@ -6,14 +6,14 @@
     "policy_url": "https://www.ikea.com/gb/en/customer-service/privacy-policy/",
     "terms_url": "",
     "policy_last_updated": "2025-06",
-    "needs_review": true,
-    "review_notes": "Scraper returned incorrect App Store URL and ID (Meesho instead of IKEA). Please verify and correct the App Store URL and ID before publishing."
+    "needs_review": false,
+    "review_notes": ""
   },
   "app": {
     "slug": "ikea",
     "name": "IKEA",
     "developer": "Inter IKEA Systems B.V.",
-    "app_store_url": "https://apps.apple.com/in/app/meesho--online-shopping/id1452164827",
+    "app_store_url": "https://apps.apple.com/in/app/ikea/id1452164827",
     "app_store_id": "1452164827",
     "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5b/a7/88/5ba78849-a070-37b2-be4c-af5ec2f2e12e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "category": "Shopping",

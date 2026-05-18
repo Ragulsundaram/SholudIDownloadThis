@@ -1,0 +1,356 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.runna.com/legal/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2026-04-30",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "runna-running-plans-coach",
+    "name": "Runna: Running Plans & Coach",
+    "developer": "Strava Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/runna-running-plans-coach/id1594204443",
+    "app_store_id": "1594204443",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/85/6b/c3/856bc340-ef3b-3dc9-d6a6-841b55154d04/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "",
+    "description": "A running app offering personalized training plans, GPS tracking, and coaching features for runners of all levels."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 79,
+    "grade": "B",
+    "one_liner": "A well-structured running app with strong privacy rights and explicit health data protections, but broad third-party sharing and targeted advertising keep it from a top score.",
+    "summary": "Runna collects detailed activity data including GPS routes, workout metrics, and optional heart rate. It is owned by Strava and shares data with its parent company and advertising partners like Meta. On the positive side, Runna explicitly promises not to sell or use health data for advertising, provides prominent advance notice for material policy changes, and offers comprehensive user rights including data portability and deletion.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Strong privacy protections for health data and good user rights, but users should review sharing settings and consider opting out of targeted advertising."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_gps_required_core",
+        "title": "Precise GPS required for core features",
+        "plain_english": "To use the app for running, you must allow it to track your exact location using GPS. You can turn this off in your device settings, but then core tracking features will not work.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_shared_with_strava",
+        "title": "Data shared with parent company Strava",
+        "plain_english": "Runna is owned by Strava. Your data is shared with Strava and its affiliates, who process it under their own privacy policies.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_targeted_ads_meta",
+        "title": "Targeted advertising via Meta",
+        "plain_english": "Runna uses cookies and tracking tools to show you targeted ads through third-party networks like Meta. You can opt out, but some data sharing for advertising may still occur.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_activity_visible_others",
+        "title": "Activity data visible to other users",
+        "plain_english": "Your runs, routes, photos, and comments may be visible to other Runna users depending on your privacy settings. Content shared publicly may also appear on other social media platforms.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_health_data_protected",
+        "title": "Health data never used for ads",
+        "plain_english": "Runna promises not to sell or use health data such as heart rate for advertising, and will not share it with third parties without your explicit consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_material_change_notice",
+        "title": "Prominent advance notice for policy changes",
+        "plain_english": "If Runna makes important changes to its privacy policy, it will give you clear advance warning before those changes take effect.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_user_rights",
+        "title": "Strong user rights and data portability",
+        "plain_english": "You can access, correct, delete, restrict, and export your data. You can also withdraw consent at any time and delete your account permanently.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_payment_storage",
+        "title": "No payment card details stored",
+        "plain_english": "Runna never collects or stores your credit card information. All payments are handled by secure third-party providers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_opt_out",
+        "title": "Opt-out for targeted advertising",
+        "plain_english": "Runna provides a 'Do Not Share My Personal Information' link and honors browser opt-out signals like Global Privacy Control.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy mentions that you can share photos through the app, but it does not say whether the app accesses your camera or microphone directly.",
+      "detail": "The privacy policy references 'photos' under Content You Share, but does not explicitly describe camera or microphone access permissions. For a running app, photo sharing is typically user-initiated and may use the gallery without direct camera access.",
+      "policy_excerpt": "Content You Share: We collect content you share through the Services, such as photos, posts, comments, and messages.",
+      "concerns": [
+        "Policy is silent on camera and microphone permissions",
+        "Photo sharing may imply camera access but is not explicitly stated"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna needs your precise GPS location to track your runs. You can turn this off in your device settings, but then the app cannot record your route.",
+      "detail": "Precise location is required for core GPS activity tracking and map visualization. Location is also used for subscription pricing based on country. The CCPA table lists geolocation as shared with advertising partners, but the US states section says sensitive personal information is not used for advertising purposes beyond providing the Services.",
+      "policy_excerpt": "For our core features to function (e.g., GPS activity tracking), you must grant us permission through your device to track your device’s precise location. You can stop sharing precise location at any time with your device settings.",
+      "concerns": [
+        "Precise GPS is mandatory for core running features",
+        "Geolocation is classified as sensitive personal information and may be shared under CCPA disclosures"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any access to your contacts or phonebook.",
+      "detail": "No reference to contacts, address book, or phonebook access is found in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can choose to share photos and other content through the app, but there is no mention of broad file or storage access.",
+      "detail": "Storage access appears limited to user-initiated content sharing (photos, posts). No broad file library scanning or continuous storage access is described.",
+      "policy_excerpt": "Content You Share: We collect content you share through the Services, such as photos, posts, comments, and messages.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna shares your data with its parent company Strava, advertising partners like Meta, service providers, Shopify, and legal authorities when required.",
+      "detail": "Data sharing includes Strava/affiliates, third-party advertising networks (with consent where required), service providers for hosting/payments/support, Shopify for store purchases, and legal/government entities. The CCPA table confirms broad categories of personal information are shared with advertising/marketing partners.",
+      "policy_excerpt": "We share information with our parent company, Strava, and its affiliates who process that information under their own Privacy Policies... We may also disclose information to third-party advertising networks to promote our Services (with your consent, where required).",
+      "concerns": [
+        "Data shared with Strava and affiliates under separate privacy policies",
+        "Advertising data shared with Meta and other publishers for cross-context behavioral advertising",
+        "Business combination may result in data transfer to acquirers"
+      ],
+      "score_impact": -9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You need to provide your name, email, date of birth, gender, and a password to create an account. You can also sign in with Google or Apple.",
+      "detail": "Mandatory account fields include name, email, DOB, gender, username, and password. Third-party login via Google or Apple collects name, email, profile info, and preferences. DOB is used for age verification.",
+      "policy_excerpt": "Account Information: We collect account information such as your name, email address, date of birth, gender, username, and password.",
+      "concerns": [
+        "Gender and date of birth are mandatory fields",
+        "Third-party login shares profile information from Google/Apple"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna uses cookies, Google Analytics, Mixpanel, Hotjar, and other tools to track your activity and show you targeted ads. You can opt out of some of this tracking.",
+      "detail": "Multiple analytics and advertising trackers are used including Google Analytics, Mixpanel, Hotjar, HubSpot, PostHog, Snowplow, VWO, and Meta. Targeted advertising is supported with opt-out options including Global Privacy Control and a Do Not Share link.",
+      "policy_excerpt": "We advertise our Services through third parties, and may use cookies and other tracking technologies to support targeted advertising and serve relevant ads... You can opt out of us sharing your personal information for third-party targeted advertising through the options described in Your Privacy Rights.",
+      "concerns": [
+        "Multiple tracking vendors collect usage and behavioral data",
+        "Targeted advertising supported by cookie-based tracking",
+        "Identifiers, commercial info, and internet activity shared with advertising publishers"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna is not for anyone under 18. The app does not knowingly collect information from children.",
+      "detail": "Explicit statement that services are not intended for children under 18 and no personal information is knowingly collected from anyone under 18.",
+      "policy_excerpt": "Our Services are not intended for, nor directed to, children under 18 years of age, and we do not knowingly collect personal information from anybody under 18 years of age.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna collects your IP address, device network information, and log files when you use the app.",
+      "detail": "IP address and network information are collected for security, analytics, and functionality. IP is also used for location inference.",
+      "policy_excerpt": "Device Information: We collect technical information from the browser, computer, or mobile device used to access the Services. This includes device and network information (such as IP address), log files, and analytics information.",
+      "concerns": [
+        "IP address used for location inference and analytics",
+        "Internet activity shared with advertising and analytics partners"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna collects technical information about your device and browser to run the app, fix problems, and understand how people use the service.",
+      "detail": "Device and technical information collected for service provision, security, analytics, and advertising. Shared with service providers and analytics partners.",
+      "policy_excerpt": "We collect technical information from the browser, computer, or mobile device used to access the Services. This includes device and network information (such as IP address), log files, and analytics information.",
+      "concerns": [
+        "Device data used for targeted advertising in addition to diagnostics",
+        "Shared with multiple analytics and advertising vendors"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Runna collects workout data like distance, speed, heart rate, and calories. If you connect a fitness device, health data is only used for your training and is not sold or used for ads.",
+      "detail": "Activity Data includes workouts, heart rate, power, perceived exertion, and geolocation. Health data from connected devices is explicitly protected: not sold, not used for advertising, not disclosed to third parties without consent. AI/ML uses Activity Data for training insights and content moderation.",
+      "policy_excerpt": "If we collect health information from these integrations (such as heart rate), we will not sell or use it for advertising or other similar purposes; we do not disclose it to third parties without your prior consent; and we will only use it for the specific purposes described in this Policy.",
+      "concerns": [
+        "AI and ML models process Activity Data for training insights",
+        "Health data stored on servers (not local-only by default)",
+        "Activity data visible to other users depending on privacy settings"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Runna does not collect or store your credit card information. Payments are handled by secure third-party providers.",
+      "detail": "Payment card information is never collected or stored by Runna. PCI-compliant third-party payment services are used. Runna Store purchases go through Shopify.",
+      "policy_excerpt": "We do not collect your payment card information. Instead, we use Payment Card Industry compliant third-party payment services.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can view, correct, delete, export, and restrict your data at any time. You can also permanently delete your account and all activities.",
+      "detail": "Comprehensive rights include access, portability, rectification, restriction, deletion, and consent withdrawal. Account deletion instructions provided. DPO available at dpo@runna.com. EU GDPR representative (Instant EU GDPR Representative Ltd.) and lead supervisory authority (Ireland DPC) identified.",
+      "policy_excerpt": "Access and Portability: You may have the right to know, and request access to, the personal information we collect, use, share, or otherwise process about you... Restrict or Delete: You have the right to restrict or delete personal information.",
+      "concerns": [
+        "Content shared publicly on other platforms cannot be controlled by Runna after deletion"
+      ],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If Runna makes important changes to its privacy policy, it will give you clear advance notice before those changes take effect.",
+      "detail": "Material policy changes receive prominent, advance notice. Non-material changes are posted with effective date. Users can object by deleting their account.",
+      "policy_excerpt": "If we make changes we deem to be material, we will provide prominent, advance notice. If you object to any changes to this Policy, you should stop using the Services and delete your account.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0.0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0.0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0.0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0.0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0.00, "deduction": 0.0 }
+    ],
+    "total_deductions": 43.5,
+    "final_score": 79,
+    "grade": "B"
+  }
+}

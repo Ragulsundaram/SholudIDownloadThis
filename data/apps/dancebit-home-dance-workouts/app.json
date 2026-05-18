@@ -1,0 +1,353 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.dancebit.dance/privacy-policy",
+    "terms_url": "https://www.dancebit.dance/terms-of-use",
+    "policy_last_updated": "2026-02-12",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "dancebit-home-dance-workouts",
+    "name": "Dancebit: Home Dance Workouts",
+    "developer": "Gismart Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/dancebit-dance-home-workout/id1542181484",
+    "app_store_id": "1542181484",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/ab/89/63ab89bb-9d56-1319-7b90-8bc5d663fe42/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Dance Workout",
+    "description": "A dance-based home workout app offering personalized routines, AI-powered dance tutorials, and progress tracking."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "A dance workout app that collects your health data and body movement information, then shares it with a vast network of advertisers and analytics companies.",
+    "summary": "Dancebit collects detailed health and wellness data including physical attributes, exercise routines, weight, and height, and can import data from Apple HealthKit or Google Health Connect. It uses AI to analyze your activity and body movements for personalized dance routines. While the app offers strong privacy rights and transparent disclosures, it shares your information with an extensive list of third parties—including Meta, Google, TikTok, and over a dozen analytics and advertising platforms—for targeted advertising and user tracking.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects sensitive health and body movement data and shares it broadly across a large ecosystem of advertising and analytics partners. While opt-out options exist and rights are strong, the default data sharing is extensive for a fitness app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_ad_sharing",
+        "title": "Data shared with a vast network of advertisers",
+        "plain_english": "Dancebit shares your information with advertising platforms like Meta, Google, TikTok, Pinterest, X, Snapchat, and AppLovin, plus analytics companies like Amplitude, AppsFlyer, and Facebook. They explicitly admit this may count as selling your data under California privacy law.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_collected",
+        "title": "Sensitive health and body data collected",
+        "plain_english": "The app collects your physical attributes, exercise routines, weight, height, and can import fitness data from Apple HealthKit or Google Health Connect. It also uses AI to process your body movements and activity for personalized dance routines.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_body_movement",
+        "title": "AI processes your body movements and preferences",
+        "plain_english": "If you use the AI-powered dance features, the app processes data about your activity, body movements, and preferences to generate personalized routines. This data may be retained for up to one month.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_tracking_ids",
+        "title": "Advertising IDs and device tracking used",
+        "plain_english": "The app collects your device's advertising identifier (Apple IDFA or Google GAID), IP address, and other device details. These are shared with advertising partners to track you across apps and show you targeted ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_openai_support",
+        "title": "Customer support chats processed by OpenAI",
+        "plain_english": "When you contact customer support, your inquiries and subscription details may be processed by an AI Assistant powered by OpenAI's GPT-4 to generate responses and analyze your tone.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_strong_rights",
+        "title": "Strong data protection rights available",
+        "plain_english": "You can access, correct, delete, or export your data. You can also object to processing and withdraw consent. The app responds to requests within 30 days and provides detailed region-specific rights for EU, UK, US states, Canada, Brazil, Australia, Japan, and Mexico.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_ads",
+        "title": "You can opt out of targeted advertising",
+        "plain_english": "You can opt out of data sharing for targeted ads by contacting support, adjusting cookie preferences, using device settings, or using industry opt-out tools like the Digital Advertising Alliance.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_selling_claim",
+        "title": "Claims not to sell data for money",
+        "plain_english": "The company states it does not sell or rent your personal data for direct financial gain. They clarify that advertising partnerships may legally count as selling under some laws, but no money is exchanged for your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Easy account deletion available in the app",
+        "plain_english": "You can delete your account directly within the app on both iOS and Android. After deletion, data is retained for no longer than two months unless legally required.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explicitly mention camera or microphone access. However, the AI dance features mention processing body movements, and user-generated content like photos is collected.",
+      "detail": "No explicit mention of camera or microphone. AI-powered dance features process body movements but it is unclear if this uses camera input. User-generated content including images is collected.",
+      "policy_excerpt": "we may process data related to your activity, body movements, and preferences to generate personalized dance routines... User-Generated Content... including but not limited to posts, messages, images, and other materials",
+      "concerns": ["AI body movement analysis may use camera", "User-generated images collected"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app estimates your approximate location from your IP address to understand where users are and to target ads.",
+      "detail": "Approximate location based on IP address is collected and disclosed under CCPA as geolocation data. No mention of precise GPS tracking.",
+      "policy_excerpt": "Approximate location (e.g., city or region, based on your IP address)... Geolocation data: proximate location based on IP address etc.",
+      "concerns": ["IP-based location used for ad targeting"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app allows you to upload user-generated content like images and posts. AI dance features may also process activity and movement data stored in the app.",
+      "detail": "User-generated content including posts, messages, images, and other materials is processed. AI-powered dance features process activity and body movement data.",
+      "policy_excerpt": "We process any content you publish or upload on our Service, including but not limited to posts, messages, images, and other materials... we may process data related to your activity, body movements, and preferences",
+      "concerns": ["User-generated content uploads allowed", "Body movement data processed"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with a long list of third parties including advertising platforms (Meta, Google, TikTok, Pinterest, X, Snapchat, AppLovin), analytics providers (Amplitude, AppsFlyer, Facebook, Google Analytics), Firebase services, OpenAI for AI support, and marketing tools (Reteno).",
+      "detail": "Extensive sharing with third-party service providers and marketing partners. Explicit table lists processors: Amplitude, AppsFlyer, Firebase Crashlytics/Authentication/Analytics/Firestore/Dynamic Links/In-App Messaging, Facebook Analytics/Sharing, Google Sign-In/Analytics, AWS AppSync, OpenAI ChatGPT API, Reteno, GrowthBook, Sentry, Google Fonts, Zendesk, Hotjar, Meta Pixel, Google Ads, TikTok Pixel, Pinterest Tag, X Pixel, Snapchat Pixel, AppLovin Pixel. The company states this may be considered selling/sharing under CCPA.",
+      "policy_excerpt": "We may share your personal data with carefully selected service providers... advertising partners... We and our third-party partners, including analytics providers, advertising networks, and affiliated service providers, use standard tracking technologies... These activities may be considered 'sales,' 'sharing,' or 'targeted advertising' under certain privacy laws.",
+      "concerns": [
+        "Extensive sharing with advertising and analytics partners",
+        "Data shared with social media platforms for ad targeting",
+        "OpenAI processes support inquiries",
+        "May count as selling data under CCPA"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name, email, age, and gender to create an account. The app also collects physical attributes you voluntarily provide like height and weight.",
+      "detail": "Collects name, email address, age, gender, account credentials, physical attributes, and preferences. Google Sign-In collects Google ID, name, email, and profile picture. Social media login shares account info.",
+      "policy_excerpt": "Basic Information... your name, email address, age, gender, account and profile credentials... Physical characteristics as indicated by you: Height, weight, or other self-reported physical attributes.",
+      "concerns": [
+        "Physical attributes collected",
+        "Social media login shares profile data"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses cookies, SDKs, advertising IDs, and tracking pixels to follow your behavior across the app and other websites. It shows you personalized ads through partners like Meta, Google, TikTok, and Snapchat.",
+      "detail": "Uses cookies, SDKs, APIs, web beacons, scripts, and tracking pixels. Advertising partners collect advertising identifiers (GAID, IDFA), approximate location, ad interactions, and engagement metrics. Cross-context behavioral advertising is employed. Pixels include Meta Pixel, Google Ads, TikTok Pixel, Pinterest Tag, X Pixel, Snapchat Pixel, and AppLovin Pixel.",
+      "policy_excerpt": "Some portions of our Service employ advertising technologies that use tracking tools to deliver interest-based advertising... These technologies, used by our advertising partners such as Meta (Facebook), Google, TikTok, Pinterest, X, Snapchat, and others... may collect information such as: Advertising identifiers... Approximate location... Interactions with advertisements... Engagement metrics",
+      "concerns": [
+        "Extensive cross-context behavioral advertising",
+        "Multiple tracking pixels and ad networks",
+        "Advertising IDs collected and shared"
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not knowingly collect personal data from children who do not meet the minimum age requirement in their jurisdiction.",
+      "detail": "Explicitly states they do not knowingly collect personal data from children under the applicable minimum age. Underage users are not permitted to use the service.",
+      "policy_excerpt": "We do not knowingly collect personal data from children who do not meet the minimum age requirement in their jurisdiction. If you are under the applicable minimum age, as defined in our Terms, you are not permitted to use our Service.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browser type, pages viewed, features used, session duration, and interaction patterns for analytics and advertising.",
+      "detail": "Log and technical information includes IP address, browser type, time zone, language, access dates/times, features used, actions taken, interaction patterns, session frequency and duration. Internet/network activity includes browsing history, usage logs, app interactions, and cookies.",
+      "policy_excerpt": "Log and Technical Information... your IP address, browser type, time zone, language settings, the date and time of your access, details about the features you use, action you take within the Service... Internet or network activity: Browsing history, usage logs, App interactions, cookies etc.",
+      "concerns": [
+        "Extensive usage logging",
+        "IP address and browsing tracked for ads"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects detailed device information including your device model, operating system, unique device identifiers, advertising ID, and mobile carrier. This is shared with advertising and analytics partners to track you.",
+      "detail": "Device-related information includes device model, type, unique device identifiers, operating system version, ISP details, mobile carrier information, and hardware ID. Advertising identifiers (GAID, IDFA) are explicitly collected and shared with ad partners for tracking.",
+      "policy_excerpt": "Device-Related Information... device model, type, unique device identifiers, operating system version, Internet service provider details, mobile carrier information, and hardware ID... Advertising identifiers (e.g., Google Advertising ID [GAID], Apple Identifier for Advertisers [IDFA])",
+      "concerns": [
+        "Advertising IDs shared with multiple partners",
+        "Detailed device fingerprint collected",
+        "Hardware ID tracked"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects your physical attributes, exercise routines, weight, and height. With your permission, it can also import fitness and sleep data from Apple HealthKit or Google Health Connect. AI dance features may also process body movement data.",
+      "detail": "Collects health and wellness information including physical attributes, exercise routines, and onboarding health data. Can import fitness activities, weight, height from Apple HealthKit/Google Health Connect with explicit consent. AI dance features process activity and body movement data retained for up to one month.",
+      "policy_excerpt": "Health and Wellness Information... information about your physical attributes, exercise routines, and other information you provided during the onboarding questions. With your explicit consent, we may also import data from third-party services, such as Apple HealthKit or Google Health Connect, including but not limited to information about fitness activities, weight, height and etc.",
+      "concerns": [
+        "Physical attributes and exercise data collected",
+        "Health app integrations import sensitive data",
+        "AI body movement processing"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payments are handled by Apple App Store, Google Play Store, Stripe, Braintree, or PayPal. The app does not store your credit card details directly.",
+      "detail": "In-app purchases processed through Apple/Google. Website purchases through Stripe, Braintree, or PayPal. Company does not collect or store credit card numbers. Payment providers are PCI-DSS compliant.",
+      "policy_excerpt": "Note that we do not store or process your credit card information. This information is handled securely and directly by our third-party payment processing partners... Payments on our website may be processed through Stripe, Braintree or PayPal.",
+      "concerns": ["Multiple third-party payment processors"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account directly in the app, and your data is kept for no longer than two months afterward. You also have the right to access, correct, and export your data.",
+      "detail": "Account deletion available in-app for iOS and Android. Data retained for up to 2 months after deletion unless legally required. Access, correction, erasure, restriction, portability, and objection rights available. Response within 30 days. Identity verification may be required.",
+      "policy_excerpt": "If you deactivate or delete your account, we will retain your personal data for no longer than two (2) months, unless retention is required for legal, regulatory, or contractual obligations... We aim to respond to valid requests within 30 days from the date of receipt.",
+      "concerns": [
+        "Data retained for 2 months post-deletion",
+        "Identity verification required for requests"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Dancebit can change its privacy policy at any time. For big changes, they may post a notice or email you. But your continued use of the app counts as accepting the changes automatically.",
+      "detail": "Material changes affecting rights or requiring consent will be notified via prominent website notice or email if applicable. Continued use constitutes acceptance. Users encouraged to review periodically.",
+      "policy_excerpt": "If we make material changes to this Privacy Policy that affect your rights or require your consent, we will notify you in advance through appropriate channels... your continued use of our Service following the Effective Date of the updated Privacy Policy constitutes your acknowledgment and acceptance of the changes.",
+      "concerns": ["Continued use equals automatic acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 85.25,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

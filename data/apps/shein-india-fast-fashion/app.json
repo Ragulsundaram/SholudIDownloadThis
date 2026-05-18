@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.sheinindia.in/static-cms/privacypolicy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "shein-india-fast-fashion",
+    "name": "SHEIN India Fast Fashion",
+    "developer": "Reliance Retail Private Limited",
+    "app_store_url": "https://apps.apple.com/in/app/shein-india-fast-fashion/id6504862567",
+    "app_store_id": "6504862567",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f2/4c/17/f24c173d-ca3e-4c8c-d2e7-f0799c403e8c/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "sub_category": "Fashion",
+    "description": "Indian fast fashion shopping app offering clothing, accessories, and lifestyle products for women and men."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "A fast fashion shopping app that collects extensive personal and financial data, tracks your location and behavior, and shares it with affiliates and third-party service providers.",
+    "summary": "SHEIN India's privacy policy reveals broad data collection including your identity, financial details, location, browsing behavior, and even camera/microphone access. While the app uses third-party payment gateways for transactions and offers standard security measures, it explicitly collects financial information, tracks your location via Bluetooth and WiFi, and shares data with affiliates and external organizations. The policy changes are accepted automatically through continued use, and data is stored and processed in India.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "SHEIN India collects a wide range of personal data including financial details and location, and shares it with affiliates and third parties. If you are privacy-conscious, consider whether the shopping experience is worth the data trade-off."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_financial_data_collected",
+        "title": "Collects and stores your financial information",
+        "plain_english": "SHEIN India explicitly collects sensitive financial data including your bank account, credit card, and debit card details as part of its Sensitive Personal Data collection.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sharing_affiliates",
+        "title": "Shares data with affiliates and third parties",
+        "plain_english": "Your personal information is shared with affiliates for a seamless shopping experience, and with third-party service providers like payment gateways and logistics partners. Data may also be disclosed for legal or business transfer reasons.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Tracks your location via Bluetooth and WiFi",
+        "plain_english": "SHEIN India collects your location data through Bluetooth, WiFi signals, and GPS. While they claim this is anonymous, it can still be used to track where you are.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_auto_policy_acceptance",
+        "title": "Policy changes accepted automatically",
+        "plain_english": "If SHEIN updates its privacy policy, your continued use of the app counts as accepting the new terms. They won't ask you to agree again.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_camera_microphone",
+        "title": "Accesses camera and microphone",
+        "plain_english": "SHEIN India may request access to your camera and microphone for features like voice search and image uploads. Refusing may limit some services.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_grievance_officer",
+        "title": "Has a dedicated grievance officer",
+        "plain_english": "SHEIN India has appointed a Grievance Officer (Savan Bekal) with a dedicated email for handling privacy complaints.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_marketing",
+        "title": "Easy opt-out for marketing",
+        "plain_english": "You can unsubscribe from promotional emails by clicking the unsubscribe link or contacting customer care.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_gateway",
+        "title": "Payments handled by secure third-party gateways",
+        "plain_english": "Your financial transactions are processed through approved third-party payment gateways that use encryption.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_health_biometric",
+        "title": "No health or biometric data collected",
+        "plain_english": "The app does not collect health information or biometric data like fingerprints.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security_measures",
+        "title": "Uses industry-standard security",
+        "plain_english": "SHEIN India claims to use firewalls, transport layer security, and other physical and electronic security measures to protect your data.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "SHEIN India may request access to your camera and microphone for features like image search or voice input. You can refuse, but some services may not work.",
+      "detail": "Section 3.7 mentions 'permission to access your location, camera usage microphone access etc.' Section 4.3 states voice, image and camera services use your input to respond to requests and improve services.",
+      "policy_excerpt": "SHEIN INDIA may also collect other information about you in ways that SHEIN INDIA describe to you or otherwise with your consent like the permission to access your location, camera usage microphone access etc.",
+      "concerns": ["Camera and microphone access requested", "Refusing may limit services"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "SHEIN India collects your location via Bluetooth, WiFi, and GPS signals. They say this is usually anonymous, but location settings must be enabled on your device.",
+      "detail": "Section 3.6 describes collecting location information through Bluetooth and WiFi signals or other technologies. Requires location settings to be enabled. Claims collection is anonymous except when specific services require identification.",
+      "policy_excerpt": "We may also collect information related to your location through Bluetooth and WIFI signals or other technologies. In some cases, SHEIN INDIA may request that you enable the location settings.",
+      "concerns": ["Location collected via multiple signals", "Requires enabling location settings", "Anonymous claim but still tracked"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India does not access your phone contacts.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app accesses files or photos on your phone beyond camera usage.",
+      "detail": "Camera access is mentioned but broad file or photo library access is not explicitly discussed.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on broad file storage access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India shares your data with service providers, affiliates, and may disclose it for legal reasons or business transfers.",
+      "detail": "Sections 5.1-5.4 describe sharing with third-party service providers, affiliates, external organizations for legal compliance, and business transfers. Aggregate non-personal data is shared with advertisers and sponsors.",
+      "policy_excerpt": "We may from time to time be required to disclose the Information collected from you to our trusted third-party service providers... The Information collected from you may be shared with our affiliates... We may also disclose or transfer your Information to any third party as a part of reorganization or a sale of the assets",
+      "concerns": ["Broad sharing with affiliates and service providers", "Data included in business transfers", "Aggregate data shared with advertisers"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India collects your name, address, phone, email, gender, date of birth, and photos/documents to create your account and process orders.",
+      "detail": "Section 3.2 lists extensive Personal Information collected including full name, contact numbers, residential address, email, gender, date of birth. Section 3.3 also collects passwords and financial info as Sensitive Personal Data.",
+      "policy_excerpt": "We may collect a variety of Information from you, including your name, mailing address, phone number, email address and contact preferences... Personal Information shall include but is not limited to your full name, personal contact numbers, residential address, email address, gender, date of birth. Personal Information can be in any format including but not limited to photographs or documents.",
+      "concerns": ["Extensive identity data collected", "Photos and documents may be collected"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India tracks your browsing behavior, uses cookies, and shares aggregate data with advertisers to improve services and show relevant ads.",
+      "detail": "Sections 9.1-9.4 describe IP logging, cookie usage, browser tracking, and sharing aggregate findings with advertisers and sponsors. They claim not to use Personal Information for ad targeting.",
+      "policy_excerpt": "We may also provide any such partner or third-party developer with a subset of diagnostic information... We do not use Personal Information to target advertisements to you. In the course of serving advertisements or optimizing the services to Users, we may allow authorized third parties to place or recognize a unique cookie on the User's browser.",
+      "concerns": ["Cookies and tracking used", "Aggregate data shared with advertisers", "IP and browsing behavior logged"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India says it is not for minors under 18 and will delete data if discovered, but there is no age verification mechanism.",
+      "detail": "Section 3.5 states the app is not directed towards minors and they do not knowingly collect data from users under 18. Will delete if discovered. No age verification mentioned.",
+      "policy_excerpt": "SHEIN INDIA is not directed towards minors. We do not knowingly collect Personal Information from any User who is under 18 (Eighteen) years. If we are made aware that we have collected the Personal Information of a person below the age of 18 (Eighteen) years, we will take steps to delete the Information within a reasonable time frame.",
+      "concerns": ["No age verification mechanism mentioned"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India logs your IP address, browser type, operating system, and internet service provider when you use the app.",
+      "detail": "Section 9.1 describes automatic collection of URL, IP address, operating system, web browser type, email patterns, and ISP name. Used for trend analysis.",
+      "policy_excerpt": "we automatically receive the uniform resource locator of the site from which you visit... the internet protocol ('IP') address of each User's computer operating system, type of web browser the User is using, email patterns, and the name of the User's internet service provider.",
+      "concerns": ["IP and browsing details logged", "Email patterns tracked"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India collects hardware identifiers and device system information to recognize your device and improve services.",
+      "detail": "Section 3.2 mentions non-Personal Information includes 'hardware identifiers, unique systems or application software etc.' Section 9.1 also collects browser and OS details.",
+      "policy_excerpt": "Non- Personal Information includes data or information that doesn't personally identify you and may include hardware identifiers, unique systems or application software etc.",
+      "concerns": ["Hardware identifiers collected", "System and application software tracked"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India does not collect health or biometric data.",
+      "detail": "No mention of health or biometric data in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "SHEIN India collects and stores your bank account, credit card, and debit card details. Payments are processed through third-party gateways with encryption.",
+      "detail": "Section 3.3 explicitly lists financial information as Sensitive Personal Data including bank account, credit card, debit card, and other payment instrument details. Section 5.5 mentions third-party payment gateways process transactions through encrypted platforms.",
+      "policy_excerpt": "Financial information such as bank account or credit card or debit card or other payment instrument details... Any detail relating to (a) and (b) above as provided to us for providing the Products and/or processing your orders placed with us on SHEIN INDIA",
+      "concerns": ["Financial data explicitly collected and stored", "Third-party gateway liability disclaimers"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request access, amendment, or deletion of your data by emailing customer care, but retention periods are vague.",
+      "detail": "Section 3.4 allows partial or full deletion by contacting customercare@SHEININDIA.in. Section 6 says data is retained 'for the period necessary to fulfil the purposes' or as required by law. No specific timeframes given.",
+      "policy_excerpt": "You may access, amend, alter or require deletion of your information partially or fully by contacting us at customercare@SHEININDIA.in... We will retain your information and any data for the period necessary to fulfil the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted under the applicable law.",
+      "concerns": ["Retention periods are vague", "No self-service deletion portal mentioned", "No data export mentioned"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "SHEIN India can change its privacy policy at any time. If you keep using the app, that counts as accepting the new rules.",
+      "detail": "Section 11 states continued use after changes is deemed acceptance. They make 'reasonable efforts' to communicate significant changes but encourage users to review the policy themselves.",
+      "policy_excerpt": "Your continued use of SHEIN INDIA after any changes, modifications and amendments to this Privacy Policy will be deemed as your acceptance to such changes, modifications and amendments.",
+      "concerns": ["No active re-agreement required", "Changes apply retroactively via continued use"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 73.5,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

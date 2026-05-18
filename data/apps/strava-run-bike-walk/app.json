@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.strava.com/legal/privacy",
+    "terms_url": "https://www.strava.com/legal/terms",
+    "policy_last_updated": "2026-01-01",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "strava-run-bike-walk",
+    "name": "Strava: Run, Bike, Walk",
+    "developer": "Strava Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/strava-run-bike-walk/id426826309",
+    "app_store_id": "426826309",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e6/c5/e7/e6c5e722-a681-f8ef-1f8c-fa92f4f625ad/AppIcon-Primary-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Running & Cycling",
+    "description": "Popular social fitness network for runners, cyclists, and walkers to track activities, share routes, compete on segments, and connect with a global athletic community."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 55,
+    "grade": "C",
+    "one_liner": "Strava makes your profile and activities publicly visible by default, tracks your precise GPS location for core features, and uses your data to train AI models, but offers robust privacy controls and does not sell health data for ads.",
+    "summary": "Strava's privacy policy reveals that user profiles and activities are set to 'Everyone' (public, including search engines) by default for users 18 and older. The app requires precise GPS location for core features like activity tracking and segments. It collects extensive health data including heart rate, HRV, and VO2max from connected devices, and uses this data along with your activities to train AI models for performance predictions and route recommendations. Your data is shared with corporate affiliates, service providers, partners for sponsored events, and third-party advertising networks for targeted ads about Strava's own services. However, Strava explicitly states it does not sell health information for advertising, provides multiple privacy controls, and offers GDPR-compliant data rights with a Data Protection Officer.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you are concerned about public visibility of your fitness activities and location by default, AI training on your health data, and broad data sharing with corporate affiliates and partners, review and adjust your privacy controls before using the app."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_public_by_default",
+        "title": "Profile and activities are public by default",
+        "plain_english": "If you are 18 or older, your profile and activities are set to be viewable by 'Everyone' by default, which includes all Strava users, the public, and search engine results.",
+        "severity": "high"
+      },
+      {
+        "id": "red_precise_location_required",
+        "title": "Precise location required for core features",
+        "plain_english": "You must grant permission to track your device's precise location for core features like GPS activity tracking, routes, and segments to function.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_training",
+        "title": "Your data is used to train AI and ML models",
+        "plain_english": "Strava uses your personal information, including health and location data, to train, test, and improve machine learning and AI models for features like performance predictions, route recommendations, and leaderboard anomaly detection.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_collection",
+        "title": "Extensive health data collected from integrations",
+        "plain_english": "Strava collects health data such as heart rate, HRV, VO2max, sleep information, and step count from connected devices and apps like Apple Health, Garmin, and Peloton.",
+        "severity": "high"
+      },
+      {
+        "id": "red_targeted_advertising",
+        "title": "Targeted advertising with third-party networks",
+        "plain_english": "Strava discloses information to marketing partners and third-party advertising networks to promote their services, using cookies and tracking technologies to serve relevant ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_transfer_us",
+        "title": "Data transferred to the United States",
+        "plain_english": "If you are located outside the United States, your information will be transferred, processed, and stored in the United States.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_health_for_ads",
+        "title": "Health data not used for advertising without consent",
+        "plain_english": "Strava explicitly states that if it collects health information from integrations such as heart rate, it will not sell or use it for advertising or other similar purposes without your prior consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_card_safe",
+        "title": "Does not collect full payment card numbers",
+        "plain_english": "Strava collects only the final four digits of your credit card number and uses PCI-compliant third-party payment services for processing.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_controls",
+        "title": "Robust privacy controls available",
+        "plain_english": "Strava provides a variety of privacy controls to manage your information, including activity visibility settings, Beacon safety feature controls, and Flyby opt-out.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Account deletion available with clear process",
+        "plain_english": "You can delete your account through provided instructions, though it may take up to 45 days to fully remove your data from systems.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_compliant",
+        "title": "GDPR compliant with Data Protection Officer",
+        "plain_english": "Strava has a Data Protection Officer (DPO@strava.com), a lead supervisory authority in Ireland, and provides GDPR rights including access, rectification, deletion, and objection.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protection",
+        "title": "Additional protections for users under 18",
+        "plain_english": "Strava is not intended for children under 13, and provides additional privacy and safety protections for users under 18 years of age.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Strava collects photos and videos you choose to share through the platform, such as content posted with your activities or on segments and routes.",
+      "detail": "The app collects content you share through the Services, such as segments, routes, photos, videos, posts, comments, and messages. Photos and videos may be shared publicly along routes or segments.",
+      "policy_excerpt": "Content You Share: We collect content you share through the Services, such as segments, routes, photos, videos, posts, comments, and messages... We may share your public photos along routes or segments.",
+      "concerns": ["Photos and videos can be shared publicly", "User-generated content visible to others"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava requires permission to track your device's precise location for core features like GPS activity tracking, routes, and segments. Your precise location, such as where you run or ride, may be viewable by others depending on your privacy controls.",
+      "detail": "Precise location tracking is required for the app to function as a GPS tracker. Location data is used to match activities to segments, suggest workouts, and visualize routes. Public activities may expose your exact running/cycling routes.",
+      "policy_excerpt": "For our core features to function (e.g., GPS activity tracking, routes, segments), you must grant us permission through your device to track your device's precise location... your information, including parts of your profile, username, photos/videos, information and content you share (including precise location, such as where you run or ride), users you follow and who follow you, clubs you belong to on Strava, your Activity Data... may be viewable on Strava or to non-registered users.",
+      "concerns": ["Precise GPS location required for core features", "Exact routes visible to others by default", "Location shared with segment/route matching"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can choose to share contacts from your mobile device or social networking accounts, which Strava will regularly access and store to help you connect with Strava users you may know.",
+      "detail": "Contacts sharing is optional but requires regular access and storage of your contacts data to suggest connections with other Strava users.",
+      "policy_excerpt": "Contacts' Information: You can choose to share contacts from your mobile device or social networking accounts. If you share this information, we will regularly access and store it to help you connect with Strava users you may know.",
+      "concerns": ["Contacts regularly accessed and stored", "Used to find other Strava users"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Strava collects content you choose to share, such as photos, videos, posts, comments, and messages. Activities you share to other social networks may include your location information.",
+      "detail": "User-generated content is collected when you choose to upload or share it. Shared activities may include location data when posted to other platforms.",
+      "policy_excerpt": "Content You Share: We collect content you share through the Services, such as segments, routes, photos, videos, posts, comments, and messages.",
+      "concerns": ["User content collected and may be shared publicly", "Location included when sharing to other social networks"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava shares your data with service providers, corporate affiliates, subsidiaries, event sponsors, challenge partners, and third-party advertising networks for targeted ads. Data may also be transferred in a business transaction.",
+      "detail": "Extensive data sharing with service providers, corporate family of companies, partners for sponsored content and events, and advertising networks for targeted ads. De-identified or aggregated data may be licensed to third parties. Data may be transferred in mergers, acquisitions, or bankruptcy. Text messaging opt-in data is not shared.",
+      "policy_excerpt": "We may share your information with third parties to support, improve, promote, and secure the Services... We may disclose information with partners, such as those sponsoring or organizing an event or club... We may also disclose information to marketing partners or third-party advertising networks to promote our services (with your consent, where required). We may also license or share deidentified or aggregated information with third parties for purposes such as to improve walking, running or riding in cities via Strava Metro... If Strava becomes involved in a business combination, acquisition, securities offering, bankruptcy, reorganization, dissolution, or other similar transaction, we may share or transfer your information.",
+      "concerns": ["Data shared with corporate affiliates and subsidiaries", "Shared with advertising networks for targeted ads", "Shared with event sponsors and challenge partners", "Aggregated/de-identified data licensed to third parties", "Data may be transferred in business transactions"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava collects your name, email address, phone number, date of birth, gender, username, password, and profile information including photo, weight, sport types, fitness goals, and experience level.",
+      "detail": "Standard account and profile information collected. Date of birth is used to determine age-appropriate features. Weight and fitness data are collected for performance analysis.",
+      "policy_excerpt": "Account Information: We collect account information such as your name, email address, phone number, date of birth, gender, username, and password. Profile Information: We collect information you provide about yourself, such as your photo, weight, preferred sport type(s), fitness goals, and level of experience.",
+      "concerns": ["Weight collected", "Fitness goals and experience level stored"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava uses cookies, tracking pixels, SDKs, Google Analytics, and other third-party technologies to track your activity, serve targeted ads, and analyze website traffic. You can opt out of personal information sharing for third-party targeted advertising.",
+      "detail": "Extensive tracking technologies used including cookies, tracking pixels, SDKs, and Google Analytics. Data shared with third-party advertising networks for targeted advertising. Opt-out available through 'Do Not Share My Personal Information' link or app settings.",
+      "policy_excerpt": "We collect, use, and disclose information through the use of cookies, tracking pixels, SDKs, Google Analytics, and other third-party tracking technologies for security and authentication, to understand and improve your experience, perform analytics, inform and serve relevant ads... You can opt out of us sharing your personal information for third-party targeted advertising through the 'Do Not Share My Personal Information' link on our website or the 'Personal Information Sharing' setting in the app.",
+      "concerns": ["Third-party tracking technologies used", "Targeted advertising with personal information", "Google Analytics and other analytics tracking"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava is not intended for children under 13. Strava provides additional privacy and safety protections for users under 18, and age is used to confirm users are old enough to use the service.",
+      "detail": "Services are not intended for children under 13. Additional protections for users under 18, including age-appropriate experiences and messaging controls.",
+      "policy_excerpt": "Our services are not intended for, nor directed to, children under 13 years of age, and we do not knowingly collect personal information from anybody under 13 years of age... We provide additional privacy and safety protections for users under 18 years of age.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava collects technical information from your browser, computer, or mobile device including device and network information, log files, and analytics information.",
+      "detail": "Technical information including device and network info, log files, and analytics are collected automatically.",
+      "policy_excerpt": "Device Information: We collect technical information from the browser, computer, or mobile device used to access the Services. This includes device and network information, log files, and analytics information.",
+      "concerns": ["Device and network info collected", "Log files stored"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava collects technical information from your device including device and network information, and uses automated tools and log files for security and analysis.",
+      "detail": "Device and network information collected from the browser, computer, or mobile device used to access the services. Used for security, authentication, and analytics.",
+      "policy_excerpt": "We collect technical information from the browser, computer, or mobile device used to access the Services. This includes device and network information, log files, and analytics information... We use automated tools, device information, log files, and other information for these purposes.",
+      "concerns": ["Device and network information collected", "Automated tools used for security"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Strava collects extensive health and fitness data including heart rate, HRV, VO2max, sleep information, step count, power, cadence, perceived exertion, and other activity metrics from connected devices and apps. This data may be used for AI training and performance predictions.",
+      "detail": "Extensive health data collected directly and through third-party integrations (Garmin, Apple Health, Peloton). Includes heart rate, HRV, VO2max, sleep, step count, power, cadence. Strava explicitly states health information from integrations will not be sold or used for advertising without consent. Data is used to generate performance metrics and train AI models.",
+      "policy_excerpt": "Activity Data: We collect Activity Data directly or through third-party integrations you configure... Activity Data can also include health data, such as heart rate, if you choose to provide it... If we collect health information from these integrations (such as heart rate), we will not sell or use it for advertising or other similar purposes; we do not disclose it to third parties without your prior consent; and we will only use it for the specific purposes described in this Policy.",
+      "concerns": ["Extensive health metrics collected", "Health data used for AI training and performance predictions", "Connected device integrations expose health data"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Strava collects only the final four digits of your credit card number and uses PCI-compliant third-party payment services to process transactions.",
+      "detail": "Payment information is limited to the last four digits of credit card numbers. Full payment card processing is handled by third-party PCI-compliant services.",
+      "policy_excerpt": "Payment Information: If you make a payment on Strava, we collect information about your purchase, including the final four digits of your credit card number. We do not collect your full payment card information. Instead, we use Payment Card Industry compliant third-party payment services.",
+      "concerns": ["Purchase information collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account through provided instructions, though it may take up to 45 days to fully remove your data. Content you shared publicly or on other platforms is not under Strava's control and may remain visible.",
+      "detail": "Account deletion is available with clear instructions. Up to 45 days needed to delete personal information. Public segments and routes remain available. Search engine results may display public profile until cache refreshes. Shared content on other platforms is not controlled by Strava.",
+      "policy_excerpt": "To delete your account, follow the instructions provided here. Once deleted, we cannot reinstate your data, including your account, activities, and place on leaderboards. Following deletion of your account, it may take up to 45 days to delete your personal information and system logs from our systems. We do not have control over content you have shared directly or publicly with others, such as photos or videos on other social media platforms, or that others may have copied.",
+      "concerns": ["Up to 45 days for full deletion", "Public content remains after deletion", "Shared content on other platforms not controlled"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Strava will notify you about material changes to the Terms when investigating alleged violations, or with customer support messages. Changes are posted on the website.",
+      "detail": "Users are notified about material changes to Terms and for customer support. No explicit mention of policy change notifications beyond material Terms changes.",
+      "policy_excerpt": "We may contact you about material changes to our Terms, when investigating alleged violations of our Terms, or with customer support messages.",
+      "concerns": ["No explicit policy change notification process detailed"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 9.75 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 91.25,
+    "final_score": 55,
+    "grade": "C"
+  }
+}

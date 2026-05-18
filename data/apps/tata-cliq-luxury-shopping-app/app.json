@@ -21,44 +21,44 @@
     "description": "Luxury fashion and lifestyle shopping app by Tata Unistore."
   },
   "verdict": {
-    "overall_risk": "risky",
-    "score": 45,
-    "grade": "D",
-    "one_liner": "Extensive data collection and broad sharing across the Tata Group ecosystem for marketing and profiling.",
-    "summary": "Tata CLiQ collects extensive personal information including government ID details and thumb impression, and shares it broadly with Tata Group Entities, Partners, and Service Providers for marketing, profiling, and business operations. While users have some rights to deletion and opt-out, the breadth of data collection and sharing is significant.",
-    "recommendation": "think_twice",
-    "recommendation_reason": "The app collects and shares a wide range of personal data across the Tata ecosystem, including biometric and financial information used for profiling. Consider whether you are comfortable with this level of data sharing before downloading."
+    "overall_risk": "dangerous",
+    "score": 39,
+    "grade": "F",
+    "one_liner": "Collects government IDs and biometric data, then shares it across the Tata Group for profiling and marketing.",
+    "summary": "Tata CLiQ collects highly sensitive personal information including government ID details and thumb impressions, stores them on servers, and shares them across the Tata Group ecosystem and with partners for marketing, profiling, and loyalty programs. It also profiles your financial behavior and tracks you across sessions using device fingerprinting. While users can request deletion, data may persist on backups indefinitely.",
+    "recommendation": "avoid",
+    "recommendation_reason": "The collection of government ID and biometric data (thumb impression) on external servers, combined with broad sharing across the Tata ecosystem for advertising and profiling, makes this an exceptionally poor privacy choice."
   },
   "flags": {
     "red": [
       {
-        "id": "red_broad_data_sharing",
-        "title": "Data shared widely across Tata Group and partners",
-        "plain_english": "Your personal information is shared with Tata Group Entities, Partners, and Service Providers for marketing, profiling, loyalty programs, and business operations. This goes far beyond basic service delivery.",
+        "id": "red_biometric_government_id",
+        "title": "Government ID and thumb impression collected",
+        "plain_english": "The app asks for your government ID documents and thumb impression. This sensitive identity and biometric data is stored on their servers and shared with Tata Group companies and business partners.",
         "severity": "high"
       },
       {
-        "id": "red_biometric_collection",
-        "title": "Thumb impression collected as personal data",
-        "plain_english": "The privacy policy explicitly lists thumb impression among data collected. This biometric data is stored on servers and shared with Tata Group Entities and Partners.",
+        "id": "red_broad_ecosystem_sharing",
+        "title": "Data shared across Tata Group and partners",
+        "plain_english": "Your personal information is shared with Tata Group Entities, Partners, and Service Providers for marketing, profiling, loyalty programs, and business operations. This includes your identity, financial, and biometric data.",
         "severity": "high"
       },
       {
         "id": "red_financial_profiling",
         "title": "Financial data used to build your profile",
-        "plain_english": "The app stores your payment instrument details, transaction history, and spending patterns. It uses this financial data to generate insights about your behavior and send you targeted offers.",
+        "plain_english": "The app stores your payment details, transaction history, and spending patterns. It uses this financial data to generate insights about your behavior and send you targeted offers, including financial products.",
         "severity": "high"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Device fingerprinting for tracking",
+        "plain_english": "The app uses cookies as unique identifiers to recognize your device across sessions. It collects your IP address, operating system, browser type, and device details to track and profile you.",
+        "severity": "medium"
       },
       {
         "id": "red_behavioral_tracking",
         "title": "Extensive behavioral tracking for ads",
         "plain_english": "Tata CLiQ uses cookies, pixels, and similar technologies to track your browsing and app usage. It analyzes this data to understand your preferences and deliver personalized marketing and recommendations.",
-        "severity": "medium"
-      },
-      {
-        "id": "red_government_id",
-        "title": "Government ID documents are collected",
-        "plain_english": "The app may collect details of government identification documents you provide. This sensitive identity data is stored and shared within the Tata ecosystem.",
         "severity": "medium"
       }
     ],
@@ -82,9 +82,9 @@
         "severity": "positive"
       },
       {
-        "id": "green_no_broker_sales",
-        "title": "No mention of selling data to external brokers",
-        "plain_english": "While your data is shared with Tata Group companies and partners, the policy does not state that your data is sold to unrelated data brokers or advertisers outside the Tata ecosystem.",
+        "id": "green_data_hosted_in_india",
+        "title": "Data stored on servers in India",
+        "plain_english": "The company states that data collected under this privacy policy is hosted on servers located in India.",
         "severity": "positive"
       }
     ]
@@ -103,7 +103,7 @@
       "detail": "The policy is silent on camera and microphone access. As a shopping app, it may use the camera for scanning or photo uploads, but this is not disclosed.",
       "policy_excerpt": "",
       "concerns": ["Policy does not disclose camera or microphone usage"],
-      "score_impact": -7.5
+      "score_impact": 7.5
     },
     {
       "id": "location_gps",
@@ -118,7 +118,7 @@
       "detail": "The policy does not explicitly discuss location or GPS access. It collects IP addresses and browsing details, but GPS is not addressed.",
       "policy_excerpt": "",
       "concerns": ["Policy does not disclose location or GPS usage"],
-      "score_impact": -7.5
+      "score_impact": 7.5
     },
     {
       "id": "contacts_phonebook",
@@ -133,7 +133,7 @@
       "detail": "The policy is silent on contacts or phonebook access. There is no mention of reading, uploading, or sharing contact information.",
       "policy_excerpt": "",
       "concerns": ["Policy does not disclose contacts or phonebook usage"],
-      "score_impact": -10.0
+      "score_impact": 10
     },
     {
       "id": "storage_file_access",
@@ -148,7 +148,7 @@
       "detail": "The policy does not explicitly discuss storage or file access beyond cookies and pixels placed on the device for tracking purposes.",
       "policy_excerpt": "",
       "concerns": ["Policy does not disclose storage or file access permissions"],
-      "score_impact": -5.0
+      "score_impact": 5
     },
     {
       "id": "data_sharing_third_parties",
@@ -167,26 +167,26 @@
         "Business transfers may include your data as part of transactions",
         "Service providers handle profiling, user analysis, and payment processing"
       ],
-      "score_impact": -19.5
+      "score_impact": 19.5
     },
     {
       "id": "account_identity",
       "label": "Account & Identity Data",
       "icon": "UserCircle",
-      "risk": "risky",
+      "risk": "dangerous",
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app collects extensive identity data including government ID and thumb impression, and links it to your marketing profile.",
+      "plain_english": "The app collects your government ID documents and links your identity to marketing and advertising profiles across the Tata ecosystem.",
       "detail": "Collected data includes name, email, address, phone number, age, sex, date of birth, marital status, nationality, government ID documents, thumb impression, and occupation. This is used for account management, marketing campaigns based on your profile, and shared across the Tata ecosystem.",
       "policy_excerpt": "Personal information: Age, sex, date of birth, marital status, nationality, details of government identification documents provided, thumb impression, occupation.",
       "concerns": [
-        "Government ID and thumb impression collected and stored",
+        "Government ID and thumb impression collected and stored on servers",
         "Identity data linked to advertising and marketing profiles",
         "Shared with Tata Group Entities and Partners"
       ],
-      "score_impact": -9.75
+      "score_impact": 15
     },
     {
       "id": "behavioural_ad_tracking",
@@ -205,7 +205,7 @@
         "Cookies and pixels used to recognize your device across sessions",
         "Spending patterns analyzed to target financial product offers"
       ],
-      "score_impact": -16.25
+      "score_impact": 16.25
     },
     {
       "id": "childrens_data",
@@ -220,22 +220,25 @@
       "detail": "The policy states that users under 18 may only use the Platforms with the involvement of a parent or guardian. There is no technical age verification mechanism described.",
       "policy_excerpt": "If you are under 18, you may use our Platforms only with the involvement of a parent or guardian.",
       "concerns": ["No age verification mechanism described"],
-      "score_impact": -3.0
+      "score_impact": 3
     },
     {
       "id": "network_internet_activity",
       "label": "Network & Internet Activity",
       "icon": "Wifi",
-      "risk": "caution",
+      "risk": "risky",
       "access_type": "continuous",
       "required_for_core_function": true,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The app logs your IP address, browsing details, and device details for analytics and security.",
-      "detail": "The policy collects IP addresses, operating system details, browsing details, device details, and language settings. This is aggregated to measure visits, time spent, and pages viewed, and used for site improvement, safety, security, and performance enhancement.",
+      "plain_english": "The app logs your IP address, browsing details, and device details, then uses them to profile you and understand your behavior.",
+      "detail": "The policy collects IP addresses, operating system details, browsing details, device details, and language settings. This is aggregated to measure visits, time spent, and pages viewed, and used for site improvement, safety, security, performance enhancement, and generating customer behavior insights.",
       "policy_excerpt": "Our web servers or affiliates who provide analytics and performance enhancement services collect IP addresses, operating system details, browsing details, device details and language settings.",
-      "concerns": ["IP address and browsing details collected automatically"],
-      "score_impact": -1.5
+      "concerns": [
+        "IP address and browsing details collected automatically",
+        "Network data used for profiling and behavior analysis"
+      ],
+      "score_impact": 3.25
     },
     {
       "id": "device_fingerprinting",
@@ -253,25 +256,25 @@
         "Cookies used as unique identifiers for device recognition",
         "Device details collected continuously for analytics and marketing"
       ],
-      "score_impact": -9.75
+      "score_impact": 9.75
     },
     {
       "id": "health_biometric",
       "label": "Health & Biometric Data",
       "icon": "Heart",
-      "risk": "risky",
+      "risk": "dangerous",
       "access_type": null,
       "required_for_core_function": false,
       "optional_access": false,
       "background_access": false,
-      "plain_english": "The privacy policy explicitly lists thumb impression as collected data, meaning biometric information is stored and shared.",
+      "plain_english": "The app collects your thumb impression as personal data, stores it on servers, and shares it with Tata Group companies and partners.",
       "detail": "Under personal information, the policy lists thumb impression as a category of collected data. This biometric data is stored on servers in India and may be shared with Tata Group Entities and Partners as part of the broader data sharing practices.",
       "policy_excerpt": "Personal information: Age, sex, date of birth, marital status, nationality, details of government identification documents provided, thumb impression, occupation.",
       "concerns": [
         "Thumb impression explicitly listed as collected personal information",
-        "Biometric data stored on servers and shared with Tata ecosystem"
+        "Biometric data stored on external servers and shared with Tata ecosystem"
       ],
-      "score_impact": -9.75
+      "score_impact": 15
     },
     {
       "id": "financial_payment",
@@ -290,7 +293,7 @@
         "Spending patterns used for profiling and targeted offers",
         "Financial product offers generated based on your data"
       ],
-      "score_impact": -9.75
+      "score_impact": 9.75
     },
     {
       "id": "data_deletion_user_rights",
@@ -308,7 +311,7 @@
         "Data may persist on backups after deletion request",
         "Retention periods vary and are not clearly defined"
       ],
-      "score_impact": -3.0
+      "score_impact": 3
     },
     {
       "id": "policy_change_notification",
@@ -323,7 +326,7 @@
       "detail": "The policy states that changes are effective as soon as they are accessible. Users are deemed to have accepted updated terms on first use or first purchase after changes. Email reminders may be sent, but there is no requirement for active re-consent.",
       "policy_excerpt": "The updated version will be effective as soon as it is accessible. Any changes will be immediately posted on our Platforms and you are deemed to have accepted the terms of the updated Policy on your first use of our Platform or first purchase of the products and/or services following the alterations.",
       "concerns": ["Continued use equals automatic acceptance of policy changes"],
-      "score_impact": -1.5
+      "score_impact": 1.5
     }
   ],
   "scoring": {
@@ -332,21 +335,21 @@
     "deductions": [
       { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
       { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
-      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
-      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5 },
       { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
-      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "dangerous", "max": 15, "rate": 1.00, "deduction": 15 },
       { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
-      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
-      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
       { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "dangerous", "max": 15, "rate": 1.00, "deduction": 15 },
       { "category": "financial_payment", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
-      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
       { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
     ],
-    "total_deductions": 113.75,
-    "final_score": 45,
-    "grade": "D"
+    "total_deductions": 126,
+    "final_score": 39,
+    "grade": "F"
   }
 }
