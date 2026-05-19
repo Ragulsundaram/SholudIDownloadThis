@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-19",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://sparkful.app/legal/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2022-12-01",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "walkr-gamified-fitness-walk",
+    "name": "Walkr - Gamified Fitness Walk",
+    "developer": "SPARKFUL INC.",
+    "app_store_url": "https://apps.apple.com/in/app/walkr-gamified-fitness-walk/id834805518",
+    "app_store_id": "834805518",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/31/a3/9c31a37d-077a-5733-53b9-8940274ed46b/Placeholder.mill/1200x630wa.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Walking",
+    "description": "Gamified fitness walking app that turns daily steps into a space exploration adventure."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 57,
+    "grade": "C",
+    "one_liner": "A fun walking game that tracks your fitness data and shows targeted ads, though health data is kept out of ad targeting.",
+    "summary": "Walkr collects your location, fitness activity, and device information to power its gamified walking experience. It uses this data for targeted advertising and analytics, though it explicitly excludes health and fitness data from ad targeting. Your data is shared with third-party service providers and advertising partners.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Walkr is enjoyable for casual fitness tracking, but it collects significant data for advertising purposes and stores your health information on external servers. Consider Apple Health or a simpler pedometer if you want fitness tracking without ads."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_targeted_ads",
+        "title": "Targeted ads based on your behavior and preferences",
+        "plain_english": "The app explicitly sends targeted advertising, offers, and sponsored content based on your behaviors and preferences, using data like location and usage patterns.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_servers",
+        "title": "Health and fitness data stored on external servers",
+        "plain_english": "Your steps, physical activity, and walking data are stored on SPARKFUL's servers and shared with third-party service providers for operational purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_location_tracking",
+        "title": "Location tracking for core features",
+        "plain_english": "The app tracks your location continuously during walks to power the game, and this location data may be used for behavioral profiling and ad targeting.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sharing",
+        "title": "Data shared with advertising and analytics partners",
+        "plain_english": "Your information is shared with third-party advertising partners, analytics providers, and service providers for ads, research, and operational purposes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_big_data_analytics",
+        "title": "User behavior analyzed for big data and internal reports",
+        "plain_english": "The company conducts research, big data analytics, and creates internal reports using your usage behavior and preferences.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_health_excluded_ads",
+        "title": "Health data excluded from ad targeting",
+        "plain_english": "The policy explicitly states that personal health, medical, and fitness data is excluded from targeted advertising.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sell",
+        "title": "Does not sell personal information",
+        "plain_english": "Under its CCPA disclosure, SPARKFUL explicitly states that it does not sell your personal information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_rights",
+        "title": "Account deletion and data rights available",
+        "plain_english": "Users can request deletion of their personal data, and the policy acknowledges GDPR and CCPA rights including access and deletion.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protection",
+        "title": "Children under 13 are not knowingly targeted",
+        "plain_english": "The app does not knowingly collect or solicit personal information from anyone under the age of 13.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera is only used if you choose to upload a profile photo. The app does not access your microphone.",
+      "detail": "The privacy policy does not mention camera or microphone hardware access. Profile photos may be uploaded voluntarily, suggesting the camera is only used on-demand for avatar uploads. No microphone access is mentioned.",
+      "policy_excerpt": "Profile photo is mentioned as voluntarily provided information, but no explicit camera or microphone access is described.",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Your location is tracked continuously during walks to power the game, and may be used for behavioral profiling and targeted ads.",
+      "detail": "As a gamified fitness walking app, Walkr requires continuous location access to track your walking routes and distance. While location is core to the app, the policy mentions targeted advertising based on behaviors, and location data is not explicitly excluded from such use (only health/fitness data is excluded).",
+      "policy_excerpt": "to send targeted advertising, offers and other sponsored content based on the behaviors and preferences of users",
+      "concerns": [
+        "Location data may be used for ad targeting and profiling",
+        "Continuous tracking during walks"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may access your contacts to suggest connections with other users, but you can likely skip this.",
+      "detail": "The policy mentions a purpose of collecting information is 'to identify and suggest connections with other users.' This implies contacts access, but it is not required for the core walking functionality.",
+      "policy_excerpt": "to identify and suggest connections with other users",
+      "concerns": [
+        "Contacts may be uploaded to suggest social connections"
+      ],
+      "score_impact": -6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload profile photos and other files on demand, but the app does not scan your storage.",
+      "detail": "The policy mentions profile photos as voluntarily provided information. There is no mention of broad file access or continuous storage scanning.",
+      "policy_excerpt": "profile photo",
+      "concerns": [],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with Third Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with advertising partners, analytics providers, and other service providers for operational and marketing purposes.",
+      "detail": "The policy states that information is shared with third-party service providers, advertising partners, social media platforms, and legal authorities. While the company says it does not sell personal information, it does share data for targeted advertising and analytics.",
+      "policy_excerpt": "We may share your information with third-party service providers, advertising partners, and social media platforms.",
+      "concerns": [
+        "Data shared with advertising partners and analytics providers",
+        "Shared with service providers for operational purposes",
+        "May be shared with social media platforms if connected"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must create an account with your name, email, and other details to use the app, and this information is used for personalized ads and services.",
+      "detail": "The policy collects name, email, phone, address, date of birth, profile photo, and social media information. This account data is used to personalize your experience and for targeted advertising.",
+      "policy_excerpt": "to create accounts and allow users to access our applications",
+      "concerns": [
+        "Account required to use the app",
+        "Personal information used for targeted advertising"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks your behavior and preferences to show you targeted ads, offers, and sponsored content.",
+      "detail": "The policy explicitly states a purpose of collecting information is 'to send targeted advertising, offers and other sponsored content based on the behaviors and preferences of users.' This indicates continuous behavioral tracking for ad targeting.",
+      "policy_excerpt": "to send targeted advertising, offers and other sponsored content based on the behaviors and preferences of users but exclude data concerning users' personal health, medical and fitness condition",
+      "concerns": [
+        "Behavioral tracking for targeted advertising",
+        "No clear opt-out mentioned for non-EU users"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not intended for children under 13, and the company does not knowingly collect data from them.",
+      "detail": "The policy states users must be over a certain age depending on local law, and explicitly says they do not knowingly collect personal information from anyone under 13.",
+      "policy_excerpt": "We do not knowingly collect or solicit personal information from anyone under the age of 13 or knowingly allow such persons to use our Services.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address, browser type, and operating system are logged automatically when you use the app.",
+      "detail": "The policy states that while browsing, certain information is logged automatically including IP address, OS, access times, browser type, language, and referring website addresses.",
+      "policy_excerpt": "your computer's operating system, Internet Protocol (IP) address, access times, browser type and language and referring Web site addresses",
+      "concerns": [
+        "IP address logged automatically",
+        "Referring websites tracked"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Basic device information like your operating system and browser type is collected for analytics and service improvement.",
+      "detail": "The policy collects device and technical information including OS, IP address, browser type, and language. This is used for monitoring, developing, and analyzing use of the services.",
+      "policy_excerpt": "your computer's operating system, Internet Protocol (IP) address, access times, browser type and language",
+      "concerns": [
+        "Device and OS information collected",
+        "Used for analytics and service monitoring"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your fitness and walking data is stored on company servers to power the game, though it is not used for ad targeting.",
+      "detail": "As a fitness app, Walkr collects health-related data such as steps, physical activity, and walking routes. This data is stored on SPARKFUL's servers and shared with service providers. The policy explicitly excludes health/fitness data from ad targeting.",
+      "policy_excerpt": "exclude data concerning users' personal health, medical and fitness condition",
+      "concerns": [
+        "Health and fitness data stored on external servers",
+        "Shared with third-party service providers"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment information is handled by Apple for in-app purchases; the app itself does not store your card details.",
+      "detail": "The app mentions collecting fees from users for services, but as an iOS app, payments are processed through Apple's in-app purchase system. The policy does not indicate the app stores raw financial data.",
+      "policy_excerpt": "to collect fees from users",
+      "concerns": [],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion of your data, but some information may be kept for legal obligations and dispute resolution.",
+      "detail": "The policy mentions users can request deletion and references GDPR and CCPA rights. However, it also states that data may be retained as necessary to comply with legal obligations, resolve disputes, and enforce agreements.",
+      "policy_excerpt": "We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.",
+      "concerns": [
+        "Some data retained after deletion request for legal purposes"
+      ],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Policy changes are posted on the website, and continued use means you accept the new terms.",
+      "detail": "The policy states that SPARKFUL reserves the right to amend the policy and will post updates on the page. They make reasonable efforts to notify users but continued use constitutes acceptance.",
+      "policy_excerpt": "SPARKFUL reserves the right to amend this Policy from time to time and we will post the updated Policy on this page.",
+      "concerns": [
+        "Continued use equals acceptance of changes"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "safe",
+        "max": 10,
+        "rate": 0,
+        "deduction": 0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "financial_payment",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 88.25,
+    "final_score": 57,
+    "grade": "C"
+  }
+}

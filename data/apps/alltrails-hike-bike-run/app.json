@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.alltrails.com/privacy",
+    "terms_url": "https://www.alltrails.com/terms",
+    "policy_last_updated": "2025-12-17",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "alltrails-hike-bike-run",
+    "name": "AllTrails: Hike, Bike & Run",
+    "developer": "AllTrails, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/alltrails-hike-run-walk/id405075943",
+    "app_store_id": "405075943",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/ef/5b/0cef5b8a-83ee-63fb-d199-e15d22d531fe/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Outdoor",
+    "description": "Trail maps and outdoor navigation app with millions of hiking, biking, and running routes worldwide."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 51,
+    "grade": "D",
+    "one_liner": "Great for finding trails, but your profile, location, and activity data are public by default and shared with advertisers.",
+    "summary": "AllTrails is a popular outdoor navigation app that collects your precise geolocation, device data, and social content to provide trail recommendations and community features. The biggest privacy concern is that your profile and content are public by default—meaning anyone can see your hiking history, photos, and reviews unless you manually change settings. The app also shares data with advertising partners and uses cookies for targeted ads, and your AI chat inputs may be used to train models.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "AllTrails is genuinely useful for outdoor enthusiasts, but the public-by-default profile, extensive ad tracking, and data sharing with numerous third parties create meaningful privacy risks. If you use it, immediately switch your profile to private and limit location permissions."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_public_by_default",
+        "title": "Your profile and activity are public by default",
+        "plain_english": "When you create an AllTrails account, everything you add—your profile, hiking history, photos, reviews, and community posts—is visible to anyone on the internet unless you manually change your privacy settings.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking_partners",
+        "title": "Activity data shared with advertising partners for targeted ads",
+        "plain_english": "AllTrails shares your browsing behavior, device info, and usage patterns with advertising companies to show you targeted ads on other websites and apps. Under some state laws, this may be classified as selling your data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_precise_location",
+        "title": "Precise geolocation tracked continuously while you hike",
+        "plain_english": "If you enable location services, AllTrails collects your exact latitude and longitude in real time to direct you to trails. This reveals exactly where you hike, run, and bike.",
+        "severity": "high"
+      },
+      {
+        "id": "red_contacts_sync",
+        "title": "Your phone contacts are synced to find friends",
+        "plain_english": "AllTrails regularly reads your phone's address book to see which of your contacts also use the app, then suggests you connect with them.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ai_training",
+        "title": "Your AI chat inputs may be used to train AI models",
+        "plain_english": "When you use AllTrails' AI features—like asking questions about trails or using the plant identifier—your text prompts and queries may be used to train the underlying AI models.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_merger_transfer",
+        "title": "Your data could be sold or transferred in a business deal",
+        "plain_english": "If AllTrails is acquired, merges with another company, or sells part of its business, your personal data may be included as part of the transferred assets.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gpc_honored",
+        "title": "Respects Global Privacy Control opt-out signals",
+        "plain_english": "If your browser sends a Global Privacy Control opt-out signal, AllTrails will automatically stop using cookies that result in selling or sharing your personal information for targeted advertising.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_healthkit_protected",
+        "title": "HealthKit and Google Fit data are walled off from marketing",
+        "plain_english": "If you connect Apple HealthKit or Google Fit, AllTrails cannot read that data and promises not to use it for advertising or share it with ad platforms.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_rights",
+        "title": "Full privacy rights for US and EEA/UK users",
+        "plain_english": "Depending on where you live, you can request access to your data, ask for corrections, demand deletion, opt out of targeted ads, and lodge complaints with data-protection authorities.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_safe",
+        "title": "Payment details handled by Stripe and PayPal, not AllTrails",
+        "plain_english": "When you buy a subscription, your credit card details are collected directly by Stripe or PayPal. AllTrails never sees or stores your payment card information.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera is used only when you choose to share photos or use the AI plant/bug identifier. No microphone access is mentioned.",
+      "detail": "Users can upload photos, images, and videos as user-generated content. The AI feature can identify plants, insects, and fungi from photos you choose to share.",
+      "policy_excerpt": "User-generated content, such as photos, images, videos, community posts, reviews, community comments, and other content or information that you generate, transmit, or otherwise make available on the Service.",
+      "concerns": [
+        "AI features may use uploaded photos for model training"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Precise geolocation is collected continuously while you use the app to navigate trails, find nearby parks, and record your routes.",
+      "detail": "AllTrails collects precise geolocation (latitude, longitude, city, state, zip, country) when location services are enabled. IP address is also used to derive approximate location. This is essential for the core trail-finding and navigation features.",
+      "policy_excerpt": "If you have enabled location services for an AllTrails App on your mobile device or on your computer via the Site, we may collect your geolocation information based on IP address, city, state, zip code, country, latitude and longitude.",
+      "concerns": [
+        "Exact GPS coordinates recorded during every hike",
+        "Location data classified as sensitive personal information in some states"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "AllTrails regularly reads your phone contacts to find friends and family who also use the app, then suggests you connect with them.",
+      "detail": "The mobile app syncs your Contacts address book regularly to identify contacts who use the Service. You can revoke this access through device settings.",
+      "policy_excerpt": "Our mobile applications may allow you to synchronize the numbers in your Contacts address book on a regular basis in order to identify any friends and/or relatives who use the Service.",
+      "concerns": [
+        "Contacts uploaded and compared against AllTrails user database",
+        "Regular syncing implies ongoing access"
+      ],
+      "score_impact": -13.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Photo and video access is optional and only used for uploading trail photos, reviews, and community posts.",
+      "detail": "Users can upload photos, images, and videos as user-generated content. Metadata such as location, time, and editing history may also be included.",
+      "policy_excerpt": "User-generated content, such as photos, images, videos, community posts, reviews, community comments, and other content or information that you generate, transmit, or otherwise make available on the Service, as well as associated metadata.",
+      "concerns": [
+        "Uploaded content metadata may include location and timestamps"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AllTrails shares your personal data with a wide range of third parties including advertising partners, analytics providers, cloud services, and social media platforms. Your data may also be transferred in a business sale or merger.",
+      "detail": "Data is shared with vendors and service providers for hosting, analytics, marketing, CRM, customer support, and security. Advertising partners receive data for interest-based advertising. In a merger or acquisition, personal data may be transferred. Social media pages on Facebook, Instagram, Pinterest, X, and LinkedIn may receive aggregate analytics.",
+      "policy_excerpt": "Third-party advertising companies for interest-based advertising.",
+      "concerns": [
+        "Advertising partners receive data for targeted ads",
+        "Business transfers may include personal data",
+        "Social media platforms receive aggregate page analytics",
+        "Data transferred internationally to the USA"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "An account is required for core features. AllTrails collects your name, email, and optional info like date of birth, height, weight, and profile picture. You can sign in with Facebook, Google, or Apple.",
+      "detail": "Account creation requires name and email. Optional fields include date of birth, height, weight, profile picture, location, and favorite activities. Social login may also bring contact lists and profile photos. Profile is public by default.",
+      "policy_excerpt": "When you sign up, some information is required to create an account on our Service, such as your name and email address.",
+      "concerns": [
+        "Profile and content are public by default",
+        "Social login may import contact lists and profile photos"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AllTrails tracks your browsing and app usage across the web to show you personalized ads. They use cookies, pixels, and work with advertising partners. Some state laws may classify this as selling your data.",
+      "detail": "AllTrails uses cookies and tracking technologies to collect usage data for targeted advertising. They share data with advertising partners and analytics providers. The site honors Global Privacy Control (GPC) opt-out signals. However, they do not respond to Do Not Track signals.",
+      "policy_excerpt": "We and our third-party vendors and service providers, may use cookies, pixels, or other tracking technologies to collect Personal Data about your browsing activities over time and across different websites... and use that Personal Data to send targeted advertisements.",
+      "concerns": [
+        "Cross-site tracking for targeted advertising",
+        "Does not respond to Do Not Track signals",
+        "Some state laws classify this as selling data"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AllTrails says the app is not for children under 16 and they do not knowingly collect data from kids. There is no robust age verification.",
+      "detail": "The service is not directed to children under 16. AllTrails does not knowingly collect personal data from children under 16 and claims no actual knowledge of selling or sharing such data. No specific child-protection mechanisms are described beyond this statement.",
+      "policy_excerpt": "Our Service is not directed to children who are under the age of 16. AllTrails does not knowingly collect Personal Data from children under the age of 16.",
+      "concerns": [
+        "No robust age verification mechanism",
+        "App Store rating is 4+, which may attract younger users"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address, browser type, and browsing patterns are logged continuously for security, analytics, and to understand which country you connect from.",
+      "detail": "Log data includes IP address, browser type and settings, date/time of request, and interaction patterns. Cookies are used to track browsing behavior across sites for targeted ads.",
+      "policy_excerpt": "Log data includes your IP address (so we understand which country you are connecting from when you visit the Site or AllTrails Apps), browser type and settings, the date and time of your request, and how you interacted with the Site or AllTrails Apps.",
+      "concerns": [
+        "IP address logged on every visit",
+        "Cookies track browsing across different websites"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AllTrails collects your device model, operating system, and browser info. It also estimates activity metrics like calories burned from device sensors.",
+      "detail": "Device data includes model, OS, browser, and settings. The app may also collect data from device sensors to estimate time, frequency, duration, and calories burned during activities.",
+      "policy_excerpt": "Includes the model of the device, operating system, and browser you are using. Information collected may depend on the type of device you use and its settings. We may also collect data from your device to estimate a variety of metrics like the time, frequency and duration of, and calories burned during, your activities.",
+      "concerns": [
+        "Device sensor data used to estimate personal fitness metrics"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AllTrails explicitly asks you NOT to provide health information. They do not collect health data directly, and any HealthKit or Google Fit connections are walled off from marketing.",
+      "detail": "AllTrails asks users not to provide health-related information. Health Connections (Apple HealthKit, Google Fit, Garmin) are optional and data from these sources is not accessible by AllTrails for marketing or advertising. The app only writes data to Health Connections with permission.",
+      "policy_excerpt": "Through the Service, AllTrails asks that you not provide us with any health-related information. Since we do not obtain or read any data from Health Connections, such Health Connections data cannot be used by us for marketing or advertising purposes.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Payment details are handled directly by Stripe or PayPal. AllTrails never collects or stores your credit card information.",
+      "detail": "Third-party payment processors (Stripe or PayPal) collect and process payment data directly. AllTrails does not collect or store billing zip code, payment card details, or authentication features.",
+      "policy_excerpt": "Our third-party payments processors (Stripe or PayPal) will collect and process certain payment and billing information, such as billing zip code, payment card details, and authentication features on behalf of AllTrails. That information is collected by our payment processors directly, and we do not collect or store it.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion of your account and data, but AllTrails may keep some information for legal, tax, or accounting purposes. The exact retention period is vague.",
+      "detail": "AllTrails keeps personal data as long as reasonably necessary for the purposes described, including legal requirements. Users in certain jurisdictions have rights to access, correct, delete, and restrict processing. Identity verification via email is required for privacy requests.",
+      "policy_excerpt": "We keep your Personal Data for as long as reasonably necessary for the purposes described in this Privacy Policy including as long as required by law (e.g. for tax, legal, accounting or other purposes).",
+      "concerns": [
+        "Retention period is vague—'as long as reasonably necessary'",
+        "Some data may be kept indefinitely for legal or tax purposes"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "AllTrails can change its privacy policy at any time. Your continued use of the app means you accept the new terms. There is no direct notification to users when changes happen.",
+      "detail": "The policy states they reserve the right to revise the Privacy Policy from time to time and asks users to check back often. Continued use constitutes acknowledgment of changes. No explicit commitment to notify users directly.",
+      "policy_excerpt": "We reserve the right to revise this Privacy Policy from time to time. Please check back often for any updates. You acknowledge that it is your responsibility to review this Privacy Policy periodically and that your continued use of our Service after any change in this Privacy Policy will constitute your acknowledgment of such change.",
+      "concerns": [
+        "No commitment to notify users of policy changes",
+        "Continued use = automatic acceptance"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13.0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 84.0,
+    "final_score": 59,
+    "grade": "D"
+  }
+}

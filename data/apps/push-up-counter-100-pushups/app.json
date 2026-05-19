@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-19",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.foxyfitness.app/privacy-policy",
+    "terms_url": "https://www.foxyfitness.app/terms",
+    "policy_last_updated": "2026-02-20",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "push-up-counter-100-pushups",
+    "name": "Push Up Counter - 100 Pushups",
+    "developer": "Foxyfitness GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/push-ups-counter-and-tracker/id1658514945",
+    "app_store_id": "1658514945",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/27/2c/86272cb0-ded7-12b1-9629-c658c65f164c/AppIcon-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Workout",
+    "description": "Push-up counter and trainer app that uses your device's camera to track reps and guide you to 100 push-ups."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "A simple push-up counter with excellent on-device privacy for camera and health data, but ad trackers follow you around the web.",
+    "summary": "Push Up Counter uses your camera and Apple Health data to track workouts, but handles both responsibly: camera data for rep counting is processed locally and never leaves your device, and HealthKit data is only visualized locally without being sent to Foxyfitness servers. However, the app allows advertising and analytics partners to track your device and browsing behavior across the web to deliver targeted ads. Your profile is public by default, and account deletion requires contacting customer support.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app itself handles your most sensitive data (camera feed and health metrics) with admirable care—everything stays on your device. The downside is that advertising partners track your behavior across other websites and apps. If you use it, skip creating an account if possible, and be aware that your workout usage may fuel ad targeting elsewhere."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_ad_tracking_cross_web",
+        "title": "Ad partners track you across websites and apps",
+        "plain_english": "Foxyfitness allows advertising and analytics companies to use cookies, device identifiers, and web beacons to follow your activity on this app and other websites, then show you targeted ads based on what you do.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_id_collect",
+        "title": "Device identifiers collected for advertising and analytics",
+        "plain_english": "The app collects your device identifiers, IP address, mobile network info, and browsing behavior to share with advertising and analytics partners.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_gender_inference",
+        "title": "Your gender is guessed from your first name",
+        "plain_english": "Foxyfitness uses your first name to make an educated guess about your gender. This inferred data is then used to personalize your experience and ads.",
+        "severity": "low"
+      },
+      {
+        "id": "red_account_deletion_by_email",
+        "title": "You must email support to delete your account",
+        "plain_english": "There is no in-app or self-service account deletion. You have to contact help@foxyfitness.app to request deletion, and they may keep some data for legal or caching purposes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_merger_transfer",
+        "title": "Your data could be transferred in a business deal",
+        "plain_english": "If Foxyfitness is sold, merges with another company, or raises financing, your personal information may be shared with counterparties or transferred to the new owner.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_camera_local_only",
+        "title": "Camera data for rep counting never leaves your device",
+        "plain_english": "The app uses your TrueDepth camera and ARKit to count push-ups, but the data is not stored on your device, not sent to Foxyfitness servers, and not shared with anyone. It is processed in real time and immediately discarded.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_healthkit_local_only",
+        "title": "Apple Health data stays entirely on your phone",
+        "plain_english": "With your permission, the app reads your date of birth, height, weight, and sex from Apple Health only to show you stats inside the app. Foxyfitness explicitly promises this data is not collected or sent outside your local app installation.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_selling_ccpa",
+        "title": "Does not sell personal information under CCPA",
+        "plain_english": "Foxyfitness states they do not sell the personal information they collect and will not do so in the future without giving you the right to opt out.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights",
+        "title": "Full GDPR and CCPA rights available",
+        "plain_english": "Depending on where you live, you can request access to your data, ask for corrections, request deletion, opt out of direct marketing, and file a complaint with your local data protection authority.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The camera is used to count your push-ups in real time, but no images or videos are stored on your device or sent to any server.",
+      "detail": "The app uses ARKit and the TrueDepth camera system to detect your presence and distance from the device during exercises. No facial features are processed, and data obtained from the TrueDepth camera is not stored on the device, not sent to servers, and not shared with any third party.",
+      "policy_excerpt": "No facial features or gestures are processed for this purpose and data obtained by our app from the TrueDepth camera system are not stored on your device, not sent to our servers and they are not shared with any third party.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your approximate location is derived from your IP address to understand where users are connecting from. No precise GPS tracking is mentioned.",
+      "detail": "Foxyfitness uses your IP address to derive the approximate location of your device. This is standard log data and not precise GPS tracking.",
+      "policy_excerpt": "We use your IP address to derive the approximate location of your device.",
+      "concerns": [
+        "IP-based approximate location inferred automatically"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or address book access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You may upload a profile photo or share images. No broad file scanning is mentioned.",
+      "detail": "The policy mentions audio, electronic, visual information such as profile photos. No mention of broad storage or media library access beyond optional profile photo uploads.",
+      "policy_excerpt": "Audio, electronic, visual, or similar information, such as profile photo or personal information you may provide during customer support calls and call recordings.",
+      "concerns": [],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Foxyfitness shares your data with service providers (Google, RevenueCat, AWS), advertising partners, and analytics providers. In a merger or acquisition, your data may be transferred to the new owner.",
+      "detail": "Data is shared with companies that perform services including email, payment processing, fraud prevention, cloud storage (Google Ireland, RevenueCat, AWS). Advertising and analytics partners receive device identifiers and usage data. Aggregate data may be shared with research organizations. Data may also be shared in mergers, acquisitions, or financing.",
+      "policy_excerpt": "We allow others to provide analytics services and serve advertisements on our behalf across the web and in mobile applications. These entities use cookies, web beacons, device identifiers, and other technologies to collect information about your use of the Services and other websites and online services.",
+      "concerns": [
+        "Advertising partners collect device identifiers and browsing behavior",
+        "Data may be transferred in a business sale or merger",
+        "Aggregate data shared with research organizations"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use the app without an account, but creating one collects your name, email, password, goals, and address. Social login is also available.",
+      "detail": "Account creation is optional. If you create an account, Foxyfitness collects name, email, password, goals, street address, and payment method info. Social login through Facebook, Google, or Apple may import name and other account info. Gender is inferred from first name.",
+      "policy_excerpt": "The information you may provide includes your name, email, password, goals, street address, payment method information, feedback and survey responses, and other information about you included within your messages to us.",
+      "concerns": [
+        "Gender inferred from first name",
+        "Account deletion requires contacting support by email"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Advertising and analytics partners track your behavior on this app and other websites using cookies, web beacons, and device identifiers to show you personalized ads.",
+      "detail": "Foxyfitness allows third parties to collect information about your use of the Services and other websites, including IP address, device identifiers, browser, mobile network, pages viewed, time spent, links clicked, and conversion info. This is used to deliver targeted advertising and understand online activity.",
+      "policy_excerpt": "These entities use cookies, web beacons, device identifiers, and other technologies to collect information about your use of the Services and other websites and online services, including your IP address, device identifiers, web browser, mobile network information, pages viewed, time spent on pages or in apps, links clicked, and conversion information.",
+      "concerns": [
+        "Cross-app and cross-web behavioral tracking",
+        "Device identifiers used for ad targeting",
+        "Conversion data shared with advertisers"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any age restrictions or child-specific protections.",
+      "detail": "There is no mention of children, age requirements, COPPA compliance, or parental consent in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No age verification or child-safety mechanisms described"
+      ],
+      "score_impact": -5.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address, browser type, app version, access times, and pages viewed are logged automatically whenever you use the app.",
+      "detail": "Standard log files include browser type, app version, access times and dates, pages viewed, IP address, and referring page. This is collected on every use of the service.",
+      "policy_excerpt": "We collect standard log files when you use our Services, which include the type of web browser you use, app version, access times and dates, pages viewed, your IP address, and the page you visited before navigating to our websites.",
+      "concerns": [
+        "IP address logged on every session"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Foxyfitness collects your device model, operating system, device identifiers, and mobile network information.",
+      "detail": "Device information includes hardware model, OS and version, device identifiers set by the device operating system, and mobile network information (connection type, carrier, region). This is shared with advertising and analytics partners.",
+      "policy_excerpt": "We collect information about the computer or mobile device you use to access our Services, including the hardware model, operating system and version, device identifiers set by your device operating system, and mobile network information.",
+      "concerns": [
+        "Device identifiers shared with advertising partners"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "With your consent, the app reads your date of birth, height, weight, and sex from Apple Health to calculate calories. This data is only shown inside the app and is never sent to Foxyfitness servers or shared with anyone.",
+      "detail": "HealthKit data is accessed with explicit consent for date of birth, height, weight, and sex. The policy explicitly states this data is used solely for visualizing within the app and is not collected or disclosed outside the local installation. The app can also write workouts to Apple Health with opt-in. The TrueDepth camera data for rep counting is not biometric data and is not stored or transmitted.",
+      "policy_excerpt": "The data read from Apple Health is used solely for visualizing your data within the app. It is not collected or disclosed outside of your local installation of the app.",
+      "concerns": [
+        "Sensitive health data is accessed, even if kept local"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Payment details are handled by third-party processors. Foxyfitness does not store your credit card information.",
+      "detail": "Payment method information is collected by payment processors directly. Foxyfitness does not collect or store payment card details.",
+      "policy_excerpt": "Transactional Information: When you make a purchase or return, we collect information about the transaction, such as product description, price, subscription or free trial expiration date, and time and date of the transaction.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request account deletion by emailing customer support, but some data may be kept for legal reasons or in cached copies. There is no self-service deletion.",
+      "detail": "Account deletion requires contacting help@foxyfitness.app. Foxyfitness retains certain information when required or permitted by law, and keeps cached or archived copies for a certain period. Users in Europe and California have rights to access, correct, erase, and port their data.",
+      "policy_excerpt": "If you wish to disable your account, please contact us at help@foxyfitness.app, but note that we retain certain information when required or permitted by law. We also retain cached or archived copies of information about you for a certain period of time.",
+      "concerns": [
+        "No self-service account deletion",
+        "Cached and archived copies retained for unspecified period"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Foxyfitness may change the privacy policy at any time. They will update the date at the top and may provide additional notice through a website statement or notification.",
+      "detail": "Changes are notified by revising the date at the top of the policy and, in some cases, by adding a statement to the website homepage or sending a notification. No explicit commitment to email or direct user notification.",
+      "policy_excerpt": "If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice (such as adding a statement to our website homepage or sending you a notification).",
+      "concerns": [
+        "No guarantee of direct notification to users",
+        "Continued use implies acceptance of changes"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 67.75,
+    "final_score": 67,
+    "grade": "C"
+  }
+}

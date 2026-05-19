@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-19",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.steps.app/privacy/ios",
+    "terms_url": "",
+    "policy_last_updated": "2026-03-02",
+    "needs_review": true,
+    "review_notes": "Policy contains a '[Please add]' placeholder in the retention table for device and app info. Policy is silent on location/GPS despite the app marketing GPS workout tracking as a core feature."
+  },
+  "app": {
+    "slug": "stepsapp-pedometer",
+    "name": "StepsApp Pedometer",
+    "developer": "StepsApp GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/stepsapp-pedometer/id1037595083",
+    "app_store_id": "1037595083",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/49/b8/9e/49b89e6e-0798-7c50-a025-234c0456c8ac/AppIconNew-0-1x_U007ephone-0-1-0-sRGB-0-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Lifestyle",
+    "description": "A step counter and activity tracker with social features including leaderboards, challenges, and GPS workout tracking."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 51,
+    "grade": "D",
+    "one_liner": "Collects extensive health data and shares it with advertisers and AI companies for insights and ad targeting.",
+    "summary": "StepsApp Pedometer tracks steps, workouts, heart rate, sleep, and even menstrual cycle data. While core fitness tracking is expected, the app shares your health data with AI providers (OpenAI, Replicate) to generate optional insights and with advertising partners (Google AdMob, Meta Ads) for personalized ads. It also collects device and advertising identifiers (IDFA, IDFV). On the positive side, the app provides clear GDPR rights and lets you disable many optional features like personalized ads and analytics.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects sensitive health data and shares it with multiple third parties including advertisers and AI companies. While you can disable some tracking, the default data sharing practices are broad enough to give privacy-conscious users pause."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_data_shared_with_ai",
+        "title": "Health data shared with AI companies",
+        "plain_english": "StepsApp sends your health and fitness data to OpenAI and Replicate so they can generate optional insights for you. This means companies outside of StepsApp can access sensitive information like your heart rate, sleep patterns, and workout details.",
+        "severity": "high"
+      },
+      {
+        "id": "red_advertising_partners",
+        "title": "Your data goes to Google and Meta for ads",
+        "plain_english": "StepsApp shares your device identifiers and other data with Google AdMob and Meta Ads to show you personalized ads inside the app and measure how well those ads work.",
+        "severity": "high"
+      },
+      {
+        "id": "red_extensive_health_collection",
+        "title": "Collects deeply personal health information",
+        "plain_english": "The app gathers more than just steps. It also collects your weight, heart rate, sleep data, and menstrual cycle information if you choose to enter them.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_advertising_identifiers",
+        "title": "Advertising identifiers collected for targeting",
+        "plain_english": "StepsApp collects Apple's Identifier for Advertisers (IDFA) and other device identifiers to help ad partners show you targeted ads. You can turn off personalized ads, but basic identifiers may still be collected.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_many_third_parties",
+        "title": "Data shared with a wide list of companies",
+        "plain_english": "Your data is sent to cloud providers, analytics services, advertisers, payment processors, and AI companies. Some of these companies are based outside Europe, including in the United States.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_rights",
+        "title": "Full GDPR rights available",
+        "plain_english": "You can ask to see your data, fix it, delete it, move it elsewhere, or object to how it is used. StepsApp also lets you exercise these rights directly in the app settings or by emailing them.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_optional_features",
+        "title": "Many data-heavy features are optional",
+        "plain_english": "You do not have to use social features, health insights, newsletters, or community challenges. The app works for basic step tracking without sharing most of the extra data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_profiling",
+        "title": "No automated decision-making or profiling",
+        "plain_english": "The policy states that StepsApp does not use automated systems to make decisions about you with legal or serious effects. Leaderboards and motivational messages are part of the service, not hidden profiling.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_transparent_retention",
+        "title": "Clear data retention periods listed",
+        "plain_english": "The policy tells you exactly how long each type of data is kept. For example, health data is kept for three years after your last sync, and raw analytics logs are deleted after fifteen days.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app accesses your camera or microphone. The app offers social sharing, which may involve photos, but there is no explicit mention of camera or microphone use.",
+      "detail": "Policy is silent on camera and microphone access. The app description mentions social sharing and community features, which may involve media uploads, but the privacy policy does not explicitly address this permission.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy is silent on camera and microphone access"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app description says it offers GPS workout tracking, but the privacy policy does not mention location or GPS data anywhere in its data categories table. It is unclear how location data is handled.",
+      "detail": "GPS workout tracking is marketed as a Pro feature, yet the privacy policy's exhaustive data categories list does not include location or GPS data. This omission is notable and raises questions about transparency.",
+      "policy_excerpt": "",
+      "concerns": [
+        "GPS workout tracking is a marketed feature but location data is not addressed in the privacy policy",
+        "Policy is silent on location/GPS collection, use, and sharing"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not list contacts or phonebook access as a data category. There is no indication the app reads your address book.",
+      "detail": "The exhaustive data categories table in the privacy policy does not include contacts or phonebook data. This suggests the app does not access your device's contact list.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy mentions 'media content shared in community features' under communications data, but it does not clearly say whether the app scans your phone's photos, files, or storage.",
+      "detail": "Community features may allow media sharing, but the policy does not explicitly describe local file access permissions or photo library scanning.",
+      "policy_excerpt": "Communications: Messages, group details, media content shared in community features",
+      "concerns": [
+        "Unclear whether the app accesses local files or photo library beyond user-initiated uploads"
+      ],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "StepsApp shares your data with advertising partners, AI companies, cloud providers, analytics services, and payment processors. Some of these companies are outside Europe.",
+      "detail": "The policy lists Google Cloud/Firebase, AWS, Firebase, Sentry, Google AdMob, Meta Ads, RevenueCat, OpenAI, Replicate, and payment vendors as recipients. Data transfers outside the EEA use Standard Contractual Clauses.",
+      "policy_excerpt": "Advertising partners (e.g., Google AdMob, Meta Ads) for ad delivery and measurement. AI-supported features providers (e.g., OpenAI, Replicate) to generate optional health and fitness insights.",
+      "concerns": [
+        "Health data shared with AI providers (OpenAI, Replicate)",
+        "Advertising identifiers shared with Google AdMob and Meta Ads",
+        "Data transferred internationally outside the EEA"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "StepsApp collects your username, avatar, email, and device identifiers including Apple's advertising ID (IDFA). You can use Apple Sign-In with Hide My Email to reduce what you share.",
+      "detail": "The app collects profile info (username, avatar), contact data (email), and identifiers (IDFV, Installation ID, IDFA). Apple Sign-In with Hide My Email is offered as a privacy-friendly option.",
+      "policy_excerpt": "Apple Identifier for Vendors (IDFV), Installation ID, Apple Identifier for Advertisers (IDFA) (where enabled). Profile info: Username, avatar (auto-generated or user-uploaded), social links.",
+      "concerns": [
+        "Advertising identifier (IDFA) collected when enabled",
+        "Social links may be collected as part of profile info"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "StepsApp uses your device identifiers to show personalized ads through Google AdMob and Meta Ads. You can turn off personalized ads in the app, but non-personalized ads may still appear.",
+      "detail": "The policy explicitly states that identifiers are used for serving personalized and non-personalized ads, with legitimate interest as the legal basis. Users can disable personalized advertising.",
+      "policy_excerpt": "Advertising: Identifiers. Serving personalized and non-personalized ads. Optional. You can disable personalized advertising. Ads may still be shown but will be less relevant.",
+      "concerns": [
+        "Personalized ads served using device identifiers",
+        "Google AdMob and Meta Ads used for ad delivery and measurement",
+        "Disabling personalized ads does not stop all ads or identifier collection"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention any age restrictions or special protections for children. The app is rated 4+ in the App Store, but there is no guidance on how children's data is treated differently.",
+      "detail": "No explicit age requirement, COPPA compliance statement, or GDPR-K safeguards are mentioned in the privacy policy. The app is rated 4+ but this does not necessarily mean it is child-directed.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy is silent on age requirements and children's data protections"
+      ],
+      "score_impact": -5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "StepsApp collects usage data like which screens you view and how you interact with the app. This is sent to analytics services to help fix bugs and understand how people use the app.",
+      "detail": "Usage data including crash reports, screen views, user interactions, and timestamps is collected. This is shared with Firebase and Sentry for analytics and crash reporting. Users can disable analytics in the app.",
+      "policy_excerpt": "Usage data: Crash reports, screen views, user interactions, timestamps.",
+      "concerns": [
+        "Screen views and interactions tracked for analytics",
+        "Data shared with Firebase and Sentry"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "StepsApp collects detailed device information including your device model, operating system, language, time zone, and unique Apple identifiers. Some of these identifiers are also used for advertising.",
+      "detail": "Device and app info includes device model, operating system, app version, locale, time zone, and language. Identifiers include IDFV, Installation ID, and IDFA. This combination can be used to fingerprint your device.",
+      "policy_excerpt": "Device and app info: Device model, operating system, app version, locale, time zone, language. Identifiers: Apple Identifier for Vendors (IDFV), Installation ID, Apple Identifier for Advertisers (IDFA) (where enabled).",
+      "concerns": [
+        "Multiple unique identifiers collected (IDFV, Installation ID, IDFA)",
+        "Device and system info combined with identifiers enables fingerprinting",
+        "IDFA used for advertising purposes"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "StepsApp collects extensive health data including your steps, heart rate, sleep, weight, and menstrual cycle. This data is shared with AI companies to generate optional insights and is kept for three years after your last sync.",
+      "detail": "Health data categories include step data, extended health data (weight, heart rate, sleep, menstrual cycle), workout data, and nutrition data. This data is shared with OpenAI and Replicate for AI-generated insights. Retention is 3 years after last sync for most health categories.",
+      "policy_excerpt": "Extended health data: Weight, activity time, heartrate, sleep, menstrual cycle data & symptoms. AI-supported features providers (e.g., OpenAI, Replicate) to generate optional health and fitness insights.",
+      "concerns": [
+        "Extensive health data including heart rate, sleep, and menstrual cycle collected",
+        "Health data shared with AI providers (OpenAI, Replicate)",
+        "Health data retained for 3 years after last sync"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "StepsApp does not store your credit card details. It uses Apple's in-app purchase system and receives only anonymized receipts and subscription status to manage your purchases.",
+      "detail": "Purchase data is described as 'anonymized receipts, subscription status, purchase history necessary to manage purchases.' Payments are processed through Apple's App Store system. Purchase data is retained for 7 years after account closure.",
+      "policy_excerpt": "Purchase data: Anonymized receipts, subscription status, purchase history necessary to manage purchases.",
+      "concerns": [
+        "Purchase history retained for 7 years after account closure"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can request deletion, correction, or export of your data. Some data is kept for years after you stop using the app, and the retention table has an incomplete placeholder entry.",
+      "detail": "GDPR rights are fully listed: access, correction, deletion, restriction, portability, objection. Deletion can be requested via in-app settings or email. Retention periods are specified, but some are long (3 years for health data, 7 years for purchase data). The policy contains a '[Please add]' placeholder for device and app info retention.",
+      "policy_excerpt": "Deletion of your data ('right to be forgotten'). Data portability in a structured, machine-readable format.",
+      "concerns": [
+        "Health data retained for 3 years after last sync",
+        "Purchase data retained for 7 years after account closure",
+        "Policy contains incomplete placeholder for one retention period"
+      ],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "StepsApp says it will tell you about significant policy changes through the app and website. It does not say you must agree again before the changes apply, so continued use likely counts as acceptance.",
+      "detail": "The policy states: 'Significant changes will be communicated in the app and on our website.' There is no explicit requirement for active re-consent. Previous versions can be requested by email.",
+      "policy_excerpt": "Significant changes will be communicated in the app and on our website.",
+      "concerns": [
+        "No explicit requirement for active re-agreement to policy changes",
+        "Continued use likely implies acceptance of updated terms"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 100.5,
+    "final_score": 51,
+    "grade": "D"
+  }
+}

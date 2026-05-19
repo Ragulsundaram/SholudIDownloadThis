@@ -1,0 +1,365 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.freeletics.com/pages/privacy/",
+    "terms_url": "https://www.freeletics.com/en/pages/terms",
+    "policy_last_updated": "2026-02-04",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "freeletics-workouts-fitness",
+    "name": "Freeletics: Workouts & Fitness",
+    "developer": "Freeletics GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/freeletics-hiit-home-workouts/id654810212",
+    "app_store_id": "654810212",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/90/98/57/90985795-d076-b096-4f9c-b5a5b0ce1f67/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Workout",
+    "description": "Europe's #1 fitness app offering personalized HIIT, bodyweight, and gym workouts with an AI Coach."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 66,
+    "grade": "C",
+    "one_liner": "A polished fitness app with strong GDPR compliance and explicit health-data consent, but heavy ad-tracking integrations with Google, Meta, TikTok, and others drag the score down.",
+    "summary": "Freeletics is a German fitness app that collects detailed workout, health, and body data to personalize training plans. It provides robust GDPR rights, full account deletion, and asks for explicit consent before accessing health data. However, the app integrates a large number of third-party marketing and analytics services—including Google Marketing, Facebook, TikTok, Snapchat, Reddit, and Remerge—some of which use advertising identifiers and share behavior data across services. Motion-tracking camera data is processed locally and not transmitted, which is a strong privacy practice.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Freeletics offers excellent workout personalization and strong data-deletion rights, but the sheer number of advertising and tracking integrations means your app behavior is shared widely for targeted marketing. If you value privacy, consider reviewing all consent toggles in the app settings before signing up."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_ad_tracking",
+        "title": "App behavior tracked by Google, Meta, TikTok, Snapchat, Reddit, and Remerge",
+        "plain_english": "Freeletics shares your app usage and advertising identifiers with at least six major marketing platforms to show you personalized ads across the internet. Some platforms may use your data for their own purposes too.",
+        "severity": "high"
+      },
+      {
+        "id": "red_personalized_pricing",
+        "title": "Subscription prices may be personalized based on your data",
+        "plain_english": "Freeletics uses cookies to analyze your usage patterns, location, and preferences to potentially offer you a different subscription price than another user.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_on_servers",
+        "title": "Detailed health and body metrics stored on company servers",
+        "plain_english": "With your consent, Freeletics stores weight, height, heart rate, workout history, and even body-area training preferences on AWS servers in the USA.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_openai_coach_data",
+        "title": "AI coach sends anonymized fitness metrics to OpenAI",
+        "plain_english": "If you use Coach+, your age, gender, body weight, and training goal are sent to OpenAI to generate fitness advice. OpenAI claims a zero-retention policy, but Freeletics keeps the chat history to improve the feature.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_camera_access_motion",
+        "title": "Camera access required for motion-tracking feedback",
+        "plain_english": "The optional motion-tracking feature uses your device's camera to watch your exercises in real time. While the video is processed locally and never leaves your phone, the app still needs camera permission.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_explicit_health_consent",
+        "title": "Health data only collected with clear, revocable consent",
+        "plain_english": "Freeletics explicitly asks for your permission before reading or writing health data through Apple HealthKit, Google Health Connect, or Strava. You can withdraw this consent at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_full_account_deletion",
+        "title": "Full account deletion removes all data permanently",
+        "plain_english": "You can delete your Freeletics account from the app or website. This permanently erases all your training progress, nutrition data, and profile information across every Freeletics product.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_motion_local_processing",
+        "title": "Motion-tracking video never leaves your device",
+        "plain_english": "When you use the motion-tracking feature, your camera feed is analyzed entirely on your phone. No images, videos, or biometric data are stored or sent to Freeletics or any third party.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights",
+        "title": "Comprehensive GDPR rights and a data-protection officer",
+        "plain_english": "Freeletics provides full GDPR rights including access, correction, erasure, and data portability. They also have an external data-protection officer you can contact directly.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_selling_ccpa",
+        "title": "Does not sell personal information under CCPA",
+        "plain_english": "Freeletics states they do not sell the personal information they collect, as defined by the California Consumer Privacy Act, and will not do so without giving you the right to opt out.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera is used only for motion-tracking exercises and choosing profile photos. No microphone access is mentioned. Motion-tracking video is processed entirely on your device.",
+      "detail": "The motion-tracking feature uses the camera to evaluate physical movements during exercises. All image data is processed locally on the device and never stored or transmitted. Photo-library access is also used for profile/feed photos.",
+      "policy_excerpt": "All image data is processed locally on your device and is used solely for the purpose of delivering the purchased functionality. No images or videos are stored or transmitted to Freeletics or any third party.",
+      "concerns": [
+        "Camera permission is required for motion-tracking feature"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Location is collected only when you map a run and only with your consent. It is used to calculate distances and show your training city in the community.",
+      "detail": "Location data is accessed with consent for Freeletics Running and Training to map runs and calculate distances. Training city information is also used for community interaction. Data is stored up to 30 days after account deletion.",
+      "policy_excerpt": "Within the framework of our Freeletics Apps, in particular Freeletics Running and Freeletics Training, it is possible to map runs. For this purpose, we need access to location data.",
+      "concerns": [
+        "Location data stored on AWS servers in the USA",
+        "Training city visible in community depending on privacy settings"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Freeletics does not access your contacts or phonebook.",
+      "detail": "The privacy policy does not mention any access to contacts or phonebook data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Photo-library access is optional and only used for selecting profile or feed photos.",
+      "detail": "The app requests permission to access the photo library for profile/feed photo selection. No broad file or media scanning is mentioned.",
+      "policy_excerpt": "Photo library: Selection of photos for profile/feed. Consent.",
+      "concerns": [],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your app usage, advertising identifiers, and sometimes your email address are shared with Google, Meta, TikTok, Snapchat, Reddit, and Remerge for personalized advertising and analytics. Service providers like AWS, Zendesk, and Firebase also receive data.",
+      "detail": "Freeletics uses an extensive list of third-party marketing services: Google Marketing Services (AdWords, DoubleClick, Google Audience), Facebook Marketing Services (pixel, SDK, App Events, Custom Audience), Snapchat Custom Audiences, TikTok Marketing Services and Custom Audiences, Reddit Marketing Services, and Remerge retargeting. Remerge receives IDFA and Google Advertising ID. Service providers include AWS, Zendesk, Shopify, Firebase, Databricks, and Google Analytics. Data transfers to the USA are covered by EU standard contractual clauses.",
+      "policy_excerpt": "We may also engage service providers to collect information about your use of Seven over time on our behalf so that we or they may promote Seven or display information that may be relevant to your interests.",
+      "concerns": [
+        "Ad identifiers (IDFA, GAID) shared with Remerge for retargeting",
+        "Customer lists with email addresses may be provided to Google and Facebook with consent",
+        "Extensive marketing pixel and SDK integrations across multiple platforms"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "An account is required for core features. Freeletics collects your name, email, gender, date of birth, height, and weight. You can sign up with Google or Apple ID.",
+      "detail": "Account creation requires first name, last name, email, password, gender, and coach personalization data (date of birth, height, weight, fitness goals, fitness level). You can also register with Google or Apple ID. Data is stored on AWS servers in the USA.",
+      "policy_excerpt": "We will request the following data when registering (some of it is required): First name, Last name, Email address, Password, IP address at login, Gender, Coach personalization (date of birth, height and weight, fitness goals, fitness level, and modalities).",
+      "concerns": [
+        "Personal data transferred to AWS in the USA",
+        "Google and Apple ID login links accounts permanently by email"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your in-app behavior is tracked by Google, Facebook, Snapchat, TikTok, Reddit, and Remerge to show you personalized ads on other apps and websites. Advertising identifiers like IDFA are used.",
+      "detail": "Freeletics uses multiple marketing pixels and SDKs to track user behavior for ad targeting. Google Analytics, Firebase, Amplitude, and AppsFlyer are used for app analytics. Remerge receives mobile advertising identifiers and attribution data including in-app purchases and registrations.",
+      "policy_excerpt": "Remerge receives mobile identifiers such as the ID for Advertising for iOS (IDFA), Google Advertising ID. From time to time we might relay attribution data, which typically relates to the behavior of users inside our Apps.",
+      "concerns": [
+        "Advertising identifiers shared across multiple platforms",
+        "Behavior tracked for personalized pricing",
+        "Extensive cross-app retargeting ecosystem"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The App Store rates the app 4+, but the privacy policy does not describe any specific child-safety mechanisms or age verification beyond standard App Store gating.",
+      "detail": "The app is rated 4+ on the App Store and contains no explicit COPPA or child-protection section in the privacy policy. There is no robust age-verification mechanism described.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No child-specific privacy safeguards described",
+        "App rated 4+ yet collects detailed health data"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address, device type, browser info, and session ID are logged for security, fraud prevention, and website performance. Data is kept up to 30 days after you delete your account.",
+      "detail": "Technical data including IP address, OS, browser type, date/time of visit, device manufacturer/model, app version, and session ID are collected. This is used for fraud prevention, proving newsletter consent, and optimizing the app.",
+      "policy_excerpt": "The information collected includes network information; including IP addresses, timestamps, log files, and operating system.",
+      "concerns": [
+        "IP addresses logged and stored up to 30 days after account deletion",
+        "Static IP addresses could potentially identify individuals"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Freeletics collects your device model, operating system, app version, and session ID. Advertising identifiers like IDFA and Google Advertising ID are shared with Remerge for ad retargeting.",
+      "detail": "The app collects device manufacturer, model, OS, app version, and session ID for statistical and security purposes. Remerge receives advertising IDs (IDFA, GAID) and device metadata.",
+      "policy_excerpt": "Remerge receives mobile identifiers such as the ID for Advertising for iOS (IDFA), Google Advertising ID... device type and model, app and app version, country.",
+      "concerns": [
+        "Advertising identifiers shared with retargeting partners"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "With your explicit consent, Freeletics collects weight, height, heart rate, workout history, and training preferences. This data is stored on AWS servers but is not used for advertising.",
+      "detail": "Health data is collected only with explicit consent for coach personalization and progress tracking. Data can be imported from Apple HealthKit, Google Health Connect, or Strava. Freeletics states this data is not used for advertising. Stored on AWS servers in the USA.",
+      "policy_excerpt": "Freeletics will not use the information obtained through the use of the HealthKit framework for advertising or similar services.",
+      "concerns": [
+        "Sensitive health data stored on external servers in the USA",
+        "Strava integration may share activity data bidirectionally in the future"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Freeletics does not store your payment card details. Subscriptions are handled by Apple, and merchandise purchases use external payment providers.",
+      "detail": "App subscriptions are managed through Apple iTunes. Freeletics Essentials merchandise uses Shopify as the storefront, but payment processing is handled by external payment service providers.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can fully delete your account and all data across every Freeletics product permanently. Some server logs are kept for up to 30 days after deletion for legal compliance.",
+      "detail": "Account deletion is available via the app or website and permanently removes all training, nutrition, and profile data. Server log data may be retained up to 30 days after account deletion. Full GDPR rights are provided including access, rectification, erasure, restriction, and portability.",
+      "policy_excerpt": "Deleting your account will affect all Freeletics products, i.e. Training and Nutrition, and all your results and progress for these products will be deleted permanently.",
+      "concerns": [
+        "Some technical log data retained up to 30 days after account deletion"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Freeletics can change its privacy policy at any time without directly notifying you. The updated policy simply appears on their website.",
+      "detail": "The policy states they reserve the right to amend the Data Privacy Statement at any time subject to compliance with applicable data protection regulations. There is no explicit promise of direct notification to app users when the policy changes.",
+      "policy_excerpt": "We reserve the right to amend or adjust this Data Privacy Statement at any time subject to compliance with applicable data protection regulations.",
+      "concerns": [
+        "No explicit commitment to notify users of policy changes",
+        "Users must check the website periodically for updates"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 70.25,
+    "final_score": 66,
+    "grade": "C"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-18",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://seven.app/privacy-policy",
+    "terms_url": "https://seven.app/terms-of-service",
+    "policy_last_updated": "2023-10-04",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "seven-7-minute-workout",
+    "name": "Seven: 7 Minute Workout",
+    "developer": "Perigee AB",
+    "app_store_url": "https://apps.apple.com/in/app/seven-7-minute-workout/id650276551",
+    "app_store_id": "650276551",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d4/59/a2/d459a2ea-2cf2-8485-54d1-8550855e5439/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-GLES2_U002c0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Workout",
+    "description": "Quick 7-minute HIIT workout app with personalized plans, progress tracking, and social features."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 78,
+    "grade": "B",
+    "one_liner": "Collects health and workout data with your consent, but shares usage information with third parties for cross-service promotion.",
+    "summary": "Seven collects health data (weight, height, heart rate, workouts) only with explicit user consent to provide fitness statistics. It offers good user controls including account deletion and data export. However, it shares usage data with third-party service providers for analytics and may use this data to promote the app on other websites and services. Some data is retained after account deletion for legal purposes.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Seven handles health data responsibly with clear consent and gives you full control to delete your account and export data. Just be aware that your app usage may be tracked to show you promotions on other websites. Good choice for casual fitness tracking if you review the privacy settings."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_cross_service_promotion",
+        "title": "Your usage is tracked to promote the app on other websites",
+        "plain_english": "Seven and its service providers collect information about how you use the app over time so they can show you promotional content for Seven on other websites and services you visit.",
+        "severity": "high"
+      },
+      {
+        "id": "red_health_data_on_servers",
+        "title": "Health and workout data stored on company servers",
+        "plain_english": "With your consent, Seven stores sensitive health information like your weight, height, heart rate, and workout history on its servers in Germany.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_retention_after_deletion",
+        "title": "Some data kept after you delete your account",
+        "plain_english": "Even after you delete your account, Seven may keep some of your information for up to 30 days to comply with legal requirements, prevent fraud, or resolve disputes.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_merger_transfer",
+        "title": "Your data could be transferred in a future sale or merger",
+        "plain_english": "If Perigee sells the company, merges with another business, or partners with someone else, your user information may be included as part of the transferred assets.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_explicit_health_consent",
+        "title": "Health data only collected with your clear consent",
+        "plain_english": "Seven asks for your permission before collecting any health information like weight, height, or heart rate. You can withdraw this consent at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_full_account_deletion",
+        "title": "You can fully delete your account and all activities",
+        "plain_english": "Seven lets you delete your account directly from the app, which removes your profile, all workouts, comments, and leaderboard placements permanently.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_export",
+        "title": "You can download a copy of all your personal data",
+        "plain_english": "Seven gives you the option to download all the personal information they have about you, including every workout you've ever completed.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_private_profile_option",
+        "title": "You can hide your profile and activities from other users",
+        "plain_english": "Seven has privacy settings that let you make your profile private so other users cannot see your workouts or progress in the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_marketing_opt_in",
+        "title": "Marketing emails are opt-in only",
+        "plain_english": "Seven only sends you marketing emails if you explicitly agree to receive them, and you can unsubscribe at any time with clear instructions.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera is only used when you choose to change your profile picture. No microphone access is mentioned in the privacy policy.",
+      "detail": "The app description lists Photos and Camera as an optional permission for changing your profile picture. The privacy policy does not mention microphone access.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Location data is not collected or used by Seven.",
+      "detail": "Neither the privacy policy nor the app description mentions location or GPS access.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Contacts access is optional and only used to find other Seven users. Your phonebook is not uploaded to advertising networks.",
+      "detail": "The app description lists Contacts as an optional permission to find other Seven users. The privacy policy only mentions contact information you provide manually via email.",
+      "policy_excerpt": "If you chose to provide us with your contact information, for example by emailing us, we will use this to respond to support requests and comments.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Photo access is only used when you change your profile picture. No broad file or media scanning.",
+      "detail": "The app description lists Photos and Camera as an optional permission for changing your profile picture. No broad storage access is mentioned.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Seven shares de-identified data and some personal information with third-party service providers for analytics and to promote the app on other websites and services.",
+      "detail": "The policy states that anonymous aggregate statistics and de-identified information may be shared with third parties for analysis. Service providers may collect usage data over time to promote Seven or display information relevant to your interests on other websites and services. In a future sale or merger, user information may be transferred.",
+      "policy_excerpt": "We may also engage service providers to collect information about your use of Seven over time on our behalf so that we or they may promote Seven or display information that may be relevant to your interests in Seven or other websites or services.",
+      "concerns": [
+        "Service providers collect your usage data over time for cross-service promotion",
+        "Some data may be transferred in a future sale or merger"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use Seven without an account. If you create one, only name, email, and username are collected. You can also sign in with Apple, Facebook, or Google.",
+      "detail": "Account creation is optional. If you create an account, Seven collects name, email, username, country, and language. You can also sign in with third-party accounts (Apple, Facebook, Google) which share name, email, and profile information. Seven may combine your data with information from other services they provide.",
+      "policy_excerpt": "We collect information such as name, email address, username, country and language to help us secure access to Seven if you create an account.",
+      "concerns": [
+        "Account data may be combined with information from other services you use"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Seven and its service providers track how you use the app over time to show you promotional content on other websites and services.",
+      "detail": "The policy states that service providers may collect information about your use of Seven over time to promote Seven or display content relevant to your interests on other websites and services. Third-party providers are also used to analyze how Seven is used.",
+      "policy_excerpt": "We may also engage service providers to collect information about your use of Seven over time on our behalf so that we or they may promote Seven or display information that may be relevant to your interests.",
+      "concerns": [
+        "Usage patterns tracked across services for promotional purposes"
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Seven says users must be 16 or older, but there is no real age verification to enforce this.",
+      "detail": "The policy states users under 16 are not allowed to create an account or submit personal data. If they learn a child under 16 has submitted data, they will delete it. However, there is no robust age verification mechanism.",
+      "policy_excerpt": "If you are under the age 16 you are not allowed to create an account or submit any personal data through Seven.",
+      "concerns": [
+        "No robust age verification mechanism"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address, timestamps, and log files are collected to analyze trends and keep the app secure.",
+      "detail": "Seven collects network information including IP addresses, timestamps, log files, and operating system from devices used to access the app. This is used to analyze trends and protect and secure the service.",
+      "policy_excerpt": "The information collected includes network information; including IP addresses, timestamps, log files, and operating system.",
+      "concerns": [
+        "IP address and usage logs collected for trend analysis"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Seven collects basic technical information like your operating system, but does not build a unique advertising fingerprint.",
+      "detail": "The policy mentions collecting operating system and network information for security and trend analysis. There is no mention of advertising identifiers, device IDs, or fingerprinting for ad targeting.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "With your explicit consent, Seven collects weight, height, heart rate, and workout data to calculate calories and show performance stats.",
+      "detail": "Upon consent, Seven collects health information including weight, height, gender, date of birth, heart rate during workouts, activities, workout sessions, distance, and speed. This can also be imported from Apple Health or Google Fit. Users can withdraw consent at any time.",
+      "policy_excerpt": "Upon given consent we collect health information. Health information such as weight, height, gender, date of birth, heart rate during workouts, activities, workout sessions, distance and speed data can be taken.",
+      "concerns": [
+        "Health data stored on Perigee servers",
+        "Data can be imported from Apple Health and Google Fit"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Seven does not collect payment information directly. All purchases are handled through your Apple iTunes account.",
+      "detail": "The app offers a 7 Club subscription, but purchases are charged to the user's iTunes account. The privacy policy does not mention collecting or storing payment card information.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account, download all your personal data, and remove individual workouts or comments. Some data may be kept for legal reasons for up to 30 days.",
+      "detail": "Users can delete their account directly from the app, which removes profile, activities, and leaderboard placements. Users can also download all personal data and delete specific activities. After account deletion, it may take up to 30 days to fully delete data, and some information may be retained for legal compliance, fraud prevention, or dispute resolution.",
+      "policy_excerpt": "You may delete your account directly from Seven. Once deleted, your data, including account, activities and leaderboard placements cannot be reinstated.",
+      "concerns": [
+        "Some data retained after deletion for legal and dispute purposes",
+        "Deleted data may be de-identified and kept as aggregate statistics"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Seven will notify you of substantial policy changes and give you time to review, but continuing to use the app means you automatically accept them.",
+      "detail": "Perigee will notify users before substantial changes and give an opportunity to review. However, material changes take effect upon acceptance through continued use or subscription renewal. Users who object must delete their account and stop using Seven.",
+      "policy_excerpt": "Any and all material changes shall come into effect between you and Perigee upon your acceptance of such changes (e.g. by using Seven after such notification has been made to you or renewing your subscription).",
+      "concerns": [
+        "Continued use equals automatic acceptance of new terms"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "location_gps", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 45.0,
+    "final_score": 78,
+    "grade": "B"
+  }
+}
