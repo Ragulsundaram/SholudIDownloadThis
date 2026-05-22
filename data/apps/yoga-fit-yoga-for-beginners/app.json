@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-20",
+    "analyzed_by": "gemini-3.5-flash-high",
+    "policy_url": "https://7mfitness.com/privacy-policy",
+    "terms_url": "https://7mfitness.com/terms-of-use",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "yoga-fit-yoga-for-beginners",
+    "name": "Yoga Fit | Yoga for Beginners",
+    "developer": "Fast Builder Limited",
+    "app_store_url": "https://apps.apple.com/in/app/yoga-fit-yoga-for-beginners/id1382141225",
+    "app_store_id": "1382141225",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/42/f2/47/42f24779-e2a3-c786-320d-8d2585b1b006/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Yoga",
+    "description": "Start your yoga and meditation journey with beginner-friendly routines."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "Collects health and optional face photos, but shares email and device ID with marketing partners.",
+    "summary": "Yoga Fit allows you to practice yoga and meditation, sync with Apple Health, and utilize optional AI features by uploading face photos. However, the app collects device IDs and logs IP addresses, and it shares your username, email, and device ID with business partners for marketing. Users can use the app without registering to limit personal data collection.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Consider using the app without registering to keep your personal info private, and be mindful of optional features that upload photos or track location."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_pii_sharing",
+        "title": "Shares your email and device ID with marketing partners",
+        "plain_english": "The app shares your username, email address, and Device ID with preferred business partners to send you promotional and marketing materials.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Uses device ID to track clicks and show targeted ads",
+        "plain_english": "Your Device ID is utilized to track clicks and other ad fulfillment metrics, which is shared with advertising networks to show you customized ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_location_sharing",
+        "title": "Precise location shared with partner apps if opted in",
+        "plain_english": "If you opt in to location services, the app shares your precise real-time geographic location with third-party mobile application providers.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_registration_required",
+        "title": "No registration required to use basic workouts",
+        "plain_english": "You can participate as a non-registered user, which limits data collection to only your Device ID and keeps your personal information private.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_health_data_protection",
+        "title": "Apple Health data is not mined or sold",
+        "plain_english": "Data synced from your iOS Health App is used solely to provide and improve the workout features, and is never shared with advertisers or third parties without your consent.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_biometric_photo_protection",
+        "title": "Face photos are encrypted and never sold",
+        "plain_english": "Uploaded face photos for AI features are encrypted in transit and at rest, processed temporarily, and never shared or sold to advertisers.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Only requests access to your camera or photo library on-demand when using face photo AI features.",
+      "detail": "Workout Inc may request access to upload a face photo for AI-based personalization. Photos are processed temporarily and encrypted.",
+      "policy_excerpt": "In order to provide certain AI-powered features... Workout Inc may request access to or require you to upload a face photo.",
+      "concerns": [
+        "Processes face photos on servers, although claims it is only temporary analysis."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Location is optional and only shared with partner publishers if you explicitly opt-in.",
+      "detail": "Precise geographic location is collected for location-based services. If you opt-in, location is shared with third-party app providers.",
+      "policy_excerpt": "For location-based Services, we may collect, use, and share precise location data... When you opt in... we will share your geographic location with such Third Party Mobile Application providers...",
+      "concerns": [
+        "Shares precise real-time geographic location with third-party application providers upon opt-in."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Asks for specific friend contacts only if you use referral or invite features.",
+      "detail": "If you choose to use the invite-a-friend referral feature, the app asks for your friend's name and email address, which is hashed after sending the invite.",
+      "policy_excerpt": "If you choose to use our referral services to tell a friend about our Services, we will ask you for your friend’s name and email address.",
+      "concerns": [
+        "May store the friend's email address for social recommendations."
+      ],
+      "score_impact": -6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Accesses photo storage only when you upload a face photo for AI features or share user content.",
+      "detail": "File and storage access is requested on-demand when selecting a photo for AI features or posting public user content.",
+      "policy_excerpt": "In order to provide certain AI-powered features... Workout Inc may request access to or require you to upload a face photo.",
+      "concerns": [
+        "User content like photos and comments are shared publicly and licensed to the developer."
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": true,
+      "plain_english": "Shares your name, email, and Device ID with preferred partners for marketing purposes, with opt-out available.",
+      "detail": "Shares Specific Shared Data (username, email, Device ID) with business partners and third-party publishers for marketing and promotions. Users must request opt-out.",
+      "policy_excerpt": "We may share your username, email address and Device ID... with certain of our Preferred Partners... to provide you with information and marketing materials...",
+      "concerns": [
+        "Shares personal identifying info (username, email) with third parties for marketing purposes.",
+        "Requires users to contact the developer directly to opt out of partner sharing."
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Collects your name and email upon registration, but basic use is allowed without an account.",
+      "detail": "Registration is optional. Non-registered users only have their Device ID collected. Registered users have their email and name collected.",
+      "policy_excerpt": "Workout Inc does not collect any Personal Information or Non-Identifying information, other than Device ID, for non-registered users.",
+      "concerns": [
+        "Links email and registration info to Device ID."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": true,
+      "plain_english": "Uses Device ID to track clicks and targets you with customized ads via partners.",
+      "detail": "The app tracks user clicks and ad fulfillment metrics using the Device ID, serving ads that link to other third-party apps.",
+      "policy_excerpt": "Our Services may serve ads... and we may utilize your Device ID to track clicks or other ad fulfillment metrics.",
+      "concerns": [
+        "Utilizes Device ID to build ad tracking metrics.",
+        "Consents to tracking technologies and cookies automatically upon sign-up or usage."
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Requires users to be 14+ and does not knowingly collect children's personal information.",
+      "detail": "The app states it is not intended for children under 14 and will erase inadvertently collected data, but lacks verification mechanisms.",
+      "policy_excerpt": "Our Services are not intended for children under the age of 14... and we do not knowingly collect any Personal Information from children.",
+      "concerns": [
+        "No active age verification mechanism."
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Logs IP address, browser type, and navigation statistics to administer the service.",
+      "detail": "Logs standard server data including IP addresses, language, ISP, and exit pages for analysis and product improvement.",
+      "policy_excerpt": "This Log Data may include information such as your computer’s or mobile device’s IP address... referring and exit pages...",
+      "concerns": [
+        "IP address logged continuously as part of server interaction."
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Uses Device ID to track user activity and shares it with partners for marketing.",
+      "detail": "Collects Device ID, carrier, and device type. The Device ID is shared with marketing partners and used for ad targeting.",
+      "policy_excerpt": "we collect Personal Information which may include... unique mobile device identifier (“Device ID”)... We use your Device ID to make it possible to authenticate and understand your use...",
+      "concerns": [
+        "Shares Device ID with preferred partners for marketing."
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Allows optional sync with Apple Health, and does not use health data for advertising.",
+      "detail": "Users can optionally share Apple Health App Data. The developer commits not to use Health App Data for advertising or mining.",
+      "policy_excerpt": "We do not use your Health App Data for advertising or other use-based data mining purposes other than providing and improving our Services.",
+      "concerns": [
+        "Processes face photos on servers for AI features, though details list this as non-advertising use."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Subscriptions are billed through Apple's App Store; the app doesn't collect card details.",
+      "detail": "Payment details for subscriptions are handled by iTunes, and the developer claims they do not request credit cards in unsolicited communications.",
+      "policy_excerpt": "We do not and will not, at any time, request your credit card information... in a non-secure or unsolicited communication...",
+      "concerns": [
+        "Paid subscription options exist, handled through Apple."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Enables deletion via email, but data shared with partners cannot be recalled.",
+      "detail": "Users can request deletion of personal info via email. However, copies may be retained as required by law, and data already shared with partners cannot be retrieved.",
+      "policy_excerpt": "You may also email us at contact@workoutinc.net to request that we delete your Personal Information... Specific Shared Data cannot be retrieved from Preferred Partners after its disclosure.",
+      "concerns": [
+        "Specific Shared Data cannot be recalled from Preferred Partners after sharing."
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Notifies users of modifications, but continued use counts as acceptance.",
+      "detail": "Modifications are posted within the services and sites. Continuing to use the services constitutes acceptance of the modified policy.",
+      "policy_excerpt": "By continuing to access or use the Services after we have posted an updated Privacy Policy... you are indicating that you agree to be bound...",
+      "concerns": [
+        "No option to reject changes other than stopping use of the app."
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 86.0,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

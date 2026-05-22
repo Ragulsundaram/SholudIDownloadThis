@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.mimi.io/en/privacy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-05-28",
+    "needs_review": true,
+    "review_notes": "Scraped privacy policy is a website notice for mimi.io, not an app-specific policy. It does not address how hearing test data (health data) is handled, stored, or shared, despite the app collecting hearing profiles and syncing with Apple Health."
+  },
+  "app": {
+    "slug": "mimi-hearing-test",
+    "name": "Mimi Hearing Test",
+    "developer": "Mimi Hearing Technologies GmbH",
+    "app_store_url": "https://apps.apple.com/in/app/mimi-hearing-test/id932496645",
+    "app_store_id": "932496645",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/3b/38/853b3880-14b4-08a1-0c76-fcb5428b8e1c/AppIcon-0-0-1x_U007emarketing-0-0-0-11-0-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Medical",
+    "description": "A hearing assessment app that tests a wide range of frequencies in about 5 minutes, delivers instant results, syncs with Apple Health, and tracks hearing changes over time."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 79,
+    "grade": "B",
+    "one_liner": "A popular and well-designed hearing test app, but its privacy policy is website-focused and completely silent on how your hearing data is handled.",
+    "summary": "Mimi Hearing Test is a widely used hearing assessment tool that creates digital hearing profiles and syncs with Apple Health. However, the only privacy documentation available is a website notice aimed at B2B partners and job applicants, with no explanation of how sensitive hearing test data is stored, shared, or protected.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app itself is genuinely useful for hearing monitoring, but users should understand that their hearing profile data is being collected with minimal transparency about its handling."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_health_data_not_addressed",
+        "title": "Privacy policy ignores hearing test data",
+        "plain_english": "The app collects your hearing test results, which are sensitive health data. But the privacy policy does not explain how this data is stored, who can see it, or how long it is kept.",
+        "severity": "high"
+      },
+      {
+        "id": "red_contributes_to_database",
+        "title": "Hearing profiles added to company database",
+        "plain_english": "The app says it has contributed to the world's largest database of digital hearing profiles. This means your hearing data is likely being collected and stored by the company, but the policy does not explain how it is used or anonymized.",
+        "severity": "high"
+      },
+      {
+        "id": "red_age_contradiction",
+        "title": "App is 12+ but policy says 18+",
+        "plain_english": "The app is rated 12+ on the App Store, but the privacy policy says it is not for anyone under 18. This is a direct contradiction.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_analytics",
+        "title": "Multiple third-party trackers",
+        "plain_english": "The app and website use Google Analytics and Mixpanel to track how you use them. These companies collect data about your device and activity.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_rights",
+        "title": "GDPR data rights available",
+        "plain_english": "If you live in Europe, you have legal rights to see, correct, delete, or move your data. The company has a Data Protection Officer in Germany.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_health_sync_apple",
+        "title": "Apple Health integration",
+        "plain_english": "Your hearing test results can be synced to the Apple Health app on your phone, giving you a local copy of your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_offline_testing",
+        "title": "Core test works offline",
+        "plain_english": "The hearing test itself can be done without an internet connection, though syncing and exporting require connectivity.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not use your camera or microphone.",
+      "detail": "The hearing test uses headphones or speakers to play tones. No camera or microphone access is needed or mentioned.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect your exact location.",
+      "detail": "No GPS or precise location data collection is mentioned for the app. The website analytics may collect approximate country-level data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "No contacts or phonebook access is mentioned in the privacy policy or app description.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app stores your hearing test results on your device and can export them as PDF files.",
+      "detail": "The app stores hearing test results locally and syncs with Apple Health. Users can export results as PDFs for sharing with healthcare professionals.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company uses outside services like Google Analytics and Mixpanel to track website and app usage. It also has a database of hearing profiles, but the policy does not explain how that data is shared.",
+      "detail": "The privacy notice mentions Google Analytics for website tracking and Mixpanel for Chrome Extension analytics. Third-party links and plugins (including YouTube) are present on the website. The app contributes to 'the world's largest database of digital hearing profiles,' but there is no explanation of how this aggregated data is shared, sold, or used.",
+      "policy_excerpt": "Via Mixpanel analytics behavioral data is processed, such as extension features clicks, satisfaction rate, as well as geo data (e.g. country, device OS, etc.)... Our Website may contain links to third-party services and platforms, including those posted by our partners and affiliate companies.",
+      "concerns": ["Mixpanel analytics processes behavioral and geo data", "Hearing profile database existence not explained in policy", "Third-party plugins on website"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your email address and name if you sign up for newsletters or contact the company. Hearing test results are tied to your device or account.",
+      "detail": "The website privacy notice mentions collecting first name, last name, and email address for newsletters, contact forms, and demo requests. For the app, hearing test results are associated with your device or Mimi account. The policy does not clarify whether an account is required for the core hearing test.",
+      "policy_excerpt": "First name, last name, email address, company name... E-mail address, possibly name",
+      "concerns": ["Name and email collected for marketing communications", "Account/device association with hearing data unclear"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company uses Google Analytics and Mixpanel to track how you use their website and Chrome extension, including your clicks and device details.",
+      "detail": "Google Analytics sets cookies (_ga, _gid, _gat) to track visitors, sessions, user behaviors, traffic sources, and site usage. Mixpanel processes behavioral data including extension feature clicks, satisfaction rates, and geo data. Users can manage cookie consent for analytics cookies.",
+      "policy_excerpt": "Google Analytics sets this cookie to track visitors, sessions, user behaviors, traffic sources, and site usage for the site's analytics report... Via Mixpanel analytics behavioral data is processed, such as extension features clicks, satisfaction rate, as well as geo data (e.g. country, device OS, etc.)",
+      "concerns": ["Google Analytics tracks user behavior across sessions", "Mixpanel tracks behavioral and geo data", "Analytics cookies stored for up to 1 year"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 12+ but the privacy policy claims it is not for anyone under 18. The company says it will delete data if it learns it came from someone under 18.",
+      "detail": "The App Store content advisory is 12+ (Infrequent/Mild Medical/Treatment Information). However, the privacy notice states: 'We do not intend to collect nor process the data of individuals under 18 years old. Minors require their parents' or legal guardians' approval... If we become aware that someone under the age of 18 has provided or attempted to provide us their personal data, we will use our best efforts to remove the information permanently from our files and delete this data.' This 18+ threshold is unusually high for a health app and contradicts the 12+ rating.",
+      "policy_excerpt": "We do not intend to collect nor process the data of individuals under 18 years old. Minors require their parents' or legal guardians' approval when sharing their data on our website or via contact forms or email with us. If we become aware that someone under the age of 18 has provided or attempted to provide us their personal data, we will use our best efforts to remove the information permanently from our files and delete this data.",
+      "concerns": ["App rated 12+ but policy claims 18+", "High age threshold for health data", "No COPPA compliance mentioned"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app connects to the internet to sync results with Apple Health and to upload hearing profiles to the company's database.",
+      "detail": "The hearing test itself can work offline, but syncing with Apple Health, exporting PDFs, and contributing to the hearing profile database require internet connectivity. The website privacy notice mentions tracking IP addresses, browser types, and OS for analytics.",
+      "policy_excerpt": "Tracking website visitors... Country, Browser type, OS",
+      "concerns": ["Internet required for sync and database contribution", "Network activity tracked for analytics"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company collects details about your device like its operating system and browser type when you visit their website or use their services.",
+      "detail": "The website tracks country, browser type, and OS for visitors. The Chrome extension analytics collect geo data, device OS, and behavioral data. For the app, supported headphone models are detected to ensure test accuracy.",
+      "policy_excerpt": "Tracking website visitors... Country, Browser type, OS... Via Mixpanel analytics behavioral data is processed, such as extension features clicks, satisfaction rate, as well as geo data (e.g. country, device OS, etc.)",
+      "concerns": ["Device OS and geo data collected via analytics", "Headphone model detection for test calibration"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your hearing test results, which are sensitive health data. It syncs with Apple Health and contributes to a company database of hearing profiles, but the privacy policy does not explain how this data is protected.",
+      "detail": "The app's core function is collecting hearing test data across a wide range of frequencies to create a digital hearing profile. The app description explicitly states it has 'contributed to the development of the world's largest database of digital hearing profiles.' It also syncs with Apple Health. However, the privacy policy (which is website-focused) makes no mention of hearing data, health data protection, HIPAA compliance, or how hearing profiles are anonymized, stored, or shared.",
+      "policy_excerpt": "",
+      "concerns": ["Hearing test data is sensitive health data with no policy protection", "Data contributes to company database with unclear anonymization", "Apple Health sync mentioned but data handling not explained", "No HIPAA or medical data safeguards mentioned"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is free and does not handle payments directly.",
+      "detail": "The app is free on the App Store. The website mentions careers and B2B partnerships, but no in-app purchases or payment processing is mentioned for the consumer app.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can email the company to ask for your data to be deleted or corrected, but there is no automatic delete button in the app.",
+      "detail": "GDPR rights are documented: access, rectification, erasure, restriction, data portability, and objection. Users can contact privacy@mimi.io to exercise these rights. The company is registered with the Berlin Data Protection Authority. However, no self-service deletion or automated export is mentioned for the app.",
+      "policy_excerpt": "You have the right to... Ask us to delete/destroy/otherwise remove your information... You can complete the request to exercise your right by contacting us at privacy@mimi.io",
+      "concerns": ["No self-service deletion in app", "Manual email request required", "No clarity on response timeframe for app data specifically"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company can update the privacy rules at any time and says it will try to tell you about big changes, but you should check the page yourself.",
+      "detail": "The notice states: 'We may update this privacy notice from time-to-time by posting a new version. We advise you to check this page occasionally to ensure you are happy with any changes. However, we will endeavor to provide you with an announcement about any significant changes.' No commitment to email notifications, in-app alerts, or re-consent requirements.",
+      "policy_excerpt": "We may update this privacy notice from time-to-time by posting a new version. We advise you to check this page occasionally to ensure you are happy with any changes. However, we will endeavor to provide you with an announcement about any significant changes.",
+      "concerns": ["Passive notification primarily via website posting", "No email or in-app alert commitment", "No re-consent requirement after changes"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "caution",
+        "max": 25,
+        "rate": 0.3,
+        "deduction": 7.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 43.25,
+    "final_score": 79,
+    "grade": "B"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://sagomini.com/privacy-policy/",
+    "terms_url": "https://sagomini.link/termsofuse",
+    "policy_last_updated": "2026-03-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "sago-mini-first-words-kids-1",
+    "name": "Sago Mini First Words: Kids 1+",
+    "developer": "Sago Sago Toys Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/sago-mini-first-words-kids-1/id1592702367",
+    "app_store_id": "1592702367",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/c4/43/7bc4431c-bdfb-50b5-8f78-fb6c17624baa/app-icon-with-sago-badge-0-0-1x_U007epad-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "sub_category": "",
+    "description": "The best speech companion for kids. Sago Mini First Words is the most playful way to support your little one's speech development! Discover thoughtfully-designed learning games developed with the guidance of speech-language pathologists, child psychologists, and child development experts."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 79,
+    "grade": "B",
+    "one_liner": "A COPPA-certified kids' speech app that collects some child data and shares with many service providers, but offers strong local protections.",
+    "summary": "Sago Mini First Words is a speech-development app for children aged 1+ from a well-known children's app developer. The app is COPPA certified and kidSAFE certified, with no ads or in-app purchases. However, it collects children's first names and ages for profiles, gathers multiple device identifiers for analytics and marketing attribution, and shares data with a broad network of third-party service providers (Mixpanel, Firebase, BigQuery, AppsFlyer, OneSignal, etc.). Camera, microphone, and speech recognition data is processed locally and ephemerally, which is a strong positive. Parents should be aware that while safeguards exist, the data footprint is larger than minimal.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app has strong child-safety certifications and processes sensitive media data locally. However, parents who are privacy-conscious should review the extensive list of analytics and service providers, and consider whether they are comfortable with device-level tracking for attribution purposes."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_third_party_sharing",
+        "title": "Data shared with many service providers",
+        "plain_english": "The app sends your data to a long list of companies including Mixpanel, Firebase, BigQuery, AppsFlyer, OneSignal, and Amazon Web Services for analytics, crash reporting, hosting, and marketing attribution.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_child_data_collection",
+        "title": "Collects children's names and ages",
+        "plain_english": "When you create a child profile, the app asks for your child's first name and age to customize difficulty levels and track progress.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_ids_for_tracking",
+        "title": "Collects multiple device identifiers",
+        "plain_english": "The app collects persistent identifiers like IDFV, App Set ID, and AppsFlyer ID to track how you use the app and measure the success of marketing campaigns.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_optional_camera_mic",
+        "title": "Optional camera and microphone access",
+        "plain_english": "Parents can choose to turn on camera, microphone, and speech recognition to improve the app's speech exercises. The good news is this data stays on your device and is never uploaded.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_coppa_kidsafe_certified",
+        "title": "COPPA and kidSAFE certified",
+        "plain_english": "The app has been independently certified as compliant with COPPA (the US children's privacy law) and carries the kidSAFE seal, meaning it meets strict standards for protecting kids' privacy.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_local_media_processing",
+        "title": "Camera and microphone data stays local",
+        "plain_english": "If you allow camera, microphone, or speech recognition, that audio and video is processed right on your device and never sent to Sago Mini's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_no_iap",
+        "title": "No ads and no in-app purchases",
+        "plain_english": "There are no advertisements inside the app and no extra purchases for your child to accidentally make while playing.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_data_sales",
+        "title": "Explicitly says it does not sell data",
+        "plain_english": "The company clearly states it does not sell your personal information to data brokers or third parties for marketing purposes.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Camera, microphone, and speech recognition are optional and only used for the in-game experience. Data is processed locally on your device and never uploaded.",
+      "detail": "Parents can optionally allow microphone, camera, and speech recognition permissions to improve the speech-learning experience. The policy explicitly states this data is processed ephemerally and saved only locally to the user's device.",
+      "policy_excerpt": "Parents can optionally allow microphone, camera and speech recognition permissions to improve the experience of the Sago Mini First Words app for their child. This data is only used as part of the in-game experience and is not used for content creation. This data is processed ephemerally and only saved locally to the user's device.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not request or access your device's GPS location.",
+      "detail": "No location permissions are requested by the app. The company may derive approximate location from your IP address at the network level for analytics, but this is not app-level GPS access.",
+      "policy_excerpt": "No explicit GPS or location permission requests for Sago Mini First Words.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app never accesses your contacts or phonebook.",
+      "detail": "There is no mention of contacts or phonebook access anywhere in the privacy policy for this app.",
+      "policy_excerpt": "No contacts or phonebook data collection mentioned.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app only saves screenshots locally on your device if you use the snapshot feature. It does not scan or upload your files.",
+      "detail": "Screenshot functionality exists in some Sago Mini apps, but screenshots are saved only locally and can be removed by deleting them from the device's gallery. No broad file access is mentioned.",
+      "policy_excerpt": "Screenshots are saved only on device, and are not collected by Sago Mini.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with a wide range of service providers for analytics, hosting, customer support, payments, and marketing attribution.",
+      "detail": "The app shares data with Mixpanel, Firebase, BigQuery, Vertex AI, AWS, SendGrid, Help Scout, AppsFlyer, BackTrace, Firebase Crashlytics, Unity Cloud Diagnostics, Chargebee, and OneSignal. Data is also shared with Spin Master Group companies. The company states no personal data is shared with third-party ad networks for marketing campaigns.",
+      "policy_excerpt": "We use Mixpanel, Firebase, BigQuery and Vertex AI for analytics. We use Amazon Web Services for hosting. We use SendGrid to send account management emails. We use Help Scout for customer service. We also work with AppsFlyer as an attribution provider.",
+      "concerns": ["Large number of third-party processors", "Marketing attribution through AppsFlyer"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Creating an account requires your email, password, and child's first name and age. This is needed to use the subscription service and customize your child's learning.",
+      "detail": "Account creation collects email, password, account ID, Piknik profile ID, child's first name, and child's age. Payment details and billing address are collected for subscriptions. Single Sign On options may also be used.",
+      "policy_excerpt": "When You register for an account for one of the Services... Password, Email Address, Single Sign On, CRM ID, Account ID... Child's first name, Child's Age.",
+      "concerns": ["Child's first name collected", "Child's age collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks how your child interacts with it to understand engagement and measure how well marketing campaigns are working.",
+      "detail": "User information, device information, app interactions, and other installed Sago Mini apps are collected for analytics. AppsFlyer is used for marketing attribution to measure driven installs and click-through rates. The company states no personal data is shared with third-party networks for marketing analysis.",
+      "policy_excerpt": "For the purpose of marketing campaigns to measure ad performance by driven installs and click through rates on various media platforms... no personal data is shared with any third party networks.",
+      "concerns": ["Marketing attribution tracking", "Collection of app interaction data"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is designed for young children and is COPPA certified, but it still collects some personal information like your child's first name and age.",
+      "detail": "The app is COPPA certified by the kidSAFE Seal Program and adheres to strict children's privacy standards. However, child profiles require a first name and age. The company claims to limit data collection beyond what is necessary. A separate Children's Privacy Policy exists.",
+      "policy_excerpt": "The Sago Mini, Toca Boca, and Originator Apps listed below are COPPA certified by the kidSAFE Seal Program... We adhere to the strict guidelines set forth by COPPA.",
+      "concerns": ["Child's first name and age collected for profiles"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your internet connection details including your IP address, which can reveal your approximate location.",
+      "detail": "IP address is collected as part of device information and used to derive approximate location. This is standard practice but is used for analytics and understanding user engagement.",
+      "policy_excerpt": "Information from Your device - such as device IDs... IP address (including Your approximate location).",
+      "concerns": ["IP address used for approximate location inference"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects several unique device IDs and technical details about your phone or tablet to track app usage and link marketing campaigns to installs.",
+      "detail": "Device IDs, IDFV, App Set ID, Appsflyer ID, operating system, platform, and screen resolution are collected. These are used for analytics, crash reporting, and marketing attribution.",
+      "policy_excerpt": "Information from Your device - such as device IDs, Android ID, IDFV, App Set ID, operating system, platform, screen resolution and similar information about Your device and device settings/usage.",
+      "concerns": ["Multiple persistent identifiers collected", "AppsFlyer ID for attribution"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect any health or biometric information.",
+      "detail": "No health or biometric data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "No health or biometric data mentioned.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you subscribe, the app collects your payment and billing details to process the subscription.",
+      "detail": "Payment details, billing address, amount paid, and subscription information are collected when making purchases. Chargebee is used for payment processing on websites. The app itself likely uses Apple in-app purchase mechanisms.",
+      "policy_excerpt": "When You make a purchase we process the following information in order to fulfill Our contract with You... Payment Details, Billing Address, Amount Paid, Subscription Purchased.",
+      "concerns": ["Payment and billing data collected for subscriptions"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask the company to delete your data, but some information may be kept in an anonymous form rather than fully erased.",
+      "detail": "GDPR rights are provided including right to erasure. The company states data will be kept as long as necessary unless you ask for removal. For analytics, data may be anonymized instead of deleted, and stored indefinitely.",
+      "policy_excerpt": "For analytics, instead of deleting Your personal data We may anonymise the personal data so that no direct or indirect identifiers remain and after such anonymisation We will store the information for an indefinite period.",
+      "concerns": ["Analytics data anonymized rather than deleted", "Requires user-initiated request for deletion"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company will tell you about big changes to the privacy policy, but simply continuing to use the app after a notice is posted may count as accepting the new terms.",
+      "detail": "Notice is provided for material changes, and consent is obtained where required by law. Notice may be sent by email or posted on sites and applications.",
+      "policy_excerpt": "We will provide notice to You if these changes are material and, where required by applicable law, We will obtain Your consent. The notice may be sent to You by email... by posting notice of such changes on Our sites and applications.",
+      "concerns": ["Continued use after posted notice may imply acceptance"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 43.5,
+    "final_score": 79,
+    "grade": "B"
+  }
+}

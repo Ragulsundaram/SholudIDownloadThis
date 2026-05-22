@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.dong.digital/braille/privacy/",
+    "terms_url": "https://dong.digital/braille/tos",
+    "policy_last_updated": "2018-09-28",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "braille-academy-play-learn",
+    "name": "Braille Academy: Play & Learn",
+    "developer": "Xiang Dong",
+    "app_store_url": "https://apps.apple.com/in/app/braille-academy-play-learn/id1561530189",
+    "app_store_id": "1561530189",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/ac/93/f1ac93ca-2d2d-862b-6483-200600f21ac1/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/512x512bb.jpg",
+    "category": "Education",
+    "sub_category": "Accessibility",
+    "description": "An educational app that teaches Unified English Braille through 59 levels and 29 challenges, covering letters, numbers, contractions, and short-form words. Works completely offline."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 84,
+    "grade": "A",
+    "one_liner": "A clean, ad-free Braille learning app that mostly works offline, but collects some device data through Firebase analytics and claims not to be for children under 18 despite being a 4+ education app.",
+    "summary": "Braille Academy is a well-designed educational app for learning Unified English Braille with no ads and offline functionality. It collects minimal personal data, using Firebase analytics for usage monitoring. However, the privacy policy claims the app is not for children under 18, which contradicts its 4+ App Store rating and educational purpose.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app is genuinely useful for learning Braille, works offline, and has no ads. The data collection is limited to standard analytics, though parents should note the policy's age contradiction."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_age_contradiction",
+        "title": "Policy claims app is not for children",
+        "plain_english": "The app is rated 4+ and teaches Braille, but its privacy policy says it is not meant for anyone under 18. This is a strange contradiction for an educational app.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_firebase_tracking",
+        "title": "Firebase analytics tracks usage",
+        "plain_english": "The app uses Firebase, a Google service, to track how you use the app. This includes your device information and app activity.",
+        "severity": "low"
+      },
+      {
+        "id": "red_data_transfer_switzerland",
+        "title": "Data transferred to Switzerland",
+        "plain_english": "Your data may be sent to and stored on computers in Switzerland, where data protection laws may be different from your country.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_ads",
+        "title": "No ads in the app",
+        "plain_english": "The developer explicitly states there are absolutely no disturbing ads in the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_works_offline",
+        "title": "Works completely offline",
+        "plain_english": "The app works entirely without an internet connection, meaning most of your activity stays on your device.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_deletion_available",
+        "title": "You can request data deletion",
+        "plain_english": "You can email the developer to ask for your data to be deleted from their systems.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sensitive_permissions",
+        "title": "No sensitive permissions needed",
+        "plain_english": "The app does not ask for your location, contacts, camera, microphone, or other sensitive device features.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not use your camera or microphone.",
+      "detail": "No camera or microphone access is mentioned in the privacy policy or app description.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect your location.",
+      "detail": "No location or GPS data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "No contacts or phonebook access is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app stores your learning progress and certificates on your device.",
+      "detail": "The app stores user progress through levels and challenges, as well as earned certificates. Data is primarily stored locally since the app works offline.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your data with third-party companies like Google (Firebase) that help analyze app usage. These companies are supposed to only use your data to help run the app.",
+      "detail": "The policy states that third-party Service Providers are employed to facilitate the Service, including Firebase for analytics. These providers have access to Personal Data only to perform tasks and are obligated not to disclose or use it for other purposes.",
+      "policy_excerpt": "We may employ third party companies and individuals to facilitate our Service... These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.",
+      "concerns": ["Third-party analytics providers (Firebase/Google) have access to data"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device information and may use cookies to identify you and remember your preferences.",
+      "detail": "Personal Data collected includes Cookies and Usage Data. The app uses Session Cookies, Preference Cookies, and Security Cookies. Usage Data includes device type, unique ID, IP address, mobile OS, and browser type.",
+      "policy_excerpt": "While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you... Cookies and Usage Data",
+      "concerns": ["Device identifiers collected", "Cookies used for tracking and preferences"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses cookies and Firebase analytics to track how you use the app. While there are no ads, your activity is monitored for analytics purposes.",
+      "detail": "The app uses cookies and similar tracking technologies including beacons, tags, and scripts to collect and track information. Firebase analytics is used to monitor app usage. Users can opt-out through mobile device advertising settings.",
+      "policy_excerpt": "We use cookies and similar tracking technologies to track the activity on our Service and hold certain information... We may use third-party Service Providers to monitor and analyze the use of our Service. Firebase is analytics service provided by Google Inc.",
+      "concerns": ["Cookie-based tracking", "Firebase analytics monitors usage", "Device advertising settings mentioned in opt-out"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 4+ and teaches Braille, but its privacy policy says it is not for anyone under 18. This is a contradiction, though the developer says they will remove data if they learn it was collected from a child without parental consent.",
+      "detail": "The App Store rating is 4+ and the app is clearly an educational tool that could be used by children. However, the privacy policy states: 'Our Service does not address anyone under the age of 18 (Children). We do not knowingly collect personally identifiable information from anyone under the age of 18.' If data from children is discovered, they will remove it.",
+      "policy_excerpt": "Our Service does not address anyone under the age of 18 ('Children'). We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.",
+      "concerns": ["App rated 4+ but policy claims not for under-18s", "No explicit COPPA compliance", "Generic age limit inconsistent with educational nature"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your internet address and device details when you use it, even though the app itself works offline.",
+      "detail": "Usage Data includes IP address, browser type, browser version, pages visited, time and date of visit, time spent on pages, unique device identifiers, and diagnostic data. When accessed via mobile device, mobile device type, unique ID, mobile IP address, mobile OS, and mobile browser type are collected.",
+      "policy_excerpt": "This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.",
+      "concerns": ["IP address logged", "Browsing/app activity tracked", "Device identifiers collected"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects details about your device like its type, operating system, and unique identifiers to understand how you use the app.",
+      "detail": "Mobile device type, unique ID, IP address, mobile operating system, mobile Internet browser type, and unique device identifiers are automatically collected as part of Usage Data.",
+      "policy_excerpt": "When you access the Service by or through a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.",
+      "concerns": ["Unique device identifiers collected", "Device fingerprinting via combined data points"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data.",
+      "detail": "No health, medical, or biometric data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app offers in-app purchases but your payment details are handled directly by Apple.",
+      "detail": "The app has in-app purchases (premium content unlock) which are processed through Apple's standard in-app purchase system. No payment data is handled by the developer.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can email the developer to ask for your data to be deleted, but there is no automatic delete button in the app.",
+      "detail": "Users can request data deletion by emailing data-deletion@dong.digital, mentioning the app and platform. Additional data may be requested to verify identity and locate the correct data. No self-service deletion is available.",
+      "policy_excerpt": "If you wish to delete the data linked to your device or account, send an email to data-deletion@dong.digital, mentioning the app and the platform. You might be asked to provide additional data that is required for us to identify the data associated with your account & device correctly, to be able to properly remove it.",
+      "concerns": ["No self-service deletion", "Manual email request required", "May need to provide additional data for verification"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company promises to email you and post a notice before making big changes to the privacy rules.",
+      "detail": "The policy states: 'We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the effective date at the top of this Privacy Policy.' This is better than passive notification.",
+      "policy_excerpt": "We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the 'effective date' at the top of this Privacy Policy.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "caution",
+        "max": 25,
+        "rate": 0.3,
+        "deduction": 7.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      }
+    ],
+    "total_deductions": 33,
+    "final_score": 84,
+    "grade": "A"
+  }
+}

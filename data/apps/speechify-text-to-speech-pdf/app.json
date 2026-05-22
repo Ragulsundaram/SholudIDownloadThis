@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://speechify.com/privacy/",
+    "terms_url": "https://speechify.com/terms/",
+    "policy_last_updated": "2024-06-10",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "speechify-text-to-speech-pdf",
+    "name": "Speechify – Text to Speech PDF",
+    "developer": "Speechify Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/speechify-text-to-speech/id1209815023",
+    "app_store_id": "1209815023",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/cb/7b/47cb7bc1-feba-23ae-4207-1648d9e057e5/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Utilities",
+    "description": "Text to speech app that reads PDFs, docs, articles, and more aloud using AI voices."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 74,
+    "grade": "B",
+    "one_liner": "Solid privacy stance on selling data, but loads tracking pixels and stores your documents on its servers.",
+    "summary": "Speechify promises not to sell your personal data and does not share it for third-party advertising. However, it deploys numerous advertising and analytics trackers (Meta Pixel, Google, Bing, TikTok) and stores the documents you upload on its US-based servers. Policy changes are binding if you keep using the app.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app has a respectable no-sale policy and decent user rights, but the extensive tracker network and US data hosting warrant caution for privacy-conscious users."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_multiple_tracking_pixels",
+        "title": "Loads many ad and analytics trackers",
+        "plain_english": "The app and website use Meta Pixel, Google Global Site Tag, Google Conversion Tracking, Bing Event Tracking, TikTok Pixel, and several analytics tools to monitor your activity and measure ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_user_content_stored_on_servers",
+        "title": "Your documents live on their servers",
+        "plain_english": "Any text, PDFs, or documents you upload are synced to Speechify's servers in the United States so you can access them across devices.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_policy_changes_auto_accept",
+        "title": "Policy changes auto-apply if you keep using",
+        "plain_english": "If Speechify updates its privacy policy, your continued use of the app counts as agreeing to the new terms. You must delete your account if you disagree.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_us_data_storage",
+        "title": "Data stored in the United States",
+        "plain_english": "All your information is transferred to and stored on servers in the US, which has weaker privacy protections than many other countries.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_selling_data",
+        "title": "Does not sell or rent your data",
+        "plain_english": "Speechify explicitly promises it does not sell or rent your personal data to anyone.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_third_party_ads",
+        "title": "No sharing for third-party ads",
+        "plain_english": "The company says it does not share your personal data with third parties so they can show you advertisements.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_contacts_on_device_only",
+        "title": "Keyboard contacts stay on your device",
+        "plain_english": "If you give the Speechify Keyboard access to your contacts, those names are stored only on your phone and are never sent to Speechify's servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion_available",
+        "title": "You can delete your account",
+        "plain_english": "You can delete your account and personal data through the app's Settings page at any time.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention camera or microphone access. The app likely uses the microphone for voice typing and the camera for document scanning, but this is not addressed in the policy.",
+      "detail": "The app's features suggest camera (document scanning) and microphone (voice typing/dictation) may be used, but the privacy policy is silent on these permissions.",
+      "policy_excerpt": "No mention of camera or microphone access in the privacy policy.",
+      "concerns": ["Policy does not disclose camera or microphone practices despite app features that likely require them."],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify infers your general location from your IP address when you use the app or website.",
+      "detail": "Location is derived from IP address or similar identifier, not precise GPS. Used for analytics and security purposes.",
+      "policy_excerpt": "Location information. This is the geographic area where you use your computer and mobile devices (as indicated by an Internet Protocol (IP) address or similar identifier).",
+      "concerns": ["IP-based location inferred automatically", "No opt-out mentioned for location logging"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The Speechify Keyboard can access your contacts' names, but they are stored only on your device and never sent to Speechify's servers.",
+      "detail": "Contact names are used for spelling suggestions in the keyboard and are kept strictly on-device.",
+      "policy_excerpt": "Names of user contacts in Speechify Keyboard (on-device storage only)... These names will be stored solely on your device within the Speechify Keyboard app and are never sent to Speechify servers.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You upload documents, PDFs, and text so the app can read them aloud. This content is synced to Speechify's servers.",
+      "detail": "User Content consists of all text, documents, or other content uploaded or transmitted by the user. Stored locally and synced to servers.",
+      "policy_excerpt": "User Content. This consists of all text, documents, or other content or information uploaded, entered, or otherwise transmitted by you in connection with your use of the Services and/or Software.",
+      "concerns": ["User documents stored on US servers", "May be reviewed for Terms of Service violations or support requests"],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify shares data with service providers for hosting, analytics, and customer support, but promises not to sell it or share it for third-party advertising.",
+      "detail": "Shared with service providers (hosting, email, analytics, customer support), with explicit consent, for legal compliance, and in business transfers. Non-Personal Data may be disclosed publicly.",
+      "policy_excerpt": "Speechify does not share your Personal Data with third parties for the purpose of enabling them to deliver their advertisements to you. No, Speechify does not sell or rent your Personal Data.",
+      "concerns": ["Extensive list of third-party analytics and advertising trackers used", "Business transfer clause allows data sharing in mergers/acquisitions"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide an email and username to create an account. Social login data is collected only with your permission.",
+      "detail": "Collects username, email, contact/language preferences. Social login info (name, email) obtained with permission. Can remove access at any time.",
+      "policy_excerpt": "Your username, email address, and contact and language preferences. If you log into Speechify with a social networking credential... we will ask permission to access basic information from that account.",
+      "concerns": ["Account required to use service"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify uses cookies, Meta Pixel, Google tags, Bing, and TikTok trackers to measure the effectiveness of its own advertising and marketing campaigns.",
+      "detail": "Uses cookies, tracking pixels, and web beacons. Third-party services include Google Analytics, Hotjar, Amplitude, Segment, Meta Pixel, Google Global Site Tag, Bing UET, TikTok Pixel, and Intercom.",
+      "policy_excerpt": "Speechify uses cookies and similar technologies... to help deliver ads for relevant Speechify products and services to you when you visit certain pages on the Site and then visit certain third-party sites.",
+      "concerns": ["Does not respond to Do Not Track requests", "Marketing trackers active across platforms", "Cookie consent required but continued tracking possible"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify says it does not knowingly collect data from children under 13, except through school licenses.",
+      "detail": "Standard 13+ age gate. If part of Education license, school admins may access account. No strong age verification described.",
+      "policy_excerpt": "Unless your Speechify account is part of a Speechify for Education license, Speechify does not knowingly collect personal information from children under the age of 13.",
+      "concerns": ["No enforcement mechanism for age gate mentioned", "Education accounts allow school admin access"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify logs your IP address, browser type, and how you use the app to analyze traffic and improve features.",
+      "detail": "Log data includes IP address, browser type/settings, date/time of use, language preferences, and cookie data. Usage information aggregated for analytics.",
+      "policy_excerpt": "This log data may include IP address, browser type and settings, date and time of use, information about browser configuration, language preferences, and cookie data.",
+      "concerns": ["IP address logged automatically", "Usage data shared with analytics partners"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify collects information about your device type, operating system, and unique device identifiers.",
+      "detail": "Device information includes hardware/software type, OS, browser type, and unique device identifiers for devices using Speechify Software.",
+      "policy_excerpt": "Device information. This is data from your computer or mobile device, such as the type of hardware and software you are using (for example, your operating system and browser type), as well as unique device identifiers for devices that are using Speechify Software.",
+      "concerns": ["Unique device identifiers collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify does not collect health or biometric data.",
+      "detail": "No mention of health or biometric data collection in the privacy policy.",
+      "policy_excerpt": "No mention of health or biometric data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If you pay for a subscription, Speechify collects payment information. You can also pay through PayPal, which handles your card details directly.",
+      "detail": "Payment information required for paid subscriptions. PayPal option means card details go directly to PayPal. Otherwise, Speechify processes payment data for transaction fulfillment.",
+      "policy_excerpt": "Your payment information, if you are a paying customer. This is required to complete a commercial transaction on the Site. If you choose to use PayPal... you will provide your credit card number directly to PayPal.",
+      "concerns": ["Payment data retained for fraud detection and legal obligations"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account through Settings, but some data may be kept for fraud prevention and legal reasons.",
+      "detail": "Account deletion available via Settings. Paid subscribers must cancel first. Some Personal Data kept for fraud detection, legal reporting, and auditing obligations. GDPR/CCPA rights acknowledged.",
+      "policy_excerpt": "You can remove your Personal Data from Speechify at any time by logging into your account, accessing the Settings page, and then deleting your account. However, we may keep some of your Personal Data for as long as reasonably necessary for our legitimate business interests.",
+      "concerns": ["Some data retained after deletion for legal/fraud purposes"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Speechify will email you or post updates on its website if the privacy policy changes, but continuing to use the app means you accept the new terms.",
+      "detail": "Material changes notified by email or posting on site. Continued use constitutes acceptance. Users must delete account to avoid new terms.",
+      "policy_excerpt": "We will notify you of any material changes that impact your rights under this Policy by email... or post any other revisions to this Policy... Please note that your continued use of Speechify after any change means that you agree with and consent to be bound by the new Policy.",
+      "concerns": ["Continued use equals automatic acceptance of changes"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 54,
+    "final_score": 74,
+    "grade": "B"
+  }
+}

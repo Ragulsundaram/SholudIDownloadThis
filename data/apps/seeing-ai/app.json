@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://privacy.microsoft.com/en-us/privacystatement/",
+    "terms_url": "",
+    "policy_last_updated": "2026-03",
+    "needs_review": true,
+    "review_notes": "Privacy policy is Microsoft's general 320KB corporate statement with no Seeing AI-specific section. Critical gaps around how camera images, facial recognition data, and photos from other apps are processed and stored."
+  },
+  "app": {
+    "slug": "seeing-ai",
+    "name": "Seeing AI",
+    "developer": "Microsoft Corporation",
+    "app_store_url": "https://apps.apple.com/in/app/seeing-ai/id999062298",
+    "app_store_id": "999062298",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/a6/66/bea6661d-294b-f35d-34e1-3128b7b12006/AppIcons-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+    "category": "Productivity",
+    "sub_category": "Accessibility",
+    "description": "A free app that narrates the world around you using AI. Designed for the blind and low vision community, it describes nearby people, text, objects, and more through the camera."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 68,
+    "grade": "C",
+    "one_liner": "A powerful and genuinely helpful accessibility app, but every photo you take is sent to Microsoft's cloud for AI analysis, and the privacy policy doesn't explain how long those images are kept or who can see them.",
+    "summary": "Seeing AI uses your camera to capture images of the world around you and sends them to Microsoft's servers for AI-powered analysis. It can read text, describe scenes, recognize faces, scan barcodes, identify currency, and more. While Microsoft has strong security practices, the generic corporate privacy policy provides almost no detail about how your camera images, facial data, or photos from other apps are processed, stored, or deleted.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app provides genuinely valuable accessibility features, but users should understand that every image captured is sent to Microsoft's cloud and the privacy documentation is inadequate for an app this intimate."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_all_photos_sent_to_cloud",
+        "title": "Every photo you take is sent to Microsoft",
+        "plain_english": "When you point the camera at something, the photo is sent to Microsoft's computers over the internet so their AI can describe it. The app does not work without sending your photos to the cloud.",
+        "severity": "high"
+      },
+      {
+        "id": "red_facial_recognition_data",
+        "title": "Facial recognition data stored by Microsoft",
+        "plain_english": "When you save photos of friends or coworkers to recognize them later, those faces are stored on Microsoft's servers. The privacy policy does not say how long this facial data is kept or how it is protected.",
+        "severity": "high"
+      },
+      {
+        "id": "red_generic_privacy_policy",
+        "title": "No app-specific privacy policy",
+        "plain_english": "The privacy policy is Microsoft's massive corporate document with over 320,000 characters. It is not tailored to this app and does not explain how your camera images or facial data are handled.",
+        "severity": "high"
+      },
+      {
+        "id": "red_photos_from_other_apps",
+        "title": "Can access photos from other apps",
+        "plain_english": "The app can describe photos and videos from other apps on your phone, including Mail, Photos, and WhatsApp. This means it can access your entire photo library if you allow it.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_ads",
+        "title": "No ads",
+        "plain_english": "The app is completely free and does not show any advertisements.",
+        "severity": "positive"
+      },
+      {
+        "id": "gdpr_rights_available",
+        "title": "GDPR and data rights available",
+        "plain_english": "As a Microsoft product, you have rights to access, delete, or move your data under European privacy laws.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_microsoft_security",
+        "title": "Microsoft has strong security practices",
+        "plain_english": "Microsoft operates major data centers worldwide with security certifications and legal compliance frameworks.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_designed_for_community",
+        "title": "Designed with the blind community",
+        "plain_english": "The app was developed in partnership with the blind and low vision community, which suggests genuine accessibility intent rather than data collection motive.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app needs your camera for everything it does. Every photo you take is sent to Microsoft's servers over the internet for AI analysis. This includes photos of people, documents, products, and your surroundings.",
+      "detail": "The app's entire functionality depends on camera access. It captures images of text, people, products, currency, colors, and scenes, then sends them to Microsoft's cloud servers for AI processing. The app cannot function without cloud processing. Saved face photos for person recognition are also stored on Microsoft's servers.",
+      "policy_excerpt": "",
+      "concerns": ["All camera images sent to Microsoft cloud", "No on-device processing option mentioned", "Facial data stored for person recognition feature"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track your exact location.",
+      "detail": "No GPS or precise location data collection is mentioned for the app itself. The Audio Augmented Reality 'World' feature uses LiDAR for spatial audio, but this is device-local processing.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "No contacts or phonebook access is mentioned in the app description. The 'People' feature saves photos of individuals within the app, not from your contacts.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app can access and describe photos and videos from other apps on your phone, including your photo library, Mail, Photos, and WhatsApp.",
+      "detail": "The app features 'Browse Photos' to describe photos and videos saved on the device, and 'Photos and Videos in other apps' via Share sheet integration. This means it can access the user's entire photo library when granted permission. These photos are also sent to Microsoft's cloud for analysis.",
+      "policy_excerpt": "",
+      "concerns": ["Access to entire photo library via Share sheet", "Existing personal photos sent to cloud for analysis", "No clarity on whether photos from other apps are stored"],
+      "score_impact": 6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Microsoft may share your data with other companies that help run their services, or when required by law. Your photos and facial data could be included.",
+      "detail": "Microsoft's privacy statement mentions sharing personal data with third parties for fraud prevention, credit risk reduction, legal obligations, and service provision. While Microsoft states they do not use personal files for ad targeting, the policy does not specifically address how Seeing AI image data is protected from broader data sharing.",
+      "policy_excerpt": "We share your personal data with your consent or as necessary to complete any transaction or provide any product you have requested or authorized... Additionally, when you save a payment method... your purchase receipts may be shared with anyone else who uses and has access to the same payment method",
+      "concerns": ["Broad data sharing provisions in corporate policy", "No Seeing AI-specific data sharing restrictions", "Law enforcement disclosure possible"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use the app without signing in, but if you use a Microsoft account, your data is tied to that account and synced across devices.",
+      "detail": "The app description does not mention requiring a Microsoft account. However, Microsoft's general privacy policy discusses account-based data collection and cross-device syncing. Using the app without an account would limit data linkage.",
+      "policy_excerpt": "",
+      "concerns": ["Account-based data linkage possible", "Cross-device syncing if signed in"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is free and does not show ads or track your behavior for advertising.",
+      "detail": "Microsoft explicitly states they do not use personal files (documents, photos) for ad targeting. The app itself is ad-free and there is no mention of behavioral tracking for ads within the app.",
+      "policy_excerpt": "Microsoft does not use what you say in email, human-to-human chat, video calls, or voice mail, or your documents, photos, or other personal files to target ads to you.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 4+ and Microsoft has a section on collecting data from children.",
+      "detail": "The app is rated 4+ on the App Store. Microsoft's privacy statement includes a section on collection of data from children, requiring parental consent for users under a certain age. However, given the app's camera-based nature and cloud processing of images, parents should be cautious about children's use.",
+      "policy_excerpt": "",
+      "concerns": ["Camera images of children sent to cloud", "Facial recognition applied to minors if saved"],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app requires an internet connection for everything it does. Every photo you take is uploaded to Microsoft's servers.",
+      "detail": "The app is fundamentally a cloud-based AI service. All image analysis happens on Microsoft's servers, requiring constant internet connectivity. Network data including IP addresses, device identifiers, and usage patterns are collected as part of Microsoft's standard analytics.",
+      "policy_excerpt": "",
+      "concerns": ["All image analysis requires cloud upload", "IP address and device data logged", "No offline mode available"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Microsoft collects information about your device like its type and operating system when you use the app.",
+      "detail": "Microsoft collects device information to provide, improve, and protect services. For Seeing AI specifically, device type and capabilities (LiDAR availability, iOS version) would be relevant for feature enablement.",
+      "policy_excerpt": "",
+      "concerns": ["Device information collected as part of standard Microsoft analytics"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data like heart rate or fingerprints.",
+      "detail": "No health or biometric data collection is mentioned. While the app is designed for people with visual impairments, it does not process medical or health data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is completely free and does not handle payments.",
+      "detail": "Seeing AI is a free app with no in-app purchases or subscription options mentioned.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can use Microsoft's privacy dashboard to see and delete some of your data, but there is no easy way to delete specific photos you took with the app.",
+      "detail": "Microsoft provides a Privacy Dashboard for viewing and managing some personal data. However, there is no clear mechanism for deleting specific camera images or facial recognition data captured through Seeing AI. Users can contact Microsoft privacy support for requests.",
+      "policy_excerpt": "",
+      "concerns": ["No self-service deletion of specific images", "No clarity on facial data deletion", "Privacy dashboard is generic, not app-specific"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Microsoft can change the privacy rules at any time and will post updates, but you are expected to check the page yourself.",
+      "detail": "Microsoft's privacy statement notes it may be updated from time to time. Users are advised to review it periodically. Changes are effective when posted. No commitment to email all users or require re-consent for existing data.",
+      "policy_excerpt": "",
+      "concerns": ["Passive notification only", "No re-consent requirement", "Generic corporate policy changes may affect app without specific notice"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "camera_microphone",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      },
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 40.25,
+    "final_score": 80,
+    "grade": "A"
+  }
+}

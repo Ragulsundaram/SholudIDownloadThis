@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://dreamoriented.org/privacypolicy/",
+    "terms_url": "https://dreamoriented.org/termsofuse/",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "Privacy policy is a generic website template (mentions 'blog, website or app', 'surf the website', 'Google AdSense') with multiple contradictions regarding the app's actual child-directed nature."
+  },
+  "app": {
+    "slug": "wingo-daily-planner-for-kids",
+    "name": "Wingo - Daily Planner for Kids",
+    "developer": "DREAM ORIENTED YAZILIM VE BILISIM LIMITED SIRKETI",
+    "app_store_url": "https://apps.apple.com/in/app/wingo-daily-planner-for-kids/id1541521898",
+    "app_store_id": "1541521898",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3e/d6/bb/3ed6bbb6-803d-bfe6-6bbd-116a439117cd/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
+    "category": "Utilities",
+    "sub_category": "Education",
+    "description": "A simplified daily calendar and visual planner app designed for kids, especially children with special needs and developmental disorders, to plan and track daily activities."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 82,
+    "grade": "A",
+    "one_liner": "A helpful planner app for children with special needs that mostly keeps data on-device, but its privacy policy is a generic website template with contradictions.",
+    "summary": "Wingo helps children with special needs plan their day through visual timelines and activity tracking. The developer promises not to sell personal data and uses Apple for payments. However, the privacy policy is clearly a copy-paste website template that contradicts the app's actual child-directed purpose and leaves many details unclear.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app has good intentions for children's privacy and does not engage in aggressive data collection, but parents should be aware the privacy documentation is weak and generic."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_generic_policy_template",
+        "title": "Privacy policy is a generic website template",
+        "plain_english": "The privacy policy repeatedly mentions 'blog, website or app,' 'surf the website,' and 'Google AdSense' — things that have nothing to do with a kids' planner app. This suggests the developer copy-pasted a template without customizing it for this product.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_childrens_data_contradiction",
+        "title": "Contradiction about collecting children's data",
+        "plain_english": "The app is made for children with special needs, but the policy claims it does not collect information from children under 13. This directly contradicts the app's purpose and suggests the developer may not fully understand child privacy laws.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_behavioral_tracking",
+        "title": "Allows third-party behavioral tracking",
+        "plain_english": "The policy states that third-party behavioral tracking is allowed on their site, and non-personally identifiable visitor information may be provided to other parties for marketing and advertising.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_pii_sale",
+        "title": "Promises not to sell personal data",
+        "plain_english": "The developer explicitly says they do not sell, trade, or transfer your personal information to outside parties unless they give you advance notice first.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_currently",
+        "title": "No advertising currently in the app",
+        "plain_english": "The developer says Google AdSense is not currently enabled and they do not monetize child-targeted products with ads. Any future ads would be human-reviewed for kid-suitability.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_coppa_controls",
+        "title": "COPPA parental controls mentioned",
+        "plain_english": "For apps made for kids, parents are prompted to allow or deny the collection of usability data. Parents can also contact the developer to review, delete, or manage their child's information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payments_via_apple",
+        "title": "Payments handled securely by Apple",
+        "plain_english": "All subscription payments are processed through Apple, and the developer does not store or process your credit card information on their own servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_honors_dnt",
+        "title": "Honors Do Not Track signals",
+        "plain_english": "The developer says they honor Do Not Track browser signals and do not plant tracking cookies when a user has DNT enabled.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not use your camera or microphone.",
+      "detail": "No camera or microphone access is mentioned in the privacy policy or app description.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect your location.",
+      "detail": "No location or GPS data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "No contacts or phonebook access is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app stores your activity cards and daily planner data on your device so you can organize your schedule.",
+      "detail": "The app is a daily planner that stores user-created activity timelines, planner boards, and activity cards locally on the device. No broad file system access is mentioned.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says they do not sell your personal information, but they may share it with website hosting partners and other companies that help run their service. Non-personal visitor information may also be shared for marketing and advertising.",
+      "detail": "The policy states: 'We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information unless we provide users with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.' It also notes: 'non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.'",
+      "policy_excerpt": "We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information unless we provide users with advance notice... non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.",
+      "concerns": ["Non-personally identifiable data shared for marketing/advertising", "Hosting partners and service providers have access to data"],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app may ask for your name when you register. This is tied to your account and subscription.",
+      "detail": "The policy states users may be asked to enter their name or other details when ordering or registering. The app requires subscription registration for premium features.",
+      "policy_excerpt": "When ordering or registering on our site, as appropriate, you may be asked to enter your name or other details to help you with your experience.",
+      "concerns": ["Name collected during registration", "Minimal detail on what other details are collected"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer allows third-party behavioral tracking and says they may enable Google AdSense in the future. They do not currently use cookies for tracking.",
+      "detail": "The policy explicitly states: 'It's also important to note that we allow third-party behavioral tracking.' It also mentions: 'We have not enabled Google AdSense on our site but we may do so in the future.' Additionally: 'We do not use cookies for tracking purposes.' Non-personally identifiable visitor information may be provided for marketing and advertising.",
+      "policy_excerpt": "We do not use cookies for tracking purposes... It's also important to note that we allow third-party behavioral tracking... We have not enabled Google AdSense on our site but we may do so in the future.",
+      "concerns": ["Third-party behavioral tracking allowed", "Potential future Google AdSense", "Non-PII visitor data shared for marketing"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is made for children with special needs, and the developer claims to follow COPPA rules. Parents can contact them to manage their child's data. However, the policy also claims they do not collect information from children under 13, which contradicts the app's purpose.",
+      "detail": "The app is explicitly designed for children, especially those with special needs and developmental disorders. The COPPA section states: 'We market to, but do not collect information from children under 13.' This is contradictory since the app requires registration and subscription. However, the policy also mentions parental consent prompts: 'For apps and websites we sustain made especially for kids, parents will be prompted with a conversation where they can explicitly allow or deny the collection of usability data from kids under 13.' Parents can review, delete, manage, or refuse data sharing by contacting the developer.",
+      "policy_excerpt": "We market to, but do not collect information from children under 13. We don't let third-parties, including ad networks or plug-ins collect PII from children under 13... For apps and websites we sustain made especially for kids, parents will be prompted with a conversation where they can explicitly allow or deny the collection of usability data from kids under 13.",
+      "concerns": ["Contradiction: app is for children but policy claims not to collect from under-13s", "No explicit COPPA compliance certification", "Parental consent mechanism mentioned but not detailed"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app connects to the internet and the developer says non-personal visitor information may be shared with other parties for marketing and advertising.",
+      "detail": "The policy mentions that non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses. No specific details on IP logging or network monitoring are provided beyond standard website analytics references.",
+      "policy_excerpt": "non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.",
+      "concerns": ["Non-PII visitor data shared for marketing", "Generic policy lacking app-specific network details"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "unknown",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explain what device information is collected or how it is used.",
+      "detail": "The generic policy does not address device fingerprinting, unique device identifiers, or what device data the app collects. Given the policy is a website template, app-specific device data collection is unclear.",
+      "policy_excerpt": "",
+      "concerns": ["No clarity on device data collection", "Generic policy does not address app-specific fingerprinting"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data.",
+      "detail": "No health, medical, or biometric data collection is mentioned in the privacy policy. While the app is designed for children with special needs and developmental disorders, it does not claim to process health data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app offers subscriptions but your payment details are handled directly by Apple, not the developer.",
+      "detail": "The policy explicitly states: 'All transactions are processed through a gateway provider and are not stored or processed on our servers.' Subscriptions are handled via Apple In-App Purchases.",
+      "policy_excerpt": "All transactions are processed through a gateway provider and are not stored or processed on our servers.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Parents can contact the developer to review, delete, or manage their child's information, but there is no automatic self-delete button in the app.",
+      "detail": "The COPPA section states: 'Parents can review, delete, manage or refuse with whom their child's information is shared through contacting us directly.' Users can also change personal information by logging into their account. No self-service data deletion or automated export is mentioned.",
+      "policy_excerpt": "Parents can review, delete, manage or refuse with whom their child's information is shared through contacting us directly... Can change your personal information: By logging in to your account",
+      "concerns": ["No self-service data deletion", "Contact-based request only", "No clarity on response timeframe"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says they will post changes on the privacy policy page, but there is no promise to email you or notify you inside the app.",
+      "detail": "The policy states: 'You will be notified of any Privacy Policy changes: On our Privacy Policy Page.' There is no mention of email notifications, in-app alerts, or requiring re-consent after changes.",
+      "policy_excerpt": "You will be notified of any Privacy Policy changes: On our Privacy Policy Page",
+      "concerns": ["Passive notification only via policy page", "No email or in-app alerts", "No re-consent requirement"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "caution",
+        "max": 25,
+        "rate": 0.3,
+        "deduction": 7.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 37.5,
+    "final_score": 82,
+    "grade": "A"
+  }
+}

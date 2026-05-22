@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.bytesizeapps.net/wordboard_privacy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "Policy is extremely minimal (1.5KB). Contradiction between app description ('does not use network access to collect your data') and privacy policy ('anonymous usage statistics'). Many categories unaddressed."
+  },
+  "app": {
+    "slug": "wordboard-text-expander",
+    "name": "WordBoard: Text Expander",
+    "developer": "Bytesize Systems Pty Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/wordboard-text-expander/id960167417",
+    "app_store_id": "960167417",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/d0/f8/7bd0f80f-4c75-20cf-6155-76cebc951953/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Utilities",
+    "sub_category": "Productivity",
+    "description": "A custom iOS keyboard that lets you save and instantly insert text snippets, phrases, templates, images, and GIFs while typing in any app."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 86,
+    "grade": "A",
+    "one_liner": "A keyboard app with strong on-device privacy promises, but its privacy policy is extremely minimal and contradicts the app description in places.",
+    "summary": "WordBoard is a text-expander keyboard that makes a strong, explicit promise: it does not collect your keystrokes or send them to a server. Your saved snippets stay on your device. However, the privacy policy is unusually short, contradicts the app's claim of 'no network access,' and leaves many important questions unanswered.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The core privacy promises are strong and the app appears to keep data on-device, but the minimal policy and contradictions mean you are trusting the developer's word more than a detailed legal document."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_policy_too_minimal",
+        "title": "Privacy policy is extremely short",
+        "plain_english": "The privacy policy is only a few sentences long and does not explain what data is collected, how it is protected, or what your rights are. This makes it hard to fully trust the app.",
+        "severity": "high"
+      },
+      {
+        "id": "red_description_contradiction",
+        "title": "App contradicts its own privacy policy",
+        "plain_english": "The app description says it does not use network access to collect your data, but the privacy policy says it sends anonymous usage statistics and crash reports over the internet. These two statements do not match.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_keyboard_full_access",
+        "title": "Keyboard needs 'Full Access' to work",
+        "plain_english": "To use the keyboard, you must give it Full Access in iPhone settings. Apple warns that this lets the keyboard developer see everything you type, including passwords and credit card numbers. The developer promises not to do this, but the permission itself is broad.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_keystroke_collection",
+        "title": "Explicitly promises no keystroke logging",
+        "plain_english": "The developer makes a clear promise that they will not collect your keystrokes or send them to a server. This is the most important promise a keyboard app can make.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sensitive_access",
+        "title": "Promises no access to passwords or cards",
+        "plain_english": "The developer explicitly promises they will not access your passwords, credit card numbers, or other sensitive information you type.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_stays_local",
+        "title": "Your text snippets stay on your device",
+        "plain_english": "The text snippets and templates you create are stored on your phone, not on the developer's servers. Only anonymous app usage stats and crash reports are sent over the internet.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is a keyboard and does not use your camera or microphone.",
+      "detail": "No camera or microphone access is mentioned or required for a text-expander keyboard app.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track your location.",
+      "detail": "No location or GPS data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "No contacts or phonebook access is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app stores your text snippets and images on your phone so you can paste them quickly. This data stays on your device and is not sent to the developer's servers.",
+      "detail": "As a keyboard app, WordBoard stores user-created text snippets, templates, images, and GIFs locally on the device to enable quick insertion. The privacy policy explicitly promises not to collect this data or send it to a server.",
+      "policy_excerpt": "We will not collect your keystrokes or send them to a server.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app sends anonymous usage statistics and crash reports over the internet, but it does not name which companies receive this data or exactly what is included.",
+      "detail": "The privacy policy mentions collecting 'anonymous usage statistics' and 'anonymous crash reports' but does not identify the specific third-party services used (e.g., Firebase Analytics, Crashlytics, Sentry). While the developer explicitly promises not to send keystrokes or personal data, the lack of transparency about analytics providers is a gap.",
+      "policy_excerpt": "Anonymous usage statistics (how many people are using the app etc) to make the app better. Anonymous crash reports to make the app more stable.",
+      "concerns": ["Anonymous analytics and crash reports sent to unspecified third parties", "No detail on what data points are included in 'anonymous' statistics"],
+      "score_impact": 9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app works without requiring an account, email, or any personal identity information.",
+      "detail": "No account creation, login, or identity data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not show ads or track your behavior for advertising.",
+      "detail": "No advertising, ad SDKs, or behavioral tracking is mentioned in the privacy policy or app description.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app is safe for children or how it handles children's data.",
+      "detail": "The app is rated 4+ on the App Store, meaning young children can download it. However, the privacy policy makes no mention of children's data, COPPA compliance, or age restrictions. Since keyboards have broad access to typed content, this is a notable gap.",
+      "policy_excerpt": "",
+      "concerns": ["App rated 4+ but policy silent on children's data", "No COPPA or GDPR-K compliance statement"],
+      "score_impact": 5.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app sends anonymous usage statistics and crash reports over the internet, but the privacy policy contradicts the app description which claims no network data collection.",
+      "detail": "The privacy policy states that anonymous usage statistics and crash reports are sent for app improvement. However, the App Store description claims 'WordBoard does not use network access to collect your data.' This direct contradiction undermines confidence in the app's network behavior.",
+      "policy_excerpt": "Anonymous usage statistics (how many people are using the app etc) to make the app better. Anonymous crash reports to make the app more stable.",
+      "concerns": ["Contradiction between app description and privacy policy regarding network data collection", "No detail on what network data is actually transmitted"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "unknown",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say what device information is collected in the anonymous usage statistics.",
+      "detail": "While the developer promises not to collect personal data, 'anonymous usage statistics' could include device model, OS version, app version, or other device identifiers. The policy does not clarify what is or is not collected.",
+      "policy_excerpt": "Anonymous usage statistics (how many people are using the app etc) to make the app better.",
+      "concerns": ["No clarity on what device data is included in anonymous statistics"],
+      "score_impact": 7.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data.",
+      "detail": "No health or biometric data collection is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app has a free version and a paid upgrade, but the privacy policy does not mention handling payment data directly.",
+      "detail": "The app offers a Pro upgrade via standard App Store in-app purchases. Payment processing is handled by Apple, not the developer. The privacy policy makes no mention of payment data collection.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not explain how to delete your data or what rights you have over it.",
+      "detail": "The policy is completely silent on data deletion, data export, user rights, and how to contact the developer about privacy concerns. No email, contact form, or data-request process is provided.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of data deletion or user rights", "No contact information for privacy requests"],
+      "score_impact": 5.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer can update the privacy policy at any time by changing the website, and you are expected to check the page yourself for updates.",
+      "detail": "The policy states: 'At time to time we may update this webpage, please visit here to see the latest version.' There is no commitment to notify users of changes, no email alerts, and no in-app notifications.",
+      "policy_excerpt": "At time to time we may update this webpage, please visit here to see the latest version.",
+      "concerns": ["No proactive notification of policy changes", "Users must self-monitor the webpage for updates"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9.0
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5.0
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "unknown",
+        "max": 15,
+        "rate": 0.5,
+        "deduction": 7.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5.0
+      }
+    ],
+    "total_deductions": 29.5,
+    "final_score": 86,
+    "grade": "A"
+  }
+}

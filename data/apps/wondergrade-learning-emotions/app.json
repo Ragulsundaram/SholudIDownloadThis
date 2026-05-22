@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-22",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://wondergrade.com/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2021-02-25",
+    "needs_review": true,
+    "review_notes": "App is marketed for ages 3-8 but privacy policy claims it does not address anyone under 13. This is a serious COPPA contradiction. Policy also admits to potential 'sale' of personal data under CCPA."
+  },
+  "app": {
+    "slug": "wondergrade-learning-emotions",
+    "name": "Wondergrade: Learning Emotions",
+    "developer": "Wondergrade LLC",
+    "app_store_url": "https://apps.apple.com/in/app/wondergrade-learning-emotions/id1529200729",
+    "app_store_id": "1529200729",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/74/ef/c3/74efc338-72dc-bc96-7799-91d21160e7d0/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "sub_category": "Family",
+    "description": "An interactive early childhood education app for children ages 3-8 that blends read-alouds, games, and audio stories with emotional learning and parental guidance."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "A well-designed emotions-learning app for young children, but its privacy policy contradicts the app's target audience and admits to selling user data.",
+    "summary": "Wondergrade teaches emotional intelligence to children ages 3-8 through stories, games, and guided audio. However, its privacy policy is a generic template that claims the app is not for children under 13, despite being explicitly marketed to that age group. The policy also admits the company may 'sell' personal data under California law and shares data with multiple third-party analytics and marketing services.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app has serious contradictions between its marketing (ages 3-8) and its privacy policy (not for under 13). Parents should be cautious about entrusting their children's data to a service with these gaps."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_childrens_data_contradiction",
+        "title": "App targets children but claims it doesn't",
+        "plain_english": "The app is advertised for kids ages 3 to 8, but its privacy policy says it is not meant for anyone under 13. This is a direct contradiction and means the app may not follow the special rules that protect children's privacy online.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_sale_ccpa",
+        "title": "Admits to selling personal data",
+        "plain_english": "Under California privacy law, the company says it may have sold personal information like your name, email, and online activity to other companies in exchange for something valuable.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_tracking",
+        "title": "Multiple third-party trackers",
+        "plain_english": "The app uses Google Analytics, Firebase, and Facebook to track how you use it. These companies can see your activity and may use it to show you ads or build a profile about you.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_shared_broadly",
+        "title": "Data shared with affiliates and partners",
+        "plain_english": "Your information is shared not just with companies that help run the app, but also with business partners and affiliated companies who may use it for their own promotions and marketing.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_ccpa_rights",
+        "title": "Users have data rights under GDPR and CCPA",
+        "plain_english": "If you live in Europe or California, you have legal rights to see, correct, or delete your data. The company explains how to make these requests.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_processor_safe",
+        "title": "Payments handled by Apple",
+        "plain_english": "When you buy a subscription, your credit card details go straight to Apple and are never seen or stored by the app developer.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_policy_change_notification",
+        "title": "Promises notice before policy changes",
+        "plain_english": "The company says it will email you and post a prominent notice before making big changes to the privacy rules.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not use your camera or microphone.",
+      "detail": "No camera or microphone access is mentioned in the privacy policy or app description.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect your exact location.",
+      "detail": "Under the CCPA section, geolocation data (Category G) is explicitly listed as 'Collected: No.'",
+      "policy_excerpt": "Category G: Geolocation data. Examples: Approximate physical location. Collected: No.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "No contacts or phonebook access is mentioned in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may store content you create or download, but this is standard app behavior and not broad file scanning.",
+      "detail": "No mention of broad file access or library scanning. Any storage is likely limited to app-specific data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "dangerous",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company shares your data with service providers, business partners, and affiliated companies. Under California law, it also admits to potentially 'selling' your personal information.",
+      "detail": "The policy explicitly states: 'We may sell and may have sold in the last twelve (12) months' categories of personal information including Identifiers, Personal Information, Commercial Information, and Internet Activity. Data is shared with Service Providers, Payment processors, Affiliates, Business partners, and Third party vendors.",
+      "policy_excerpt": "We may sell and may have sold in the last twelve (12) months the following categories of personal information: Category A: Identifiers; Category B: Personal information categories listed in the California Customer Records statute; Category D: Commercial information; Category F: Internet or other similar network activity.",
+      "concerns": ["Explicit admission of potential data 'sales' under CCPA", "Data shared with affiliates and business partners for promotions", "Multiple third-party vendors have access to personal data"],
+      "score_impact": 30
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your name, email address, and account information to manage your subscription and account.",
+      "detail": "Personal Data collected includes email address, first name, last name, and Usage Data. Account registration is required for subscription functionality.",
+      "policy_excerpt": "While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to: Email address, First name and last name, Usage Data.",
+      "concerns": ["Name and email required for account", "Usage data linked to account identity"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses Google Analytics, Firebase, and Facebook to track how you use it. These companies may use your data to show you personalized ads or build a profile about you.",
+      "detail": "Third-party analytics services include Google Analytics and Firebase. Facebook Insights is used for anonymized statistical data about users, with cookies placed on devices. The CCPA section also mentions potential sales for interest-based advertising purposes.",
+      "policy_excerpt": "Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.",
+      "concerns": ["Google Analytics data shared with other Google services and used for ad personalization", "Firebase analytics tracking", "Facebook Insights with 2-year cookies", "Potential sales for interest-based advertising under CCPA"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "dangerous",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is made for children ages 3 to 8, but its privacy policy says it is not for anyone under 13. This is a serious problem because it suggests the app is not following the special rules that protect young children's privacy.",
+      "detail": "The App Store description explicitly targets 'children ages 3-8' and is rated 4+. However, the privacy policy states: 'Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.' There is no mention of COPPA compliance. Under COPPA, apps directed at children under 13 must comply with strict data collection and parental consent rules. This contradiction is a major red flag.",
+      "policy_excerpt": "Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.",
+      "concerns": ["App marketed for ages 3-8 but policy claims not for under 13", "No COPPA compliance mentioned", "Potential sale of data from minors under CCPA (though opt-in required for 13-16)"],
+      "score_impact": 10
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your internet address and tracks which pages you visit, how long you stay, and what device you use.",
+      "detail": "Usage Data collected includes IP address, browser type, browser version, pages visited, time and date of visit, time spent on pages, unique device identifiers, and other diagnostic data. When accessed via mobile device, mobile device type, unique ID, IP address, mobile OS, and mobile browser type are collected.",
+      "policy_excerpt": "Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.",
+      "concerns": ["IP address and browsing activity logged", "Device identifiers collected automatically"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects details about your device like its type, operating system, and unique identifiers to understand how you use the app.",
+      "detail": "Mobile device type, unique ID, IP address, mobile operating system, mobile Internet browser type, and unique device identifiers are collected automatically. While framed as diagnostics, this creates a device fingerprint that can be used for tracking.",
+      "policy_excerpt": "When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.",
+      "concerns": ["Unique device identifiers collected", "Device fingerprinting via combined data points"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data.",
+      "detail": "No health, medical, or biometric data collection is mentioned. The CCPA section explicitly lists biometric information (Category E) as 'Collected: No.'",
+      "policy_excerpt": "Category E: Biometric information... Collected: No.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app offers subscriptions but your payment details are handled directly by Apple, not the developer.",
+      "detail": "Payment processing is handled by Apple Store In-App Payments. The developer explicitly states: 'We will not store or collect Your payment card details. That information is provided directly to Our third-party payment processors.'",
+      "policy_excerpt": "We will not store or collect Your payment card details. That information is provided directly to Our third-party payment processors whose use of Your personal information is governed by their Privacy Policy. These payment processors adhere to the standards set by PCI-DSS...",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask the company to delete your data or see what they have about you, but you have to email them and wait for a response. There is no automatic delete button in the app.",
+      "detail": "GDPR rights include access, rectification, erasure, restriction, data portability, and withdrawal of consent. CCPA rights include notice, request, opt-out, and deletion. Users must contact hello@wondergrade.com to exercise these rights. The company will try to respond as soon as possible and verify identity before responding.",
+      "policy_excerpt": "You have the right under this Privacy Policy, and by law if You are within the EU, to: Request access to Your Personal Data... Request erasure of Your Personal Data... You may exercise Your rights of access, rectification, cancellation and opposition by contacting Us.",
+      "concerns": ["No self-service deletion in app", "Manual email request required", "Identity verification may delay response"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company says it will email you and post a notice before making big changes to the privacy rules, but the policy is already over four years old.",
+      "detail": "The policy states: 'We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the Last updated date at the top of this Privacy Policy.' However, the policy was last updated February 25, 2021, over 4 years ago.",
+      "policy_excerpt": "We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the 'Last updated' date at the top of this Privacy Policy.",
+      "concerns": ["Policy is over 4 years old", "No evidence of recent updates or enforcement of notification promise"],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "dangerous",
+        "max": 30,
+        "rate": 1.0,
+        "deduction": 30
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "childrens_data",
+        "risk": "dangerous",
+        "max": 10,
+        "rate": 1.0,
+        "deduction": 10
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 71.25,
+    "final_score": 65,
+    "grade": "C"
+  }
+}

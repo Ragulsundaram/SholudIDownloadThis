@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-05-20",
+    "analyzed_by": "claude-opus-4.6",
+    "policy_url": "https://pure.app/content/en/privacy",
+    "terms_url": "",
+    "policy_last_updated": "2026-04-26",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "pure-open-minded-dating-app",
+    "name": "PURE: Open-Minded Dating App",
+    "developer": "Online Classifieds AG",
+    "app_store_url": "https://apps.apple.com/in/app/pure-open-minded-dating-app/id690661663",
+    "app_store_id": "690661663",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/fd/86/a6fd86c0-07fa-92b1-2019-7746b892060b/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.jpeg/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "Dating",
+    "description": "An open-minded dating app designed for casual connections and hookups, with photo verification and safety features."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "Collects sensitive sexual orientation and biometric data, shares data globally with service providers, and states that staff may manually review your chat messages.",
+    "summary": "PURE's privacy policy states it collects gender, sexual orientation, date of birth, and optional biometric data for photo verification. The policy states that chat messages, photos, and videos may be reviewed by automated systems and human moderators for safety purposes. Your data may be transferred to service providers in countries including Russia, India, and the United States. The policy states it does not share user inputs or collected data for marketing or advertising purposes through its AI chatbot, and biometric data from photo verification is not shared with third parties.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects highly sensitive personal data including sexual orientation and biometric information. While the policy includes strong commitments around biometric data handling, the broad international data transfers and human review of chat content are notable concerns."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_sexual_data_mandatory",
+        "title": "Sexual orientation is mandatory to create an account",
+        "plain_english": "The policy states that your gender and sexual orientation are mandatory information required to create a PURE account. This sensitive data is collected before you can use the app.",
+        "severity": "high"
+      },
+      {
+        "id": "red_chat_content_review",
+        "title": "Staff may manually review your chat messages and photos",
+        "plain_english": "The policy states that content shared in chat conversations, including pictures, videos, and text messages, may be reviewed by automated systems and human moderators to detect unlawful or prohibited content.",
+        "severity": "high"
+      },
+      {
+        "id": "red_global_data_transfers",
+        "title": "Your data may be transferred to many countries globally",
+        "plain_english": "The policy states that your personal data may be processed by third parties in countries including Russia, India, Vietnam, the United States, and others. The locations may vary depending on your geographical location.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_biometric_third_party_veriff",
+        "title": "Age verification shares data with third-party Veriff",
+        "plain_english": "The policy states that age verification is carried out through Veriff, which may retain session data for up to 90 days in active storage and up to 3 years in archive. Veriff may also process verification data for its own purposes including machine learning training.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ai_staff_review",
+        "title": "Staff may read your AI chatbot conversations",
+        "plain_english": "The policy states that a limited number of PURE's personnel may manually access, review, and utilize your inputs to the AI chatbot to refine and enhance it.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_biometric_not_shared",
+        "title": "Biometric data from photo verification is not shared",
+        "plain_english": "The policy states that biometric data collected during the photo verification comparison process will be securely stored on their servers and will not be shared with any third parties.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ai_no_marketing",
+        "title": "AI chatbot data is not used for marketing or ads",
+        "plain_english": "The policy states that under no circumstances will PURE share users' inputs, collected data, or generated content from the AI chatbot for marketing or advertising purposes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_deletion_rights",
+        "title": "You can access, correct, delete, and export your data",
+        "plain_english": "The policy states you have the right to access, rectify, delete, restrict processing, and obtain a portable copy of your personal data. You can contact the Data Protection Officer at dpo@pure.app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_privacy_first_principles",
+        "title": "Policy states commitment to data minimization",
+        "plain_english": "The policy states they adhere to the principles of data minimization and purpose limitation, and will only collect and process personal information necessary for specific stated purposes.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The policy states the app requests permission to access your camera and photo album for uploading pictures and videos, and for the photo verification process. You can revoke access at any time through device settings.",
+      "detail": "Camera and photo library access is used for uploading profile photos and for biometric photo verification. The TrueDepth API is used on iOS for liveness detection during verification. Photos captured during verification are stored on servers.",
+      "policy_excerpt": "In order to add this kind of content, you first have to give us permission to access your photo album/gallery and/or your camera. You can revoke photo and camera access at any time through your device's Settings menu.",
+      "concerns": [
+        "Photos captured during verification are stored on servers even if verification fails."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The policy states the app uses your GPS location to show you nearby users. This is only enabled if you explicitly give permission, and you can disable it at any time.",
+      "detail": "Location is used for the core proximity-matching feature. The policy states location data is optional and requires explicit permission. Other users can view your location data. The Safety Signal feature may share your location with a trusted contact.",
+      "policy_excerpt": "We use your location data (e.g., by using the GPS on your mobile device) to enable the intended functionality of PURE. This will be enabled only if you explicitly give us permission to access your location. You can disable this at any given time.",
+      "concerns": [
+        "Other users can view your location data and may use it for unintended purposes.",
+        "Safety Signal feature shares your location with a trusted contact outside the app."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "We could not find any mention of contacts or phonebook access in the privacy policy.",
+      "detail": "The policy does not mention accessing the user's contact list or phonebook at any point.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The policy states the app requests permission to access your photo album and gallery for uploading pictures and videos to your profile and chats.",
+      "detail": "Photo library access is user-initiated for uploading profile photos and chat media. Image metadata including approximate location and device information is also collected for moderation purposes.",
+      "policy_excerpt": "In order to add this kind of content, you first have to give us permission to access your photo album/gallery and/or your camera. You can revoke photo and camera access at any time through your device's Settings menu.",
+      "concerns": [
+        "Image metadata including approximate photo location and device information is collected for moderation."
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states your data may be shared with service providers for analytics, marketing, content moderation, and fraud prevention. Data may be processed in countries including Russia, India, Vietnam, and the United States.",
+      "detail": "The policy names categories of service providers including telecommunications, email, hosting, payment, user verification, advertising, marketing, analytics, and trust and safety moderation. Service providers may also use personal data for their own purposes. Data may be transferred globally. Veriff processes age verification data and may use it for machine learning training.",
+      "policy_excerpt": "We work with trusted service providers that process your Personal Data on our behalf... These service providers may also use your Personal Data for their own purposes. Service providers provide information about their independent data processing in their own privacy statements.",
+      "concerns": [
+        "Service providers may use your personal data for their own purposes beyond what PURE instructs.",
+        "Data transfers to countries including Russia where data protection standards differ.",
+        "Veriff may process verification data for machine learning training."
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states that gender, sexual orientation, and date of birth are mandatory to create an account. You may also optionally provide a government-issued ID for age verification or identity appeals.",
+      "detail": "Mandatory account data includes gender, sexual orientation, and date of birth. Optional data includes email, personal description, height, spoken languages, and sexual preferences. Government-issued ID may be required for age verification or account appeals.",
+      "policy_excerpt": "Mandatory: Identity data: Gender (man, woman or non-binary); Sexual orientation (heterosexual, bisexual, lesbian, gay, queer or asexual); Date of birth; Profile data: Account data, including User ID.",
+      "concerns": [
+        "Mandatory collection of sexual orientation is highly sensitive personal data.",
+        "Government-issued identity document may be required for age verification."
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The policy states the app uses cookies for personalized ads, Google Analytics, Yandex Metrica, Amplitude, and Session Replay technology to track how you use the app. You can manage cookie preferences.",
+      "detail": "The website uses advertisement cookies from Twitter, Snapchat, OpenX, YouTube, and DoubleClick. Analytics cookies include Google Analytics, Yandex Metrica, and Amplitude. Session Replay technology rebuilds a simplified version of in-app experience. The policy states the most conservative masking level is applied to hide sensitive information.",
+      "policy_excerpt": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic... We use Session Replay technology... This tool does not record videos, live footage, or screen captures of your activity.",
+      "concerns": [
+        "Multiple analytics platforms track usage including Google Analytics, Yandex Metrica, and Amplitude.",
+        "Session Replay technology rebuilds a simplified version of your in-app experience.",
+        "Advertisement cookies from Twitter, Snapchat, OpenX, and DoubleClick are present."
+      ],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states users must be at least 18 years old and the app does not knowingly collect data from minors. Age verification through Veriff may be required.",
+      "detail": "The policy requires users to be at least 18 (or older where required by state law). The app has an age verification process via third-party Veriff. The policy states PURE has a Child Safety Standards Policy.",
+      "policy_excerpt": "Users who are not at least 18 years old, or older when explicitly required by applicable state laws, (referred to as \"minor/s\" hereafter) are not permitted to use PURE. We do not knowingly collect Personal Data from minors.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states the app collects your IP address, operating system, browser type, referrer URL, and log-in data when you visit the website or app.",
+      "detail": "Technical data collected includes IP address, operating system, date/time of access, country based on IP, browser type, referrer URL, log-in data, and device type. Log files are used for statistics and technical evaluations in anonymized form.",
+      "policy_excerpt": "Technical Data: IP address, operating system, date and time of access, country from which PURE is accessed (based on IP address), browser type, referrer URL, log-in data, and device type.",
+      "concerns": [
+        "Country determined from IP address for geo-profiling."
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states the app collects your device type, operating system, and browser type. Yandex cookies store data about your browser and operating system.",
+      "detail": "Device information is collected as part of technical data. Yandex sets cookies to store browser and OS data. Image metadata including device information is collected for moderation.",
+      "policy_excerpt": "Technical Data: IP address, operating system... browser type... and device type... Yandex sets this cookie to store data about the user's browser and operating system.",
+      "concerns": [
+        "Yandex cookies persist for over a year to identify users and store device data."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The policy states the app collects biometric data through a voluntary photo verification process. Photos are stored on servers and compared server-side. On iOS, Apple's TrueDepth API is used for liveness detection but that data stays on your device.",
+      "detail": "Biometric data is collected during the optional Photo Verification process. Photos are stored on servers for comparison. Biometric data is retained even if verification fails. On iOS, TrueDepth API data does not leave the device. PURE states biometric data is not shared with third parties. For age verification via Veriff, face scans and biometric templates are processed by Veriff on their servers.",
+      "policy_excerpt": "All biometric data collected during the comparison process will be securely stored on our servers, will not be shared with any third parties... Even if the process was not successful, biometric data will be retained in our systems.",
+      "concerns": [
+        "Biometric data retained on servers even if verification was unsuccessful.",
+        "Veriff processes face scans and biometric templates on its own servers for age verification.",
+        "Veriff may process biometric data for machine learning training."
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The policy states the app collects billing and payment information for subscriptions and in-app purchases.",
+      "detail": "Financial data including billing and payment information is collected as part of transactional data. The policy does not specify whether this is handled by a third-party processor or stored directly.",
+      "policy_excerpt": "Financial data, including billing and payment information.",
+      "concerns": [
+        "Policy does not clearly state whether payment data is handled by a third-party processor or stored by PURE."
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states you have the right to access, correct, delete, restrict processing, and export your personal data. However, certain data is retained for up to 180 days after account deletion.",
+      "detail": "Users can contact dpo@pure.app to exercise data rights. The policy provides access, rectification, deletion, restriction, portability, and complaint rights. However, data may be retained up to 180 days post-deletion for compliance and safety purposes. Inactive accounts may be deleted after 730 days.",
+      "policy_excerpt": "Certain data will be retained up to 180 days post-deletion to ensure compliance with above-mentioned purposes... You have the right to have your Personal Data deleted under certain circumstances.",
+      "concerns": [
+        "Data retained for up to 180 days after account deletion.",
+        "Deletion rights are described as available only 'under certain circumstances.'"
+      ],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy states that material changes will be notified at least 10 days in advance via in-app notification. Non-material changes may be made without direct notification, and continued use counts as acceptance.",
+      "detail": "Material changes require at least 10 days advance notice via in-app notification. Non-material changes may happen without notification. Continued use after changes constitutes acceptance. Users must stop using the app and delete their account if they do not accept changes.",
+      "policy_excerpt": "If the modifications include material changes... you will be notified at least 10 days in advance via a notification on PURE... If the Modifications include non-material changes, we reserve a right to update the Privacy Policy on this page without direct notification.",
+      "concerns": [
+        "Non-material changes may occur without any notification.",
+        "Continued use after interacting with notification constitutes acceptance with no opt-out other than leaving."
+      ],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 73.5,
+    "final_score": 64,
+    "grade": "C"
+  }
+}
