@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "play-lh.googleusercontent.com" },
     ],
   },
+  allowedDevOrigins: ["192.168.1.9", "localhost"],
 };
 
 export default nextConfig;
