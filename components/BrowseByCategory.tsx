@@ -21,12 +21,12 @@ type Props = {
 
 export function BrowseByCategory({ topSafest, topRiskiest }: Props) {
   return (
-    <section className="mt-20">
+    <section className="mt-12 sm:mt-20">
       {/* Header */}
-      <div className="mb-6 flex items-end justify-between">
+      <div className="mb-4 flex flex-col gap-2 sm:mb-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-ink">Browse by category</h2>
-          <p className="mt-1 text-sm text-ink-muted">
+          <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">Browse by category</h2>
+          <p className="mt-1 text-xs text-ink-muted sm:text-sm">
             See how privacy holds up across different types of apps.
           </p>
         </div>
@@ -40,12 +40,12 @@ export function BrowseByCategory({ topSafest, topRiskiest }: Props) {
       </div>
 
       {/* Category tiles — square, image centered */}
-      <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+      <div className="grid grid-cols-3 gap-2 sm:grid-cols-6 sm:gap-3">
         {ROW_CATEGORIES.map((cat) => (
           <Link
             key={cat.slug}
             href={`/categories/${cat.slug}`}
-            className="group relative block aspect-[3/4] overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
+            className="group relative block aspect-[3/4] overflow-hidden rounded-xl transition-transform hover:scale-[1.02] sm:rounded-2xl"
             style={{ backgroundColor: cat.bgColor }}
           >
             {cat.imageUrl && (
@@ -68,7 +68,7 @@ export function BrowseByCategory({ topSafest, topRiskiest }: Props) {
       </div>
 
       {/* Insights teaser — safest + riskiest */}
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <div className="mt-4 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4">
         <AppRankCard title="Safest apps" apps={topSafest} />
         <AppRankCard title="Riskiest apps" apps={topRiskiest} />
       </div>
@@ -76,7 +76,7 @@ export function BrowseByCategory({ topSafest, topRiskiest }: Props) {
       {/* CTA */}
       <Link
         href="/insights"
-        className="mt-4 flex items-center justify-center gap-2 rounded-2xl border border-line bg-surface px-5 py-4 text-sm text-ink-muted transition-colors hover:border-brand/40 hover:bg-divider/30 hover:text-ink"
+        className="mt-3 flex items-center justify-center gap-2 rounded-xl border border-line bg-surface px-4 py-3 text-xs text-ink-muted transition-colors hover:border-brand/40 hover:bg-divider/30 hover:text-ink sm:mt-4 sm:rounded-2xl sm:px-5 sm:py-4 sm:text-sm"
       >
         <BarChart2 className="h-4 w-4 text-brand" />
         <span>
@@ -90,7 +90,7 @@ export function BrowseByCategory({ topSafest, topRiskiest }: Props) {
 
 function AppRankCard({ title, apps }: { title: string; apps: IndexEntry[] }) {
   return (
-    <div className="rounded-2xl border border-line bg-surface p-5">
+    <div className="rounded-xl border border-line bg-surface p-3.5 sm:rounded-2xl sm:p-5">
       <h3 className="mb-3 text-sm font-semibold text-ink">{title}</h3>
       <ol className="space-y-2">
         {apps.map((app, i) => (

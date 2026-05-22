@@ -23,24 +23,24 @@ export function ConcernAppCard({ app, category, concernId }: Props) {
 
   return (
     <article
-      className="group relative flex cursor-pointer flex-col rounded-2xl border border-line bg-surface p-5 transition-all hover:border-brand/40 hover:bg-divider/30 hover:shadow-md"
+      className="group relative flex cursor-pointer flex-col rounded-xl border border-line bg-surface p-3.5 transition-all hover:border-brand/40 hover:bg-divider/30 hover:shadow-md sm:rounded-2xl sm:p-5"
       onClick={() => router.push(`/app/${app.slug}`)}
     >
-      <div className="absolute right-3 top-3">
+      <div className="absolute right-2.5 top-2.5 sm:right-3 sm:top-3">
         <CompareButton slug={app.slug} />
       </div>
 
-      <div className="flex items-start gap-4 pr-10">
+      <div className="flex items-start gap-3 pr-8 sm:gap-4 sm:pr-10">
         <AppIcon iconUrl={app.icon_url} name={app.name} />
-        <div className="flex min-w-0 flex-1 flex-col gap-2">
-          <h3 className="text-base font-semibold leading-snug text-ink">{app.name}</h3>
+        <div className="flex min-w-0 flex-1 flex-col gap-1.5 sm:gap-2">
+          <h3 className="truncate text-sm font-semibold leading-snug text-ink sm:text-base">{app.name}</h3>
           <div className="flex items-center gap-2">
             <ThreatMeter score={app.score} />
           </div>
         </div>
       </div>
 
-      <div className="mt-4 border-t border-line pt-4">
+      <div className="mt-3 border-t border-line pt-3 sm:mt-4 sm:pt-4">
         {category ? (
           <div className="flex items-start gap-2">
             <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-divider">
@@ -71,7 +71,7 @@ export function ConcernAppCard({ app, category, concernId }: Props) {
 function AppIcon({ iconUrl, name }: { iconUrl: string; name: string }) {
   if (iconUrl) {
     return (
-      <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl border border-line">
+      <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg border border-line sm:h-12 sm:w-12 sm:rounded-xl">
         <Image
           src={iconUrl}
           alt={`${name} icon`}
@@ -84,8 +84,8 @@ function AppIcon({ iconUrl, name }: { iconUrl: string; name: string }) {
     );
   }
   return (
-    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-divider">
-      <Smartphone className="h-5 w-5 text-ink-subtle" />
+    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-divider sm:h-12 sm:w-12 sm:rounded-xl">
+      <Smartphone className="h-4 w-4 text-ink-subtle sm:h-5 sm:w-5" />
     </div>
   );
 }

@@ -68,7 +68,7 @@ export function NavbarSearch({ apps }: Props) {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search apps…"
-                className="w-48 bg-transparent text-sm text-ink placeholder:text-ink-subtle focus:outline-none sm:w-64"
+                className="w-36 bg-transparent text-sm text-ink placeholder:text-ink-subtle focus:outline-none sm:w-64"
                 aria-label="Search apps"
               />
             </div>

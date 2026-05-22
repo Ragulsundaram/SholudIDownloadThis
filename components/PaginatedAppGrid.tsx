@@ -83,7 +83,7 @@ export function PaginatedAppGrid({ apps }: { apps: IndexEntry[] }) {
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-3">
         {pageApps.map((app) => (
           <AppCard key={app.slug} app={app} />
         ))}

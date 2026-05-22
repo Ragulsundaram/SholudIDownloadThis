@@ -71,7 +71,7 @@ export default function ComparePageClient() {
     <>
       <Navbar apps={apps} />
       <main className="flex-1">
-        <div className="px-4 py-8 sm:px-6 lg:px-8">
+        <div className="px-3 py-6 sm:px-6 sm:py-8 lg:px-8">
           {loading ? (
             <LoadingState />
           ) : entries && entries.length >= 2 ? (

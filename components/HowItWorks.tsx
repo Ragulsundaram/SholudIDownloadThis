@@ -23,20 +23,20 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="mt-20">
-      <div className="mb-6">
-        <h2 className="text-2xl font-semibold tracking-tight text-ink">How it works</h2>
-        <p className="mt-1 text-sm text-ink-muted">
+    <section className="mt-12 sm:mt-20">
+      <div className="mb-4 sm:mb-6">
+        <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">How it works</h2>
+        <p className="mt-1 text-xs text-ink-muted sm:text-sm">
           The average privacy policy is 4,000 words long. We turn it into a sentence.
         </p>
       </div>
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-3 sm:gap-4 md:grid-cols-3">
         {STEPS.map((step, i) => {
           const Icon = step.icon;
           return (
             <div
               key={step.title}
-              className="rounded-2xl border border-line bg-surface p-6"
+              className="rounded-xl border border-line bg-surface p-4 sm:rounded-2xl sm:p-6"
             >
               <div className="flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand/10 text-brand">
@@ -53,7 +53,7 @@ export function HowItWorks() {
         })}
       </div>
 
-      <div className="mt-4 rounded-2xl border border-caution-line bg-caution-soft px-6 py-5">
+      <div className="mt-3 rounded-xl border border-caution-line bg-caution-soft px-4 py-4 sm:mt-4 sm:rounded-2xl sm:px-6 sm:py-5">
         <div className="flex items-center gap-2">
           <TriangleAlert className="h-4 w-4 flex-shrink-0 text-caution-ink" />
           <h3 className="text-sm font-semibold text-caution-ink">AI interpretation - not legal advice</h3>

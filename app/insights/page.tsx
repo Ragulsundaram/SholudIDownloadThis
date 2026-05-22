@@ -54,18 +54,18 @@ export default async function InsightsPage() {
   return (
     <>
       <Navbar apps={apps} />
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+      <main className="mx-auto max-w-5xl px-3 py-8 sm:px-6 sm:py-12">
 
         {/* Heading */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold text-ink">Privacy Insights</h1>
-          <p className="mt-2 text-base text-ink-muted">
+        <div className="mb-6 sm:mb-10">
+          <h1 className="text-2xl font-bold text-ink sm:text-3xl">Privacy Insights</h1>
+          <p className="mt-1 text-xs text-ink-muted sm:mt-2 sm:text-base">
             Trends and statistics across all {totalApps} app privacy ratings.
           </p>
         </div>
 
         {/* ── A. Hero stat cards ── */}
-        <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="mb-6 grid grid-cols-2 gap-3 sm:mb-8 sm:grid-cols-4 sm:gap-4">
           <StatCard label="Apps reviewed" value={String(totalApps)} />
           <StatCard label="Avg score" value={`${avgScore}/100`} />
           <StatCard label="Median score" value={`${medianScore}/100`} />
@@ -73,7 +73,7 @@ export default async function InsightsPage() {
         </div>
 
         {/* ── B. Callout facts ── */}
-        <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-6 grid gap-3 sm:mb-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
           <FactCard
             value={`${pctThirdParty}%`}
             label="of apps share your data with third parties"
@@ -97,7 +97,7 @@ export default async function InsightsPage() {
         </div>
 
         {/* ── C. Score distribution histogram ── */}
-        <section className="mb-8 rounded-2xl border border-line bg-surface p-6">
+        <section className="mb-6 rounded-xl border border-line bg-surface p-4 sm:mb-8 sm:rounded-2xl sm:p-6">
           <h2 className="mb-1 text-base font-semibold text-ink">Score distribution</h2>
           <p className="mb-5 text-sm text-ink-muted">
             How privacy scores are spread across all reviewed apps.
@@ -137,8 +137,8 @@ export default async function InsightsPage() {
         </section>
 
         {/* ── D. Grade + Risk distribution ── */}
-        <div className="mb-8 grid gap-6 sm:grid-cols-2">
-          <section className="rounded-2xl border border-line bg-surface p-6">
+        <div className="mb-6 grid gap-4 sm:mb-8 sm:grid-cols-2 sm:gap-6">
+          <section className="rounded-xl border border-line bg-surface p-4 sm:rounded-2xl sm:p-6">
             <h2 className="mb-4 text-base font-semibold text-ink">Grade distribution</h2>
             <div className="space-y-3">
               {GRADE_ORDER.map((grade) => {
@@ -157,7 +157,7 @@ export default async function InsightsPage() {
             </div>
           </section>
 
-          <section className="rounded-2xl border border-line bg-surface p-6">
+          <section className="rounded-xl border border-line bg-surface p-4 sm:rounded-2xl sm:p-6">
             <h2 className="mb-4 text-base font-semibold text-ink">Risk distribution</h2>
             <div className="space-y-3">
               {RISK_ORDER.map((risk) => {
@@ -178,7 +178,7 @@ export default async function InsightsPage() {
         </div>
 
         {/* ── E. Concern breakdown ── */}
-        <section className="mb-8 rounded-2xl border border-line bg-surface p-6">
+        <section className="mb-6 rounded-xl border border-line bg-surface p-4 sm:mb-8 sm:rounded-2xl sm:p-6">
           <h2 className="mb-1 text-base font-semibold text-ink">Biggest privacy risks</h2>
           <p className="mb-5 text-sm text-ink-muted">
             How each permission category rates across all reviewed apps — sorted worst first.
@@ -189,7 +189,7 @@ export default async function InsightsPage() {
                 ? Math.round((cs.counts.dangerous + cs.counts.risky) / cs.total * 100) : 0;
               return (
                 <div key={cs.id} className="flex items-center gap-3">
-                  <span className="w-36 shrink-0 truncate text-sm text-ink">{cs.label}</span>
+                  <span className="w-24 shrink-0 truncate text-xs text-ink sm:w-36 sm:text-sm">{cs.label}</span>
                   <div className="flex flex-1 overflow-hidden rounded-full">
                     {(["dangerous", "risky", "caution", "safe"] as RiskLevel[]).map((r) => {
                       const count = cs.counts[r] ?? 0;
@@ -221,14 +221,14 @@ export default async function InsightsPage() {
         </section>
 
         {/* ── F. Top 5 safest + riskiest ── */}
-        <div className="mb-8 grid gap-6 sm:grid-cols-2">
+        <div className="mb-6 grid gap-4 sm:mb-8 sm:grid-cols-2 sm:gap-6">
           <RankCard title="Safest apps" apps={topSafest} badgeColor={SCORE_BADGE} />
           <RankCard title="Riskiest apps" apps={topRiskiest} badgeColor={SCORE_BADGE} />
         </div>
 
         {/* ── G. Most common red flags ── */}
         {topRedFlags.length > 0 && (
-          <section className="mb-8 rounded-2xl border border-line bg-surface p-6">
+          <section className="mb-6 rounded-xl border border-line bg-surface p-4 sm:mb-8 sm:rounded-2xl sm:p-6">
             <h2 className="mb-1 text-base font-semibold text-ink">Most common red flags</h2>
             <p className="mb-5 text-sm text-ink-muted">
               Issues that appear most frequently across reviewed apps.
@@ -253,7 +253,7 @@ export default async function InsightsPage() {
         )}
 
         {/* ── H. Category averages ── */}
-        <section className="rounded-2xl border border-line bg-surface p-6">
+        <section className="rounded-xl border border-line bg-surface p-4 sm:rounded-2xl sm:p-6">
           <h2 className="mb-1 text-base font-semibold text-ink">Average score by category</h2>
           <p className="mb-5 text-sm text-ink-muted">
             Mean privacy score across all apps in each category.
@@ -263,7 +263,7 @@ export default async function InsightsPage() {
               const risk: RiskLevel = avg >= 80 ? "safe" : avg >= 55 ? "caution" : avg >= 40 ? "risky" : "dangerous";
               return (
                 <div key={category} className="flex items-center gap-3">
-                  <span className="w-36 shrink-0 truncate text-sm text-ink">{category}</span>
+                  <span className="w-24 shrink-0 truncate text-xs text-ink sm:w-36 sm:text-sm">{category}</span>
                   <div className="flex-1 overflow-hidden rounded-full bg-divider">
                     <div className={`h-3 rounded-full ${RISK_BAR[risk]}`} style={{ width: `${avg}%` }} />
                   </div>
@@ -285,18 +285,18 @@ export default async function InsightsPage() {
 
 function StatCard({ label, value, valueClass = "text-ink" }: { label: string; value: string; valueClass?: string }) {
   return (
-    <div className="rounded-2xl border border-line bg-surface p-5">
-      <p className="text-xs font-medium uppercase tracking-wide text-ink-subtle">{label}</p>
-      <p className={`mt-2 text-3xl font-bold ${valueClass}`}>{value}</p>
+    <div className="rounded-xl border border-line bg-surface p-3.5 sm:rounded-2xl sm:p-5">
+      <p className="text-[10px] font-medium uppercase tracking-wide text-ink-subtle sm:text-xs">{label}</p>
+      <p className={`mt-1.5 text-2xl font-bold sm:mt-2 sm:text-3xl ${valueClass}`}>{value}</p>
     </div>
   );
 }
 
 function FactCard({ value, label, color }: { value: string; label: string; color: string }) {
   return (
-    <div className="rounded-2xl border border-line bg-surface p-5">
-      <p className={`text-4xl font-bold ${color}`}>{value}</p>
-      <p className="mt-2 text-sm leading-snug text-ink-muted">{label}</p>
+    <div className="rounded-xl border border-line bg-surface p-3.5 sm:rounded-2xl sm:p-5">
+      <p className={`text-2xl font-bold sm:text-4xl ${color}`}>{value}</p>
+      <p className="mt-1.5 text-xs leading-snug text-ink-muted sm:mt-2 sm:text-sm">{label}</p>
     </div>
   );
 }
@@ -307,7 +307,7 @@ function RankCard({ title, apps, badgeColor }: {
   badgeColor: Record<RiskLevel, string>;
 }) {
   return (
-    <section className="rounded-2xl border border-line bg-surface p-6">
+    <section className="rounded-xl border border-line bg-surface p-4 sm:rounded-2xl sm:p-6">
       <h2 className="mb-4 text-base font-semibold text-ink">{title}</h2>
       <ol className="space-y-3">
         {apps.map((app, i) => (

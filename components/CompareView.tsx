@@ -50,15 +50,15 @@ export function CompareView({ entries: rawEntries }: Props) {
 
       <div className="mt-4 flex items-center gap-3">
         <GitCompareArrows className="h-7 w-7 text-brand" />
-        <h1 className="text-3xl font-bold tracking-tight text-ink">Compare</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">Compare</h1>
       </div>
       <p className="mt-1 text-sm text-ink-muted">
         Side-by-side privacy ratings for {entries.length} apps.
       </p>
 
       <div
-        className="mt-6 grid gap-4"
-        style={{ gridTemplateColumns: `repeat(${entries.length}, minmax(0, 1fr))` }}
+        className="mt-6 grid gap-3 sm:gap-4"
+        style={{ gridTemplateColumns: `repeat(${entries.length}, minmax(140px, 1fr))` }}
       >
         {entries.map((e) => (
           <AppColumnCard key={e.slug} entry={e} isWinner={e.slug === winner.slug} />
@@ -264,7 +264,7 @@ function ComparisonGrid({
 }) {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[640px] border-collapse text-sm">
+      <table className="w-full min-w-[480px] border-collapse text-sm">
         <thead className="sr-only">
           <tr>
             <th>Field</th>

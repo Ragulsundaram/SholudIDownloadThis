@@ -135,19 +135,19 @@ export default async function CategoriesPage() {
       <Navbar apps={apps} categoryList={sidebarCategories} />
 
       <main className="flex-1">
-        <div className="flex gap-5 px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
+        <div className="flex gap-5 px-3 pt-4 sm:px-6 sm:pt-8 lg:px-8">
           <Sidebar apps={apps} categoryList={sidebarCategories} />
           <div className="min-w-0 flex-1">
-            <div className="mb-8">
-              <h1 className="text-3xl font-bold tracking-tight text-ink">
+            <div className="mb-6 sm:mb-8">
+              <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
                 Categories
               </h1>
-              <p className="mt-1 text-sm text-ink-muted">
+              <p className="mt-1 text-xs text-ink-muted sm:text-sm">
                 Browse apps by category to see how they handle your privacy.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 xl:grid-cols-4">
               {ALL_CATEGORIES.map((cat) => (
                 <CategoryCard key={cat.slug} category={cat} />
               ))}
@@ -165,7 +165,7 @@ function CategoryCard({ category }: { category: CategoryDef }) {
   return (
     <Link
       href={`/categories/${category.slug}`}
-      className="group relative block aspect-[16/9] overflow-hidden rounded-2xl transition-transform hover:scale-[1.02]"
+      className="group relative block aspect-[16/9] overflow-hidden rounded-xl transition-transform hover:scale-[1.02] sm:rounded-2xl"
       style={{ backgroundColor: category.bgColor }}
     >
       {category.imageUrl && (
@@ -178,7 +178,7 @@ function CategoryCard({ category }: { category: CategoryDef }) {
           unoptimized
         />
       )}
-      <div className="absolute inset-0 flex flex-col justify-end p-5">
+      <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-5">
         {category.featuredLabel && (
           <span className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/85">
             Featured

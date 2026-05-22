@@ -20,16 +20,16 @@ export default async function HomePage() {
       <Navbar apps={allApps} categoryList={sidebarCategories} />
 
       <main className="flex-1">
-        <div className="flex gap-5 px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
+        <div className="flex gap-5 px-3 pt-4 sm:px-6 sm:pt-8 lg:px-8">
           <Sidebar apps={allApps} categoryList={sidebarCategories} />
 
           <div className="min-w-0 flex-1">
             {recent.length > 0 && (
               <section>
-                <div className="mb-6 flex items-end justify-between">
+                <div className="mb-4 flex flex-col gap-1 sm:mb-6 sm:flex-row sm:items-end sm:justify-between">
                   <div>
-                    <h2 className="text-2xl font-semibold tracking-tight text-ink">Recently analyzed</h2>
-                    <p className="mt-1 text-sm text-ink-muted">
+                    <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">Recently analyzed</h2>
+                    <p className="mt-1 text-xs text-ink-muted sm:text-sm">
                       Latest apps we&rsquo;ve put through the policy parser.
                     </p>
                   </div>

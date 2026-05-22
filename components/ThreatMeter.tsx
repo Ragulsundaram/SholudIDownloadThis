@@ -31,11 +31,11 @@ export function ThreatMeter({
 
   return (
     <div
-      className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-2 py-1.5"
+      className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-1.5 py-1 sm:gap-2 sm:px-2 sm:py-1.5"
       role="img"
       aria-label={`Privacy score: ${score} out of 100, ${RISK_LABEL[effectiveRisk]}`}
     >
-      <span className="text-[10px] font-semibold uppercase tracking-wider text-ink-subtle">
+      <span className="text-[9px] font-semibold uppercase tracking-wider text-ink-subtle sm:text-[10px]">
         Threat
       </span>
       <div className="flex gap-0.5" aria-hidden>
@@ -44,7 +44,7 @@ export function ThreatMeter({
           return (
             <span
               key={i}
-              className="relative h-2 w-3.5 overflow-hidden rounded-[2px] bg-line"
+              className="relative h-2 w-3 overflow-hidden rounded-[2px] bg-line sm:w-3.5"
             >
               {fill > 0 && (
                 <span
@@ -57,7 +57,7 @@ export function ThreatMeter({
         })}
       </div>
       <span
-        className={`text-[11px] font-semibold uppercase tracking-wider ${LABEL_TEXT[effectiveRisk]}`}
+        className={`text-[10px] font-semibold uppercase tracking-wider sm:text-[11px] ${LABEL_TEXT[effectiveRisk]}`}
       >
         {RISK_LABEL[effectiveRisk]}
       </span>

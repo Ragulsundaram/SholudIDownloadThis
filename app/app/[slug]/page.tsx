@@ -92,7 +92,7 @@ export default async function AppPage({
       <Navbar apps={allApps} />
 
       <main className="flex-1">
-        <div className="px-4 py-10 sm:px-6 lg:px-8">
+        <div className="px-3 py-6 sm:px-6 sm:py-10 lg:px-8">
           <Breadcrumb name={data.app.name} category={data.app.category} />
 
           <div className="mt-6">
@@ -115,7 +115,7 @@ export default async function AppPage({
             <VerdictHero verdict={data.verdict} />
           </div>
 
-          <div className="mt-3 mx-auto flex w-fit items-center gap-2 rounded-xl border border-caution-line bg-caution-soft px-4 py-3">
+          <div className="mt-3 mx-auto flex w-full items-center gap-2 rounded-xl border border-caution-line bg-caution-soft px-3 py-2.5 sm:w-fit sm:px-4 sm:py-3">
             <TriangleAlert className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-caution-ink" />
             <p className="text-xs leading-relaxed text-caution-ink">
               AI-generated from the published privacy policy as of {data.meta.analyzed_at}. Not legal advice.{" "}

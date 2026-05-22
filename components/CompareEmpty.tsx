@@ -53,7 +53,7 @@ export function CompareEmpty({ count, basketCount }: Props) {
 function Card({ children, dashed }: { children: React.ReactNode; dashed?: boolean }) {
   return (
     <div
-      className={`mt-10 flex flex-col items-center gap-3 rounded-2xl border bg-surface p-12 text-center ${
+      className={`mt-10 flex flex-col items-center gap-3 rounded-xl border bg-surface p-6 text-center sm:rounded-2xl sm:p-12 ${
         dashed ? "border-dashed border-line" : "border-line"
       }`}
     >

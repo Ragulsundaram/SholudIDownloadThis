@@ -39,29 +39,31 @@ export function SortableAppGrid({ apps }: { apps: IndexEntry[] }) {
 
   return (
     <div>
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        {/* Risk filter chips */}
-        <div className="flex flex-wrap gap-2">
-          {RISK_FILTERS.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setRiskFilter(f.key)}
-              className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
-                riskFilter === f.key
-                  ? "border-ink/30 bg-ink/10 text-ink"
-                  : "border-line bg-surface text-ink-muted hover:border-ink/20 hover:text-ink"
-              }`}
-            >
-              {f.dot && (
-                <span className={`h-1.5 w-1.5 rounded-full ${f.dot}`} />
-              )}
-              {f.label}
-            </button>
-          ))}
+      <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        {/* Risk filter chips — horizontal scroll on mobile */}
+        <div className="-mx-3 overflow-x-auto px-3 sm:mx-0 sm:overflow-visible sm:px-0">
+          <div className="flex gap-2 pb-1 sm:flex-wrap sm:pb-0">
+            {RISK_FILTERS.map((f) => (
+              <button
+                key={f.key}
+                onClick={() => setRiskFilter(f.key)}
+                className={`flex flex-shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  riskFilter === f.key
+                    ? "border-ink/30 bg-ink/10 text-ink"
+                    : "border-line bg-surface text-ink-muted hover:border-ink/20 hover:text-ink"
+                }`}
+              >
+                {f.dot && (
+                  <span className={`h-1.5 w-1.5 rounded-full ${f.dot}`} />
+                )}
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Sort options */}
-        <div className="flex items-center gap-1 rounded-full border border-line bg-surface p-1">
+        <div className="flex items-center gap-1 self-start rounded-full border border-line bg-surface p-1 sm:self-auto">
           {SORT_OPTIONS.map((o) => (
             <button
               key={o.key}

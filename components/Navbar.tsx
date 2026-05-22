@@ -13,17 +13,17 @@ type Props = {
 export function Navbar({ apps = [], categoryList }: Props) {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-page/80 backdrop-blur supports-[backdrop-filter]:bg-page/60">
-      <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3">
+      <div className="flex h-14 items-center justify-between gap-2 px-3 sm:h-16 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <MobileSidebar apps={apps} categoryList={categoryList} />
-          <Link href="/" className="flex items-center gap-2 text-ink hover:opacity-80">
-            <ShieldQuestion className="h-6 w-6 text-brand" />
-            <span className="text-base font-semibold tracking-tight">
+          <Link href="/" className="flex min-w-0 items-center gap-1.5 text-ink hover:opacity-80 sm:gap-2">
+            <ShieldQuestion className="h-5 w-5 flex-shrink-0 text-brand sm:h-6 sm:w-6" />
+            <span className="truncate text-sm font-semibold tracking-tight sm:text-base">
               ShouldIDownloadThis
             </span>
           </Link>
         </div>
-        <nav className="flex items-center gap-1 text-sm">
+        <nav className="flex flex-shrink-0 items-center gap-0.5 text-sm sm:gap-1">
           <NavbarSearch apps={apps} />
           <CompareBasket apps={apps} />
           <Link
