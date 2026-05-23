@@ -328,7 +328,7 @@ function RiskPill({ risk }: { risk: RiskLevel }) {
 }
 
 function Dash() {
-  return <span className="text-xs text-ink-subtle">—</span>;
+  return <span className="text-xs text-ink-subtle">-</span>;
 }
 
 function FlagTitleList({ titles, tone }: { titles: string[]; tone: "safe" | "risky" }) {

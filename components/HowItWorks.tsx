@@ -5,7 +5,7 @@ const STEPS = [
     icon: FileText,
     title: "We read the policy",
     body:
-      "We pull each app's full privacy policy and terms — often thousands of words at a postgrad reading level — and parse every claim.",
+      "We pull each app's full privacy policy and terms - often thousands of words at a postgrad reading level - and parse every claim.",
   },
   {
     icon: Sparkles,
@@ -17,7 +17,7 @@ const STEPS = [
     icon: ThumbsUp,
     title: "You decide before installing",
     body:
-      "One number, one verdict, and the specific red flags — so you know what you're agreeing to in 30 seconds, not 30 minutes.",
+      "One number, one verdict, and the specific red flags - so you know what you're agreeing to in 30 seconds, not 30 minutes.",
   },
 ];
 

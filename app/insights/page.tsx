@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata() {
   return {
-    title: "Privacy Insights — ShouldIDownloadThis",
+    title: "Privacy Insights - ShouldIDownloadThis",
     description: "Trends and statistics across all app privacy ratings on ShouldIDownloadThis.",
   };
 }
@@ -181,7 +181,7 @@ export default async function InsightsPage() {
         <section className="mb-6 rounded-xl border border-line bg-surface p-4 sm:mb-8 sm:rounded-2xl sm:p-6">
           <h2 className="mb-1 text-base font-semibold text-ink">Biggest privacy risks</h2>
           <p className="mb-5 text-sm text-ink-muted">
-            How each permission category rates across all reviewed apps — sorted worst first.
+            How each permission category rates across all reviewed apps - sorted worst first.
           </p>
           <div className="space-y-3">
             {concernStats.map((cs) => {

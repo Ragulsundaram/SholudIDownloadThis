@@ -123,7 +123,7 @@ export default async function BrowseConcernPage({ searchParams }: Props) {
 
 export function generateMetadata() {
   return {
-    title: "Browse by concern — ShouldIDownloadThis",
+    title: "Browse by concern - ShouldIDownloadThis",
   };
 }
 

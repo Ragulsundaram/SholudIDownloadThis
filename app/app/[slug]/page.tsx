@@ -35,7 +35,7 @@ export async function generateMetadata({
   const data = await getApp(slug);
   if (!data) return { title: "App not found" };
   return {
-    title: `${data.app.name} — privacy rating ${data.verdict.score}/100 | ShouldIDownloadThis`,
+    title: `${data.app.name} - privacy rating ${data.verdict.score}/100 | ShouldIDownloadThis`,
     description: data.verdict.one_liner,
   };
 }

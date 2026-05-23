@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { getAllApps } from "@/lib/getAllApps";
 
 export const metadata: Metadata = {
-  title: "Disclaimer — ShouldIDownloadThis",
+  title: "Disclaimer - ShouldIDownloadThis",
   description:
     "Important information about how ShouldIDownloadThis ratings are generated and the limitations of AI-based privacy analysis.",
 };
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     heading: "AI-generated analysis",
-    body: "All privacy ratings, scores, and summaries on ShouldIDownloadThis are produced by an artificial intelligence system that reads and interprets publicly available privacy policies and terms of service. The AI may misread, misunderstand, or miss sections of those documents. Ratings reflect the language in the policy — not the actual technical behaviour of the app.",
+    body: "All privacy ratings, scores, and summaries on ShouldIDownloadThis are produced by an artificial intelligence system that reads and interprets publicly available privacy policies and terms of service. The AI may misread, misunderstand, or miss sections of those documents. Ratings reflect the language in the policy - not the actual technical behaviour of the app.",
   },
   {
     heading: "Not legal advice",
-    body: "Nothing on this site constitutes legal, professional, or regulatory advice of any kind. ShouldIDownloadThis is an informational tool only. If you need a legal assessment of an app's data practices — for compliance, due diligence, or any other purpose — you should consult a qualified legal professional.",
+    body: "Nothing on this site constitutes legal, professional, or regulatory advice of any kind. ShouldIDownloadThis is an informational tool only. If you need a legal assessment of an app's data practices - for compliance, due diligence, or any other purpose - you should consult a qualified legal professional.",
   },
   {
     heading: "No warranty",
@@ -36,7 +36,7 @@ const SECTIONS = [
   },
   {
     heading: "Limitation of liability",
-    body: "To the fullest extent permitted by law, ShouldIDownloadThis and its contributors shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your reliance on any rating or analysis published here — including but not limited to decisions to install or not install an application.",
+    body: "To the fullest extent permitted by law, ShouldIDownloadThis and its contributors shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your reliance on any rating or analysis published here - including but not limited to decisions to install or not install an application.",
   },
 ];
 

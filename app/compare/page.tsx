@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import ComparePageClient from "./ComparePageClient";
 
 export const metadata = {
-  title: "Compare apps — ShouldIDownloadThis",
+  title: "Compare apps - ShouldIDownloadThis",
 };
 
 export default function ComparePage() {

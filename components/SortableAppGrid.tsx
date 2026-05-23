@@ -41,7 +41,7 @@ export function SortableAppGrid({ apps }: { apps: IndexEntry[] }) {
     <div>
       <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         {/* Risk filter chips — horizontal scroll on mobile */}
-        <div className="-mx-3 overflow-x-auto px-3 sm:mx-0 sm:overflow-visible sm:px-0">
+        <div className="-mx-3 overflow-x-auto scrollbar-hide px-3 sm:mx-0 sm:overflow-visible sm:px-0">
           <div className="flex gap-2 pb-1 sm:flex-wrap sm:pb-0">
             {RISK_FILTERS.map((f) => (
               <button

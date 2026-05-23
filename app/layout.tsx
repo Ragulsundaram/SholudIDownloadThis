@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "ShouldIDownloadThis — Know what you're agreeing to",
+  title: "ShouldIDownloadThis - Know what you're agreeing to",
   description:
     "Plain-English privacy ratings for the apps you're about to install. We read the policy so you don't have to.",
 };

@@ -7,7 +7,7 @@ export function BrowseByConcern() {
       <div className="mb-4 sm:mb-6">
         <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">Browse by concern</h2>
         <p className="mt-1 text-xs text-ink-muted sm:text-sm">
-          Worried about one specific permission? Jump straight to apps that handle it best &mdash; or worst.
+          Worried about one specific permission? Jump straight to apps that handle it best - or worst.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-7">

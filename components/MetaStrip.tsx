@@ -24,7 +24,7 @@ export function MetaStrip({ meta, appName }: Props) {
               <ExternalLink className="h-3 w-3" />
             </a>
           ) : (
-            <span className="text-ink-muted">—</span>
+            <span className="text-ink-muted">-</span>
           )}
         </Field>
         <Field label="Policy updated">

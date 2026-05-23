@@ -80,7 +80,7 @@ export function BrowseByCategory({ topSafest, topRiskiest }: Props) {
       >
         <BarChart2 className="h-4 w-4 text-brand" />
         <span>
-          See the full breakdown across all apps —{" "}
+          See the full breakdown across all apps -{" "}
           <span className="font-medium text-ink">Privacy Insights →</span>
         </span>
       </Link>

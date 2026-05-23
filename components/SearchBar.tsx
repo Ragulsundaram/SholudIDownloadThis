@@ -19,7 +19,7 @@ const RISK_DOT: Record<string, string> = {
   unknown: "bg-unknown",
 };
 
-export function SearchBar({ apps, placeholder = "Search any app — e.g. WhatsApp, TikTok, Spotify" }: Props) {
+export function SearchBar({ apps, placeholder = "Search any app - e.g. WhatsApp, TikTok, Spotify" }: Props) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
