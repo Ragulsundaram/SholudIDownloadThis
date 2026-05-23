@@ -263,7 +263,7 @@ function ComparisonGrid({
   rows: Row[];
 }) {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       <table className="w-full min-w-[480px] border-collapse text-sm">
         <thead className="sr-only">
           <tr>
