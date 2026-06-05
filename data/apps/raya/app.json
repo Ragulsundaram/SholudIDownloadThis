@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.rayatheapp.com/privacy",
+    "terms_url": "https://www.rayatheapp.com/terms",
+    "policy_last_updated": "2020-05-06",
+    "needs_review": true,
+    "review_notes": "Privacy policy is 6 years old (May 2020) and may not reflect current data practices. The app has undergone significant updates since then (now at v5.30.0). Instagram API access practices may have changed. Claims about data sharing are contradicted by Google Analytics and service provider sharing clauses."
+  },
+  "app": {
+    "slug": "raya",
+    "name": "Raya",
+    "developer": "Raya App Inc",
+    "app_store_url": "https://apps.apple.com/in/app/raya/id957215308",
+    "app_store_id": "957215308",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/da/d6/da/dad6da3a-f451-5a04-e999-80582bdf19dc/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "",
+    "description": "A private, membership-based community for dating, networking, and friendship. Applications are reviewed and accepted before access is granted."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 57,
+    "grade": "C",
+    "one_liner": "An exclusive private community with a strong 18+ age gate, but its 6-year-old privacy policy raises questions about current practices and it collects extensive personal data including your Instagram profile, contacts, and location.",
+    "summary": "Raya is an exclusive, application-only social network for dating, networking, and friendship. It has a strict 18+ age policy and explicitly removes underage users. The app makes some strong privacy commitments, including a promise never to sell personal information and a 3-month safety retention window after account deletion. However, its privacy policy was last updated in May 2020 and may not reflect current practices. The app collects extensive personal information during the application process, including your full Instagram profile data (followers, following list, photos count), your phone contacts, and your location. Your profile, including Instagram photos and personal details, is visible to all accepted members. Google Analytics is used for tracking, and the company explicitly disclaims liability for security breaches.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Raya offers an exclusive community experience with genuine privacy-minded features like the 18+ gate and a no-selling promise. However, the outdated policy, extensive data collection during application (Instagram profile, phone contacts, location), and broad profile visibility to all members warrant caution. If you value keeping your social graph private, consider whether the trade-off is worth it."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_outdated_policy",
+        "title": "Privacy policy is 6 years old",
+        "plain_english": "The privacy policy was last updated in May 2020. The app has released many updates since then, and the policy may not describe how your data is actually handled today.",
+        "severity": "high"
+      },
+      {
+        "id": "red_instagram_data_harvest",
+        "title": "Harvests your entire Instagram profile during application",
+        "plain_english": "When you apply, Raya accesses your Instagram username, profile picture, biography, website, full list of followers, full list of people you follow, and how many pictures you have posted. This is used to decide if you get accepted.",
+        "severity": "high"
+      },
+      {
+        "id": "red_contacts_upload",
+        "title": "Uploads your phone contacts to evaluate connections",
+        "plain_english": "As part of your application, Raya asks for access to your phone contacts. It uses this to check if you know existing members, and other users may also upload your contact info if you are in their phone.",
+        "severity": "high"
+      },
+      {
+        "id": "red_profile_visible_all",
+        "title": "Your profile is visible to all accepted members",
+        "plain_english": "Once accepted, any other member can view your profile, including your Instagram photos, first name, age, city, hometown, and biography. You cannot hide your profile from the member pool entirely.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_location_ip_tracking",
+        "title": "Tracks your general location even if you deny GPS",
+        "plain_english": "Even if you refuse to share your exact location, Raya still figures out your city, state, and general area from your internet connection address. Exact location is collected if you grant permission.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_google_analytics",
+        "title": "Uses Google Analytics to track your behavior",
+        "plain_english": "Raya shares information about how you use the app with Google Analytics to analyze trends and improve the service. This includes your interactions and device information.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_security_liability",
+        "title": "Company disclaims liability for data breaches",
+        "plain_english": "Raya explicitly states it has no legal responsibility to you if your personal information is lost, misused, or altered in a security breach, even though it claims to take security seriously.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_business_transfer",
+        "title": "Your data could be transferred in a company sale",
+        "plain_english": "If Raya is sold or its assets are transferred, your personal information may be included in that transaction.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_selling",
+        "title": "Explicitly promises never to sell your data",
+        "plain_english": "Raya states clearly that it will never sell your personal information to any third party and will not disclose it without your permission.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_age_gate",
+        "title": "Strict 18+ age requirement",
+        "plain_english": "Raya restricts membership to adults 18 and older. If they discover an underage user, they remove them immediately and do not knowingly collect data from children.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_safe",
+        "title": "Never handles your payment details",
+        "plain_english": "All payments go through Apple or Stripe. Raya never sees or stores your credit card information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_retention_limited",
+        "title": "Deletes inactive accounts after 2 years",
+        "plain_english": "If you stop using the app for 2 years, Raya will delete or anonymize your information. After you delete your account, there is a 3-month safety window, then your data is removed.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights",
+        "title": "Offers GDPR-style data rights",
+        "plain_english": "You can request access to your data, ask for corrections, request deletion, object to processing, and obtain a copy of your information by contacting Raya directly.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use your camera to upload photos to your profile and for video chat with other members. The photos you upload are visible to all accepted members.",
+      "detail": "Camera used for profile photo uploads and video chat. Photos uploaded are viewable by other members. Video chat content visible to the other participant. No mention of camera content being shared with third parties or used for ads.",
+      "policy_excerpt": "you may also provide us images... you will be able to view information you have provided to us directly or through Instagram, such as your Instagram username, photos you upload",
+      "concerns": ["Profile photos visible to all members", "Video chat content visible to other user"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Raya asks for your exact location to show to other users, but you can say no. Even if you refuse, it still figures out your city and general area from your internet connection address.",
+      "detail": "Exact location collected if user grants permission (can be enabled/disabled in settings). Location display to other users is optional. However, city, state and general location are inferred from IP address regardless of location permission.",
+      "policy_excerpt": "you may be asked if you would like to display your specific location to other users... Note that even if you do not grant us permission to use location services, we may collect data regarding your city, state and general location (not your exact location) through your IP address.",
+      "concerns": ["IP-based location tracking even when GPS denied", "Exact location shared with other users if enabled", "Location used for matching and profile display"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "During the application, Raya asks for your phone contacts to see if you know existing members. Other users may also upload your contact info if you are in their phone. Your contacts are stored by Raya.",
+      "detail": "Phone contacts accessed during application to evaluate real-world connections to existing members. Other users may provide information about you if you are a contact in their phone. Contact information stored as part of application.",
+      "policy_excerpt": "you will be asked to begin an application using certain credentials such as your Instagram handle, contact information, and phone contacts... you authorize us to access information from your Instagram account, such as your username, profile picture, biography, website, list of followers, list of people you follow, and number of pictures, as well as your phone contacts.",
+      "concerns": ["Full phone contacts uploaded during application", "Contacts stored on Raya servers", "Other users may upload your info without your consent", "Used for evaluating social connections"],
+      "score_impact": -13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos from your device to your profile. These photos are visible to all accepted members of the community.",
+      "detail": "Photo uploads for profile creation. Photos sourced from device storage and Instagram. No mention of broad file system scanning beyond photo selection.",
+      "policy_excerpt": "you may also provide us images... photos you upload",
+      "concerns": ["Photos uploaded and shared with member community", "Instagram photos imported to profile"],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya claims it never sells your data and does not share it without permission, but it does use Google Analytics to track your behavior, shares non-personal information with service providers, and could transfer your data if the company is sold.",
+      "detail": "Claims no selling and no disclosure without permission. However: (1) Google Analytics used for research and analytics, (2) non-personal, non-identifiable information shared with third-party service providers and promotional partners, (3) aggregated non-personal information shared with advisors, investors, and professionals, (4) business transfer clause for significant corporate transactions, (5) cross-border data transfers to US and other jurisdictions.",
+      "policy_excerpt": "We will never sell your personal information to any third party and we do not disclose your personal information to any third party without your permission; provided, however, that we use information internally and with select third-party analytics services to improve and operate the Service... We may share non-personal, non-identifiable information with third parties that perform services on our behalf",
+      "concerns": ["Google Analytics data sharing", "Non-personal info shared with service providers and promotional partners", "Aggregated data shared with business partners", "Business transfer clause", "Cross-border data transfers"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "To apply, you must provide extensive personal information including your name, email, date of birth, gender, hometown, city, phone number, Instagram handle, and a biography. Your full Instagram profile data, including your followers and following lists, is also collected.",
+      "detail": "Extensive identity data collected: name, Instagram handle, email, date of birth, gender, hometown, city of residence, telephone number, phone contacts, biography, song selections, preferences for recommendations and connections, images. Instagram data includes: username, profile picture, biography, website, list of followers, list of people you follow, number of pictures. Profile visible to all accepted members. Some information considered 'special' or 'sensitive' in certain jurisdictions.",
+      "policy_excerpt": "identifying information such as your name, Instagram handle, email address, date of birth, gender, hometown, city of residence, telephone number, phone contacts, and listed friends currently using the App... information about your gender and preferences for recommendations and connections",
+      "concerns": ["Extensive personal data collected during application", "Full Instagram social graph accessed", "Sensitive/special data categories collected", "Profile visible to all accepted members"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya uses Google Analytics to track how you use the app, how often you interact with other users, and your access patterns. It also collects your device type, operating system, and unique identifiers.",
+      "detail": "Google Analytics used for research, analysis, and analytics. Behavioral tracking includes: how and how often you interact with other users, access times, device type and ID, OS, IP address. Cookies and similar technologies used. Do Not Track signals not honored. No mention of ad networks or targeted advertising.",
+      "policy_excerpt": "how and how often you interact with other users and your access times... perform research, analysis and analytics internally or by using a third party service such as Google Analytics",
+      "concerns": ["Google Analytics behavioral tracking", "Interaction patterns monitored", "Cookies used for tracking", "Do Not Track not honored"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya is strictly for adults 18 and older. They do not knowingly collect information from children under 18 and will immediately remove anyone found to be underage.",
+      "detail": "Explicit 18+ age requirement. Only applicants 18+ considered. Company not liable for age misrepresentation but will remove underage users if discovered. Does not knowingly collect, maintain or use information from children under 18. App Store rating is 17+.",
+      "policy_excerpt": "We restrict our Service to people who are 18 years of age and older. Only applicants 18 and over will be considered for acceptance... Should we become aware of a user who is not at least 18 years of age, we will immediately remove that user from our Service.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya logs your internet connection address to figure out your general location, even if you do not share exact GPS location. It also uses this for security and troubleshooting.",
+      "detail": "IP address collected continuously. Used for general location inference (city, state) when GPS permission denied. Also used for device identification and security.",
+      "policy_excerpt": "your IP address... we may collect data regarding your city, state and general location (not your exact location) through your IP address",
+      "concerns": ["IP address logged continuously", "Used for location inference", "Linked to device identification"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya collects your device type, operating system, unique device ID, and internet connection details. If you uninstall and reinstall the app, it can reconnect your old activity to your device.",
+      "detail": "Device type and ID, operating system, IP address collected. Unique device identifier stored even after uninstallation and re-associated if app is reinstalled on same device.",
+      "policy_excerpt": "the operation system used by your device, your device type and ID, your IP address... If you uninstall the App from your mobile device, the unique identifier associated with your device will continue to be stored. If you re-install the application on the same mobile device, we will be able to re-associate this identifier to your previous transactions and activities.",
+      "concerns": ["Unique device identifier stored persistently", "Device ID survives uninstallation", "Cross-session tracking via device ID"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya does not collect or store any health or biometric information.",
+      "detail": "No mention of health data, biometric data, or fitness tracking in the privacy policy. App is a social/dating network with no health-related features.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Raya never sees your payment details. All payments are handled by Apple or Stripe, and your financial information stays with them.",
+      "detail": "Payments exclusively through third-party services (Apple, Stripe). Raya never requests or stores credit card information. Financial details secured by third-party providers.",
+      "policy_excerpt": "As we exclusively accept payment through third party services such as Apple and Stripe, we will never ask for your credit card information and your financial details are, and will remain, secured by and subject to the applicable third party's security and privacy policies.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account directly in the app. After deletion, Raya keeps your data for 3 months for safety reasons, then deletes or anonymizes it. If you do not use the app for 2 years, your data is also removed.",
+      "detail": "Account deletion available in-app. 3-month safety retention window after deletion (account not visible but info retained). After 3 months, data deleted or anonymized. 2-year inactivity deletion policy. Exceptions for legal compliance, outstanding disputes, and legitimate business interests (fraud prevention, safety). GDPR rights: access, rectification, deletion, objection, restriction, portability. Requests handled via contact@rayatheapp.com.",
+      "policy_excerpt": "we implement a safety retention window of three months following account deletion. During this period, account information will be retained although the account will of course not be visible on the App. In practice, we delete or anonymize your information upon deletion of your account (following the safety retention window) or after two years of continuous inactivity",
+      "concerns": ["3-month retention after deletion", "Broad exceptions for legal/business interests", "No guaranteed complete erasure timeframe"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If Raya updates its privacy rules, your continued use of the app counts as agreeing to the changes. You can only stop this by deleting your account.",
+      "detail": "Policy changes posted with revised date. Continued use constitutes consent and acceptance. Users can terminate account if they do not consent. No active notification mechanism beyond posting the updated policy.",
+      "policy_excerpt": "your continued use of the Service following the posting of changes to this Privacy Policy will mean you consent to and acceptance thereof. If you do not consent to such changes you can terminate your account at any time",
+      "concerns": ["Continued use = automatic acceptance", "No active re-agreement required"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 87.5,
+    "final_score": 57,
+    "grade": "C"
+  }
+}

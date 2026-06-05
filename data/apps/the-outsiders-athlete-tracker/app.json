@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://gentlerstories.com/theoutsiders/privacypolicy",
+    "terms_url": "https://gentlerstories.com/theoutsiders/terms-of-use",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "the-outsiders-athlete-tracker",
+    "name": "The Outsiders: Athlete Tracker",
+    "developer": "Gentler Stories LLC",
+    "app_store_url": "https://apps.apple.com/in/app/the-outsiders-athlete-tracker/id6751584800",
+    "app_store_id": "6751584800",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/aa/40/b6/aa40b6d6-8e0c-ade2-384f-de8b7e586a48/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "sub_category": "Lifestyle",
+    "description": "A privacy-first athlete tracker that reads Apple HealthKit data to provide training readiness, load ratios, workout analysis, and progress tracking. Created by the team behind Apple Watch App of the Year."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 95,
+    "grade": "A",
+    "one_liner": "An exceptionally privacy-friendly fitness tracker that keeps all your health data on your device and never sends it anywhere.",
+    "summary": "The Outsiders is a performance-focused athlete tracker that reads your Apple HealthKit data to calculate training readiness, workout zones, and progress trends. Its privacy policy is remarkably clear and strong: all health, workout, and location data is processed locally on your device, never stored by the app, never sent to any server, and never shared with external AI providers or advertisers. Even workout photo matching happens entirely on-device. The only data the developer ever collects is an optional email address for their app launch newsletter. This is one of the most privacy-respecting fitness apps we've reviewed.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "If you are a cyclist, runner, or performance athlete looking for a data-driven training companion, The Outsiders is an easy recommendation. It gives you deep fitness insights without asking you to trade your health privacy. All your sensitive biometric data stays on your device, and the developer makes explicit, legally binding promises not to monetize or share it."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_photo_icloud",
+        "title": "Workout photo times saved to your iCloud",
+        "plain_english": "When you use the workout photos feature, the app saves just the creation time and date of your photos to your private iCloud so it can match them to workouts. Your actual photos stay on your device.",
+        "severity": "low"
+      },
+      {
+        "id": "red_email_manual_deletion",
+        "title": "Email deletion requires contacting support",
+        "plain_english": "If you sign up for the newsletter with your email and later want it removed, you have to email the company manually. There is no self-service button to delete it instantly.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_health_data_local",
+        "title": "All health data stays on your device",
+        "plain_english": "The app reads your workouts, heart rate, and other health data from Apple Health, but it never stores, caches, or sends any of it to a server. Everything is processed right on your phone.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ai_sharing",
+        "title": "Health data never shared with external AI",
+        "plain_english": "The developer explicitly promises that your health and workout data will not be processed or shared with any outside AI companies or machine-learning services.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_marketing_use",
+        "title": "Health data never used for ads or marketing",
+        "plain_english": "The app promises it will never use your health and workout data to show you advertisements, send you marketing messages, or profile you for commercial purposes.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_local_photos",
+        "title": "Workout photo matching happens only on your device",
+        "plain_english": "When the app links photos to your workouts, it does all the work on your phone. It does not upload your photos or their details to company servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_significant_changes",
+        "title": "Developer promises no surprise privacy changes",
+        "plain_english": "The privacy policy says the company will not change the rules to allow new data collection or make other big privacy changes without first getting your consent.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not use your camera or microphone. The workout photos feature reads existing photos from your photo library using the photo creation time, but it does not take new pictures or record audio.",
+      "detail": "No camera or microphone access is mentioned in the privacy policy. The workout photos feature operates on existing photos in the photo library via creation time matching. No image content is transmitted.",
+      "policy_excerpt": "This feature matches photos taken during your workouts with your workout summaries using the photo creation time and date. All processing happens locally on your device.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app reads your workout route location data from Apple Health to show you route maps. It only accesses it when you view a workout, and it never stores or sends your location anywhere.",
+      "detail": "Location data is accessed locally through Apple Health for displaying workout route maps. Explicitly not stored or cached by the app, not sent to any server, and not used for marketing or advertising.",
+      "policy_excerpt": "We will not use your Location Data for marketing or advertising purposes. Your Location Data will be accessed locally through Apple Health and will not be stored or cached by the App. Your Location Data is processed locally and will not be sent to any server.",
+      "concerns": ["Location data accessed for route map display"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts or phonebook in any way.",
+      "detail": "No mention of contacts, phonebook, or address book access in the privacy policy. The app is a personal fitness tracker with no social or sharing features that would require contacts.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app reads your photo library to match workout photos by their creation time and date. It does not scan your other files or folders, and it does not upload your photos anywhere.",
+      "detail": "Photo library access is limited to reading photo creation timestamps to match with workout summaries. Actual photo content is not stored or transmitted. Only creation time and date are saved to user's private iCloud.",
+      "policy_excerpt": "We don't store your photos or metadata. Only the photo creation time and date are saved and stored in your private iCloud, accessible only to you.",
+      "concerns": ["Photo library read access for workout matching"],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not share your health, workout, or location data with any other companies, advertisers, or outside services. The only data the developer ever receives is an optional email address if you choose to join their newsletter.",
+      "detail": "Explicit promises that Health and Workout Data will not be sent to any server, not processed or shared with external AI providers. No third-party analytics, advertising, or data-sharing partners are mentioned. Optional email for newsletter is the only personal data collected by the developer.",
+      "policy_excerpt": "Your Health and Workout Data is processed locally and will not be sent to any server, and will not be processed or shared with any external AI providers.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You do not need to create an account or give any personal information to use the app. The only identity data the developer collects is an optional email address if you sign up for their launch newsletter.",
+      "detail": "No account creation is required for core functionality. Optional email collection for newsletter signup. GDPR compliance mentioned for EU users. Email deletion available by contacting support.",
+      "policy_excerpt": "If you sign up for our app launch newsletter, we will process your e-mail address for the purpose of providing you with the newsletter.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track your behavior, show you ads, or share your usage data with advertising networks. The developer explicitly promises not to use your health data for marketing.",
+      "detail": "Explicit commitment that Health and Workout Data will not be used for marketing or advertising purposes. No ad SDKs, analytics providers, or behavioral tracking mentioned in the policy.",
+      "policy_excerpt": "We will not use your Health and Workout Data for marketing or advertising purposes.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 17+ on the App Store and is designed for adult athletes. It is not meant for children, and the developer does not collect any data that would require child-specific protections.",
+      "detail": "App Store content rating is 17+. No mention of children's data protections, COPPA, or age-gating in the privacy policy, but the app's target audience and rating make this irrelevant. No data collection practices that would endanger children.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not log or monitor your internet activity. It does not track which websites you visit or create a profile of your online behavior.",
+      "detail": "No mention of network logging, IP address collection, traffic analysis, or internet activity monitoring. Given the local-only data architecture, network activity appears minimal and limited to app updates or newsletter signup.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect information about your device for tracking or identification purposes. It does not build a fingerprint of your phone or computer.",
+      "detail": "No mention of device identifiers, device fingerprinting, or diagnostic data collection. The app's local-only architecture makes device fingerprinting unnecessary.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app reads your health data from Apple Health including workouts, heart rate, power, distance, biological sex, and date of birth. However, it never stores, caches, or sends this data anywhere. Everything stays on your device and is processed locally.",
+      "detail": "Extensive HealthKit access: Workouts, Workout Routes, Heart Rate, Running and Cycling Power, Distance, Active Energy, Biological Sex, Date of Birth. Explicitly not stored or cached by the app, not sent to any server, not processed or shared with external AI providers. Cannot read/write Apple Health without user consent. Data used for training readiness, load ratios, body metrics, workout progress, and heart rate/power/pace zones.",
+      "policy_excerpt": "We will use your Health and Workout Data to define your optimal training readiness, training load ratio, typical values and normal ranges of your body metrics, workout progress, workouts summary, workout details and determine your heart rate zones, running pace zones, running power zones and cycling power zones. Your Health and Workout Data will be accessed locally through Apple Health and will not be stored or cached by the app. Your Health and Workout Data is processed locally and will not be sent to any server, and will not be processed or shared with any external AI providers.",
+      "concerns": ["Extensive sensitive HealthKit data accessed", "User must trust local-only claim is technically enforced"],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is completely free and does not ask for any payment information.",
+      "detail": "App is free on the App Store. No in-app purchases, subscriptions, or payment features mentioned in the description or privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Because the app does not store your health data on its servers, deleting the app removes all your data automatically. If you gave your email for the newsletter, you can ask the company to remove it by sending an email to their support team.",
+      "detail": "No server-stored personal data beyond optional newsletter email. App data is entirely local, so uninstallation effectively deletes all app-related data. Email deletion requires manual contact to support@gentlerstories.com. GDPR compliance mentioned for EU users. No self-service data export or deletion portal.",
+      "policy_excerpt": "If you wish to withdraw your consent or delete your email from our records, please contact us at support@gentlerstories.com",
+      "concerns": ["Email deletion requires manual support contact", "No self-service data portal"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer promises it will not change the privacy rules to allow new data collection or make other major changes without first getting your consent.",
+      "detail": "Policy states changes are posted on the privacy policy page. Critically, it also explicitly promises: 'We will not change this agreement to allow the collection of your personal information or make other significant changes without your consent.' This is stronger than most apps.",
+      "policy_excerpt": "We will not change this agreement to allow the collection of your personal information or make other significant changes without your consent.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "safe", "max": 30, "rate": 0, "deduction": 0 },
+      { "category": "account_identity", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "behavioural_ad_tracking", "risk": "safe", "max": 25, "rate": 0, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 },
+      { "category": "device_fingerprinting", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 10.5,
+    "final_score": 95,
+    "grade": "A"
+  }
+}

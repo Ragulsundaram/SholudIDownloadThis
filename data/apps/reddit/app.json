@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.reddit.com/policies/privacy-policy",
+    "terms_url": "https://www.redditinc.com/policies/user-agreement",
+    "policy_last_updated": "2026-05-26",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "reddit",
+    "name": "Reddit",
+    "developer": "REDDIT, INC.",
+    "app_store_url": "https://apps.apple.com/in/app/reddit/id1064216828",
+    "app_store_id": "1064216828",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/dd/5f/4add5f09-0adc-36a8-8dd0-9bce69ca2813/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.png",
+    "category": "News",
+    "sub_category": "Social Networking",
+    "description": "A social network and community platform with over 100,000 communities covering every topic imaginable — news, memes, gaming, advice, AMAs, and more."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 70,
+    "grade": "B",
+    "one_liner": "A massive public forum that collects minimal identifying data by default but tracks your behaviour extensively for ads and shares data with a broad network of partners.",
+    "summary": "Reddit is one of the world's largest community platforms. Its privacy policy is refreshingly honest and detailed: you can browse without an account, you don't need to use your real name, and IP addresses are deleted after 100 days. Reddit explicitly promises not to sell your personal data to data brokers. However, the platform is fundamentally public — everything you post, comment, or upvote is visible to the world and may appear in search engines or AI chatbot responses. Behind the scenes, Reddit collects detailed usage data, infers your age and gender, and shares cookie IDs, hashed email addresses, and device identifiers with third-party advertising and measurement companies to show you targeted ads both on and off Reddit. Third-party embeds (like YouTube videos inside Reddit posts) load directly from those services and collect data outside Reddit's control. The platform provides solid privacy controls — opt-outs for personalized ads, cookie preferences, account deletion, and a Data Protection Officer — but the default experience involves extensive behavioural tracking.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Reddit offers strong transparency, anonymous browsing, and genuine privacy controls, but its business model relies on extensive behavioural tracking and data sharing with advertising partners. If you use Reddit, browse without an account when possible, disable personalized ads in Privacy Settings, avoid linking third-party accounts, and be mindful that everything you post is public forever."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_public_by_design",
+        "title": "Everything you post is public forever",
+        "plain_english": "Reddit is designed as a public platform. Your posts, comments, profile, and karma are visible to anyone on the internet — including search engines like Google and AI chatbots like ChatGPT — even if you delete your account later. Deleting your account only removes your profile page; your posts and comments stay unless you manually delete them first.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking_on_and_off",
+        "title": "Tracked for ads both on and off Reddit",
+        "plain_english": "Reddit works with outside advertising companies to show you targeted ads not just on Reddit but also on other websites and apps you visit. They share your cookie IDs, a scrambled version of your email, and your IP address with these companies so they can recognize you across the internet.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_embeds_uncontrolled",
+        "title": "Third-party embeds collect data outside Reddit's control",
+        "plain_english": "When you watch a YouTube video or view a tweet that is embedded inside a Reddit post, that content loads directly from YouTube or X (Twitter) onto your phone. Reddit says it cannot control how those companies collect your data, and their privacy policies apply instead.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_inferred_profile_building",
+        "title": "Reddit guesses your age, gender, and interests",
+        "plain_english": "Based on what you do on Reddit, the platform guesses things about you like your age range, gender, and preferred language. These guesses are used to personalize ads and content for you.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_data_from_other_sources",
+        "title": "Combines data from advertisers and other apps",
+        "plain_english": "Reddit receives information about you from other companies — like advertisers who want to show you ads, or other apps and services you use — and combines it with what Reddit already knows about you to build a more complete profile.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_real_name_required",
+        "title": "No real name required to use Reddit",
+        "plain_english": "You don't need to tell Reddit your real name. Your username can be completely anonymous, and you don't even need an account to browse most of the site.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_data_brokers",
+        "title": "Explicitly promises not to sell data to brokers",
+        "plain_english": "Reddit makes a clear promise that it does not sell your personal data to third parties, including data brokers who make money reselling people's information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ip_deletion_100_days",
+        "title": "Deletes your IP address after 100 days",
+        "plain_english": "Except for the IP address used when you first created your account, Reddit automatically deletes all IP addresses it collects from you after 100 days. Most websites keep this data for much longer.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ad_personalization_opt_out",
+        "title": "You can opt out of personalized ads",
+        "plain_english": "Reddit provides a setting in your Privacy Settings where you can turn off the use of third-party data for personalizing the ads you see. You can also control cookies and opt out of audience measurement tracking.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_rights_controls",
+        "title": "Strong privacy rights and account deletion",
+        "plain_english": "Reddit offers a dedicated data request email, a Data Protection Officer you can contact, account deletion from settings, a Privacy Settings page for ad controls, and honors GDPR, CCPA, and other regional privacy laws.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_dpf_certified",
+        "title": "Certified under EU-US Data Privacy Framework",
+        "plain_english": "Reddit has formally certified that it follows the EU-US Data Privacy Framework rules for handling data from European users. This means they have committed to specific data protection standards and you can complain if they break them.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit does not access your camera or microphone. You can upload photos, videos, and audio files you create yourself, but the app itself does not need camera or mic permissions.",
+      "detail": "No mention of camera or microphone access in the privacy policy. Users can submit text, links, images, gifs, audio, and video content but this is user-initiated uploads, not app-driven access to device sensors.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Reddit does not track your exact GPS location. It estimates your approximate location from your internet connection's IP address and uses that to show relevant ads and content. Your IP address is deleted after 100 days. You can also choose to share your location voluntarily in posts.",
+      "detail": "Location is IP-based approximate only. Reddit explicitly states 'We don't track your precise location.' IP addresses collected after account creation are deleted after 100 days. Optional user-shared location via Location Customization setting or associating content with a location.",
+      "policy_excerpt": "We don't track your precise location... We automatically collect information about your approximate location based on our Logs Data. Except for the IP address used to create your account, Reddit will delete any IP addresses collected after 100 days.",
+      "concerns": ["IP-based approximate location inferred", "Used for ad targeting and content personalization"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit does not access your phone contacts or address book.",
+      "detail": "No mention of contacts, phonebook, or address book access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit does not access your phone's photos, files, or storage beyond what you choose to upload through the app yourself.",
+      "detail": "No mention of broad storage or file system access. Content uploads are user-initiated through the app's interface.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit shares your data with a wide range of outside companies including payment processors, cloud hosts, ad serving and measurement companies, age verification services, compliance providers, and AI language model providers. It also shares data with linked third-party services like Google Sign-In or Apple, and with other Reddit affiliates. However, Reddit explicitly promises not to sell your data to data brokers.",
+      "detail": "Data shared with: payment processors (Stripe), cloud providers, ad serving/measurement providers (cookie IDs, IP, hashed email disclosed), age verification providers, compliance providers, LLM providers for search summaries, linked services (at user's direction), service providers, affiliates. Public content shared via APIs, embeds, developer platform. Reddit explicitly states: 'We don't sell your personal data to third parties, including data brokers.'",
+      "policy_excerpt": "We don't sell your personal data to third parties, including data brokers... We may share information with vendors, consultants, and other service providers who need access to such information to carry out work for us... third-party ad serving and measurement providers who help us and advertisers serve relevant ads and measure the performance of ads (by disclosing information such as cookie IDs, your IP address, and/or a hashed version of your email).",
+      "concerns": ["Broad third-party sharing for advertising and analytics", "Hashed email shared with ad partners", "Cookie IDs and IP shared with ad measurement", "LLM providers process public content", "Linked services receive account data at user's direction"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use Reddit without an account. If you sign up, you provide a username, email or phone number, and password (or use Apple/Google sign-in). You can optionally add a bio, gender, birthday, location, profile picture, and social links. Reddit does not require your real name.",
+      "detail": "Account data collected: username (public), email or phone number, password or SSO, bio, gender, birthday, location, language, profile picture, social links. Optional and editable at any time. Reddit explicitly states it collects 'minimal information that can be used to identify you by default' and 'you don't need to give us your real name.'",
+      "policy_excerpt": "We collect minimal information that can be used to identify you by default. If you want to just browse, you don't need an account. If you want to create an account to participate in a subreddit, we don't require you to give us your real name.",
+      "concerns": ["Username and profile are public", "Optional profile data can be revealing", "Phone number used for SMS verification"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit tracks everything you do on the platform — what you click, what communities you visit, what you upvote and downvote, what you search for, and how you interact with ads. It uses this to show you personalized ads both on Reddit and on other apps and websites. Reddit shares your cookie IDs, a scrambled version of your email, and your mobile ad identifier with advertising partners. It also receives limited data about your activity on advertiser websites that use Reddit's ad technology.",
+      "detail": "Extensive tracking: usage information (pages visited, content interactions, ads, communities, upvotes/downvotes, links clicked, search terms), cookies for personalization and ad measurement, inferred attributes (age, gender, language), third-party data combined via hashed email or mobile device ID for ad personalization, cross-site tracking via Reddit Embeds and ad tech on advertiser sites, audience measurement (Nielsen, Quantcast), ads on and off Reddit.",
+      "policy_excerpt": "We may share with these third parties (or they may directly collect) data such as cookie and mobile ad identifiers in order to engage in advertising activity... We may share information such as your email address or resettable device identifier for a specific advertising partner to 'match' the information that they may have about you... provide customized advertisements, content, and information... measure the effectiveness of advertising on and off Reddit.",
+      "concerns": ["Personalized ads on and off Reddit", "Cookie and mobile ad ID shared with ad partners", "Hashed email used for cross-service ad matching", "Activity tracked on advertiser sites via Reddit ad tech", "Inferred attributes used for targeting", "Audience measurement by Nielsen and Quantcast"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit is rated 17+ on the App Store and is not designed for children. The privacy policy does not have specific children's protections because the platform is intended for adults.",
+      "detail": "App rated 17+ with content advisories for profanity, mature themes, and sexual content. No dedicated children's privacy section in the policy. Platform is clearly adult-oriented.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit logs your IP address, what pages you visit, what links you click, what you search for, and how you interact with content and ads. Your IP address is automatically deleted after 100 days, except for the one used when you created your account.",
+      "detail": "Logs data: IP address, user-agent, browser type, OS, referral URLs, device IDs, device settings, mobile carrier. Usage info: pages visited, content/ad/community interactions, upvotes/downvotes, links clicked, requested URL, search terms. IP addresses deleted after 100 days (except account creation IP).",
+      "policy_excerpt": "We collect device and network connection information when you access and use the Services. This may include your IP address, user-agent string, browser type, operating system, referral URLs, device information (such as device IDs), device settings, and mobile carrier name. Except for the IP address used to create your account, Reddit will delete any IP addresses collected after 100 days.",
+      "concerns": ["Extensive internet activity logged", "Device IDs logged", "IP address retained for account creation permanently"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit collects detailed information about your device including a device ID, what browser and operating system you use, your screen settings, and your mobile carrier. It shares your device identifier and a scrambled version of your email with advertising partners to recognize you across different apps and websites.",
+      "detail": "Device data: device IDs, user-agent string, browser type, operating system, device settings, mobile carrier name. Shared with ad serving/measurement providers for targeting and performance measurement. Hashed email and resettable device identifier shared with specific advertising partners for cross-service matching.",
+      "policy_excerpt": "Examples of such information we automatically collect include... a unique user ID, device and browser types and identifiers... device information (such as device IDs), device settings, and mobile carrier name... We may share with these third parties (or they may directly collect) data such as cookie and mobile ad identifiers... We may share information such as your email address or resettable device identifier for a specific advertising partner to 'match' the information that they may have about you.",
+      "concerns": ["Device ID collected and shared", "Resettable device identifier shared with ad partners", "Mobile carrier name logged", "Cross-app/device tracking via ad matching"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit does not collect any health or biometric data.",
+      "detail": "No mention of health, fitness, or biometric data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy Reddit Premium or other products, your payment details are handled directly by Stripe — a well-known payment company. Reddit does not store your credit card information itself. However, Reddit does collect blockchain data if you buy or create NFT-style Collectible Avatars.",
+      "detail": "Payment processing handled by industry-standard providers (such as Stripe). Reddit does not directly store payment information. Collects public blockchain data and addresses for Collectible Avatars/NFT purchases. Never stores Reddit Vault private keys.",
+      "policy_excerpt": "Reddit uses industry-standard payment processor services (such as Stripe) to handle payment information, and those services are subject to separate terms and conditions and privacy policies... We may also collect public blockchain data and addresses, such as when you purchase or create a Collectible Avatar, receive or mint an NFT, or create a Reddit Vault. However, we never store Reddit Vault private key information.",
+      "concerns": ["Blockchain/NFT data collected for avatar purchases"],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account from the settings page, request a copy of your data via email, and control various privacy settings. However, deleting your account only removes your profile — your public posts and comments remain visible unless you delete them first. Reddit may also keep some data for legal or safety reasons.",
+      "detail": "Account deletion available in settings. Data download request via redditdatarequests@reddit.com. Privacy Settings control personalized ads, cookie preferences, linked services. DPO available at dpo@reddit.com. 30-day response for inquiries. After deletion, posts/comments remain unless manually deleted first. Data retained for legitimate business purposes and legal requirements. If account banned, identifiers stored to prevent new account creation.",
+      "policy_excerpt": "You may delete your account at any time from the settings page... When you delete your account, your profile is no longer visible to other users and disassociated from content you posted under that account. Please note, however, that the posts, comments, and messages you submitted prior to deleting your account will still be visible to others unless you first delete the specific content.",
+      "concerns": ["Public content remains after account deletion unless manually removed", "Banned accounts have identifiers retained", "Some data kept for legal purposes"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Reddit may update its privacy policy at any time. For major changes, they say they may email you or post a notice, but this is optional and up to their discretion. Your continued use of the app after changes means you accept them.",
+      "detail": "Policy changes posted with revised date. For material changes, Reddit 'may' notify via email to verified address or through Services. Users encouraged to review regularly. Continued use = acceptance. Reddit commits not to make policies less protective for data collected under prior versions without consent.",
+      "policy_excerpt": "If the changes, in our sole discretion, are material, we may also notify you by sending an email to the address associated with your account (if you have chosen to provide a verified email address) or by otherwise providing notice through our Services... We will not materially change our policies and practices to make them less protective of personal information collected in the past under a prior version of the Privacy Notice without the consent of affected individuals.",
+      "concerns": ["Notification is discretionary ('may') not guaranteed", "No specific advance notice period", "Continued use = acceptance"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 60.5,
+    "final_score": 70,
+    "grade": "B"
+  }
+}

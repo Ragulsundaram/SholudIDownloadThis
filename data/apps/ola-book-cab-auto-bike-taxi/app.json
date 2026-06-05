@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://olawebcdn.com/v1/docs/htmls/india-privacy-policy.html?v=1",
+    "terms_url": "https://www.olacabs.com/tnc",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "ola-book-cab-auto-bike-taxi",
+    "name": "Ola: Book Cab, Auto, Bike Taxi",
+    "developer": "ANI Technologies Pvt. Ltd.",
+    "app_store_url": "https://apps.apple.com/in/app/ola-book-cab-auto-bike-taxi/id539179365",
+    "app_store_id": "539179365",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/02/37/0f/02370fb7-e32c-9a42-a591-608930171969/AppIcon-0-0-1x_U007emarketing-0-5-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "Utilities",
+    "description": "India's largest ride-hailing app for booking cabs, autos, bike taxis, and outstation rides."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "Reliable ride app, but tracks your location for ads and keeps your trip history forever.",
+    "summary": "Ola collects extensive ride and device data, shares it with driver companies and advertisers, and retains your trip history and location data indefinitely even after you delete your account. The app is functional and widely used, but its privacy practices are broader than necessary for a taxi service.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you only need occasional rides, Ola works fine. But your location, trip history, and usage patterns are kept permanently and used for targeted ads. Consider using cash payments and minimizing profile data if privacy matters to you."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_location_used_for_ads",
+        "title": "Your ride location fuels promotions",
+        "plain_english": "Ola uses your GPS location not just to match you with drivers, but also to send you promotions and offers. Your whereabouts help decide which ads you see.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_retention_forever",
+        "title": "Trip history kept forever after account closure",
+        "plain_english": "Even if you delete your Ola account, the company explicitly says it keeps your location history, trip records, and payment history indefinitely for legal reasons and other business purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_site_ad_tracking",
+        "title": "Follows you around the web with targeted ads",
+        "plain_english": "Ola tracks what pages you visit and what you search for, then uses that behavior to show you ads on other websites outside of Ola's own apps and site.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_broad_third_party_sharing",
+        "title": "Wide sharing with partners and advertisers",
+        "plain_english": "Your data is shared with driver companies, payment processors, co-branded partners, contest sponsors, market research firms, and advertisers. The policy also allows your information to be transferred to a new owner if Ola is ever sold.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_easy_deletion",
+        "title": "Account deletion requires emailing support",
+        "plain_english": "You cannot delete your account yourself inside the app. You have to email Ola support and ask them to do it, and even then they keep most of your data.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_core_purpose_limitation",
+        "title": "Most data is tied to ride logistics",
+        "plain_english": "The majority of data Ola collects, like your name, phone number, and pickup address, is genuinely needed to connect you with a driver and complete your ride.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_emergency_contacts_user_controlled",
+        "title": "Emergency contacts are optional",
+        "plain_english": "You choose whether to add emergency contacts to share ride details with. Ola does not automatically scan or upload your entire phonebook.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_material_change_notice",
+        "title": "Notifies you of major policy changes",
+        "plain_english": "If Ola makes material changes to this privacy policy, they say they will notify you by email or through the app before the changes take effect.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention accessing your camera or microphone.",
+      "detail": "No reference to camera or microphone access in the policy. Users may upload photos manually, but the app does not claim to access the camera directly.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Your exact location is tracked continuously during every ride and stored permanently.",
+      "detail": "GPS coordinates are sent to Ola's servers throughout the ride via the driver's phone. The app also collects your geolocation automatically. This data is shared with driver companies and used to send promotions and offers.",
+      "policy_excerpt": "The driver's mobile phone will send your GPS coordinates, during the ride, to our servers. Most GPS enabled mobile devices can define one's location to within 50 feet.",
+      "concerns": [
+        "Location data is used for promotions and advertising",
+        "Shared with driver companies beyond the individual driver",
+        "Retained indefinitely even after account termination"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Only collects specific contacts you manually choose to share, like emergency contacts or friends you refer.",
+      "detail": "Ola does not scan or automatically upload your full contact list. It only collects contact names and phone numbers that you explicitly provide for emergency contacts, referrals, or booking rides for others.",
+      "policy_excerpt": "In case you upload an emergency contact (name and phone number) on your account / on the Mobile Application, we will be collecting and storing such contact information.",
+      "concerns": [
+        "Contact data is stored on Ola's servers",
+        "Referral contacts may be used for marketing outreach"
+      ],
+      "score_impact": -6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy does not mention accessing your phone's files or storage.",
+      "detail": "No mention of file system scanning, photo gallery access, or broad storage permissions. Users may upload photos in reviews, but this appears to be manual.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Your data is shared with a wide network of partners, advertisers, and market research firms.",
+      "detail": "Ola shares data with driver companies, third-party service providers (hosting, analytics, payments), OEM partners, co-branded services, contest sponsors, and market research firms. The policy also allows disclosure to government agencies and in business transfers (mergers/acquisitions).",
+      "policy_excerpt": "We may share your information, including your Protected Information and Usage Information with third parties for any purpose, including but not limited to undertaking market research/ study.",
+      "concerns": [
+        "Broad sharing with market research and analytics third parties",
+        "Business transfer clause allows data to move to a new owner without user consent",
+        "Co-branded services share data with sponsors and charities",
+        "Government and law enforcement disclosure on request"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your name, phone number, and email to create an account and book rides.",
+      "detail": "Ola collects standard account information including full name, email, password, address, mobile phone number, and zip code. This is necessary for ride booking, driver contact, and payment. No government ID or social media linking is mentioned.",
+      "policy_excerpt": "Full name, Email, Password, Address, Mobile phone Number, Zip Code",
+      "concerns": [
+        "Phone number is the primary account identifier",
+        "Account information is shared with driver and driver companies"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Tracks what you do online to show you targeted ads on other websites.",
+      "detail": "Ola uses information about your web and mobile browsing behavior (pages visited, searches made) to select ads displayed to you on websites other than Ola's own sites. This is linked to an anonymous cookie ID, not your name or address. Third-party advertisers on Ola's platforms may also set their own cookies and tracking technologies.",
+      "policy_excerpt": "We may use the information collected from you for targeted advertising... to select which advertisements should be displayed to a particular individual on websites other than our web site(s).",
+      "concerns": [
+        "Cross-site behavioral tracking for advertising",
+        "Third-party advertisers may set their own cookies outside Ola's control",
+        "No opt-out mechanism is described for targeted advertising"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This is a ride-booking app for adults; the policy does not address children specifically.",
+      "detail": "The privacy policy does not mention children, age limits, or COPPA/GDPR-K compliance. Ola is a ride-hailing service not directed at children.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Logs your IP address and connection details to keep the app running and secure.",
+      "detail": "Ola collects your IP address, browser type, referring URL, and Device Identifier. The IP address is used for server diagnostics and to help identify your device. Standard network logging for a connected service.",
+      "policy_excerpt": "We use your Internet Protocol (IP) address to help diagnose problems with our computer server, and to administer our web site(s).",
+      "concerns": [
+        "IP address used to help identify users"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Collects details about your phone to deliver the right app version and personalize the experience.",
+      "detail": "Ola collects device manufacturer, model, operating system, browser type, preferred language, geolocation, and app engagement metrics. This is used for software updates, troubleshooting, and personalizing services. The policy does not explicitly state this is used for advertising fingerprinting.",
+      "policy_excerpt": "The manufacturer and model of your mobile device, Your mobile operating system, The type of mobile internet browsers you are using, Your geolocation.",
+      "concerns": [
+        "Device and app usage data is collected continuously",
+        "Used to personalize content and services"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Does not collect health or biometric data for ride bookings.",
+      "detail": "No health, medical, or biometric data is mentioned in the privacy policy. The only health-related note is that Ola Foundation CSR activities may collect medical reports if you voluntarily request charitable services.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payment details are handled by outside payment companies; Ola keeps your transaction history.",
+      "detail": "Payment processing is handled by third-party providers. Ola does not claim to store raw credit card numbers. However, it does collect and retain transaction history and, for Ola Cars purchases, may collect insurance and purchase details.",
+      "policy_excerpt": "process payments, engage in anti-fraud and security measures",
+      "concerns": [
+        "Transaction history is retained permanently",
+        "Ola Cars purchases involve collecting insurance and financial documents"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask to delete your account, but Ola keeps your ride and payment records forever.",
+      "detail": "Users can request account cancellation by emailing support. However, Ola explicitly states it will retain Protected Information and Usage Information, including geo-location, trip history, and transaction history, indefinitely after account termination for legal obligations, dispute resolution, fraud prevention, and other business reasons. Data may later be anonymized for analytics.",
+      "policy_excerpt": "Even after your account is terminated, we will retain your Protected Information and Usage Information (including geo-location, trip history, and transaction history) as needed to comply with our legal and regulatory obligations, resolve disputes... and for other business reason.",
+      "concerns": [
+        "No self-service deletion option inside the app",
+        "Geo-location and trip history retained indefinitely post-termination",
+        "Broad 'other business reason' justification for retention",
+        "Anonymized data may still be used for analytics"
+      ],
+      "score_impact": -6.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Ola will email you about major privacy policy changes, but small changes take effect immediately.",
+      "detail": "Ola states that any changes are effective immediately upon posting. For material changes, they will notify users by email or through a notice on the service prior to the change becoming effective. Non-material changes may not trigger individual notice.",
+      "policy_excerpt": "Any changes will be effective immediately upon the posting of the revised Privacy Policy. If we make any material changes, we will notify you by email... prior to the change becoming effective.",
+      "concerns": [
+        "Non-material changes take effect immediately without individual notice"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6 },
+      { "category": "data_deletion_user_rights", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 74.5,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

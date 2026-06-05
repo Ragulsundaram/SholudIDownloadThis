@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.skyscanner.net/media/privacy-policy",
+    "terms_url": "https://www.skyscanner.net/media/terms-of-service",
+    "policy_last_updated": "2025-05-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "skyscanner-flights-travel",
+    "name": "Skyscanner Flights & Travel",
+    "developer": "Skyscanner Limited",
+    "app_store_url": "https://apps.apple.com/in/app/skyscanner-flights-travel/id415458524",
+    "app_store_id": "415458524",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/aa/33/8baa33ed-adfe-d8fc-86c0-b386eb1febe4/LiquidGlassUniversalAppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": "A travel search and comparison app for finding cheap flights, hotels, and car rentals. Compares prices across airlines, OTAs, and travel agents with no booking fees. Features price alerts, flexible search, and saved trips."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "Collects extensive travel and personal data to compare prices, then shares it with airlines, hotels, and advertisers, but provides transparent controls and strong user rights.",
+    "summary": "Skyscanner is a travel metasearch engine that collects extensive personal data including contact details, passport information, payment data, device info, and detailed usage behavior. This data is shared with airlines, hotels, car rental companies, advertising partners, and other third parties. While the privacy policy is transparent and well-written, and the company provides strong user rights and security measures, the extensive data collection and sharing practices warrant caution.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects passport details, payment card information, and tracks your searches, clicks, and interactions across the platform. This data is shared with numerous travel providers and advertising partners for personalization and marketing purposes."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_passport_id_collected",
+        "title": "Collects passport and identification information",
+        "plain_english": "The app asks for your passport or other ID information when you book travel, which includes your name, address, gender, nationality, and date of birth.",
+        "severity": "high"
+      },
+      {
+        "id": "red_travel_data_shared",
+        "title": "Your booking details are shared with airlines, hotels, and travel agents",
+        "plain_english": "When you book through Skyscanner, your name, contact details, payment info, passport data, and travel itinerary are sent to the airline, hotel, or travel agent you choose.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking_partners",
+        "title": "Tracks your activity and shares data with advertising partners",
+        "plain_english": "The app uses cookies and works with partners like Facebook to track how you use the platform, then shows you targeted ads on other websites and apps based on your travel searches.",
+        "severity": "high"
+      },
+      {
+        "id": "red_profiling_ml",
+        "title": "Builds a profile of your interests using machine learning",
+        "plain_english": "The app combines data about your searches, bookings, and clicks to create a profile of your travel preferences, then uses this to personalize results and show you targeted travel deals.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_ip_shared_car_hire",
+        "title": "Shares your IP address with car rental companies",
+        "plain_english": "When you search for car rentals, your IP address may be shared with certain providers so they can show prices available in your region and detect fraud.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_special_categories",
+        "title": "Does not routinely collect sensitive health or religious data",
+        "plain_english": "The company explicitly says it does not routinely collect special category data like health information or religious beliefs, unless you voluntarily provide it for specific travel needs.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_strong_rights",
+        "title": "Strong data rights with an easy-to-use request form",
+        "plain_english": "You can request a copy of your data, ask for corrections, request deletion, or restrict how your data is used through a dedicated data privacy request page.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security_by_design",
+        "title": "Security and privacy built into company culture",
+        "plain_english": "The company trains all employees on data protection and privacy, uses data minimization techniques like anonymization, and implements technical security measures to keep your information safe.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_consent_controls",
+        "title": "You can manage cookie and marketing preferences",
+        "plain_english": "You can choose which cookies to accept, opt out of marketing emails, and manage your privacy settings at any time through the app or website.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy mentions that you can upload photos and videos as user-generated content, but it does not explicitly say whether the app accesses your camera or microphone directly.",
+      "detail": "The policy references user-generated content including photos and videos, and social media engagement. There is no explicit discussion of camera or microphone permissions.",
+      "policy_excerpt": "Content you upload to our Platforms or which relate to our Platforms (such as comments, photos, videos, recommendations, preferences, reviews and prompts you enter into AI-powered language models we may make available to you on our Platforms).",
+      "concerns": ["Photos and videos mentioned in user-generated content", "No explicit mention of camera or microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app automatically gets a general idea of your location from your IP address. It can also access your precise location if you choose to allow it, which helps predict your preferred departure airport.",
+      "detail": "Non-specific location is derived from IP address automatically. Specific location data from mobile device is collected only if the user grants access. Location is used to predict departure airports and personalize results.",
+      "policy_excerpt": "Device and Location Information such as: generic information from your device such as your IP address, make, model and operating system; non-specific location based on your IP address; specific location data derived from your mobile device (if you choose to grant us access to this).",
+      "concerns": ["IP-based location collected automatically", "Precise location used for personalization if granted"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention contacts or phonebook access.",
+      "detail": "There is no mention of contacts, address book, or phonebook data in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention file or storage access.",
+      "detail": "The policy does not explicitly discuss access to device storage, photo libraries, or file systems beyond references to user-generated content uploads.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with airlines, hotels, car rental companies, travel agents, payment processors, fraud prevention services, advertising partners, and other companies in the Skyscanner group.",
+      "detail": "The policy discloses extensive sharing with Travel Providers (full booking data), Third-Party Processors (payment, email, security, analytics, tracking, customer service, cloud storage), Advertising Partners (Facebook, affiliate networks), Fraud Prevention Partners, Brand Collaborations, Loyalty Partners, and other Skyscanner group companies across multiple countries.",
+      "policy_excerpt": "If you make a booking or purchase with a Travel Provider on one of our Platforms, personal data you submit as part of your booking or purchase will be shared with the relevant Travel Provider... We may also collaborate with selected companies to understand more about our travellers' interests, for example, by identifying how Skyscanner travellers engage with third-party brands.",
+      "concerns": ["Shared with Travel Providers", "Shared with advertising partners", "Shared with fraud prevention services", "Shared with Skyscanner group companies", "IP address shared with car rental providers"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects extensive identity data including your name, date of birth, gender, place of birth, passport details, and loyalty scheme information. This is shared with airlines and hotels when you book.",
+      "detail": "Account information includes name, date of birth, gender, place of birth, identification documents, payment details, and loyalty scheme info. Passport/ID information is collected for bookings and may include name, address, gender, nationality, and date of birth.",
+      "policy_excerpt": "Identification Information such as: passport or other ID information, which may contain information like your name, address, gender, nationality, and date of birth. Account Information, if you choose to create an account and populate your profile, such as: name, date of birth, gender, and place of birth; identification information; payment information; loyalty scheme information.",
+      "concerns": ["Passport and ID collected for bookings", "Extensive identity data shared with travel providers", "Third-party login info collected from Apple, Google, Facebook"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks every search, click, and page you visit. It uses this data to build a profile of your travel interests and shows you personalized ads on other websites and apps through partners like Facebook.",
+      "detail": "Extensive tracking includes time spent on platforms, searches performed, pages accessed, links clicked, travel provider redirects, cookie identifiers, and communications interactions. This is used for personalization, profiling, and advertising through third-party ad solutions including Facebook and affiliate networks.",
+      "policy_excerpt": "Usage Information such as: How you interact with our Platforms and communications, including time you spend on our Platforms, searches performed, and the pages, features or functionality you have accessed, links you have clicked... We combine information that we collect, generate, or receive to understand you and your interests better, so that we can personalise our Platforms, services and advertising for you.",
+      "concerns": ["Extensive click and search tracking", "Profiling for personalization", "Shared with Facebook and ad networks", "Machine learning used for personalization"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not meant for anyone under 18. If the company learns it has collected data from a child without parental consent, it will delete it.",
+      "detail": "The policy explicitly states platforms are not intended for children under 18 and they don't knowingly collect data from anyone under 18. Data will be deleted if discovered to have been collected without parental authorization.",
+      "policy_excerpt": "Please note that our Platforms are not intended for children under 18 years of age, and nobody under the age of 18 should provide any information to Skyscanner via our Platforms or otherwise. We don't knowingly collect personal data from anybody under 18, and we will delete any personal data that we learn has not been provided by, other than with the express authorisation of, the child's parent or legal guardian.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs every search you make, every page you visit, every link you click, and how long you spend on the platform. Your IP address is also collected automatically.",
+      "detail": "The policy explicitly collects how you interact with platforms, time spent, searches performed, pages accessed, features used, links clicked, and identity of Travel Providers you redirect to. IP address is collected automatically as device information.",
+      "policy_excerpt": "Usage Information such as: How you interact with our Platforms and communications, including time you spend on our Platforms, searches performed, and the pages, features or functionality you have accessed, links you have clicked to be redirected to or from our Platforms.",
+      "concerns": ["All searches logged", "All page views tracked", "Links clicked tracked", "IP address collected", "Used for personalization and ads"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device make, model, operating system, browser, IP address, and cookie identifiers. This is used to personalize results, show you ads, and detect fraud.",
+      "detail": "Device information includes IP address, make, model, OS, browser, cookie identifiers, and network details. This is used for platform optimization, personalization, fraud detection, and advertising. Non-specific location is derived from IP.",
+      "policy_excerpt": "Device and Location Information such as: generic information from your device such as your IP address, make, model and operating system; non-specific location based on your IP address; specific location data derived from your mobile device (if you choose to grant us access to this).",
+      "concerns": ["IP address and device details collected", "Cookie identifiers tracked", "Used for fraud detection and ads", "Network details collected"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company says it does not routinely collect sensitive health data. You might only share health-related information if you contact customer service about a fitness-to-fly concern or dietary needs.",
+      "detail": "The policy explicitly states they don't routinely collect special category data like health information. Users may voluntarily provide health-related data for specific travel needs (dietary requirements, fitness-to-fly), but this is not standard collection.",
+      "policy_excerpt": "We don't routinely collect special category personal data (these are more sensitive types of data, such as information relating to your health, religion or ethnic origin). However, you may choose to provide us with information which reveals this type of data.",
+      "concerns": ["Users may voluntarily provide health data"],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your payment card number, expiry date, and verification code when you make a booking. It stores a tokenized version of your card for fraud detection, and shares payment details with travel providers.",
+      "detail": "Payment Information includes card number, expiry date, and verification code. Third-party payment processors handle payments. A tokenized version of card number and IP address are stored for fraud detection. Payment details are shared with Travel Providers.",
+      "policy_excerpt": "Payment Information such as: payment card number, expiry date and verification code... If you make a booking or purchase on one of our Platforms, we store a subset of your payment card information (such as a tokenised version of card number and IP address) along with information submitted by you during the checkout process.",
+      "concerns": ["Full card details collected at checkout", "Tokenized card stored for fraud detection", "Payment details shared with travel providers"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have strong rights to access, correct, delete, or export your data. You can exercise these rights through a dedicated data privacy request page or by contacting the Data Protection Officer.",
+      "detail": "Users can request copy of data, correction, deletion, restriction, and portability. Rights can be exercised via 'Make a Data Privacy Request' page or by writing to the DPO. Account holders can also manage some data directly in their profile.",
+      "policy_excerpt": "You have the right to ask us for a copy of your personal data; to correct, delete or restrict processing of your personal data; and to obtain the personal data you have provided to us in a structured, machine readable format. In addition, you can object to the processing of your personal data in some circumstances.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes in a significant way, the company will let you know when you next use the service or through other communications.",
+      "detail": "The policy states that significant changes will be notified when users next access services or through other communications. This is stronger than simply posting an updated date.",
+      "policy_excerpt": "When we make significant changes, we'll let you know when you next access our services, or by other communications.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 90.0,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

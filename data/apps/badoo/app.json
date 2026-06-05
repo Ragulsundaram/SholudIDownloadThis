@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "kimi-k2.6",
+    "policy_url": "https://badoo.com/privacy/",
+    "terms_url": "https://badoo.com/terms",
+    "policy_last_updated": "2026-03-13",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "badoo",
+    "name": "Badoo Dating: Meet New People",
+    "developer": "Badoo Software Ltd (Bumble Inc.)",
+    "app_store_url": "https://apps.apple.com/in/app/badoo-dating-app-friends/id351331194",
+    "app_store_id": "351331194",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6d/ad/26/6dad2642-b39c-8c0b-45f4-97cd3500c965/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "Dating",
+    "description": "A global dating and social networking app for meeting new people, making friends, and finding dates."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 52,
+    "grade": "D",
+    "one_liner": "A dating app that collects extensive personal data including your location, photos, and biometric info, then shares it with advertisers and marketing partners for targeted ads.",
+    "summary": "Badoo collects extensive personal information including your name, email, phone number, gender identity, sexual preference, photos, precise location, and even biometric data for verification. It shares this data with advertisers, marketing partners (for 'lookalike' audiences), Facebook, and numerous service providers. The app also analyzes your photo performance and swiping behavior to rank profiles. While it has good GDPR compliance and transparency, the sheer volume of data collection and third-party sharing makes this a high-privacy-risk dating app.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Badoo collects very personal data including sexual preference and biometric information, then shares aggregated behavioral data with advertisers for targeted ads. Consider whether you're comfortable with this level of data exposure for a dating app."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_biometric_collection",
+        "title": "Collects biometric data and government ID for verification",
+        "plain_english": "Badoo collects your facial biometric data and may ask for government-issued ID photos to verify your identity. While manual review is an option, facial recognition technology is used by default for photo verification.",
+        "severity": "high"
+      },
+      {
+        "id": "red_extensive_data_sharing",
+        "title": "Shares data with numerous third parties including OpenAI and Facebook",
+        "plain_english": "Badoo shares your data with many third parties including OpenAI for AI icebreaker messages, Facebook for advertising, and various marketing service providers who build 'lookalike' audiences from your behavior.",
+        "severity": "high"
+      },
+      {
+        "id": "red_photo_analysis_non_opt_out",
+        "title": "Analyzes your photos and you can't opt out",
+        "plain_english": "Badoo tracks how long people look at your photos, which photos get 'yes' votes, and lighting quality to reorder your photos for better performance. You cannot opt out of this feature.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_long_retention_blocked",
+        "title": "Keeps blocked users' data for up to 15 years",
+        "plain_english": "If your account is blocked for serious violations, Badoo may keep your information for up to 15 years to prevent you from creating a new account.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_student_targeting",
+        "title": "Targets students based on campus location checks",
+        "plain_english": "For US and Canadian students aged 18-24, Badoo checks if your location matches a college campus area to send targeted offers and features.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_compliant",
+        "title": "GDPR compliant with clear rights and DPO contact",
+        "plain_english": "Badoo has a Data Protection Officer, provides EU model clauses for data transfers, and clearly outlines your GDPR rights including access, deletion, and portability.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_transparent_policy",
+        "title": "Very detailed and transparent privacy policy",
+        "plain_english": "The privacy policy is comprehensive, well-organized, and explains what data is collected, why it's used, how long it's kept, and who it's shared with in clear tables.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_safety_tools",
+        "title": "Uses AI safety tools like Private Detector and Deception Detector",
+        "plain_english": "Badoo uses AI to automatically blur potential nude images in chats and to detect and block fake, scam, and spam accounts before they can harm users.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Account deletion available with 28-day restore window",
+        "plain_english": "You can delete your account, and for 28 days you can restore it if you change your mind. Most profile data is deleted 28 days after account deletion.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Badoo uses your camera for profile photos, verification selfies, ID scans, and video calls. It only accesses these when you actively use those features.",
+      "detail": "The app requires camera access for profile photos, photo verification (voluntary blue badge), ID verification, and video/audio calling. Microphone is used for video/audio calls. Biometric data (facial recognition) may be collected during photo verification.",
+      "policy_excerpt": "If you choose to verify your profile photo, we will scan each photo that you submit. The scan can include the use of facial recognition technology and involves the collection of biometric data.",
+      "concerns": [
+        "Biometric data collected during photo verification",
+        "Government ID photos collected for verification in some regions"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Badoo collects your precise location (GPS coordinates and WiFi access points) to show you nearby members and to enable the 'People Nearby' feature.",
+      "detail": "The app collects longitude, latitude, and WiFi access point data to show your general location to other members and to show you profiles of nearby members. Location is automatically updated based on your device's location. You can turn this off in device settings.",
+      "policy_excerpt": "We will collect information about WiFi access points as well as other location information about your longitude and latitude and may save your device's coordinates to offer certain features to you.",
+      "concerns": [
+        "Precise GPS coordinates saved and used for matching",
+        "Location data shared with advertising partners (coarse location)",
+        "Student campus location checks for US/Canada users"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can optionally give Badoo access to your device's address book to add people to your contacts. This is not required to use the app.",
+      "detail": "Address book access is optional and only used when you want to add someone to your contacts. The policy states it is a choice you make.",
+      "policy_excerpt": "You can also choose to give our App access to your device's address book, which will only be used when you want to add someone to your contacts.",
+      "concerns": [],
+      "score_impact": 6.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Badoo accesses your photos when you upload them to your profile or send them in messages. Photos are stored on Badoo's servers.",
+      "detail": "Photos are uploaded for profiles and messaging. The app also analyzes photo performance data (which photos get more views, yes votes, better lighting) to reorder them, and you cannot opt out of this feature.",
+      "policy_excerpt": "We collect data about your profile photos that allows us to arrange them in a way that is favourable to you. You cannot opt-out of this feature currently.",
+      "concerns": [
+        "Photo interaction data analyzed and used to reorder photos",
+        "Cannot opt out of photo performance tracking"
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Badoo shares your data with many third parties including Facebook, OpenAI, advertising partners, marketing service providers, and service providers for verification, moderation, and analytics.",
+      "detail": "Data is shared with: Veriff (ID verification), Twilio (SMS), Prove (authentication), Zendesk/Sierra (support), Cinder (moderation), Typeform/Kantar (research), Google Cloud, OpenAI (AI prompts, 30-day retention), Facebook (marketing, joint data controller), advertising partners (gender, age, IP, coarse location), and marketing service providers (device ID, location, age, gender, app actions, hashed emails for lookalike audiences). Business transfers clause allows disclosure of all data in mergers/acquisitions.",
+      "policy_excerpt": "We may share your personal information with these third parties, but only for the purposes of performing these functions and providing such services.",
+      "concerns": [
+        "OpenAI processes prompts and inputs (retained for 30 days)",
+        "Facebook is joint data controller for marketing data",
+        "Marketing service providers use data for lookalike audiences",
+        "Business transfers clause allows all data disclosure"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Badoo collects extensive identity data including your name, email, phone number, gender identity, sexual preference, date/place of birth, and photos. Profile info is visible to other members.",
+      "detail": "Registration requires name, email, phone number, gender identity, date/place of birth, sexual preference, and photos. Profile information including sexual preference and photos is visible to other members. Government ID may be collected for verification in some regions. Biometric data (facial recognition) collected for photo verification.",
+      "policy_excerpt": "Registration Information such as your sexual preference, name and username may be visible to other members who view your profile page.",
+      "concerns": [
+        "Sexual preference visible to other members",
+        "Government ID collected for verification",
+        "Biometric data collected for photo verification"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Badoo tracks your swiping behavior, photo interactions, and profile visits to show you ads and build 'lookalike' audiences. It also shares this data with Facebook and marketing partners.",
+      "detail": "The app uses matching algorithms based on swiping behavior, profile interactions, and device coordinates to recommend profiles. It also shares behavioral data (photo uploads, purchases, photo verification, swipe speed, profile prompt responses) with marketing service providers to create 'lookalike' and 'custom' audiences for targeted advertising.",
+      "policy_excerpt": "creating an advertisement audience of other potential members with characteristics suitable for our App (including behavioural factors - they upload photos, make purchases, photo verify, respond to profile prompts, have not been penalised for bad online behaviour, swipe speed)",
+      "concerns": [
+        "Behavioral data used for ad targeting and lookalike audiences",
+        "Swipe speed and photo interaction data tracked",
+        "Facebook pixel used for tracking website interactions"
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Badoo requires users to be 18 or older and deletes accounts found to belong to minors.",
+      "detail": "The app is rated 17+ on the App Store but Badoo explicitly requires users to be at least 18. If a minor's account is discovered, it is terminated and profile information deleted. Email and IP may be retained to prevent new account creation.",
+      "policy_excerpt": "Badoo does not knowingly collect any information about or market to children, minors or anyone under the age of majority. If we become aware that a child, minor or anyone under the age of 18 has registered with us... we will take steps to terminate that person's registration and delete their Profile information.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Badoo logs your IP address, WiFi access points, and internet activity to provide services, target ads, and ensure security.",
+      "detail": "IP address and WiFi access point data are collected for location services, advertising (coarse location based on IP), fraud prevention, and security monitoring. IP session information is also logged.",
+      "policy_excerpt": "We will collect information about WiFi access points as well as other location information about your longitude and latitude.",
+      "concerns": [
+        "IP address used for location inference and ad targeting"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Badoo collects your device ID, model, operating system, and on Android, even what other apps you have installed. This is used for ads, fraud prevention, and analytics.",
+      "detail": "Device information including unique identifier, model, operating system, and log/usage data is collected. On Android, the apps installed on your device may also be collected with consent. Device ID is shared with advertising and marketing partners.",
+      "policy_excerpt": "The information covers your device's unique identifier, model, and operating system, as well as log and usage data... The apps installed on your device (Android only).",
+      "concerns": [
+        "Device ID shared with advertising partners",
+        "Apps installed on device tracked (Android)",
+        "Device fingerprinting used for fraud prevention and ads"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Badoo collects your facial biometric data for photo verification and may collect government ID photos for identity verification.",
+      "detail": "Photo verification uses facial recognition technology to compare submitted photos with profile photos, involving biometric data collection. Manual review is available as an alternative. Government ID photos may be collected for ID verification (redacted in countries where ID numbers are not permitted). Veriff processes ID verification data and deletes it within 72 hours or 30 days.",
+      "policy_excerpt": "The scan can include the use of facial recognition technology and involves the collection of biometric data, so that we can compare the photo you submit to your profile photo.",
+      "concerns": [
+        "Biometric data collected for photo verification",
+        "Government ID photos collected for verification",
+        "Manual review available but facial recognition is default"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy premium features, Badoo collects your credit card number, expiration date, CVV, and billing address directly (not through Apple for in-app purchases).",
+      "detail": "Payment information including credit/debit card number, expiration date, CVV code, and billing address is collected for premium services. Badoo uses automated anti-fraud decisions to block suspicious transactions. Payment data is retained for tax/accounting purposes (up to 10 years, then anonymized).",
+      "policy_excerpt": "In order to purchase ads or other offerings provided as part of our paid products and services you will need to provide us payment information, including your credit or debit card number, card expiration date, CVV code, and billing address.",
+      "concerns": [
+        "Payment data retained for up to 10 years for tax purposes"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account with a 28-day restore window. Most data is deleted within 28 days, but some is kept for 6-15 years for legal, fraud, and safety reasons.",
+      "detail": "Account deletion is available with a 28-day restore window. Profile data is deleted 28 days after deletion. Some data is retained longer: payment data for 10 years (then anonymized), blocked account data for 6 years (15 years for severe cases), correspondence for 6 years, and fraud investigation data for 6-15 years.",
+      "policy_excerpt": "For up to 28 days it is still possible to restore your Account if it was accidentally deleted. After 28 days, we begin the process of deleting your personal information from our systems.",
+      "concerns": [
+        "Data retained up to 15 years for blocked accounts",
+        "Payment data kept for 10 years",
+        "Public content may persist on other platforms even after deletion"
+      ],
+      "score_impact": 3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Badoo can change its privacy policy at any time. For major changes, they'll notify you by email or through the app.",
+      "detail": "Material changes to the privacy policy are notified via email to the account email address or by posting a notice within the app. The policy is always available at badoo.com/privacy.",
+      "policy_excerpt": "If we make a change to this policy that, in our sole discretion, is material, we will notify you, for example, via an email to the email associated with your Account or by posting a notice within Badoo.",
+      "concerns": [],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6.0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 98.75,
+    "final_score": 52,
+    "grade": "D"
+  }
+}

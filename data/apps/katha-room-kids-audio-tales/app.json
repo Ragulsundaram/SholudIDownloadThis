@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.parjanya.org/privacy-policy",
+    "terms_url": "https://www.parjanya.org/terms-of-service",
+    "policy_last_updated": "2022-06-21",
+    "needs_review": true,
+    "review_notes": "The privacy policy appears to be a generic template that does not match the actual app. It mentions HealthKit, heart-rate tracking, and camera access for a simple kids' audio-story app. It also admits to third-party advertising and tracking in an app rated 4+. These discrepancies suggest the policy was copy-pasted and may not accurately reflect real data practices."
+  },
+  "app": {
+    "slug": "katha-room-kids-audio-tales",
+    "name": "Katha Room - Kids audio tales",
+    "developer": "Parjanya Creative Solutions LLP",
+    "app_store_url": "https://apps.apple.com/in/app/kids-bedtime-stories-indian/id6463834306",
+    "app_store_id": "6463834306",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/d2/3d/b8d23d68-e959-ae41-4f96-2d5e533232ae/Katha-Room-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "sub_category": "Books",
+    "description": "A collection of Indian audio stories for children aged 3–7, narrated in English, Kannada, Hindi, Tamil and Samskrita."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 51,
+    "grade": "D",
+    "one_liner": "A children's audio-story app that runs third-party ads and tracking, and uses a copy-paste privacy policy that falsely claims to collect heart-rate data through HealthKit.",
+    "summary": "Katha Room is an Indian audio-story app for young children (rated 4+). Its privacy policy appears to be a generic template rather than one written for this specific app — it bizarrely mentions collecting heart-rate data via Apple HealthKit and requesting camera access, neither of which makes sense for a simple audio-player. More seriously, the policy admits to third-party advertising companies serving ads inside the app, third-party tracking technology collecting interaction data, and sharing data with 'marketing' vendors. For an app clearly aimed at preschoolers, these practices are deeply concerning. The developer claims a 30-day data-retention limit and promises to honor deletion requests, but the mismatch between the app's actual purpose and its privacy policy raises serious doubts about whether the stated practices are accurate.",
+    "recommendation": "avoid",
+    "recommendation_reason": "Katha Room is marketed to parents of 3–7 year olds, yet its privacy policy admits to third-party advertising, cross-app tracking technology, and data sharing with marketing vendors inside a children's app. The policy also appears to be a generic template that falsely claims the app collects heart-rate and fitness data. These are serious red flags for any child-directed product. Parents should look for an audio-story app with a genuine, child-specific privacy policy and no ad tracking."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_third_party_ads_in_kids_app",
+        "title": "Third-party ads inside a 4+ children's app",
+        "plain_english": "The privacy policy says the app uses outside advertising companies to show ads to your child. These companies can track what your child does in the app and on other websites to show them targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_tracking_tech_on_children",
+        "title": "Tracking technology watches how kids use the app",
+        "plain_english": "The developer allows outside companies to put tracking tools inside the app that record how your child taps, swipes, and moves through the stories over time. This data is used to figure out what content is popular and understand online behaviour.",
+        "severity": "high"
+      },
+      {
+        "id": "red_generic_policy_mismatched",
+        "title": "Privacy policy looks like a copy-paste template",
+        "plain_english": "The policy claims the app collects heart-rate data through Apple HealthKit and requests camera access — features that make no sense for a simple audio-story player. This strongly suggests the policy was copied from another app and does not describe Katha Room's real data practices.",
+        "severity": "high"
+      },
+      {
+        "id": "red_data_shared_marketing",
+        "title": "Data shared with 'marketing' vendors",
+        "plain_english": "The developer shares your child's information with outside companies for 'marketing efforts' and 'data analysis.' The policy does not name these companies or explain exactly what data goes to them.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_real_coppa_protection",
+        "title": "No meaningful child-specific data protections",
+        "plain_english": "Although the app is rated 4+ and clearly made for young children, the privacy policy only says they don't 'knowingly' collect from kids under 18. It has no special rules for young children's data, no parental-consent process, and no mention of COPPA or similar child-privacy laws.",
+        "severity": "high"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_short_retention",
+        "title": "Claims to delete data after 30 days",
+        "plain_english": "The policy says they will not keep personal information for longer than 30 days unless the law requires it. If true, this is much better than apps that hold onto data for years.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_deletion_request_form",
+        "title": "Offers a form to request data deletion",
+        "plain_english": "You can fill out a form to ask the developer to show you, update, or delete the data they have about your child. They say they will respond within 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_payment_data",
+        "title": "Payment handled by Apple",
+        "plain_english": "Because the app is downloaded through the App Store, any payments go through Apple. The developer never sees or stores your credit card information.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The privacy policy says the app may ask for camera access, which is strange for an audio-only story app. It does not mention microphone access.",
+      "detail": "Policy states: 'We may request access or permission to certain features from your mobile device, including your mobile device's camera, storage, and other features.' No mention of microphone. Given the app is purely audio stories, camera access seems unnecessary and may be a template artifact.",
+      "policy_excerpt": "We may request access or permission to certain features from your mobile device, including your mobile device's camera, storage, and other features.",
+      "concerns": ["Camera access mentioned for an audio-only app", "Purpose unclear", "Likely template policy artifact"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app tracks your child's location.",
+      "detail": "No explicit mention of GPS or location access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on location access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether the app can access your phone contacts.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may ask to access your phone's storage. The policy says you can change this permission in your device settings.",
+      "detail": "Policy explicitly mentions requesting storage access from mobile device. For an audio story app, this may be used to cache downloaded stories, but the policy does not specify the purpose.",
+      "policy_excerpt": "We may request access or permission to certain features from your mobile device, including your mobile device's camera, storage, and other features.",
+      "concerns": ["Storage access requested but purpose not explained", "No clarity on what files are accessed"],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer shares data with outside companies that handle payments, data analysis, email delivery, hosting, customer service, and marketing. They also allow selected third parties to put tracking tools inside the app. Most worryingly, they use outside advertising companies to show ads to children.",
+      "detail": "Data shared with: vendors for payment processing, data analysis, email delivery, hosting, customer service, and marketing efforts. Third-party tracking technology is allowed on the app. Third-party advertising companies serve ads. Business transfers (merger/acquisition) may also share data. The policy says they do not share for 'promotional purposes' unless described, but advertising and marketing are explicitly described.",
+      "policy_excerpt": "We may share your data with third party vendors, service providers, contractors or agents who perform services for us... Examples include: payment processing, data analysis, email delivery, hosting services, customer service and marketing efforts. We may allow selected third parties to use tracking technology on the Apps... We may use third-party advertising companies to serve ads when you visit the Apps.",
+      "concerns": ["Third-party advertisers in children's app", "Marketing vendors receive data", "Tracking technology from third parties", "Business transfer clause", "No named third parties"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not clearly say what personal information the app collects when you open or use it. It only mentions generic 'personal information' without listing specific fields like name, email, or birth date.",
+      "detail": "The policy repeatedly refers to 'personal information' but never enumerates what specific identity data is collected (e.g., name, email, device ID). For an app with in-app purchases, some account data may be involved, but it's not specified.",
+      "policy_excerpt": "When you visit our mobile application, and use our services, you trust us with your personal information.",
+      "concerns": ["No explicit list of collected identity data", "Vague references to 'personal information'"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses outside advertising companies to show ads to your child. These companies track what your child does in the app and on other websites using cookies and tracking tools to figure out what ads to show. The developer also lets other companies put tracking technology inside the app to watch how kids interact with it over time.",
+      "detail": "Third-party advertising companies use cookies and tracking technologies based on visits to the app and other websites. Third-party tracking technology is explicitly allowed on the app to collect data about user interactions over time, analyze data, track popularity, and understand online activity. Do-Not-Track signals are not honored.",
+      "policy_excerpt": "We may use third-party advertising companies to serve ads when you visit the Apps. These companies may use information about your visits to our Website(s) and other websites that are contained in web cookies and other tracking technologies in order to provide advertisements about goods and services of interest to you. We may allow selected third parties to use tracking technology on the Apps, which will enable them to collect data about how you interact with the Apps over time.",
+      "concerns": ["Third-party ad tracking in children's app", "Cross-website tracking via cookies", "Tracking technology from unspecified third parties", "No opt-out for behavioural ads", "DNT signals ignored"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 4+ and is clearly made for preschoolers, yet the privacy policy only says they don't 'knowingly' collect from kids under 18. There are no special protections for young children, no parent-consent process, no mention of COPPA, and no restrictions on advertising to kids.",
+      "detail": "App is rated 4+ and marketed to children aged 3-7. Policy states 'We do not knowingly collect data from or market to children under 18 years of age' — an age threshold far above the app's actual audience. The 18-year threshold and lack of COPPA/GDPR-K safeguards suggest the policy was not written for a child-directed app. The policy also permits third-party advertising and tracking inside the app, which is highly problematic for young children.",
+      "policy_excerpt": "We do not knowingly collect data from or market to children under 18 years of age. By using the Apps, you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Apps.",
+      "concerns": ["App rated 4+ but policy only protects under-18s", "No COPPA compliance mentioned", "No GDPR-K safeguards", "Third-party ads allowed in children's app", "No parental consent mechanism", "Generic 18+ threshold misaligned with actual audience"],
+      "score_impact": -6.5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app needs internet to stream audio stories. The developer logs standard connection data, and third-party tracking tools also monitor network activity to see how your child uses the app.",
+      "detail": "Internet connection required for streaming audio content. Standard server logging plus third-party tracking technology monitors interactions. DNT signals are explicitly not honored.",
+      "policy_excerpt": "We may allow selected third parties to use tracking technology on the Apps, which will enable them to collect data about how you interact with the Apps over time... We do not currently respond to DNT browser signals.",
+      "concerns": ["Third-party tracking of network activity", "DNT signals ignored"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer collects information about your mobile device and allows outside companies to use tracking technology that can build a profile of how your child uses the app and other apps over time.",
+      "detail": "Mobile device information collected. Third-party tracking technology enabled on the app to collect interaction data over time, which can be used to build behavioural profiles. Third-party advertisers may also use device and visit information for ad targeting.",
+      "policy_excerpt": "We may collect information regarding your mobile device, when you use our apps... We may allow selected third parties to use tracking technology on the Apps, which will enable them to collect data about how you interact with the Apps over time.",
+      "concerns": ["Device info collected", "Third-party tracking for profiling", "Ad targeting based on device/visit data"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The privacy policy bizarrely claims the app uses Apple HealthKit to read and write health and fitness data, including heart-rate samples during workouts. This makes no sense for a children's audio-story app and strongly suggests the policy was copied from a fitness app without editing.",
+      "detail": "Policy explicitly states HealthKit and Motion/Fitness tracking are used, heart-rate samples are collected, and activity data is used to 'create smart routines.' For an audio-story app for 3-7 year olds, these claims are completely implausible and indicate a template policy. The developer claims this data is 'never shared with anybody outside the application,' but the very mention of HealthKit in this context is a red flag.",
+      "policy_excerpt": "Our Application utilizes Apple Health and the HealthKit API to help our users understand and manage their personal health and fitness journey... Activity, performance and workout data, such as heart rate samples during a workout, are also collected by the Application.",
+      "concerns": ["HealthKit claimed for audio-story app — implausible", "Heart-rate data allegedly collected", "Motion/fitness tracking mentioned", "Strong evidence of copy-paste/template policy", "If true, excessive data collection for children's app; if false, dishonest policy"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is free to download with in-app purchases for premium content. Apple handles all payment processing, so the developer never sees your credit card or payment details.",
+      "detail": "Payment processing handled by Apple through App Store. Developer does not collect or store payment information directly. Policy mentions payment processing vendors but this refers to Apple's infrastructure.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask the developer to show you, update, or delete the data they have about you by filling out a form. They say they will reply within 30 days. They also promise not to keep personal data for longer than 30 days unless the law says otherwise.",
+      "detail": "Deletion available via online request form. Response promised within 30 days. 30-day retention limit stated. No self-service portal mentioned. GDPR rights referenced for EEA residents. California 'Shine the Light' and under-18 removal rights mentioned.",
+      "policy_excerpt": "No purpose in this policy will require us keeping your personal information for longer than 30 days... To request to review, update, or delete your personal information, please submit a request form by clicking here. We will respond to your request within 30 days.",
+      "concerns": ["No self-service deletion portal", "Deletion requires manual form submission", "30-day retention claim may not account for third-party copies"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer may update the privacy policy at any time. For major changes, they say they might post a notice or send a direct notification, but they don't promise to do this every time. They suggest checking the policy frequently yourself.",
+      "detail": "Policy states it may be updated 'from time to time.' For material changes, they 'may' notify via prominent posting or direct notification. No guaranteed active notification mechanism. Users encouraged to review frequently.",
+      "policy_excerpt": "We may update this privacy notice from time to time... If we make material changes to this privacy notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this privacy notice frequently.",
+      "concerns": ["Notification is optional ('may') not guaranteed", "No specific advance notice period mentioned"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 100.25,
+    "final_score": 51,
+    "grade": "D"
+  }
+}

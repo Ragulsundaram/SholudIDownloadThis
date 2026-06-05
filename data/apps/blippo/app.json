@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://blippo.plus/privacy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-02-14",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "blippo",
+    "name": "Blippo+",
+    "developer": "Panic, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/blippo/id6756083719?mt=12&platform=iphone",
+    "app_store_id": "6756083719",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/70/98/92/709892ba-f80a-c93b-9c87-39052536c0ae/Blippo-0-0-85-220-0-6-0-2x.png/512x512bb.png",
+    "category": "Games",
+    "sub_category": "Simulation",
+    "description": "A live-action, new wave, off-cable TV simulator. Channel-surf through soaps, sitcoms, news, and talk shows on Planet Blip."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 90,
+    "grade": "A",
+    "one_liner": "A refreshingly honest TV simulator from a trusted indie developer that collects almost no data and promises not to sell what little it does.",
+    "summary": "Blippo+ is a live-action TV simulator from Panic, Inc. with one of the shortest and most privacy-respecting policies on the App Store. The developer explicitly states they make money selling games, not mining personal information. The only data collected comes from optional newsletter signups, support emails, and brief, two-week server logs. There are no ads, no behavioural trackers, and no data brokers. The main caveats are that support emails are kept indefinitely unless you ask to remove them, and the developer does not promise to actively notify you if the privacy policy changes.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "Blippo+ is a rare example of a paid game with a genuinely minimal data footprint. Panic, Inc. has a long reputation for ethical software development, and the privacy policy backs it up with plain-language promises and very limited collection. If you are looking for a creative, offline-friendly game and value your privacy, Blippo+ is an excellent choice."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_support_emails_indefinite",
+        "title": "Support emails kept indefinitely",
+        "plain_english": "If you email Blippo+ for help, they keep that email forever unless you specifically ask them to delete it. They use it to remember past conversations and spot trends in support questions.",
+        "severity": "low"
+      },
+      {
+        "id": "red_server_logs_metadata",
+        "title": "Server logs collect your IP and device info",
+        "plain_english": "When you use the Blippo+ website or when the game talks to their servers, they save your IP address, what you requested, and what software you're using. They keep these logs for two weeks.",
+        "severity": "low"
+      },
+      {
+        "id": "red_no_policy_change_notice",
+        "title": "No promise to notify you of policy changes",
+        "plain_english": "Blippo+ says its privacy policy might change over time and that the latest version will be on their website, but they don't say they'll email you or alert you when changes happen.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_mining",
+        "title": "Explicitly says your data is 'none of our business'",
+        "plain_english": "The privacy policy opens with a clear promise: they make money selling games, not mining your personal information. They prefer not to collect data at all.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_no_tracking",
+        "title": "No ads and no behavioural tracking",
+        "plain_english": "Blippo+ does not show ads inside the app and does not track your behaviour across other apps or websites to build an advertising profile.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_ccpa_rights",
+        "title": "Honors GDPR and CCPA deletion rights",
+        "plain_english": "If you live in the EU or California, you can ask Blippo+ to show you what data they have or delete it. They provide direct email contacts for these requests.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_short_logs_retention",
+        "title": "Server logs automatically deleted after two weeks",
+        "plain_english": "Any metadata they collect from your web requests is only kept for two weeks before being removed. This is much shorter than most apps.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_readable_policy",
+        "title": "Privacy policy is short and easy to read",
+        "plain_english": "Unlike many privacy policies that are dozens of pages long and full of legal jargon, Blippo+'s policy is just a few short sections written in plain English.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not access your camera or microphone. It is a TV simulator game and has no features that need them.",
+      "detail": "No mention of camera or microphone access in the privacy policy. The app is a single-player TV simulator with no video or voice features.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not track your location or use GPS. The game works the same no matter where you are.",
+      "detail": "No mention of location or GPS access. The app is a stationary TV simulator that does not need location data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not access your contacts or phonebook. There is no social feature that would need them.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not access your photos, files, or phone storage. All game content is built into the app.",
+      "detail": "No mention of storage, file access, or photo library access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not sell your data. The only third party they share with is the company that runs their email newsletter, and only if you sign up for it. They may also disclose data if legally required.",
+      "detail": "Email list is shared with the mailing list vendor as necessary to distribute emails. No other third-party sharing mentioned. Legal disclosure to law enforcement acknowledged.",
+      "policy_excerpt": "We do not sell or otherwise disclose any portion of our email list to third-parties, with the exception of the vendor that provides our mailing list services as necessary to distribute the emails.",
+      "concerns": ["Email list shared with mailing vendor"],
+      "score_impact": -9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can play Blippo+ without creating an account. The only time they ask for your identity is if you email them for support or sign up for their newsletter.",
+      "detail": "No account creation required for the game. Support interactions may collect email or social media handle. Email list collects email address voluntarily.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not track you for ads and does not use advertising SDKs. The developer says they make money selling games, not mining your information.",
+      "detail": "No mention of behavioural tracking, ad networks, or advertising. Developer explicitly states they avoid collecting data and do not mine personal information.",
+      "policy_excerpt": "Our privacy policy is simple: your data is none of our business. We make money by selling video games, not by mining your personal information.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ is rated 12+ and is not aimed at young children. The developer avoids collecting data from everyone, which helps protect kids too.",
+      "detail": "No specific mention of children's data protections. App is rated 12+ and not child-directed. Minimal data collection overall.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "When you visit the Blippo+ website or the game connects to their servers, they save your IP address, what you requested, and what device you're using. They keep these logs for two weeks and only look at them if something goes wrong or to check broad traffic trends.",
+      "detail": "Server logs include IP address, resource requested, user agent, success status, date/time. Retained for two weeks. Reviewed only for malfunction, security, or aggregate statistics.",
+      "policy_excerpt": "When you interact with our servers using a web browser, or indirectly by network requests sent on your behalf, some metadata about the request is logged. This metadata may include: your IP address... We retain server logs for two weeks.",
+      "concerns": ["IP address logged", "User agent logged"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ logs basic information about your device and browser when you connect to their servers, like your operating system and browser name. This is standard server logging and not used for advertising.",
+      "detail": "Server logs capture user agent string, which may reveal browser, operating system, and configuration. Used for diagnostics and aggregate statistics only. Not used for ad targeting or fingerprinting.",
+      "policy_excerpt": "the name and version number of the software making the request (may reveal information about your web browser, operating system, and their configuration)",
+      "concerns": ["User agent reveals device info", "Not explicitly limited to compatibility checks"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not collect any health or biometric data. It is a TV simulator game and has no health-related features.",
+      "detail": "No mention of health, fitness, or biometric data collection.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ does not handle your payment information. Because you buy the game through the App Store, Apple processes the payment and the developer never sees your card details.",
+      "detail": "The app is a paid download on the App Store. Payment processing is handled entirely by Apple. Privacy policy does not mention financial data because the developer does not collect it.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask Blippo+ to remove your support emails or unsubscribe from their mailing list. They also honor GDPR and CCPA requests if you contact them. However, support emails are kept forever by default unless you specifically ask to delete them.",
+      "detail": "Support emails retained indefinitely for context and trend analysis, but removal available on request. Email list allows unsubscribe. GDPR and CCPA rights honored via gdpr@panic.com. Server logs auto-deleted after two weeks.",
+      "policy_excerpt": "If you would like to remove support emails you have sent, contact help@blippo.plus. Citizens of the EU may exercise their rights under the General Data Protection Regulation... Residents of California may exercise their rights under the California Consumer Privacy Act.",
+      "concerns": ["Support emails retained indefinitely by default", "No automated self-service deletion portal mentioned"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Blippo+ may update its privacy policy at any time and says the latest version will always be on their website, but they do not promise to email you or alert you inside the app when changes happen.",
+      "detail": "Policy states it 'might change or be edited for clarity over time' and that up-to-date info will be on the page. No mention of active notifications to users.",
+      "policy_excerpt": "Our privacy policies might change or be edited for clarity over time. Up-to-date information will always be available from this page.",
+      "concerns": ["No active notification mechanism for policy changes"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 19.5,
+    "final_score": 90,
+    "grade": "A"
+  }
+}

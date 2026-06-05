@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.nba.com/news/privacy_policy.html",
+    "terms_url": "http://www.nba.com/news/termsofuse",
+    "policy_last_updated": "2026-04",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "nba-live-games-scores",
+    "name": "NBA: Live Games & Scores",
+    "developer": "NBA MEDIA VENTURES, LLC",
+    "app_store_url": "https://apps.apple.com/in/app/nba-live-games-scores/id484672289",
+    "app_store_id": "484672289",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/04/18/fb/0418fb70-2b94-b6dd-e452-6997804ffac2/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
+    "category": "Sports",
+    "sub_category": "Entertainment",
+    "description": "The NBA App is your home for the season. Tap to watch live games and get free, instant access to the latest schedule, scores, highlights, news, and behind the scenes stories from across the National Basketball Association."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 42,
+    "grade": "D",
+    "one_liner": "Collects extensive personal data and shares it with advertising partners and the broader NBA Family for marketing purposes.",
+    "summary": "The NBA app's privacy policy reveals extensive data collection including precise geolocation, device identifiers, and detailed online activity. This data is shared across the NBA Family and with third-party advertising partners for targeted marketing. While users have some opt-out rights and can request data deletion, the default data practices are broad and heavily oriented toward advertising.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects precise location, device identifiers, and detailed browsing activity, then shares this data with third-party advertisers and across the NBA Family for targeted marketing. While opt-outs exist, the default settings involve extensive tracking and profiling."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_data_sharing_third_parties",
+        "title": "Data shared with advertisers and the NBA Family",
+        "plain_english": "The policy says your personal data is shared with third-party advertising services, business partners, and across all NBA Family companies for marketing and building profiles about your interests.",
+        "severity": "high"
+      },
+      {
+        "id": "red_behavioural_ad_tracking",
+        "title": "Tracks you across other websites and apps for ads",
+        "plain_english": "The policy says they use cookies and tracking tools to follow your activity across other websites and apps, then use that information to show you targeted ads. They also build predictive models about what you might do next.",
+        "severity": "high"
+      },
+      {
+        "id": "red_precise_location",
+        "title": "Collects your precise location",
+        "plain_english": "The policy says they collect your exact GPS location and use it to deliver location-based services, show ads, and comply with territorial restrictions. If you deny location access, some features may not work.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_device_fingerprinting",
+        "title": "Collects detailed device data for profiling",
+        "plain_english": "The policy says they collect your device IP address, unique device identifiers, device model, browser settings, software installed, and other device characteristics to identify you and target ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_government_id",
+        "title": "May collect government identification",
+        "plain_english": "The policy lists government identification as part of the contact information they may collect, which is unusually sensitive for a sports streaming app.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_data_deletion",
+        "title": "You can request deletion of your data",
+        "plain_english": "The policy says you can request access to, correction of, or deletion of your personal data by visiting privacy.nba.com or calling their support line.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_opt_out_ads",
+        "title": "You can opt out of targeted advertising",
+        "plain_english": "The policy says you can opt out of targeted ads and certain data sales by using the Global Privacy Control signal in your browser or visiting the Your Privacy Choices link.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_children_protection",
+        "title": "Does not knowingly collect data from children under 13",
+        "plain_english": "The policy says their services are not directed at children under 16 and they do not knowingly collect personal data from children under 13 without parental consent.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention camera or microphone access.",
+      "detail": "The policy does not address whether the app accesses the camera or microphone. This is notable given the app may support video features or AI chat.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your precise geolocation to deliver location-based services and show targeted ads. Some features may not work if you deny access.",
+      "detail": "The policy explicitly states collection of precise geolocation data and general location information. It is used for territorial restrictions, location-based services, and advertising. The policy warns that declining location access may disable certain features.",
+      "policy_excerpt": "We also may collect your device’s geolocation information... if you decline to allow our Online Services to collect your precise geolocation, you may not be able to use all the features through our Online Services.",
+      "concerns": ["Precise geolocation collected", "Used for advertising", "Some features require it"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention contacts or phonebook access.",
+      "detail": "There is no mention of contacts, address book, or phonebook data in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention file or storage access.",
+      "detail": "The policy does not explicitly discuss access to device storage, photo libraries, or file systems.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with advertising networks, business partners, and across the entire NBA Family for marketing and building profiles about you.",
+      "detail": "The policy discloses sharing with vendors for advertising, analytics, and AI chat providers. It also shares with business partners for sweepstakes, media, retail, and technology partners. Data may be considered 'sold' under privacy laws, and opt-out is available.",
+      "policy_excerpt": "We disclose personal data to certain third-party business partners... for advertising and marketing purposes... These kinds of sharing activities may be considered 'sales' under certain laws.",
+      "concerns": ["Shared with advertising networks", "Shared with business partners", "Shared across NBA Family", "May be considered a 'sale' under law"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your name, email, address, phone number, and even government ID. This data is used to build advertising profiles and shared with partners.",
+      "detail": "The policy lists extensive account and identity data including contact info, user credentials, demographic data, government identification, and professional information. This data is inferred and combined with interests and preferences for advertising.",
+      "policy_excerpt": "Contact information, such as name, email address, postal address, government identification, phone number... We also obtain your personal data from other sources, including... data brokers, and public sources.",
+      "concerns": ["Government ID collected", "Data obtained from brokers and public sources", "Used for advertising profiles"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app constantly tracks what you click, watch, and read, then uses that to show you ads on other websites and apps. They also build models to predict what you will do next.",
+      "detail": "The policy describes extensive use of cookies, web beacons, and tracking technologies to monitor clicks, keystrokes, cursor movements, scrolls, emails opened, and content engaged with. This is used for targeted advertising and building predictive models. Third-party advertising services track users across other sites.",
+      "policy_excerpt": "Through these services, we can tailor our messaging to individuals considering demographic data, inferred interests, and browsing context. These services track information about your online activities over time and across third-party websites and apps.",
+      "concerns": ["Cross-app and cross-site tracking", "Predictive modeling", "Keystrokes and cursor movements monitored", "Third-party ad networks involved"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app says it is not meant for kids under 16 and claims it does not knowingly collect data from children under 13. However, there is no strong enforcement mechanism mentioned.",
+      "detail": "The policy states services are not directed at children under 16 and they do not knowingly collect data from children under 13. For youth activities, data collection is directed at parents. There is no mention of age verification or COPPA compliance mechanisms.",
+      "policy_excerpt": "Our Online Services are not directed at children under the age of 16, and we do not knowingly collect personal data from children under the age of 13.",
+      "concerns": ["No age verification mechanism described", "App Store rating is 4+ which may attract children"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs every page you visit, link you click, and email you open. It also records your IP address and uses it to figure out your location.",
+      "detail": "The policy extensively logs network and internet activity including pages visited, links clicked, emails opened, content engagement, referring URLs, dates/times, frequency, duration, session info, clickstream data, and IP address. This is used for profiling and advertising.",
+      "policy_excerpt": "the pages or portions of the Online Services you visit, links you click, programs or features of our Online Services you access or use, emails you open, content you engage with, referring or exit URLs, dates and times of usage",
+      "concerns": ["Extensive clickstream logging", "IP address collected and used for location", "Used for profiling and ads"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects a detailed fingerprint of your device including its model, unique IDs, installed software, and browser settings to identify you and target ads.",
+      "detail": "The policy lists collection of device IP address, unique device identifiers, device type and model, device characteristics and settings, browser settings, OS version, language preferences, software installed, usage statistics, and error reports. This is explicitly used for advertising and authentication.",
+      "policy_excerpt": "your device IP address, location information, unique device identifiers, device type and model, device characteristics and settings, browser settings and characteristics, operating system type and version, language and country preferences, software installed on the device",
+      "concerns": ["Unique device identifiers collected", "Software inventory collected", "Used for ad targeting and authentication"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention health or biometric data.",
+      "detail": "There is no mention of health metrics, fitness data, or biometric authentication in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your credit card and billing address when you make purchases like League Pass subscriptions. The policy does not say if a third-party processor handles this.",
+      "detail": "The policy lists payment data such as credit card information and billing address as collected personal data. It does not explicitly state whether a third-party payment processor is used or if the app stores raw card data.",
+      "policy_excerpt": "Payment data, such as credit card information and billing address.",
+      "concerns": ["Raw payment data mentioned in collection list", "No mention of third-party processor"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask to see, fix, or delete your data by visiting privacy.nba.com. However, some data may be kept for legal or business reasons even after you ask for deletion.",
+      "detail": "The policy provides access, correction, and deletion rights through privacy.nba.com or by phone. However, it states data may be retained to comply with legal obligations, resolve disputes, and enforce agreements. Identity verification is required.",
+      "policy_excerpt": "we retain personal data for as long as necessary to provide our products and services and fulfill the transactions you have requested, or for other business purposes such as complying with our legal obligations, resolving disputes and enforcing our agreements.",
+      "concerns": ["Data retained for legal and business purposes even after deletion request", "Identity verification required"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes, the app will post the new version on its website with an updated date. You are expected to check it yourself from time to time.",
+      "detail": "The policy states changes will be posted on the page with a revised date. It encourages periodic review but does not promise advance notice or require active re-agreement.",
+      "policy_excerpt": "If we do make changes, we will post any changes on this page and indicate the date on which the Privacy Policy was last revised. We encourage you to review this Privacy Policy periodically.",
+      "concerns": ["No advance notice commitment", "No requirement to re-agree"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 119.25,
+    "final_score": 42,
+    "grade": "D"
+  }
+}

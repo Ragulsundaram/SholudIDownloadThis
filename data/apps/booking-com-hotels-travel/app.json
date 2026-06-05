@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.booking.com/content/privacy.html",
+    "terms_url": "https://www.booking.com/content/terms.html",
+    "policy_last_updated": "2026-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "booking-com-hotels-travel",
+    "name": "Booking.com: Hotels & Travel",
+    "developer": "Booking.com B.V.",
+    "app_store_url": "https://apps.apple.com/in/app/booking-com-travel-deals/id367003839",
+    "app_store_id": "367003839",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/30/a0/85/30a085ee-f3a2-125f-acb2-97604166c48e/AppIcon-0-0-1x_U007epad-0-9-0-85-220.jpeg/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "Lifestyle",
+    "description": "A travel booking app for hotels, apartments, flights, car rentals, taxis, and attractions. Offers 24/7 customer service in over 40 languages with free cancellation on most properties."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 50,
+    "grade": "D",
+    "one_liner": "Collects extensive travel and personal data, shares it with hotels, airlines, advertising partners, and other Booking Holdings brands, while using AI to personalize and monitor your activity.",
+    "summary": "Booking.com collects comprehensive personal data including your location, device details, payment information, and travel preferences. This data is shared with trip providers (hotels, airlines), other Booking Holdings brands (Agoda, Priceline, OpenTable), advertising partners for targeted marketing, and AI systems for personalization and fraud detection. While the app provides strong user rights and security measures, the default data sharing is extensive.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects and shares extensive personal data with hotels, airlines, advertising partners, and other brands under Booking Holdings. Your location, device identifiers, and browsing behavior are tracked continuously, and AI systems analyze your activity for personalization and fraud detection."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_data_sharing_extensive",
+        "title": "Your data is shared with hotels, airlines, and other travel providers",
+        "plain_english": "When you book a hotel or flight, your name, contact details, payment info, and preferences are sent directly to the trip provider. They may also receive summary info about your past bookings and reviews.",
+        "severity": "high"
+      },
+      {
+        "id": "red_bhi_group_sharing",
+        "title": "Data shared across Booking Holdings brands",
+        "plain_english": "Your data is shared with other companies under the same parent company, including Agoda, Priceline, and OpenTable, for marketing, fraud detection, and analytics.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking",
+        "title": "Tracks your browsing for targeted ads across the web",
+        "plain_english": "The app uses cookies and shares hashed versions of your email and phone number with advertising partners to show you targeted ads on other websites and apps.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_profiling",
+        "title": "AI systems analyze your behavior and remember your preferences",
+        "plain_english": "The app uses artificial intelligence to track your behavior, predict what trips you might like, and even remember personal preferences like 'I always need a hotel with a gym' for future searches.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_passport_id",
+        "title": "May collect passport or government ID for certain bookings",
+        "plain_english": "For flight reservations, online check-in, or car rentals, the app may ask for your passport, national ID, or driver's license information.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_comprehensive_rights",
+        "title": "Strong user rights with multiple ways to exercise them",
+        "plain_english": "You can access, correct, delete, or export your data through your account settings, a data request form, or by emailing the privacy team directly.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security_measures",
+        "title": "Comprehensive security protections including encryption",
+        "plain_english": "The company uses encryption, data leakage prevention, fraud detection systems, identity management, and recommends two-factor authentication to protect your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_call_recording_limited",
+        "title": "Call recordings automatically deleted after 30 days",
+        "plain_english": "Customer service calls may be recorded for quality control, but recordings are automatically deleted after 30 days unless needed for fraud or legal reasons.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ai_human_oversight",
+        "title": "AI decisions that significantly affect you include human review",
+        "plain_english": "While the app uses AI for fraud detection and personalization, any decision that would significantly affect you is reviewed by a human, not made solely by a machine.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy mentions you may need to provide a selfie for account verification in some regions, but does not explicitly discuss routine camera or microphone access.",
+      "detail": "The policy states that for account verification, a copy of identification and a selfie may be requested. There is no mention of routine camera or microphone access for other features.",
+      "policy_excerpt": "If you want a verified account badge... we may ask for a copy of your identification (a passport or ID card) and a 'selfie' to help us confirm it is you.",
+      "concerns": ["Selfie required for verification in some regions", "No explicit mention of camera access for other features"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects your current location from your mobile device to show nearby restaurants and attractions. Your precise location is also collected automatically along with other device details.",
+      "detail": "The policy explicitly states that when using the mobile app, current location is collected if allowed. Mobile device identifier and app operation data are also collected automatically. Location is used for recommendations and pricing.",
+      "policy_excerpt": "When you use our platform from your mobile device, you can decide to allow Booking.com to use your current location or grant us access to other details... We automatically collect certain information when you use our platform... Mobile device identifier (when using our mobile apps).",
+      "concerns": ["Precise location collected automatically", "Device identifier linked to location", "Used for pricing and recommendations"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention contacts or phonebook access.",
+      "detail": "There is no mention of contacts, address book, or phonebook data in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention file or storage access.",
+      "detail": "The policy does not explicitly discuss access to device storage, photo libraries, or file systems.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with hotels, airlines, car rental companies, advertising partners, other Booking Holdings brands, payment processors, fraud detection services, and strategic partners.",
+      "detail": "The policy discloses extensive sharing with trip providers (full reservation details), BHI group companies (Agoda, Priceline, OpenTable), strategic partners, advertising partners (hashed identifiers for targeting), third-party service providers for customer support, fraud detection, and payment processing. Data clean rooms and pseudonymized insights are used for advertising.",
+      "policy_excerpt": "We may share some of your personal data (such as identifiers) with advertising partners, as part of the marketing of our trip services through third parties... We use techniques such as hashing specific personal data (e.g. email address, telephone number) to enable matching with data in one or more of their databases.",
+      "concerns": ["Shared with trip providers", "Shared with BHI group companies", "Shared with advertising partners", "Hashed identifiers used for ad matching", "Data clean rooms for insights"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your name, email, phone number, address, date of birth, payment details, passport or ID info for certain bookings, and uploaded photos. This is shared with hotels and other travel providers.",
+      "detail": "The policy collects extensive identity data including name, email, phone, home address, payment info, DOB, current location, passport/national ID for flights and check-in, driver's license for car rentals, and uploaded photos. Account verification may require ID and selfie.",
+      "policy_excerpt": "When you make a trip reservation, we ask for your name and email address. Depending on the nature of the trip reservation, we may also ask for your home address, telephone number, payment information, date of birth... For reservations for flights and certain attractions, we may be required to collect additional information from you and your co-travelers, such as passport or national ID information.",
+      "concerns": ["Passport/ID collected for certain bookings", "Photos uploaded to profile", "Identity verified with third parties", "Extensive identity data shared with trip providers"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks every click, page view, and search you make. It uses cookies and shares your data with advertising partners to show you targeted ads on other websites and apps.",
+      "detail": "The policy describes extensive tracking including IP address, usage dates/times, clicks, page views, referral information, device details, mobile device identifier, and app operation/performance. Marketing cookies track browsing behavior for personalized ads. Hashed email/phone numbers are shared with ad partners. AI systems use behavioral data for personalization.",
+      "policy_excerpt": "We automatically collect certain information when you use our platform... clicks and page views on our platform... device details (OS, browser/app version, language settings)... Mobile device identifier... We and our partners use marketing cookies... to collect information about your browsing behavior that helps us and our partners decide which products to show you on and off our websites and mobile apps.",
+      "concerns": ["Extensive click and page view tracking", "Marketing cookies for cross-site tracking", "Hashed identifiers shared with ad partners", "AI personalization based on behavior", "Mobile device identifier tracked"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not meant for people under 18. If the company learns it has collected data from a minor without proper consent, it will delete it.",
+      "detail": "The policy states services are not intended for people under 18 and they don't intentionally collect data from minors. If discovered, data is deleted. However, it notes limited retention may occur for AI training related to content moderation.",
+      "policy_excerpt": "Our services are not intended for people under the age of 18. In general, we don't intentionally collect personal data about persons below that age... If we become aware that we've processed personal data about minors without the valid consent of their parent or guardian where required, we will delete it.",
+      "concerns": ["Limited retention of minor data for AI training mentioned"],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, every page you visit, every click you make, and referral information when you come from other websites.",
+      "detail": "The policy explicitly collects IP address, usage dates/times, clicks, page views, and referral information automatically. This is used for analytics, fraud detection, pricing display, and personalization.",
+      "policy_excerpt": "We automatically collect certain information when you use our platform... IP address, Usage dates and times, Clicks and page views on our platform, Referral information when you are redirected to our platform by a third party",
+      "concerns": ["IP address collected", "All clicks and page views logged", "Referral information tracked", "Used for pricing and personalization"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device operating system, browser, app version, language settings, and a unique mobile device identifier. This is used for analytics, fraud detection, and to show you targeted ads.",
+      "detail": "The policy collects device details (OS, browser/app version, language settings), mobile device identifier, and app operation/performance data including crashes. This is used for analytics, fraud prevention, and to determine pricing applicable to the user.",
+      "policy_excerpt": "Device details (OS, browser/app version, language settings), Mobile device identifier (when using our mobile apps), Mobile app operation (and performance), including crashes",
+      "concerns": ["Mobile device identifier collected", "App performance and crashes monitored", "Device data used for pricing and ads"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention health or biometric data, though dietary and accessibility preferences may be collected as part of trip reservations.",
+      "detail": "The policy does not explicitly discuss health metrics, fitness data, or biometric authentication. Dietary requirements and accessibility needs are mentioned as preferences for trip reservations.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data", "Dietary/accessibility preferences collected for trips"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your payment information and billing address to process reservations. Payments are handled by third-party providers like Adyen and Stripe, not stored directly by Booking.com in most cases.",
+      "detail": "The policy collects payment information, credit card details, and billing address. Third-party payment providers (Adyen, Stripe) process payments. In some cases, credit card details are forwarded to trip providers for payment processing. Chargeback information may be shared with payment service providers and financial institutions.",
+      "policy_excerpt": "We integrate with third-party payment service providers such as Adyen and Stripe to facilitate electronic payments between you, Booking.com, and trip providers... Unless payment is made to Booking.com itself during the reservation process, we need to forward your credit card details to the trip provider you chose for payment processing.",
+      "concerns": ["Credit card details forwarded to trip providers", "Chargeback details shared with financial institutions", "Payment providers may use data for their own purposes"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have strong rights to access, correct, delete, or export your data. You can do this through your account settings, a data request form, or by emailing the privacy team.",
+      "detail": "The policy provides comprehensive rights: access, correction, erasure, restriction, portability, withdrawal of consent, and objection. Users can exercise rights via account settings, Data Subject Request form, email, or mail. Identity verification is required.",
+      "policy_excerpt": "You can ask us for a copy of the personal data we hold about you... You can ask us to erase the personal data we hold about you... You can also ask us to provide you with specific personal data you have given us for possible transmission to a third party.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes in a way that could significantly affect you, the company will take steps to inform you before the changes go into effect.",
+      "detail": "The policy states that if updates could significantly impact persons, Booking.com will take steps to inform these persons about such changes before they go into effect. This is stronger than many policies.",
+      "policy_excerpt": "If Booking.com makes updates to a privacy notice that could significantly impact persons, it will take steps to inform these persons about such changes before they go into effect.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 102.75,
+    "final_score": 50,
+    "grade": "D"
+  }
+}

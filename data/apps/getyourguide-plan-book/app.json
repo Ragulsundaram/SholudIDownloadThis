@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.getyourguide.co.uk/c/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2024-11",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "getyourguide-plan-book",
+    "name": "GetYourGuide: Plan & Book",
+    "developer": "GetYourGuide AG",
+    "app_store_url": "https://apps.apple.com/in/app/getyourguide-plan-book/id705079381",
+    "app_store_id": "705079381",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/35/6b/9d356b74-3b51-a2d1-c4c4-6b78b06cc9f5/logo_GYG-0-0-1x_U007ephone-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 70,
+    "grade": "B",
+    "one_liner": "A travel booking app with strong GDPR compliance and user rights, but extensive third-party data sharing for marketing and advertising.",
+    "summary": "GetYourGuide collects standard booking and account data to help you reserve tours and activities. The company is GDPR-compliant, encrypts and deletes IP addresses after 30 days, and provides strong user rights including full account deletion. However, it shares data with a large network of partners for marketing, analytics, customer service, and fraud prevention. Interest-based advertising is enabled through Google, Meta, TikTok, and other platforms unless you opt out via the cookie consent manager.",
+    "recommendation": "recommended",
+    "recommendation_reason": "For a travel booking app, GetYourGuide handles privacy reasonably well with strong GDPR protections and clear user rights. The main concern is the broad third-party marketing ecosystem, but this is typical for the industry and can be managed through cookie preferences."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "extensive_marketing_partners",
+        "title": "Data shared with many advertising and marketing partners",
+        "plain_english": "GetYourGuide shares your data with a large network of companies including Google, Meta, TikTok, Criteo, Microsoft, and Snapchat to show you personalized ads on other websites and apps.",
+        "severity": "medium"
+      },
+      {
+        "id": "interest_based_advertising",
+        "title": "Interest-based advertising across the web",
+        "plain_english": "Unless you opt out, GetYourGuide uses cookies and tracking technologies to follow your activity and show you targeted ads for tours and activities on other websites and social media.",
+        "severity": "medium"
+      },
+      {
+        "id": "ai_used_for_customer_service",
+        "title": "AI reads your customer support messages",
+        "plain_english": "GetYourGuide uses AI tools from Zowie and Automaited to help read and respond to your customer service messages. In some cases, OpenAI and DeepL are used to translate your messages.",
+        "severity": "low"
+      },
+      {
+        "id": "passport_number_may_be_requested",
+        "title": "Passport or ID may be required for some bookings",
+        "plain_english": "For certain tours and activities, the provider may ask for your passport number or other government ID during checkout. This is shared with the activity provider, not GetYourGuide directly.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "strong_gdpr_compliance",
+        "title": "Strong GDPR compliance and user rights",
+        "plain_english": "GetYourGuide is based in Germany and follows strict EU privacy laws. You have the right to access, correct, delete, and download your data, and you can object to data processing at any time.",
+        "severity": "positive"
+      },
+      {
+        "id": "ip_encrypted_and_deleted",
+        "title": "Your IP address is encrypted and deleted quickly",
+        "plain_english": "GetYourGuide encrypts your IP address and deletes it after just 30 days. This is better than most apps that keep it indefinitely.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_data_sales",
+        "title": "Explicitly says they do not sell your data",
+        "plain_english": "GetYourGuide clearly states under US privacy laws that they do not 'sell' your personal information to anyone.",
+        "severity": "positive"
+      },
+      {
+        "id": "full_account_deletion",
+        "title": "Complete account deletion available",
+        "plain_english": "You can delete your account and your profile will be completely and permanently removed from GetYourGuide's systems.",
+        "severity": "positive"
+      },
+      {
+        "id": "cookie_consent_manager",
+        "title": "Cookie and marketing preferences are customizable",
+        "plain_english": "GetYourGuide provides a consent manager where you can choose which types of cookies and tracking you allow, including turning off marketing and analytical tracking separately.",
+        "severity": "positive"
+      },
+      {
+        "id": "limited_payment_data",
+        "title": "Limited access to your payment card details",
+        "plain_english": "When you pay by credit card, GetYourGuide only sees the first six and last four digits of your card number. The full number is handled by their payment processor, Adyen.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide doesn't access your camera or microphone as part of its normal operation.",
+      "detail": "No mention of camera or microphone access in the privacy policy for core app functionality.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide doesn't track your precise GPS location. They do figure out your approximate location from your IP address to show relevant tours, but that IP data is encrypted and deleted after 30 days.",
+      "detail": "No precise geolocation collection. IP-based approximate location is used for relevance. IP addresses are encrypted and deleted after 30 days.",
+      "policy_excerpt": "Your IP address is stored encrypted and is deleted after a period of 30 days.",
+      "concerns": ["IP address can still reveal approximate city-level location."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide doesn't access your phone contacts or address book.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide doesn't access your phone's files or photos outside of what you voluntarily upload for reviews.",
+      "detail": "No mention of file system or photo gallery access for core functionality. Users can voluntarily upload photos in reviews.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide shares your data with a wide range of partners including Amazon Web Services, Google, Meta, TikTok, Braze, Zendesk, and many others for hosting, analytics, customer service, marketing, and fraud prevention. However, they explicitly state they do not 'sell' your data.",
+      "detail": "Extensive sharing with service providers for hosting (AWS), customer service (Zendesk, Transcom, Teleperformance), marketing (Braze, Google, Meta, TikTok, Criteo, Microsoft, Snapchat), fraud prevention (Sift Science), analytics (Google Analytics, Hotjar), and payments (Adyen, Stripe, PayPal). Activity providers receive booking details.",
+      "policy_excerpt": "We rely on contractually affiliated third-party companies and external service providers to provide the services. In such cases, personal data is passed on to these processors to enable them to continue processing.",
+      "concerns": ["Large partner ecosystem means data flows to many companies.", "Activity providers act as independent controllers with their own privacy policies.", "Marketing partners receive data for targeted advertising."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You don't need an account to use GetYourGuide, but if you create one you provide your name and email. You can also log in with Facebook, Google, or Apple. For some tours, you may need to provide your passport number or other ID.",
+      "detail": "Registration is optional. Account creation requires name, email, password. Social login shares name, email, and photo (Facebook). Some activities require passport/ID. Booking details include name, address, phone, participants.",
+      "policy_excerpt": "Registration is not required to use GetYourGuide's Services. However, if you create a GetYourGuide account you may provide us with the following data: Full name, Email address, Password.",
+      "concerns": ["Passport/ID may be required for certain bookings.", "Social login shares additional data from third-party platforms."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide tracks your activity on the app and website using cookies, web beacons, SDKs, and tracking URLs. They then share this data with Google, Meta, TikTok, and other platforms to show you personalized ads for tours and activities on other websites and apps.",
+      "detail": "Extensive remarketing via Google Campaign Manager, Google Ads, Meta Pixel, TikTok Ads, Criteo, Microsoft Bing, Snapchat, and affiliate networks. SDKs and cookies track in-app and web activity. Interest-based advertising is consent-based for EU users.",
+      "policy_excerpt": "We use cookies and other online tracking technologies to offer certain functions of our website to optimize the use of our website and our apps or for the purpose of executing our marketing and advertising strategy.",
+      "concerns": ["Cross-site and cross-app ad tracking via multiple platforms.", "SDKs in the app track device IDs and in-app activity.", "Tracking URLs monitor referral sources."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't specifically address how the app handles children's data or whether it's meant for kids.",
+      "detail": "No explicit mention of age requirements or children's privacy protections. As a travel booking platform, it is implicitly intended for adults.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of COPPA compliance or age restrictions."],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide logs your IP address when you use the platform, but they encrypt it and delete it after 30 days. They also use cookies, web beacons, and tracking URLs to monitor your visits.",
+      "detail": "IP address collected on every visit, encrypted, deleted after 30 days. Cookies, web beacons, tracking URLs, and SDKs used for analytics and marketing. Third-party partners also place their own cookies.",
+      "policy_excerpt": "Your IP address is stored encrypted and is deleted after a period of 30 days.",
+      "concerns": ["Third-party ad partners place their own cookies and tracking pixels.", "SDKs track in-app network activity and device identifiers."],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide collects your device type, operating system, browser, app version, device ID, and advertising ID through SDKs to analyze how people use the app and to deliver personalized ads.",
+      "detail": "Technical data includes device and OS info, browser, app version, language, app crashes, device ID, advertising ID, and IP address. SDKs collect unique device identifiers and in-app activity.",
+      "policy_excerpt": "Information about your device and device-specific settings (e.g., operating system, internet browser, application version, language settings, app crashes and other systematic activity).",
+      "concerns": ["Advertising IDs enable cross-app tracking.", "SDKs from multiple partners also collect device data."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide doesn't collect any health or biometric data as part of its normal operation.",
+      "detail": "No health or biometric data collection mentioned in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you book an activity, your payment goes through third-party processors like Adyen, PayPal, or Stripe. GetYourGuide only sees the first six and last four digits of your credit card. They never see your full card number.",
+      "detail": "Credit card payments processed by Adyen - GetYourGuide only receives success confirmation and partial card digits (first 6, last 4). Other payment methods include PayPal, Stripe, Checkout.com, Klarna (invoice), and J.P. Morgan.",
+      "policy_excerpt": "Adyen forwards the payment data you provide to the respective banks or financial institutions to process the transaction. We only receive confirmation of whether the payment was successful, along with the first six and the last four digits of the credit card number. We do not have access to your full credit card number.",
+      "concerns": ["Partial card numbers are still retained by GetYourGuide.", "Multiple payment processors each handle financial data under their own policies."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide offers strong privacy rights. You can access, correct, delete, and download your data. If you delete your account, it's completely removed. They only keep backup copies for legal reasons.",
+      "detail": "Full GDPR rights: access, correction, erasure, restriction, portability, objection, complaint. Account deletion = complete permanent deletion. Backups retained only for legal reasons. CCPA rights for US residents.",
+      "policy_excerpt": "If you delete your user account, your profile will be deleted completely and permanently. However, we will retain backup copies of your data to the extent and for as long as this data is required for legal reasons or to secure, assert or enforce legal claims.",
+      "concerns": ["Backup copies may persist for legal hold periods."],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "GetYourGuide posts the latest version of the privacy policy on their website, but they don't specifically promise to notify you by email or show a notice in the app when changes happen.",
+      "detail": "Current version always available at website URL. Last updated: November 2024. No explicit advance notification mechanism described.",
+      "policy_excerpt": "The current version of this privacy policy is always available at https://www.getyourguide.com/c/privacy-policy.",
+      "concerns": ["No advance notification or re-consent mechanism specified."],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 61.75,
+    "final_score": 70,
+    "grade": "B"
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "kimi-k2.6",
+    "policy_url": "https://www.bharatmatrimony.com/privacy-policy.php",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "Privacy policy is a basic template that lacks detail on many app-specific practices. It does not address camera/microphone access, what 'device information/specification' includes, how long cookies are retained, or what specific third-party cookies are used. The policy was not found to have a last-updated date."
+  },
+  "app": {
+    "slug": "bharat-matrimony-shaadi-app",
+    "name": "Bharat Matrimony® - Shaadi App",
+    "developer": "Matrimony.com Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/bharat-matrimony-shaadi-app/id465923141",
+    "app_store_id": "465923141",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/31/e8/13/31e81328-fbc1-72fc-e96a-64dfd1895983/BharatAppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "Matrimony",
+    "description": "India's largest and most trusted matrimonial app for finding a life partner across communities and religions."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 73,
+    "grade": "B",
+    "one_liner": "A traditional matrimony app that collects extensive personal and family details, shares data with affiliates for marketing, and lacks transparency on several data practices.",
+    "summary": "Bharat Matrimony is India's largest matrimonial app operated by Matrimony.com Ltd. Its privacy policy is a basic template that collects extensive personal information including photos, videos, ID documents, educational qualifications, and contact details. The policy states data may be shared with associates/affiliates/subsidiaries who may market to you. It also collects device information, location data, and uses cookies. While the app has been operating since 2000 and claims to be the 'most trusted' matrimony brand, its privacy policy lacks specifics on data retention periods, third-party cookie usage, and camera/microphone access. The policy can be changed without notice to users.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Bharat Matrimony is a well-established Indian matrimonial service with a long track record. However, be aware that it collects extensive personal and family information and may share it with affiliated companies for marketing. The privacy policy is basic and lacks transparency on several data practices."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_affiliate_sharing",
+        "title": "Shares data with affiliates who may market to you",
+        "plain_english": "Bharat Matrimony may share your personal information with its associates, affiliates, and subsidiaries. These companies may then send marketing messages to you.",
+        "severity": "high"
+      },
+      {
+        "id": "red_id_documents",
+        "title": "Collects government ID documents for verification",
+        "plain_english": "The app asks for identity proof documents that you voluntarily submit for verification purposes. This means sensitive government ID data is stored on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_policy_change_no_notice",
+        "title": "Privacy policy can change without any notice to you",
+        "plain_english": "The policy explicitly states it may be changed from time to time without any notice to you. Changes are only updated on the privacy policy page.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_extensive_personal_data",
+        "title": "Collects extensive personal and family information",
+        "plain_english": "The app collects your photos, videos, name, date of birth, education, mailing address, phone number, and more. Much of this is displayed on your public profile.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_social_login_data",
+        "title": "Collects data from your social media accounts when you log in",
+        "plain_english": "If you register using Facebook, Google, or LinkedIn, the app collects personal data you choose to allow through their APIs. The policy doesn't specify what data is accessed.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_grievance_officer",
+        "title": "Has a designated grievance officer as per Indian law",
+        "plain_english": "Bharat Matrimony has appointed a Grievance Officer as required by Indian IT rules. You can contact them with privacy concerns.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_secure_payments",
+        "title": "Uses secure server for credit card transactions",
+        "plain_english": "The policy states they use a secure server for credit card transactions to protect your payment information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_eu_rights",
+        "title": "EU users have data protection rights",
+        "plain_english": "If you're in the EU, you have rights to access, erase, and withdraw consent for your data. You can contact them to exercise these rights.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_long_established",
+        "title": "Well-established company with long track record",
+        "plain_english": "Matrimony.com has been operating since 2000 and claims millions of successful marriages. They have physical branches across India.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy mentions collecting photos and profile videos you upload, but doesn't specifically address camera or microphone access permissions.",
+      "detail": "Users can upload photos and videos to their profile. The privacy policy does not specifically mention whether the app accesses your camera or microphone directly, or only when you choose to upload media.",
+      "policy_excerpt": "photo of the user, your profile videos you wish to upload",
+      "concerns": [
+        "Policy is unclear on camera/microphone access permissions"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your geographic location and device coordinates automatically when you access the app or website.",
+      "detail": "The policy states that geographic location and device information/specification are collected automatically when users access the websites or apps. This is used to help diagnose server problems and gather demographic information.",
+      "policy_excerpt": "When the user accesses our websites or apps, data relating to device ID, log files, Geographic Location, device Information/specification are also collected automatically.",
+      "concerns": [
+        "Location collected automatically without clear opt-out mechanism",
+        "IP address used to gather broad demographic information"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention whether the app accesses your phone's contacts or address book.",
+      "detail": "The privacy policy does not mention contacts or address book access. However, it does mention that if you register using social networking platforms like Facebook, Google, or LinkedIn, they may collect personal data you choose to allow through their APIs.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos and videos to your profile, which are stored on Bharat Matrimony's servers.",
+      "detail": "Users can upload photos and profile videos. The policy states this information is collected and stored. There is no mention of what other file access the app may have.",
+      "policy_excerpt": "photo of the user, your profile videos you wish to upload",
+      "concerns": [
+        "Photos and videos stored on company servers",
+        "No mention of encryption or security measures for stored media"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Bharat Matrimony shares your data with affiliates, law enforcement, anti-fraud providers, and business partners in corporate transactions.",
+      "detail": "The policy states information may be shared with: associates/affiliates/subsidiaries (who may market to you), regulators and law enforcement agencies, gateway service providers, anti-fraud solution providers (UK based), and third parties involved in corporate transactions like mergers or acquisitions. There is also mention of third-party cookies that they do not control.",
+      "policy_excerpt": "We may share such identifiable information with our associates/affiliates/subsidiaries and such associates/affiliates/subsidiaries may market to you as a result of such sharing.",
+      "concerns": [
+        "Affiliates may use data for marketing purposes",
+        "Data shared with anti-fraud providers in UK",
+        "Personal information may be transferred in corporate transactions",
+        "Third-party cookies used but not controlled by Bharat Matrimony"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Bharat Matrimony collects extensive identity data including your name, email, phone number, date of birth, address, and government ID documents.",
+      "detail": "Registration requires name, email address, date of birth, educational qualifications, password, mailing address, zip/pin code, and telephone/mobile number. Users may also voluntarily submit identity proof documents for verification. If registering via social media (Facebook, Google, LinkedIn), additional personal data is collected through their APIs.",
+      "policy_excerpt": "photo of the user, your profile videos you wish to upload, email address, name, date of birth, educational qualifications, based on your explicitly consent identify proof documents which you voluntarily submit for verification purpose, a user-specified password, mailing address, zip/pin code and telephone/mobile number or fax number.",
+      "concerns": [
+        "Government ID documents collected for verification",
+        "Extensive personal information required for registration",
+        "Social login may expose additional personal data"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Bharat Matrimony collects and analyzes demographic and profile data about your activity on the app for marketing research and to improve their services.",
+      "detail": "The app collects and analyzes demographic and profile data about users' activity on the website/apps. It uses cookies to store login information and may use cookies or identical/related devices placed by third parties. The policy states they do not control the use of cookies by third parties.",
+      "policy_excerpt": "In our efforts to continually improve our product and service offerings, we collect and analyse demographic and profile data about our users' activity on our website/apps.",
+      "concerns": [
+        "User activity tracked for marketing research",
+        "Third-party cookies used but not controlled",
+        "No opt-out mentioned for behavioral tracking"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 17+ and is a matrimonial service for adults. The policy does not mention specific protections for children's data.",
+      "detail": "The app is rated 17+ on the App Store and explicitly states it is 'strictly for matrimonial purpose only and not a dating website.' The privacy policy does not mention specific age requirements or children's data protections, but the nature of the service implies adult users.",
+      "policy_excerpt": "This website is strictly for matrimonial purpose only and not a dating website",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Bharat Matrimony logs your IP address and internet activity to diagnose server problems and gather demographic information.",
+      "detail": "The policy states they identify and use your IP address to help diagnose problems with their server and to administer their website/apps. Your IP address is also used to help identify you and to gather broad demographic information.",
+      "policy_excerpt": "We identify and use your IP address to help diagnose problems with our server, and to administer our website/apps. Your IP address is also used to help identify you and to gather broad demographic information.",
+      "concerns": [
+        "IP address used for identification and demographic gathering"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Bharat Matrimony collects your device ID and device information/specification when you access the app.",
+      "detail": "The policy states that device ID, log files, and device information/specification are collected automatically when users access the websites or apps. However, the policy does not specify exactly what device information is collected.",
+      "policy_excerpt": "When the user accesses our websites or apps, data relating to device ID, log files, Geographic Location, device Information/specification are also collected automatically.",
+      "concerns": [
+        "Device information collected automatically without clear specification of what data",
+        "Device ID collected for authentication and account access"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not appear to collect health or biometric data.",
+      "detail": "The privacy policy does not mention health data or biometric data collection. Identity verification is done through government ID documents, not biometric scans.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you pay for premium services, Bharat Matrimony collects your credit/debit card number, expiration date, billing address, and tracking information from cheques.",
+      "detail": "For paid services, the app collects billing address, credit/debit card number, expiration date, and tracking information from cheques or demand drafts. The policy states they use a secure server for credit card transactions.",
+      "policy_excerpt": "If you establish a credit account with us to pay the fees we charge, some additional information, including a billing address, a credit/debit card number and a credit/debit card expiration date and tracking information from cheques or demand drafts is collected.",
+      "concerns": [
+        "Payment information stored on servers",
+        "No mention of payment processor or tokenization"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "EU users can request to review, update, or delete their information. For others, the policy states data is kept as long as you subscribe and for legal purposes thereafter.",
+      "detail": "The policy states data is retained for as long as users subscribe, plus for enforcing agreements, performing audits, resolving disputes, establishing legal defences, pursuing legitimate businesses, and complying with applicable laws. EU users have specific rights to access, update, or delete their information by contacting privacy@matrimony.com. No self-service deletion mechanism is mentioned.",
+      "policy_excerpt": "For as long as the users subscribe to our services to meet their suitable purpose(s) for which it was collected, for the sake of enforcing agreements, for performing audits, for resolving any form of disputes, for establishing legal defences, for pursuing legitimate businesses and to comply with the relevant applicable laws.",
+      "concerns": [
+        "No self-service deletion option mentioned",
+        "Data kept for indefinite 'legitimate business' purposes",
+        "No specific retention timelines provided"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Bharat Matrimony can change its privacy policy at any time without telling you. Changes are only updated on the privacy policy page.",
+      "detail": "The policy explicitly states: 'We may change this Privacy Policy from time to time without any notice to you. However, changes will be updated in the Privacy Policy page.' This means users are not notified of material changes.",
+      "policy_excerpt": "We may change this Privacy Policy from time to time without any notice to you. However, changes will be updated in the Privacy Policy page.",
+      "concerns": [
+        "No notification of policy changes",
+        "Users must proactively check for updates"
+      ],
+      "score_impact": 3.25
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 78.75,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "kimi-k2.6",
+    "policy_url": "https://tideguide.app/privacy",
+    "terms_url": "https://tideguide.com/terms",
+    "policy_last_updated": "2024-01-19",
+    "needs_review": true,
+    "review_notes": "Privacy policy is a minimal iubenda boilerplate that only mentions 'Usage Data' shared with Apple for App Store Connect and payments. It does not address location access (core to a tide app), what 'Usage Data' specifically includes, or whether the app sends location data to tide data providers."
+  },
+
+  "app": {
+    "slug": "tide-guide-charts-tables",
+    "name": "Tide Guide: Charts & Tables",
+    "developer": "Condor Digital LLC",
+    "app_store_url": "https://apps.apple.com/in/app/tide-guide-charts-tables/id1406371071",
+    "app_store_id": "1406371071",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cb/c8/32/cbc832e7-3f22-a002-c833-c9cecc579cce/AppIcon_2-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Weather",
+    "sub_category": "Reference",
+    "description": "Award-winning tide and marine weather app for Apple Watch, iPhone, iPad and Mac with charts, tables, widgets, and live activities."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 77,
+    "grade": "B",
+    "one_liner": "A beautifully designed weather app with minimal data collection, but its privacy policy is a bare-bones template that never explains what 'Usage Data' means or whether your location leaves your device.",
+    "summary": "Tide Guide is an award-winning tide and marine weather app that appears to collect very little personal data. Its iubenda-generated privacy policy only mentions 'Usage Data' shared with Apple for App Store Connect and in-app purchase processing. However, the policy is a generic boilerplate that doesn't address the app's core data needs — specifically whether it accesses your location to show local tides and whether that location data is sent to third-party tide data providers. The policy also lacks specifics on data deletion, retention periods, and what exactly 'Usage Data' encompasses.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Tide Guide appears to be a genuinely low-data app with all payments handled by Apple and no invasive data collection described. However, the privacy policy is so minimal that it fails to explain how your location is handled for tide lookups — a basic transparency gap for a location-dependent weather app."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_vague_usage_data",
+        "title": "'Usage Data' is never defined",
+        "plain_english": "The privacy policy only says it collects 'Usage Data' but never explains what that includes. It could mean anything from basic app launch counts to detailed location and behavior logs.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_silent_on_location",
+        "title": "No mention of location for a location-based app",
+        "plain_english": "A tide app needs to know where you are to show accurate tide charts, yet the privacy policy doesn't mention location access at all — neither GPS coordinates nor approximate location.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_deletion_process",
+        "title": "No specific data deletion or export process",
+        "plain_english": "The policy says data is kept 'as long as required' but doesn't explain how you can request deletion, how long that takes, or what data is actually deleted.",
+        "severity": "low"
+      },
+      {
+        "id": "red_international_transfer",
+        "title": "Data may be transferred internationally",
+        "plain_english": "The policy states data may be transferred to countries other than your own depending on where the processing parties are located, without specifying which countries or what safeguards apply.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_minimal_collection",
+        "title": "Minimal data collection claimed",
+        "plain_english": "The privacy policy explicitly says the only personal data collected is 'Usage Data' — it does not claim to collect your name, email, contacts, photos, or other sensitive information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_apple_payments",
+        "title": "Payments handled entirely by Apple",
+        "plain_english": "All in-app purchases and subscriptions are processed through the Apple App Store. The app developer never sees your credit card or payment details.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security_measures",
+        "title": "Security measures mentioned",
+        "plain_english": "The policy states the owner takes appropriate security measures to prevent unauthorized access, disclosure, modification, or destruction of data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_claimed",
+        "title": "No advertising or ad tracking described",
+        "plain_english": "The privacy policy does not mention advertising networks, ad SDKs, or behavioral tracking for ads within the app.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't need your camera or microphone to show tide charts.",
+      "detail": "The privacy policy does not mention camera or microphone access, and there is no app feature that would require either.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app uses your location, even though showing local tides is the app's main purpose.",
+      "detail": "A tide app fundamentally needs location data to show accurate tide charts. The privacy policy is completely silent on location access — it does not say whether the app requests GPS permission, uses approximate location, or sends your location to third-party tide data providers.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Core app feature (local tides) requires location, but policy never mentions it",
+        "If location is sent to tide data providers, this is not disclosed"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't access your contacts.",
+      "detail": "There is no mention of contacts or address book access in the privacy policy, and no app feature suggests this would be needed.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't explain what files or data the app stores on your device.",
+      "detail": "The app stores tide data, charts, and tables for offline use. The privacy policy does not mention local storage, file access, or what cached data the app keeps on your device.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your Usage Data is shared with Apple for App Store services, and the developer says data may also be accessible to external service providers.",
+      "detail": "The policy states that 'Usage Data' is processed by Apple App Store for purchases and by App Store Connect for platform hosting. It also mentions that data may be accessible to external parties such as 'third-party technical service providers, mail carriers, hosting providers, IT companies, communications agencies'.",
+      "policy_excerpt": "In addition to the Owner, in some cases, the Data may be accessible to certain types of persons in charge... or external parties (such as third-party technical service providers, mail carriers, hosting providers, IT companies, communications agencies).",
+      "concerns": [
+        "External parties may access data, but the specific list is vague",
+        "No explicit list of all third-party services beyond Apple"
+      ],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't appear to require you to create an account or provide personal identity information.",
+      "detail": "The privacy policy only mentions 'Usage Data' being collected. There is no mention of account creation, username, email address, or other identity data being collected by the app itself. Apple handles subscriptions.",
+      "policy_excerpt": "Among the types of Personal Data that Tide Guide &amp; Buoy Weather collects... there are: Usage Data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't describe ad tracking, but the developer's website uses Google Analytics which isn't mentioned in the app privacy policy.",
+      "detail": "The privacy policy does not mention advertising, ad networks, or behavioral tracking within the app. However, the developer's website (tideguide.com) includes Google Analytics tags. The iubenda policy broadly covers cookies and tracking tools but does not specifically disclose Google Analytics usage.",
+      "policy_excerpt": "Any use of Cookies – or of other tracking tools — by Tide Guide &amp; Buoy Weather or by the owners of third-party services used by Tide Guide &amp; Buoy Weather serves the purpose of providing the Service required by the User.",
+      "concerns": [
+        "Developer website uses Google Analytics not specifically disclosed in policy",
+        "Policy broadly allows 'other tracking tools' for providing the service"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app is designed for children or how it handles kids' data.",
+      "detail": "The privacy policy does not mention an age requirement, children's data, or COPPA compliance. The app is rated 4+ on the App Store.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No age requirement or children's data safeguards mentioned"
+      ],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app needs internet to fetch tide data. The policy says data may be processed wherever the parties involved are located, which could be outside your country.",
+      "detail": "The app requires an internet connection to fetch tide and weather data from third-party providers. The privacy policy states that data may be processed at the owner's offices and 'in any other places where the parties involved in the processing are located,' which may involve international data transfers.",
+      "policy_excerpt": "The Data is processed at the Owner's operating offices and in any other places where the parties involved in the processing are located.",
+      "concerns": [
+        "Data may be transferred internationally without specifying countries or safeguards"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't clarify what device information is included in 'Usage Data'.",
+      "detail": "The policy broadly refers to 'Usage Data' without defining what it includes. It may or may not include device identifiers, OS version, or other device information. App Store Connect does collect some device data, but the policy is not explicit.",
+      "policy_excerpt": "",
+      "concerns": [
+        "'Usage Data' is undefined - may or may not include device identifiers"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't collect health or biometric data.",
+      "detail": "There is no mention of health, biometric, or medical data in the privacy policy. The app is a weather/tide utility, not a health app.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "All payments go through Apple — the app developer never sees your credit card.",
+      "detail": "The privacy policy and terms both state that all payments are processed independently through third-party services (Apple App Store). The app only receives a notification that payment was successful and does not collect any payment information.",
+      "policy_excerpt": "Tide Guide &amp; Buoy Weather isn't involved in the collection and processing of such information: instead, it will only receive a notification by the relevant payment service provider as to whether payment has been successfully completed.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can email the developer to ask about your data, but there's no self-service deletion option and no clear timeline.",
+      "detail": "The policy says data is retained 'as long as required by the purpose they have been collected for and may be retained for longer due to applicable legal obligation or based on the Users' consent.' Users can contact hello@tideguide.app, but there is no described self-service deletion process or specific timeline.",
+      "policy_excerpt": "Unless specified otherwise in this document, Personal Data shall be processed and stored for as long as required by the purpose they have been collected for.",
+      "concerns": [
+        "No self-service deletion mechanism described",
+        "Vague retention period with no specific timeline",
+        "No data export or portability mentioned"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer can change the terms anytime. If you keep using the app, that counts as accepting the new rules.",
+      "detail": "The terms state that the owner can amend the terms at any time and will 'appropriately inform the User.' Continued use of the service signifies acceptance of the revised terms. The previous version governs the relationship prior to acceptance.",
+      "policy_excerpt": "The continued use of the Service will signify the User's acceptance of the revised Terms.",
+      "concerns": [
+        "Continued use equals automatic acceptance of changes"
+      ],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "behavioural_ad_tracking",    "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "location_gps",               "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "device_fingerprinting",      "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "storage_file_access",        "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "childrens_data",           "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "data_deletion_user_rights",  "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "network_internet_activity",  "risk": "caution", "max": 5,  "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5,  "rate": 0.30, "deduction": 1.5 },
+      { "category": "camera_microphone",          "risk": "safe",    "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "contacts_phonebook",       "risk": "safe",    "max": 20, "rate": 0.00, "deduction": 0 },
+      { "category": "account_identity",         "risk": "safe",    "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "health_biometric",         "risk": "safe",    "max": 15, "rate": 0.00, "deduction": 0 },
+      { "category": "financial_payment",        "risk": "safe",    "max": 15, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 47.5,
+    "final_score": 77,
+    "grade": "B"
+  }
+}

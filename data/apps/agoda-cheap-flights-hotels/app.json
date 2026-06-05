@@ -1,0 +1,356 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.agoda.com/info/agoda-privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "2026-04",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "agoda-cheap-flights-hotels",
+    "name": "Agoda: Cheap Flights & Hotels",
+    "developer": "Agoda Company Pte. Ltd.",
+    "app_store_url": "https://apps.apple.com/in/app/agoda-cheap-flights-hotels/id440676901",
+    "app_store_id": "440676901",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ce/0c/0f/ce0c0fd2-624e-0e91-955c-e3f30cf94216/AppIcon-0-0-1x_U007epad-0-1-0-0-0-GLES2_U002c0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "A major travel booking platform that collects extensive personal data including passport and government IDs, records customer service calls, and tracks you across devices for advertising.",
+    "summary": "Agoda collects a very wide range of personal data to facilitate travel bookings, including passport details, government IDs, payment information, device identifiers (IMEI, SIM activation dates), and even physical characteristics like height and weight for certain activities. The platform shares data with Travel Suppliers, Booking Holdings group companies, advertising partners, and in some cases government agencies. It also records customer service calls, uses AI-powered assistants that build travel preference profiles, and engages in cross-device tracking for personalized ads. On the positive side, Agoda offers strong user rights under GDPR and CCPA, supports two-factor authentication, and provides detailed cookie controls.",
+    "recommendation": "proceed_with_caution",
+    "recommendation_reason": "Agoda is a legitimate and widely-used travel booking platform, but its privacy practices are extensive and invasive. If you use it, be aware that a large amount of personal data is collected and shared across the Booking Holdings ecosystem and with numerous advertising partners. Use the cookie consent manager to limit tracking, enable two-factor authentication, and avoid inputting unnecessary sensitive data into the AI travel assistant."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "passport_and_government_id_collected",
+        "title": "Passport and government ID numbers are collected",
+        "plain_english": "Agoda may ask for your passport, national ID, driver's license, or Tax ID numbers (like Brazilian CPF or Indian PAN) to facilitate bookings. This data is shared with Travel Suppliers and, in some cases, national banks or government agencies.",
+        "severity": "high"
+      },
+      {
+        "id": "customer_service_calls_recorded",
+        "title": "Customer service calls may be recorded",
+        "plain_english": "When you call Agoda's customer service, your conversation may be recorded or live-listened to for quality assurance, training, claims handling, and fraud detection.",
+        "severity": "medium"
+      },
+      {
+        "id": "cross_device_tracking",
+        "title": "Tracks you across multiple devices",
+        "plain_english": "Agoda combines data from your browser, mobile device, and other linked devices to track your activity across the internet and show you personalized ads on different platforms.",
+        "severity": "medium"
+      },
+      {
+        "id": "ai_assistant_builds_profile",
+        "title": "AI travel assistant builds a profile about you",
+        "plain_english": "Agoda's AI-powered travel assistant uses large language model tools to process your chat inputs together with your past booking details to build a profile of your travel preferences.",
+        "severity": "medium"
+      },
+      {
+        "id": "imei_and_sim_data_collected",
+        "title": "IMEI numbers and SIM activation dates collected",
+        "plain_english": "Agoda collects your mobile device's IMEI number, SIM activation dates, and other unique device identifiers as part of its standard data collection.",
+        "severity": "medium"
+      },
+      {
+        "id": "height_weight_health_data",
+        "title": "Physical characteristics and health-related data collected",
+        "plain_english": "For certain tours and activities, Agoda collects your height, weight, dietary needs, accessibility requirements, and may receive medical certificates. This is considered sensitive personal data.",
+        "severity": "medium"
+      },
+      {
+        "id": "government_data_sharing_china",
+        "title": "User data in China may be shared with authorities",
+        "plain_english": "If you are a Chinese resident, Agoda states you authorize them to share your information with Chinese authorities, including the State Tax Administration, in response to legal requests.",
+        "severity": "high"
+      },
+      {
+        "id": "booking_holdings_group_sharing",
+        "title": "Data shared across Booking Holdings group companies",
+        "plain_english": "Agoda is part of Booking Holdings Inc. Your data is shared with affiliated group companies for analytics, fraud detection, marketing, and to provide personalized offers across their platforms.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "strong_user_rights",
+        "title": "Comprehensive user rights under GDPR and CCPA",
+        "plain_english": "You have the right to access, correct, delete, and download your data. You can opt out of marketing, restrict processing, and object to automated decision-making.",
+        "severity": "positive"
+      },
+      {
+        "id": "two_factor_authentication",
+        "title": "Two-factor authentication available",
+        "plain_english": "Agoda strongly recommends and supports two-factor authentication to protect your account from unauthorized access.",
+        "severity": "positive"
+      },
+      {
+        "id": "cookie_consent_controls",
+        "title": "Detailed cookie and tracking controls",
+        "plain_english": "Agoda provides a cookie banner and settings that let you choose which types of cookies and tracking you allow, including opting out of interest-based advertising through industry mechanisms.",
+        "severity": "positive"
+      },
+      {
+        "id": "pci_dss_compliance",
+        "title": "Payment data protected with PCI-DSS standards",
+        "plain_english": "Agoda follows industry best practices and PCI-DSS standards to protect your payment data, including encryption and access controls.",
+        "severity": "positive"
+      },
+      {
+        "id": "photo_exif_location_disclosed",
+        "title": "Warns that uploaded photos may contain location data",
+        "plain_english": "Agoda explicitly notes that photos you upload from your mobile device may include location data as part of the EXIF tagging process.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda doesn't access your device's camera or microphone as part of normal app operation. However, they may record audio when you call customer service.",
+      "detail": "No mention of camera or microphone device access. Call recording is done on their end during customer service phone calls, not through device microphone access.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "optional",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Agoda asks for your precise location to find nearby hotels and flights. They also extract location data from photos you upload as part of EXIF tags.",
+      "detail": "Optional precise location access for searching nearby Travel Products. Photo uploads from mobile device may include location data via EXIF tagging.",
+      "policy_excerpt": "You may choose to grant us access to your location data to enable us to provide the services you request, such as searching for Travel Products near you. Additionally, when uploading a picture from your mobile device, it may include location data as part of the tagging process.",
+      "concerns": ["Precise location collected if granted.", "Location metadata extracted from uploaded photos without additional consent."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda doesn't access your phone contacts or address book.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you upload photos or videos for reviews, Agoda accesses your device's storage. They warn that uploaded photos may contain location data.",
+      "detail": "Users can voluntarily upload media (photos, videos) in reviews. Photos may include EXIF location metadata.",
+      "policy_excerpt": "when uploading a picture from your mobile device, it may include location data as part of the tagging process.",
+      "concerns": ["Uploaded photos may contain embedded location data."],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda shares your data with a massive network of partners including Travel Suppliers, Booking Holdings group companies, payment processors (Adyen, Wise), advertising partners (Meta, Google, Criteo, TikTok), analytics providers (Appsflyer), and in some cases government agencies.",
+      "detail": "Extensive sharing with Travel Suppliers, Booking Holdings affiliated companies, service providers (payment, analytics, customer service, marketing, fraud prevention), business partners (loyalty programs, banks, other OTAs), advertising partners for interest-based ads, and law enforcement/government authorities where required.",
+      "policy_excerpt": "We may share your personal data with third parties in order to provide our Travel Product services to you, namely Travel Suppliers, service providers, business partners, or our affiliated group companies.",
+      "concerns": ["Data shared across Booking Holdings group for marketing and fraud detection.", "Advertising partners receive hashed and unhashed data.", "Chinese authorities may receive user data under Chinese law.", "Travel Suppliers act as independent data controllers."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can use Agoda without an account, but creating one requires your name, email, and password. For bookings, they may collect your passport, national ID, driver's license, Tax ID numbers, date of birth, gender, and nationality.",
+      "detail": "Optional account creation. Extensive identity data collected for bookings: passport, national ID, driver's license, country of issue, expiry date, nationality, visas, Brazilian CPF, Indian PAN, date of birth, gender. Social login shares username, email, and profile info.",
+      "policy_excerpt": "Identification and account data – such as Booking ID, your (and/or each of your guest's') name, email address, phone number, date of birth, gender... Government issued identification data – such as your (or your guests') passport or national ID number, driver's license, country of issue, expiry date, nationality, visas.",
+      "concerns": ["Government ID and passport data collected for many bookings.", "Tax IDs required for certain currencies/countries.", "Social login shares additional data from third-party platforms."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda tracks your activity across their platform and the internet using cookies, SDKs, pixels, and tracking URLs. They then share this data with Meta, Google, Criteo, TikTok, and other platforms to show you personalized ads on other websites and apps, even across different devices you own.",
+      "detail": "Interest-based advertising via Meta, Google, Criteo, TikTok, and other partners. Cross-device tracking combines browser and device data. One-way hashed information shared with advertising partners. Cookies, SDKs, pixels, APIs, and local storage used extensively.",
+      "policy_excerpt": "We may allow certain third parties to place Cookies on our Platform to collect information about your online activities on our Platform... This information is used to provide advertising tailored to your interests from us (via email, on our Platform, and on other websites) and by third parties on other websites you may visit.",
+      "concerns": ["Cross-device tracking links multiple devices to a single user profile.", "One-way hashed data combined with other identifiers by partners.", "SDKs track in-app behavior and device identifiers.", "Local storage persists until manually deleted."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda says its platform is not directed at children. However, if parents or guardians provide children's information to book family travel, Agoda will collect and use that data.",
+      "detail": "Platform not directed at children. Parents/guardians may provide children's data for family bookings. Parents can request deletion if children's data was collected improperly.",
+      "policy_excerpt": "Our Platform is not directed towards children or people under the legal age of majority where our Platform is accessed. If parents or guardians provide us with information about children, we may collect it to facilitate a Travel Product booking...",
+      "concerns": ["Children's data collected when provided by parents for bookings.", "No specific age verification mechanism mentioned."],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda logs your IP address, pages visited, searches performed, clicks, and links clicked. They use cookies, web beacons, SDKs, and tracking URLs to monitor your activity across the platform and combine it with data from your other devices.",
+      "detail": "IP address, date/time of access, pages viewed, links clicked, searches performed, channel used for booking, source website. Cookies, pixels, SDKs, APIs, tracking technologies. Cross-device tracking enabled.",
+      "policy_excerpt": "when you visit our Platform, we may automatically gather certain data such as your IP address, the date and time of access... We also collect data on your interactions, such as the pages you view and the links you click.",
+      "concerns": ["Cross-device tracking combines network activity across multiple devices.", "Third-party advertising partners also place their own tracking cookies.", "Call recordings with customer service retained for limited time."],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda collects highly detailed device information including your IMEI number, SIM activation dates, device ID, advertising ID, device model, operating system, browser type, app version, language preferences, and app crash data.",
+      "detail": "Device hardware and software info, OS, browser, app version, language, app crashes, system activities, unique device identifiers, IMEI numbers, SIM activation dates, mobile device models, settings, characteristics.",
+      "policy_excerpt": "Information about your device's hardware and software, including the operating system, browser type, software or application version, and language preferences. If you are using a mobile device, we also collect information specific to your device, including its unique identifiers, settings, and characteristics, as well as data related to app crashes and other system activities.",
+      "concerns": ["IMEI numbers and SIM activation dates are very invasive identifiers.", "Advertising IDs enable cross-app tracking.", "SDKs from multiple partners also collect device data."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "For certain travel activities, Agoda collects health-related information including your height, weight, dietary requirements, accessibility needs, and may receive medical certificates. They classify this as sensitive personal data.",
+      "detail": "Physical characteristics (height, weight) collected for certain tours/activities. Special dietary needs, accessibility requirements, medical certificates. Religion may be implied from dietary preferences. Classified as sensitive personal data in the policy.",
+      "policy_excerpt": "Although we do not ordinarily collect sensitive personal data as part of our standard Travel Product bookings, there may be a need, from time to time, to collect such information e.g. as contained in a government-issued identification document or medical certificate... or if you may choose to share such information voluntarily... such as when specifying your dietary needs.",
+      "concerns": ["Health data collected for tour/activity bookings.", "Medical certificates may be requested for cancellations/amendments.", "Dietary preferences may imply religious or health information."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you book, your payment details are processed by third-party providers like Adyen and Wise. Agoda stores the last 4 digits of your credit card to handle refund requests, and you can delete saved card details from your account.",
+      "detail": "Payment details processed by third-party providers (Adyen, Wise, etc.). Last 4 digits of credit card stored for refund management. Card details can be deleted from account. AgodaWallet available for eligible users.",
+      "policy_excerpt": "We adhere to industry best practices and standards (PCI-DSS) to protect your payment data such as encryption, stringent access control, etc. Please note that we will store the last 4 digits of your credit card securely upon any booking made (this is required to manage any refund requests for that booking).",
+      "concerns": ["Last 4 digits of credit card retained after booking.", "Multiple payment processors each handle financial data under their own policies.", "Chargeback details shared with financial institutions."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda provides strong privacy rights. You can access, correct, delete, and download your data. You can delete your account and edit or remove most personal data. Some data may be retained for legal or accounting reasons.",
+      "detail": "Full GDPR rights: access, rectification, deletion, restriction, objection, data portability, automated decision-making opt-out. CCPA rights for US residents. Account data editable online. Deletion subject to legal/accounting retention requirements.",
+      "policy_excerpt": "You can always log into your personal Agoda account to delete, edit, or add your personal data including certain payment details... we may not be able to honour your request for deletion... if you have future/ongoing service with us or due to legal requirements, especially those affecting our accounting processes, processing or defence of claims, for fraud detection or prevention purposes, and mandatory data retention.",
+      "concerns": ["Some data retained for legal/accounting purposes."],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Agoda may update its privacy policy and says it will post changes on the platform with the effective date noted. They may ask for consent if required by law, but there's no explicit promise to notify you directly of all changes.",
+      "detail": "Policy revisions posted on platform with effective date. Users advised to review periodically. Consent sought for material changes if required by law.",
+      "policy_excerpt": "Agoda may prominently post such material changes prior to implementing the change and ask for your consent if required by law.",
+      "concerns": ["No advance notification mechanism specified for all changes."],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 90,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

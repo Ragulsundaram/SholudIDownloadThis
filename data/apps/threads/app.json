@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://privacycenter.instagram.com/policy",
+    "terms_url": "",
+    "policy_last_updated": "2025-12-16",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "threads",
+    "name": "Threads",
+    "developer": "Instagram, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/threads/id6446901002",
+    "app_store_id": "6446901002",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a3/c8/84/a3c884eb-e666-bd98-10dc-d0b06dced9a9/Prod-0-0-1x_U007ephone-0-0-0-1-0-0-P3-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 54,
+    "grade": "D",
+    "one_liner": "Meta's text-based social app that collects extensive data, tracks you across apps, and shares widely with advertisers.",
+    "summary": "Threads inherits Meta's data-heavy privacy model. It collects your posts, messages, camera roll, device info, location, and app usage, then uses it to personalize ads, train AI, and share with a vast network of advertisers, partners, and service providers. Your profile is public by default, and your data flows across all Meta products including Instagram and Facebook. While Meta promises not to sell your data, the sheer scale of collection and sharing is significant.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "If you already use Instagram or Facebook, Threads adds little new privacy risk — but if you're privacy-conscious, the extensive tracking, ad profiling, and cross-product data sharing are substantial concerns."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "extensive_data_collection",
+        "title": "Collects vast amounts of personal data",
+        "plain_english": "Threads collects everything you post, your messages, your camera roll, your location, what device you're using, what other apps you have, and even tracks whether the app is open or closed on your phone.",
+        "severity": "high"
+      },
+      {
+        "id": "cross_app_tracking",
+        "title": "Tracks you across Meta apps and devices",
+        "plain_english": "Meta uses your Threads data to show you ads and recommendations across Facebook, Instagram, Messenger, and even other apps that use Meta's ad network. They track you across all your devices.",
+        "severity": "high"
+      },
+      {
+        "id": "ai_training_on_content",
+        "title": "Your content trains Meta's AI",
+        "plain_english": "The posts, comments, photos, and messages you create on Threads are used to develop and improve Meta's artificial intelligence systems, including AI that may be used by third parties.",
+        "severity": "high"
+      },
+      {
+        "id": "public_by_default",
+        "title": "Your profile and posts are public by default",
+        "plain_english": "Unless you change your settings, anyone on Threads — and anyone on the internet — can see your profile and posts. Other people can also share or reshare your content without your direct approval.",
+        "severity": "medium"
+      },
+      {
+        "id": "shared_with_advertisers",
+        "title": "Data shared with advertisers and partners",
+        "plain_english": "Meta shares your information with advertisers, measurement companies, marketing vendors, and integrated partners so they can measure how well their ads work and target you better.",
+        "severity": "high"
+      },
+      {
+        "id": "manual_review_of_content",
+        "title": "Humans may review your private content",
+        "plain_english": "Meta says their systems mostly process your data automatically, but in some cases real people at Meta manually review your messages, posts, and photos for safety or policy enforcement.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "no_data_sales",
+        "title": "Meta says they don't sell your data",
+        "plain_english": "Meta explicitly states they don't sell your information to anyone, though they do share it broadly with partners and advertisers.",
+        "severity": "positive"
+      },
+      {
+        "id": "advance_policy_notice",
+        "title": "Notified before major policy changes",
+        "plain_english": "Meta promises to tell you before they make important changes to the privacy policy, and gives you a chance to review the new terms before continuing to use the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "deletion_tools_available",
+        "title": "Account and data deletion tools exist",
+        "plain_english": "You can download a copy of your data, delete your account, or manage what information Meta collects about you through the app's settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "ad_preferences_controls",
+        "title": "Some ad personalization controls",
+        "plain_english": "You can manage some ad preferences and turn off certain types of tracking, though this doesn't stop all data collection.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Threads can access your camera roll when you choose to upload a photo or video. The microphone isn't typically used for the core text-based experience.",
+      "detail": "The policy mentions 'content you provide through our camera feature or your camera roll settings' and voice-enabled features, though Threads is primarily text-based.",
+      "policy_excerpt": "Content you provide through our camera feature or your camera roll settings, or through our voice-enabled features.",
+      "concerns": ["Camera roll access means all photos are potentially visible to the app when uploading."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Threads can access your location through your device settings, which Meta uses to personalize content and ads based on where you are.",
+      "detail": "Location data is collected through device settings and used for personalization and ad targeting.",
+      "policy_excerpt": "Information you've shared through your device settings (like GPS location).",
+      "concerns": ["Location data is used to personalize ads and may be inferred from IP address even without GPS permission."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Threads collects information about your friends, followers, and connections, and may suggest people you know based on your contacts and who you interact with.",
+      "detail": "The policy explicitly mentions 'Friends, followers and other connections' as a collected information category, used for recommendations and social graph building.",
+      "policy_excerpt": "Friends, followers and other connections.",
+      "concerns": ["Social graph data is used to suggest connections and is shared across Meta products.", "Contact syncing may upload your phonebook to Meta servers."],
+      "score_impact": 13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Threads can access your camera roll when you upload photos or videos, but it doesn't scan your entire photo library continuously.",
+      "detail": "Camera roll access is user-initiated when creating posts with media. The policy mentions 'camera roll settings' as a data source.",
+      "policy_excerpt": "Content you provide through our camera feature or your camera roll settings.",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta shares your data with a large network of advertisers, analytics companies, measurement vendors, marketing partners, service providers, and external researchers. They also share with integrated partners when you connect third-party apps.",
+      "detail": "The policy lists numerous third-party categories: Advertisers, Audience Network publishers, analytics partners, commerce partners, integrated partners, measurement vendors, marketing vendors, service providers, external researchers, and AI integrations.",
+      "policy_excerpt": "We don't sell any of your information to anyone, and we never will. We also require partners and other third parties to follow rules about how they can and cannot use and disclose the information we provide.",
+      "concerns": ["While Meta doesn't 'sell' data, the scale of sharing with advertisers and partners is extensive.", "Data is shared with Audience Network publishers for ads on other apps.", "Integrated partners receive information when you connect their services."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Threads requires a Meta account (linked to Instagram) and collects your name, username, profile picture, bio, and all posts you create. Your public profile is visible to everyone by default.",
+      "detail": "Account creation is required and linked to Instagram. Public profile information is shared widely, and accounts are associated across Meta products through Accounts Center.",
+      "policy_excerpt": "Your public profile information (including your name, username and profile picture).",
+      "concerns": ["Account is public by default, exposing profile info to anyone.", "Identity data is linked across all Meta products including Facebook, Instagram, and WhatsApp."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Meta tracks everything you do on Threads — what you view, how long you scroll, what you tap — and uses this to show you personalized ads both in Threads and across other apps and websites through their ad network.",
+      "detail": "Extensive behavioral tracking is used for ad personalization across Meta Products and the Audience Network. Data is used across devices and combined with off-Meta activity from partners.",
+      "policy_excerpt": "We use information we collect to provide a personalized experience to you, including ads... We use information across our Products and across your devices.",
+      "concerns": ["Cross-device tracking means your behavior on phone, tablet, and computer is linked.", "Off-Meta activity from partners is combined with your Threads data for ad targeting.", "Activity-based feed algorithm means constant behavioral monitoring."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta says their products are not for children under 13, but there's no strong age verification in the app to prevent kids from signing up.",
+      "detail": "The policy doesn't specifically address Threads for children, but follows the general Meta requirement that users must be 13+.",
+      "policy_excerpt": "",
+      "concerns": ["No robust age verification mechanism.", "Public-by-default nature of Threads may expose children who bypass age limits."],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta logs your IP address and network information, which can reveal your approximate location. They also receive data about your activity on other websites and apps from their advertising partners.",
+      "detail": "IP addresses are collected and used for location inference. Off-Meta activity data is received from partners to supplement behavioral profiles.",
+      "policy_excerpt": "Information about the network you connect your device to, including your IP address.",
+      "concerns": ["IP address is used to infer location even without GPS permission.", "Off-Meta activity tracking extends monitoring beyond Meta's own apps."],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta collects detailed information about your device — its model, operating system, unique identifiers, what you're doing on it (like whether the app is open), and even tracks your mouse movement to tell if you're human.",
+      "detail": "Device characteristics, software, unique identifiers, device signals, and behavioral signals (app foreground/background, mouse movement) are all collected for security, personalization, and ad targeting.",
+      "policy_excerpt": "Device characteristics and device software. What you're doing on your device, like whether our app is in the foreground or if your mouse is moving (which can help tell humans from bots). Identifiers that tell your device apart from other users'.",
+      "concerns": ["Mouse movement tracking is an unusual level of behavioral surveillance.", "Device identifiers enable cross-device and cross-app tracking even without cookies."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Threads doesn't appear to collect health or biometric data as part of its core functionality.",
+      "detail": "No health, fitness, or biometric data collection is mentioned for Threads specifically. The policy does mention 'information with special protections' that users may choose to provide (health, etc.), but this is not actively collected.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you use Meta Pay or make purchases through Threads, Meta collects truncated credit card information and transaction details. Most users won't use this feature.",
+      "detail": "Purchases and transactions are mentioned in the policy, including truncated credit card information. This is optional and not core to Threads' functionality.",
+      "policy_excerpt": "Purchases or other transactions you make, including truncated credit card information.",
+      "concerns": ["Truncated credit card info is still financial data that reveals spending patterns."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your Threads account and download your data, but Meta may keep some information for legal, safety, or security reasons even after deletion.",
+      "detail": "Deletion tools exist through Instagram/Threads settings. However, the policy states data may be retained for extended periods for safety, legal compliance, or legitimate interests.",
+      "policy_excerpt": "Delete your information or account. We keep information as long as we need it to provide our Products, comply with legal obligations or protect our or other's interests.",
+      "concerns": ["Data may be retained indefinitely for 'safety, security and integrity' purposes.", "Deletion doesn't necessarily remove data from all Meta systems immediately."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta promises to tell you before making major changes to the privacy policy, and gives you a chance to review the new terms before continuing.",
+      "detail": "Advance notification with opportunity to review before continuing use. This is better than the typical 'post changes and you're assumed to agree' approach.",
+      "policy_excerpt": "We'll notify you before we make material changes to this Policy. You'll have the opportunity to review the revised Policy before you choose to continue using our Products.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 94,
+    "final_score": 54,
+    "grade": "D"
+  }
+}

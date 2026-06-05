@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.jeevansathi.com/static/page/privacypolicy",
+    "terms_url": "",
+    "policy_last_updated": "2025",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "jeevansathi-marriage-app",
+    "name": "Jeevansathi.com: Marriage App",
+    "developer": "Info Edge (India) Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/jeevansathi-com-matrimony-app/id969994186",
+    "app_store_id": "969994186",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/e8/12/fee812ff-c611-8e39-4232-fe7a351a7c30/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "Matrimony",
+    "description": "One of India's leading matrimony apps for finding a life partner, with profile verification, horoscope matching, and offline matchmaking support."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 56,
+    "grade": "C",
+    "one_liner": "A popular Indian matrimony app that asks for deeply personal details including religion, caste, income, and family information, and shares your profile data with advertisers and business partners.",
+    "summary": "Jeevansathi is a leading Indian matrimony platform that collects extensive personal information including name, contact details, date of birth, education, income, religion, caste, family details, photos, and even government documents for verification. Your basic profile information is visible to all website visitors, not just registered users. The platform shares data with group companies, third-party service providers, advertisers (including banks, insurance agents, and stock brokers), and law enforcement when required. Phone calls with customer support may be recorded, and your chats are monitored for offensive content.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "While Jeevansathi is a well-known matrimony platform, users should understand that their deeply personal information including caste, religion, income, and family details is collected extensively and shared with advertisers, business partners, and affiliates."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_profile_visible_to_all_visitors",
+        "title": "Profile details visible to all website visitors",
+        "plain_english": "Your age, height, education, income, and other profile details can be seen by anyone who visits the website, even people who haven't signed up.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sensitive_data_collected",
+        "title": "Collects caste, religion, and income details",
+        "plain_english": "The app asks for highly personal information including your religion, sub-caste, ethnic origin, physical and mental conditions, and income, which are considered sensitive personal data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_government_docs_for_verification",
+        "title": "Government IDs required for verification",
+        "plain_english": "To verify your profile, the app may ask you to upload official documents like your passport, driver's license, or income proof.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_calls_recorded_and_monitored",
+        "title": "Phone calls may be recorded",
+        "plain_english": "When you talk to customer support on the phone, your conversation may be recorded and monitored to check if it follows their rules.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_payment_card_storage",
+        "title": "Does not store payment card details",
+        "plain_english": "The app does not store your credit or debit card information. Payments are handled by external payment processors.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_profile_deletion_available",
+        "title": "You can delete your profile",
+        "plain_english": "You have the option to delete your profile and associated data from the platform.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_18_plus_only",
+        "title": "Only for adults 18 and older",
+        "plain_english": "The app is meant only for people who are 18 years or older, and minors must use it under parental supervision.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos and videos to your profile. The app may ask to access your camera or photo album when you do this.",
+      "detail": "Users can upload pictures and videos to their profile. The app may request camera or photo album access to add this content. Photos are used for profile display and verification purposes.",
+      "policy_excerpt": "To add certain content, like pictures or videos, you may allow us to access your camera or photo album.",
+      "concerns": [
+        "Photos visible to all website visitors as part of profile"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app collects your current location, city, and pin code. It also gets device location when you use the app.",
+      "detail": "Jeevansathi collects current location, city, and pin code as part of profile information. When using a device to access the platform, technical or related information including device location may be collected. Location data is used for match recommendations and service improvement.",
+      "policy_excerpt": "We collect your Personal Information such as name, email address, date of birth, mobile number, mother tongue, password, country, state/nationality, gender, current location, city, pin code...",
+      "concerns": [
+        "Current location collected as part of profile",
+        "Device location accessed during app usage"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you sign in using Facebook or Google, the app may get access to information from your social media profile, which could include your contacts.",
+      "detail": "Users can connect using social media accounts (Facebook, Google). When doing so, Jeevansathi collects the user ID and information made available through the social media interface. The policy does not explicitly mention direct contact book access, but social login may share connected contacts.",
+      "policy_excerpt": "We may collect, process and store your user ID associated with any social media account (such as your Facebook and Google account) that you use to connect with us or to avail our services",
+      "concerns": [
+        "Social login may share connected contacts and friend lists",
+        "Partner information collected for horoscope services"
+      ],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload documents like your passport, income proof, or address proof for profile verification. This is optional.",
+      "detail": "Users may upload documents for age, address, and income verification to provide additional credibility to their profile. Official identification documents may also be requested for verification and security purposes.",
+      "policy_excerpt": "We may collect your documents on age, address, income etc. for verification purposes to provide additional credibility to your profile. We may also seek additional documents, such as official identification documents, to verify your profile.",
+      "concerns": [
+        "Government ID documents uploaded for verification",
+        "Income and address proof documents collected"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with group companies, advertisers (including banks and insurance companies), service providers, and law enforcement when required.",
+      "detail": "Jeevansathi shares personal information with: affiliates and group companies for internal business purposes; enforcement, regulatory, and judicial authorities when legally required; third-party service providers and marketing partners for platform maintenance and communication; and third-party advertisers including financial service providers (banks, insurance agents, stock brokers, mortgage lenders) and non-financial companies (stores, airlines, software companies). In case of merger, acquisition, or sale of assets, personal information may be disclosed to involved parties.",
+      "policy_excerpt": "IEIL does not disclose, transfer or share your Personal Information with others except with: Our affiliates and group companies... Third parties including enforcement, regulatory and judicial authorities... Third party service providers and marketing partners... Third party advertisers to display advertisements to you when you visit the Platform.",
+      "concerns": [
+        "Data shared with group companies and affiliates",
+        "Profile data shared with advertisers including financial institutions",
+        "Data disclosed to law enforcement and regulatory authorities",
+        "Data may be transferred in case of merger or acquisition"
+      ],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide extensive personal details including your name, email, phone number, date of birth, gender, height, occupation, income, religion, and caste to create a profile.",
+      "detail": "Account creation requires comprehensive personal information including name, email, mobile number, date of birth, gender, mother tongue, country, state, current location, city, pin code, marital status, height, occupation, income, education, family details, and photos. Users may also provide special/sensitive information like ethnic origins, religious beliefs, sub-caste, and physical/mental conditions. Government documents may be required for verification.",
+      "policy_excerpt": "We may collect your Personal Information such as name, email address, date of birth, mobile number, mother tongue, password, country, state/nationality, gender, current location, city, pin code, marital status, height, occupation, income etc.",
+      "concerns": [
+        "Extensive identity and personal data required",
+        "Sensitive data like caste and religion collected",
+        "Income and financial details requested",
+        "Government documents may be required for verification"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app tracks your activity on the platform using cookies and pixel tags, and shows you targeted ads from third-party advertisers including banks and insurance companies.",
+      "detail": "Jeevansathi uses cookies, pixel tags, and other tracking technologies to collect technical information about user systems and interactions with the platform. This includes IP addresses, browser software, operating system types, clickstream patterns, and access dates/times. Third-party advertisers (financial and non-financial companies) use information about users and their visits to provide targeted advertisements. The platform claims it does not associate identifiers with sensitive categories for tailored ads.",
+      "policy_excerpt": "We use information collected from cookies and other technologies, like pixel tags, to improve your user experience... Third party advertisers to display advertisements to you when you visit the Platform... These companies may use information about you and your visits to this Platform and other web sites to provide advertisements on this Platform.",
+      "concerns": [
+        "Cookies and pixel tags used for tracking",
+        "Third-party advertisers receive behavioral data",
+        "Clickstream patterns and browsing activity logged",
+        "Financial service providers among advertisers"
+      ],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is only for adults 18 and older. Minors can use it only if a parent or guardian is supervising them.",
+      "detail": "The platform requires users to be at least 18 years old, or the age of majority in their jurisdiction. Users under 18 must use the platform under parental, legal guardian, or responsible adult supervision. The policy does not contain specific data minimization protections for younger users beyond the age requirement.",
+      "policy_excerpt": "The minimum age for these purposes shall be eighteen (18), however if local laws require that you must be older for IEIL to be able to lawfully provide the services over the Platform to you then that older age shall apply as the applicable minimum age. If you are under the age of 18 or the age of majority in your jurisdiction, you must use the Platform under the supervision of your parent, legal guardian or responsible adult.",
+      "concerns": [
+        "Minors can use platform with supervision only",
+        "No special data protections for supervised minors"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browser type, operating system, and what you click on while using the website.",
+      "detail": "Jeevansathi collects technical information including IP addresses, browser software, operating system types, clickstream patterns, and dates/times of site access. Cookies are used to collect information about website activity. This data is used for service improvement, security, and user experience enhancement.",
+      "policy_excerpt": "Tracking technologies may record information such as Internet domain and host names; Internet protocol (IP) addresses; browser software and operating system types; clickstream patterns; and dates and times that our site is accessed.",
+      "concerns": [
+        "IP address logged continuously",
+        "Clickstream patterns tracked",
+        "Cookies used for activity monitoring"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects technical information about your device and system when you access the platform, including device location.",
+      "detail": "When users access the platform via a device, Jeevansathi may collect technical or related information from the device as well as device location. Cookies and tracking technologies are used to collect system information and interaction data. This includes internet domain names, IP addresses, browser software, operating system types, and device characteristics.",
+      "policy_excerpt": "When you use a device to access the Platform, IEIL may collect technical or other related information from the device as well as the device location",
+      "concerns": [
+        "Device technical information collected",
+        "Device location accessed",
+        "System and interaction data tracked via cookies"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can optionally share information about your physical and mental conditions on your profile. The app considers this sensitive personal data.",
+      "detail": "Users may optionally provide information about their physical and mental conditions as part of their profile. The privacy policy explicitly categorizes this as 'special' or 'sensitive' personal information. By choosing to provide this information, users consent to its processing.",
+      "policy_excerpt": "Some of the information you choose to provide us may be considered 'special' or 'sensitive' in certain jurisdictions, for example your ethnic origins, religious beliefs, sub caste, physical and mental conditions. By choosing to provide this information, you consent to our processing of the information.",
+      "concerns": [
+        "Optional health/condition data collected as sensitive personal info"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app does not store your credit or debit card information. Payments are handled by external processors.",
+      "detail": "Jeevansathi explicitly states it does not store any account-related information or credit/debit card details. The platform is not liable for any loss or damage from disclosure of payment information during online transactions.",
+      "policy_excerpt": "IEIL does not store any account related information or any credit / debit card details. IEIL shall not be liable for any loss or damage sustained by Users as a result of any disclosure (inadvertent or otherwise) of any information concerning the User's account, credit cards or debit cards in the course of any online transactions or payments.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your profile, but the app does not say exactly how long they keep your data after that. They say they keep it only as long as necessary for legal and business reasons.",
+      "detail": "Users can delete their profile through the platform. Personal information is retained only as long as necessary for processing purposes and/or in accordance with legal, regulatory, contractual, or statutory obligations. At expiry of such periods, data is deleted or archived in compliance with applicable laws. However, the policy does not specify exact retention timelines or deletion procedures beyond general statements.",
+      "policy_excerpt": "Your Personal Information will not be retained by IEIL any longer than it is necessary for the purposes for which the Personal Information is processed and/or in accordance with legal, regulatory, contractual or statutory obligations as applicable. At the expiry of such periods, your Personal Information will be deleted or archived in compliance with applicable laws",
+      "concerns": [
+        "Vague retention timelines",
+        "No specific deletion timeline mentioned",
+        "Data archived rather than fully deleted"
+      ],
+      "score_impact": 6.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy says it can change at any time and the new version applies from the date it is published. It does not say how you will be told about the changes.",
+      "detail": "Jeevansathi reserves the right to update, change, or modify the Privacy Policy at any time. The policy states that updates come into effect from the date of publication, but does not specify how users will be notified of changes or whether they must actively re-consent.",
+      "policy_excerpt": "IEIL reserves the right to update, change or modify this Privacy Policy at any time. The Privacy Policy shall come to effect from the date of publication of such update, change or modification",
+      "concerns": [
+        "No notification mechanism specified for policy changes",
+        "No active re-consent requirement mentioned",
+        "Changes effective immediately upon publication"
+      ],
+      "score_impact": 2.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "risky",
+        "max": 30,
+        "rate": 0.65,
+        "deduction": 19.5
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "risky",
+        "max": 25,
+        "rate": 0.65,
+        "deduction": 16.25
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "caution",
+        "max": 20,
+        "rate": 0.3,
+        "deduction": 6
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "childrens_data",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "unknown",
+        "max": 5,
+        "rate": 0.5,
+        "deduction": 2.5
+      }
+    ],
+    "total_deductions": 89.25,
+    "final_score": 56,
+    "grade": "C"
+  }
+}

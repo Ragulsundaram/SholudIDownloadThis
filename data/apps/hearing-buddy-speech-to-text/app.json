@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "kimi-k2.6",
+    "policy_url": "https://kragerlabs.com/privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "Privacy policy is a generic WordPress-style template that does not address app-specific data practices. It mentions websites, blog commenters, Akismet, and cookies but never explains how the app handles microphone access, speech transcripts, or Apple Health data. The App Store description makes stronger privacy claims (on-device processing, no cloud) than the legal privacy policy commits to."
+  },
+
+  "app": {
+    "slug": "hearing-buddy-speech-to-text",
+    "name": "Hearing Buddy - Speech To Text",
+    "developer": "Krager Labs LLC",
+    "app_store_url": "https://apps.apple.com/in/app/hearing-buddy-speech-to-text/id6747363502",
+    "app_store_id": "6747363502",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f1/d3/64/f1d36434-c916-ece9-e03c-a739d8bce51f/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Medical",
+    "sub_category": "Utilities",
+    "description": "Real-time speech-to-text captions for deaf and hard of hearing users, with on-device processing and Apple Health integration."
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "Marketed as privacy-first with on-device captions, but its privacy policy is a generic template that never mentions microphone, transcripts, or health data.",
+    "summary": "Hearing Buddy markets itself as a privacy-first accessibility app with on-device speech-to-text processing and no cloud uploading. However, its actual privacy policy is a generic WordPress-style template originally written for a website — it talks about blog commenters, cookies, and Akismet spam prevention but never addresses how the app handles your microphone, conversation transcripts, or Apple Health hearing test data. The disconnect between the app's strong marketing claims and its vague legal policy is a significant transparency gap for a medical app built around recording sensitive personal conversations.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The App Store listing promises on-device processing and no cloud uploading, but the legal privacy policy is a generic website template that does not mention microphone access, transcripts, or health data at all. For a medical app that records your conversations, this lack of a specific, transparent privacy policy is a real concern."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_generic_policy",
+        "title": "Generic privacy policy that doesn't address the app",
+        "plain_english": "The privacy policy is a generic WordPress-style template written for a website. It mentions blog commenters, cookies, and Akismet spam prevention but never explains how the app handles your microphone, speech transcripts, or health data.",
+        "severity": "high"
+      },
+      {
+        "id": "red_silent_on_audio",
+        "title": "No explanation of how sensitive audio is handled",
+        "plain_english": "The app's entire purpose is to record and transcribe your conversations, yet the privacy policy never mentions microphone access, speech data, or how transcripts are stored or protected.",
+        "severity": "high"
+      },
+      {
+        "id": "red_silent_on_health",
+        "title": "No mention of health data despite Apple Health access",
+        "plain_english": "The app can access hearing test data from Apple Health for its Buddy Boost feature, but the privacy policy says nothing about health or biometric data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_business_transfers",
+        "title": "Your data could be transferred if the company is sold",
+        "plain_english": "The policy states that if the company is acquired or goes out of business, your personal information would be one of the assets transferred to a third party.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_advertising_partners",
+        "title": "Advertising partners mentioned in policy",
+        "plain_english": "The policy mentions advertising partners who may set cookies and deliver targeted ads. While this appears website-focused, the policy does not clearly exempt the app from tracking.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_sale",
+        "title": "Developer says they don't sell personal information",
+        "plain_english": "The policy explicitly states that Krager Labs will not rent or sell your personal information to anyone.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_support_contact",
+        "title": "Support contact for data questions",
+        "plain_english": "You can email support@kragerlabs.com to ask about deleting or correcting your personal data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_limited_collection",
+        "title": "Claims to only collect what's necessary",
+        "plain_english": "The policy states they don't ask for personal information unless they truly need it and don't store it on their servers unless required for ongoing operation.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't explain how the app uses your microphone, even though speech-to-text is the app's main feature.",
+      "detail": "The app's core function is real-time speech-to-text captioning, which requires continuous microphone access. The App Store description claims all processing happens on-device with no cloud uploading, but the privacy policy never mentions microphone access, audio recording, or speech data at all.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy is completely silent on microphone access despite it being the app's core feature",
+        "App Store claims on-device processing are not reflected in the legal privacy policy"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app uses your location.",
+      "detail": "There is no mention of location or GPS access in the privacy policy. The app description does not highlight location features either.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 7.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention whether the app can access your contacts.",
+      "detail": "The privacy policy does not mention contacts or address book access. The app description mentions name alerts and question alerts, but it is unclear if these require contacts permission or just listen for spoken names in real time.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't explain what files the app can access or how transcripts are stored.",
+      "detail": "The app description mentions transcript history and the ability to copy and share transcripts. The privacy policy does not explain what storage permissions the app requires, how transcripts are stored, or whether they are kept locally or synced.",
+      "policy_excerpt": "",
+      "concerns": [
+        "App offers transcript history but policy is silent on how transcripts are stored"
+      ],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says they won't sell your personal info, but they may share it with employees, contractors, and affiliates.",
+      "detail": "The policy states the company will not rent or sell personal information. However, it allows disclosure to employees, contractors, and affiliated organizations who need the information to process it on the company's behalf. Some of these parties may be located outside your home country. The policy also mentions advertising partners who may deliver targeted ads.",
+      "policy_excerpt": "kragerlabs.com will not rent or sell potentially personally-identifying and personally-identifying information to anyone.",
+      "concerns": [
+        "Data may be shared with contractors and affiliated organizations",
+        "Some data recipients may be located outside your country",
+        "Advertising partners are mentioned, though this appears website-focused"
+      ],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't clarify what account information the app collects from you.",
+      "detail": "The core free features of the app do not appear to require an account. Buddy+ subscriptions are handled through Apple's in-app purchase system. The policy mentions collecting usernames and email addresses for blog signups, but it is unclear what account data the app itself collects.",
+      "policy_excerpt": "",
+      "concerns": [
+        "Policy is silent on what identity data the app collects"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer tracks visitors on their websites and works with advertising partners, but it's unclear if this applies to the app.",
+      "detail": "The privacy policy describes using cookies to identify and track website visitors, and mentions advertising partners who may deliver targeted advertisements. The app description does not mention ads. However, because the policy is written as a generic statement covering all properties, it is unclear whether any tracking applies to the app.",
+      "policy_excerpt": "kragerlabs.com uses cookies to help kragerlabs.com identify and track visitors.",
+      "concerns": [
+        "Policy covers all websites and apps generically, so it is unclear if app is exempt",
+        "Advertising partners are mentioned for delivering targeted ads"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say how the app handles children's data or set an age limit.",
+      "detail": "There is no mention of children's data, age requirements, or COPPA compliance in the privacy policy. The app is rated 4+ on the App Store.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No age requirement or children's data safeguards mentioned"
+      ],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer collects IP addresses from logged-in users and website visitors.",
+      "detail": "The policy states that IP addresses are collected for logged in users and blog commenters. Standard web server logs including browser type, language preference, and referring site are also collected. The app description claims no cloud processing for captions, but the policy does not specifically describe the app's network behavior.",
+      "policy_excerpt": "kragerlabs.com also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users.",
+      "concerns": [],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say whether the app collects detailed information about your device.",
+      "detail": "The policy mentions collecting browser type and device characteristics for website visitors but does not specifically address what device information the app collects.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 7.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention health data at all, even though the app can access hearing test data from Apple Health.",
+      "detail": "The app description states that Buddy Boost can use hearing test data from Apple Health to shape sound amplification. The privacy policy contains absolutely no mention of health data, biometric data, or Apple Health integration.",
+      "policy_excerpt": "",
+      "concerns": [
+        "App accesses Apple Health hearing test data but policy is completely silent on health data"
+      ],
+      "score_impact": 7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app offers in-app purchases, but the policy doesn't specifically explain how payment data is handled.",
+      "detail": "Buddy+ subscriptions are processed through Apple's in-app purchase system. The policy does not specifically address app payment processing, but since Apple handles the transaction, the app developer never sees your payment card details.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can email the developer to ask about deleting your data, but there's no self-service deletion option described.",
+      "detail": "The policy mentions contacting support@kragerlabs.com for questions about deleting or correcting personal data. There is no description of a self-service deletion mechanism or a clear timeline for deletion.",
+      "policy_excerpt": "If you have questions about deleting or correcting your personal data please contact our support team (support@kragerlabs.com).",
+      "concerns": [
+        "No self-service deletion described",
+        "No timeline or process explained for deletion requests"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say how you'll be told if the rules change.",
+      "detail": "There is no mention of how users are notified of privacy policy changes, what notice period is given, or whether continued use constitutes acceptance.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 2.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone",          "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps",               "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "contacts_phonebook",         "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "storage_file_access",        "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "account_identity",           "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "behavioural_ad_tracking",  "risk": "caution", "max": 25, "rate": 0.30, "deduction": 7.5 },
+      { "category": "childrens_data",           "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "network_internet_activity",  "risk": "caution", "max": 5,  "rate": 0.30, "deduction": 1.5 },
+      { "category": "device_fingerprinting",      "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "health_biometric",         "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "financial_payment",        "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights",  "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "unknown", "max": 5,  "rate": 0.50, "deduction": 2.5 }
+    ],
+    "total_deductions": 85.5,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

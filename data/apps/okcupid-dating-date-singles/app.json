@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://okcupid-app.zendesk.com/hc/en-us/articles/22780694078491",
+    "terms_url": "",
+    "policy_last_updated": "2026-03-15",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "okcupid-dating-date-singles",
+    "name": "OkCupid Dating: Date Singles",
+    "developer": "Match Group Americas, LLC",
+    "app_store_url": "https://apps.apple.com/in/app/okcupid-online-dating-app/id338701294",
+    "app_store_id": "338701294",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/bb/c7/9fbbc7eb-7761-8f58-432f-dd306f8d5eb7/AppIcon-0-1x_U007ephone-0-1-85-220-0.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 59,
+    "grade": "C",
+    "one_liner": "A data-heavy dating app that collects sensitive personal information and shares it across all Match Group platforms and with dozens of advertising partners.",
+    "summary": "OkCupid collects extensive personal data including your sexual orientation, political views, racial/ethnic origins, photos, chats, and precise location. Your profile is public by default, and your data flows across all Match Group platforms (Tinder, Hinge, Match.com, etc.). The app uses your face geometry for photo verification, may request government ID, and shares data with advertisers for targeted ads. On the positive side, OkCupid promises advance notice before material policy changes and provides tools to download, correct, or delete your data.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The extensive collection of sensitive personal data, cross-platform sharing with Match Group, and targeted advertising make this a moderate-to-high privacy risk for a dating app."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "sensitive_profile_data_public",
+        "title": "Sensitive profile data is public by default",
+        "plain_english": "OkCupid collects and displays highly personal information like your sexual orientation, political views, and racial or ethnic origins on your public profile. Anyone using the app can see this.",
+        "severity": "high"
+      },
+      {
+        "id": "match_group_cross_sharing",
+        "title": "Data shared across all Match Group dating apps",
+        "plain_english": "Your OkCupid data flows to other Match Group platforms like Tinder, Hinge, and Match.com. If you get banned on one app, they can ban you on all of them. They also use your data to recommend matches across platforms.",
+        "severity": "high"
+      },
+      {
+        "id": "biometric_face_data",
+        "title": "Face geometry collected for photo verification",
+        "plain_english": "If you use the photo verification feature, OkCupid scans and stores the shape of your face — what's called 'face geometry data' — which is considered biometric data in some places.",
+        "severity": "high"
+      },
+      {
+        "id": "government_id_may_be_requested",
+        "title": "Government ID may be requested",
+        "plain_english": "OkCupid may ask you to upload a copy of your government-issued ID to prove you are who you say you are.",
+        "severity": "medium"
+      },
+      {
+        "id": "extensive_advertiser_sharing",
+        "title": "Data shared with advertising partners for targeting",
+        "plain_english": "OkCupid shares your profile info, usage patterns, and device identifiers with advertising partners to show you targeted ads both on the app and on other websites and apps.",
+        "severity": "high"
+      },
+      {
+        "id": "ai_ml_analysis",
+        "title": "AI analyzes your behavior and content",
+        "plain_english": "OkCupid uses machine learning and artificial intelligence to analyze how you use the app, read your customer support conversations, and build recommendation systems to suggest matches.",
+        "severity": "medium"
+      },
+      {
+        "id": "long_data_retention",
+        "title": "Data kept for years after you leave",
+        "plain_english": "Even after you close your account, OkCupid keeps some of your data for up to 10 years for legal reasons. Banned account data is kept for 2 years.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "advance_policy_notice",
+        "title": "Notified before major policy changes",
+        "plain_english": "OkCupid promises to tell you in advance before they make important changes to the privacy policy, giving you time to review.",
+        "severity": "positive"
+      },
+      {
+        "id": "data_export_tools",
+        "title": "Can download your data and close account",
+        "plain_english": "You can request a copy of all your personal data and close your account at any time through the app settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "opt_out_controls",
+        "title": "Advertising and consent controls available",
+        "plain_english": "You can opt out of certain data processing, withdraw consent, and restrict how your data is used for advertising in your account settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "strict_age_requirement",
+        "title": "Strictly for adults 18+",
+        "plain_english": "OkCupid does not allow anyone under 18 on the platform and has reporting tools to flag underage users.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "OkCupid can access your camera and microphone so you can upload photos and videos to your profile, send media in chats, and use the photo verification feature.",
+      "detail": "Camera and microphone access are user-initiated for profile photos, media sharing in chats, and photo verification. Face geometry data is collected during photo verification.",
+      "policy_excerpt": "You share photos, videos, audio, text and other types of content, such as your chats with other members.",
+      "concerns": ["Photo verification involves biometric face data collection.", "Full photo gallery access during uploads."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "OkCupid can collect your precise location if you give permission, which helps show you people nearby. If you decline, some location-based features won't work.",
+      "detail": "Precise geolocation (latitude and longitude) is collected with permission. Used for showing nearby matches and location-based features.",
+      "policy_excerpt": "If you give us permission, we collect your geolocation (latitude and longitude) from your device. If you decline permission, certain features that rely on precise geolocation will not be available to you.",
+      "concerns": ["Precise location data is highly sensitive for a dating app.", "Approximate location may still be inferred from IP address."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention accessing your phone contacts or address book.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "OkCupid can access your photo gallery when you choose to upload photos or videos to your profile or send them in messages.",
+      "detail": "Photo gallery access is user-initiated for media uploads. No mention of continuous file scanning.",
+      "policy_excerpt": "You share photos, videos, audio, text and other types of content.",
+      "concerns": ["Full photo gallery access during upload means all stored photos are potentially accessible."],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid shares your data with service providers, advertising partners, and Match Group affiliates. Advertisers receive your profile data, usage patterns, and device identifiers to show you targeted ads.",
+      "detail": "Extensive sharing with service providers (hosting, analytics, customer care, payment processing, security), advertising partners (targeted ads, lookalike audiences), Match Group affiliates (cross-platform safety and recommendations), and law enforcement when required.",
+      "policy_excerpt": "We share data with vendors and partners who help us operate, promote and improve our service... We publish ads about third-party advertisers' products and services on our service, and publish ads promoting our own service on third-party sites and apps.",
+      "concerns": ["Advertising partners receive device IDs, profile data, and usage patterns for targeted ads.", "Match Group affiliates share data across all dating platforms.", "Facebook tools (Login, Pixel, SDK) create joint data controller relationship with Meta."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid requires your phone number or email, date of birth, and password. Your profile includes gender, interests, sexual orientation, political views, and racial or ethnic origins — all visible to other users by default. Government ID and face data may also be collected for verification.",
+      "detail": "Account creation requires phone/email and DOB. Public profile includes gender, sexual orientation, political affiliations, racial/ethnic origins, interests, and preferences. Photo verification involves face geometry data. Government ID may be requested for identity verification.",
+      "policy_excerpt": "When you complete your profile, you share additional details about you, such as your gender, interests, preferences, approximate location, etc. Some of this data may be considered sensitive or special in certain countries, such as details about sexual orientation, sexual life, racial or ethnic origins, or political affiliations.",
+      "concerns": ["Sensitive identity data (sexual orientation, political views, ethnicity) is public by default.", "Government ID and biometric face data collected for verification.", "Cross-platform profile linking across Match Group services."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid tracks everything you do on the app — who you view, message, match with, and what features you use — then uses this to show you personalized ads and recommend you to others. They also track you across other websites and apps through their advertising campaigns.",
+      "detail": "Usage data (features used, interactions, searches, matches, messages) combined with profile data and technical data for ad targeting. Facebook Pixel and SDK track activity. Advertising IDs (IDFA, GAID) are used for cross-app tracking.",
+      "policy_excerpt": "We can also receive data related to interactions you have with our ads on third party websites or apps... performing and measuring the effectiveness of advertising campaigns run on our service... showing ads to our members which are tailored to their interests.",
+      "concerns": ["Cross-app and cross-site ad tracking via Facebook Pixel and advertising IDs.", "Behavioral profiling based on dating activity is highly personal.", "Lookalike audience targeting shares your data pattern with advertisers."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid is strictly for adults 18 and older. They do not allow anyone under 18 on the platform.",
+      "detail": "Strict 18+ requirement with reporting mechanism for underage users. No child-directed content.",
+      "policy_excerpt": "Our service is restricted to individuals who are 18 years of age or older. We do not permit individuals under the age of 18 on our platform.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid logs your IP address, tracks which webpages referred you, records your browser type, and uses cookies and advertising IDs to monitor your activity both on the app and across other sites.",
+      "detail": "IP address, browser type, device IDs, advertising IDs, cookies, and referring webpages are all logged. Facebook Pixel tracks interactions with OkCupid ads on third-party sites.",
+      "policy_excerpt": "Using the service involves the collection of data from and about the device(s) you use to access our service, including hardware and software information such as IP address, device ID, device type, operating systems and configurations, network information, as well as app settings and characteristics, app crashes, advertising IDs and identifiers associated with cookies or other technologies.",
+      "concerns": ["IP address linked to activity logs and device fingerprinting.", "Facebook Pixel enables cross-site tracking.", "Advertising IDs enable persistent cross-app tracking."],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid collects your device model, operating system, IP address, device ID, advertising ID, and app settings to identify your device and personalize your experience.",
+      "detail": "Technical data includes hardware/software info, IP address, device ID, device type, OS, network info, app settings, app crashes, and advertising IDs (IDFA, GAID). Cookies and similar technologies also uniquely identify devices.",
+      "policy_excerpt": "Technical Data: Using the service involves the collection of data from and about the device(s) you use to access our service, including hardware and software information such as IP address, device ID, device type, operating systems and configurations, network information, as well as app settings and characteristics, app crashes, advertising IDs.",
+      "concerns": ["Advertising IDs enable persistent cross-app tracking.", "Device ID linked to account for long-term identification."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "OkCupid's photo verification feature scans your face and stores your face geometry data, which is considered biometric information. You may also be asked to provide a government ID for identity verification.",
+      "detail": "Face geometry data is collected during photo verification. Government-issued ID may be requested for identity checks. These are optional but sensitive if provided.",
+      "policy_excerpt": "You may choose to participate in certain of our features like Photo Verification, that involve the collection of face geometry data, which is considered biometric data in some jurisdictions. You may choose to provide us with a copy of your government-issued ID to help us check that you're who you say you are.",
+      "concerns": ["Biometric face data is highly sensitive and could be used for identity matching.", "Government ID copies create additional identity risk if breached."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy OkCupid subscriptions or features, the payment goes through Apple, Google, or OkCupid directly. If you pay directly, you give them your debit or credit card number.",
+      "detail": "Purchase data includes transaction details. Direct payments (not through iOS/Android) require providing card/financial info to OkCupid. Transaction data retained for 10 years for tax/accounting.",
+      "policy_excerpt": "When you make a purchase or request a refund, we keep the details of the transaction (e.g., what you purchased, the date of the transaction, and the price). When you pay directly with us (rather than through a platform such as iOS or Android), you provide your debit or credit card number or other financial information.",
+      "concerns": ["Direct payment means OkCupid stores your card details.", "Transaction data retained for 10 years."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can close your account and request data deletion, but OkCupid keeps some information for 3 months for safety investigations. Transaction records are kept 10 years for taxes, and banned account content is stored for 2 years.",
+      "detail": "Account closure makes profile invisible. 3-month safety retention window for investigation. Transaction data kept 10 years. Banned account content kept 2 years. Consent records kept 5 years. Auto-account closure after 2 years of inactivity.",
+      "policy_excerpt": "We implement a safety retention window of three months following account closure. During this period, we keep your data to investigate unlawful or harmful conducts... We keep transaction data for 10 years to comply with tax and accounting legal requirements... We keep user generated content associated with banned account for 2 years.",
+      "concerns": ["Long retention periods for financial and banned account data.", "3-month safety window delays full deletion."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "OkCupid promises to notify you before material changes take effect, giving you time to review the changes.",
+      "detail": "Advance notification for material changes with time to review before taking effect.",
+      "policy_excerpt": "We will notify you before material changes take effect so that you have time to review the changes.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 87.75,
+    "final_score": 57,
+    "grade": "C"
+  }
+}

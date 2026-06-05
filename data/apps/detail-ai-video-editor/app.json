@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.detail.co/privacy",
+    "terms_url": "https://detail.co/terms",
+    "policy_last_updated": "2021-07-15",
+    "needs_review": true,
+    "review_notes": "Privacy policy was last updated July 2021 and does not mention AI features (auto-edit, AI Director, auto-captions, transcription, green screen AI) that the app heavily advertises today. Policy may be outdated relative to current data practices."
+  },
+  "app": {
+    "slug": "detail-ai-video-editor",
+    "name": "Detail: AI Video Editor",
+    "developer": "Detail Technologies B.V.",
+    "app_store_url": "https://apps.apple.com/in/app/detail-ai-video-editor/id1673518618",
+    "app_store_id": "1673518618",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/3e/89/0c3e8991-a51c-c3a9-bb54-bd418dc9f3f2/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
+    "category": "Photo & Video",
+    "sub_category": "Graphics & Design",
+    "description": "An AI-powered video editor for creating reaction videos, podcasts, vlogs, and livestreams with multicam recording, auto-captions, and AI auto-editing."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 64,
+    "grade": "C",
+    "one_liner": "A powerful AI video editor, but it stores your recordings on its servers, tracks you for marketing across other websites, and its privacy policy hasn't been updated since 2021.",
+    "summary": "Detail is an AI video editor with impressive features like auto-edit, multicam recording, and auto-captions. However, its privacy policy is outdated (July 2021) and doesn't address its current AI features. The app stores your video and audio recordings on its servers, shares usage data with service providers for cross-site marketing, and can transfer your data to affiliates or future buyers. On the positive side, it is a GDPR-compliant EU company with solid user rights, does not store your payment details, and encrypts data in transit and at rest.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Detail offers genuinely useful video editing features, but creators should be aware that their raw and edited recordings are stored on Detail's cloud servers, and their app usage may be tracked for marketing on other websites. The outdated privacy policy raises questions about whether current AI processing practices are fully disclosed. If you need a privacy-first editing tool, consider apps that process everything on-device."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_outdated_policy",
+        "title": "Privacy policy is 5 years old",
+        "plain_english": "The privacy policy was last updated in July 2021. Since then, the app has added major AI features like auto-edit, AI Director, auto-captions, and transcription that aren't mentioned at all. This makes it hard to know how your data is really being used today.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_site_tracking",
+        "title": "Tracks your usage for ads on other websites",
+        "plain_english": "Detail hires outside companies to watch how you use the app over time so they can show you ads and promotions for Detail on other websites and apps you visit.",
+        "severity": "high"
+      },
+      {
+        "id": "red_affiliate_transfer",
+        "title": "Your data could be sold if the company is bought",
+        "plain_english": "If Detail is sold, merges with another company, or goes through bankruptcy, your personal information can be transferred to the new owners or their advisors.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_cloud_storage",
+        "title": "Stores your video and audio recordings on its servers",
+        "plain_english": "When you record or edit videos in Detail, your video and audio files are uploaded and stored on the company's cloud servers so you can access them across devices.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_contacts_upload",
+        "title": "Can upload your contacts to its servers",
+        "plain_english": "If you choose to connect your contacts from Facebook, Google, or Apple, Detail will copy and store your contacts' information on its servers to let you invite people or request payments.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_card_storage",
+        "title": "Never stores your credit card details",
+        "plain_english": "When you pay for a subscription, your payment details go directly to an outside payment company that meets industry security standards. Detail never sees or stores your card number.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_rights",
+        "title": "Full European privacy rights",
+        "plain_english": "Detail is based in the Netherlands and follows strict European privacy laws. You have the right to see your data, fix mistakes, delete your account, export your data, and object to certain uses.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_encryption",
+        "title": "Encrypts data in transit and at rest",
+        "plain_english": "Detail uses industry-standard security technology to scramble your data while it travels between your phone and their servers, and also scrambles data stored on their servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_social_login_control",
+        "title": "You choose what social login shares",
+        "plain_english": "You can sign in with Facebook, Google, or Apple, and you control exactly what information each one shares with Detail through your account privacy settings on those platforms.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail needs your camera and microphone to record videos and podcasts. The recordings are stored on the company's servers so you can edit and share them.",
+      "detail": "As a video editor and recorder, camera and microphone access is core functionality. The privacy policy mentions 'video and audio recordings' as part of detailed activity information collected when users upload, share, or create content. Recordings are stored on Detail's servers.",
+      "policy_excerpt": "Detailed activity and use information... may include video and audio recordings.",
+      "concerns": ["Recordings stored on company servers", "No mention of local-only recording option"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Detail may collect your location when you create events or activities in the app, but it is not required for video editing.",
+      "detail": "Geo-location information is mentioned as part of 'detailed activity and use information' when users create events or activities. No evidence of continuous background tracking. Location appears optional and tied to event organization.",
+      "policy_excerpt": "This type of information may include video and audio recordings... calendar information, and geo-location information.",
+      "concerns": ["Location collected for event creation", "No explicit opt-out mentioned for location"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you choose to connect your contacts from Facebook, Google, or Apple, Detail will copy and store them on its servers to help you invite people or request payments.",
+      "detail": "Contacts access is explicitly opt-in through third-party account connections. Detail accesses and stores contacts' information for inviting contacts to events or requesting payment. Users can withdraw permission through the third-party's website.",
+      "policy_excerpt": "If you choose to share your contacts, [We will, in accordance with your instructions, access and store your contacts' information in order to invite your contacts to events or to request payment.",
+      "concerns": ["Contacts stored on company servers", "Withdrawal requires going to third-party website"],
+      "score_impact": -6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail needs access to your photos and videos so you can import clips to edit and save finished projects back to your device.",
+      "detail": "As a video editor, the app requires file access to import media for editing and export finished projects. The policy references video and audio recordings being uploaded. No mention of broad file system scanning.",
+      "policy_excerpt": "when you choose to upload a recording, decide to share recordings... This type of information may include video and audio recordings.",
+      "concerns": ["Media files uploaded to cloud servers", "No mention of local-only editing option"],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail shares your information with companies that help run the app, process payments, and analyze usage. Some of these companies also use your data to show you ads for Detail on other websites.",
+      "detail": "Data is shared with: (1) third-party service providers for supporting, improving, promoting and securing the Services, (2) payment processors, (3) analytics providers for insights, (4) service providers that collect usage data over time to promote Detail or display relevant information on other websites/services, (5) affiliates under common control, (6) potential acquirors in business transactions, and (7) third-party apps/websites via API integrations chosen by the user.",
+      "policy_excerpt": "We may also engage service providers to collect information about your use of the Services over time on our behalf, so that we or they may promote Detail or display information that may be relevant to your interests on the Services or other websites or services.",
+      "concerns": ["Usage tracking for cross-site promotion", "Broad affiliate sharing", "Data transfer in mergers/acquisitions", "Third-party API integrations share user data"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Detail collects your name, email, and profile picture when you create an account or sign in with Facebook, Google, or Apple. It uses this to personalize your experience and suggest features.",
+      "detail": "Account information includes name, email, profile info, and preferences. Third-party login through Facebook, Google, or Apple provides name, email, profile info, and preferences. Third-party account user ID, name, and profile picture URL are saved. Data is used to customize experience and suggest new features.",
+      "policy_excerpt": "If you access the Services with Third-Party Accounts, we will collect information that you have agreed to make available such as your name, email address, profile information and preferences.",
+      "concerns": ["Profile data linked to usage for customization", "Third-party login shares profile data by default"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail and its hired partners watch how you use the app over time. They use this to show you ads and promotions for Detail on other apps and websites you visit.",
+      "detail": "Third-party service providers collect usage information over time to promote Detail and display relevant information on other websites/services. The company also uses collected data to market and promote services, activities, events, and other commercial products. Third-party analytics providers are used to gain insights into service usage.",
+      "policy_excerpt": "We may also engage service providers to collect information about your use of the Services over time on our behalf, so that we or they may promote Detail or display information that may be relevant to your interests on the Services or other websites or services.",
+      "concerns": ["Cross-site behavioral tracking for promotion", "Third-party analytics with marketing purposes", "Usage profiling over time"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 4+ on the App Store, but its privacy policy says nothing about children or how it protects kids' data. This is worrying for an app that could easily appeal to young users.",
+      "detail": "The app is rated 4+ on the App Store, making it accessible to young children. The privacy policy contains no mention of age restrictions, COPPA compliance, GDPR-K safeguards, or special protections for children's data. Given the app's video editing and creative features, it is likely to attract younger users.",
+      "policy_excerpt": "",
+      "concerns": ["App rated 4+ with no child-specific safeguards in policy", "No age requirement or COPPA mention", "AI features may process children's content without disclosure"],
+      "score_impact": -6.5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail logs your IP address and links it to your session and device ID. They use this to spot trends, fix problems, and keep the app secure.",
+      "detail": "Log files include IP addresses, browser type, referring/exit pages, platform type, date/time stamp, and number of clicks. IP addresses are linked to session IDs and device identifiers. Information is used to analyze trends, administer, protect, and secure the Services.",
+      "policy_excerpt": "IP addresses may be linked to session IDs and device identifiers.",
+      "concerns": ["IP linked to session and device identifiers", "Network activity logged continuously"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail collects technical details about your phone or computer, including device type, network info, cookies, and log files. Your IP address is tied to your session and device ID.",
+      "detail": "Technical information includes device and network information, cookies, log files, and analytics information. IP addresses are linked to session IDs and device identifiers. Standard device diagnostics collected.",
+      "policy_excerpt": "This technical information includes device and network information, cookies, log files and analytics information.",
+      "concerns": ["Device identifiers collected and linked to sessions", "Cookies and analytics tracking"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail does not collect or store any health or biometric information.",
+      "detail": "No mention of health data, biometric data, or fitness tracking in the privacy policy. App is a video editor with no health-related features.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Detail never stores your payment details. When you subscribe, your card information goes straight to an outside payment company that meets strict security rules.",
+      "detail": "Payment information such as payment card details are handled by PCI-compliant third-party payment services. Detail explicitly states they do not store credit card information.",
+      "policy_excerpt": "We use payment card industry compliant third-party payment services and we do not store your credit card information.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask to see, fix, delete, or export your data, and you can object to some uses. It can take up to 90 days to fully remove everything after you delete your account, and some data may be kept longer for legal reasons.",
+      "detail": "GDPR-compliant rights: withdraw consent, access processed data, rectify/restrict/limit/delete information, object to legitimate-interest processing, and data portability. Self-service deletion available through account settings for some items. Full account deletion may take up to 90 days. Data may be retained for legal compliance, fraud prevention, fee collection, dispute resolution, troubleshooting, investigations, and Terms of Service enforcement.",
+      "policy_excerpt": "following your deletion of your account, it may take up to 90 days to fully delete your personal information and system logs from our systems. Additionally, we may retain information to comply with the law, prevent fraud, collect fees, resolve disputes, troubleshoot problems, assist with investigations, enforce the Terms of Service and take other actions permitted by law.",
+      "concerns": ["90-day deletion timeline", "Broad legal retention exceptions", "No guaranteed complete erasure"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If Detail makes important changes to its privacy rules, it will post a clear notice. If you don't like the changes, you can stop using the app and delete your account.",
+      "detail": "Policy updates posted on Services in timely manner. Prominent notice provided for material changes. Users are told to stop using Services and delete account if they object, rather than using implicit 'continued use = acceptance' language.",
+      "policy_excerpt": "If Detail makes changes to this Privacy Policy, the updated Privacy Policy will be posted on the Services in a timely manner and, if we make material changes, we will provide prominent notice.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 73.75,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

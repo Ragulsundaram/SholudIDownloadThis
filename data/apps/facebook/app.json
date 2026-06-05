@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.facebook.com/privacy/policy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-12-16",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "facebook",
+    "name": "Facebook",
+    "developer": "Meta Platforms, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/facebook/id284882215",
+    "app_store_id": "284882215",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/b2/c1/36b2c17e-1347-4052-ad3b-ac410d8df53d/Icon-Production-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "",
+    "description": "The world's largest social network, connecting billions of people to share updates, photos, videos, and messages."
+  },
+  "verdict": {
+    "overall_risk": "dangerous",
+    "score": 30,
+    "grade": "F",
+    "one_liner": "The world's biggest data-collection machine: everything you do, say, and share is tracked, analyzed, and used to sell ads.",
+    "summary": "Facebook collects vast amounts of personal data including your posts, messages, photos, videos, location, device information, browsing activity, and connections. This data is used to build a detailed profile of you for highly targeted advertising. Meta shares your information with hundreds of third-party partners including advertisers, analytics firms, measurement vendors, and external researchers. Content you upload may be manually reviewed by humans and used to train AI systems. Data is transferred globally with limited transparency about safeguards.",
+    "recommendation": "avoid",
+    "recommendation_reason": "Facebook's business model is built on maximizing data collection for advertising. The sheer volume of data gathered, the breadth of third-party sharing, and the use of content for AI training make this one of the most privacy-invasive apps available."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_everything_tracked_for_ads",
+        "title": "Everything you do is tracked for ads",
+        "plain_english": "Facebook collects your posts, messages, photos, videos, location, device info, and browsing history. All of this is used to build a profile of you so advertisers can show you targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_manual_review_of_content",
+        "title": "Your content may be reviewed by humans",
+        "plain_english": "Facebook uses both computers and real people to review your posts, messages, photos, and videos. This includes content you send in private messages.",
+        "severity": "high"
+      },
+      {
+        "id": "red_shared_with_hundreds_of_partners",
+        "title": "Data shared with hundreds of partners",
+        "plain_english": "Your information is shared with advertisers, analytics companies, measurement firms, marketing vendors, service providers, external researchers, and AI integrations. They also give data to governments and law enforcement when asked.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_device_cross_product_tracking",
+        "title": "Tracked across all your devices and apps",
+        "plain_english": "Meta tracks you across Facebook, Instagram, WhatsApp, Messenger, and even other apps and websites you visit. They combine this into one big profile to target ads at you everywhere.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ai_training_on_your_content",
+        "title": "Your content is used to train AI",
+        "plain_english": "Meta uses the photos, videos, messages, and posts you create to train and improve their artificial intelligence systems. They do not clearly ask for your permission each time they do this.",
+        "severity": "high"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_download_and_delete_tools",
+        "title": "You can download and delete your data",
+        "plain_english": "Facebook provides tools to download a copy of your data or delete your account. However, they keep some information even after deletion for legal and safety reasons.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sale_claimed",
+        "title": "Claims it does not sell your data",
+        "plain_english": "Facebook states that they do not sell your personal information to anyone. However, they still share it widely with partners for advertising and other purposes.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app uses your camera and microphone when you take photos, record videos, or use voice features. Meta stores this content and may use it to train AI or show you ads.",
+      "detail": "Users provide content through camera features, camera roll settings, and voice-enabled features. Meta stores, analyzes, and may manually review this content. Photos and videos are used for AI training, content moderation, and personalization. The policy explicitly mentions that content provided through camera and voice features is collected and used.",
+      "policy_excerpt": "Content that you provide through our camera feature or your camera roll settings, or through our voice-enabled features.",
+      "concerns": [
+        "Content stored indefinitely and used beyond original sharing intent",
+        "Manual human review of uploaded content",
+        "Content used to train AI systems"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Facebook collects your location from your device settings, IP address, and the content you share. It uses this to show local content, ads, and recommendations.",
+      "detail": "Location-related information is collected from device settings (e.g. GPS), IP address inference, and user-posted content. This is used to personalize content, show local recommendations, and target location-based ads.",
+      "policy_excerpt": "Information that you've shared through your device settings (e.g. GPS location)",
+      "concerns": [
+        "Location inferred from IP address even without GPS permission",
+        "Location used for ad targeting"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "dangerous",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Facebook collects your friends, followers, and connections to suggest people you may know, show you relevant content, and target ads.",
+      "detail": "Friends, followers, and other connections are a core data category collected by Meta. This network data is used to make friend suggestions, personalize feeds, understand social graphs, and improve ad targeting across Meta Products.",
+      "policy_excerpt": "Friends, followers and other connections",
+      "concerns": [
+        "Social graph data used for ad targeting",
+        "Contact data linked to advertising profile",
+        "Recommendations based on connections may expose relationships"
+      ],
+      "score_impact": 20
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your camera roll when you choose to share photos or videos. Meta stores this content and may use it to train AI or show you ads.",
+      "detail": "Users can grant access to camera roll to share photos and videos. Meta stores uploaded content and uses it for personalization, AI training, content moderation, and advertising. The policy mentions camera roll settings as a source of collected information.",
+      "policy_excerpt": "Content that you provide through our camera feature or your camera roll settings",
+      "concerns": [
+        "Uploaded content stored indefinitely",
+        "Content used for AI training without clear per-content consent"
+      ],
+      "score_impact": 6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta shares your information with advertisers, analytics companies, measurement firms, marketing vendors, service providers, external researchers, and AI integrations. They also give data to governments and law enforcement when asked.",
+      "detail": "Meta shares information with a vast array of third parties: Advertisers and Audience Network publishers, partners who use analytics services, partners who offer goods/services on Meta platforms, integrated partners, measurement vendors, marketing vendors, service providers, external researchers, and AI integrations. They also share in response to legal requests from law enforcement and other government authorities. While Meta claims they don't sell information, the breadth of sharing is extensive.",
+      "policy_excerpt": "We don't sell any of your information to anyone and we never will. We also require partners and other third parties to follow rules about how they can and cannot use and disclose the information that we provide.",
+      "concerns": [
+        "Shared with advertisers for ad targeting",
+        "Shared with analytics and measurement vendors",
+        "Shared with external researchers",
+        "Shared with AI integrations",
+        "Disclosed to law enforcement and government authorities",
+        "Shared across Meta Companies (WhatsApp, Instagram, etc.)"
+      ],
+      "score_impact": 30
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must create an account with your real name and information. Meta links this identity across all its products and uses it to personalize ads and content.",
+      "detail": "Facebook requires a real-name account with public profile information including name, username, and profile picture. This identity is linked across all Meta Products (Facebook, Instagram, WhatsApp, Messenger) through Accounts Centre. The identity data is used for personalization, ads, friend suggestions, and content recommendations.",
+      "policy_excerpt": "Your public profile information (including your name, username and profile picture)",
+      "concerns": [
+        "Real-name policy limits anonymity",
+        "Identity linked across all Meta products",
+        "Public profile information visible to anyone"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta tracks what you do across its products and devices to show you personalized ads. They also track your activity on other apps and websites you visit.",
+      "detail": "Meta collects extensive behavioral data including: types of content viewed/interacted with, apps and features used, actions taken, time/frequency/duration of activities, purchases, and interactions with AI. This is used to personalize ads and content across Meta Products and across devices. Meta also tracks off-Meta activity through cookies, pixels, and SDKs on other websites and apps.",
+      "policy_excerpt": "Personalising the ads that people see... Make suggestions for you (such as people that you may know, groups or events that you may be interested in or topics that you may want to follow) on and off our Products.",
+      "concerns": [
+        "Extensive behavioral profiling across all Meta products",
+        "Cross-device tracking",
+        "Off-Meta activity tracking via pixels and SDKs",
+        "Activity data used for AI training"
+      ],
+      "score_impact": 25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is not meant for children under 13, but teenagers commonly use it. Meta does not have special protections for teen data beyond the general policy.",
+      "detail": "Facebook requires users to be at least 13 years old. However, the platform is widely used by teenagers. The privacy policy does not contain special sections or enhanced protections specifically for teen users beyond the general data practices. All the extensive tracking, ad targeting, and data sharing applies equally to teenage users.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No special data minimization for teen users",
+        "Full ad targeting applied to teenage users",
+        "Behavioral tracking of minors"
+      ],
+      "score_impact": 6.5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta logs your IP address, network information, and device activity to understand how you use their products and to target ads.",
+      "detail": "Meta collects information about the network you connect to, including your IP address. IP addresses are used for location inference, security, troubleshooting, and understanding network performance. Cookies and similar technologies are also used to track activity.",
+      "policy_excerpt": "Information about the network that you connect your device to, including your IP address. Information from cookies and similar technologies.",
+      "concerns": [
+        "IP address used for location inference",
+        "Network activity logged continuously",
+        "Cookies used for cross-site tracking"
+      ],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta collects detailed information about your device, what you're doing on it, and identifiers that tell it apart from other users. This helps them track you across devices and apps.",
+      "detail": "Meta collects: device characteristics and device software, what you're doing on your device (whether app is in foreground, mouse movement to detect bots), identifiers that distinguish your device, device signals, information shared through device settings, location-related information, network information, and cookies. This creates a comprehensive device fingerprint used for security, personalization, and ad targeting across devices.",
+      "policy_excerpt": "Device characteristics and device software. What you're doing on your device, such as whether our app is in the foreground or if your mouse is moving. Identifiers that tell your device apart from other users'. Device signals.",
+      "concerns": [
+        "Comprehensive device fingerprinting",
+        "Activity monitoring on device (foreground detection)",
+        "Device identifiers used for cross-device tracking",
+        "Bot detection through mouse movement tracking"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data as a core feature.",
+      "detail": "Facebook's privacy policy does not mention health or biometric data collection as a specific category. While users may post health-related content voluntarily, there is no systematic collection of health or biometric information like heart rate, health records, or biometric identifiers.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Meta tracks your purchases and transactions on their platform, including truncated credit card information. They use this to understand your spending habits and show you relevant ads.",
+      "detail": "Meta collects purchases and transactions made through Meta Pay or other checkout experiences. This includes truncated credit card information. Transaction data is used to understand user preferences, improve products, and personalize advertising.",
+      "policy_excerpt": "Purchases or other transactions that you make, including truncated credit card information",
+      "concerns": [
+        "Purchase history linked to advertising profile",
+        "Truncated credit card information retained",
+        "Transaction data used for profiling"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can download and delete your data, but Meta keeps some information even after deletion for legal and safety reasons.",
+      "detail": "Meta provides tools to access, download, port, and delete your information. However, they state that information is kept for as long as needed to provide products, comply with legal obligations, protect interests, prevent harm, investigate violations, and maintain product integrity. In some instances, information is preserved for extended periods. This means deletion is not absolute.",
+      "policy_excerpt": "We keep information for as long as we need it to provide our products, comply with legal obligations or to protect our or other's interests.",
+      "concerns": [
+        "Data retained beyond user deletion for legal/safety reasons",
+        "Extended preservation periods mentioned but not specified",
+        "No clear timeline for complete data removal"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta says they will notify you before making big changes to the privacy policy, and you'll have a chance to review the new terms.",
+      "detail": "Meta states they will notify users before making material changes to the Privacy Policy, and users will have the opportunity to review the revised policy before choosing to continue using the products. This is better than silent changes but still relies on passive notification rather than requiring active re-consent.",
+      "policy_excerpt": "We'll notify you before we make material changes to this Policy. You'll have the opportunity to review the revised Policy before you choose to continue using our products.",
+      "concerns": [
+        "Continued use equals acceptance of new terms",
+        "No requirement for active re-consent"
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "dangerous",
+        "max": 30,
+        "rate": 1.0,
+        "deduction": 30
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "dangerous",
+        "max": 25,
+        "rate": 1.0,
+        "deduction": 25
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "camera_microphone",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "dangerous",
+        "max": 20,
+        "rate": 1.0,
+        "deduction": 20
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "financial_payment",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      },
+      {
+        "category": "childrens_data",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 144.5,
+    "final_score": 30,
+    "grade": "F"
+  }
+}

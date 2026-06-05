@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://taimi.com/privacy-policy/",
+    "terms_url": "https://taimi.com/terms-of-service/",
+    "policy_last_updated": "2026-03-18",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "taimi-lgbtq-dating-meet-up",
+    "name": "Taimi: LGBTQ+ Dating & Meet Up",
+    "developer": "Social Impact Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/taimi-lgbtq-dating-chat-app/id1282966364",
+    "app_store_id": "1282966364",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/a6/99/8ea6999b-878f-9a0a-4f91-6fe8292e11a0/Default-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "Dating",
+    "description": "An LGBTQ+ dating and social app for meeting people, chatting, sharing content, and building connections within the community."
+  },
+  "verdict": {
+    "overall_risk": "dangerous",
+    "score": 38,
+    "grade": "F",
+    "one_liner": "An LGBTQ+ dating app that collects and shares an extraordinary amount of personal, sensitive, and location data with dozens of third-party advertisers, moderators, and social media platforms.",
+    "summary": "Taimi is an LGBTQ+ dating and social networking app. While it provides a space for community connection, its privacy practices are deeply concerning. The app collects highly sensitive data including sexual orientation, gender identity, photos, videos, messages, precise location, and even passport or driver’s license information for age verification. This data is shared with a large ecosystem of third parties including Amazon Web Services, Zendesk, Facebook Audience Network, Snapchat, Moloco, and numerous analytics and advertising SDKs. Your photos and videos are manually reviewed by human moderators. Messages are stored on company servers. Location data is shared with ad networks for targeted advertising. The privacy policy is 85,000+ characters and extremely detailed about data collection, which only underscores how much data is being gathered.",
+    "recommendation": "avoid",
+    "recommendation_reason": "The combination of highly sensitive LGBTQ+ identity data, extensive third-party sharing with ad networks and social media platforms, manual human review of private content, and server-side storage of messages makes this a high-risk app for user privacy."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_sexual_data_shared_with_ad_networks",
+        "title": "Sexual orientation data shared with ad networks",
+        "plain_english": "Taimi collects and shares information about your sexual orientation and preferences with third-party advertising partners like Facebook and Snapchat to show you targeted ads.",
+        "severity": "high"
+      },
+      {
+        "id": "red_human_moderation_of_photos_videos",
+        "title": "Humans review your photos and videos",
+        "plain_english": "Your uploaded photos and videos are reviewed by both computer systems and real people at Taimi and third-party moderation companies to check if they break the rules.",
+        "severity": "high"
+      },
+      {
+        "id": "red_messages_stored_on_servers",
+        "title": "Your private messages are stored on company servers",
+        "plain_english": "When you send messages, photos, or videos to other users through the app, Taimi stores the content of those messages on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_extensive_third_party_sharing",
+        "title": "Data shared with dozens of companies",
+        "plain_english": "Your data is shared with at least 15 different companies including Facebook, Snapchat, Google, AWS, and multiple advertising and analytics firms.",
+        "severity": "high"
+      },
+      {
+        "id": "red_id_documents_required",
+        "title": "You may need to upload your passport or license",
+        "plain_english": "To verify your age or identity, Taimi may ask you to upload photos of your driver’s license or passport, which they store and process.",
+        "severity": "high"
+      }
+    ],
+    "green": [
+      {
+        "id": "good_explicit_consent_for_sensitive_data",
+        "title": "Asks for explicit consent for sensitive data",
+        "plain_english": "Before collecting sensitive information like sexual orientation, the app asks for your clear, explicit permission.",
+        "severity": "positive"
+      },
+      {
+        "id": "good_age_restriction",
+        "title": "Strictly 18 and older",
+        "plain_english": "The app does not allow anyone under 18 to use it, and will delete accounts if they discover an underage user.",
+        "severity": "positive"
+      },
+      {
+        "id": "good_data_deletion_available",
+        "title": "You can request full account deletion",
+        "plain_english": "You can delete your account, and most of your data will be removed within 7 days.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos and videos to your profile and messages. These are stored on Taimi's servers and reviewed by both computer systems and human moderators.",
+      "detail": "Users upload photos and videos to profiles, posts, and messages. Taimi explicitly warns that photos may reveal sensitive information and that users should inspect them before uploading. Uploaded visual content is stored on AWS servers and manually reviewed by human moderators (in addition to automated systems) for content moderation and verification purposes.",
+      "policy_excerpt": "We use a combination of automated tools and human moderators to monitor and review accounts (including name and any other information uploaded onto user profiles).",
+      "concerns": [
+        "Photos and videos stored on external servers (AWS)",
+        "Manual human review of uploaded visual content",
+        "Content used for identity/age verification (passport/driver's license photos)"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your location to show how far away other users are. If you don't allow location access, some features won't work. Your location data is also shared with advertisers.",
+      "detail": "Taimi collects precise geolocation data including Wi-Fi access points and GPS location. This is used to calculate distance between users ('Distance Information'), which is displayed in profiles and search results. The app explicitly states that if location access is not granted, certain features will not function properly. Location data is shared with third-party ad networks (Facebook Audience Network SDK, Snapchat SCAppAdsKit) for personalized/targeted advertising.",
+      "policy_excerpt": "Taimi also collects your location to determine your distance from other users... Note that if you choose not to allow Taimi to access your location certain features of the Taimi app will not function properly.",
+      "concerns": [
+        "Precise GPS location collected and shared",
+        "Location shared with ad networks for targeted ads",
+        "Distance information displayed publicly in profiles",
+        "Other users could potentially infer exact location"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you sign in with Facebook, Snapchat, or Apple, the app can access your friends list and contacts from those services.",
+      "detail": "Users can register or log in using Facebook, Snapchat, or Apple profiles. When doing so, Taimi may access: friend lists, current location, friends in common with other users, and other profile information from the connected social media account. The privacy policy warns that any data in your external social media profile may be visible to other Taimi users.",
+      "policy_excerpt": "If you registered your Taimi profile using Facebook, Snapchat or Apple profile, your external profile may be visible for other Taimi users... you authorize such social media to access some of your data.",
+      "concerns": [
+        "Social login shares friend lists and contacts",
+        "External social media profile data visible to other users",
+        "Other users can upload your contact information about you"
+      ],
+      "score_impact": 13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos, videos, and documents to your profile and messages. These are stored on Amazon's cloud servers.",
+      "detail": "Users upload photos, images, videos, publications, texts, and other content to the app. All uploaded content is stored on Amazon Web Services (AWS) servers. The privacy policy explicitly states that copies of data may still be viewable if previously shared with others or copied by other users, and Taimi cannot control this.",
+      "policy_excerpt": "When your account is deleted (as well as your data) from the Services, copies of your data may still be viewable, if your data has been previously shared with others, or copied or stored by other users or other third parties.",
+      "concerns": [
+        "Uploaded content stored on external AWS servers",
+        "Shared content may persist even after account deletion",
+        "Other users can screenshot or save your content without Taimi's knowledge"
+      ],
+      "score_impact": 6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with at least 15 different companies including Amazon, Facebook, Snapchat, Google, and multiple advertising firms. Some of them get your sexual orientation and location data.",
+      "detail": "Taimi shares data with an extensive list of third parties including: Amazon Web Services (all personal data storage), Zendesk (customer support data), Nyckel/Castle Global (photo/video moderation), Plivo/Prelude (SMS with phone numbers), SplitMetrics (device analytics), Moloco (mobile advertising IDs), Anonym (hashed emails/phone numbers for ad measurement), plus SDKs from Google (Firebase Analytics, Crashlytics, Performance Monitoring), Facebook Audience Network, Adjust, Agora (video calls), Spotify, Snapchat, and Bugsnag. Location and advertising IDs are specifically shared with Facebook and Snapchat ad networks.",
+      "policy_excerpt": "When processing your data, we may use the following data processors or share information with following recipients...",
+      "concerns": [
+        "Extensive third-party ecosystem (15+ companies)",
+        "Sensitive data shared with advertising networks",
+        "Location data shared with Facebook and Snapchat",
+        "Photo/video content shared with moderation vendors",
+        "Phone numbers shared with SMS providers",
+        "Data shared with law enforcement when required"
+      ],
+      "score_impact": 30
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your real name, email, phone number, date of birth, gender identity, and photos. For verification, you may need to upload your passport or driver's license.",
+      "detail": "Account creation requires name/nickname, date of birth, email, phone number, gender identity, and photos. Users may also provide occupation, zodiac sign, body shapes, and links to other social media accounts (Instagram, Snapchat, Spotify, Facebook, TikTok, Twitch, Discord, PlayStation, Xbox, Pinterest, Tumblr). For age/identity verification, Taimi may request photos of driver’s license or passport. The profile is public to other Taimi users.",
+      "policy_excerpt": "To verify your Taimi profile/your identity/age; to prevent, detect and fight fraud or other illegal or unauthorized activities: your photos; driver's license, passport data; phone number, email address",
+      "concerns": [
+        "Government ID documents may be required for verification",
+        "Extensive identity data collected including gender identity",
+        "Profile public to other users",
+        "Social media account links collected and displayed"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Taimi tracks everything you do in the app and shares it with advertisers to show you personalized ads. They use your location, interests, gender, age, and device information for ad targeting.",
+      "detail": "Taimi uses extensive behavioral tracking via cookies, SDKs, and device identifiers. They collect: location, purchase history, interests, gender, age, app activity, device ID, and OS ID. This data is shared with ad/marketing partners including Facebook Audience Network and Snapchat SCAppAdsKit for personalized/targeted advertising. Multiple analytics SDKs (Firebase Analytics, Adjust, SplitMetrics) track app usage, in-app purchases, and user behavior across the app.",
+      "policy_excerpt": "We may share your personal information with a third party to help serve you with personalized content or ads that may be more relevant to your interests... Taimi may share your personal information (Advertising identifier; localization data; IP Address... user ID; channel mode; SDK version; network type; App ID, email, location data) with our ad/marketing partners.",
+      "concerns": [
+        "Behavioral advertising based on sensitive data",
+        "Cross-context tracking via SDKs",
+        "Advertising ID and device fingerprinting",
+        "Location-based ad targeting"
+      ],
+      "score_impact": 25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is strictly for adults 18 and older. If they find an underage user, they delete the account and data.",
+      "detail": "Taimi restricts use to persons 18 years or older (or age of legal majority). They do not knowingly collect personal information from anyone under 18. If they become aware of an underage user, they will terminate the registration and delete all relevant data in accordance with COPPA.",
+      "policy_excerpt": "We restrict persons who are under the age of 18 (or the age of legal majority in their place of residence) from using the Services and we do not knowingly collect personal information from anyone under the age of 18.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Taimi logs your IP address, what websites you visited before and after using the app, and details about your internet connection.",
+      "detail": "Taimi collects IP addresses, user agent data, cookie identifiers, network type, mobile carrier, internet connection type, and referrer URLs (websites visited before and after). This network data is used for security, fraud prevention, app functionality, and advertising.",
+      "policy_excerpt": "IP address; cookies identifiers... We also get information about your network and device (e.g., IP address, proxy server, operating system, web browser and add-ons, device identifier and features, cookie IDs and/or ISP, or your mobile carrier).",
+      "concerns": [
+        "IP address continuously logged",
+        "Referrer URLs tracked",
+        "Network data used for advertising"
+      ],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Taimi collects extensive information about your device including model, operating system, screen size, battery level, memory, and whether you have headphones connected. This is shared with multiple analytics and advertising companies.",
+      "detail": "Taimi collects comprehensive device data including: device type, model, manufacturer, OS type/version, screen size/resolution, mobile carrier, network status, battery state/level, total/free disk capacity, memory volume, font size, GPS presence, camera presence, airplane mode, low power mode, Apple Watch connection, pin/fingerprint settings, headphone connection, available processors, and more. This is collected via multiple SDKs (Firebase, Bugsnag, Adjust, Facebook Audience Network) and used for analytics, crash reporting, and advertising.",
+      "policy_excerpt": "type and preference of your device's system; your device type; OS type; battery state; battery level; total disk capacity; free disk storage capacity; airplane mode; available processors; camera presence; display density; GPS presence; tablet information; device memory size",
+      "concerns": [
+        "Extensive device fingerprinting across many SDKs",
+        "Hardware and system settings collected",
+        "Device identifiers shared with ad networks"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric information as a core feature.",
+      "detail": "Taimi does not systematically collect health or biometric data. The app mentions collecting body shapes data as optional profile information, but this is not health data in the medical sense. No heart rate, health records, or biometric identifiers are collected.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Payments are handled by third-party processors like Apple, Google Play, and Solidgate. Taimi does not store your full credit card number.",
+      "detail": "Taimi uses third-party payment processors (Google Play, Apple, Solidgate) and does not directly process payment card information. However, processors may provide certain information to Taimi (name, address, partial payment card number, email). Full credit card numbers are not collected or stored by Taimi.",
+      "policy_excerpt": "Taimi does not process payment card information directly; however, our third-party payment processors may provide certain information to us (e.g., your name, address, partial payment card number, and e-mail address). We do not collect or store full credit card number information.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account, and most data is removed within 7 days. However, some information like purchase records, support tickets, and banned account identifiers are kept for up to 5 years.",
+      "detail": "Account deletion triggers data erasure within 7 calendar days, except: (a) in-app purchases retained for 5 years, (b) support messages/tickets retained for 5 years, (c) banned account identifiers (hashed email, phone, IP, profile IDs, device ID) retained for 5 years for fraud prevention. Backup copies may persist for up to 30 days. Data shared with others or copied by other users remains visible and Taimi cannot control this.",
+      "policy_excerpt": "All your data is to be fully erased (or anonymized) within 7 calendar days following deletion of your Taimi profile, except... in-app features and subscription purchases which are being retained during the term of your subscription and 5 years from the deletion",
+      "concerns": [
+        "Some data retained for 5 years after deletion",
+        "Banned account identifiers permanently retained",
+        "Shared content may persist beyond deletion",
+        "Backup copies kept for 30 days"
+      ],
+      "score_impact": 6.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Taimi says they will email you or notify you in the app before making big changes to the privacy policy.",
+      "detail": "Taimi states they will notify users by email or via the app before substantial amendments to the Privacy Policy become effective. Users can also check the policy page regularly for updates. This is a reasonable notification mechanism.",
+      "policy_excerpt": "If we make any changes hereto that, in our sole discretion, are substantial, we will notify you by email (to the address associated with your profile) or via the App, post a notice within Taimi Services or make a notification appear in your profile when you next log in to Taimi before amendments become effective.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "dangerous",
+        "max": 30,
+        "rate": 1.0,
+        "deduction": 30
+      },
+      {
+        "category": "behavioural_ad_tracking",
+        "risk": "dangerous",
+        "max": 25,
+        "rate": 1.0,
+        "deduction": 25
+      },
+      {
+        "category": "camera_microphone",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "location_gps",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "contacts_phonebook",
+        "risk": "risky",
+        "max": 20,
+        "rate": 0.65,
+        "deduction": 13
+      },
+      {
+        "category": "account_identity",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "device_fingerprinting",
+        "risk": "risky",
+        "max": 15,
+        "rate": 0.65,
+        "deduction": 9.75
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "risky",
+        "max": 5,
+        "rate": 0.65,
+        "deduction": 3.25
+      },
+      {
+        "category": "storage_file_access",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "risky",
+        "max": 10,
+        "rate": 0.65,
+        "deduction": 6.5
+      }
+    ],
+    "total_deductions": 126.25,
+    "final_score": 38,
+    "grade": "F"
+  }
+}

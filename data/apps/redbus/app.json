@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.redbus.in/info/privacypolicy",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "redbus",
+    "name": "redBus: Bus, Train Booking App",
+    "developer": "Pilani Soft Labs Pvt. Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/redbus-bus-train-booking-app/id733712604",
+    "app_store_id": "733712604",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/9a/67/6e9a67f3-c612-e45f-8598-e1db95dd2057/AppIconiOS26-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "Business",
+    "description": "Online bus, train, ferry, shuttle, and hotel booking app with live bus tracking, seat selection, and multiple payment options. Operates in India, Southeast Asia, and Latin America."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 49,
+    "grade": "D",
+    "one_liner": "A popular travel booking app that collects extensive personal and financial data, shares it widely across the MakeMyTrip group and with business partners, and explicitly reserves the right to commercially sell your aggregated information.",
+    "summary": "redBus is a widely used bus and train ticket booking app under the MakeMyTrip group. While functional and feature-rich, its privacy practices are concerning. The app collects extensive personal information including banking details, payment history, and your full travel history. It shares this data broadly with bus operators, hotels, group companies (MakeMyTrip, Goibibo), business partners offering co-branded financial products, and third-party vendors. Most alarmingly, the policy explicitly states that aggregated personal information is the company's property and can be sold commercially to third parties without compensation to you. The app also tracks your location for real-time bus tracking and boarding point detection, accesses your contacts for social sharing features, and collects unique device identifiers that persist across sessions.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "redBus is a convenient and popular travel booking platform, but its privacy policy reveals extensive data collection and broad sharing practices. The explicit reservation of rights to sell aggregated personal information commercially, combined with banking details storage, group company sharing, and partner data access, makes this a risky choice for privacy-conscious travelers. Consider using the website with guest checkout if possible, or explore alternatives with stronger privacy protections."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_aggregated_data_sale",
+        "title": "Explicitly reserves the right to sell your aggregated data",
+        "plain_english": "The privacy policy states that any personal information collected and turned into aggregate or anonymous form is the company's property. They can sell this aggregated data commercially to third parties without paying you or asking for further permission.",
+        "severity": "high"
+      },
+      {
+        "id": "red_broad_group_sharing",
+        "title": "Shares your data across the entire MakeMyTrip group",
+        "plain_english": "redBus is part of the MakeMyTrip group. Your personal information is shared with affiliate and associate entities including MakeMyTrip and Goibibo under what the policy calls 'controlled and secure circumstances.'",
+        "severity": "high"
+      },
+      {
+        "id": "red_financial_data_stored",
+        "title": "Stores your banking and payment details",
+        "plain_english": "redBus collects and stores your credit and debit card numbers in encrypted form, banking details, wallet information, and your complete payment history. It also verifies credit information on a selective basis for fraud detection and credit offerings.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_id_persistent",
+        "title": "Tracks your device with a unique identifier",
+        "plain_english": "redBus collects your unique device identifier, Android ID, hardware model, operating system version, and mobile network. These are used to uniquely identify you across sessions and optimize your booking experience.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_ad_tracking",
+        "title": "Allows third-party advertisers to track you",
+        "plain_english": "Third-party advertising companies place cookies to track how effective their ads are. They collect anonymous information about your visits and use it to show you ads on other websites that might interest you.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_contacts_accessed",
+        "title": "Accesses your contacts for social features",
+        "plain_english": "If you allow it, redBus reads your contacts to let you share tickets or locations with friends, auto-fill email addresses, and select numbers for mobile recharges. Your contacts are stored on their servers.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_business_transfer",
+        "title": "Your data goes with the company if it is sold",
+        "plain_english": "If redBus or its parent company is acquired, sold, or restructured, your customer information including all personal information will be transferred to the new owner.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_mandatory_age_mismatch",
+        "title": "App Store rating conflicts with transaction age requirement",
+        "plain_english": "The app is rated 4+ on the App Store, but redBus states you must be at least 18 years old to use its services. This means children can download the app even though they are not supposed to use it.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_encryption",
+        "title": "Encrypts payments with industry-standard security",
+        "plain_english": "All payment information is transmitted using TLS encryption, and the app uses secure servers when you access or change your account information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_self_service_editing",
+        "title": "You can access and edit some of your data",
+        "plain_english": "You can log into your redBus account to view, correct, or delete some of your personal information directly. Certain mandatory fields cannot be deleted.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_unsubscribe_available",
+        "title": "You can opt out of marketing emails",
+        "plain_english": "If you do not want to receive promotional emails about fare sales and special offers, you can click the unsubscribe link in any email or follow the instructions provided.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_service_provider_limits",
+        "title": "Service providers are restricted from reusing your data",
+        "plain_english": "When redBus shares your information with bus operators, hotels, and other suppliers to fulfill your booking, it does not authorize them to use your information for any other purpose.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "redBus uses your camera so you can take pictures of boarding points or buses before your journey and upload them as part of multimedia reviews. The microphone is not mentioned in the privacy policy.",
+      "detail": "Camera permission used to capture boarding point or bus images before journey for multimedia reviews. No mention of microphone access in the policy.",
+      "policy_excerpt": "This permission is used to capture pictures of the boarding point or bus before the journey. This images can then uploaded as part of multimedia reviews.",
+      "concerns": ["Photos uploaded as reviews visible to other users"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "redBus detects your location when you open the app to auto-fill your nearest city. It also uses your location to help track your bus relative to where you are and to find boarding points near you. Even if you do not grant location permission, it can estimate your approximate location from your internet connection.",
+      "detail": "Location used for auto-detecting nearest city, bus tracking relative to user location, finding boarding points near user, and providing real-time travel updates. IP address also used for approximate geographic location inference.",
+      "policy_excerpt": "When you launch redBus app to make a travel booking, we auto-detect your location so that your nearest city is auto-filled. We also require this permission to be able to help you track your bus with respect to your location.",
+      "concerns": ["Location used for real-time bus tracking", "Auto-detection of nearest city", "IP-based location inference even without GPS"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you allow it, redBus reads your phone contacts to let you share tickets or locations with friends, auto-fill email addresses for a faster booking experience, and select numbers for mobile recharges. The app also maps your email IDs to your account for offers and cash-backs.",
+      "detail": "Contacts accessed for social sharing features (share tickets/location with friends), auto-fill email IDs, mobile recharge number selection, and mapping email IDs to users for offers. iOS and Android permissions explicitly request contacts access.",
+      "policy_excerpt": "If you allow us to access your contacts, it enables us to provide a lot of social features to you such as sharing tickets or location with your friends. This permission also allows you to select numbers from your contacts for mobile recharges done on the app.",
+      "concerns": ["Full contacts read access", "Contacts stored on servers", "Email IDs mapped to user for offers"],
+      "score_impact": -13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "redBus can access your photos and media files so you can upload multimedia reviews. You can also store files like images and documents on their servers.",
+      "detail": "Photo/Media/Files access for saving and uploading multimedia reviews. Users can also store data like image files and documents on redBus servers.",
+      "policy_excerpt": "The libraries in the app use these permissions to allow users to to save and upload multimedia reviews. Data either created by you or by a third party and which you wish to store on our servers such as image files, documents etc.",
+      "concerns": ["Photo uploads for reviews", "File storage on company servers"],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus shares your information with bus operators, hotels, and other suppliers to fulfill your booking. It also shares with group companies like MakeMyTrip and Goibibo, business partners offering credit cards and insurance, and third-party vendors for payment processing and data hosting. Most worryingly, it reserves the right to sell aggregated personal information commercially.",
+      "detail": "Data shared with: (1) service providers/suppliers (hotels, bus operators, cab rental) for booking fulfillment, (2) companies in same group (MakeMyTrip, Goibibo) for personalization and service efficiency, (3) business partners offering co-branded credit cards, travel insurance, banking services, (4) third-party vendors for payment processing, data hosting, data processing, (5) advertisers/affiliates receiving anonymous statistical information, (6) market research third parties, (7) acquirors in business transfers. Explicit statement: aggregated personal information is company property and can be sold commercially.",
+      "policy_excerpt": "Any Personal Information which we collect and which we may use in an aggregated format is our property. We may use it, in our sole discretion and without any compensation to you, for any legitimate purpose including without limitation the commercial sale thereof to third parties.",
+      "concerns": ["Explicit right to sell aggregated data commercially", "Group company sharing with MakeMyTrip/Goibibo", "Business partner sharing for financial products", "Third-party vendor access for payment/data hosting", "Anonymous stats shared with advertisers"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus collects extensive identity information when you register including your name, gender, age, email, phone number, postal address, and banking details. It also collects your usernames, passwords, and security information. You can log in via Facebook or Google, and the app reads your account details from your device to auto-fill information.",
+      "detail": "Identity data: name, gender, age, email, postal addresses, phone/fax numbers, banking details (credit/debit card in encrypted form), income/lifestyle info, billing info, payment history. Also: usernames, passwords, security-related info. Social login via Facebook and Google+. Account info read from device for auto-fill.",
+      "policy_excerpt": "information about your personal identity such as name, gender, age etc., your contact details such as your email address, postal addresses, telephone (mobile or otherwise) and/or fax numbers. The information may also include information such as your banking details (including credit/debit card) and any other information relating to your income and/or lifestyle; billing information payment history etc.",
+      "concerns": ["Extensive personal and financial identity data collected", "Social login integration", "Account credentials stored", "Income and lifestyle information collected"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus uses cookies to personalize your experience and show targeted advertisements. Third-party advertising companies also place cookies to track the effectiveness of their ads and show you ads on other websites. Your session data including browsing patterns and activities are logged for analysis.",
+      "detail": "Cookies used for personalization and ads. Third-party advertising cookies for tracking ad effectiveness and providing targeted ads on other websites. Session data logged (IP, OS, browser, activities). Transactional history and buying behavior tracked. Aggregate cookie and tracking information shared with third parties. Marketing emails, newsletters, and exclusive promotions sent. Anonymous statistics sold to advertisers, affiliates, and business partners.",
+      "policy_excerpt": "redBus uses cookies to personalize your experience on the Website and the advertisements that maybe displayed... The third party advertising companies or advertisement providers may also employ technology that is used to measure the effectiveness of the advertisements.",
+      "concerns": ["Third-party advertising tracking cookies", "Session activity logged", "Buying behavior tracked", "Anonymous stats sold to partners", "Marketing emails sent periodically"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus says you must be 18 or older to use its services, but the app is rated 4+ on the App Store, meaning young children can download it. There are no special protections for minors who may use the app.",
+      "detail": "Policy states 18+ age requirement to transact and consent to processing. However, App Store rating is 4+. No specific children's data protections, COPPA compliance, or age-gating mechanisms described beyond the general age statement.",
+      "policy_excerpt": "You must atleast 18 years of age to transact directly with redBus and also to consent to the processing of your personal data.",
+      "concerns": ["App rated 4+ but service requires 18+", "No child-specific safeguards", "Same data collection applies to all users"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Every time you use the app, redBus logs your internet connection address, browser type, operating system, and what you do on the app. This helps them analyze your choices and browsing patterns, but it also means they can figure out your internet provider and approximate location.",
+      "detail": "Session data automatically logged: IP address, operating system, browser type, activities conducted. Used to analyze choices, browsing patterns, frequency/duration of visits, diagnose server problems, and administer systems. Can determine ISP and approximate geographic location.",
+      "policy_excerpt": "Session data may consist of various aspects like the IP address, operating system and type of browser software being used and the activities conducted by the User while on the Website. It also helps us analyze User's choices, browsing pattern including the frequency of visits and duration for which a User is logged on.",
+      "concerns": ["IP address and activity logged continuously", "Browsing patterns analyzed", "ISP and approximate location determinable"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus collects detailed information about your device including its unique identifier, hardware model, operating system name and version, mobile network, and preferred language. On Android, it specifically tracks your Android ID to uniquely identify you across sessions.",
+      "detail": "Device info collected: OS name, OS version, mobile network, hardware model, unique device identifier, preferred language, Android ID. Used to optimize booking experience, uniquely identify users, and pre-populate fields. Device ID survives reinstall on same device.",
+      "policy_excerpt": "We need your device permission to get information about your device, like OS (operating system) name, OS version, mobile network, hardware model, unique device identifier, preferred language, etc. This permission is used to detect your Android ID through which we can uniquely identify users.",
+      "concerns": ["Unique device identifier collected", "Android ID used for cross-session tracking", "Hardware and network details logged", "Device fingerprinting for user identification"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus does not collect or store any health or biometric information.",
+      "detail": "No mention of health data, biometric data, or fitness tracking in the privacy policy. App is a travel booking platform with no health-related features.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus collects and stores your credit and debit card numbers in encrypted form, cardholder name, expiration date, banking details, wallet details, and your complete payment history. It may also verify your credit information selectively for fraud detection and credit offerings.",
+      "detail": "Financial data: cardholder name, credit/debit card number (encrypted), expiration date, banking details, wallet details, payment history, billing info. Used for booking completion, fraud detection, credit offerings. Stored on servers with TLS encryption.",
+      "policy_excerpt": "payment details which include cardholder name, credit/debit card number (in encrypted form) with expiration date, banking details, wallet details etc. as shared and allowed to be stored by you... For various purposes such as fraud detection, offering bookings on credit etc., we at times may verify information of customers on selective basis, including their credit information.",
+      "concerns": ["Card numbers stored on servers (encrypted)", "Payment history tracked", "Credit information verified selectively", "Billing info retained"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can access and edit some of your information from your user account. To delete your account, you must email redBus and verify your identity. They keep your identity proof for 21 days after deletion, and your transaction history may be kept longer if required by law. You also cannot create a new account with the same credentials for 12 months after deletion.",
+      "detail": "Self-service access and correction available via user account. Account deletion requires email to privacy@redbus.com with identity verification. Identity proof stored for 21 days post-deletion. Transactional info retained per local laws. Same credentials blocked for 12 months after deletion. No data portability or GDPR-style comprehensive rights mentioned.",
+      "policy_excerpt": "In case you want to delete your account or your personal information, you may write to us at privacy@redbus.com, requesting for deletion of your account. Please note that the DPO may require you to verify your identity before proceeding with your request of deleting your account. Any identity proof that you may provide shall be stored for a period of 21 days from the date of deletion of the account.",
+      "concerns": ["Deletion requires manual email and identity verification", "Identity proof kept for 21 days", "Transactional info retained per laws", "12-month credential re-use block", "No self-service deletion button"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "redBus can change its privacy policy whenever it wants and says it will notify users 'as may be necessary.' This is vague and does not guarantee you will be actively informed of important changes.",
+      "detail": "Policy states right to revise privacy policy from time to time. Users will be notified 'as may be necessary.' No explicit commitment to active notification or requiring re-consent for material changes.",
+      "policy_excerpt": "We reserve the rights to revise the Privacy Policy from time to time to suit various legal, business and customer requirement. We will duly notify the users as may be necessary.",
+      "concerns": ["Vague notification commitment", "No active re-consent mechanism", "Changes can happen without clear notice"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 104.25,
+    "final_score": 49,
+    "grade": "D"
+  }
+}

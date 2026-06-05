@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://legal.twitch.com/legal/privacy-notice",
+    "terms_url": "https://www.twitch.tv/p/legal/terms-of-service/",
+    "policy_last_updated": "2026-01-15",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "twitch-live-streaming",
+    "name": "Twitch: Live Streaming",
+    "developer": "Twitch Interactive, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/twitch-live-streaming/id460177396",
+    "app_store_id": "460177396",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c9/0b/86/c90b86d4-a447-0cfc-a1f9-aa0bc02d7b68/TwitchAppIcon-0-0-1x_U007epad-0-1-0-0-0-0-85-220.png/512x512bb.png",
+    "category": "Photo & Video",
+    "sub_category": "Social Networking",
+    "description": "A live-streaming platform for games, music, sports, esports, podcasts, and IRL content with chat, subscriptions, and broadcasting."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 62,
+    "grade": "C",
+    "one_liner": "The world’s biggest live-streaming platform collects extensive personal data, combines it with Amazon customer profiles, and shares it with a wide network of advertising and analytics partners.",
+    "summary": "Twitch is a massively popular live-streaming and social platform owned by Amazon. It collects a wide range of personal information including your name, email, phone number, address, date of birth, payment details, voice, image, chat messages, and everything you broadcast or upload. It also automatically logs your IP address, device identifiers, browsing behaviour, and mobile ad identifiers. This data is shared with Amazon and its subsidiaries (where it may be combined with your Amazon shopping profile), third-party ad networks, analytics providers, and Extension developers. Twitch tracks you across the web to serve targeted ads both on and off the platform, does not honor Do-Not-Track signals, and shares your email address or device ID with advertising partners for cross-service matching. On the positive side, Twitch provides a Privacy Choices page with opt-outs, offers account deletion, has a Data Protection Officer, honors GDPR/CCPA rights, and explicitly prohibits users under 13. However, the sheer scale of data collection, sharing, and tracking makes this a platform to use with eyes wide open.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Twitch is the dominant live-streaming platform with a strong content ecosystem, but its privacy practices are extensive and aggressive. It collects and shares vast amounts of personal data with Amazon, ad networks, and analytics providers; tracks users across the web for targeted advertising; and does not honor Do-Not-Track signals. If you value privacy, consider using Twitch only when necessary, limit the personal information in your profile, disable personalized ads via the Privacy Choices page, and avoid connecting third-party accounts (Discord, Steam, YouTube)."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_amazon_data_combining",
+        "title": "Data combined with Amazon customer profiles",
+        "plain_english": "Twitch shares everything it knows about you with Amazon — its parent company. Amazon then combines your Twitch data with your Amazon shopping profile and uses it to improve both companies' products, services, and advertising.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_web_ad_tracking",
+        "title": "Tracked across the web for targeted ads",
+        "plain_english": "Twitch works with outside ad companies to show you ads both on Twitch and on other websites and apps you visit. They share your mobile ad ID and sometimes your email address with these companies to match you across services.",
+        "severity": "high"
+      },
+      {
+        "id": "red_advertisers_get_data_directly",
+        "title": "Advertisers collect data directly from your device",
+        "plain_english": "When advertisers show ads inside Twitch, they automatically receive your IP address and use cookies to measure how well their ads work. Twitch says it cannot control what these advertisers do with that data.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_no_dnt_honored",
+        "title": "Do-Not-Track signals are ignored",
+        "plain_english": "If you turn on the Do-Not-Track setting in your browser, Twitch explicitly says it does not recognize or respond to it. They will keep tracking you anyway.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_social_media_data_aggregation",
+        "title": "Pulls data from your social media accounts",
+        "plain_english": "If you link your Twitch account to Discord, Steam, YouTube, or other services, Twitch collects extra information about you from those platforms — including what you watch and how you engage with content — to build a more detailed profile.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_privacy_choices_page",
+        "title": "Dedicated Privacy Choices page with opt-outs",
+        "plain_english": "Twitch provides a specific page where you can manage your privacy settings, including opting out of certain types of advertising and data sharing.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion_available",
+        "title": "Clear account deletion process",
+        "plain_english": "You can close your account and delete your profile information through a dedicated page. Twitch promises to delete data it is not legally required to keep.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_protection_officer",
+        "title": "Has a Data Protection Officer",
+        "plain_english": "Twitch has a dedicated Data Protection Officer who handles privacy questions and data rights requests. You can contact them directly at privacy@twitch.tv.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_gdpr_ccpa_rights",
+        "title": "Honors GDPR and CCPA rights",
+        "plain_english": "You can ask Twitch to show you your data, correct it, delete it, restrict how it's used, or move it to another service. They promise to respond within 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_explicit_age_restriction",
+        "title": "Explicitly prohibits users under 13",
+        "plain_english": "Twitch clearly states that children under 13 are not allowed to use the service at all, and will delete accounts if they discover underage users. This is stronger protection than many platforms.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you stream on Twitch, the app uses your camera and microphone to broadcast video and audio to viewers. Viewers who only watch streams do not need to grant camera or microphone access.",
+      "detail": "Camera and microphone are core features for broadcasters but optional for viewers. Policy mentions collecting 'voice, or image' as part of user-provided information when broadcasting content.",
+      "policy_excerpt": "When you register for Twitch Services... you may provide a variety of information about yourself to us, such as your name, voice, or image, the content you create and upload...",
+      "concerns": ["Voice and image collected when broadcasting", "Public by nature of live-streaming platform"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch collects your IP address whenever you use the app, which reveals your approximate location. This location data is used to show you customized ads and content.",
+      "detail": "IP address is automatically collected and used for customized advertisements, content, and information. No explicit GPS access mentioned, but IP-based location inference is standard practice.",
+      "policy_excerpt": "Examples of such information we automatically collect include Internet Protocol address ('IP Address')... provide customized advertisements, content, and information...",
+      "concerns": ["IP address reveals approximate location", "Used for ad targeting and content customization"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch does not access your phone contacts or address book.",
+      "detail": "No mention of contacts, phonebook, or address book access in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch does not access your phone's photos, files, or general storage beyond the content you choose to upload or broadcast through the app.",
+      "detail": "No mention of broad storage or file system access. Content access is limited to what users explicitly upload or broadcast through the app's interface.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch shares your data with a wide range of outside companies including Amazon (its parent company), ad networks, analytics providers, Extension developers, event exhibitors, and service providers. It may also share data if the company is sold or merged. Your data can be combined with Amazon shopping profiles.",
+      "detail": "Data shared with: Amazon.com, Inc. and subsidiaries (combined with Amazon customer data), service providers (hosting, security, analytics, reports), third-party ad networks and advertisers, analytics providers, Extension/Application developers (with automatic data when you interact), event exhibitors (badge scans), third-party services (Discord, Steam, YouTube, Riot, Xbox), and for business transfers/mergers.",
+      "policy_excerpt": "Twitch shares personal data only as described below and with our parent company, Amazon.com, Inc., and the subsidiaries of Amazon.com, Inc.... Personal information collected by Twitch may be combined with personal information about Amazon customers... We disclose information to service providers... Twitch may share personal information with, and receive personal information from, our affiliates...",
+      "concerns": ["Combined with Amazon customer profiles", "Shared with ad networks and advertisers", "Shared with Extension developers", "Shared with event exhibitors", "Shared with third-party services (Discord, Steam, YouTube)", "Business transfer clause", "No named third parties with specific data categories"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Twitch collects extensive personal information when you sign up and use the app including your name, email, phone number, home address, date of birth, credit card details, username, and everything you chat or broadcast. It also pulls extra data from your linked social media accounts like Discord, Steam, and YouTube.",
+      "detail": "Collected identity data: name, voice, image, content created/uploaded, chats, username, email, postal address, telephone number, date of birth, credit card number, billing info. Also obtains data from third-party sources: advertisers, games/services, social media networks (Discord, Steam, YouTube), and third-party services (Riot, Steam). Combined with Amazon customer data.",
+      "policy_excerpt": "When you register for Twitch Services... you may provide a variety of information about yourself to us, such as your name, voice, or image, the content you create and upload, your chats and communications, Twitch username, email address, postal mailing address, telephone number, date of birth, credit card number, and billing information.",
+      "concerns": ["Extensive identity data collection", "Credit card details collected directly", "Data from linked social media accounts", "Combined with Amazon profiles", "Voice and image collected"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch tracks everything you do on the platform and works with outside advertising companies to show you targeted ads both on Twitch and across the internet. They share your mobile ad ID and sometimes your email address with these companies to match you across different apps and websites. The app also includes Nielsen tracking software for TV ratings research. Twitch does not honor Do-Not-Track browser signals.",
+      "detail": "Extensive behavioural tracking: third-party Web analytics services use cookies to analyze usage; third-party ad networks target and measure ads on and off Twitch; mobile ad identifiers and cookie data shared with third parties for advertising; email address or resettable device identifier shared with specific advertising partners for cross-service matching; Twitch Advertisers serve ads directly to device with IP address and cookies; Nielsen proprietary measurement software included in app; DNT signals explicitly not recognized.",
+      "policy_excerpt": "Twitch may also work with third-party ad networks, advertisers, and advertising analytics providers to target (and measure the performance of) ads to you both on and off the Twitch Services. We may share with these third parties (or they may directly collect) data such as cookie and mobile ad identifiers... We may share information such as your email address or resettable device identifier for a specific advertising partner to 'match' the information that they may have about you... Twitch does not recognize or respond to browser-initiated DNT signals.",
+      "concerns": ["Cross-app/website ad tracking", "Mobile ad identifiers shared with ad networks", "Email/device ID matching with partners", "Nielsens tracking software in app", "DNT signals ignored", "Ads served directly to device by advertisers", "Cookies used for ad personalization and measurement"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch is rated 12+ on the App Store but explicitly bans anyone under 13 from using the service. If they discover an underage account, they will delete it. Parents can request account termination and data deletion through support.",
+      "detail": "Minimum age is 13 (or higher if local law requires). Explicitly prohibits under-13s from using the service. Will delete underage accounts if discovered. Parent/guardian can request termination and deletion via Contact Support. Australia minimum age is 16. Processing based on consent is halted for users below local age of consent.",
+      "policy_excerpt": "IF YOU ARE UNDER 13 YEARS OF AGE, OR THE MINIMUM AGE REQUIRED WHERE YOU LIVE IF IT IS OLDER THAN 13, THEN YOU MAY NOT USE OR ACCESS THE TWITCH SERVICES AT ANY TIME OR IN ANY MANNER... If Twitch learns that personal information of persons under the Minimum Age has been collected on or through the Twitch Services, Twitch will take appropriate steps to delete this information.",
+      "concerns": ["App rated 12+ but service requires 13+", "No proactive age verification mechanism described", "Relies on self-reporting or discovery"],
+      "score_impact": -3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch logs extensive details about how you use the internet including your IP address, what pages you visit before and after Twitch, what device and browser you use, and how you interact with every feature of the app. This data is shared with analytics and advertising companies.",
+      "detail": "Automatically collected: IP Address, unique user ID, device/browser types and identifiers, referring and exit page addresses, software/system type, interaction data. Used for: app auto-updates, remembering info, customized ads/content, marketing campaign monitoring, aggregate usage metrics, promotion tracking. Shared with analytics providers and ad networks.",
+      "policy_excerpt": "Examples of such information we automatically collect include Internet Protocol address ('IP Address'), a unique user ID, device and browser types and identifiers, referring and exit page addresses, software and system type, and information about your interaction with Twitch Services.",
+      "concerns": ["Extensive internet activity logging", "Referring and exit pages tracked", "Interaction data shared with third parties", "IP address logged continuously"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch collects detailed information about your device including a unique user ID, what type of device and browser you use, your software and operating system, and mobile advertising identifiers. It shares these device identifiers with advertising partners to track you across apps and websites.",
+      "detail": "Device data collected: unique user ID, device/browser types and identifiers, software/system type, mobile ad identifiers. Shared with ad networks, advertisers, and analytics providers for targeting and measurement. Email address or resettable device identifier also shared with specific advertising partners for matching.",
+      "policy_excerpt": "Examples of such information we automatically collect include... a unique user ID, device and browser types and identifiers... We may share with these third parties (or they may directly collect) data such as cookie and mobile ad identifiers... We may share information such as your email address or resettable device identifier for a specific advertising partner...",
+      "concerns": ["Unique user ID assigned", "Device and browser identifiers collected", "Mobile ad identifiers shared with advertisers", "Resettable device identifier shared for ad matching", "Used for cross-app tracking"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch does not collect any health or biometric data.",
+      "detail": "No mention of health, fitness, or biometric data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you subscribe to channels, buy Bits, or make other purchases on Twitch, you provide your credit card number and billing information directly to Twitch. This payment data is processed by Twitch's payment service providers.",
+      "detail": "Policy explicitly lists 'credit card number, and billing information' as user-provided information. Payment processing handled by service providers on Twitch's behalf. No mention of Apple handling payments for in-app Twitch transactions.",
+      "policy_excerpt": "When you register for Twitch Services; upload, purchase, view, or download certain content or products from the Twitch Services... you may provide a variety of information about yourself to us, such as... credit card number, and billing information.",
+      "concerns": ["Credit card details collected directly by Twitch", "Billing information stored or processed by Twitch's providers"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can close your account and request deletion through a dedicated page. Twitch also has a Privacy Choices page where you can manage some settings, and a Data Protection Officer you can contact. They promise to respond to data-rights requests within 30 days. However, they may keep some data for legal or tax reasons even after you delete your account.",
+      "detail": "Account deletion via dedicated page. Privacy Choices page available. Data subject rights: access, correction, deletion, restriction, transfer, revoke consent, prevent direct marketing. DPO at privacy@twitch.tv. 30-day response promise. Retains data as required or permitted by law after account closure. Identity verification required for requests.",
+      "policy_excerpt": "If you would like to close your account and delete your profile information, please go to the Delete Account page... We will respond to your inquiry within 30 days of its receipt... If you close your account, Twitch may retain certain information about you for the activities described in this Privacy Notice, or as permitted or required by applicable law.",
+      "concerns": ["Some data retained after account closure for legal purposes", "No specific retention timeline given", "Identity verification required for requests"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Twitch can change its privacy policy at any time. Your continued use of the app counts as accepting the new terms. However, they promise not to make the policy less protective for data collected in the past without getting your consent first.",
+      "detail": "Policy can be changed/modified/added/removed at any time. Continued use = acceptance. Important positive: promises not to materially make policies less protective for personal information collected in the past under a prior version without consent of affected individuals.",
+      "policy_excerpt": "Twitch reserves the right to change, modify, add, or remove portions of this Privacy Notice at any time... Your continued use of the Twitch Services after the posting of changes constitutes your binding acceptance of such changes. We will not materially change our policies and practices to make them less protective of personal information collected in the past under a prior version of the Privacy Notice without the consent of affected individuals.",
+      "concerns": ["Changes apply via continued use", "No guaranteed active notification for all changes", "Users must check policy periodically themselves"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 78.75,
+    "final_score": 62,
+    "grade": "C"
+  }
+}

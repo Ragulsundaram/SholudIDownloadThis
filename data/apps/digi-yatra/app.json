@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://digiyatrafoundation.com/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2024-10-27",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "digi-yatra",
+    "name": "Digi Yatra",
+    "developer": "Digiyatra Foundation",
+    "app_store_url": "https://apps.apple.com/in/app/digi-yatra/id6479873321",
+    "app_store_id": "6479873321",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a7/a3/4c/a7a34c6f-5c3a-de77-3b2d-3c42185f55d7/AppIcon-0-0-1x_U007ephone-0-1-85-220.jpeg/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": "India's digital travel platform for paperless, biometric-based airport entry using Self-Sovereign Identity principles."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 86,
+    "grade": "A",
+    "one_liner": "A government-backed airport entry app that uses advanced privacy tech to keep your Aadhaar and face data only on your phone, sharing it with airports only when you explicitly consent before each trip.",
+    "summary": "Digi Yatra is a not-for-profit initiative under India's Ministry of Civil Aviation that enables paperless airport entry using facial biometric validation. Unlike most apps, it uses Self-Sovereign Identity (SSI) architecture: your personal data is stored only in an encrypted digital wallet on your phone, not in any central database. Your Aadhaar details and selfie are used once to create a digital credential, after which the raw Aadhaar image is immediately purged. Before every flight, you must explicitly consent to share your credential with the origin airport. The app cannot track whether a specific person has used Digi Yatra or traveled through any airport.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Digi Yatra employs genuinely privacy-preserving architecture: data lives only on your device, no central user database exists, and every airport share requires your explicit consent. While providing Aadhaar and facial biometric data is inherently sensitive, the handling is among the best in class for government apps—local storage, immediate purge of raw Aadhaar images, and full user control over data sharing."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_aadhaar_required",
+        "title": "Requires your Aadhaar ID to create credentials",
+        "plain_english": "You must provide your Aadhaar number and allow a selfie to be taken so the app can create a digital identity credential for airport entry.",
+        "severity": "high"
+      },
+      {
+        "id": "red_face_shared_with_airport",
+        "title": "Your face data is shared with airports before every flight",
+        "plain_english": "Each time you travel, you must consent to share your facial biometric credential with the origin airport so they can verify your identity at security gates.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_support_access",
+        "title": "Tech support partners can access some system data",
+        "plain_english": "Third-party partners who help with tech support and security may see anonymized IP addresses, backend logs, and device analytics to fix issues.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_central_database",
+        "title": "No central database stores your personal info",
+        "plain_english": "Your Aadhaar details, selfie, and travel data are stored only in an encrypted wallet on your phone. The company cannot see if a specific person has ever used the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_explicit_consent_every_trip",
+        "title": "You must explicitly consent before every trip",
+        "plain_english": "The app cannot share your credentials with an airport unless you tap to approve it before each individual flight.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_aadhaar_purged_immediately",
+        "title": "Your raw Aadhaar image is deleted immediately",
+        "plain_english": "After your digital credential is created, the original Aadhaar image is purged right away. Only a masked version remains in your phone's wallet.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_delete_uninstall_erases_all",
+        "title": "Deleting the app erases everything permanently",
+        "plain_english": "Since all your data lives only on your phone, uninstalling the app or deleting your credential permanently removes all your personal information with no copies left on company servers.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_no_tracking",
+        "title": "No ads and no behavioral tracking",
+        "plain_english": "The app does not show advertisements, use tracking cookies, or build a behavioral profile for marketing purposes.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The camera is used once during onboarding to capture a selfie that matches your Aadhaar photo. The selfie becomes part of your digital credential stored only on your phone.",
+      "detail": "During the onboarding process, the app uses your phone's camera to capture a selfie. This facial image is matched against your Aadhaar photo to verify that you are the person creating the credential. The selfie then forms part of your Verifiable Credential (VC) and is stored locally in the encrypted Digi Yatra wallet on your device. It is never uploaded to a central server. The VC (including the selfie) is shared with the origin airport only with your explicit consent before each travel.",
+      "policy_excerpt": "Facial Image (Selfie captured using User's phone camera) - To match with Aadhaar image and authenticate that individual creating VC is same as the person initiating the transaction.",
+      "concerns": [
+        "Selfie is stored locally but shared with airport as part of VC",
+        "Facial biometric data is sensitive even with local storage",
+        "Airport verifier systems receive the facial image for validation"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect or use your location or GPS data.",
+      "detail": "The privacy policy makes no mention of location or GPS data collection. The app's function is based on airport selection and boarding pass upload, not real-time location tracking.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access, read, or upload your phone contacts.",
+      "detail": "There is no mention of contacts or phonebook access in the privacy policy. The app does not request or use contact information for any feature.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app stores your digital credentials and boarding pass locally on your phone in an encrypted wallet. It also saves boarding pass images when you upload them.",
+      "detail": "Digi Yatra stores your Verifiable Credential (VC) and boarding pass data locally on your device within the app's encrypted wallet. Boarding pass data (M1 string) is parsed from the uploaded boarding pass image. Users can delete boarding passes and credentials at any time, and uninstalling the app permanently removes all locally stored data.",
+      "policy_excerpt": "Digi Yatra Wallet on individual user's phone... Till user decides to delete the BP or uninstall the app.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your digital credential is shared with the origin airport only when you explicitly consent before each trip. Some anonymized technical data may be shared with tech support partners for troubleshooting.",
+      "detail": "Data sharing is highly controlled: (1) Origin airport receives your VC and boarding pass data only with your explicit consent before every travel, retained up to 24 hours after flight departure; (2) DYF employees and advisers may access data as necessary for service fulfillment; (3) Service providers assist in protecting and securing systems; (4) Tech support partners may access anonymized IP addresses and backend logs (without PII) for issue resolution; (5) Successors/assigns may receive functions in case of transfer. The policy explicitly states that DYF does not store data in a central repository and does not disclose personal information to others without consent.",
+      "policy_excerpt": "DYF does not store any data in a central repository. Information from the DYF App present on the user's device is only shared with explicit consent and not disclose any personal information to others.",
+      "concerns": [
+        "VC and boarding pass shared with origin airport (consented, time-limited)",
+        "Tech support partners may access anonymized logs and IP data",
+        "Successors/assigns clause in case of organizational transfer"
+      ],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide your Aadhaar ID and a selfie to create a digital identity credential. Your name, date of birth, gender, and a masked Aadhaar number are stored locally on your phone—not on company servers.",
+      "detail": "Account creation requires Aadhaar-based eKYC which provides: name, date of birth, gender, face image, and masked Aadhaar number. The raw Aadhaar image is immediately purged after VC creation. Only the minimal extracted data forms part of the VC stored locally. The mobile number is used for OTP login and retained until logout. The app explicitly states it does not create any user profile in the backend and cannot identify if a specific Aadhaar number ever created a profile.",
+      "policy_excerpt": "Aadhaar ID/ Virtual Aadhaar ID minimal eKYC details (Name, DOB, Gender, Face image, Masked Aadhaar)... Aadhaar Image is not retained it is immediately purged after creation of VC... On User's phone - till user deletes the VC using Delete functionality OR Uninstall Digi Yatra Application.",
+      "concerns": [
+        "Government ID (Aadhaar) required for core function",
+        "Biometric facial data linked to government identity",
+        "VC stored locally but shared with airport upon consent"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not use behavioral tracking, advertising cookies, or targeted ads.",
+      "detail": "The privacy policy contains no mention of advertising, behavioral tracking, ad networks, or marketing analytics. The only analytics mentioned are anonymous crash reports and aggregated app store usage data for app performance optimization.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Minors under 18 cannot use the app unless a guardian first creates an adult profile and consents on their behalf.",
+      "detail": "Digi Yatra does not allow creation of VC for minors (under 18 years). A business rule requires at least one adult profile on the device before a minor profile can be created. Age verification is done using the date of birth from Aadhaar eKYC data. DYF states it does not collect, store, process, or transfer personal information of a child without parental or guardian consent.",
+      "policy_excerpt": "Digi Yatra application does not allow creation of VC for Minors (Any individual who is less than 18 years of age) and thus they cannot use Digi yatra application without Guardian /Adult's consent.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your IP address is logged and anonymized to block non-Indian traffic and VPN users. Backend logs record system events without personal details.",
+      "detail": "IP addresses are automatically logged during user interactions with the DYCE platform. They are anonymized and not linked back to user details. IPs are used to set firewall rules allowing only Indian IPs and blocking VPN users. Backend logs record events such as Aadhaar validation status, boarding pass parsing results, and facial algorithm match scores—but explicitly without any PII. Both IP logs and backend logs are temporary: IP data retained for a few hours, backend logs for 14 days. Tech support partners may access this anonymized data for security review and troubleshooting.",
+      "policy_excerpt": "IP information is anonymized and not linked back to user details; processed in real-time and logged to review blocked attempts and help enhance security posture of DYCE.",
+      "concerns": [
+        "IP addresses logged (though anonymized)",
+        "Backend logs retain system interaction data for 14 days",
+        "Tech support partners may access network logs"
+      ],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app only collects anonymous device type and operating system information through crash analytics to fix bugs and improve performance.",
+      "detail": "Device types and OS versions are collected through anonymous crash analytics reports from app stores and Firebase. This data is used solely to optimize app performance and ensure compatibility across devices. No unique device identifiers, IMEI, or fingerprinting for advertising or profiling are collected.",
+      "policy_excerpt": "Device Types and OS Version... To optimize app performance and ensure compatibility across devices.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your facial biometric (selfie) is captured during onboarding and stored locally on your phone as part of your digital credential. It is only shared with airports when you explicitly consent before each trip.",
+      "detail": "The app captures a facial image (selfie) during the onboarding process. This biometric data is matched against the Aadhaar photo for identity verification and then stored locally as part of the encrypted Verifiable Credential on the user's device. The facial image is never stored on central servers. It is shared with the origin airport only with explicit user consent before each travel, and the airport retains it only until up to 24 hours after flight departure. The processing is compliant with the Aadhaar Act, 2016.",
+      "policy_excerpt": "Selfie forms the part of VC and is stored on user's phone... Yes, Same as explained above for VC.",
+      "concerns": [
+        "Facial biometric data is collected and stored",
+        "Biometric shared with airport verifier systems",
+        "Aadhaar-linked facial data is sensitive identity information"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect, store, or process any payment or financial information.",
+      "detail": "Digi Yatra is not a payment or booking app. It only facilitates airport entry using digital credentials. No credit card, banking, wallet, or payment data is collected, stored, or shared.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your credentials and boarding passes anytime. Uninstalling the app permanently erases all your data. You can also contact them to raise concerns about your personal information.",
+      "detail": "Users have several rights: (1) Data modification—users can delete and recreate credentials or boarding passes if details change; (2) Withdrawal/revocation—users can opt out by deleting VC and travel data or uninstalling the app, which permanently erases all locally stored data; (3) Grievance redressal—users can contact dataprivacy@DigiYatraFoundation.com for complaints or concerns. There is no mention of data export capabilities. Since data is stored locally, deletion is genuinely effective.",
+      "policy_excerpt": "You can opt out of Digi Yatra by deleting your VC and Travel Credentials data or uninstalling the app. Since all data is stored locally on your device, this action will permanently erase all Digi Yatra-related data and cannot be retrieved.",
+      "concerns": [
+        "No explicit data export feature mentioned",
+        "Updating Aadhaar details requires deleting and recreating VC",
+        "Uninstalling is the only guaranteed complete deletion method"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Digi Yatra can change its privacy policy at any time. Updates are posted on their website and app, and changes take effect immediately from the date they are updated.",
+      "detail": "DYF reserves the right to change, alter, modify, update, or add terms to the privacy policy when deemed necessary. Changes are updated on the DYF website and application, and apply from the date of amendment. There is no explicit requirement for advance notice or active user re-consent. The policy does not specify how users are notified of changes.",
+      "policy_excerpt": "DYF reserves the right to change, alter, modify, update or add terms in this privacy policy when it may deem necessary. Changes to privacy policy will be updated on the DYF website and application. The changes shall be part of this Policy and apply from the date of the amendment.",
+      "concerns": [
+        "No explicit advance notice period specified",
+        "Changes apply immediately upon posting",
+        "No active re-consent mechanism mentioned"
+      ],
+      "score_impact": 1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_sharing_third_parties",
+        "risk": "caution",
+        "max": 30,
+        "rate": 0.3,
+        "deduction": 9
+      },
+      {
+        "category": "account_identity",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "camera_microphone",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "health_biometric",
+        "risk": "caution",
+        "max": 15,
+        "rate": 0.3,
+        "deduction": 4.5
+      },
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "caution",
+        "max": 10,
+        "rate": 0.3,
+        "deduction": 3
+      },
+      {
+        "category": "network_internet_activity",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "caution",
+        "max": 5,
+        "rate": 0.3,
+        "deduction": 1.5
+      }
+    ],
+    "total_deductions": 28.5,
+    "final_score": 86,
+    "grade": "A"
+  }
+}

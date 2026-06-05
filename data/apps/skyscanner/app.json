@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.skyscanner.net/media/privacy-policy",
+    "terms_url": "https://www.skyscanner.net/terms-of-service",
+    "policy_last_updated": "2025-05-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "skyscanner",
+    "name": "Skyscanner Flights & Travel",
+    "developer": "Skyscanner Limited",
+    "app_store_url": "https://apps.apple.com/in/app/skyscanner-flights-travel/id415458524",
+    "app_store_id": "415458524",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/aa/33/8baa33ed-adfe-d8fc-86c0-b386eb1febe4/LiquidGlassUniversalAppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": "A global travel search engine for comparing flights, hotels, and car hire. Redirects users to airlines and travel providers to complete bookings."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 73,
+    "grade": "B",
+    "one_liner": "A reliable travel search engine with solid security practices and genuine privacy rights, but it shares your data with airlines, hotels, and advertising partners including Facebook, and builds profiles to personalize ads.",
+    "summary": "Skyscanner is a UK-based travel search platform that helps users compare flights, hotels, and car hire across hundreds of providers. It collects extensive travel and personal data to facilitate searches and bookings, and shares this information widely with airlines, hotels, travel agents, and advertising partners. On the positive side, Skyscanner has strong security practices, offers genuine GDPR data rights, provides self-service account management, and is transparent about how data is used. The company is UK-registered and headquartered in Edinburgh, with data stored in secure servers across multiple countries. However, the app partners with Facebook and affiliate networks for advertising, builds user profiles for personalization, and shares data with group companies worldwide.",
+    "recommendation": "recommended",
+    "recommendation_reason": "Skyscanner is a well-established, transparent travel search platform with strong security practices and genuine data rights. While it does share your information with travel providers and advertising partners, this is largely necessary for its core function of comparing and booking travel. Privacy-conscious users should be aware of the advertising profiling and cookie tracking, but overall this is a reasonable choice for travel planning."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_facebook_advertising",
+        "title": "Builds profiles for Facebook and affiliate advertising",
+        "plain_english": "Skyscanner works with Facebook and other advertising partners to show you personalized ads. They create 'custom audiences' and 'lookalike audiences' based on your profile and behavior, which means your data is used to target you with ads both on and off Skyscanner.",
+        "severity": "high"
+      },
+      {
+        "id": "red_143_cookie_partners",
+        "title": "Works with 143+ cookie and advertising partners",
+        "plain_english": "When you use Skyscanner, up to 143 different partners may place cookies or tracking technologies on your device to collect data for advertising, analytics, and personalization purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_travel_provider_sharing",
+        "title": "Shares your booking data with airlines and hotels",
+        "plain_english": "When you click through to book a flight or hotel, Skyscanner shares your personal data with the airline, hotel, or travel agent you choose. These companies process your data under their own privacy policies, which may be less protective.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_profiling_for_ads",
+        "title": "Creates a profile of your interests for ads and recommendations",
+        "plain_english": "Skyscanner combines data about your searches, bookings, and account to build a profile of your preferences and interests. This profile is used to personalize what you see on the app and to show you targeted ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_group_company_sharing",
+        "title": "Shares data with group companies across 7 countries",
+        "plain_english": "Your data is shared with other companies in the Skyscanner group, which has offices in Brazil, China, India, Japan, Singapore, Spain, the UK, and the US.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_passport_id_collection",
+        "title": "Collects passport and ID information for bookings",
+        "plain_english": "When you make bookings through Skyscanner, you may need to provide passport or other identification details. This sensitive information is shared with the travel providers you choose.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_business_transfer",
+        "title": "Your data could be transferred in a company sale",
+        "plain_english": "If Skyscanner is acquired, merged, or sells part of its business, your personal data may be transferred as part of that transaction.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_gdpr_rights",
+        "title": "Full GDPR data rights with self-service tools",
+        "plain_english": "You can access, correct, delete, or restrict your data through your account settings or by submitting a data privacy request. You also have the right to object to processing and obtain a copy of your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_security_by_design",
+        "title": "Strong security practices and employee training",
+        "plain_english": "Skyscanner uses industry-standard security measures, provides data protection training to all employees, and designs its services to use the minimum amount of personal data necessary through techniques like anonymization.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_transparent_sharing",
+        "title": "Transparent about who receives your data",
+        "plain_english": "Skyscanner clearly explains what data is shared with travel providers, third-party processors, and advertising partners. It also makes links to travel providers' privacy policies available before you complete a booking.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_minimization",
+        "title": "Uses data minimization techniques",
+        "plain_english": "The company aims to use the minimum amount of personal data necessary, including through anonymization and pseudonymization, and does not use directly identifying information like contact details for machine learning training.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_under_18_protection",
+        "title": "Not intended for children under 18",
+        "plain_english": "Skyscanner states its platforms are not for children under 18 and does not knowingly collect personal data from anyone under that age.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner does not use your camera or microphone. You may choose to upload photos or videos as user-generated content, but this is optional.",
+      "detail": "No camera or microphone access required for core functionality. Users may voluntarily upload photos, videos, or other content to platforms or social media. No evidence of camera/mic scanning or automatic capture.",
+      "policy_excerpt": "Content you upload to our Platforms or which relate to our Platforms (such as comments, photos, videos, recommendations, preferences, reviews)",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Skyscanner uses your general location from your internet address to predict which airport you are likely to want to depart from. If you allow it, it can also access your specific location from your device.",
+      "detail": "Generic location from IP address used to predict departure airport and personalize results. Specific location data collected from mobile device only if user grants access. Location used for personalization and predicting travel preferences.",
+      "policy_excerpt": "We use your location to predict which airport you are likely to want to depart from or arrive back to... non-specific location based on your IP address; specific location data derived from your mobile device (if you choose to grant us access to this).",
+      "concerns": ["IP-based location inference even without GPS permission", "Location used for personalization and ads"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner does not access your contacts or phonebook.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy. The app is a travel search engine with no social features requiring contact access.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner does not access your device storage or files. You may voluntarily upload content like photos or videos, but this is optional.",
+      "detail": "No broad file system or storage access mentioned. Optional user-generated content uploads (photos, videos, reviews). No evidence of automatic file scanning.",
+      "policy_excerpt": "Content you upload to our Platforms or which relate to our Platforms (such as comments, photos, videos, recommendations, preferences, reviews)",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner shares your data with airlines, hotels, and travel agents when you book; with advertising partners like Facebook for targeted ads; with fraud prevention services; and with other companies in the Skyscanner group across 7 countries.",
+      "detail": "Data shared with: (1) Third-Party Processors (payment processors, email tools, security/fraud services, analytics, tracking tools, customer service, cloud storage, IT support), (2) Travel Providers (airlines, hotels, car hire, travel agents) for booking processing, (3) Advertising Partners (Facebook, affiliate networks, marketing services) for personalized ads and custom audiences, (4) Fraud Prevention Partners, (5) Brand Collaboration Partners, (6) Loyalty Partners, (7) Other Skyscanner group companies (Brazil, China, India, Japan, Singapore, Spain, UK, US), (8) Legal disclosures for enforcement or corporate transactions.",
+      "policy_excerpt": "We share personal data where necessary for the purposes described in How and why do we use personal data? This means we share personal data where you ask us to, where it's a necessary part of doing business with you and providing you with services, where we need to for legal reasons, or where sharing information is necessary to pursue our, or a third party's, legitimate interests.",
+      "concerns": ["Extensive sharing with travel providers", "Facebook and advertising partner data sharing for custom audiences", "Group company sharing across 7 countries", "Fraud prevention partner data sharing", "Business transfer clause"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Skyscanner collects your name, email, address, phone number, and date of birth when you create an account or make a booking. You can also log in via Apple, Google, or Facebook, which shares some of your profile data.",
+      "detail": "Account data: name, date of birth, gender, place of birth. Contact data: name, address, email, phone number. Identification: passport/ID info. Third-party login via Apple, Google, Facebook receives email, name, contact details. Account creation is optional but enables faster bookings and saved preferences.",
+      "policy_excerpt": "Account Information, if you choose to create an account and populate your profile, such as: name, date of birth, gender, and place of birth; identification information (see above); payment information (see above); loyalty scheme information.",
+      "concerns": ["Passport/ID information collected for bookings", "Social login shares profile data", "Account data stored and used for personalization"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner tracks how you use the app and partners with Facebook and affiliate networks to show you personalized ads. They build profiles of your interests and create 'custom audiences' and 'lookalike audiences' for advertising purposes.",
+      "detail": "Extensive advertising tracking: Facebook custom audiences and lookalike audiences created based on user data. Affiliate network and marketing services providers used to advertise on third-party websites. Cookies and similar technologies used for advertising measurement and personalization. 143+ cookie partners. Profiling combines collected data to understand preferences and interests for personalized ads. Machine learning algorithms trained on personal data (excluding directly identifying info) for personalization.",
+      "policy_excerpt": "Skyscanner partners with affiliate network and marketing services providers such as Facebook ('Third-Party Ad Solutions') to market and advertise our services on third-party websites and applications and measure the effectiveness of the advertising campaigns. Such activities include: Creating audiences for Skyscanner advertisements of other individuals who have similar characteristics to you based on the information our Third-Party Ad Solutions hold about you; and Including you in 'custom audiences' which will receive Skyscanner advertising content.",
+      "concerns": ["Facebook custom audiences and lookalike audiences", "Affiliate network advertising tracking", "143+ cookie partners", "Profiling for personalized ads", "Machine learning training on behavior data", "Cross-platform ad tracking"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner is not intended for children under 18 and does not knowingly collect personal data from anyone under that age. They will delete any data they learn was provided by a child without parental authorization.",
+      "detail": "Explicit 18+ age requirement. Platforms not intended for children under 18. No knowingly collection from under-18s. Data deletion承诺 if child data discovered. App Store rating not specified in policy but travel booking implies adult use.",
+      "policy_excerpt": "Please note that our Platforms are not intended for children under 18 years of age, and nobody under the age of 18 should provide any information to Skyscanner via our Platforms or otherwise. We don't knowingly collect personal data from anybody under 18, and we will delete any personal data that we learn has not been provided by, other than with the express authorisation of, the child's parent or legal guardian.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner logs your internet connection address, device details, and browsing activity to understand how you use the app and to personalize your experience.",
+      "detail": "IP address collected continuously. Device and browser information logged. Usage information tracked: searches performed, pages accessed, features used, links clicked, time spent. Session data used for analytics, personalization, and security.",
+      "policy_excerpt": "Usage Information such as: How you interact with our Platforms and communications, including time you spend on our Platforms, searches performed, and the pages, features or functionality you have accessed, links you have clicked to be redirected to or from our Platforms",
+      "concerns": ["IP address logged continuously", "Browsing activity tracked", "Searches and clicks monitored"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner collects your device type, operating system, browser, and cookie identifiers to ensure the app works correctly and to identify suspicious activity.",
+      "detail": "Device info: make, model, operating system, browser type, cookie identifiers. Used for platform functionality, analytics, personalization, and fraud prevention. Device characteristics used to identify suspicious activity and block fraudulent bookings.",
+      "policy_excerpt": "Device and Location Information such as: generic information from your device such as your IP address, make, model and operating system; non-specific location based on your IP address",
+      "concerns": ["Device fingerprinting for fraud detection", "Cookie identifiers collected", "Device info used for personalization"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner does not routinely collect health or biometric data. You may choose to provide health-related information when contacting customer service about special travel needs.",
+      "detail": "No routine collection of special category personal data (health, religion, ethnic origin). May be voluntarily provided by users for specific travel needs (dietary requirements, accessibility needs, fitness to fly). Not used for profiling or ads.",
+      "policy_excerpt": "We don't routinely collect special category personal data (these are more sensitive types of data, such as information relating to your health, religion or ethnic origin). However, you may choose to provide us with information which reveals this type of data",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner collects payment card details when you make a booking directly through their platform. These are shared with payment processors and travel providers. A tokenized version of your card number may be stored for fraud prevention.",
+      "detail": "Payment data: card number, expiry date, verification code. Collected for direct bookings on Skyscanner platforms. Shared with payment processors and travel providers. Tokenized card number and IP address stored for fraud prevention. Subset of payment info stored to identify suspicious activity.",
+      "policy_excerpt": "Payment Information such as: payment card number, expiry date and verification code... we store a subset of your payment card information (such as a tokenised version of card number and IP address) along with information submitted by you during the checkout process (such as name and contact details) to identify suspicious activity",
+      "concerns": ["Payment card details collected and stored", "Tokenized card number retained for fraud prevention", "Shared with payment processors and travel providers"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You have strong data rights: you can request a copy of your data, correct mistakes, delete your account, restrict processing, and object to how your data is used. You can manage some of this yourself in your account settings.",
+      "detail": "Comprehensive GDPR-style rights: access, correction, deletion, restriction, portability, objection. Self-service account management available. Data Privacy Request page for exercising rights. DPO contact address provided. Withdrawal of consent available at any time. Rights may be limited where fulfilling request would reveal data about another person or where required by law/legitimate interests.",
+      "policy_excerpt": "You have the right to ask us for a copy of your personal data; to correct, delete or restrict processing of your personal data; and to obtain the personal data you have provided to us in a structured, machine readable format. In addition, you can object to the processing of your personal data in some circumstances",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Skyscanner will notify you of significant policy changes when you next use the app or through other communications. The policy is reviewed regularly and the latest version is always posted online.",
+      "detail": "Policy reviewed regularly to ensure up-to-date. Significant changes notified when user next accesses services or by other communications. Policy date clearly posted. User encouraged to check page occasionally. No retroactive changes without notice.",
+      "policy_excerpt": "When we make significant changes, we'll let you know when you next access our services, or by other communications. We'll review this from time to time to make sure it's up-to-date and post the latest version here.",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 55.25,
+    "final_score": 73,
+    "grade": "B"
+  }
+}

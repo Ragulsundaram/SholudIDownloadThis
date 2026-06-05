@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "kimi-k2.6",
+    "policy_url": "https://x.com/privacy",
+    "terms_url": "https://x.com/tos",
+    "policy_last_updated": "2026-01-15",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "x",
+    "name": "X",
+    "developer": "X Corp.",
+    "app_store_url": "https://apps.apple.com/in/app/x/id333903271",
+    "app_store_id": "333903271",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/42/bb/76/42bb76a3-87c9-2b61-728b-91254fb64d53/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "News",
+    "sub_category": "Social Networking",
+    "description": "A global social media platform for real-time conversations, breaking news, live events, and community building."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 40,
+    "grade": "D",
+    "one_liner": "X is a public platform that extensively tracks your behavior, shares data with advertisers and AI partners, and builds a detailed profile across devices.",
+    "summary": "X is a public social media platform operated by X Corp. Its privacy policy is comprehensive but reveals extensive data collection and sharing practices. X collects your posts, interactions, messages, location, device details (including apps installed and battery level), and inferred identity across devices. This data is shared with advertisers for cross-platform tracking, third-party partners who may use it to train AI models, and made publicly available through APIs. Biometric data may be collected with consent. While X provides some privacy controls, many sharing practices are opt-out rather than opt-in, and the default settings maximize data exposure.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "X is designed as a public platform where your content is broadly visible and your behavior is extensively tracked for advertising. If privacy is important to you, consider whether you need an account at all, or use it with strict privacy settings and minimal personal information."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_extensive_ad_tracking",
+        "title": "Extensive ad tracking on and off X",
+        "plain_english": "X tracks which ads you see and click, then shares this with advertisers so they can show you ads on other apps and websites too. It also uses your device ID to recognize you across different apps and browsers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_third_party_ai_training",
+        "title": "Your data may train other companies' AI models",
+        "plain_english": "If you don't opt out, X may share your information with third-party collaborators who can use it to train their own artificial intelligence models — not just X's.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_device_identity",
+        "title": "X links your identity across all your devices and browsers",
+        "plain_english": "Even when you're not signed in, X tries to figure out who you are by matching your device, browser, and email information. It builds a profile of you across all the devices and browsers you use.",
+        "severity": "high"
+      },
+      {
+        "id": "red_api_public_data",
+        "title": "Your public posts are sold through APIs",
+        "plain_english": "X makes your public posts, profile, and interactions available to other companies through APIs. These companies pay X for large-scale access and can use your public data for their own purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_business_transfers_sell",
+        "title": "Your data can be sold in a company sale or bankruptcy",
+        "plain_english": "The policy explicitly says X may 'share, sell, or transfer information about you' if the company is sold, merges with another, or goes bankrupt.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_biometric_collection",
+        "title": "May collect your biometric data",
+        "plain_english": "With your consent, X may collect and use your biometric information — like face or fingerprint data — for safety, security, and identification purposes.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_data_export",
+        "title": "You can download your data and request access",
+        "plain_english": "X lets you download a copy of your posts and other data. You can also request access to additional information X has collected about you.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion",
+        "title": "Account deactivation and deletion available",
+        "plain_english": "You can deactivate your account, which queues your data for deletion. You have up to 30 days to restore it if you change your mind.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_some_controls",
+        "title": "Some privacy settings are available",
+        "plain_english": "X offers settings to control data sharing with business partners, ad personalization, and whether your content is public or protected.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "X only uses your camera or microphone when you actively choose to post a photo, video, or go live.",
+      "detail": "The app uses camera and microphone only when you actively post media, create Spaces (live audio), or go live with video. The policy also mentions that with your consent, X may collect biometric information for safety and security purposes.",
+      "policy_excerpt": "Biometric information. Based on your consent, we may collect and use your biometric information for safety, security, and identification purposes.",
+      "concerns": [
+        "Biometric data may be collected with consent"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "X collects your approximate location by default to show you relevant content and ads. You can also choose to share your precise location.",
+      "detail": "X collects approximate location automatically to provide expected service and show relevant ads. Users can optionally enable precise location sharing in their profile and posts. Location is also logged as part of device information.",
+      "policy_excerpt": "When you use X, we collect some information about your approximate location to provide the service you expect, including showing you relevant ads. You can also choose to share your current precise location.",
+      "concerns": [
+        "Approximate location collected by default for ad targeting"
+      ],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you choose to upload your address book, X stores it on its servers to help you find people you know on the platform.",
+      "detail": "The policy explicitly states users can upload their device address book to X to help find people they may know. This means contacts are uploaded to X servers, though the policy does not explicitly state they are sold or shared with third parties.",
+      "policy_excerpt": "You can also choose to share your location in your profile and posts, and to upload your address book to X to help find people you may know.",
+      "concerns": [
+        "Address book uploaded to X servers",
+        "No clarity on whether contact data is shared with third parties"
+      ],
+      "score_impact": 13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "X can access your photos and videos only when you choose to upload them.",
+      "detail": "Users can upload photos and videos when posting content. The app accesses storage only on-demand when a user initiates a post with media. Media is stored on X servers and is public by default unless account is protected.",
+      "policy_excerpt": "Posts and other content you post (including the date, application, and version of X)",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "X shares your data with advertisers, business partners, service providers, and third-party collaborators. Your public posts are also sold through APIs to other companies.",
+      "detail": "X extensively shares data: with advertisers who may track you on and off platform; with business partners (subject to one privacy setting); with service providers; with third-party collaborators who may use data for their own AI training if you don't opt out; and through APIs that sell public data to external companies. The policy also allows data to be 'shared, sold, or transferred' in a business sale or bankruptcy.",
+      "policy_excerpt": "We may share, sell, or transfer information about you in connection with a merger, acquisition, reorganization, sale of assets, or bankruptcy.",
+      "concerns": [
+        "Data shared with advertisers for cross-platform tracking",
+        "Third-party collaborators may use data to train their own AI models",
+        "Public data sold through APIs to external companies",
+        "Business transfers clause allows sale of user data"
+      ],
+      "score_impact": 30
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "X collects your name, email, phone number, and date of birth, then links your identity across all devices and browsers you use — even when you're signed out.",
+      "detail": "X requires display name, username, password, email or phone number, and date of birth for account creation. It then infers identity across browsers and devices, even when signed out, using device associations and email/phone hashes. Biometric information may be collected with consent.",
+      "policy_excerpt": "When you access X and are not signed in, we may infer your identity based on the information we collect.",
+      "concerns": [
+        "Identity inferred and linked across all devices and browsers",
+        "Email/phone hashes used to infer additional identity information",
+        "Biometric data may be collected with consent"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "X tracks everything you do on the platform and uses it to show you ads — both on X and on other apps and websites. It also recognizes your devices across the internet to target you with ads.",
+      "detail": "X collects all user interactions (posts, likes, reposts, bookmarks, shares, replies, viewing history, Spaces participation, DMs) and uses this to target ads. It also uses device and advertising IDs to recognize users across platforms and serve ads on and off X. Ad partners integrate X's advertising technology into their own apps and websites.",
+      "policy_excerpt": "We also use this information to measure the effectiveness of ads and to help recognize your devices to serve you ads on and off of X.",
+      "concerns": [
+        "Cross-platform ad tracking using device and advertising IDs",
+        "Ad partners collect data directly from their sites using X technology",
+        "Behavioral profile built from all interactions on the platform"
+      ],
+      "score_impact": 25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated 17+ on the App Store, but the privacy policy doesn't specifically explain how children's data is protected.",
+      "detail": "X is rated 17+ on the App Store with content advisories for mature themes. The privacy policy does not contain specific COPPA or children's data protections. Users must provide a date of birth during sign-up.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No explicit COPPA compliance language in policy",
+        "17+ rating but no robust age verification described"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "X logs extensive information about your internet activity, including your IP address, search terms, ads you've seen, and links you've clicked — even search terms you didn't actually submit.",
+      "detail": "X logs IP address, browser type, language, OS, referring webpage, access times, pages visited, location, mobile carrier, device info, search terms and IDs (including unsubmitted ones), ads shown, and cookie identifiers. This is used for profiling, ad targeting, and security.",
+      "policy_excerpt": "IP address and related information; browser type and language; operating system; the referring webpage; access times; pages visited; location; your mobile carrier; device information (including device and application IDs); search terms and IDs (including those not submitted as queries); ads shown to you on X; X-generated identifiers; and identifiers associated with cookies.",
+      "concerns": [
+        "Search terms logged even when not submitted",
+        "Extensive log data used for profiling and ad targeting"
+      ],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "X collects detailed information about your device — including what other apps you have installed, your battery level, and a unique advertising ID — to track and target you across the internet.",
+      "detail": "X collects device and advertising IDs, operating system, carrier, language, memory, apps installed, and battery level. This information is used for ad targeting, device recognition across platforms, and security.",
+      "policy_excerpt": "Information about your device and its settings, such as device and advertising ID, operating system, carrier, language, memory, apps installed, and battery level.",
+      "concerns": [
+        "Advertising ID used for cross-app tracking",
+        "List of installed apps collected",
+        "Device fingerprinting for ad recognition across platforms"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "With your permission, X may collect your biometric information like face or fingerprint data for safety and security purposes.",
+      "detail": "The privacy policy explicitly states that based on user consent, X may collect and use biometric information for safety, security, and identification purposes. The policy does not specify exactly what biometric data is collected or how long it is retained.",
+      "policy_excerpt": "Biometric information. Based on your consent, we may collect and use your biometric information for safety, security, and identification purposes.",
+      "concerns": [
+        "Biometric data collected and stored on X servers",
+        "No detail on what specific biometric data or retention period"
+      ],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy ads or paid features, X collects your credit card number, expiration date, CVV code, and billing address.",
+      "detail": "X collects payment information including credit or debit card number, expiration date, CVV code, and billing address for paid products and services like advertising and X Premium. Transaction records are kept in accordance with applicable law.",
+      "policy_excerpt": "In order to purchase ads or other offerings provided as part of our paid products and services you will need to provide us payment information, including your credit or debit card number, card expiration date, CVV code, and billing address.",
+      "concerns": [],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can deactivate your account and request deletion, but X keeps some data for up to 18 months, and even longer for legal or safety reasons.",
+      "detail": "Account deactivation queues data for deletion, with a 30-day restoration window. However, X retains communication data for up to 18 months, cookie data for up to 13 months, ad interaction data for up to 12 months, and indefinitely keeps identifiers from suspended accounts to prevent repeat offenders. Some data may be kept longer for legal, safety, and security reasons.",
+      "policy_excerpt": "If you follow the instructions here, your account will be deactivated and your data will be queued for deletion. For up to 30 days after deactivation it is still possible to restore your X account.",
+      "concerns": [
+        "Data retained up to 18 months for communications",
+        "Identifiers kept indefinitely for suspended accounts",
+        "Public content may persist on search engines even after deletion"
+      ],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "X can change its privacy policy at any time. For major changes, they say they'll give you notice before you continue using the app.",
+      "detail": "The policy states that material changes will be notified to users with an opportunity to review before continuing use. However, continued use constitutes acceptance of the revised policy.",
+      "policy_excerpt": "If we do revise this Privacy Policy and make changes that are determined by us to be material, we will provide you notice and an opportunity to review the revised Privacy Policy before you continue to use X.",
+      "concerns": [
+        "Continued use equals acceptance of revised terms"
+      ],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties",  "risk": "dangerous", "max": 30, "rate": 1.00, "deduction": 30 },
+      { "category": "behavioural_ad_tracking",     "risk": "dangerous", "max": 25, "rate": 1.00, "deduction": 25 },
+      { "category": "contacts_phonebook",          "risk": "risky",    "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "account_identity",            "risk": "risky",    "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting",       "risk": "risky",    "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric",            "risk": "risky",    "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "network_internet_activity",   "risk": "risky",    "max": 5,  "rate": 0.65, "deduction": 3.25 },
+      { "category": "camera_microphone",           "risk": "caution",  "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "location_gps",                "risk": "caution",  "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment",           "risk": "caution",  "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access",         "risk": "caution",  "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "childrens_data",              "risk": "caution",  "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "data_deletion_user_rights",   "risk": "caution",  "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification",  "risk": "caution",  "max": 5,  "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 123.5,
+    "final_score": 40,
+    "grade": "D"
+  }
+}

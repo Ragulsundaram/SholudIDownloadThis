@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://trulymadly.com/privacy",
+    "terms_url": "https://trulymadly.com/terms",
+    "policy_last_updated": "2022",
+    "needs_review": false,
+    "review_notes": "Privacy policy appears dated (copyright 2022) and is vague on several categories. No mention of camera/microphone permissions, storage access, or policy change notification mechanism."
+  },
+  "app": {
+    "slug": "trulymadly-indian-matchmaking",
+    "name": "TrulyMadly: Indian MatchMaking",
+    "developer": "CRESCERE TECHNOLOGIES PRIVATE LIMITED",
+    "app_store_url": "https://apps.apple.com/in/app/trulymadly-indian-matchmaking/id964395424",
+    "app_store_id": "964395424",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e7/05/73/e7057316-c282-71fe-edc3-956aa41e67c1/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/512x512bb.png",
+    "category": "Lifestyle",
+    "sub_category": "Social Networking",
+    "description": "An Indian matchmaking and dating app with over 90 lakh active users, offering compatibility quizzes, trust scores, video profiles, and verification checks."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 65,
+    "grade": "C",
+    "one_liner": "A popular Indian dating app that collects extensive personal and personality data, shares your profile with matches who can then reshare it to their social networks, and leaves key privacy questions unanswered.",
+    "summary": "TrulyMadly is one of India's largest matchmaking apps. It collects a wide range of personal information including your name, email, phone number, address, age, photos, videos, partner preferences, and detailed personality profile from a compatibility assessment. This profile data — including verification results and photos — is shown to your matches. Most concerningly, the app may enable matches to share your profile information and photos with members of their social networks. The app uses cookies, web beacons, and mobile analytics for tracking, and may share non-personally identifiable demographic data with advertisers. On the positive side, payment card details are handled by third-party payment gateways (not stored by TrulyMadly except for auto-renewal cases), contact information is never shared with matches, and you can request data deletion via email. However, the privacy policy is dated (2022), vague on several key categories, and does not explain how policy changes are communicated.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "TrulyMadly collects very personal information for matchmaking — including personality profiles, photos, videos, and verification details — and shares this with matches who may be able to reshare it externally. The privacy policy is outdated and silent on important categories like camera access, storage access, and policy change notifications. If you use this app, be cautious about what photos and personal details you share, and be aware your profile may be visible beyond the app's direct users."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_matches_can_reshare_profile",
+        "title": "Matches can share your profile with their social networks",
+        "plain_english": "The privacy policy says TrulyMadly could add features that let your matches share your profile information — including your photos — with people on their social networks outside the app. You have no control over this.",
+        "severity": "high"
+      },
+      {
+        "id": "red_extensive_personal_data_collection",
+        "title": "Collects very personal and sensitive data",
+        "plain_english": "TrulyMadly collects your email, phone number, home address, age, sex, partner preferences, personality assessment answers, photos, videos, and verification documents. This is highly sensitive information for a dating app.",
+        "severity": "high"
+      },
+      {
+        "id": "red_profile_shown_to_matches",
+        "title": "Your full profile and verification results are shown to matches",
+        "plain_english": "TrulyMadly shows your profile details, photos, videos, and even your verification check results to the people it recommends as matches for you. Your contact information is not shared, but most everything else is.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_outdated_policy",
+        "title": "Privacy policy appears outdated",
+        "plain_english": "The privacy policy carries a 2022 copyright date and does not mention many important modern privacy topics. This suggests it may not reflect the app's current data practices.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_third_party_products_collect_data",
+        "title": "Third-party products within the app also collect your data",
+        "plain_english": "The policy says TrulyMadly's products and services may include third-party offerings, and when you use those, they may collect and use your information too.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_contact_info_not_shared",
+        "title": "Contact information never shared with matches",
+        "plain_english": "TrulyMadly explicitly promises that your email address and phone number are never shown to the people you are matched with.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_payment_gateway_not_stored",
+        "title": "Credit card details handled by payment gateway",
+        "plain_english": "When you make purchases, your credit card information goes directly to PayU or HDFC payment gateway. TrulyMadly does not store your card details, except if you have auto-renewal enabled.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_data_deletion_available",
+        "title": "You can request deletion of your data",
+        "plain_english": "You can email TrulyMadly's support team from your registered email address and ask them to delete your data from their records.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_marketing_opt_out",
+        "title": "Can opt out of marketing emails",
+        "plain_english": "You can choose to stop receiving promotional emails, newsletters, and special offers from TrulyMadly.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether TrulyMadly can access your phone's camera or microphone. However, the app lets you upload photos and videos as part of your profile, which are then shown to your matches.",
+      "detail": "No explicit mention of camera or microphone permissions. The app asks users to provide photos and videos for their profile, which are made available to matches and users of the Services. It's unclear if these are uploaded from gallery or captured via camera/mic directly.",
+      "policy_excerpt": "All photo(s) or video(s) provided by the User as part of profile content, the User agrees and confirms that these may be made available to User's matches and users of the Services.",
+      "concerns": ["Policy is silent on camera/microphone access", "Photos and videos shared with matches and users"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "TrulyMadly collects your demographic location and address when you register. It also logs your IP address when you visit. The policy does not say whether it tracks your precise GPS location.",
+      "detail": "Collects: demographic location, address, IP address. IP addresses logged for trend analysis. No mention of precise GPS tracking, but location/demographic data is part of profile and used for matching.",
+      "policy_excerpt": "TrulyMadly asks for User's personal information (email, demographic location and address, age, name, sex, phone number, preference in partner selection...",
+      "concerns": ["Demographic location and address collected", "IP address logged"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not clearly say whether TrulyMadly can access your phone contacts. It does have a 'refer a friend' feature where you can manually enter a friend's name and email.",
+      "detail": "No mention of broad contacts or phonebook access. 'Refer a friend' feature allows users to provide a friend's name and email manually. No evidence of automatic contact importing.",
+      "policy_excerpt": "The Site encourages Users to refer a friend for the Services by sending us a friend's name and email address.",
+      "concerns": ["Policy is silent on contacts/phonebook access", "Manual friend referral available"],
+      "score_impact": -10
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say whether TrulyMadly can access your phone's photos, files, or other storage beyond the profile content you choose to upload.",
+      "detail": "No explicit mention of storage, file system, or photo library access. Users can upload photos and videos to their profile, but method of upload is not specified.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on file storage access"],
+      "score_impact": -5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrulyMadly shares your profile information, photos, videos, and verification results with the people it matches you with. It may also let those matches share your profile with their social networks. Additionally, third-party products within the app can collect your data, demographic data may be shared with advertisers on a non-personally identifiable basis, and your data could be transferred if the company is sold.",
+      "detail": "Data shared with: recommended/suggested matches (profile info, photos, verification results), matches' social networks (via potential features), third-party products/services integrated in app, advertisers (non-PII demographic data), verification service providers, law enforcement when required, and as part of business sale/transfers. Contact info explicitly NOT shared with matches.",
+      "policy_excerpt": "TrulyMadly could make features available enabling User matches to share User profile information, including photos, with members of their social network(s)... TrulyMadly does not rent, sell or share any personal or sensitive information of User other than as mentioned in this Privacy Policy, with any third party... Some of this information may be shared with advertisers on a non-personally identifiable basis.",
+      "concerns": ["Matches can reshare profile to social networks", "Third-party products collect data independently", "Business transfer includes PII", "Profile/photos shared with matches", "Non-PII demographic shared with advertisers"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrulyMadly collects extensive personal information when you sign up including your name, email, phone number, age, sex, address, partner preferences, personality assessment answers, and verification documents. This is all used to create your profile and find matches for you.",
+      "detail": "Collected identity data: email, demographic location, address, age, name, sex, phone number, preference in partner selection, personality facets, interests, compatibility assessment responses, verification check information, photos, videos. Used for matching, payments, surveys, promotions, fraud detection, and research.",
+      "policy_excerpt": "TrulyMadly asks for User's personal information (email, demographic location and address, age, name, sex, phone number, preference in partner selection, payment details, personality facets, interests when the User registers with the Site.",
+      "concerns": ["Extensive personal data collected for dating", "Personality profile built from assessment", "Verification info collected"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrulyMadly uses cookies to track your visits and preferences, web beacons to understand email and website behaviour, and mobile analytics software to see how you use the app. Some of your demographic information may be shared with advertisers on an anonymous basis.",
+      "detail": "Tracking mechanisms: cookies (for visitor counting, preferences, user trends), web beacons (for email and site personalization, visitor data collection), mobile analytics (app usage frequency, events, aggregated usage, performance data, download source). Non-PII demographic data shared with advertisers.",
+      "policy_excerpt": "Cookies allow TrulyMadly to save user preferences and track user trends... Web beacons could be used in email communications in order to understand the behavior of customers... Mobile analytics software could be used to allow TrulyMadly to better understand the functionality of our mobile software on User phone.",
+      "concerns": ["Cookies track user trends and preferences", "Web beacons in emails", "Mobile analytics track app usage", "Demographic data shared with advertisers"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrulyMadly is rated 17+ on the App Store and is a dating app intended for adults. The privacy policy does not mention any specific protections for children's data because the service is not designed for children.",
+      "detail": "App rated 17+ with content advisories for mature themes and alcohol references. No mention of children's data protections in the privacy policy. Clearly adult-oriented dating service.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Every time you use TrulyMadly, their servers record your IP address, what browser you use, your internet provider, which pages you came from and went to, what type of device you have, when you visited, and how many times you clicked. They say this data is not shared outside the company.",
+      "detail": "Log files collected: IP addresses, browser type, ISP, referring/exit pages, platform type, date/time stamp, number of clicks. Used for trend analysis, site administration, fraud prevention, visitor movement tracking, broad demographic information. Log files are not shared externally.",
+      "policy_excerpt": "TrulyMadly servers automatically gather information from User browser (such as IP addresses, browser type, Internet service provider (ISP), referring/exit pages, platform type, date/time stamp, and number of clicks) to analyze trends, administer the site, prevent fraud, track visitor movement in the aggregate, and gather broad demographic information. Log files are not shared externally.",
+      "concerns": ["IP address logged continuously", "Browsing behaviour tracked", "Clicks counted"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrulyMadly collects information about your mobile device including the device ID, model, manufacturer, operating system, version, and your IP address.",
+      "detail": "Mobile device info: mobile device ID, model, manufacturer, operating system and version information, IP address. Collected when user accesses the site via mobile device.",
+      "policy_excerpt": "If User has registered any mobile device or uses the mobile device to access the Site, then device information may get collected (such as mobile device ID, model and manufacturer), operating system and version information, and IP address.",
+      "concerns": ["Device ID collected", "Mobile model and manufacturer logged", "OS version tracked"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "TrulyMadly does not collect any health or biometric data.",
+      "detail": "No mention of health, fitness, or biometric data collection in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you buy TrulyMadly's premium services, your payment goes directly through PayU or HDFC payment gateway. TrulyMadly says it does not store your credit card information, except if you have auto-renewal turned on — in which case some card information is stored by them.",
+      "detail": "Payment processing via PayU/HDFC payment gateway. App claims credit card info does not pass through TrulyMadly for normal transactions. Exception: auto-renewal subscriptions store 'information relating to credit/debit card' with TrulyMadly. All payment handling subject to applicable law.",
+      "policy_excerpt": "TrulyMadly does not store User's credit card information. User transaction on TrulyMadly is authorized and being processed by PayU/ HDFC payment gateway/ any other authorized payment gateway directly without any information passing through TrulyMadly. Thus, all information related to credit/ debit card is stored/ held with Our authorized payment gateway. Only information relating to credit/ debit card is stored with TrulyMadly for the cases where Users' are under auto-renewal for the Account and subscription of Services.",
+      "concerns": ["Card information stored for auto-renewal subscriptions", "Payment gateway is third-party"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can email TrulyMadly's support team and ask them to delete your account and personal information. However, they say some data may remain in their archives for legal reasons even after deletion.",
+      "detail": "Deletion available via contact@trulymadly.com from registered email address. User can cancel registration and remove personally identifiable information. Marketing opt-out available. However, information may remain in archives as required by law. No specific timeline or self-service portal mentioned.",
+      "policy_excerpt": "At User's request, TrulyMadly can cancel User registration and remove/block personally identifiable information from it's database. However, this information may remain in archives even after deletion or termination of User account as required by law and the handling of the same is in accordance with the provisions of the applicable law and as intimated by the government agency from time to time.",
+      "concerns": ["Data may remain in archives per legal requirements", "No self-service deletion portal", "No specific retention timeline"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not say how TrulyMadly will tell you if they change their privacy rules. There is no mention of notifications, emails, or alerts for policy updates.",
+      "detail": "No mention of policy change notification mechanism in the privacy policy. No commitment to notify users of changes.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of policy change notification", "No guarantee users will be informed of updates"],
+      "score_impact": -2.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.5, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.5, "deduction": 10 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
+    ],
+    "total_deductions": 74.5,
+    "final_score": 64,
+    "grade": "C"
+  }
+}

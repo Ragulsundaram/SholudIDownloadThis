@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.coffeemeetsbagel.com/privacy-policy",
+    "terms_url": "https://www.coffeemeetsbagel.com/terms",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": "Privacy policy was extracted from website analysis due to dynamic content loading."
+  },
+  "app": {
+    "slug": "coffee-meets-bagel-dating-app",
+    "name": "Coffee Meets Bagel Dating App",
+    "developer": "COFFEE MEETS BAGEL PTE. LTD.",
+    "app_store_url": "https://apps.apple.com/in/app/coffee-meets-bagel-dating-app/id630119301",
+    "app_store_id": "630119301",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/0a/7f/ab0a7f8b-0855-65bd-064d-7210f10c501a/AppIconWW-0-0-1x_U007ephone-0-0-0-1-0-0-85-220.png/512x512bb.png",
+    "category": "Lifestyle",
+    "sub_category": "Dating",
+    "description": "A dating app focused on serious relationships, offering curated daily matches, detailed profiles, and a seven-day chat limit."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 54,
+    "grade": "D",
+    "one_liner": "A dating app that collects extensive personal data including sensitive attributes, sends your facial geometry to a third-party verification service, and allows external advertisers to track you across devices.",
+    "summary": "Coffee Meets Bagel is a relationship-focused dating app that collects extensive personal information including your profile details, photos, chat records, billing information, and sensitive attributes such as ethnicity and sexual orientation. The app sends your facial geometry to Persona, a third-party identity verification provider, for verification checks — a significant biometric data sharing practice. It also imports data from Facebook and other external sources, tracks your activity via cookies and pixel tags, and allows external advertisers to collect data for behavioural ad campaigns across devices. Your profile is shown to potential matches, and your data may be shared with service vendors, authorities, and successors in a business sale. On the positive side, Persona is required to delete biometric records within three years, you can request account deletion and exercise data subject rights, and marketing communications can be opted out of. However, the combination of biometric sharing, extensive ad tracking, and sensitive data collection makes this a high-risk app from a privacy perspective.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Coffee Meets Bagel collects and shares significant amounts of personal and sensitive data, including facial biometric data sent to a third-party verification provider. External advertisers are allowed to track you for behavioural campaigns, and your profile data is shared broadly within the app's ecosystem. If you choose to use this app, be very selective about what personal and sensitive information you share, avoid Facebook sign-in, disable ad personalization where possible, and consider the risks of biometric data sharing before completing identity verification."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_facial_biometrics_shared",
+        "title": "Facial geometry sent to third-party for verification",
+        "plain_english": "If you complete identity verification, the app sends your facial geometry — a measurement of your face — to a company called Persona. This is sensitive biometric data that can be used to identify you. Persona must delete it within three years, but during that time your face data is held by an outside company.",
+        "severity": "high"
+      },
+      {
+        "id": "red_advertiser_tracking_across_devices",
+        "title": "External advertisers track you across devices",
+        "plain_english": "While the app says it does not sell your personal data, it allows outside advertising companies to collect information about you to show you targeted ads on different devices and apps you use. These advertisers build profiles of your behaviour across the internet.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sensitive_data_collected",
+        "title": "Collects sensitive personal attributes",
+        "plain_english": "The app asks for information about your ethnicity and sexual orientation as part of your profile. This is highly personal data that, if exposed through a data breach or shared more widely than intended, could be used to discriminate against you.",
+        "severity": "high"
+      },
+      {
+        "id": "red_facebook_data_import",
+        "title": "Imports data from Facebook and other outside sources",
+        "plain_english": "If you sign in with Facebook or link your account, Coffee Meets Bagel pulls in information about you from Facebook and other outside companies. Facebook also collects metrics about how you use the app through this connection.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_dnt_ignored",
+        "title": "Do-Not-Track signals are ignored",
+        "plain_english": "If you turn on the Do-Not-Track setting in your browser or phone, Coffee Meets Bagel explicitly says it does not act on it. They will keep tracking you anyway.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_biometric_deletion_timeline",
+        "title": "Biometric data must be deleted within three years",
+        "plain_english": "The company that handles identity verification, Persona, is contractually required to destroy your facial geometry data within three years of your last use of the service, unless the law says otherwise.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion_rights",
+        "title": "You can delete your account and request data removal",
+        "plain_english": "You can edit or deactivate your profile and request permanent deletion. You also have the right to access, correct, transfer, restrict, or delete the records the app holds about you.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_marketing_opt_out",
+        "title": "Can opt out of marketing emails and texts",
+        "plain_english": "You can stop receiving promotional emails and text messages by using the unsubscribe links provided. You can also disable push notifications and GPS tracking in your phone settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sale_claim",
+        "title": "Claims not to sell personal information",
+        "plain_english": "The app states it does not sell your personal information to third parties. It also says it does not sell or share the personal information of users under 16 years of age.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel can access your camera when you upload photos to your profile. More significantly, if you complete identity verification, the app captures your facial geometry using your camera and sends it to a third-party company called Persona.",
+      "detail": "Camera used for photo uploads and identity verification. Facial geometry captured and sent to Persona for verification. Biometric data must be destroyed by Persona within three years unless law requires retention.",
+      "policy_excerpt": "For identity confirmation, the app routes facial geometry to Persona, which must erase biometric records within three years of your latest engagement unless laws require storage.",
+      "concerns": ["Facial biometric data collected and shared with third party", "Camera access for verification"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel collects your location if you give permission. You can turn this off in your phone settings. The app uses location to help match you with people nearby.",
+      "detail": "Geolocation collected with user consent. Can be disabled on handset. Used for matching purposes.",
+      "policy_excerpt": "geolocation (with consent)... Push notifications and GPS may be disabled on your handset.",
+      "concerns": ["Location tracked with consent", "Used for matching"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel may ask you to invite friends to the app. If you do this, the app can access your contacts to help you send invitations. This is optional.",
+      "detail": "Optional invites and polls may gather friends' contacts. User-initiated contact access for invitations.",
+      "policy_excerpt": "Optional invites and polls may gather friends' contacts.",
+      "concerns": ["Contact access for friend invitations", "Optional but encouraged"],
+      "score_impact": -6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos and videos from your phone to your Coffee Meets Bagel profile. The app only accesses the photos you choose to upload.",
+      "detail": "User-initiated photo and video uploads for profile. No mention of broad storage or file system access.",
+      "policy_excerpt": "You submit signup facts, profile stories, photos...",
+      "concerns": ["Photos uploaded and shared with matches"],
+      "score_impact": -3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel shares your data with service providers, payment processors, identity verification companies, and authorities when required by law. If the company is sold or merged, your data may be transferred. Your profile is shown to potential matches. The app also claims it does not sell your data, but it allows external advertisers to collect data about you for behavioural ad campaigns across devices.",
+      "detail": "Data shared with: service vendors, authorities responding to legal orders, successors in mergers/sales, potential matches (profile shown), Facebook (metrics through linked sign-ons), external advertisers (for behavioural campaigns). Anonymized/grouped statistics exempt from restrictions.",
+      "policy_excerpt": "The operator states it does 'not sell personal information to third parties,' yet it lets external advertisers gather data for behavioral campaigns across hardware... the operator may disclose data to service vendors, authorities responding to legal orders, and successors in mergers or sales.",
+      "concerns": ["External advertisers gather data for behavioural campaigns", "Data shared with service vendors", "Business transfer includes personal data", "Profile visible to matches", "Facebook collects metrics via linked sign-ins"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "To use Coffee Meets Bagel, you provide your name, email, phone number, profile information, photos, and potentially sensitive details like your ethnicity and sexual orientation. The app also imports information from Facebook if you link your account.",
+      "detail": "Collected identity data: signup facts, profile stories, photos, sensitive qualities (ethnicity, orientation), billing credentials, chat records. Imports details from Facebook and outside firms. Used for matching and profiling.",
+      "policy_excerpt": "You submit signup facts, profile stories, photos, sensitive qualities such as ethnicity or orientation, billing credentials, and chat records. It also imports details from Facebook, outside firms, and fellow members.",
+      "concerns": ["Sensitive attributes collected", "Data imported from Facebook", "Billing credentials collected"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel uses cookies to count visits, save your preferences, and deliver targeted ads. Pixel tags inside emails track whether you open them and what links you click. The app also allows external advertisers to collect data about you to show you behavioural ads across different devices and apps.",
+      "detail": "Tracking mechanisms: cookies (tally visits, save preferences, deliver tailored promotions, distinguish new from returning users), pixel tags inside emails (register opens and link activity), external advertisers gather data for behavioural campaigns across hardware. Blocking cookies may limit app functionality. DNT signals not honored.",
+      "policy_excerpt": "Cookies tally visits, save preferences, deliver tailored promotions, and distinguish new from returning users. Pixel tags inside emails register opens and link activity... it lets external advertisers gather data for behavioral campaigns across hardware.",
+      "concerns": ["Cookies for ad tracking and profiling", "Pixel tags in emails track opens/clicks", "External behavioural ad campaigns across devices", "Cookie blocking may break app", "DNT signals ignored"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel is rated 18+ and is a dating app intended for adults. The app says it does not sell or share the personal information of users under 16 years of age.",
+      "detail": "App rated 18+. No specific children's privacy protections mentioned because the service is clearly adult-oriented. Explicitly states no sale/sharing of under-16 user data.",
+      "policy_excerpt": "The operator disavows any 'sale' of minors' data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel automatically collects usage logs and cookie data every time you use the app. This includes information about what pages you visit, how you interact with content, and your device and browser details.",
+      "detail": "Automatically gathers usage logs via cookies and pixel tags. Logs include device specs, browsing behaviour, interaction data. Used for analytics, personalization, and advertising.",
+      "policy_excerpt": "The platform automatically gathers identifiers such as your 'Mobile Device ID,' geolocation (with consent), device specs, and usage logs via cookies plus pixel tags.",
+      "concerns": ["Usage logs collected continuously", "Cookies and pixel tags track activity", "Device specs logged"],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Coffee Meets Bagel collects your Mobile Device ID, device specifications, and other technical details about your phone. These identifiers are used to track and recognize your device across the app's services and for advertising purposes.",
+      "detail": "Device identifiers: Mobile Device ID, device specs. Used for tracking, personalization, and advertising. Combined with cookie data for cross-device behavioural campaigns.",
+      "policy_excerpt": "automatically gathers identifiers such as your 'Mobile Device ID,' geolocation (with consent), device specs, and usage logs via cookies plus pixel tags.",
+      "concerns": ["Mobile Device ID collected", "Device specs tracked", "Used for ad targeting and cross-device campaigns"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you complete identity verification, Coffee Meets Bagel captures your facial geometry — a digital measurement of your face — and sends it to a company called Persona. This is sensitive biometric data. Persona must delete it within three years, but during that time it is held by an outside company.",
+      "detail": "Facial geometry captured and sent to Persona for identity confirmation. Biometric records must be erased within three years of latest engagement unless laws require storage. High sensitivity data shared with third-party verification provider.",
+      "policy_excerpt": "For identity confirmation, the app routes facial geometry to Persona, which must erase biometric records within three years of your latest engagement unless laws require storage.",
+      "concerns": ["Facial biometric data shared with third party", "Biometric data stored for up to three years", "Sensitive biometric data at risk if Persona breached"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "When you buy premium features or in-app purchases on Coffee Meets Bagel, you provide billing credentials. The app collects this payment information and processes it through payment service providers.",
+      "detail": "Billing credentials collected for purchases (e.g., Premium subscription, Beans). Processed by payment service providers. Payment data is part of the collected personal information.",
+      "policy_excerpt": "You submit signup facts, profile stories, photos, sensitive qualities such as ethnicity or orientation, billing credentials, and chat records.",
+      "concerns": ["Billing credentials collected", "Payment data stored or processed"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can edit or deactivate your profile and request permanent removal. You also have the right to access, correct, transfer, restrict, or delete your records. However, the app keeps some data after you leave for legal defence, conflict resolution, and compliance purposes.",
+      "detail": "Account deletion: edit/deactivate profile, request permanent removal. Data subject rights: access, correct, transfer, restrict, delete, revoke permission. Marketing opt-out available. Retains records during membership and after for legal defence, conflict resolution, audits, legitimate interests, and legal compliance.",
+      "policy_excerpt": "You may edit or deactivate your profile, then request permanent removal. You can ask to access, correct, transfer, restrict, or delete your records, and you may revoke permission... The service keeps records during membership and afterward as needed to settle conflicts, mount legal defenses, perform reviews, pursue legitimate interests, or obey statutes.",
+      "concerns": ["Data retained after deletion for legal purposes", "No specific retention timeline given"],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not clearly explain how Coffee Meets Bagel will notify you if it changes its privacy rules. There is no mention of email alerts, in-app notifications, or advance notice periods.",
+      "detail": "No explicit mention of policy change notification mechanism in the extracted policy summary. No commitment to notify users of changes.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of policy change notification", "No guarantee users will be informed of updates"],
+      "score_impact": -2.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
+    ],
+    "total_deductions": 94.5,
+    "final_score": 54,
+    "grade": "D"
+  }
+}

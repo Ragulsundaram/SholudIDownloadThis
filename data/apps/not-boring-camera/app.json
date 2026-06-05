@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.notboring.software/privacy",
+    "terms_url": "https://www.notboring.software/privacy",
+    "policy_last_updated": "2025-03-13",
+    "needs_review": true,
+    "review_notes": "The EULA references a different privacy policy URL (andy.works/privacy) and contains boilerplate 'contributions' language that appears to contradict the privacy policy's 'no data collection' claim. The privacy policy itself is strong and explicit, but the legal documents contain inconsistencies that should be flagged for human review."
+  },
+
+  "app": {
+    "slug": "not-boring-camera",
+    "name": "(Not Boring) Camera",
+    "developer": "Not Boring Software Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/not-boring-camera/id6737783441",
+    "app_store_id": "6737783441",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/25/f9/2c/25f92ce9-3d5b-f40c-b842-311a7ca9e816/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Photo & Video",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 87,
+    "grade": "A",
+    "one_liner": "A camera app with an unusually strong privacy promise: no personal data collection, no sharing, no tracking.",
+    "summary": "(Not Boring) Camera explicitly promises not to collect or store any personal data, not to share data with outside parties, and to use HTTPS for all communication. The developer states they don't want to know who you are or how you use their apps. However, server logs contain IP addresses, policy changes are only posted on the page without advance notice, and the legal terms contain some boilerplate language that contradicts the privacy policy in places.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "The developer makes an explicit, strong commitment to not collecting personal data, which is rare for a camera app. The few concerns are minor and technical."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "policy_can_change_without_notice",
+        "title": "Policy changes posted without advance warning",
+        "plain_english": "The developer can update the privacy policy anytime and only promises to post the new version on the page. They don't promise to email you or show a popup when rules change.",
+        "severity": "medium"
+      },
+      {
+        "id": "ip_address_logged",
+        "title": "Your IP address is stored in server logs",
+        "plain_english": "When you use the app, your IP address is saved in the server logs for a short time. This is common practice, but it means your approximate location can be guessed.",
+        "severity": "low"
+      },
+      {
+        "id": "eula_contradicts_privacy_policy",
+        "title": "Legal terms contradict the privacy policy",
+        "plain_english": "The license agreement says the developer can access your personal information and photos, while the privacy policy says they don't collect any personal data. These two documents say different things.",
+        "severity": "low"
+      },
+      {
+        "id": "no_formal_deletion_process",
+        "title": "No formal data deletion process",
+        "plain_english": "Since the developer claims they don't store personal data, there's no form or email to request deletion. But there's also no clear confirmation of what happens to server logs.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "no_personal_data_collected",
+        "title": "Developer explicitly collects no personal data",
+        "plain_english": "The privacy policy clearly states: 'We neither store nor collect any personal data.' This is one of the strongest privacy promises you'll find in a camera app.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_data_sharing",
+        "title": "No sharing with outside parties",
+        "plain_english": "The developer says they don't share your data with anyone outside the company, except when absolutely necessary to make the app work.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_tracking_no_ads",
+        "title": "No ads and no behavioural tracking",
+        "plain_english": "The developer says they don't want to know how you use the app, and there's no mention of ads or tracking companies.",
+        "severity": "positive"
+      },
+      {
+        "id": "https_for_all_communication",
+        "title": "All connections use HTTPS encryption",
+        "plain_english": "Every bit of data sent between your phone and the developer's servers is encrypted, so nobody in between can read it.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_children_under_13",
+        "title": "App not aimed at children under 13",
+        "plain_english": "The developer clearly says their apps are not meant for kids under 13 and they don't knowingly collect information from children.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "It's a camera app, so it needs access to your camera when you press the shutter button. The developer says your photos are not uploaded to their servers.",
+      "detail": "Camera access is on-demand and required for the core function. The privacy policy explicitly states no personal data is collected, implying photos remain on-device.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": ["While the policy says no data is collected, the EULA contains contradictory language about accessing 'personal information.'"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't ask for your location, and the privacy policy doesn't mention tracking where you are.",
+      "detail": "No location access is mentioned in the privacy policy. The only location reference is for the Weather app in the developer's suite.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't access your contacts, and the privacy policy doesn't mention them at all.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "As a camera app, it saves photos to your phone's photo library when you take them. The developer says they don't upload these to their own servers.",
+      "detail": "Photos are stored locally in the device's photo library. The privacy policy states no personal data is collected or stored by the developer.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer explicitly promises not to share your data with anyone outside the company.",
+      "detail": "The privacy policy contains a clear, explicit negative statement about data sharing.",
+      "policy_excerpt": "We don’t share data with outside parties except to the extent necessary to accomplish basic functionality.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't ask you to create an account or give your name, email, or other personal details.",
+      "detail": "No account creation or identity data collection is mentioned. The policy explicitly states no personal data is collected.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says they don't track how you use the app and there are no ads.",
+      "detail": "The privacy policy explicitly states the developer doesn't want to know how users use their apps. No advertising or cross-app tracking is mentioned.",
+      "policy_excerpt": "We don’t want to know who you are or how you use our apps.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says their apps aren't meant for kids under 13, but there's no way to enforce this in the app.",
+      "detail": "The policy states the services do not address anyone under 13 and they don't knowingly collect data from children under 13.",
+      "policy_excerpt": "Our services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.",
+      "concerns": ["No technical enforcement mechanism for the 13+ age requirement."],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app connects to the internet, and the developer's servers store your IP address in temporary logs.",
+      "detail": "The policy acknowledges that server software stores IP addresses in temporary memory or logs. This is standard practice.",
+      "policy_excerpt": "Our server software stores basic technical information, such as your IP address, in temporary memory or logs.",
+      "concerns": ["IP addresses can be used to infer approximate location."],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer collects basic technical information about your device for compatibility and support, but says it's not tied to your identity.",
+      "detail": "The EULA mentions collection of technical data about the device, system, and application software for product support and improvement, 'as long as it is in a form that does not personally identify you.'",
+      "policy_excerpt": "Licensor may periodically collect and use technical data and related information about your device, system, and application software, and peripherals... as long as it is in a form that does not personally identify you.",
+      "concerns": ["Standard analytics and server logs may include device model, OS version, and app version."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't collect any health or body-related data.",
+      "detail": "No health, fitness, or biometric data collection is mentioned, and the app type does not suggest it would be needed.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app offers in-app purchases which are handled by Apple. The developer never sees your credit card.",
+      "detail": "In-app purchases are processed through the App Store. The developer explicitly states they don't collect personal data, so payment credentials are handled entirely by Apple.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": ["Purchase history is still a data point held by Apple that could reveal app usage patterns."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Since the developer says they don't store your personal data, there's nothing to delete. But there's no clear process for removing server logs either.",
+      "detail": "The developer claims no personal data is stored, so formal deletion mechanisms are not offered. However, IP logs and technical data may still exist on servers.",
+      "policy_excerpt": "We neither store nor collect any personal data.",
+      "concerns": ["No explicit data deletion request process for server-stored technical logs."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer can change the privacy policy anytime and only promises to post the new version on their website. They won't email you or show a notice in the app.",
+      "detail": "No advance notice mechanism, email alert, or re-consent requirement is mentioned. Users are expected to check the page manually.",
+      "policy_excerpt": "We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.",
+      "concerns": ["No advance notification or active re-agreement mechanism for policy changes."],
+      "score_impact": 3.25
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 27.25,
+    "final_score": 87,
+    "grade": "A"
+  }
+}

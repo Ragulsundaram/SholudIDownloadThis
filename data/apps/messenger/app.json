@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-kimi-k2.6",
+    "policy_url": "https://www.facebook.com/about/privacy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-12-16",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "messenger",
+    "name": "Messenger",
+    "developer": "Meta Platforms, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/messenger/id454638411",
+    "app_store_id": "454638411",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e0/3b/aa/e03baa11-f46f-b14a-ff54-3332d76cd808/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "Productivity",
+    "description": "A free messaging app for chat, voice and video calls, stories, communities, broadcast channels, and AI assistance by Meta."
+  },
+  "verdict": {
+    "overall_risk": "dangerous",
+    "score": 29,
+    "grade": "F",
+    "one_liner": "Messenger is deeply integrated into Meta's surveillance ecosystem: it scans your messages, tracks your behavior across apps and websites, shares data with hundreds of partners, and uses everything to target you with ads.",
+    "summary": "Messenger operates under Meta's unified privacy policy, one of the most aggressive data-collection frameworks in the tech industry. Every message you send, every photo you share, every call you make, and every contact you sync is collected, analyzed, and shared across Meta's family of apps and with a vast network of advertisers, analytics firms, measurement vendors, and AI training systems. The app tracks your precise location, fingerprints your device, monitors whether the app is in the foreground, and even records off-Meta activity from partner websites. While Messenger offers end-to-end encryption as an option for some chats, the default mode allows Meta to access message content for safety review, AI training, and ad targeting. Children's data protections are minimal despite a 12+ rating. Data deletion is available but broad legal and safety retention exceptions apply.",
+    "recommendation": "avoid",
+    "recommendation_reason": "Messenger is a functional messaging app used by billions, but its privacy cost is extraordinarily high. Meta collects, analyzes, and monetizes nearly every interaction. If you need a messaging app and value privacy, use Signal, WhatsApp (with caveats), or another privacy-first alternative instead."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_message_content_scanned",
+        "title": "Messages scanned for ads and AI training",
+        "plain_english": "Unless you specifically turn on end-to-end encryption for each chat, Meta can read the content of your messages. It uses this to train AI, show you personalized ads, and review content for safety.",
+        "severity": "high"
+      },
+      {
+        "id": "red_cross_app_tracking",
+        "title": "Tracks your activity across apps and websites",
+        "plain_english": "Meta receives information about what you do on other apps and websites through its business tools, pixels, and social plugins. This happens even if you do not have a Meta account.",
+        "severity": "high"
+      },
+      {
+        "id": "red_audience_network",
+        "title": "Follows you with ads across the internet",
+        "plain_english": "Through Meta Audience Network, the company tracks you across apps and websites you visit and shows you personalized ads based on your Messenger activity and profile.",
+        "severity": "high"
+      },
+      {
+        "id": "red_massive_third_party_sharing",
+        "title": "Shares your data with hundreds of partners",
+        "plain_english": "Meta shares your information with advertisers, analytics companies, measurement vendors, marketing vendors, external researchers, AI integrations, service providers, and integrated partners.",
+        "severity": "high"
+      },
+      {
+        "id": "red_device_surveillance",
+        "title": "Monitors what your device is doing in real time",
+        "plain_english": "Meta collects detailed device signals including whether the app is in the foreground, if your mouse is moving, your exact device model, operating system, network details, and unique identifiers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_contacts_uploaded",
+        "title": "Uploads your entire phonebook to find friends",
+        "plain_english": "When you sync your phone contacts, Meta copies and stores your entire address book on its servers. It uses this to suggest friends and build connection maps.",
+        "severity": "high"
+      },
+      {
+        "id": "red_camera_roll_access",
+        "title": "Scans your camera roll when you share photos",
+        "plain_english": "Messenger can access your full photo library, not just the photos you choose to send. Meta analyzes the content, metadata, and context of images you share through its camera features.",
+        "severity": "high"
+      },
+      {
+        "id": "red_sensitive_data_collected",
+        "title": "Collects sensitive personal information",
+        "plain_english": "Meta asks for and stores information with special legal protections, such as your religious views, sexual orientation, political opinions, health details, and racial or ethnic origin if you provide them.",
+        "severity": "high"
+      },
+      {
+        "id": "red_children_weak_protection",
+        "title": "Weak protections for young users",
+        "plain_english": "The app is rated 12+ on the App Store and collects the same extensive data from teenagers as from adults. There is no meaningful age-gating or reduced data collection for minors.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_retention_broad",
+        "title": "Keeps data indefinitely with broad exceptions",
+        "plain_english": "Meta decides how long to keep your data case by case. Even after you delete your account, some information is kept for extended periods for legal, safety, and integrity reasons.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_e2e_encryption_option",
+        "title": "End-to-end encryption available for some chats",
+        "plain_english": "You can turn on end-to-end encryption for individual chats and calls, which means only you and the person you are talking to can read the messages. Meta cannot access the content.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_disappearing_messages",
+        "title": "Disappearing messages in encrypted chats",
+        "plain_english": "In encrypted conversations, you can set messages to disappear after they have been read, giving you more control over how long your chat history lasts.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_edit_unsend",
+        "title": "Edit and unsend messages",
+        "plain_english": "You can edit a message for up to 15 minutes after sending it, or remove it entirely from the chat for everyone.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Messenger uses your camera for photos, videos, video calls, and AI-powered masks, filters, avatars and effects. It also uses your microphone for voice messages and calls. Meta collects and stores the content you create through these features.",
+      "detail": "Camera used for photos, videos, video calls, masks, filters, avatars, effects. Microphone used for voice messages and calls. Content created through camera and voice features is collected by Meta. Camera roll settings also grant access to stored photos.",
+      "policy_excerpt": "Content that you provide through our camera feature or your camera roll settings, or through our voice-enabled features.",
+      "concerns": ["Camera content collected and analyzed", "Camera roll access beyond selected photos", "Voice content processed for AI and safety"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Messenger collects your location from your device settings, GPS, and your IP address. It uses this to personalize content, show you nearby recommendations, and target you with location-based ads.",
+      "detail": "Location-related information collected through device settings, GPS, and IP address. Used for personalizing features, content, recommendations, stories, and ads. Also used for safety, integrity, and measuring advertising effectiveness.",
+      "policy_excerpt": "Information that you've shared through your device settings (e.g. GPS location). Location-related information.",
+      "concerns": ["GPS location collected", "IP-based location inference", "Location used for ad targeting", "Shared across Meta products"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Messenger asks to sync your phone contacts so it can suggest friends who are already on the platform. Your entire address book is uploaded to Meta's servers and used to build connection maps and friend recommendations.",
+      "detail": "Contacts synced from phone to find friends on Messenger. Uploaded to Meta servers. Used for friend suggestions and building social graph. Part of the 'Friends, followers and other connections' data category.",
+      "policy_excerpt": "Friends, followers and other connections",
+      "concerns": ["Entire phonebook uploaded", "Stored on Meta servers", "Used for friend suggestions and graph building"],
+      "score_impact": -13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Messenger can access your camera roll and photo library to let you share images and videos. It also supports sending large files up to 100MB directly in chat. Meta analyzes the content and metadata of files you share.",
+      "detail": "Camera roll access for sharing photos and videos. File sharing up to 100MB supported. Meta collects content provided through camera features and camera roll settings. Metadata about content is also collected.",
+      "policy_excerpt": "Content that you provide through our camera feature or your camera roll settings... Metadata about content",
+      "concerns": ["Full camera roll access", "File content and metadata collected", "Photos analyzed for AI training and ads"],
+      "score_impact": -6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "dangerous",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta shares your information with an enormous network of third parties including advertisers, analytics firms, measurement vendors, marketing vendors, external researchers, AI integrations, service providers, and integrated partners. It also shares data across all Meta companies including Facebook, Instagram, and WhatsApp.",
+      "detail": "Information shared with: Advertisers and Audience Network publishers, analytics partners, commerce partners, integrated partners, measurement vendors, marketing vendors, service providers, external researchers, AI integrations, and other third parties. Also shared across Meta Companies (Facebook, Instagram, WhatsApp). Data may be transferred in business sales.",
+      "policy_excerpt": "We don't sell any of your information to anyone and we never will. We also require partners and other third parties to follow rules about how they can and cannot use and disclose the information that we provide.",
+      "concerns": ["Broad sharing with advertisers and ad networks", "Cross-company sharing with all Meta properties", "External researcher access", "AI integration data sharing", "Integrated partners receive user data", "Business transfer clause"],
+      "score_impact": -30
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Messenger requires your real name, email, phone number, and public profile. It links this to everything you do across Meta products and uses it to build an advertising profile that follows you across the internet.",
+      "detail": "Requires real identity (name, email, phone). Public profile information collected. Linked to activity across Meta Products. Used for personalizing ads, content, and recommendations. Account info shared with integrated partners for login.",
+      "policy_excerpt": "Your public profile information (including your name, username and profile picture). We'll use information that advertisers, businesses and other partners provide us about activity off Meta Company Products that we have associated with you to personalise ads.",
+      "concerns": ["Real identity required", "Profile linked to advertising", "Cross-product identity linking", "Off-Meta activity association"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Messenger is part of Meta's massive advertising machine. It tracks every tap, scroll, and message to build a profile of your interests. This profile is used to show you ads on Messenger, Facebook, Instagram, and thousands of other apps and websites through Meta Audience Network.",
+      "detail": "Extensive behavioral tracking: types of content viewed, interactions, apps used, actions taken, time/frequency/duration of activities, purchases, hashtags. Combined with off-Meta activity from partners. Used for personalized ads across Meta Products and Audience Network on third-party apps/sites. Also used for cross-device tracking.",
+      "policy_excerpt": "Receiving and using information from third parties to tailor the ads that you see: We'll use information that advertisers, businesses and other partners provide us about activity off Meta Company Products that we have associated with you to personalise ads that we show you on our Products, and on websites, apps and devices that use our advertising services.",
+      "concerns": ["Cross-app ad tracking via Audience Network", "Off-Meta activity tracking", "Behavioral profiling for ads", "Cross-device tracking", "Every interaction monetized"],
+      "score_impact": -25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Messenger is rated 12+ on the App Store, meaning teenagers can download it. Meta collects the same extensive data from minors as from adults, including messages, location, device info, and contacts, with no meaningful reduced tracking for underage users.",
+      "detail": "App Store rating 12+. No age-specific data collection limitations mentioned in policy. Teenagers subject to same extensive tracking as adults. Meta claims not to target ads based on information with special protections, but general behavioral tracking still applies to minors.",
+      "policy_excerpt": "",
+      "concerns": ["12+ rating with full adult-level tracking", "No reduced data collection for minors", "Behavioral profiling applies to teens", "Message content accessible to Meta in default mode"],
+      "score_impact": -6.5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Messenger logs your IP address, network details, and internet connection information continuously. Meta uses this for security, to estimate your location, and to track which networks you use across its products.",
+      "detail": "IP address collected continuously. Network connection information logged. Device signals collected. Used for security, location inference, ad targeting, and measuring product performance. Browser and app logs collected even for non-account holders.",
+      "policy_excerpt": "Information about the network that you connect your device to, including your IP address. Browser and app logs of your visits to public content.",
+      "concerns": ["IP address continuously logged", "Network details tracked", "Used for location inference", "Logs kept even without account"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta collects an extraordinarily detailed picture of your device including its exact model, operating system, unique identifiers, device signals, whether the app is in the foreground, and even if your mouse is moving. This is used to tell humans from bots, but also to track and profile you.",
+      "detail": "Device characteristics, device software, unique identifiers, device signals, foreground/background status, mouse movement detection, network connection info, IP address, cookies. Used for security, personalization, ads, and bot detection.",
+      "policy_excerpt": "Device characteristics and device software. What you're doing on your device, such as whether our app is in the foreground or if your mouse is moving (which can help tell humans from bots). Identifiers that tell your device apart from other users'. Device signals.",
+      "concerns": ["Extensive device fingerprinting", "Foreground/background monitoring", "Mouse movement tracking", "Unique identifiers linked to profile", "Cross-device tracking"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Messenger does not directly collect health data, but its AI may process content you share that reveals health information. Meta also explicitly asks for sensitive information such as religious views, sexual orientation, political opinions, and racial origin if you choose to provide it.",
+      "detail": "No direct health app integration. However, 'information with special protections' includes health, racial/ethnic origin, sexual orientation, political views, religious views, philosophical beliefs, trade union membership if explicitly provided. Meta states this is not used for ads but is used for personalization and analytics.",
+      "policy_excerpt": "Any information with special protections that you choose to provide, such as your religious views, your sexual orientation, political views, health, racial or ethnic origin, philosophical beliefs or trade union membership.",
+      "concerns": ["Sensitive data categories collected if provided", "Used for personalization and analytics", "Not explicitly barred from AI training"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Messenger supports payments through Meta Pay and other checkout experiences. Meta collects and stores truncated credit card information and your purchase history. This data is also used for analytics and personalization.",
+      "detail": "Purchases and transactions collected, including truncated credit card information. Payment facilitation through Meta Pay and other Meta checkout experiences. Purchase history used for personalization, analytics, and ads.",
+      "policy_excerpt": "Purchases or other transactions that you make, including truncated credit card information. Facilitate your purchases and payments on Meta Pay or other Meta checkout experiences.",
+      "concerns": ["Truncated credit card info stored", "Purchase history tracked", "Payment data used for personalization"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can download your data, port it elsewhere, or delete your account. However, Meta keeps some information for extended periods for legal, safety, and integrity reasons even after deletion.",
+      "detail": "Download, port, and delete options available through settings. However, retention is case-by-case and some information is kept for extended periods for legal obligations, safety, security, integrity, and terms enforcement. Vanish mode messages retained for less time than regular messages.",
+      "policy_excerpt": "We keep information for as long as we need it to provide our products, comply with legal obligations or to protect our or other's interests. In some instances and for specific reasons, we'll keep information for an extended period of time.",
+      "concerns": ["Extended retention for legal/safety reasons", "No guaranteed complete erasure", "Case-by-case retention decisions"],
+      "score_impact": -6.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Meta says it will notify you before making important changes to its privacy rules, and you will have a chance to review them before continuing to use the app.",
+      "detail": "Users notified before material changes. Opportunity to review revised policy before choosing to continue. Stronger than implicit acceptance but continued use still implies consent.",
+      "policy_excerpt": "We'll notify you before we make material changes to this Policy. You'll have the opportunity to review the revised Policy before you choose to continue using our products.",
+      "concerns": ["Continued use implies consent after review period"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "data_sharing_third_parties", "risk": "dangerous", "max": 30, "rate": 1.0, "deduction": 30 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "behavioural_ad_tracking", "risk": "dangerous", "max": 25, "rate": 1.0, "deduction": 25 },
+      { "category": "childrens_data", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "data_deletion_user_rights", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 145.5,
+    "final_score": 29,
+    "grade": "F"
+  }
+}

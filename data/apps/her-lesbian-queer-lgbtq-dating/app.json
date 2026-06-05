@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://weareher.com/privacy/",
+    "terms_url": "http://weareher.com/terms",
+    "policy_last_updated": "2025-03-11",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "her-lesbian-queer-lgbtq-dating",
+    "name": "HER: Lesbian & Queer LGBTQ Dating",
+    "developer": "Bloomer Inc",
+    "app_store_url": "https://apps.apple.com/in/app/her-lesbian-lgbtq-dating/id573328837",
+    "app_store_id": "573328837",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d5/6b/4d/d56b4d26-509a-e9fe-f24d-d9918ae8423c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "Social Networking",
+    "description": "A dating and community app for queer women, lesbian, bi, nonbinary, trans, and gender nonconforming folks. Features matching, chat, communities, events, and optional premium subscriptions."
+  },
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 50,
+    "grade": "D",
+    "one_liner": "Collects highly sensitive LGBTQ+ identity data, precise location, and extensive activity logs, then shares them with advertising partners.",
+    "summary": "HER is a dating app for the LGBTQ+ community that collects sexual orientation, gender identity, precise geolocation, photos, messages, and detailed usage behavior. This data is shared with advertising networks (AppLovin), marketing platforms (Braze, Branch), and analytics providers. While the app offers in-app controls for data deletion and ad opt-out, the default data practices are broad and heavily oriented toward advertising and profiling.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app collects and shares highly sensitive data including sexual orientation and precise location with third-party advertisers and analytics platforms. While users can opt out of personalized ads and delete their account, the default tracking is extensive and the profile data is visible to other users unless you pay for premium incognito mode."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_sexual_orientation_collected",
+        "title": "Collects and shares your sexual orientation with advertisers",
+        "plain_english": "The app asks for your sexual orientation, gender identity, and dating preferences as part of your profile. This sensitive LGBTQ+ data is then used to show you targeted ads and may be shared with advertising partners.",
+        "severity": "high"
+      },
+      {
+        "id": "red_precise_location_shared",
+        "title": "Precise location is collected automatically and shared with other users",
+        "plain_english": "The app automatically collects your exact GPS location every time you open it and shows other users approximately how far away you are. You cannot use the Meet or Nearby features without enabling this.",
+        "severity": "high"
+      },
+      {
+        "id": "red_ad_tracking_networks",
+        "title": "Tracks your activity across the app for targeted ads",
+        "plain_english": "The app uses third-party services like AppLovin, Braze, and Branch to track how you use the app, what ads you click, and where you came from. This is used to show you targeted ads and plan marketing campaigns.",
+        "severity": "high"
+      },
+      {
+        "id": "red_profile_public_by_default",
+        "title": "Your profile is visible to all users by default",
+        "plain_english": "The photos, bio, age, and personal details you add to your profile are visible to every other user of the app. To hide your profile, you need to pay for premium incognito mode or block individual users one by one.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_messages_analyzed",
+        "title": "Your messages may be analyzed by third parties",
+        "plain_english": "The policy says third-party analytics services may analyze your messaging behavior, including who you message and how often. This data may be linked to your personal information.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_in_app_controls",
+        "title": "In-app controls for data export, deletion, and ad opt-out",
+        "plain_english": "You can request a copy of your data, stop personalized ads, or delete your account entirely directly from the app settings without needing to email support.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_sale_claim",
+        "title": "Explicitly states it does not sell your personal data",
+        "plain_english": "The policy says HER does not sell your personal data, though it does use it for targeted advertising through third-party partners.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_block_report",
+        "title": "Block and report features to protect your privacy",
+        "plain_english": "You can block specific users from seeing or interacting with you, and report users who violate community guidelines or make you uncomfortable.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_under_16_removed",
+        "title": "Users under 16 are removed if discovered",
+        "plain_english": "If the app learns that someone under 16 has created an account, it will promptly delete their data and prevent them from using the service.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects visual information like photos for your profile. The policy mentions audio and visual information is collected, but does not explicitly describe camera or microphone access.",
+      "detail": "The policy lists audio, electronic, and visual information as collected personal data categories. Users upload photos to their profile. There is no explicit mention of camera or microphone permissions, but visual content is a core feature.",
+      "policy_excerpt": "Audio, electronic, visual information or similar information.",
+      "concerns": ["Visual information collected as personal data"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your exact location every time you open it and shows other users roughly how far away you are. You cannot use the Meet or Nearby features without turning this on.",
+      "detail": "Precise geolocation is collected automatically when the app opens. It is shared as rough geolocation to other users. Location services are required for core matching features. The policy explicitly states that if location is disabled, Meet and Nearby functions will not work.",
+      "policy_excerpt": "When you have an account with us, unless you've disabled location services, the Mobile App will automatically collect your location when you open it... If location services are not enabled for the Mobile App, you won't be able to see any other users in the 'Meet' or 'Nearby' functions of the app.",
+      "concerns": ["Precise geolocation collected automatically", "Shared with other users", "Required for core features"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention contacts or phonebook access.",
+      "detail": "There is no mention of contacts, address book, or phonebook data in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention file or storage access.",
+      "detail": "The policy does not explicitly discuss access to device storage, photo libraries, or file systems beyond visual information collection.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Your data is shared with advertising networks like AppLovin, marketing platforms like Braze and Branch, analytics providers, cloud hosting services, and payment processors.",
+      "detail": "The policy discloses sharing with AppLovin for ad display, Braze for marketing campaign management and messaging behavior analysis, Branch for app attribution, Google Analytics, cloud providers for hosting, Stripe and RevenueCat for payments. Some analytics services may associate usage data with personal information.",
+      "policy_excerpt": "We may share your Personal Information in order to select and display targeted advertisements. Currently, vendors such as AppLovin provide services for this purpose... We also currently use a service called Braze to help understand our advertising interactions with users, analyze messaging behaviors in the Mobile App.",
+      "concerns": ["Shared with advertising networks", "Shared with marketing platforms", "Analytics may associate usage with personal info", "Messaging behavior analyzed by third parties"],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects extensive identity data including your name, age, gender, sexual orientation, photos, physical characteristics, education, and employment. This is shown to other users and used for advertising.",
+      "detail": "The policy explicitly collects name, physical characteristics, gender, sexual orientation, dating preferences, photos, education, employment history, and other profile data. This is displayed to other users as a core feature and used for tailoring ads and content.",
+      "policy_excerpt": "When you create a profile, you have the option of adding a name, photos, a bio, and certain other details about your gender, your sexual orientation and your dating preferences... Whatever you choose to add to your profile will be visible to other users of the Mobile App.",
+      "concerns": ["Sexual orientation collected and used for ads", "Profile visible to all users by default", "Sensitive identity data shared with advertisers"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app constantly tracks how you use it, what you click, and how you interact with ads. It uses this to show you targeted ads and understand marketing effectiveness.",
+      "detail": "The policy describes extensive tracking including patterns of clicks, session length, messaging patterns, browsing history, search history, and interaction with advertisements. Third-party services track users across marketing campaigns and may place persistent identifiers on devices. Branch tracks whether users created accounts or made purchases from marketing leads.",
+      "policy_excerpt": "We collect certain non-identifiable information about your use of the Mobile App, such as patterns of clicks, session length, messaging patterns and other similar technical information... Your Account Information and Usage Information may be used by these third parties to choose advertisements likely to be relevant for you.",
+      "concerns": ["Extensive click and messaging pattern tracking", "Persistent identifiers placed by Branch", "Third-party ad networks track behavior", "Marketing campaign attribution"],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is strictly for adults 18 and older. If someone under 16 is found using the app, their data is deleted and they are removed.",
+      "detail": "The policy states the app is not directed at children and no one under 18 is eligible. Birth date is collected during signup to verify adulthood. If a user under 16 is discovered, their data is promptly removed. The app is rated 17+ on the App Store.",
+      "policy_excerpt": "Our Services are not directed to children and no one under the age of 18 is eligible to use our Services... If we learn that a user is under 16 years of age and has misrepresented their birthday to us, we will take steps to promptly remove that user's Personal Information from our databases.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your browsing history, search history, clicks, and every interaction you have with ads and the app. Your IP address is also collected.",
+      "detail": "The policy explicitly collects internet and electronic network activity including browsing history, search history, interaction with websites/apps/ads, IP address, and clickstream data. This is used for advertising, analytics, and understanding user behavior.",
+      "policy_excerpt": "Internet or other electronic network activity information, such as browsing history, search history, and information regarding a consumer's interaction with a website, application or advertisement.",
+      "concerns": ["Browsing history collected", "Search history collected", "IP address collected", "Ad interaction tracked"],
+      "score_impact": -3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your device type, operating system, browser type, and IP address. Third-party services also place persistent identifiers on your device to track marketing leads and purchases.",
+      "detail": "The policy collects browser type, operating system, device type, and IP address. Branch places a persistent identifier on the device to track marketing campaign sources, account creation, and purchases. This is used for ad targeting and attribution.",
+      "policy_excerpt": "Branch generates URLs for use in our marketing campaigns, and when users click those links, a persistent identifier is placed onto the user's device... to indicate to us (1) the source of the marketing lead, (2) whether that user has created an account, (3) and whether the user has made a purchase.",
+      "concerns": ["Persistent identifier placed by Branch", "Device data used for ad attribution", "IP address collected"],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention health or biometric data.",
+      "detail": "There is no mention of health metrics, fitness data, or biometric authentication in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If you subscribe to premium, your payment is handled by third-party processors Stripe and RevenueCat. The app does not store your raw card details itself.",
+      "detail": "The policy mentions credit card number as a collected California category, but explicitly states that payment processing is handled by third-party providers Stripe and RevenueCat. RevenueCat is used for subscription management and revenue analysis.",
+      "policy_excerpt": "Service Providers. We may share your Personal Information with our third party service providers who provide services such as... payment processing (e.g., Stripe and RevenueCat)",
+      "concerns": ["Financial data processed by third parties"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can export your data, stop personalized ads, or delete your account directly in the app settings. However, some data may be kept for legal reasons even after you ask for deletion.",
+      "detail": "Users have in-app controls to request data export, opt out of data use for ads, or delete their account entirely. Data is retained 'as long as necessary' which may include legal obligations. No specific deletion timeframes are given.",
+      "policy_excerpt": "Delete my account and my data. When you select this option, we'll delete your account and the data it contains... We retain information about you for as long as necessary to fulfill the purposes outlined in this Privacy Policy.",
+      "concerns": ["Data retained for legal purposes after deletion request", "No specific deletion timeframe"],
+      "score_impact": -3.0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes, the new version will be posted on the website with an updated date. You are expected to check it yourself from time to time.",
+      "detail": "The policy states changes will be posted on the website with a revised date. It encourages periodic review but does not promise advance notice or require users to actively re-agree to changes.",
+      "policy_excerpt": "We will notify you of any material changes to our Privacy Policy by posting the new Privacy Policy at www.weareher.com/privacy and we will change the 'Last Updated' date above. You should consult this Privacy Policy regularly for any changes.",
+      "concerns": ["No advance notice commitment", "No requirement to actively re-agree"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3.0 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 103.25,
+    "final_score": 50,
+    "grade": "D"
+  }
+}

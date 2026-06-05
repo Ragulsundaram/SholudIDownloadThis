@@ -1,100 +1,16 @@
 [
   {
-    "slug": "seeing-ai",
-    "name": "Seeing AI",
-    "developer": "Microsoft Corporation",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/a6/66/bea6661d-294b-f35d-34e1-3128b7b12006/AppIcons-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
-    "category": "Productivity",
-    "description": "A free app that narrates the world around you using AI. Designed for the blind and low vision community.",
-    "one_liner": "A powerful accessibility app, but every photo you take is sent to Microsoft's cloud for AI analysis.",
-    "score": 80,
-    "grade": "A",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
-    "needs_review": true
-  },
-  {
-    "slug": "live-transcribe",
-    "name": "Live Transcribe",
-    "developer": "Mighty Fine Apps LLC",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/65/dd/4e/65dd4eb7-a9f5-aba3-fc04-fb5a9edd5ac6/AppIconProduction-1x_U007epad-0-1-85-220-0.png/512x512bb.jpg",
-    "category": "Utilities",
-    "description": "Live captioning for d/Deaf and hard of hearing in 145+ languages. Built for simplicity and ease of use.",
-    "one_liner": "A genuinely useful accessibility app, but it serves ads and shares some data with advertisers and third-party vendors.",
-    "score": 75,
-    "grade": "B",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
-    "needs_review": false
-  },
-  {
-    "slug": "wordboard-text-expander",
-    "name": "WordBoard: Text Expander",
-    "developer": "Bytesize Systems Pty Ltd",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/d0/f8/7bd0f80f-4c75-20cf-6155-76cebc951953/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-    "category": "Utilities",
-    "description": "A custom iOS keyboard that lets you save and instantly insert text snippets, phrases, templates, images, and GIFs while typing in any app.",
-    "one_liner": "A keyboard app with strong on-device privacy promises, but its privacy policy is extremely minimal and contradicts the app description in places.",
-    "score": 86,
+    "slug": "not-boring-camera",
+    "name": "(Not Boring) Camera",
+    "developer": "Not Boring Software Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/25/f9/2c/25f92ce9-3d5b-f40c-b842-311a7ca9e816/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Photo & Video",
+    "description": "",
+    "one_liner": "A camera app with an unusually strong privacy promise: no personal data collection, no sharing, no tracking.",
+    "score": 87,
     "grade": "A",
     "risk": "safe",
-    "analyzed_at": "2026-05-22",
-    "needs_review": true
-  },
-  {
-    "slug": "wondergrade-learning-emotions",
-    "name": "Wondergrade: Learning Emotions",
-    "developer": "Wondergrade LLC",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/74/ef/c3/74efc338-72dc-bc96-7799-91d21160e7d0/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/512x512bb.jpg",
-    "category": "Education",
-    "description": "An interactive early childhood education app for children ages 3-8 that blends read-alouds, games, and audio stories with emotional learning.",
-    "one_liner": "A well-designed emotions-learning app for young children, but its privacy policy contradicts the app's target audience and admits to selling user data.",
-    "score": 65,
-    "grade": "C",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
-    "needs_review": true
-  },
-  {
-    "slug": "braille-academy-play-learn",
-    "name": "Braille Academy: Play & Learn",
-    "developer": "Xiang Dong",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/ac/93/f1ac93ca-2d2d-862b-6483-200600f21ac1/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/512x512bb.jpg",
-    "category": "Education",
-    "description": "An educational app that teaches Unified English Braille through 59 levels and 29 challenges. Works completely offline.",
-    "one_liner": "A clean, ad-free Braille learning app that mostly works offline, but collects some device data through Firebase analytics.",
-    "score": 84,
-    "grade": "A",
-    "risk": "safe",
-    "analyzed_at": "2026-05-22",
-    "needs_review": false
-  },
-  {
-    "slug": "wingo-daily-planner-for-kids",
-    "name": "Wingo - Daily Planner for Kids",
-    "developer": "DREAM ORIENTED YAZILIM VE BILISIM LIMITED SIRKETI",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3e/d6/bb/3ed6bbb6-803d-bfe6-6bbd-116a439117cd/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
-    "category": "Utilities",
-    "description": "A simplified daily calendar and visual planner app designed for kids, especially children with special needs and developmental disorders.",
-    "one_liner": "A helpful planner app for children with special needs that mostly keeps data on-device, but its privacy policy is a generic website template with contradictions.",
-    "score": 82,
-    "grade": "A",
-    "risk": "safe",
-    "analyzed_at": "2026-05-22",
-    "needs_review": true
-  },
-  {
-    "slug": "mimi-hearing-test",
-    "name": "Mimi Hearing Test",
-    "developer": "Mimi Hearing Technologies GmbH",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/3b/38/853b3880-14b4-08a1-0c76-fcb5428b8e1c/AppIcon-0-0-1x_U007emarketing-0-0-0-11-0-0-85-220.png/512x512bb.jpg",
-    "category": "Health & Fitness",
-    "description": "A hearing assessment app that tests a wide range of frequencies in about 5 minutes, delivers instant results, and syncs with Apple Health.",
-    "one_liner": "A popular and well-designed hearing test app, but its privacy policy is website-focused and completely silent on how your hearing data is handled.",
-    "score": 79,
-    "grade": "B",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
+    "analyzed_at": "2026-06-01",
     "needs_review": true
   },
   {
@@ -124,6 +40,33 @@
     "risk": "risky",
     "analyzed_at": "2026-05-18",
     "needs_review": true
+  },
+  {
+    "slug": "agoda-cheap-flights-hotels",
+    "name": "Agoda: Cheap Flights & Hotels",
+    "developer": "Agoda Company Pte. Ltd.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ce/0c/0f/ce0c0fd2-624e-0e91-955c-e3f30cf94216/AppIcon-0-0-1x_U007epad-0-1-0-0-0-GLES2_U002c0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "A major online travel agency for booking hotels, flights, and activities worldwide.",
+    "one_liner": "A major travel booking platform that collects extensive personal data including passport and government IDs, records customer service calls, and tracks you across devices for advertising.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "airbnb",
+    "name": "Airbnb",
+    "developer": "Airbnb, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/46/59/db/4659dbb6-6718-7b6b-0498-785cc2f82762/AppIcon-0-0-1x_U007epad-0-1-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "Global platform for booking vacation rentals, unique homes, experiences, and services.",
+    "score": 53,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "one_liner": "Collects government IDs, facial recognition, and tracks you across the web."
   },
   {
     "slug": "aisle",
@@ -196,6 +139,20 @@
     "needs_review": true
   },
   {
+    "slug": "badoo",
+    "name": "Badoo Dating: Meet New People",
+    "developer": "Badoo Software Ltd (Bumble Inc.)",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6d/ad/26/6dad2642-b39c-8c0b-45f4-97cd3500c965/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "A global dating and social networking app for meeting new people, making friends, and finding dates.",
+    "one_liner": "A dating app that collects extensive personal data including your location, photos, and biometric info, then shares it with advertisers and marketing partners for targeted ads.",
+    "score": 52,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "bazaart-ai-photo-editor-design",
     "name": "Bazaart AI Photo Editor Design",
     "developer": "Bazaart Ltd.",
@@ -208,6 +165,34 @@
     "risk": "caution",
     "analyzed_at": "2026-05-18",
     "needs_review": false
+  },
+  {
+    "slug": "be-my-eyes",
+    "name": "Be My Eyes",
+    "developer": "Be My Eyes ApS",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/68/59/2868593e-43cb-8ef3-08e9-2d04fb13f0fe/AppIcon-0-1x_U007emarketing-0-0-0-8-0-0-85-220-0.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "Connects blind and low-vision users with volunteers and AI for real-time visual assistance through video calls and photo descriptions.",
+    "one_liner": "A well-meaning app with strong security, but your video calls may be shared with third parties for AI research.",
+    "score": 75,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
+    "needs_review": false
+  },
+  {
+    "slug": "bharat-matrimony-shaadi-app",
+    "name": "Bharat Matrimony\u00ae - Shaadi App",
+    "developer": "Matrimony.com Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/31/e8/13/31e81328-fbc1-72fc-e96a-64dfd1895983/BharatAppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "India's largest and most trusted matrimonial app for finding a life partner across communities and religions.",
+    "one_liner": "A traditional matrimony app that collects extensive personal and family details, shares data with affiliates for marketing, and lacks transparency on several data practices.",
+    "score": 62,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
   },
   {
     "slug": "blinkit",
@@ -224,6 +209,34 @@
     "needs_review": true
   },
   {
+    "slug": "blippo",
+    "name": "Blippo+",
+    "developer": "Panic, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/70/98/92/709892ba-f80a-c93b-9c87-39052536c0ae/Blippo-0-0-85-220-0-6-0-2x.png/512x512bb.png",
+    "category": "Games",
+    "description": "A live-action, new wave, off-cable TV simulator. Channel-surf through soaps, sitcoms, news, and talk shows on Planet Blip.",
+    "one_liner": "A refreshingly honest TV simulator from a trusted indie developer that collects almost no data and promises not to sell what little it does.",
+    "score": 90,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "booking-com-hotels-travel",
+    "name": "Booking.com: Hotels & Travel",
+    "developer": "Booking.com B.V.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/30/a0/85/30a085ee-f3a2-125f-acb2-97604166c48e/AppIcon-0-0-1x_U007epad-0-9-0-85-220.jpeg/512x512bb.jpg",
+    "category": "Travel",
+    "description": "A travel booking app for hotels, apartments, flights, car rentals, taxis, and attractions. Offers 24/7 customer service in over 40 languages with free cancellation on most properties.",
+    "one_liner": "Collects extensive travel and personal data, shares it with hotels, airlines, advertising partners, and other Booking Holdings brands, while using AI to personalize and monitor your activity.",
+    "score": 50,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "bookmyshow-movies-events",
     "name": "BookMyShow | Movies & Events",
     "developer": "Bigtree Entertainment Pvt. Ltd.",
@@ -236,6 +249,20 @@
     "risk": "risky",
     "analyzed_at": "2026-05-16",
     "needs_review": true
+  },
+  {
+    "slug": "braille-academy-play-learn",
+    "name": "Braille Academy: Play & Learn",
+    "developer": "Xiang Dong",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/ac/93/f1ac93ca-2d2d-862b-6483-200600f21ac1/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/512x512bb.jpg",
+    "category": "Education",
+    "description": "An educational app that teaches Unified English Braille through 59 levels and 29 challenges. Works completely offline.",
+    "one_liner": "A clean, ad-free Braille learning app that mostly works offline, but collects some device data through Firebase analytics.",
+    "score": 84,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-22",
+    "needs_review": false
   },
   {
     "slug": "bumble",
@@ -322,6 +349,34 @@
     "needs_review": false
   },
   {
+    "slug": "cleartrip-flights-hotels-bus",
+    "name": "Cleartrip Flights, Hotels, Bus",
+    "developer": "Cleartrip Travel Services Pvt. Ltd.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/ce/f3/72cef34d-9ff1-ae52-50d0-023f8a801fb7/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "India's trusted travel booking app for flights, hotels, buses, and trains with seamless booking and trip management.",
+    "one_liner": "A well-known travel booking app that collects passport details, reads your text messages, and uses your data to train AI models while sharing it broadly with advertisers.",
+    "score": 46,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "coffee-meets-bagel-dating-app",
+    "name": "Coffee Meets Bagel Dating App",
+    "developer": "COFFEE MEETS BAGEL PTE. LTD.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/0a/7f/ab0a7f8b-0855-65bd-064d-7210f10c501a/AppIconWW-0-0-1x_U007ephone-0-0-0-1-0-0-85-220.png/512x512bb.png",
+    "category": "Lifestyle",
+    "description": "A dating app focused on serious relationships, offering curated daily matches, detailed profiles, and a seven-day chat limit.",
+    "one_liner": "A dating app that collects extensive personal data including sensitive attributes, sends your facial geometry to a third-party verification service, and allows external advertisers to track you across devices.",
+    "score": 54,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "craft-notes-documents-ai",
     "name": "Craft: Notes, Documents, AI",
     "developer": "Craft Docs Limited",
@@ -403,6 +458,33 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "detail-ai-video-editor",
+    "name": "Detail: AI Video Editor",
+    "developer": "Detail Technologies B.V.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/3e/89/0c3e8991-a51c-c3a9-bb54-bd418dc9f3f2/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
+    "category": "Photo & Video",
+    "description": "An AI-powered video editor for creating reaction videos, podcasts, vlogs, and livestreams with multicam recording, auto-captions, and AI auto-editing.",
+    "one_liner": "A powerful AI video editor, but it stores your recordings on its servers, tracks you for marketing across other websites, and its privacy policy hasn't been updated since 2021.",
+    "score": 64,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
+  },
+  {
+    "slug": "digi-yatra",
+    "name": "Digi Yatra",
+    "developer": "Digiyatra Foundation",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a7/a3/4c/a7a34c6f-5c3a-de77-3b2d-3c42185f55d7/AppIcon-0-0-1x_U007ephone-0-1-85-220.jpeg/512x512bb.jpg",
+    "category": "Travel",
+    "description": "India's digital travel platform for paperless, biometric-based airport entry using Self-Sovereign Identity principles.",
+    "score": 86,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -504,6 +586,20 @@
     "needs_review": false
   },
   {
+    "slug": "facebook",
+    "name": "Facebook",
+    "developer": "Meta Platforms, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/b2/c1/36b2c17e-1347-4052-ad3b-ac410d8df53d/Icon-Production-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "The world's largest social network, connecting billions of people to share updates, photos, videos, and messages.",
+    "one_liner": "The world's biggest data-collection machine: everything you do, say, and share is tracked, analyzed, and used to sell ads.",
+    "score": 30,
+    "grade": "F",
+    "risk": "dangerous",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "finch-self-care-pet",
     "name": "Finch: Self-Care Pet",
     "developer": "Finch Care Public Benefit Corporation",
@@ -557,6 +653,20 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "getyourguide-plan-book",
+    "name": "GetYourGuide: Plan & Book",
+    "developer": "GetYourGuide AG",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/35/6b/9d356b74-3b51-a2d1-c4c4-6b78b06cc9f5/logo_GYG-0-0-1x_U007ephone-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "A travel booking platform for tours, activities, and experiences worldwide.",
+    "one_liner": "A travel booking app with strong GDPR compliance and user rights, but extensive third-party data sharing for marketing and advertising.",
+    "score": 70,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -672,6 +782,48 @@
     "needs_review": false
   },
   {
+    "slug": "grindr-gay-dating-chat",
+    "name": "Grindr - Gay Dating & Chat",
+    "developer": "Grindr LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/52/a0/4f52a0b9-e49d-d5aa-8845-670ffbf5d0a9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "",
+    "one_liner": "A dating app for the LGBTQ+ community that collects highly sensitive health and location data, makes it public by default, and shares broadly with dozens of partners.",
+    "score": 47,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "grug",
+    "name": "grug",
+    "developer": "Ocho B.V.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3a/ce/a3/3acea313-0d9b-4147-431a-95cd34c2da14/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "",
+    "one_liner": "Minimal data collection with a few gaps in transparency.",
+    "score": 78,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "guitar-wiz-chords-tuner",
+    "name": "Guitar Wiz: Chords & Tuner",
+    "developer": "Bijoy Thangaraj",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c1/fb/33/c1fb331a-f2df-db28-2509-ee3c69d80dcc/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Music",
+    "description": "An all-in-one guitar companion with an extensive chord library, precision tuner, metronome, chord progressions, song maker, and song sheet scanner.",
+    "one_liner": "A guitar toolkit with an admirably simple privacy promise: no data collection at all.",
+    "score": 96,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
+  },
+  {
     "slug": "gymverse-gym-workout-planner",
     "name": "Gymverse: Gym Workout Planner",
     "developer": "FITNESS22 LTD",
@@ -714,6 +866,20 @@
     "needs_review": false
   },
   {
+    "slug": "harvee-watch-stress-monitor",
+    "name": "Harvee: Watch Stress Monitor",
+    "developer": "Peak Labs Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5b/b9/05/5bb90504-62d2-6710-b5ba-c2800ed06249/AppIcon-0-1x_U007ephone-0-1-sRGB-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "description": "An Apple Watch app that reads heart rate and HRV via HealthKit to deliver stress and recovery insights directly on your wrist.",
+    "one_liner": "A health-focused watch app that keeps every heartbeat on your device and collects almost nothing else.",
+    "score": 99,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "headway-daily-micro-learning",
     "name": "Headway: Fun & Easy Growth",
     "developer": "GTHW App Limited",
@@ -739,6 +905,34 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "hearing-buddy-speech-to-text",
+    "name": "Hearing Buddy - Speech To Text",
+    "developer": "Krager Labs LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f1/d3/64/f1d36434-c916-ece9-e03c-a739d8bce51f/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Medical",
+    "description": "Real-time speech-to-text captions for deaf and hard of hearing users, with on-device processing and Apple Health integration.",
+    "one_liner": "Marketed as privacy-first with on-device captions, but its privacy policy is a generic template that doesn't address microphone, transcripts, or health data.",
+    "score": 58,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
+  },
+  {
+    "slug": "her-lesbian-queer-lgbtq-dating",
+    "name": "HER: Lesbian & Queer LGBTQ Dating",
+    "developer": "Bloomer Inc",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d5/6b/4d/d56b4d26-509a-e9fe-f24d-d9918ae8423c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "A dating and community app for queer women, lesbian, bi, nonbinary, trans, and gender nonconforming folks. Features matching, chat, communities, events, and optional premium subscriptions.",
+    "one_liner": "Collects highly sensitive LGBTQ+ identity data, precise location, and extensive activity logs, then shares them with advertising partners.",
+    "score": 50,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -798,6 +992,34 @@
     "needs_review": false
   },
   {
+    "slug": "ixigo",
+    "name": "ixigo Train, Bus, Metro Ticket",
+    "developer": "Le Travenues Technology Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a3/5c/cd/a35ccd8e-be76-5b0b-0443-29fe4f721d68/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "India's leading travel booking app for trains, buses, flights, and hotels with real-time PNR status and trip planning.",
+    "one_liner": "A popular travel app that reads your text messages, scans your installed apps, and shares your data with dozens of advertisers and AI companies.",
+    "score": 31,
+    "grade": "F",
+    "risk": "dangerous",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "jeevansathi-marriage-app",
+    "name": "Jeevansathi.com: Marriage App",
+    "developer": "Info Edge (India) Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/e8/12/fee812ff-c611-8e39-4232-fe7a351a7c30/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "One of India's leading matrimony apps for finding a life partner, with profile verification, horoscope matching, and offline matchmaking support.",
+    "one_liner": "A popular Indian matrimony app that asks for deeply personal details including religion, caste, income, and family information, and shares your profile data with advertisers and business partners.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "jiohotstar",
     "name": "JioHotstar",
     "developer": "JIOSTAR INDIA PRIVATE LIMITED",
@@ -824,6 +1046,20 @@
     "risk": "risky",
     "analyzed_at": "2026-05-17",
     "needs_review": false
+  },
+  {
+    "slug": "katha-room-kids-audio-tales",
+    "name": "Katha Room - Kids audio tales",
+    "developer": "Parjanya Creative Solutions LLP",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/d2/3d/b8d23d68-e959-ae41-4f96-2d5e533232ae/Katha-Room-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "description": "A collection of Indian audio stories for children aged 3\u20137, narrated in English, Kannada, Hindi, Tamil and Samskrita.",
+    "one_liner": "A children's audio-story app that runs third-party ads and tracking, and uses a copy-paste privacy policy that falsely claims to collect heart-rate data through HealthKit.",
+    "score": 51,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
   },
   {
     "slug": "kic-wellness",
@@ -896,6 +1132,34 @@
     "needs_review": false
   },
   {
+    "slug": "live-transcribe",
+    "name": "Live Transcribe",
+    "developer": "Mighty Fine Apps LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/65/dd/4e/65dd4eb7-a9f5-aba3-fc04-fb5a9edd5ac6/AppIconProduction-1x_U007epad-0-1-85-220-0.png/512x512bb.jpg",
+    "category": "Utilities",
+    "description": "Live captioning for d/Deaf and hard of hearing in 145+ languages. Built for simplicity and ease of use.",
+    "one_liner": "A genuinely useful accessibility app, but it serves ads and shares some data with advertisers and third-party vendors.",
+    "score": 75,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
+    "needs_review": false
+  },
+  {
+    "slug": "makemytrip-flight-hotel-bus",
+    "name": "MakeMyTrip Flight, Hotel, Bus",
+    "developer": "MakeMyTrip India Pvt. Ltd.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8f/f9/fa/8ff9fab8-ba0a-1fcf-53c1-c05117c7cc71/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "India's leading travel booking app for flights, hotels, buses, cabs, trains, and holiday packages.",
+    "one_liner": "India's biggest travel app that collects everything from your passport to your phone contacts, then shares it with airlines, hotels, advertisers, and business partners.",
+    "score": 42,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "meesho-online-shopping",
     "name": "Meesho: Online Shopping",
     "developer": "Meesho Inc.",
@@ -907,6 +1171,20 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "messenger",
+    "name": "Messenger",
+    "developer": "Meta Platforms, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e0/3b/aa/e03baa11-f46f-b14a-ff54-3332d76cd808/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "A free messaging app for chat, voice and video calls, stories, communities, broadcast channels, and AI assistance by Meta.",
+    "one_liner": "Messenger is deeply integrated into Meta's surveillance ecosystem: it scans your messages, tracks your behavior across apps and websites, shares data with hundreds of partners, and uses everything to target you with ads.",
+    "score": 29,
+    "grade": "F",
+    "risk": "dangerous",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -952,6 +1230,20 @@
     "needs_review": false
   },
   {
+    "slug": "mimi-hearing-test",
+    "name": "Mimi Hearing Test",
+    "developer": "Mimi Hearing Technologies GmbH",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/3b/38/853b3880-14b4-08a1-0c76-fcb5428b8e1c/AppIcon-0-0-1x_U007emarketing-0-0-0-11-0-0-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "description": "A hearing assessment app that tests a wide range of frequencies in about 5 minutes, delivers instant results, and syncs with Apple Health.",
+    "one_liner": "A popular and well-designed hearing test app, but its privacy policy is website-focused and completely silent on how your hearing data is handled.",
+    "score": 79,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
+    "needs_review": true
+  },
+  {
     "slug": "mindnode-mind-map-outline",
     "name": "MindNode - Mind Map & Outline",
     "developer": "IdeasOnCanvas GmbH",
@@ -963,6 +1255,20 @@
     "grade": "A",
     "risk": "safe",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "moonlitt-moon-phase-tracker",
+    "name": "Moonlitt: Moon Phase Tracker",
+    "developer": "Flipping Hues Srls",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/af/18/72af18f4-d097-1c22-a315-bd720fd097aa/AppIcon-0-0-1x_U007epad-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Weather",
+    "description": "A moon tracker and lunar calendar app that helps you follow moon phases, plan photography, track moonrise and moonset times, visualize the moon path in AR, and monitor eclipses. Works offline with no ads or tracking.",
+    "one_liner": "A privacy-respecting app that does not collect personal data, though it uses anonymous analytics and requests location access.",
+    "score": 74,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -1022,6 +1328,20 @@
     "needs_review": true
   },
   {
+    "slug": "nba-live-games-scores",
+    "name": "NBA: Live Games & Scores",
+    "developer": "NBA MEDIA VENTURES, LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/04/18/fb/0418fb70-2b94-b6dd-e452-6997804ffac2/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
+    "category": "Sports",
+    "description": "The NBA App is your home for the season. Tap to watch live games and get free, instant access to the latest schedule, scores, highlights, news, and behind the scenes stories from across the National Basketball Association.",
+    "one_liner": "Collects extensive personal data and shares it with advertising partners and the broader NBA Family for marketing purposes.",
+    "score": 42,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "nike-run-club-running-coach",
     "name": "Nike Run Club: Running Coach",
     "developer": "Nike, Inc",
@@ -1050,6 +1370,20 @@
     "needs_review": false
   },
   {
+    "slug": "nykaa-fashion-shopping-app",
+    "name": "Nykaa Fashion - Shopping App",
+    "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/fe/56/cafe56ff-c983-d2e9-db3f-8fc815c137bd/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Shopping",
+    "description": "Indian fashion and lifestyle e-commerce app for clothing, accessories, and beauty products.",
+    "one_liner": "A popular Indian fashion shopping app that collects extensive personal data and shares it widely for advertising and logistics.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
     "slug": "nykaa-makeup-beauty-shopping",
     "name": "Nykaa \u2013 Makeup/Beauty Shopping",
     "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
@@ -1064,18 +1398,31 @@
     "needs_review": true
   },
   {
-    "slug": "nykaa-fashion-shopping-app",
-    "name": "Nykaa Fashion - Shopping App",
-    "developer": "FSN E-COMMERCE VENTURES PRIVATE LIMITED",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/fe/56/cafe56ff-c983-d2e9-db3f-8fc815c137bd/AppIcon-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/512x512bb.jpg",
-    "category": "Shopping",
-    "description": "Indian fashion and lifestyle e-commerce app for clothing, accessories, and beauty products.",
-    "one_liner": "A popular Indian fashion shopping app that collects extensive personal data and shares it widely for advertising and logistics.",
-    "score": 56,
+    "slug": "okcupid-dating-date-singles",
+    "name": "OkCupid Dating: Date Singles",
+    "developer": "Match Group Americas, LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/bb/c7/9fbbc7eb-7761-8f58-432f-dd306f8d5eb7/AppIcon-0-1x_U007ephone-0-1-85-220-0.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "",
+    "one_liner": "A data-heavy dating app that collects sensitive personal information and shares it across all Match Group platforms and with dozens of advertising partners.",
+    "score": 57,
     "grade": "C",
     "risk": "caution",
-    "analyzed_at": "2026-05-18",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
+  },
+  {
+    "slug": "ola-book-cab-auto-bike-taxi",
+    "name": "Ola: Book Cab, Auto, Bike Taxi",
+    "developer": "ANI Technologies Pvt. Ltd.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/02/37/0f/02370fb7-e32c-9a42-a591-608930171969/AppIcon-0-0-1x_U007emarketing-0-5-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "India's largest ride-hailing app for booking cabs, autos, bike taxis, and outstation rides.",
+    "score": 64,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "one_liner": "Reliable ride app, but tracks your location for ads and keeps your trip history forever."
   },
   {
     "slug": "pepperfry-furniture-store",
@@ -1162,6 +1509,20 @@
     "needs_review": false
   },
   {
+    "slug": "proloquo",
+    "name": "Proloquo",
+    "developer": "AssistiveWare B.V.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/40/69/c0406915-2cd6-7f23-26eb-5c88fea05ca4/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "description": "An intuitive Augmentative and Alternative Communication (AAC) app designed for all ages. Features a large vocabulary, word prediction, and a unique Thinking Space mode for visual communication.",
+    "one_liner": "A thoughtfully designed AAC app with strong privacy protections, explicit no-ads commitments, and excellent safeguards for children.",
+    "score": 85,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-22",
+    "needs_review": false
+  },
+  {
     "slug": "puma-shop-clothes-trainers",
     "name": "PUMA | Shop Clothes & Trainers",
     "developer": "PUMA SE",
@@ -1173,20 +1534,6 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-18",
-    "needs_review": false
-  },
-  {
-    "slug": "push-up-counter-100-pushups",
-    "name": "Push Up Counter - 100 Pushups",
-    "developer": "Foxyfitness GmbH",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/27/2c/86272cb0-ded7-12b1-9629-c658c65f164c/AppIcon-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/512x512bb.jpg",
-    "category": "Health & Fitness",
-    "description": "Push-up counter and trainer app that uses your device's camera to track reps and guide you to 100 push-ups.",
-    "one_liner": "A simple push-up counter with excellent on-device privacy for camera and health data, but ad trackers follow you around the web.",
-    "score": 65,
-    "grade": "C",
-    "risk": "caution",
-    "analyzed_at": "2026-05-19",
     "needs_review": false
   },
   {
@@ -1204,6 +1551,20 @@
     "needs_review": false
   },
   {
+    "slug": "push-up-counter-100-pushups",
+    "name": "Push Up Counter - 100 Pushups",
+    "developer": "Foxyfitness GmbH",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/27/2c/86272cb0-ded7-12b1-9629-c658c65f164c/AppIcon-0-1x_U007epad-0-1-0-sRGB-85-220-0.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "description": "Push-up counter and trainer app that uses your device's camera to track reps and guide you to 100 push-ups.",
+    "one_liner": "A simple push-up counter with excellent on-device privacy for camera and health data, but ad trackers follow you around the web.",
+    "score": 65,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-19",
+    "needs_review": false
+  },
+  {
     "slug": "rapido",
     "name": "Rapido: Bike-Taxi, Auto & Cabs",
     "developer": "Roppen Transportation Services Private Limited",
@@ -1215,6 +1576,48 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-17",
+    "needs_review": false
+  },
+  {
+    "slug": "raya",
+    "name": "Raya",
+    "developer": "Raya App Inc",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/da/d6/da/dad6da3a-f451-5a04-e999-80582bdf19dc/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "description": "A private, membership-based community for dating, networking, and friendship. Applications are reviewed and accepted before access is granted.",
+    "one_liner": "An exclusive private community with a strong 18+ age gate, but its 6-year-old privacy policy raises questions about current practices and it collects extensive personal data including your Instagram profile, contacts, and location.",
+    "score": 57,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
+  },
+  {
+    "slug": "redbus",
+    "name": "redBus: Bus, Train Booking App",
+    "developer": "Pilani Soft Labs Pvt. Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/9a/67/6e9a67f3-c612-e45f-8598-e1db95dd2057/AppIconiOS26-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "Online bus, train, ferry, shuttle, and hotel booking app with live bus tracking, seat selection, and multiple payment options. Operates in India, Southeast Asia, and Latin America.",
+    "one_liner": "A popular travel booking app that collects extensive personal and financial data, shares it widely across the MakeMyTrip group and with business partners, and explicitly reserves the right to commercially sell your aggregated information.",
+    "score": 49,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "reddit",
+    "name": "Reddit",
+    "developer": "REDDIT, INC.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/dd/5f/4add5f09-0adc-36a8-8dd0-9bce69ca2813/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.png",
+    "category": "News",
+    "description": "A social network and community platform with over 100,000 communities covering every topic imaginable \u2014 news, memes, gaming, advice, AMAs, and more.",
+    "one_liner": "A massive public forum that collects minimal identifying data by default but tracks your behaviour extensively for ads and shares data with a broad network of partners.",
+    "score": 70,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -1244,6 +1647,34 @@
     "risk": "caution",
     "analyzed_at": "2026-05-18",
     "needs_review": false
+  },
+  {
+    "slug": "sago-mini-first-words-kids-1",
+    "name": "Sago Mini First Words: Kids 1+",
+    "developer": "Sago Sago Toys Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/c4/43/7bc4431c-bdfb-50b5-8f78-fb6c17624baa/app-icon-with-sago-badge-0-0-1x_U007epad-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "description": "The best speech companion for kids. Sago Mini First Words is the most playful way to support your little one's speech development!",
+    "one_liner": "A COPPA-certified kids' speech app that collects some child data and shares with many service providers, but offers strong local protections.",
+    "score": 79,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
+    "needs_review": false
+  },
+  {
+    "slug": "seeing-ai",
+    "name": "Seeing AI",
+    "developer": "Microsoft Corporation",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/a6/66/bea6661d-294b-f35d-34e1-3128b7b12006/AppIcons-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+    "category": "Productivity",
+    "description": "A free app that narrates the world around you using AI. Designed for the blind and low vision community.",
+    "one_liner": "A powerful accessibility app, but every photo you take is sent to Microsoft's cloud for AI analysis.",
+    "score": 80,
+    "grade": "A",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
+    "needs_review": true
   },
   {
     "slug": "seven-7-minute-workout",
@@ -1286,6 +1717,30 @@
     "risk": "caution",
     "analyzed_at": "2026-05-18",
     "needs_review": false
+  },
+  {
+    "slug": "skyscanner-flights-travel",
+    "name": "Skyscanner Flights & Travel",
+    "developer": "Skyscanner Limited",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/aa/33/8baa33ed-adfe-d8fc-86c0-b386eb1febe4/LiquidGlassUniversalAppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "description": "A travel search and comparison app for finding cheap flights, hotels, and car rentals. Compares prices across airlines, OTAs, and travel agents with no booking fees. Features price alerts, flexible search, and saved trips.",
+    "one_liner": "Collects extensive travel and personal data to compare prices, then shares it with airlines, hotels, and advertisers, but provides transparent controls and strong user rights.",
+    "score": 56,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "skyscanner",
+    "name": "Skyscanner Flights & Travel",
+    "score": 73,
+    "grade": "B",
+    "risk": "caution",
+    "category": "Travel",
+    "analyzed_at": "2026-06-01",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/aa/33/8baa33ed-adfe-d8fc-86c0-b386eb1febe4/LiquidGlassUniversalAppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-0-0-85-220.png/512x512bb.jpg"
   },
   {
     "slug": "sleep-cycle-tracker-sounds",
@@ -1341,6 +1796,20 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "speechify-text-to-speech-pdf",
+    "name": "Speechify \u2013 Text to Speech PDF",
+    "developer": "Speechify Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/cb/7b/47cb7bc1-feba-23ae-4207-1648d9e057e5/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
+    "category": "Productivity",
+    "description": "Text to speech app that reads PDFs, docs, articles, and more aloud using AI voices.",
+    "one_liner": "Solid privacy stance on selling data, but loads tracking pixels and stores your documents on its servers.",
+    "score": 74,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
     "needs_review": false
   },
   {
@@ -1414,6 +1883,20 @@
     "needs_review": false
   },
   {
+    "slug": "taimi-lgbtq-dating-meet-up",
+    "name": "Taimi: LGBTQ+ Dating & Meet Up",
+    "developer": "Social Impact Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/a6/99/8ea6999b-878f-9a0a-4f91-6fe8292e11a0/Default-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "An LGBTQ+ dating and social app for meeting people, chatting, sharing content, and building connections within the community.",
+    "one_liner": "An LGBTQ+ dating app that collects and shares an extraordinary amount of personal, sensitive, and location data with dozens of third-party advertisers, moderators, and social media platforms.",
+    "score": 38,
+    "grade": "F",
+    "risk": "dangerous",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
     "slug": "tata-cliq-luxury-shopping-app",
     "name": "Tata CLiQ Luxury Shopping App",
     "developer": "Tata Unistore Limited",
@@ -1454,6 +1937,48 @@
     "risk": "risky",
     "analyzed_at": "2026-05-17",
     "needs_review": false
+  },
+  {
+    "slug": "the-outsiders-athlete-tracker",
+    "name": "The Outsiders: Athlete Tracker",
+    "developer": "Gentler Stories LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/aa/40/b6/aa40b6d6-8e0c-ade2-384f-de8b7e586a48/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Health & Fitness",
+    "description": "A privacy-first athlete tracker that reads Apple HealthKit data to provide training readiness, load ratios, workout analysis, and progress tracking. Created by the team behind Apple Watch App of the Year.",
+    "one_liner": "An exceptionally privacy-friendly fitness tracker that keeps all your health data on your device and never sends it anywhere.",
+    "score": 95,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "threads",
+    "name": "Threads",
+    "developer": "Instagram, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a3/c8/84/a3c884eb-e666-bd98-10dc-d0b06dced9a9/Prod-0-0-1x_U007ephone-0-0-0-1-0-0-P3-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "",
+    "one_liner": "Meta's text-based social app that collects extensive data, tracks you across apps, and shares widely with advertisers.",
+    "score": 54,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "tide-guide-charts-tables",
+    "name": "Tide Guide: Charts & Tables",
+    "developer": "Condor Digital LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cb/c8/32/cbc832e7-3f22-a002-c833-c9cecc579cce/AppIcon_2-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Weather",
+    "description": "Award-winning tide and marine weather app for Apple Watch, iPhone, iPad and Mac with charts, tables, widgets, and live activities.",
+    "one_liner": "A beautifully designed weather app with minimal data collection, but its privacy policy is a bare-bones template that never explains what 'Usage Data' means or whether your location leaves your device.",
+    "score": 77,
+    "grade": "B",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": true
   },
   {
     "slug": "tiimo-to-do-list-ai-planner",
@@ -1523,6 +2048,48 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-17",
+    "needs_review": false
+  },
+  {
+    "slug": "trulymadly-indian-matchmaking",
+    "name": "TrulyMadly: Indian MatchMaking",
+    "developer": "CRESCERE TECHNOLOGIES PRIVATE LIMITED",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e7/05/73/e7057316-c282-71fe-edc3-956aa41e67c1/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/512x512bb.png",
+    "category": "Lifestyle",
+    "description": "An Indian matchmaking and dating app with over 90 lakh active users, offering compatibility quizzes, trust scores, video profiles, and verification checks.",
+    "one_liner": "A popular Indian dating app that collects extensive personal and personality data, shares your profile with matches who can then reshare it to their social networks, and leaves key privacy questions unanswered.",
+    "score": 64,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "tumblr-social-media-art",
+    "name": "Tumblr: Social Media & Art",
+    "developer": "Tumblr, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a3/d0/c5/a3d0c503-4f1e-d8d9-27ab-cd17dfc30b72/TumblrIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "description": "",
+    "one_liner": "A creative social platform that collects extensive usage data for ads and shares with parent company Automattic, but offers solid content controls.",
+    "score": 58,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
+    "needs_review": false
+  },
+  {
+    "slug": "twitch-live-streaming",
+    "name": "Twitch: Live Streaming",
+    "developer": "Twitch Interactive, Inc.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c9/0b/86/c90b86d4-a447-0cfc-a1f9-aa0bc02d7b68/TwitchAppIcon-0-0-1x_U007epad-0-1-0-0-0-0-85-220.png/512x512bb.png",
+    "category": "Photo & Video",
+    "description": "A live-streaming platform for games, music, sports, esports, podcasts, and IRL content with chat, subscriptions, and broadcasting.",
+    "one_liner": "The world's biggest live-streaming platform collects extensive personal data, combines it with Amazon customer profiles, and shares it with a wide network of advertising and analytics partners.",
+    "score": 62,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -1624,6 +2191,48 @@
     "needs_review": false
   },
   {
+    "slug": "wingo-daily-planner-for-kids",
+    "name": "Wingo - Daily Planner for Kids",
+    "developer": "DREAM ORIENTED YAZILIM VE BILISIM LIMITED SIRKETI",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3e/d6/bb/3ed6bbb6-803d-bfe6-6bbd-116a439117cd/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
+    "category": "Utilities",
+    "description": "A simplified daily calendar and visual planner app designed for kids, especially children with special needs and developmental disorders.",
+    "one_liner": "A helpful planner app for children with special needs that mostly keeps data on-device, but its privacy policy is a generic website template with contradictions.",
+    "score": 82,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-22",
+    "needs_review": true
+  },
+  {
+    "slug": "wondergrade-learning-emotions",
+    "name": "Wondergrade: Learning Emotions",
+    "developer": "Wondergrade LLC",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/74/ef/c3/74efc338-72dc-bc96-7799-91d21160e7d0/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/512x512bb.jpg",
+    "category": "Education",
+    "description": "An interactive early childhood education app for children ages 3-8 that blends read-alouds, games, and audio stories with emotional learning.",
+    "one_liner": "A well-designed emotions-learning app for young children, but its privacy policy contradicts the app's target audience and admits to selling user data.",
+    "score": 65,
+    "grade": "C",
+    "risk": "caution",
+    "analyzed_at": "2026-05-22",
+    "needs_review": true
+  },
+  {
+    "slug": "wordboard-text-expander",
+    "name": "WordBoard: Text Expander",
+    "developer": "Bytesize Systems Pty Ltd",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/d0/f8/7bd0f80f-4c75-20cf-6155-76cebc951953/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Utilities",
+    "description": "A custom iOS keyboard that lets you save and instantly insert text snippets, phrases, templates, images, and GIFs while typing in any app.",
+    "one_liner": "A keyboard app with strong on-device privacy promises, but its privacy policy is extremely minimal and contradicts the app description in places.",
+    "score": 86,
+    "grade": "A",
+    "risk": "safe",
+    "analyzed_at": "2026-05-22",
+    "needs_review": true
+  },
+  {
     "slug": "workout-for-women-fit-at-home",
     "name": "Workout for Women: Fit at Home",
     "developer": "Leap Health Fitness Limited",
@@ -1635,6 +2244,20 @@
     "grade": "C",
     "risk": "caution",
     "analyzed_at": "2026-05-18",
+    "needs_review": false
+  },
+  {
+    "slug": "x",
+    "name": "X",
+    "developer": "X Corp.",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/42/bb/76/42bb76a3-87c9-2b61-728b-91254fb64d53/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "News",
+    "description": "A global social media platform for real-time conversations, breaking news, live events, and community building.",
+    "one_liner": "X is a public platform that extensively tracks your behavior, shares data with advertisers and AI partners, and builds a detailed profile across devices.",
+    "score": 40,
+    "grade": "D",
+    "risk": "risky",
+    "analyzed_at": "2026-06-01",
     "needs_review": false
   },
   {
@@ -1761,62 +2384,6 @@
     "grade": "D",
     "risk": "risky",
     "analyzed_at": "2026-05-17",
-    "needs_review": false
-  },
-  {
-    "slug": "sago-mini-first-words-kids-1",
-    "name": "Sago Mini First Words: Kids 1+",
-    "developer": "Sago Sago Toys Inc.",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/c4/43/7bc4431c-bdfb-50b5-8f78-fb6c17624baa/app-icon-with-sago-badge-0-0-1x_U007epad-0-8-0-85-220.png/512x512bb.jpg",
-    "category": "Education",
-    "description": "The best speech companion for kids. Sago Mini First Words is the most playful way to support your little one's speech development!",
-    "one_liner": "A COPPA-certified kids' speech app that collects some child data and shares with many service providers, but offers strong local protections.",
-    "score": 79,
-    "grade": "B",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
-    "needs_review": false
-  },
-  {
-    "slug": "proloquo",
-    "name": "Proloquo",
-    "developer": "AssistiveWare B.V.",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/40/69/c0406915-2cd6-7f23-26eb-5c88fea05ca4/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
-    "category": "Education",
-    "description": "An intuitive Augmentative and Alternative Communication (AAC) app designed for all ages. Features a large vocabulary, word prediction, and a unique Thinking Space mode for visual communication.",
-    "one_liner": "A thoughtfully designed AAC app with strong privacy protections, explicit no-ads commitments, and excellent safeguards for children.",
-    "score": 85,
-    "grade": "A",
-    "risk": "safe",
-    "analyzed_at": "2026-05-22",
-    "needs_review": false
-  },
-  {
-    "slug": "speechify-text-to-speech-pdf",
-    "name": "Speechify \u2013 Text to Speech PDF",
-    "developer": "Speechify Inc.",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/cb/7b/47cb7bc1-feba-23ae-4207-1648d9e057e5/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
-    "category": "Productivity",
-    "description": "Text to speech app that reads PDFs, docs, articles, and more aloud using AI voices.",
-    "one_liner": "Solid privacy stance on selling data, but loads tracking pixels and stores your documents on its servers.",
-    "score": 74,
-    "grade": "B",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
-    "needs_review": false
-  },
-  {
-    "slug": "be-my-eyes",
-    "name": "Be My Eyes",
-    "developer": "Be My Eyes ApS",
-    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/68/59/2868593e-43cb-8ef3-08e9-2d04fb13f0fe/AppIcon-0-1x_U007emarketing-0-0-0-8-0-0-85-220-0.png/512x512bb.jpg",
-    "category": "Lifestyle",
-    "description": "Connects blind and low-vision users with volunteers and AI for real-time visual assistance through video calls and photo descriptions.",
-    "one_liner": "A well-meaning app with strong security, but your video calls may be shared with third parties for AI research.",
-    "score": 75,
-    "grade": "B",
-    "risk": "caution",
-    "analyzed_at": "2026-05-22",
     "needs_review": false
   }
 ]

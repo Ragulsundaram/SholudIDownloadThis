@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://flippinghues.com/moonlitt/privacy-policy",
+    "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula",
+    "policy_last_updated": "2025-01-24",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  "app": {
+    "slug": "moonlitt-moon-phase-tracker",
+    "name": "Moonlitt: Moon Phase Tracker",
+    "developer": "Flipping Hues Srls",
+    "app_store_url": "https://apps.apple.com/in/app/moonlitt-lunar-calendar/id6444718902",
+    "app_store_id": "6444718902",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/af/18/72af18f4-d097-1c22-a315-bd720fd097aa/AppIcon-0-0-1x_U007epad-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Weather",
+    "sub_category": "Photo & Video",
+    "description": "A moon tracker and lunar calendar app that helps you follow moon phases, plan photography, track moonrise and moonset times, visualize the moon path in AR, and monitor eclipses. Works offline with no ads or tracking."
+  },
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 74,
+    "grade": "B",
+    "one_liner": "A privacy-respecting app that does not collect personal data, though it uses anonymous analytics and requests location access.",
+    "summary": "The privacy policy is short, clear, and explicitly states that Moonlitt does not collect personal data or share data with third parties for marketing or advertising. Anonymous device and usage data is sent to Mixpanel for product improvement, but users can opt out in settings. Location is requested for AR features but is never stored or tracked.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app has a strong privacy stance with no personal data collection, no advertising tracking, and transparent anonymous analytics with an easy opt-out. A few categories are not addressed in the short policy, which keeps the score from being higher."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_short_policy",
+        "title": "Privacy policy is very short and silent on several topics",
+        "plain_english": "The policy only covers a few topics and does not mention camera, contacts, health data, or how your internet activity is handled. This means there is less transparency than a full privacy policy would provide.",
+        "severity": "low"
+      },
+      {
+        "id": "red_location_request",
+        "title": "App requests location access even though it says it never stores it",
+        "plain_english": "The app asks for permission to use your location for features like the moon compass and AR, but claims it never collects, stores, or uses that location to track you. While this sounds good, any permission request creates a small risk that something could go wrong.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_personal_data",
+        "title": "Does not collect any personal data",
+        "plain_english": "The policy clearly states that Moonlitt does not collect personal data that could identify you. This is one of the best privacy commitments an app can make.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_tracking",
+        "title": "No advertising or tracking for marketing",
+        "plain_english": "The policy explicitly says it does not share data with third parties for marketing or advertising purposes, and there are no ad networks or behavioral trackers in the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_anonymous_analytics_opt_out",
+        "title": "Anonymous analytics with easy opt-out",
+        "plain_english": "The app uses Mixpanel for anonymous usage stats, but you can turn this off anytime in your device settings under Settings > Moonlitt > Analytics.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_works_offline",
+        "title": "Works offline with no ads",
+        "plain_english": "The app works without an internet connection and contains no advertisements, which means fewer opportunities for your data to be collected or shared.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention camera or microphone access, even though the app has an AR feature that likely uses the camera.",
+      "detail": "The app description mentions AR moon path visualization, which requires camera access. However, the privacy policy is completely silent on camera and microphone permissions or data handling.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on camera and microphone access despite AR features"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app asks for your location for features like the moon compass and AR view, but the policy says this data is never collected, stored, or used to track you.",
+      "detail": "The policy explicitly states that location data is requested for certain features but is never collected, stored, or used for tracking. This is a strong privacy commitment, though the permission request itself creates a small surface area for risk.",
+      "policy_excerpt": "Moonlitt may request access to your device's location for certain features. Location data is never collected, stored, or used to track you or your device.",
+      "concerns": ["Permission is requested despite claim of non-collection"],
+      "score_impact": -4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention contacts or phonebook access.",
+      "detail": "There is no mention of contacts, address book, or phonebook data in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on contacts access"],
+      "score_impact": -10.0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention file or storage access.",
+      "detail": "The policy does not discuss access to device storage, photo libraries, or file systems. The app works offline, suggesting some local data storage may occur.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on storage access"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares anonymous usage data with Mixpanel for analytics, but you can turn this off in settings. The policy says no data is shared for marketing or advertising.",
+      "detail": "The policy states that anonymous usage data may be processed by Mixpanel. It explicitly says no data is shared with third parties for marketing or advertising. Users can opt out of anonymous data collection via device settings.",
+      "policy_excerpt": "Moonlitt may utilize third-party analytics services, such as Mixpanel, to process anonymous usage data. Users can opt out of anonymous data collection via their device settings... Moonlitt does not collect personal data or share data with third parties for marketing or advertising purposes.",
+      "concerns": ["Mixpanel receives anonymous usage data"],
+      "score_impact": -9.0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect any personal data that could identify you, including name, email, or account information.",
+      "detail": "The policy explicitly states that Moonlitt does not collect personal data. No account creation or identity verification is mentioned.",
+      "policy_excerpt": "Moonlitt does not collect personal data or share data with third parties for marketing or advertising purposes.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track you for ads and contains no behavioral advertising. The only data collection is anonymous analytics for improving the app.",
+      "detail": "The policy explicitly states no data is shared for marketing or advertising. There are no ad SDKs or cross-app trackers mentioned. Anonymous analytics are used only for product improvement.",
+      "policy_excerpt": "Moonlitt does not collect personal data or share data with third parties for marketing or advertising purposes.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention how children's data is handled. The app is rated 4+ on the App Store.",
+      "detail": "The policy does not address children-specific protections, COPPA compliance, or age requirements. The app has a 4+ rating on the App Store, which means children may use it.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on children's data despite 4+ App Store rating"],
+      "score_impact": -5.0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention how your internet or network activity is logged or used.",
+      "detail": "The policy does not discuss IP address logging, network monitoring, or how internet activity is handled.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on network and internet activity"],
+      "score_impact": -2.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects basic device information like your device model and operating system, but only in anonymous form that cannot identify you.",
+      "detail": "The policy states that anonymous device information (model, operating system) is collected for analytics. It explicitly says this data cannot identify individual users.",
+      "policy_excerpt": "Moonlitt only collects anonymous data that cannot identify individual users. This includes device information (e.g., model, operating system).",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy does not mention health or biometric data.",
+      "detail": "There is no mention of health metrics, fitness data, or biometric authentication in the privacy policy.",
+      "policy_excerpt": "",
+      "concerns": ["Policy is silent on health and biometric data"],
+      "score_impact": -7.5
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is free and the privacy policy does not mention any payment or financial data collection.",
+      "detail": "The app is free on the App Store and the privacy policy does not mention in-app purchases, subscriptions, or payment data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect personal data, so there is nothing to delete. You can turn off anonymous analytics in your device settings at any time.",
+      "detail": "Since no personal data is collected, there are no personal data deletion procedures needed. Users can opt out of anonymous analytics via Settings > Moonlitt > Analytics.",
+      "policy_excerpt": "Users can opt out of anonymous data collection via their device settings: Settings > Moonlitt > Analytics.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If the privacy policy changes significantly, the app will let you know through the app or its website. However, it does not say you must agree again before the changes apply.",
+      "detail": "The policy states that significant updates will be communicated through the app or website. It does not commit to advance notice or require users to actively re-agree to changes.",
+      "policy_excerpt": "Significant updates will be communicated through the app or this website.",
+      "concerns": ["No commitment to advance notice", "No requirement to actively re-agree"],
+      "score_impact": -1.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "contacts_phonebook", "risk": "unknown", "max": 20, "rate": 0.50, "deduction": 10.0 },
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.30, "deduction": 9.0 },
+      { "category": "camera_microphone", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "health_biometric", "risk": "unknown", "max": 15, "rate": 0.50, "deduction": 7.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.50, "deduction": 5.0 },
+      { "category": "network_internet_activity", "risk": "unknown", "max": 5, "rate": 0.50, "deduction": 2.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 }
+    ],
+    "total_deductions": 52.5,
+    "final_score": 74,
+    "grade": "B"
+  }
+}

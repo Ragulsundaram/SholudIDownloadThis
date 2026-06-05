@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "http://www.cleartrip.com/privacy-policy/",
+    "terms_url": "",
+    "policy_last_updated": "2025-10",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "cleartrip-flights-hotels-bus",
+    "name": "Cleartrip Flights, Hotels, Bus",
+    "developer": "Cleartrip Travel Services Pvt. Ltd.",
+    "app_store_url": "https://apps.apple.com/in/app/cleartrip-flights-hotels-bus/id531324961",
+    "app_store_id": "531324961",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/ce/f3/72cef34d-9ff1-ae52-50d0-023f8a801fb7/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": "India's trusted travel booking app for flights, hotels, buses, and trains with seamless booking and trip management."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 46,
+    "grade": "D",
+    "one_liner": "A well-known travel booking app that collects passport details, reads your text messages, and uses your data to train AI models while sharing it broadly with advertisers.",
+    "summary": "Cleartrip collects extensive personal data including passport numbers, payment card details, and health information for travel bookings. It reads SMS messages with your permission, uses AI chatbot conversations to train AI models, and shares your data with advertising companies for behavioral targeting. While it offers account deletion and marketing opt-outs, the broad data sharing and AI training practices make it a risky choice for privacy-conscious travelers.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "The app requires sensitive documents like passports and payment cards, reads text messages, shares data with advertisers, and may use your conversations to train AI models. Consider whether the convenience of booking through Cleartrip is worth the extensive data exposure."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "ai_training_on_user_data",
+        "title": "Uses your data to train AI models",
+        "plain_english": "If you use the app's AI chatbot or other AI features, your conversations and behavior may be used to train artificial intelligence models. The policy warns that AI can produce incorrect or misleading results.",
+        "severity": "high"
+      },
+      {
+        "id": "reads_sms_messages",
+        "title": "Reads your text messages",
+        "plain_english": "With your permission, the app can access SMS messages on your phone for things like verification codes, booking updates, and checking if you qualify for certain services.",
+        "severity": "high"
+      },
+      {
+        "id": "collects_passport_government_id",
+        "title": "Collects passport and government ID",
+        "plain_english": "The app collects your passport number and other government-issued identification to verify your identity for bookings. This sensitive data is stored and processed on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "behavioral_advertising_sharing",
+        "title": "Shares your data for targeted ads",
+        "plain_english": "The app shares your personal data with advertising companies to show you targeted ads. These partners may also collect your device ID and advertising ID directly from your phone to track you across other apps and websites.",
+        "severity": "high"
+      },
+      {
+        "id": "collects_payment_card_details",
+        "title": "Collects your payment card details",
+        "plain_english": "The app collects your payment card details and billing address as part of the booking process. While payment gateways process the actual transaction, Cleartrip still handles this sensitive financial information.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "account_deletion_available",
+        "title": "You can delete your account",
+        "plain_english": "You can delete certain information and your user account directly through the website by visiting the profile and settings sections.",
+        "severity": "positive"
+      },
+      {
+        "id": "marketing_opt_out",
+        "title": "Marketing emails can be opted out",
+        "plain_english": "You can unsubscribe from promotional and marketing communications by clicking the unsubscribe link in emails or writing to the data protection officer.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_children_under_18",
+        "title": "Does not knowingly collect data from children",
+        "plain_english": "The app states it is only for adults who can legally contract, and it does not knowingly collect personal data from anyone under 18 years old.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your camera and photo gallery with your permission, mainly for uploading photos like profile pictures or travel documents.",
+      "detail": "Camera and Photo Gallery are listed as device data accessed with explicit permission. No mention of microphone access.",
+      "policy_excerpt": "With your explicit permission, access to other device data (read OTPs, camera, location) is used to enhance your experience, provide access to services, and improve security.",
+      "concerns": ["Camera access granted for unspecified purposes", "Photo gallery uploads may include personal images"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your location with your permission to provide location-based services like finding nearby hotels or airports.",
+      "detail": "Location is listed as device data accessed with explicit permission for specific functions. No mention of background or continuous location tracking.",
+      "policy_excerpt": "With your explicit permission, access to other device data (read OTPs, camera, location) is used to enhance your experience, provide access to services, and improve security.",
+      "concerns": ["Location data may be shared with third-party service providers"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your contacts and text messages with your permission. Contacts you add to reservations are collected, and SMS messages are read for verification and booking updates.",
+      "detail": "Contacts of people added to reservations are explicitly collected. SMS messages are accessed on the device with explicit permission for registration, verification, security alerts, OTPs, booking status updates, and eligibility assessment.",
+      "policy_excerpt": "Some of the data collected may include... your contacts (of people you add to reservations)... We may access SMS messages on your device for specific functions, (such as: registration and verification, sending security alerts and OTPs, sending booking status or change in the services, assessing your eligibility for certain products and services).",
+      "concerns": ["SMS content read and processed on servers", "Contacts uploaded for reservation management"],
+      "score_impact": 13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app accesses your photo gallery and text messages, which means it can view files stored on your phone.",
+      "detail": "The app accesses SMS messages and Photo Gallery on the device. While permission-based, this constitutes broad file access beyond simple user-initiated selections.",
+      "policy_excerpt": "With your explicit permission, access to other device data (read OTPs, camera, photo gallery, location, and contacts).",
+      "concerns": ["SMS content accessed", "Photo gallery accessed"],
+      "score_impact": 6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your personal data with group companies, airlines, hotels, advertising companies, and business partners who may use it to market to you or track you across other websites.",
+      "detail": "Data is shared with group companies, third-party service providers (airlines, hotels, cloud providers, payment gateways, customer service), advertising companies for behavioral advertising, professional advisors, government agencies, and potential acquirers. Partners may also collect IP address, device ID, and advertising ID directly from the user's device. Affiliates may market to the user unless explicitly opted out.",
+      "policy_excerpt": "We may share/disclose your personal data internally with our group companies and with other third parties and affiliates to provide you access to products and services offered by them. These entities and affiliates may market to you as a result of such sharing unless you explicitly opt-out.",
+      "concerns": ["Broad data sharing with affiliates and partners", "Behavioral advertising with third-party companies", "Partners collecting device-level identifiers directly", "Data transfer to potential acquirers in business transactions"],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects extensive identity data including your passport, government ID, name, age, birthday, gender, and login credentials to create your account and process bookings.",
+      "detail": "Account identity data includes name, age, birthday, gender, contact information, passport number, country of citizenship, visa details, login credentials, and government-issued identification for identity verification. Social media data may also be collected if accounts are linked.",
+      "policy_excerpt": "Some of the data collected may include name, age, birthday, gender, contact information... booking information (for each traveler: name, passport number, country of citizenship, booking reference, visa details)... account information (login credentials, account settings), billing information... and sensitive health data.",
+      "concerns": ["Passport and government ID collected and stored", "Extensive personal data linked to bookings", "Social media data collected if linked"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses cookies and works with advertising companies to track your activity and show you targeted ads based on your browsing and booking behavior.",
+      "detail": "Google Analytics, Microsoft Advertising, and third-party advertising companies are used. Cookies track page views, clicks, and search terms for ad personalization. Third-party advertising companies may use information about visits to this and other websites to provide targeted ads. Partners collect device ID, advertising ID, IP address, and browser/operating system info.",
+      "policy_excerpt": "With your consent we may liaise with third party advertising service companies for online behavioral advertising or otherwise... these third-party advertising companies employ cookies and other technologies to measure the effectiveness of websites, applications and to understand the booking behavior of the user.",
+      "concerns": ["Behavioral advertising via third-party companies", "Cross-site tracking for ad targeting", "Device ID and advertising ID collected by partners", "Search terms used for ad personalization"],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app says it is only for adults and does not knowingly collect data from children under 18.",
+      "detail": "The policy states the platform is available only to persons who can form a legally binding contract under the Indian Contract Act, 1872, and that they do not knowingly collect personal data from children under 18 years.",
+      "policy_excerpt": "Use of our Booking Platform is available only to persons who can form a legally binding contract under the Indian Contract Act, 1872. We do not knowingly solicit or collect personal data from children under the age of 18 years.",
+      "concerns": ["No technical enforcement of age restriction"],
+      "score_impact": 3
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your page views, clicks, and search terms to personalize ads, and partners may collect your IP address and device information.",
+      "detail": "Cookies are used to analyze web page flow and measure promotional effectiveness. Page views, clicks, and search terms are stored separately for ad personalization. Partners collect IP address, device ID, and browser/OS information. Google Analytics and Microsoft Advertising are explicitly named.",
+      "policy_excerpt": "We store page views, clicks and search terms used for ad personalization targeting separately from your personal information... Our partners may also: (i) collect information directly from your device, such as your IP address, device ID, advertising ID, and information about your browser or operating system.",
+      "concerns": ["Search terms used for ad targeting", "IP address and device info collected by partners", "Cross-site activity tracking"],
+      "score_impact": 1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app and its advertising partners collect your device ID, advertising ID, IP address, and details about your browser and operating system to track and identify your device.",
+      "detail": "Partners collect device ID, advertising ID, IP address, and browser/operating system information directly from the user's device. Cookies and similar technologies are used for tracking. Microsoft Advertising and Google Analytics are mentioned.",
+      "policy_excerpt": "Our partners may also: (i) collect information directly from your device, such as your IP address, device ID, advertising ID, and information about your browser or operating system; (ii) combine user information about you received from Cleartrip with information about you from other sites or services; and (iii) place or recognize a unique cookie on your browser.",
+      "concerns": ["Device ID and advertising ID collected by partners", "Cross-site combination of user data", "Unique cookies placed on browser"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app may collect sensitive health data like vaccination status when it is required for travel.",
+      "detail": "The policy explicitly mentions collecting sensitive health data (e.g., vaccination status) when required. This is stored and processed as part of the booking information.",
+      "policy_excerpt": "Some of the data collected may include... sensitive health data (e.g., vaccination status) when required.",
+      "concerns": ["Health data collected and stored", "No clarity on how health data is protected or shared"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your payment card details and billing address to process bookings. While payment gateways handle the actual transaction, Cleartrip still has access to this sensitive information.",
+      "detail": "Billing information including payment card details and billing address is explicitly listed as collected data. Payment gateways are mentioned as third-party service providers, but the policy does not state that Cleartrip never sees or stores raw card data.",
+      "policy_excerpt": "billing information (payment card details, billing address)",
+      "concerns": ["Payment card details explicitly collected", "No explicit statement that card data is tokenized or not stored"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete some information and your account through the website settings, or email the data protection officer for help with access, correction, or deletion requests.",
+      "detail": "Users can access, correct, and update personal data directly through website functionalities. Non-mandatory information and user accounts can be deleted via profile and settings sections. The data protection officer (dpo@cleartrip.com) can assist with these requests. Consent can be withdrawn by emailing the same address.",
+      "policy_excerpt": "You may access, correct and update your personal data directly through the functionalities provided on the Booking Platform. You may delete certain non-mandatory information or delete your user account by logging into our website and visiting profile and settings sections. You can also write to us at dpo@cleartrip.com to assist you with these requests.",
+      "concerns": ["Deletion requires navigating website settings", "No mention of in-app deletion option"],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company can change its privacy policy at any time. It will post the changes on its website and may send you an email for significant changes when required by law. Continued use means you accept the changes.",
+      "detail": "Changes are posted on the platform with the last updated date. Significant changes are alerted by posting the date, placing a notice on the platform, or sending an email when required by law. Continued access or use is deemed acceptance of the updated policy.",
+      "policy_excerpt": "We may update this Privacy Policy to reflect changes to our information practices. We will alert you to significant changes by posting the date our Privacy Policy got last updated, placing a notice on our Booking Platform, or by sending you an email when we are required to do so by applicable law. Your continued access to or use of any of the Services shall be deemed your acceptance of the Privacy Policy.",
+      "concerns": ["Continued use equals automatic acceptance", "No mandatory re-consent for most changes"],
+      "score_impact": 1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "childrens_data", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.3, "deduction": 1.5 }
+    ],
+    "total_deductions": 111.25,
+    "final_score": 46,
+    "grade": "D"
+  }
+}

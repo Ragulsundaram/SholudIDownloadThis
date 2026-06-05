@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.airbnb.com.au/help/article/3175",
+    "terms_url": "https://www.airbnb.com/terms",
+    "policy_last_updated": "2026-02-05",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "airbnb",
+    "name": "Airbnb",
+    "developer": "Airbnb, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/airbnb/id401626263",
+    "app_store_id": "401626263",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/46/59/db/4659dbb6-6718-7b6b-0498-785cc2f82762/AppIcon-0-0-1x_U007epad-0-1-0-0-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "Lifestyle",
+    "description": "Global platform for booking vacation rentals, unique homes, experiences, and services."
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 53,
+    "grade": "D",
+    "one_liner": "Collects government IDs, facial recognition, and tracks you across the web.",
+    "summary": "Airbnb collects extensive personal information including government-issued IDs, facial recognition data, payment details, and off-platform browsing activity. This data is shared with hosts, building management, corporate affiliates, and government authorities. While Airbnb provides some privacy controls and advance notice for policy changes, the breadth of data collection and sharing is significant.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Airbnb is functional and widely used, but it requires government ID verification, collects facial recognition data, and tracks your activity even outside the app. If privacy is a priority, consider minimizing profile data and using the platform only when necessary."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "red_government_id_collection",
+        "title": "Asks for government ID and selfie",
+        "plain_english": "Airbnb may require you to upload images of your passport, driver's license, or national ID card, plus a selfie, to verify your identity before you can book or host.",
+        "severity": "high"
+      },
+      {
+        "id": "red_facial_recognition",
+        "title": "Stores facial recognition data",
+        "plain_english": "Airbnb extracts facial recognition data from the photos and ID documents you submit for verification. This biometric information is stored and processed on their servers.",
+        "severity": "high"
+      },
+      {
+        "id": "red_communications_scanned",
+        "title": "Your messages are scanned and analyzed",
+        "plain_english": "Airbnb reviews, scans, and analyzes your emails, calls, messages, and uploaded photos on the platform for fraud prevention, safety, support, and product improvement purposes.",
+        "severity": "high"
+      },
+      {
+        "id": "red_off_platform_tracking",
+        "title": "Tracks what you do outside Airbnb",
+        "plain_english": "Airbnb collects information about pages you view and engage with before and after using the platform, even if you haven't created an account or logged in.",
+        "severity": "medium"
+      },
+      {
+        "id": "red_broad_data_sharing",
+        "title": "Data shared with hosts, buildings, and governments",
+        "plain_english": "Your personal information is disclosed to hosts, building management, third-party vendors, corporate affiliates, tax authorities, and government agencies — including in China where data may be shared without further notice.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_advance_policy_notice",
+        "title": "30-day notice for major policy changes",
+        "plain_english": "If Airbnb makes material changes to its privacy policy, it will email you at least 30 days before the changes take effect, giving you time to decide whether to cancel your account.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_regional_privacy_rights",
+        "title": "Detailed privacy rights for many regions",
+        "plain_english": "Airbnb provides specific privacy rights and contact information for residents of the EU, UK, Brazil, US, China, and Korea, including GDPR and LGPD rights where applicable.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_account_deletion_available",
+        "title": "Account cancellation option exists",
+        "plain_english": "You can cancel your Airbnb account if you disagree with policy changes or no longer want to use the service. Some controls are also available within your Account settings.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_ai_de_identification",
+        "title": "AI training uses de-identified data",
+        "plain_english": "When Airbnb uses your personal information to develop and improve AI models, it says it removes references to your name and other identifying information beforehand.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload photos and videos for listings and reviews. Call recordings may also be made for customer support.",
+      "detail": "Users voluntarily upload photos, videos, and other content. The platform may record calls and communications for support and fraud prevention purposes.",
+      "policy_excerpt": "User-Generated Content. Such as any photos, videos, reviews, and other content you choose to provide.",
+      "concerns": [
+        "Uploaded content becomes publicly visible",
+        "Call recordings stored for support purposes"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Collects your precise location via GPS and IP address, even when you're not actively using the app if you enable it.",
+      "detail": "Airbnb collects precise or approximate location from GPS and IP address. This may occur even when the app is not in use if device permissions allow. Location is used for bookings, personalization, and advertising.",
+      "policy_excerpt": "We may also collect this information when you're not using the app if you enable this through your settings or device permissions.",
+      "concerns": [
+        "Background location collection possible",
+        "Location used for advertising personalization",
+        "IP address used for geolocation inference"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can manually import address book contacts if you choose to. The app does not automatically scan your contacts.",
+      "detail": "Users may voluntarily import or manually enter address book contacts. Co-travelers may also be added by trip organizers. This is user-initiated and not automatic.",
+      "policy_excerpt": "import or manually enter address book contacts",
+      "concerns": [
+        "Imported contacts stored on Airbnb servers",
+        "Co-traveler information provided by other users without direct consent"
+      ],
+      "score_impact": -6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Only accesses your photos and files when you choose to upload them.",
+      "detail": "File access is limited to user-initiated uploads of photos, videos, and documents for listings, profiles, and verification. No automatic scanning or broad file access is described.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Your data is shared with a wide network of partners, vendors, hosts, building managers, and government agencies.",
+      "detail": "Airbnb discloses personal information to hosts, building management, third-party vendors (cleaning, locks, support), corporate affiliates, events providers, and government/tax authorities. Data may also be shared with Chinese government agencies for users in China. Pseudonymized data is shared with partners who cannot re-identify it.",
+      "policy_excerpt": "Airbnb Singapore and Airbnb China may disclose your personal information to Chinese government agencies without further notice to you.",
+      "concerns": [
+        "Data shared with building management for security and billing",
+        "Corporate affiliates worldwide receive data",
+        "Chinese government disclosure without further notice",
+        "Pseudonymized data shared with third-party partners",
+        "Data transferred to new owner in business transactions"
+      ],
+      "score_impact": -19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Requires extensive identity data including government ID, passport, and facial recognition for verification.",
+      "detail": "Airbnb collects standard contact info (name, email, phone, address) plus government-issued ID, passport, driver's license, tax ID, and selfie photos for identity verification. This identity data is linked to advertising and personalization efforts.",
+      "policy_excerpt": "we may ask you for an image of your government-issued ID document(s), passport, national ID card, tax ID, or driving license",
+      "concerns": [
+        "Government ID documents collected and stored",
+        "Identity data linked to advertising profiles",
+        "Background checks may be required",
+        "Digital identity verification involves third parties"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Tracks your searches, bookings, and off-site browsing to personalize ads and marketing messages.",
+      "detail": "Airbnb collects searches, bookings, pages viewed, device identifiers, and off-platform activity. This is used to personalize advertising, send marketing messages, and analyze characteristics for promotional content. Cookies and similar technologies are used as described in the Cookie Policy.",
+      "policy_excerpt": "show, personalize, measure, and improve our advertising... analyze characteristics and preferences to send promotional messages, marketing, advertising, and other information",
+      "concerns": [
+        "Off-platform browsing activity tracked",
+        "Device and advertising identifiers collected",
+        "Targeted ads based on inferred preferences",
+        "Tracking occurs even without an account"
+      ],
+      "score_impact": -16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "This is a travel booking platform for adults. The policy does not specifically address children's data.",
+      "detail": "The privacy policy does not mention children, age requirements, or COPPA/GDPR-K compliance. The app is rated 4+ but is clearly a travel platform not directed at children.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Logs your IP address, searches, and pages you view — even on other websites before and after visiting Airbnb.",
+      "detail": "Airbnb collects IP addresses, access dates/times, pages viewed, searches, links clicked, and off-platform activity. This information may be collected even without an account. Used for security, personalization, and advertising.",
+      "policy_excerpt": "the pages you've viewed or engaged with before or after using the Airbnb Platform, and other actions on the Airbnb Platform",
+      "concerns": [
+        "Off-platform browsing tracked",
+        "IP address used for location inference"
+      ],
+      "score_impact": -1.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": true,
+      "plain_english": "Collects advertising identifiers, hardware details, and unique device IDs to identify your device across sessions.",
+      "detail": "Airbnb collects device and advertising identifiers, hardware/software information, device event information, other unique identifiers, crash data, and read receipts. This may be collected even without an account and is used for advertising, security, and personalization.",
+      "policy_excerpt": "device and advertising identifiers, hardware and software information, device information, device event information, other unique identifiers",
+      "concerns": [
+        "Advertising identifiers explicitly collected",
+        "Device fingerprinting used for ads and security",
+        "Tracking occurs without an account"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Extracts facial recognition data from your ID photos and selfies for identity verification.",
+      "detail": "Airbnb collects biometric information, specifically facial recognition data derived from photos and identification documents submitted for verification. This is done with consent where required by law and is stored on Airbnb servers.",
+      "policy_excerpt": "Biometric Information. Such as facial recognition data derived from photos and identification documents you submit for verification, where offered and with your consent where required by applicable law.",
+      "concerns": [
+        "Facial recognition data stored on external servers",
+        "Shared with third-party verification providers",
+        "Cannot be changed if compromised unlike a password"
+      ],
+      "score_impact": -9.75
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Stores your credit card, bank account, and payment details to process bookings.",
+      "detail": "Airbnb collects payment account details, credit card information, bank account information, PayPal email, IBAN, billing address, and transaction history. Payment processing involves multiple Airbnb Payments entities depending on your country.",
+      "policy_excerpt": "payment account, credit card information, bank account information, payment instrument used, date and time, payment amount",
+      "concerns": [
+        "Full payment details collected directly",
+        "Transaction history retained for legal obligations",
+        "Multiple payment controllers across different countries"
+      ],
+      "score_impact": -4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can cancel your account, but your public reviews may remain visible and some data is kept for legal reasons.",
+      "detail": "Users can access and update some personal information through Account settings and can cancel their account. However, reviews and forum postings may remain publicly visible after account cancellation. Residual copies may persist in backup systems for a limited time. Data is retained for legal, tax, and business protection purposes.",
+      "policy_excerpt": "Personal information you have shared with other Members, such as Reviews and forum postings, may continue to be publicly visible on Airbnb, even after your Airbnb Account is canceled.",
+      "concerns": [
+        "Public reviews remain visible after account deletion",
+        "Residual copies persist in backups",
+        "Data retained for legal and business reasons",
+        "Region-specific rights depend on your location"
+      ],
+      "score_impact": -3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Airbnb emails you 30 days before material privacy changes, but continued use automatically accepts them.",
+      "detail": "Material policy changes trigger email notice at least 30 days in advance. Users can cancel their account if they disagree. However, continued use after the effective date constitutes acceptance of the revised policy.",
+      "policy_excerpt": "In case of material changes, we will also provide you with notice of the modification by email at least thirty (30) days before the effective date. If you do not cancel your Account before the date the revised Privacy Policy becomes effective, your continued access to or use of the Airbnb Platform will be subject to the revised Privacy Policy.",
+      "concerns": [
+        "Continued use = automatic acceptance of changes"
+      ],
+      "score_impact": -1.5
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "health_biometric", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.30, "deduction": 6 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.30, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.30, "deduction": 3 },
+      { "category": "network_internet_activity", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "policy_change_notification", "risk": "caution", "max": 5, "rate": 0.30, "deduction": 1.5 },
+      { "category": "storage_file_access", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0.00, "deduction": 0 }
+    ],
+    "total_deductions": 95.75,
+    "final_score": 53,
+    "grade": "D"
+  }
+}

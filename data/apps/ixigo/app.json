@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.iubenda.com/privacy-policy/696667",
+    "terms_url": "https://wpbook.ixigo.com/about/terms-of-use/",
+    "policy_last_updated": "2026-04-14",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "ixigo",
+    "name": "ixigo Train, Bus, Metro Ticket",
+    "developer": "Le Travenues Technology Ltd",
+    "app_store_url": "https://apps.apple.com/in/app/ixigo-train-bus-metro-ticket/id1148984317",
+    "app_store_id": "1148984317",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a3/5c/cd/a35ccd8e-be76-5b0b-0443-29fe4f721d68/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "category": "Travel",
+    "sub_category": "",
+    "description": "India's leading travel booking app for trains, buses, flights, and hotels with real-time PNR status and trip planning."
+  },
+
+  "verdict": {
+    "overall_risk": "dangerous",
+    "score": 31,
+    "grade": "F",
+    "one_liner": "A popular travel app that reads your text messages, scans your installed apps, and shares your data with dozens of advertisers and AI companies.",
+    "summary": "ixigo collects an enormous amount of personal data and shares it broadly with advertising networks, analytics firms, and AI services. Most alarmingly, the app reads and uploads your SMS messages to extract travel booking details, and it shares a list of every app installed on your phone with third parties. Extensive cross-app tracking, screen recording for ads, and vague data-sharing terms make this one of the most privacy-invasive travel apps reviewed.",
+    "recommendation": "avoid",
+    "recommendation_reason": "The app reads your private text messages, shares your installed apps list with advertisers, and engages in extensive behavioral tracking across other apps and websites. Even for a travel booking tool, these practices are excessive and unnecessary."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "reads_uploads_sms",
+        "title": "Reads and uploads your text messages",
+        "plain_english": "The app reads, uploads, and analyzes text messages from travel providers on your phone to check PNR status and flight or train delays. This means the app can see any SMS on your device, not just booking confirmations.",
+        "severity": "high"
+      },
+      {
+        "id": "shares_installed_apps_inventory",
+        "title": "Shares list of apps on your phone",
+        "plain_english": "ixigo explicitly shares an inventory of all apps installed on your device with third-party companies for advertising, analytics, and fraud detection. This reveals a lot about your personal life, health, finances, and relationships.",
+        "severity": "high"
+      },
+      {
+        "id": "cross_app_ad_tracking",
+        "title": "Tracks you across apps and websites for ads",
+        "plain_english": "The app uses multiple advertising and tracking tools including Meta pixel, X Ads, Adjust, Twitter Remarketing, and Clevertap to follow your activity across other apps and websites. Your device ID and usage data are used to target you with ads.",
+        "severity": "high"
+      },
+      {
+        "id": "screen_recording_for_ads",
+        "title": "Records your screen for advertising",
+        "plain_english": "ixigo uses Microsoft Clarity to record your screen activity, clicks, and scrolling. Microsoft explicitly states this data may be used for Microsoft Advertising purposes, meaning your browsing behavior inside the app feeds ad targeting systems.",
+        "severity": "high"
+      },
+      {
+        "id": "ai_processes_personal_data",
+        "title": "Sends your data to AI companies",
+        "plain_english": "The app uses OpenAI's API to automate tasks and ElevenLabs for speech-to-text in its voice agent. Your personal data, voice recordings, or usage patterns may be processed by these external AI services.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "email_data_deletion",
+        "title": "Data deletion available by email",
+        "plain_english": "You can request deletion of your data by emailing customersupport@ixigo.com with the subject 'Data Deletion Request.' The company says it will complete the process within 30 days.",
+        "severity": "positive"
+      },
+      {
+        "id": "payments_outsourced",
+        "title": "Payments handled by Google Pay",
+        "plain_english": "When you make a payment, the app uses Google Pay and only receives a notification of whether the payment succeeded. Your actual card or bank details are never collected or stored by ixigo.",
+        "severity": "positive"
+      },
+      {
+        "id": "transparent_service_list",
+        "title": "Lists all third-party services used",
+        "plain_english": "The privacy policy names every third-party service that receives your data, including what specific information each one gets. This level of transparency makes it easier to understand where your data goes.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app uses ElevenLabs speech-to-text and text-to-speech for its Tara AI voice agent. Your voice may be processed by an external AI service.",
+      "detail": "The policy mentions ElevenLabs is used for the Tara AI voice agent. Data is hosted in India, but voice data is still processed by a third-party AI provider. No explicit mention of camera access.",
+      "policy_excerpt": "The Tara AI voice agent may utilize Speech-to-Text and Text-to-Speech services provided by ElevenLabs. All data is hosted within data centers located in India.",
+      "concerns": ["Voice data processed by third-party AI", "No clarity on whether voice recordings are stored or shared further"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects your location to provide travel services and shares it with advertisers and analytics companies.",
+      "detail": "Geolocation is collected for location-based services. Crashlytics also collects geographic position. Location data is shared with third-party service providers for personalization and behavioral analytics.",
+      "policy_excerpt": "@{replacement missing: en.mobile} may collect, use, and share User location Data in order to provide location-based services.",
+      "concerns": ["Location shared with ad networks and analytics", "Crashlytics collects geographic position alongside advertising identifiers"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can access your address book to suggest friends or invite contacts if you allow it. It also reads your text messages.",
+      "detail": "The 'Inviting and suggesting friends' feature may use the address book if access is provided. More significantly, the app explicitly reads, uploads, and analyzes SMS messages from travel providers for PNR and booking updates.",
+      "policy_excerpt": "This application reads, uploads and syntactic analyses text messages from travel providers within the app for any flight and train PNR booking messages.",
+      "concerns": ["SMS messages read and uploaded to servers", "Address book access for social features"],
+      "score_impact": 13
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app accesses your text messages, which are stored and analyzed on the company's servers.",
+      "detail": "By reading SMS messages, the app effectively accesses storage/file content. These messages are stored in a 'secured environment' and transmitted via SSL, but they are still uploaded to ixigo's infrastructure.",
+      "policy_excerpt": "This information is stored in a secured environment and always transmitted using SSL.",
+      "concerns": ["SMS content uploaded and stored externally", "No clarity on retention period for SMS data"],
+      "score_impact": 6.5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "dangerous",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app shares your name, email, phone number, device info, location, network carrier, and even a list of all your installed apps with dozens of advertising and analytics companies.",
+      "detail": "The policy explicitly states: 'We may disclose to third party services certain personally identifiable information listed below: information you provide us such as name, email, mobile phone number; information we collect as you access and use our service, including device information, location and network carrier; inventory of installed apps.' Named third parties include OpenAI, Meta, X/Twitter, Google, Microsoft, Amazon, Adjust, Clevertap, Cloudflare, Freshworks, Elevenlabs, and more.",
+      "policy_excerpt": "We may disclose to third party services certain personally identifiable information listed below: -- information you provide us such as name, email, mobile phone number -- information we collect as you access and use our service, including device information, location and network carrier -- inventory of installed apps.",
+      "concerns": ["Broad data sharing with advertising networks", "Installed apps list shared", "Data shared with AI companies (OpenAI, ElevenLabs)", "No meaningful opt-out for most sharing"],
+      "score_impact": 30
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You must provide personal details to use the app, and your profile may be publicly visible to other users.",
+      "detail": "Users may have public profiles containing city, country, first name, last name, picture, state, and username. Facebook Authentication is also offered, which may expose additional Facebook data. Phone numbers may be used for commercial or promotional contact.",
+      "policy_excerpt": "Users may have public profiles that other Users can display. In addition to the Personal Data provided, this profile may contain Users' interactions with @{replacement missing: en.mobile}.",
+      "concerns": ["Public profiles expose personal data", "Phone number used for marketing contact", "Facebook login exposes social data"],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses at least seven different advertising and tracking tools to follow what you do inside the app and across the internet, then targets you with ads.",
+      "detail": "AdMob, X Ads conversion tracking, Meta pixel, Adjust, Twitter Remarketing, Clevertap (explicitly collecting PII for targeting), Google Analytics, and Google Tag Manager are all used. The app also collects unique device identifiers for advertising (IDFA). Clevertap is explicitly described as collecting 'personally identifiable information (PII). We use this information to better target users.' Microsoft Clarity data may also be used for Microsoft Advertising.",
+      "policy_excerpt": "ixigo apps contains a version of Clevertap, an analytics SDK, that collects personally identifiable information (PII). We use this information to better target users.",
+      "concerns": ["Multiple ad SDKs active", "PII used for ad targeting", "Cross-app tracking via IDFA", "Screen recordings used for ads"],
+      "score_impact": 25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention children or any age restrictions at all.",
+      "detail": "No references to children, minors, COPPA, or age gates were found in the policy. Given the app's travel-booking nature and extensive data collection, this is a notable omission.",
+      "policy_excerpt": "",
+      "concerns": ["No age restrictions mentioned", "Extensive data collection could affect minors"],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app logs your IP address, browsing history, search history, and every tap and scroll you make inside the app.",
+      "detail": "Cloudflare Bot Management collects IP address, browsing history, search history, clicks, page views, session statistics, and more. System logs and maintenance operations also use IP addresses. This data is used for profiling, bot detection, and potentially advertising.",
+      "policy_excerpt": "Personal Data processed: app information; Application opens; browser information; browsing history; city; clicks; country; county; custom events; device information; device logs; geography/region; interaction events; IP address; keypress events; language; latitude (of city); launches; longitude (of city); metro area; motion sensor events; mouse movements; number of sessions; operating systems; page events; page views; province; scroll position; scroll-to-page interactions; search history; session duration; session statistics; state; touch events; Trackers; Usage Data; video views; ZIP/Postal code.",
+      "concerns": ["Extensive network activity logging", "Browsing and search history collected", "IP address used for location inference"],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app builds a detailed fingerprint of your device including every app you have installed, your device ID for ads, and even your motion sensors and touch patterns.",
+      "detail": "The app collects unique device identifiers for advertising (Google Advertiser ID or IDFA), generates a UUID on installation that persists across launches, and collects device information, app information, operating systems, browser info, device logs, and more. Cloudflare Bot Management adds extreme granularity including motion sensor events, keypress events, mouse movements, touch events, and scroll patterns.",
+      "policy_excerpt": "@{replacement missing: en.mobile} may track Users by storing a unique identifier of their device, for analytics purposes or for storing Users' preferences.",
+      "concerns": ["Advertising device ID collected", "UUID generated on install persists until uninstall", "Extreme fingerprinting via Cloudflare", "Installed apps list used for fingerprinting"],
+      "score_impact": 15
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric data.",
+      "detail": "No health, medical, or biometric data collection was mentioned in the policy. Profile pictures are collected but not described as biometric data.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app uses Google Pay for payments, so it never sees your actual card or bank details. It does collect your email address for payment notifications.",
+      "detail": "Payment processing is handled by Google Pay. The app only receives a notification of whether payment succeeded. Email address is collected in connection with Google Pay. No raw financial data is stored by ixigo.",
+      "policy_excerpt": "@{replacement missing: en.mobile} isn't involved in the collection and processing of such information: instead, it will only receive a notification by the relevant payment service provider as to whether payment has been successfully completed.",
+      "concerns": ["Email linked to payment activity"],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can ask for your data to be deleted, but you have to send an email and wait up to 30 days. There is no instant delete button in the app.",
+      "detail": "Data deletion is available via email request to customersupport@ixigo.com with subject 'Data Deletion Request.' The process takes up to 30 days. The policy mentions GDPR rights (access, rectification, erasure, portability, restriction, objection) but the practical mechanism is limited to email. No mention of automatic account deletion features.",
+      "policy_excerpt": "If you need to delete your data from ixigo for any reason, then you can use the Data Deletion Request feature by just sending an email with your full name and subject: 'Data Deletion Request' to customersupport@ixigo.com. Please note that the whole deletion process will take up to 30 days.",
+      "concerns": ["No in-app deletion option", "30-day processing time", "Unclear whether all data or only some is deleted"],
+      "score_impact": 6.5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The company can change its privacy policy at any time. It says it will post changes on its website, but you won't get a clear warning and you won't have to agree again unless the change involves consent-based data processing.",
+      "detail": "The policy states the owner can make changes at any time by notifying users on the page, possibly within the app, or via contact information. For consent-based processing, new consent is collected where required, but other changes can happen without meaningful advance notice or re-agreement.",
+      "policy_excerpt": "The Owner reserves the right to make changes to this privacy policy at any time by notifying its Users on this page and possibly within @{replacement missing: en.mobile} and/or - as far as technically and legally feasible - sending a notice to Users via any contact information available to the Owner.",
+      "concerns": ["Changes can happen anytime", "No mandatory re-consent for non-consent-based changes", "Retroactive changes possible"],
+      "score_impact": 3.25
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "dangerous", "max": 30, "rate": 1.0, "deduction": 30 },
+      { "category": "behavioural_ad_tracking", "risk": "dangerous", "max": 25, "rate": 1.0, "deduction": 25 },
+      { "category": "device_fingerprinting", "risk": "dangerous", "max": 15, "rate": 1.0, "deduction": 15 },
+      { "category": "contacts_phonebook", "risk": "risky", "max": 20, "rate": 0.65, "deduction": 13 },
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "location_gps", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "storage_file_access", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "data_deletion_user_rights", "risk": "risky", "max": 10, "rate": 0.65, "deduction": 6.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0.0, "deduction": 0 }
+    ],
+    "total_deductions": 141.25,
+    "final_score": 31,
+    "grade": "F"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://guitarwiz.app/privacy-policy/",
+    "terms_url": "https://guitarwiz.app/terms-of-service/",
+    "policy_last_updated": "unknown",
+    "needs_review": true,
+    "review_notes": "The privacy policy is extremely brief (only two substantive sentences) and does not address data deletion rights, policy change notification, or how microphone audio is handled. The explicit 'no data collection' claim is strong, but the lack of detail makes independent verification difficult. The Terms of Service mention subscription billing handled by the App Store and state that continued use after changes equals acceptance."
+  },
+  "app": {
+    "slug": "guitar-wiz-chords-tuner",
+    "name": "Guitar Wiz: Chords & Tuner",
+    "developer": "Bijoy Thangaraj",
+    "app_store_url": "https://apps.apple.com/in/app/guitar-wiz-chords-tuner/id6740015002",
+    "app_store_id": "6740015002",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c1/fb/33/c1fb331a-f2df-db28-2509-ee3c69d80dcc/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    "category": "Music",
+    "sub_category": "Utilities",
+    "description": "An all-in-one guitar companion with an extensive chord library, precision tuner, metronome, chord progressions, song maker, and song sheet scanner."
+  },
+  "verdict": {
+    "overall_risk": "safe",
+    "score": 96,
+    "grade": "A",
+    "one_liner": "A guitar toolkit with an admirably simple privacy promise: no data collection at all.",
+    "summary": "Guitar Wiz is a guitar companion app that explicitly states it does not collect, track, or share any user data. The privacy policy is extremely short — just two sentences — which limits auditability but also means there is no complex data handling to dissect. The app offers chords, a tuner, metronome, song maker, and song sheet scanner. Some features use the microphone and storage, but the developer claims all processing stays on your device.",
+    "recommendation": "highly_recommended",
+    "recommendation_reason": "The developer makes a clear, affirmative promise of zero data collection. While the policy is too brief for full transparency, there are no red flags suggesting hidden data practices."
+  },
+  "flags": {
+    "red": [
+      {
+        "id": "red_policy_too_brief",
+        "title": "Privacy policy is extremely short",
+        "plain_english": "The privacy policy is only a few sentences long. It does not explain how you can request data deletion or how you will be told if the policy changes.",
+        "severity": "low"
+      },
+      {
+        "id": "red_microphone_not_detailed",
+        "title": "Microphone use lacks detail",
+        "plain_english": "The app uses your microphone for tuning and chord coaching, but the policy does not clearly say whether the audio is processed on your device or sent to a server.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "green_no_data_collection",
+        "title": "No data collection promised",
+        "plain_english": "The developer explicitly states they do not collect, track, or share any of your data.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_account_required",
+        "title": "No account needed",
+        "plain_english": "You can use the app without creating an account or giving any personal information.",
+        "severity": "positive"
+      },
+      {
+        "id": "green_no_ads_or_tracking",
+        "title": "No ads or tracking",
+        "plain_english": "The policy says there is no behavioral tracking or advertising in the app.",
+        "severity": "positive"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app uses your microphone for the tuner and chord-coaching features, but only when you actively use them. The developer says no audio data is collected or shared.",
+      "detail": "Features like Chord Assist and the precision tuner require microphone access to hear your guitar. The privacy policy states the developer does not collect any data, implying audio is processed locally on your device. There is no mention of audio recording, cloud processing, or background listening.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [
+        "Policy does not explicitly confirm on-device-only audio processing"
+      ],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track your location.",
+      "detail": "No location access is mentioned in the privacy policy or app description. The developer explicitly states no data is collected.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not access your contacts.",
+      "detail": "There is no feature described that would require contacts access, and the privacy policy states no data is collected.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "The app can save songs and import sheet music when you choose to, but only with your permission.",
+      "detail": "Features like Song Maker (export to WAV) and Songsheet Scanner (import images/PDFs) require storage or file access. This appears to be user-initiated only. The privacy policy states no data is collected or shared.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer explicitly says they do not share your data with anyone.",
+      "detail": "The privacy policy contains an unambiguous statement that no user data is collected, tracked, or shared with third parties. There is no mention of analytics SDKs, advertising networks, or service providers.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [
+        "Policy is very short, so specific third-party relationships are not listed"
+      ],
+      "score_impact": 0
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You do not need to create an account to use the app.",
+      "detail": "The app is free to download and use with no account creation step mentioned. The privacy policy states no data is collected, which implies no identity data is gathered.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not track your behavior or show targeted ads.",
+      "detail": "The developer explicitly states they do not track or share any data. There is no mention of advertising, ad SDKs, or behavioral analytics.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is rated for ages 4+ and does not collect any data, making it safe for younger users.",
+      "detail": "The app is rated 4+ on the App Store and is a guitar utility, not a child-directed game or social platform. The privacy policy explicitly states no data is collected.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "safe",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app may connect to the internet for updates or news, but the developer says no data about you is collected.",
+      "detail": "The app includes news and articles sections that likely load from the internet. The privacy policy states no user data is collected, implying no IP-based profiling or network monitoring.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says they do not collect any device information.",
+      "detail": "The privacy policy states no data is collected, which would include device identifiers, model information, or fingerprinting data. There is no mention of analytics or diagnostic collection.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app does not collect health or biometric information.",
+      "detail": "There is no health, fitness, or biometric data collection described. The app is a guitar tool with no connection to health features.",
+      "policy_excerpt": "We don't collect, track, or share any of your data.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app is free to download, and any subscriptions are handled by Apple, not the developer.",
+      "detail": "The app is free on the App Store. The Terms of Service mention subscription billing handled entirely through the App Store. The developer never sees your payment card information.",
+      "policy_excerpt": "Refunds are handled by the App Store and must be requested through it.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy does not explain how to delete your data or exercise privacy rights.",
+      "detail": "Because the developer states they collect no data, deletion rights may be moot. However, the privacy policy does not address how users can contact the developer about data concerns or request deletion of any incidental data.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No mention of data deletion process or user rights",
+        "No contact method provided in the privacy policy for data requests"
+      ],
+      "score_impact": 5
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy does not say how you will be told if the privacy rules change.",
+      "detail": "The privacy policy does not mention a last-updated date or explain how users will be notified of changes. The Terms of Service state that continued use after changes equals acceptance, but this applies to terms, not the privacy policy specifically.",
+      "policy_excerpt": "",
+      "concerns": [
+        "No last-updated date on the privacy policy",
+        "No explanation of how users are notified of privacy policy changes"
+      ],
+      "score_impact": 2.5
+    }
+  ],
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      {
+        "category": "data_deletion_user_rights",
+        "risk": "unknown",
+        "max": 10,
+        "rate": 0.5,
+        "deduction": 5.0
+      },
+      {
+        "category": "policy_change_notification",
+        "risk": "unknown",
+        "max": 5,
+        "rate": 0.5,
+        "deduction": 2.5
+      }
+    ],
+    "total_deductions": 7.5,
+    "final_score": 96,
+    "grade": "A"
+  }
+}

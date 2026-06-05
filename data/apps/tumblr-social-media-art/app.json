@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.tumblr.com/privacy",
+    "terms_url": "",
+    "policy_last_updated": "2025-01-25",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "tumblr-social-media-art",
+    "name": "Tumblr: Social Media & Art",
+    "developer": "Tumblr, Inc.",
+    "app_store_url": "https://apps.apple.com/in/app/tumblr-social-media-art/id305343404",
+    "app_store_id": "305343404",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a3/d0/c5/a3d0c503-4f1e-d8d9-27ab-cd17dfc30b72/TumblrIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 58,
+    "grade": "C",
+    "one_liner": "A creative social platform that collects extensive usage data for ads and shares with parent company Automattic, but offers solid content controls.",
+    "summary": "Tumblr collects your posts, likes, reblogs, device info, IP address, and location data to personalize content and show you targeted ads. Your content is public by default and can be reshared by others indefinitely. Data is shared with parent company Automattic and advertising partners. However, Tumblr offers privacy settings for blogs, opt-out controls for personalized ads, and tools to download or delete your account.",
+    "recommendation": "think_twice",
+    "recommendation_reason": "Tumblr is better than many social networks for privacy, but still tracks your behavior extensively for advertising and shares data broadly with its parent company and partners."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "public_by_default",
+        "title": "Your posts are public by default",
+        "plain_english": "Everything you post on Tumblr can be seen by anyone on the internet, including search engines. Even if you delete your account, reblogs of your posts may live forever on other people's blogs.",
+        "severity": "high"
+      },
+      {
+        "id": "extensive_tracking",
+        "title": "Extensive activity and device tracking",
+        "plain_english": "Tumblr tracks what you view, like, reblog, and reply to. They also collect your device type, browser info, IP address, and may assign your phone a unique tracking identifier.",
+        "severity": "medium"
+      },
+      {
+        "id": "ads_and_data_sharing",
+        "title": "Data shared for targeted advertising",
+        "plain_english": "Tumblr shares your online identifiers, device activity, IP address, and approximate location with advertising partners to show you personalized ads.",
+        "severity": "medium"
+      },
+      {
+        "id": "parent_company_sharing",
+        "title": "Data flows to parent company Automattic",
+        "plain_english": "Tumblr is owned by Automattic, and any information Tumblr collects can be shared with Automattic and its other companies like WordPress.com.",
+        "severity": "medium"
+      },
+      {
+        "id": "third_party_analytics",
+        "title": "Uses Google Analytics and comScore",
+        "plain_english": "Tumblr uses third-party analytics services like Google Analytics and comScore to track how people use the platform, and these services may place their own cookies on your device.",
+        "severity": "low"
+      },
+      {
+        "id": "exif_data_collected",
+        "title": "Camera settings extracted from your photos",
+        "plain_english": "When you upload photos, Tumblr may read the hidden metadata in them — like what camera you used, when the photo was taken, and where — unless you strip it first.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "privacy_settings_available",
+        "title": "Privacy settings for blogs available",
+        "plain_english": "You can make your blog password-protected or private, so only people you choose can see your posts.",
+        "severity": "positive"
+      },
+      {
+        "id": "ad_opt_out_available",
+        "title": "Can opt out of personalized ads",
+        "plain_english": "You can turn off personalized advertising in your privacy settings, though you'll still see generic ads.",
+        "severity": "positive"
+      },
+      {
+        "id": "data_export_available",
+        "title": "Can download your data and content",
+        "plain_english": "Tumblr lets you download a copy of your personal data and export all the content you've posted.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_direct_data_sales",
+        "title": "No direct sale of personal data",
+        "plain_english": "Tumblr says they never share your information unless they have your permission, give you notice, or the data is anonymized.",
+        "severity": "positive"
+      },
+      {
+        "id": "contact_list_not_stored",
+        "title": "Contact lists discarded after use",
+        "plain_english": "If you upload your contacts to find friends on Tumblr, they say they discard the list immediately after checking it.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Tumblr can access your camera roll when you upload photos or videos. They may also read hidden data inside your photos like camera settings and location.",
+      "detail": "Camera roll access is user-initiated. The policy explicitly mentions collecting EXIF information from uploaded images.",
+      "policy_excerpt": "When it's included as part of your images, we may collect information describing your camera, camera settings, or EXIF information.",
+      "concerns": ["EXIF data may reveal location, device, and time of photo capture."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Tumblr figures out your approximate location from your IP address and may use your phone's GPS if you choose to geotag a post.",
+      "detail": "IP-based geolocation is automatic. GPS geotagging is optional and user-initiated when creating posts.",
+      "policy_excerpt": "In some cases we collect and store information about where you are located, such as by converting your IP Address into a rough geolocation. We may also ask you to provide information about your location, for example to use your geolocation information from your mobile device to geotag a post.",
+      "concerns": ["IP address is used for approximate location even without explicit permission."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "You can upload your email or phone contacts to find people you know on Tumblr, but the app says it discards this information right after checking.",
+      "detail": "Contact list upload is optional and used only for friend-finding. The policy states the information is discarded immediately after use.",
+      "policy_excerpt": "We will give you a choice as to whether or not you provide us such information... We discard this information immediately afterward.",
+      "concerns": ["Momentary access still means the app reads your full contact list."],
+      "score_impact": 6
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Tumblr can access your camera roll when you choose to upload photos or videos, and may read hidden metadata inside them.",
+      "detail": "File access is user-initiated for media uploads. EXIF metadata is collected from images.",
+      "policy_excerpt": "When it's included as part of your images, we may collect information describing your camera, camera settings, or EXIF information.",
+      "concerns": [],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr shares your data with its parent company Automattic, advertising partners, analytics companies, and service providers. They also share data if required by law or during a business sale.",
+      "detail": "The policy states they 'never share' except with permission, notice, or anonymization — but then lists numerous exceptions: Automattic family companies, public content, agents/service providers, business transfers, legal compliance, and advertising partners.",
+      "policy_excerpt": "We never share information we receive from you unless: (a) we have your permission... (b) we have given you prior notice... or (c) that information is aggregate information...",
+      "concerns": ["Extensive exceptions undermine the 'never share' promise.", "Advertising data sharing includes online identifiers, device activity, IP address, and geolocation.", "Data flows to Automattic and other family companies."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr requires a username, email, and age to create an account. Your username and posts are visible to the public by default.",
+      "detail": "Account creation requires username, password, age, and email. All posts and profile info are public by default, though privacy settings exist.",
+      "policy_excerpt": "When you create an account on the Services, we'll ask you for information such as your username, password, age, and email address.",
+      "concerns": ["Public-by-default profile exposes identity information widely.", "Can connect third-party accounts (Twitter, Facebook) which shares more data."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr watches everything you do — what you like, reblog, search for, and view — then uses that to guess your interests and show you targeted ads. They also use Google Analytics and comScore to track your activity.",
+      "detail": "Native actions (likes, reblogs, replies) are used for personalization and ad targeting. Third-party analytics (Google Analytics, comScore, Nielsen) also track behavior. Cookie-based tracking is used.",
+      "policy_excerpt": "We use information about native actions to improve the Services, develop new Services, and, particularly, to personalize your Tumblr experience. Personalization using this information may include... showing you advertising more relevant to your interests.",
+      "concerns": ["Cross-site tracking via third-party analytics cookies.", "Behavioral profiling based on all platform activity.", "Ad partners may collect additional data through their own tags."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't specifically address how Tumblr handles children's data or whether the app is meant for kids.",
+      "detail": "Age verification exists (users must be old enough to use the service), but no specific children's privacy protections or COPPA compliance is mentioned.",
+      "policy_excerpt": "We use your age to verify that you can lawfully use the Services.",
+      "concerns": ["No mention of COPPA compliance or specific safeguards for users under 13."],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr logs your IP address every time you interact with the platform, including when you make posts or send anonymous messages. They use this to fight spam and personalize content.",
+      "detail": "IP addresses are collected with every request and associated with posts (including anonymous Asks). Used for spam prevention, personalization, and safety.",
+      "policy_excerpt": "We also collect your IP Address when you make a post, particularly when you submit an anonymous 'Ask.' We may use this information about how you and others interact with the Services for a number of things...",
+      "concerns": ["IP logging on every interaction enables tracking and location inference.", "Anonymous Asks are not truly anonymous since IP is logged."],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr collects your device type, operating system, browser version, screen size, unique device identifier, and even detects what browser extensions you have installed.",
+      "detail": "Comprehensive device and browser information is collected, including unique mobile identifiers and browser extension detection.",
+      "policy_excerpt": "We automatically receive and record information from your web browser when you interact with the Services, such as your browser type and version, what sort of device you are using, your operating system and version... We also sometimes detect whether you are using certain web browser extensions and store that information in a manner associated with your Account.",
+      "concerns": ["Browser extension detection is an unusual level of device surveillance.", "Unique mobile identifiers enable cross-session tracking."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr doesn't collect any health or body-related data as part of its normal operation.",
+      "detail": "No health, fitness, or biometric data collection is mentioned in the policy.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy Tumblr features like Blaze or themes, a payment processor handles your credit card. Tumblr only gets a token and the last four digits of your card number.",
+      "detail": "Payment Processor handles actual financial data. Tumblr receives a unique token and last 4 digits of credit card for fraud prevention.",
+      "policy_excerpt": "We do not, however, store that financial information; such information is stored by our payment processor... We do receive certain information from our Payment Processor: (1) a unique token... and (2) in certain cases, the last four digits of the credit card number.",
+      "concerns": ["Tumblr still receives enough financial data to link purchases to your account."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account, but your posts may still exist in backups, caches, and on other people's blogs through reblogs. US state and Canadian residents have extra rights to access, correct, or delete their data.",
+      "detail": "Account deletion is available but content may persist in backups and reblogs. US state and Canadian privacy rights are recognized. Data download is available through settings.",
+      "policy_excerpt": "Deleting your Account may not fully remove the content you have published from our systems, as caching of, backups of, copies of, or references to your Account Information may not be immediately removed.",
+      "concerns": ["Reblogs create permanent copies of content on other users' blogs that Tumblr cannot delete.", "Backups and caches may retain data for extended periods."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Tumblr can change the privacy policy anytime by updating it on their website. They don't promise to email you or show a notice in the app before making changes.",
+      "detail": "Changes are made 'from time to time' using the Terms of Service modification process. No explicit advance notification mechanism is promised.",
+      "policy_excerpt": "We may amend this Privacy Policy from time to time, using the process for modifications set forth in our Terms of Service.",
+      "concerns": ["No advance notice or re-consent mechanism specified."],
+      "score_impact": 3.25
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "contacts_phonebook", "risk": "caution", "max": 20, "rate": 0.3, "deduction": 6 },
+      { "category": "camera_microphone", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "location_gps", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "account_identity", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "health_biometric", "risk": "safe", "max": 15, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 86.5,
+    "final_score": 58,
+    "grade": "C"
+  }
+}

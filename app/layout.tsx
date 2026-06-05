@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { CompareProvider } from "@/components/CompareProvider";
+import { AgenationDevTool } from "@/components/AgenationDevTool";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-page text-ink" suppressHydrationWarning>
         <CompareProvider>{children}</CompareProvider>
+        <AgenationDevTool />
       </body>
     </html>
   );

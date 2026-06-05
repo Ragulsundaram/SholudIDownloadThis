@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.grindr.com/app/privacy-policy",
+    "terms_url": "",
+    "policy_last_updated": "2025-09-11",
+    "needs_review": false,
+    "review_notes": ""
+  },
+
+  "app": {
+    "slug": "grindr-gay-dating-chat",
+    "name": "Grindr - Gay Dating & Chat",
+    "developer": "Grindr LLC",
+    "app_store_url": "https://apps.apple.com/in/app/grindr-gay-dating-chat/id319881193",
+    "app_store_id": "319881193",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/52/a0/4f52a0b9-e49d-d5aa-8845-670ffbf5d0a9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "category": "Social Networking",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "risky",
+    "score": 47,
+    "grade": "D",
+    "one_liner": "A dating app for the LGBTQ+ community that collects highly sensitive health and location data, makes it public by default, and shares broadly with dozens of partners.",
+    "summary": "Grindr collects some of the most sensitive personal data of any social app: your precise location (displayed to other users), HIV status, health practices, sexual preferences, photos, messages, and even biometric data for age verification. All profile information is public by default. Your data is shared with approximately 30 third-party partners including OpenAI, Google, Anthropic, Meta, and numerous advertising networks. Messages are analyzed by AI for personalization. The app also acknowledges that sophisticated users can determine your exact location even if you hide your distance.",
+    "recommendation": "avoid",
+    "recommendation_reason": "The combination of highly sensitive health data, precise public location sharing, extensive third-party data sharing, and AI analysis of private messages creates an unusually high privacy risk."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "public_precise_location",
+        "title": "Your exact location is shared with other users",
+        "plain_english": "Grindr collects your precise location and shows other users how far away you are. Even if you hide the distance number, the app admits that clever users can still figure out exactly where you are by moving around and checking your relative position.",
+        "severity": "high"
+      },
+      {
+        "id": "sensitive_health_data_public",
+        "title": "HIV status and health data are public by default",
+        "plain_english": "Grindr lets you add HIV status, last tested date, PrEP usage, and vaccination status to your profile. If you do, this information becomes visible to every other user on the platform. Grindr does not verify this information.",
+        "severity": "high"
+      },
+      {
+        "id": "messages_analyzed_by_ai",
+        "title": "AI reads and analyzes your private messages",
+        "plain_english": "Grindr uses artificial intelligence (including from OpenAI, Google, and Anthropic) to analyze the content of your messages. This helps suggest chat replies, summarize past conversations, and recommend people to reconnect with.",
+        "severity": "high"
+      },
+      {
+        "id": "extensive_third_party_sharing",
+        "title": "Data shared with ~30 third-party companies",
+        "plain_english": "Grindr shares your data with a large network of partners including OpenAI, Google, Anthropic, Meta, Amazon Web Services, AppsFlyer, Braze, AppLovin, and many others for AI development, advertising, analytics, fraud prevention, and customer support.",
+        "severity": "high"
+      },
+      {
+        "id": "public_profile_by_default",
+        "title": "Your entire profile is public to all users",
+        "plain_english": "Your photos, age, height, weight, body type, ethnicity, gender, pronouns, sexual preferences, and social media links are all visible to every Grindr user by default. Anyone can search for you by your profile characteristics.",
+        "severity": "high"
+      },
+      {
+        "id": "biometric_age_verification",
+        "title": "Biometric data collected for age checks",
+        "plain_english": "In some countries like the UK, Grindr may require you to submit a video selfie of your face, or pair it with an official government photo ID, to prove you are over 18. This involves processing your biometric information.",
+        "severity": "medium"
+      },
+      {
+        "id": "cross_platform_ad_tracking",
+        "title": "Tracked for ads on other apps and websites",
+        "plain_english": "Grindr shares your device advertising ID and other information with partners like AppsFlyer and Meta to show you ads for Grindr on other apps like Instagram and Snapchat, and to track whether those ads work.",
+        "severity": "medium"
+      }
+    ],
+    "green": [
+      {
+        "id": "health_data_not_shared_with_ads",
+        "title": "Health data not shared with advertisers",
+        "plain_english": "Grindr explicitly says your HIV status, last tested date, and vaccination status are never shared with advertising companies. They are only shared with necessary service providers like Amazon Web Services and Braze.",
+        "severity": "positive"
+      },
+      {
+        "id": "advance_policy_notice",
+        "title": "Notified before major policy changes",
+        "plain_english": "Grindr promises to notify you in advance if they make important changes to the privacy policy, and gives you a chance to review before continuing to use the app.",
+        "severity": "positive"
+      },
+      {
+        "id": "consent_controls_available",
+        "title": "Consent management platform for ads",
+        "plain_english": "Grindr provides a consent preference screen where you can control whether your data is used for behavioral advertising and shared with third-party advertisers.",
+        "severity": "positive"
+      },
+      {
+        "id": "ai_opt_out_available",
+        "title": "Can opt out of AI training",
+        "plain_english": "You can opt out of having your personal information used to develop and train Grindr's AI technology, though your data may still be used to provide AI-powered features unless you separately opt out of those too.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "risky",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Grindr can access your camera, photo gallery, and microphone so you can add photos to your public profile and send photos, videos, audio messages, and live video calls in chats.",
+      "detail": "Camera, photo gallery, and microphone access are required for profile photos and media sharing in messages. Live audio and video calls are supported.",
+      "policy_excerpt": "The Grindr Services also offers the ability to send recorded videos or to engage in live audio and video chats.",
+      "concerns": ["Photo gallery access means all stored photos are potentially accessible during upload.", "Live video calls are processed through the app and may be logged."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "dangerous",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr continuously tracks your precise location to show you how far away other users are. Even if you hide the distance number, the app admits that determined users can still figure out your exact location by checking your relative position from different spots.",
+      "detail": "Precise location is required for core functionality. Distance in feet/meters is displayed to other users. Hiding distance does not prevent triangulation. Location can also be shared in chat messages.",
+      "policy_excerpt": "Sophisticated users who use the Grindr Services in an unauthorized manner, or other users who change their location while you remain in the same location, may use Distance Information to determine your exact location and may be able to determine your identity.",
+      "concerns": ["Precise location is public and displayed to all other users.", "Triangulation is possible even when distance is hidden.", "Location sharing in chat messages.", "For LGBTQ+ users in unsafe regions, public location poses safety risks."],
+      "score_impact": 15
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't mention accessing your phone contacts or address book.",
+      "detail": "No mention of contacts or phonebook access in the privacy policy. Account creation uses email, phone number, or third-party social login.",
+      "policy_excerpt": "",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Grindr can access your photo gallery when you choose to upload photos or videos to your profile or send them in messages.",
+      "detail": "Photo gallery access is user-initiated for media uploads. The app does not mention continuous scanning of device storage.",
+      "policy_excerpt": "Grindr will have access to the photos and videos stored in your photo gallery.",
+      "concerns": ["Full photo gallery access during upload means all photos are potentially visible to the app."],
+      "score_impact": 3
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr shares your data with approximately 30 third-party companies including OpenAI, Google, Anthropic, Meta, Amazon Web Services, AppLovin, AppsFlyer, Braze, and many others for AI development, advertising, analytics, fraud prevention, and customer support.",
+      "detail": "Extensive sharing with Service Providers (AWS, OpenAI, Anthropic, Google Vertex AI, Braze, etc.), Ad/Marketing Partners (AppLovin, Meta, Google AdMob, etc.), and Other Partners (Facebook, Instagram, Spotify, Stripe). HIV status is not shared with advertisers but is shared with hosting and support providers.",
+      "policy_excerpt": "Grindr shares Personal Information with a number of third-party partners to bring you the Grindr Properties, such as Service Providers... Ad / Marketing Partners... and Other Partners.",
+      "concerns": ["Massive partner ecosystem means data flows to many companies.", "AI partners (OpenAI, Anthropic, Google) receive data for model development.", "Advertising partners receive device IDs and activity data.", "Health data shared with service providers like AWS and Braze."],
+      "score_impact": 19.5
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr requires your email or phone number, date of birth, and age verification. Your profile including photos, age, height, weight, body type, ethnicity, gender, pronouns, and sexual preferences is visible to every other user.",
+      "detail": "Account creation requires email/phone and DOB. Public profile includes photos, display name, age, stats (height, weight, body type, position, ethnicity), identity (gender, pronouns), expectations, and social links (Instagram, Spotify, X, Facebook). Users can search for you by profile characteristics.",
+      "policy_excerpt": "Your Grindr Profile and Profile Information are public, meaning other users of the Grindr Services can see your Grindr Profile, Profile Information, and other Personal Information.",
+      "concerns": ["Public profile exposes identity, appearance, and preferences to all users.", "Third-party social links create additional data exposure.", "UK age assurance may require government ID and biometric selfie."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr tracks what profiles you view, how you interact, and what you purchase, then shares this with advertising partners to show you targeted ads both within the app and on other platforms like Instagram and Snapchat.",
+      "detail": "User activity tracking includes profiles viewed, interactions, purchases, and communication patterns. Device advertising identifiers (IDFA, GAID) are shared with ad partners. AppsFlyer is used for cross-platform ad attribution. Google Analytics tracks website behavior.",
+      "policy_excerpt": "We collect certain Personal Information that is generated through your use of the Grindr Properties. This Personal Information includes, among other things, information about whose user profiles you have viewed, purchases through the Grindr Properties, how you've interacted with the Grindr Services.",
+      "concerns": ["Cross-platform ad tracking via AppsFlyer on Meta, Snap, and other platforms.", "Device advertising IDs enable persistent cross-app tracking.", "Behavioral data used for ad targeting across the internet."],
+      "score_impact": 16.25
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr is strictly for adults 18 and older. They have age verification mechanisms including in some cases biometric checks with government ID.",
+      "detail": "Strict 18+ requirement. Age verification includes date of birth and in some jurisdictions video selfie or government photo ID. No child-directed content.",
+      "policy_excerpt": "The Grindr Properties are intended only for users who are legal adults, at least eighteen (18) years of age or older.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": true,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr logs your IP address every time you use the app, which reveals your approximate location. They also use cookies, web beacons, and tracking URLs to monitor your activity.",
+      "detail": "IP address is logged with every request. Cookies, web beacons, and tracking URLs are used for analytics and advertising. Third-party partners also place their own tracking technologies.",
+      "policy_excerpt": "We use cookies and URL information to gather information regarding the date and time of your visit... We also utilize tracking technologies such as web beacons... and tracking URLs.",
+      "concerns": ["IP address is used for location inference and linked to activity logs.", "Third-party ad partners place their own cookies and tracking pixels.", "Tracking URLs monitor where traffic comes from."],
+      "score_impact": 3.25
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "risky",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr collects your device model, operating system, carrier, unique device identifiers (IDFV, Android ID), and advertising IDs (Apple IDFA, Google GAID). They keep your device identifier for up to 2 years even after you delete your account.",
+      "detail": "Comprehensive device fingerprinting via SDKs and APIs. Device IDs (IDFV, Android ID) retained for up to 2 years post-deletion for internal reporting. Advertising IDs (IDFA, GAID) are resettable but actively used for ad targeting.",
+      "policy_excerpt": "We collect certain hardware and software information about you and your device such as device make, device model, device IDs (i.e., Identifier for Vendor (IDFV) and Android ID), carrier, data connection type, browser type, operating system, IP address... device advertising identifiers (e.g., Google's GAID and Apple's IDFA).",
+      "concerns": ["Device IDs retained for 2 years after account deletion.", "Advertising IDs enable persistent cross-app tracking.", "SDKs from multiple partners also collect device information."],
+      "score_impact": 9.75
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "dangerous",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "Grindr lets you add highly sensitive health information to your public profile including HIV status, when you were last tested, whether you use PrEP or DoxyPEP, and vaccination status. In some countries, they may also collect biometric data (your face from a video selfie) and a copy of your government ID for age verification.",
+      "detail": "Self-reported health data (HIV status, last tested date, PrEP/DoxyPEP, vaccination status) is optional but public if provided. UK age assurance requires video selfie and potentially government photo ID (biometric processing). Health data is shared with service providers like AWS, PartnerHero, and Braze.",
+      "policy_excerpt": "We give you the option of publishing certain self-reported health characteristics, such as your HIV status, Last Tested Date, whether you are using PrEP or DoxyPEP, and/or vaccination status, in your public Grindr profile.",
+      "concerns": ["Health information is public by default to all users.", "Health data shared with service providers including Braze for testing reminders.", "Biometric data collected for age assurance in the UK.", "Government ID collected for account recovery in some cases."],
+      "score_impact": 15
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": true,
+      "background_access": false,
+      "plain_english": "If you buy Grindr subscriptions or features, your payment goes through Apple, Google, or Stripe. Grindr doesn't store your full credit card but does receive your name, address, and the last four digits of your card number.",
+      "detail": "Payment processing is handled by third-party processors. Grindr receives name, address, partial payment card number, and email from processors. Purchase history is retained.",
+      "policy_excerpt": "Grindr does not process payment card information directly; however, our third-party payment processors may provide certain information to us (e.g., your name, address, partial payment card number, and e-mail address).",
+      "concerns": ["Partial card numbers and purchase history retained by Grindr."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can delete your account and your profile will disappear within about a month. However, if you were banned, Grindr keeps some of your data. They also keep your device identifier for up to 2 years after deletion for internal reporting. Messages you sent may still exist on other people's phones.",
+      "detail": "Profile deleted within 28 days. Exceptions include banned accounts (data retained for ban enforcement), legal obligations, security/fraud prevention, and device identifiers retained for up to 2 years for internal metrics. Chat messages may persist on recipients' devices via screenshots or local cache.",
+      "policy_excerpt": "Grindr generally retains data... for as long as an account is active... If you decide to delete your Profile, your Profile will no longer be visible to other Grindr users and your Personal Information will generally be deleted within 28 days.",
+      "concerns": ["Banned accounts retain data indefinitely.", "Device IDs kept for 2 years post-deletion.", "Messages may persist on recipients' devices.", "Legal hold data retained indefinitely."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "Grindr promises to notify you in advance if they make important changes to the privacy policy, and gives you a chance to review before continuing to use the app.",
+      "detail": "Advance notification for material changes with opportunity to review before continuing.",
+      "policy_excerpt": "If Grindr determines, in its sole discretion, that the changes we make to this policy are material, we will notify you in advance (e.g., within the Services).",
+      "concerns": [],
+      "score_impact": 0
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "risky", "max": 30, "rate": 0.65, "deduction": 19.5 },
+      { "category": "behavioural_ad_tracking", "risk": "risky", "max": 25, "rate": 0.65, "deduction": 16.25 },
+      { "category": "location_gps", "risk": "dangerous", "max": 15, "rate": 1.0, "deduction": 15 },
+      { "category": "health_biometric", "risk": "dangerous", "max": 15, "rate": 1.0, "deduction": 15 },
+      { "category": "account_identity", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "device_fingerprinting", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "camera_microphone", "risk": "risky", "max": 15, "rate": 0.65, "deduction": 9.75 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "network_internet_activity", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "storage_file_access", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "safe", "max": 5, "rate": 0, "deduction": 0 },
+      { "category": "childrens_data", "risk": "safe", "max": 10, "rate": 0, "deduction": 0 },
+      { "category": "contacts_phonebook", "risk": "safe", "max": 20, "rate": 0, "deduction": 0 }
+    ],
+    "total_deductions": 108.75,
+    "final_score": 47,
+    "grade": "D"
+  }
+}

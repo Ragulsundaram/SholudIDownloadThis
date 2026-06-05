@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "analyzed_at": "2026-06-01",
+    "analyzed_by": "claude-sonnet-4",
+    "policy_url": "https://www.ocho.so/privacy.html",
+    "terms_url": "",
+    "policy_last_updated": "unknown",
+    "needs_review": false,
+    "review_notes": "Shared policy across multiple Ocho B.V. apps. Grug is not specifically listed in the app-specific data section, but the general statements apply."
+  },
+
+  "app": {
+    "slug": "grug",
+    "name": "grug",
+    "developer": "Ocho B.V.",
+    "app_store_url": "https://apps.apple.com/in/app/grug/id6751649802",
+    "app_store_id": "6751649802",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3a/ce/a3/3acea313-0d9b-4147-431a-95cd34c2da14/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+    "category": "Lifestyle",
+    "sub_category": "",
+    "description": ""
+  },
+
+  "verdict": {
+    "overall_risk": "caution",
+    "score": 78,
+    "grade": "B",
+    "one_liner": "Minimal data collection with a few gaps in transparency.",
+    "summary": "Grug collects only anonymous usage statistics and processes purchases through the app store. The developer promises not to sell your data and explicitly states they don't track your location. However, several categories aren't addressed in the short shared policy, and policy changes may happen without advance notice.",
+    "recommendation": "recommended",
+    "recommendation_reason": "The app appears to collect very little personal data and doesn't sell it, but the privacy policy is brief and leaves some questions unanswered."
+  },
+
+  "flags": {
+    "red": [
+      {
+        "id": "vague_policy_changes",
+        "title": "Policy can change without warning",
+        "plain_english": "The developer says they may update the privacy policy anytime, and only promises to reflect changes on the page — not to notify you in advance.",
+        "severity": "medium"
+      },
+      {
+        "id": "third_party_analytics",
+        "title": "Data shared with analytics providers",
+        "plain_english": "Anonymous usage stats and purchase data are processed by third-party services like analytics providers. While not personal data, it still leaves your device.",
+        "severity": "low"
+      },
+      {
+        "id": "missing_category_details",
+        "title": "Several privacy categories not explained",
+        "plain_english": "The privacy policy is shared across multiple apps and doesn't specifically say what data grug collects for things like contacts, storage, or network activity.",
+        "severity": "low"
+      },
+      {
+        "id": "no_formal_deletion",
+        "title": "No formal data deletion process",
+        "plain_english": "The only way to delete your data is to uninstall the app. There's no button or email process to request deletion from the developer's servers.",
+        "severity": "low"
+      }
+    ],
+    "green": [
+      {
+        "id": "no_personal_data_sales",
+        "title": "Developer promises not to sell data",
+        "plain_english": "The policy clearly states they do not sell or share your personal data with anyone.",
+        "severity": "positive"
+      },
+      {
+        "id": "no_location_tracking",
+        "title": "No location tracking",
+        "plain_english": "The developer explicitly says they do not track your location.",
+        "severity": "positive"
+      },
+      {
+        "id": "minimal_collection",
+        "title": "Collects minimal data only",
+        "plain_english": "The developer says they only collect the bare minimum needed to run the app, and don't gather sensitive data unrelated to the app's purpose.",
+        "severity": "positive"
+      },
+      {
+        "id": "payments_via_app_store",
+        "title": "Payments handled by app store",
+        "plain_english": "Any purchases go through Apple or Google, so the app developer never sees your credit card information.",
+        "severity": "positive"
+      }
+    ]
+  },
+
+  "categories": [
+    {
+      "id": "camera_microphone",
+      "label": "Camera & Microphone",
+      "icon": "Camera",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The privacy policy doesn't mention using your camera or microphone, and the app doesn't seem to need them.",
+      "detail": "No mention of camera or microphone access in the shared privacy policy. Grug is not listed in the app-specific data section.",
+      "policy_excerpt": "We do not collect personal information beyond what's necessary to operate each app, and we do not track your location or store sensitive data unrelated to app functionality.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "location_gps",
+      "label": "Location & GPS",
+      "icon": "MapPin",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer explicitly says they do not track your location.",
+      "detail": "The policy contains a clear negative statement about location tracking.",
+      "policy_excerpt": "we do not track your location or store sensitive data unrelated to app functionality.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "contacts_phonebook",
+      "label": "Contacts & Phonebook",
+      "icon": "BookUser",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't mention accessing your contacts, and the app doesn't appear to need them.",
+      "detail": "Contacts are only mentioned in the context of the 'Contacts on Map' app, not grug.",
+      "policy_excerpt": "We do not collect personal information beyond what's necessary to operate each app.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "storage_file_access",
+      "label": "Storage & File Access",
+      "icon": "FolderOpen",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "It's unclear if the app accesses your phone's files or photos. The policy doesn't specifically say for this app.",
+      "detail": "The policy mentions file storage for other apps (e.g., Photo Restore, Sudoku a Day) but does not mention grug.",
+      "policy_excerpt": "",
+      "concerns": ["Policy does not clarify whether grug accesses device storage or photos."],
+      "score_impact": 5
+    },
+    {
+      "id": "data_sharing_third_parties",
+      "label": "Data Sharing with 3rd Parties",
+      "icon": "Share2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer says they don't sell your personal data, but anonymous usage stats may be sent to third-party analytics companies.",
+      "detail": "The policy explicitly promises no sale of personal data, but acknowledges third-party analytics and app store processing.",
+      "policy_excerpt": "We do not sell or share your personal data. Anonymous analytics and purchase data may be processed by third-party services (e.g., app stores, analytics providers) to help improve the service and process transactions.",
+      "concerns": ["Anonymous data still leaves the device and may be combined with other datasets by analytics providers."],
+      "score_impact": 9
+    },
+    {
+      "id": "account_identity",
+      "label": "Account & Identity Data",
+      "icon": "UserCircle",
+      "risk": "safe",
+      "access_type": "never",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app only collects anonymous usage data. It doesn't appear to ask for your name, email, or other personal details.",
+      "detail": "No account creation or identity data collection is mentioned in the policy.",
+      "policy_excerpt": "We only collect minimal data necessary to provide and improve our services: App Usage Data: Anonymous usage statistics...",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "behavioural_ad_tracking",
+      "label": "Behavioural & Ad Tracking",
+      "icon": "BarChart2",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app collects anonymous usage statistics to improve the app, but there's no mention of targeted ads or tracking you across other apps.",
+      "detail": "Anonymous analytics are used for product improvement. No advertising or cross-app tracking is mentioned.",
+      "policy_excerpt": "Anonymous usage statistics to help us improve the service (e.g., feature usage, session duration).",
+      "concerns": ["Third-party analytics providers may collect device-level identifiers as part of 'anonymous' statistics."],
+      "score_impact": 7.5
+    },
+    {
+      "id": "childrens_data",
+      "label": "Children's Data Handling",
+      "icon": "Baby",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't say anything about how the app handles children's data or whether it's meant for kids.",
+      "detail": "No age restrictions, COPPA compliance, or child-specific safeguards are mentioned.",
+      "policy_excerpt": "",
+      "concerns": ["No mention of age requirements or children's privacy protections."],
+      "score_impact": 5
+    },
+    {
+      "id": "network_internet_activity",
+      "label": "Network & Internet Activity",
+      "icon": "Wifi",
+      "risk": "unknown",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The policy doesn't explain what network data is logged when you use the app.",
+      "detail": "No mention of IP logging, traffic analysis, or network-level data collection.",
+      "policy_excerpt": "",
+      "concerns": ["Could be logging IP addresses, request metadata, or session data without disclosure."],
+      "score_impact": 2.5
+    },
+    {
+      "id": "device_fingerprinting",
+      "label": "Device Info & Fingerprinting",
+      "icon": "Smartphone",
+      "risk": "caution",
+      "access_type": "continuous",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app sends anonymous data to analytics providers, which may include basic device information like your phone model.",
+      "detail": "Standard analytics typically include device model, OS version, and app version. The policy does not explicitly deny this.",
+      "policy_excerpt": "Anonymous analytics and purchase data may be processed by third-party services (e.g., app stores, analytics providers).",
+      "concerns": ["Analytics SDKs commonly collect device identifiers, which can be used for fingerprinting."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "health_biometric",
+      "label": "Health & Biometric Data",
+      "icon": "Heart",
+      "risk": "safe",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The app doesn't collect any health or body-related data.",
+      "detail": "No health, fitness, or biometric data collection is mentioned, and the app type does not suggest it would be needed.",
+      "policy_excerpt": "we do not store sensitive data unrelated to app functionality.",
+      "concerns": [],
+      "score_impact": 0
+    },
+    {
+      "id": "financial_payment",
+      "label": "Financial & Payment Data",
+      "icon": "CreditCard",
+      "risk": "caution",
+      "access_type": "on_demand",
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "If you buy anything in the app, the payment goes through Apple or Google. The developer doesn't handle your card details directly.",
+      "detail": "In-app purchases are processed through the app store. The developer sees transaction data but not raw payment credentials.",
+      "policy_excerpt": "Transaction data required to process purchases and subscriptions securely through the app store (Apple App Store or Google Play).",
+      "concerns": ["Purchase history and subscription status are still data points that can reveal user behavior."],
+      "score_impact": 4.5
+    },
+    {
+      "id": "data_deletion_user_rights",
+      "label": "Data Deletion & User Rights",
+      "icon": "ShieldCheck",
+      "risk": "caution",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "You can remove your data by uninstalling the app, but there's no separate button or form to delete your account data from the developer's servers.",
+      "detail": "The policy suggests uninstalling or clearing local storage as the deletion mechanism. No formal account deletion process is offered.",
+      "policy_excerpt": "You can delete app data at any time by uninstalling the app or clearing local storage. Since we don't collect unrelated personal data, there's no need to request access or deletion beyond what you control directly.",
+      "concerns": ["No explicit data deletion request process for server-stored analytics or purchase records."],
+      "score_impact": 3
+    },
+    {
+      "id": "policy_change_notification",
+      "label": "Policy Change Notification",
+      "icon": "Bell",
+      "risk": "risky",
+      "access_type": null,
+      "required_for_core_function": false,
+      "optional_access": false,
+      "background_access": false,
+      "plain_english": "The developer can change the privacy policy anytime and only says changes will be 'reflected here' — there's no promise to tell you in advance.",
+      "detail": "No advance notice mechanism, email alert, or re-consent requirement is mentioned. Users are expected to check the page manually.",
+      "policy_excerpt": "We may update this policy as needed. Any significant changes will be reflected here.",
+      "concerns": ["No advance notification or active re-agreement mechanism for policy changes."],
+      "score_impact": 3.25
+    }
+  ],
+
+  "scoring": {
+    "base_score": 100,
+    "max_possible_deductions": 205,
+    "deductions": [
+      { "category": "data_sharing_third_parties", "risk": "caution", "max": 30, "rate": 0.3, "deduction": 9 },
+      { "category": "behavioural_ad_tracking", "risk": "caution", "max": 25, "rate": 0.3, "deduction": 7.5 },
+      { "category": "storage_file_access", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "childrens_data", "risk": "unknown", "max": 10, "rate": 0.5, "deduction": 5 },
+      { "category": "device_fingerprinting", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "financial_payment", "risk": "caution", "max": 15, "rate": 0.3, "deduction": 4.5 },
+      { "category": "data_deletion_user_rights", "risk": "caution", "max": 10, "rate": 0.3, "deduction": 3 },
+      { "category": "policy_change_notification", "risk": "risky", "max": 5, "rate": 0.65, "deduction": 3.25 },
+      { "category": "network_internet_activity", "risk": "unknown", "max": 5, "rate": 0.5, "deduction": 2.5 }
+    ],
+    "total_deductions": 44.25,
+    "final_score": 78,
+    "grade": "B"
+  }
+}
